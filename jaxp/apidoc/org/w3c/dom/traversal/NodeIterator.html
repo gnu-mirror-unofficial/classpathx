@@ -1,0 +1,65 @@
+<html xmlns="http://www.w3.org/TR/REC-html40" xmlns:html="http://www.w3.org/TR/REC-html40" xmlns:gjdoc="http://www.gnu.org/software/cp-tools/gjdocxml"><head><link href="../../../../gjdochtml.css" type="text/css" rel="stylesheet"/><title>NodeIterator</title></head><body onload="top.document.title=document.title;" class="classdoc"><div class="header"><span class="navi-button">&rArr;&nbsp;<a target="_top" href="../../../../index.html">Index&nbsp;(Frames)</a></span>&nbsp;|&nbsp;
+      <span class="navi-button">&rArr;&nbsp;<a target="_top" href="../../../../index_noframes.html">Index&nbsp;(No&nbsp;Frames)</a></span>&nbsp;|&nbsp;
+      <span class="navi-button">&rArr;&nbsp;<a href="package-summary.html">Package</a></span>&nbsp;|&nbsp;
+      <span class="navi-button">&rArr;&nbsp;<a href="package-tree.html">Package&nbsp;Tree</a></span>&nbsp;|&nbsp;
+      <span class="navi-button">&rArr;&nbsp;<a href="../../../../fulltree.html">Full Tree</a></span>&nbsp;
+    </div><div class="classdoc-head"><div class="classdoc-head-inner"><b class="classdoc-head-packagename">org.w3c.dom.traversal</b><br/><h1 class="classdoc-head-classname">Interface NodeIterator</h1></div></div><p/><hr/><div class="classdoc-prototype">public interface <b>NodeIterator</b><br/></div><p/><div class="classdoc-class-comment-body"><code>NodeIterators</code> are used to step through a set of nodes, e.g. 
+ the set of nodes in a <code>NodeList</code>, the document subtree 
+ governed by a particular <code>Node</code>, the results of a query, or 
+ any other set of nodes. The set of nodes to be iterated is determined by 
+ the implementation of the <code>NodeIterator</code>. DOM Level 2 
+ specifies a single <code>NodeIterator</code> implementation for 
+ document-order traversal of a document subtree. Instances of these 
+ <code>NodeIterators</code> are created by calling 
+ <code>DocumentTraversal</code><code>.createNodeIterator()</code>.
+ <p/>See also the <a href="http://www.w3.org/TR/2000/REC-DOM-Level-2-Traversal-Range-20001113">Document Object Model (DOM) Level 2 Traversal and Range Specification</a>.
+</div><div class="classdoc-tag-section-header">Since:</div><dl class="classdoc-list"><dt>DOM Level 2</dt></dl><h1 class="classdoc-header">Method Summary</h1><table class="classdoc-table" width="100%" cellspacing="0" border="1"><tr><td class="no-border-r" valign="top" align="right" width="1%"><p class="prototype-type"> void</p></td><td class="with-border" valign="top" align="left"><p class="prototype"><a href="#detach()">detach</a>()</p><blockquote class="classdoc-summary-comment"> Detaches the NodeIterator from the set which it iterated 
+ over, releasing any computational resources and placing the 
+ NodeIterator in the INVALID state.</blockquote></td></tr><tr><td class="no-border-r" valign="top" align="right" width="1%"><p class="prototype-type"> boolean</p></td><td class="with-border" valign="top" align="left"><p class="prototype"><a href="#getExpandEntityReferences()">getExpandEntityReferences</a>()</p><blockquote class="classdoc-summary-comment">  The value of this flag determines whether the children of entity 
+ reference nodes are visible to the NodeIterator.</blockquote></td></tr><tr><td class="no-border-r" valign="top" align="right" width="1%"><p class="prototype-type"> <a href="../../../../org/w3c/dom/traversal/NodeFilter.html">NodeFilter</a></p></td><td class="with-border" valign="top" align="left"><p class="prototype"><a href="#getFilter()">getFilter</a>()</p><blockquote class="classdoc-summary-comment"> The NodeFilter used to screen nodes.</blockquote></td></tr><tr><td class="no-border-r" valign="top" align="right" width="1%"><p class="prototype-type"> <a href="../../../../org/w3c/dom/Node.html">Node</a></p></td><td class="with-border" valign="top" align="left"><p class="prototype"><a href="#getRoot()">getRoot</a>()</p><blockquote class="classdoc-summary-comment"> The root node of the NodeIterator, as specified when it 
+ was created.</blockquote></td></tr><tr><td class="no-border-r" valign="top" align="right" width="1%"><p class="prototype-type"> int</p></td><td class="with-border" valign="top" align="left"><p class="prototype"><a href="#getWhatToShow()">getWhatToShow</a>()</p><blockquote class="classdoc-summary-comment"> This attribute determines which node types are presented via the 
+ NodeIterator.</blockquote></td></tr><tr><td class="no-border-r" valign="top" align="right" width="1%"><p class="prototype-type"> <a href="../../../../org/w3c/dom/Node.html">Node</a></p></td><td class="with-border" valign="top" align="left"><p class="prototype"><a href="#nextNode()">nextNode</a>()</p><blockquote class="classdoc-summary-comment"> Returns the next node in the set and advances the position of the 
+ NodeIterator in the set.</blockquote></td></tr><tr><td class="no-border-r" valign="top" align="right" width="1%"><p class="prototype-type"> <a href="../../../../org/w3c/dom/Node.html">Node</a></p></td><td class="with-border" valign="top" align="left"><p class="prototype"><a href="#previousNode()">previousNode</a>()</p><blockquote class="classdoc-summary-comment"> Returns the previous node in the set and moves the position of the 
+ NodeIterator backwards in the set.</blockquote></td></tr></table><h1 class="classdoc-header">Method Details</h1><a name="detach()"/><h3>detach</h3><p class="prototype">public void <b>detach</b>()</p><div class="classdoc-comment-body"> Detaches the <code>NodeIterator</code> from the set which it iterated 
+ over, releasing any computational resources and placing the 
+ <code>NodeIterator</code> in the INVALID state. After 
+ <code>detach</code> has been invoked, calls to <code>nextNode</code> 
+ or <code>previousNode</code> will raise the exception 
+ INVALID_STATE_ERR.
+</div><p/><hr/><a name="getExpandEntityReferences()"/><h3>getExpandEntityReferences</h3><p class="prototype">public boolean <b>getExpandEntityReferences</b>()</p><div class="classdoc-comment-body">  The value of this flag determines whether the children of entity 
+ reference nodes are visible to the <code>NodeIterator</code>. If 
+ false, these children  and their descendants will be rejected. Note 
+ that this rejection takes precedence over <code>whatToShow</code> and 
+ the filter. Also note that this is currently the only situation where 
+ <code>NodeIterators</code> may reject a complete subtree rather than 
+ skipping individual nodes. 
+ <br/><br/> To produce a view of the document that has entity references 
+ expanded and does not expose the entity reference node itself, use 
+ the <code>whatToShow</code> flags to hide the entity reference node 
+ and set <code>expandEntityReferences</code> to true when creating the 
+ <code>NodeIterator</code>. To produce a view of the document that has 
+ entity reference nodes but no entity expansion, use the 
+ <code>whatToShow</code> flags to show the entity reference node and 
+ set <code>expandEntityReferences</code> to false.
+</div><p/><hr/><a name="getFilter()"/><h3>getFilter</h3><p class="prototype">public NodeFilter <b>getFilter</b>()</p><div class="classdoc-comment-body"> The <code>NodeFilter</code> used to screen nodes.
+</div><p/><hr/><a name="getRoot()"/><h3>getRoot</h3><p class="prototype">public Node <b>getRoot</b>()</p><div class="classdoc-comment-body"> The root node of the <code>NodeIterator</code>, as specified when it 
+ was created.
+</div><p/><hr/><a name="getWhatToShow()"/><h3>getWhatToShow</h3><p class="prototype">public int <b>getWhatToShow</b>()</p><div class="classdoc-comment-body"> This attribute determines which node types are presented via the 
+ <code>NodeIterator</code>. The available set of constants is defined 
+ in the <code>NodeFilter</code> interface.  Nodes not accepted by 
+ <code>whatToShow</code> will be skipped, but their children may still 
+ be considered. Note that this skip takes precedence over the filter, 
+ if any. 
+</div><p/><hr/><a name="nextNode()"/><h3>nextNode</h3><p class="prototype">public Node <b>nextNode</b>()</p><div class="classdoc-comment-body"> Returns the next node in the set and advances the position of the 
+ <code>NodeIterator</code> in the set. After a 
+ <code>NodeIterator</code> is created, the first call to 
+ <code>nextNode()</code> returns the first node in the set.
+</div><p/><div class="classdoc-tag-section-header">Returns:</div><dl class="classdoc-list"><dt>The next Node in the set being iterated over, or 
+null if there are no more members in that set.</dt></dl><div class="classdoc-tag-section-header">Throws:</div><dl class="classdoc-list"><dt><code><a href="../../../../org/w3c/dom/DOMException.html">DOMException</a></code> - INVALID_STATE_ERR: Raised if this method is called after the 
+detach method was invoked.</dt></dl><hr/><a name="previousNode()"/><h3>previousNode</h3><p class="prototype">public Node <b>previousNode</b>()</p><div class="classdoc-comment-body"> Returns the previous node in the set and moves the position of the 
+ <code>NodeIterator</code> backwards in the set.
+</div><p/><div class="classdoc-tag-section-header">Returns:</div><dl class="classdoc-list"><dt>The previous Node in the set being iterated over, 
+or null if there are no more members in that set.</dt></dl><div class="classdoc-tag-section-header">Throws:</div><dl class="classdoc-list"><dt><code><a href="../../../../org/w3c/dom/DOMException.html">DOMException</a></code> - INVALID_STATE_ERR: Raised if this method is called after the 
+detach method was invoked.</dt></dl><hr class="footer"/><div class="footer">Generated on
+  October 6, 2004
+  by <a target="cptoolsinfo" href="http://www.gnu.org/software/cp-tools">GNU Classpath Tools</a> (Gjdoc XmlDoclet 0.6.1).</div></body></html>

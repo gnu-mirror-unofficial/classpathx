@@ -1,0 +1,45 @@
+<html xmlns="http://www.w3.org/TR/REC-html40" xmlns:html="http://www.w3.org/TR/REC-html40" xmlns:gjdoc="http://www.gnu.org/software/cp-tools/gjdocxml"><head><link href="../../../gjdochtml.css" type="text/css" rel="stylesheet"/><title>DOMError</title></head><body onload="top.document.title=document.title;" class="classdoc"><div class="header"><span class="navi-button">&rArr;&nbsp;<a target="_top" href="../../../index.html">Index&nbsp;(Frames)</a></span>&nbsp;|&nbsp;
+      <span class="navi-button">&rArr;&nbsp;<a target="_top" href="../../../index_noframes.html">Index&nbsp;(No&nbsp;Frames)</a></span>&nbsp;|&nbsp;
+      <span class="navi-button">&rArr;&nbsp;<a href="package-summary.html">Package</a></span>&nbsp;|&nbsp;
+      <span class="navi-button">&rArr;&nbsp;<a href="package-tree.html">Package&nbsp;Tree</a></span>&nbsp;|&nbsp;
+      <span class="navi-button">&rArr;&nbsp;<a href="../../../fulltree.html">Full Tree</a></span>&nbsp;
+    </div><div class="classdoc-head"><div class="classdoc-head-inner"><b class="classdoc-head-packagename">org.w3c.dom</b><br/><h1 class="classdoc-head-classname">Interface DOMError</h1></div></div><p/><hr/><div class="classdoc-prototype">public interface <b>DOMError</b><br/></div><p/><div class="classdoc-class-comment-body"><code>DOMError</code> is an interface that describes an error.
+ <p/>See also the <a href="http://www.w3.org/TR/2004/REC-DOM-Level-3-Core-20040407">Document Object Model (DOM) Level 3 Core Specification</a>.
+</div><div class="classdoc-tag-section-header">Since:</div><dl class="classdoc-list"><dt>DOM Level 3</dt></dl><h1 class="classdoc-header">Field Summary</h1><table class="classdoc-table" width="100%" cellspacing="0" border="1"><tr><td class="no-border-r" valign="top" align="right" width="1%"><p class="prototype-type">static short</p></td><td class="with-border" valign="top" align="left"><p class="prototype"><a href="#SEVERITY_ERROR">SEVERITY_ERROR</a></p><blockquote class="classdoc-summary-comment"> The severity of the error described by the DOMError is 
+ error.</blockquote></td></tr><tr><td class="no-border-r" valign="top" align="right" width="1%"><p class="prototype-type">static short</p></td><td class="with-border" valign="top" align="left"><p class="prototype"><a href="#SEVERITY_FATAL_ERROR">SEVERITY_FATAL_ERROR</a></p><blockquote class="classdoc-summary-comment"> The severity of the error described by the DOMError is 
+ fatal error.</blockquote></td></tr><tr><td class="no-border-r" valign="top" align="right" width="1%"><p class="prototype-type">static short</p></td><td class="with-border" valign="top" align="left"><p class="prototype"><a href="#SEVERITY_WARNING">SEVERITY_WARNING</a></p><blockquote class="classdoc-summary-comment"> The severity of the error described by the DOMError is 
+ warning.</blockquote></td></tr></table><h1 class="classdoc-header">Method Summary</h1><table class="classdoc-table" width="100%" cellspacing="0" border="1"><tr><td class="no-border-r" valign="top" align="right" width="1%"><p class="prototype-type"> <a href="../../../org/w3c/dom/DOMLocator.html">DOMLocator</a></p></td><td class="with-border" valign="top" align="left"><p class="prototype"><a href="#getLocation()">getLocation</a>()</p><blockquote class="classdoc-summary-comment"> The location of the error.</blockquote></td></tr><tr><td class="no-border-r" valign="top" align="right" width="1%"><p class="prototype-type"> String</p></td><td class="with-border" valign="top" align="left"><p class="prototype"><a href="#getMessage()">getMessage</a>()</p><blockquote class="classdoc-summary-comment"> An implementation specific string describing the error that occurred.</blockquote></td></tr><tr><td class="no-border-r" valign="top" align="right" width="1%"><p class="prototype-type"> Object</p></td><td class="with-border" valign="top" align="left"><p class="prototype"><a href="#getRelatedData()">getRelatedData</a>()</p><blockquote class="classdoc-summary-comment">  The related DOMError.type dependent data if any.</blockquote></td></tr><tr><td class="no-border-r" valign="top" align="right" width="1%"><p class="prototype-type"> Object</p></td><td class="with-border" valign="top" align="left"><p class="prototype"><a href="#getRelatedException()">getRelatedException</a>()</p><blockquote class="classdoc-summary-comment"> The related platform dependent exception if any.</blockquote></td></tr><tr><td class="no-border-r" valign="top" align="right" width="1%"><p class="prototype-type"> short</p></td><td class="with-border" valign="top" align="left"><p class="prototype"><a href="#getSeverity()">getSeverity</a>()</p><blockquote class="classdoc-summary-comment"> The severity of the error, either SEVERITY_WARNING, 
+ SEVERITY_ERROR, or SEVERITY_FATAL_ERROR.</blockquote></td></tr><tr><td class="no-border-r" valign="top" align="right" width="1%"><p class="prototype-type"> String</p></td><td class="with-border" valign="top" align="left"><p class="prototype"><a href="#getType()">getType</a>()</p><blockquote class="classdoc-summary-comment">  A DOMString indicating which related data is expected in 
+ relatedData.</blockquote></td></tr></table><h1 class="classdoc-header">Field Details</h1><a name="SEVERITY_ERROR"/><h3>SEVERITY_ERROR</h3><p class="prototype">public static final short <b>SEVERITY_ERROR</b></p><p/><div class="classdoc-comment-body"> The severity of the error described by the <code>DOMError</code> is 
+ error. A <code>SEVERITY_ERROR</code> may not cause the processing to 
+ stop if the error can be recovered, unless 
+ <code>DOMErrorHandler.handleError()</code> returns <code>false</code>.
+</div><p/><hr/><a name="SEVERITY_FATAL_ERROR"/><h3>SEVERITY_FATAL_ERROR</h3><p class="prototype">public static final short <b>SEVERITY_FATAL_ERROR</b></p><p/><div class="classdoc-comment-body"> The severity of the error described by the <code>DOMError</code> is 
+ fatal error. A <code>SEVERITY_FATAL_ERROR</code> will cause the 
+ normal processing to stop. The return value of 
+ <code>DOMErrorHandler.handleError()</code> is ignored unless the 
+ implementation chooses to continue, in which case the behavior 
+ becomes undefined.
+</div><p/><hr/><a name="SEVERITY_WARNING"/><h3>SEVERITY_WARNING</h3><p class="prototype">public static final short <b>SEVERITY_WARNING</b></p><p/><div class="classdoc-comment-body"> The severity of the error described by the <code>DOMError</code> is 
+ warning. A <code>SEVERITY_WARNING</code> will not cause the 
+ processing to stop, unless <code>DOMErrorHandler.handleError()</code> 
+ returns <code>false</code>.
+</div><p/><h1 class="classdoc-header">Method Details</h1><a name="getLocation()"/><h3>getLocation</h3><p class="prototype">public DOMLocator <b>getLocation</b>()</p><div class="classdoc-comment-body"> The location of the error.
+</div><p/><hr/><a name="getMessage()"/><h3>getMessage</h3><p class="prototype">public String <b>getMessage</b>()</p><div class="classdoc-comment-body"> An implementation specific string describing the error that occurred.
+</div><p/><hr/><a name="getRelatedData()"/><h3>getRelatedData</h3><p class="prototype">public Object <b>getRelatedData</b>()</p><div class="classdoc-comment-body">  The related <code>DOMError.type</code> dependent data if any. 
+</div><p/><hr/><a name="getRelatedException()"/><h3>getRelatedException</h3><p class="prototype">public Object <b>getRelatedException</b>()</p><div class="classdoc-comment-body"> The related platform dependent exception if any.
+</div><p/><hr/><a name="getSeverity()"/><h3>getSeverity</h3><p class="prototype">public short <b>getSeverity</b>()</p><div class="classdoc-comment-body"> The severity of the error, either <code>SEVERITY_WARNING</code>, 
+ <code>SEVERITY_ERROR</code>, or <code>SEVERITY_FATAL_ERROR</code>.
+</div><p/><hr/><a name="getType()"/><h3>getType</h3><p class="prototype">public String <b>getType</b>()</p><div class="classdoc-comment-body">  A <code>DOMString</code> indicating which related data is expected in 
+ <code>relatedData</code>. Users should refer to the specification of 
+ the error in order to find its <code>DOMString</code> type and 
+ <code>relatedData</code> definitions if any. 
+ <p/><b>Note:</b>  As an example, 
+ <code>Document.normalizeDocument()</code> does generate warnings when 
+ the "split-cdata-sections" parameter is in use. Therefore, the method 
+ generates a <code>SEVERITY_WARNING</code> with <code>type</code><code>"cdata-sections-splitted"</code> and the first 
+ <code>CDATASection</code> node in document order resulting from the 
+ split is returned by the <code>relatedData</code> attribute. 
+</div><p/><hr class="footer"/><div class="footer">Generated on
+  October 6, 2004
+  by <a target="cptoolsinfo" href="http://www.gnu.org/software/cp-tools">GNU Classpath Tools</a> (Gjdoc XmlDoclet 0.6.1).</div></body></html>

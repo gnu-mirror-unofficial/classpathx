@@ -1,0 +1,42 @@
+<html xmlns="http://www.w3.org/TR/REC-html40" xmlns:html="http://www.w3.org/TR/REC-html40" xmlns:gjdoc="http://www.gnu.org/software/cp-tools/gjdocxml"><head><link href="../../../../gjdochtml.css" type="text/css" rel="stylesheet"/><title>LSException</title></head><body onload="top.document.title=document.title;" class="classdoc"><div class="header"><span class="navi-button">&rArr;&nbsp;<a target="_top" href="../../../../index.html">Index&nbsp;(Frames)</a></span>&nbsp;|&nbsp;
+      <span class="navi-button">&rArr;&nbsp;<a target="_top" href="../../../../index_noframes.html">Index&nbsp;(No&nbsp;Frames)</a></span>&nbsp;|&nbsp;
+      <span class="navi-button">&rArr;&nbsp;<a href="package-summary.html">Package</a></span>&nbsp;|&nbsp;
+      <span class="navi-button">&rArr;&nbsp;<a href="package-tree.html">Package&nbsp;Tree</a></span>&nbsp;|&nbsp;
+      <span class="navi-button">&rArr;&nbsp;<a href="../../../../fulltree.html">Full Tree</a></span>&nbsp;
+    </div><div class="classdoc-head"><div class="classdoc-head-inner"><b class="classdoc-head-packagename">org.w3c.dom.ls</b><br/><h1 class="classdoc-head-classname">Class LSException</h1></div></div><pre class="inheritance-tree">RuntimeException
+|
++--org.w3c.dom.ls.LSException
+</pre><p/><hr/><div class="classdoc-prototype">public class <b>LSException</b><br/>extends RuntimeException<br/></div><p/><div class="classdoc-class-comment-body">  Parser or write operations may throw an <code>LSException</code> if the 
+ processing is stopped. The processing can be stopped due to a 
+ <code>DOMError</code> with a severity of 
+ <code>DOMError.SEVERITY_FATAL_ERROR</code> or a non recovered 
+ <code>DOMError.SEVERITY_ERROR</code>, or if 
+ <code>DOMErrorHandler.handleError()</code> returned <code>false</code>. 
+ <p/><b>Note:</b>  As suggested in the definition of the constants in the 
+ <code>DOMError</code> interface, a DOM implementation may choose to 
+ continue after a fatal error, but the resulting DOM tree is then 
+ implementation dependent. 
+ <p/>See also the <a href="http://www.w3.org/TR/2004/REC-DOM-Level-3-LS-20040407">Document Object Model (DOM) Level 3 Load
+and Save Specification</a>.
+</div><h1 class="classdoc-header">Field Summary</h1><table class="classdoc-table" width="100%" cellspacing="0" border="1"><tr><td class="no-border-r" valign="top" align="right" width="1%"><p class="prototype-type">short</p></td><td class="with-border" valign="top" align="left"><p class="prototype"><a href="#code">code</a></p><blockquote class="classdoc-summary-comment"/></td></tr><tr><td class="no-border-r" valign="top" align="right" width="1%"><p class="prototype-type">static short</p></td><td class="with-border" valign="top" align="left"><p class="prototype"><a href="#PARSE_ERR">PARSE_ERR</a></p><blockquote class="classdoc-summary-comment">  If an attempt was made to load a document, or an XML Fragment, using 
+ LSParser and the processing has been stopped.</blockquote></td></tr><tr><td class="no-border-r" valign="top" align="right" width="1%"><p class="prototype-type">static short</p></td><td class="with-border" valign="top" align="left"><p class="prototype"><a href="#SERIALIZE_ERR">SERIALIZE_ERR</a></p><blockquote class="classdoc-summary-comment">  If an attempt was made to serialize a Node using 
+ LSSerializer and the processing has been stopped.</blockquote></td></tr></table><h1 class="classdoc-header">Constructor Summary</h1><table class="classdoc-table" width="100%" cellspacing="0" border="1"><tr><td class="with-border" valign="top" align="left"><p class="prototype"><a href="#LSException(short,String)">LSException</a>(<span class="parameter">short&nbsp;code,</span> <span class="parameter">String&nbsp;message</span>)</p><blockquote class="classdoc-summary-comment">  Parser or write operations may throw an LSException if the 
+ processing is stopped.</blockquote></td></tr></table><h1 class="classdoc-header">Field Details</h1><a name="code"/><h3>code</h3><p class="prototype">public short <b>code</b></p><p/><p/><hr/><a name="PARSE_ERR"/><h3>PARSE_ERR</h3><p class="prototype">public static final short <b>PARSE_ERR</b></p><p/><div class="classdoc-comment-body">  If an attempt was made to load a document, or an XML Fragment, using 
+ <code>LSParser</code> and the processing has been stopped. 
+</div><p/><hr/><a name="SERIALIZE_ERR"/><h3>SERIALIZE_ERR</h3><p class="prototype">public static final short <b>SERIALIZE_ERR</b></p><p/><div class="classdoc-comment-body">  If an attempt was made to serialize a <code>Node</code> using 
+ <code>LSSerializer</code> and the processing has been stopped. 
+</div><p/><h1 class="classdoc-header">Constructor Details</h1><a name="LSException(short,String)"/><h3>LSException</h3><p class="prototype">public  <b>LSException</b>(<span class="parameter">short&nbsp;code,</span> <span class="parameter">String&nbsp;message</span>)</p><div class="classdoc-comment-body">  Parser or write operations may throw an <code>LSException</code> if the 
+ processing is stopped. The processing can be stopped due to a 
+ <code>DOMError</code> with a severity of 
+ <code>DOMError.SEVERITY_FATAL_ERROR</code> or a non recovered 
+ <code>DOMError.SEVERITY_ERROR</code>, or if 
+ <code>DOMErrorHandler.handleError()</code> returned <code>false</code>. 
+ <p/><b>Note:</b>  As suggested in the definition of the constants in the 
+ <code>DOMError</code> interface, a DOM implementation may choose to 
+ continue after a fatal error, but the resulting DOM tree is then 
+ implementation dependent. 
+ <p/>See also the <a href="http://www.w3.org/TR/2004/REC-DOM-Level-3-LS-20040407">Document Object Model (DOM) Level 3 Load
+and Save Specification</a>.
+</div><p/><div class="classdoc-tag-section-header">Parameters:</div><dl class="classdoc-list"><dt><span class="prototype-name">code</span></dt><dt><span class="prototype-name">message</span></dt></dl><hr class="footer"/><div class="footer">Generated on
+  October 6, 2004
+  by <a target="cptoolsinfo" href="http://www.gnu.org/software/cp-tools">GNU Classpath Tools</a> (Gjdoc XmlDoclet 0.6.1).</div></body></html>

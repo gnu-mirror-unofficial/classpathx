@@ -1,0 +1,50 @@
+<html xmlns="http://www.w3.org/TR/REC-html40" xmlns:html="http://www.w3.org/TR/REC-html40" xmlns:gjdoc="http://www.gnu.org/software/cp-tools/gjdocxml"><head><link href="../../../../gjdochtml.css" type="text/css" rel="stylesheet"/><title>LSResourceResolver</title></head><body onload="top.document.title=document.title;" class="classdoc"><div class="header"><span class="navi-button">&rArr;&nbsp;<a target="_top" href="../../../../index.html">Index&nbsp;(Frames)</a></span>&nbsp;|&nbsp;
+      <span class="navi-button">&rArr;&nbsp;<a target="_top" href="../../../../index_noframes.html">Index&nbsp;(No&nbsp;Frames)</a></span>&nbsp;|&nbsp;
+      <span class="navi-button">&rArr;&nbsp;<a href="package-summary.html">Package</a></span>&nbsp;|&nbsp;
+      <span class="navi-button">&rArr;&nbsp;<a href="package-tree.html">Package&nbsp;Tree</a></span>&nbsp;|&nbsp;
+      <span class="navi-button">&rArr;&nbsp;<a href="../../../../fulltree.html">Full Tree</a></span>&nbsp;
+    </div><div class="classdoc-head"><div class="classdoc-head-inner"><b class="classdoc-head-packagename">org.w3c.dom.ls</b><br/><h1 class="classdoc-head-classname">Interface LSResourceResolver</h1></div></div><p/><hr/><div class="classdoc-prototype">public interface <b>LSResourceResolver</b><br/></div><p/><div class="classdoc-class-comment-body"><code>LSResourceResolver</code> provides a way for applications to 
+ redirect references to external resources. 
+ <p/> Applications needing to implement custom handling for external 
+ resources can implement this interface and register their implementation 
+ by setting the "resource-resolver" parameter of 
+ <code>DOMConfiguration</code> objects attached to <code>LSParser</code> 
+ and <code>LSSerializer</code>. It can also be register on 
+ <code>DOMConfiguration</code> objects attached to <code>Document</code> 
+ if the "LS" feature is supported. 
+ <p/> The <code>LSParser</code> will then allow the application to intercept 
+ any external entities, including the external DTD subset and external 
+ parameter entities, before including them. The top-level document entity 
+ is never passed to the <code>resolveResource</code> method. 
+ <p/> Many DOM applications will not need to implement this interface, but it 
+ will be especially useful for applications that build XML documents from 
+ databases or other specialized input sources, or for applications that 
+ use URNs. 
+ <p/><b>Note:</b><code>LSResourceResolver</code> is based on the SAX2 [<a href="http://www.saxproject.org/">SAX</a>] <code>EntityResolver</code> 
+ interface. 
+ <p/>See also the <a href="http://www.w3.org/TR/2004/REC-DOM-Level-3-LS-20040407">Document Object Model (DOM) Level 3 Load
+and Save Specification</a>.
+</div><h1 class="classdoc-header">Method Summary</h1><table class="classdoc-table" width="100%" cellspacing="0" border="1"><tr><td class="no-border-r" valign="top" align="right" width="1%"><p class="prototype-type"> <a href="../../../../org/w3c/dom/ls/LSInput.html">LSInput</a></p></td><td class="with-border" valign="top" align="left"><p class="prototype"><a href="#resolveResource(String,String,String,String,String)">resolveResource</a>(<span class="parameter">String&nbsp;type,</span> <span class="parameter">String&nbsp;namespaceURI,</span> <span class="parameter">String&nbsp;publicId,</span> <span class="parameter">String&nbsp;systemId,</span> <span class="parameter">String&nbsp;baseURI</span>)</p><blockquote class="classdoc-summary-comment">  Allow the application to resolve external resources.</blockquote></td></tr></table><h1 class="classdoc-header">Method Details</h1><a name="resolveResource(String,String,String,String,String)"/><h3>resolveResource</h3><p class="prototype">public LSInput <b>resolveResource</b>(<span class="parameter">String&nbsp;type,</span> <span class="parameter">String&nbsp;namespaceURI,</span> <span class="parameter">String&nbsp;publicId,</span> <span class="parameter">String&nbsp;systemId,</span> <span class="parameter">String&nbsp;baseURI</span>)</p><div class="classdoc-comment-body">  Allow the application to resolve external resources. 
+ <br/> The <code>LSParser</code> will call this method before opening any 
+ external resource, including the external DTD subset, external 
+ entities referenced within the DTD, and external entities referenced 
+ within the document element (however, the top-level document entity 
+ is not passed to this method). The application may then request that 
+ the <code>LSParser</code> resolve the external resource itself, that 
+ it use an alternative URI, or that it use an entirely different input 
+ source. 
+ <br/> Application writers can use this method to redirect external 
+ system identifiers to secure and/or local URI, to look up public 
+ identifiers in a catalogue, or to read an entity from a database or 
+ other input source (including, for example, a dialog box). 
+</div><p/><div class="classdoc-tag-section-header">Parameters:</div><dl class="classdoc-list"><dt><span class="prototype-name">type</span> - The type of the resource being resolved.</dt><dt><span class="prototype-name">namespaceURI</span> - The namespace of the resource being resolved, 
+e.g.</dt><dt><span class="prototype-name">publicId</span> - The public identifier of the external entity being 
+referenced, or null if no public identifier was 
+supplied or if the resource is not an entity.</dt><dt><span class="prototype-name">systemId</span> - The system identifier, a URI reference [IETF RFC 2396], of the 
+external resource being referenced, or null if no 
+system identifier was supplied.</dt><dt><span class="prototype-name">baseURI</span> - The absolute base URI of the resource being parsed, or 
+null if there is no base URI.</dt></dl><div class="classdoc-tag-section-header">Returns:</div><dl class="classdoc-list"><dt>A LSInput object describing the new input 
+source, or null to request that the parser open a 
+regular URI connection to the resource.</dt></dl><hr class="footer"/><div class="footer">Generated on
+  October 6, 2004
+  by <a target="cptoolsinfo" href="http://www.gnu.org/software/cp-tools">GNU Classpath Tools</a> (Gjdoc XmlDoclet 0.6.1).</div></body></html>

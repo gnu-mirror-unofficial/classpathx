@@ -1,0 +1,48 @@
+<html xmlns="http://www.w3.org/TR/REC-html40" xmlns:html="http://www.w3.org/TR/REC-html40" xmlns:gjdoc="http://www.gnu.org/software/cp-tools/gjdocxml"><head><link href="../../../../gjdochtml.css" type="text/css" rel="stylesheet"/><title>LSSerializerFilter</title></head><body onload="top.document.title=document.title;" class="classdoc"><div class="header"><span class="navi-button">&rArr;&nbsp;<a target="_top" href="../../../../index.html">Index&nbsp;(Frames)</a></span>&nbsp;|&nbsp;
+      <span class="navi-button">&rArr;&nbsp;<a target="_top" href="../../../../index_noframes.html">Index&nbsp;(No&nbsp;Frames)</a></span>&nbsp;|&nbsp;
+      <span class="navi-button">&rArr;&nbsp;<a href="package-summary.html">Package</a></span>&nbsp;|&nbsp;
+      <span class="navi-button">&rArr;&nbsp;<a href="package-tree.html">Package&nbsp;Tree</a></span>&nbsp;|&nbsp;
+      <span class="navi-button">&rArr;&nbsp;<a href="../../../../fulltree.html">Full Tree</a></span>&nbsp;
+    </div><div class="classdoc-head"><div class="classdoc-head-inner"><b class="classdoc-head-packagename">org.w3c.dom.ls</b><br/><h1 class="classdoc-head-classname">Interface LSSerializerFilter</h1></div></div><p/><b>All Superinterfaces:</b><br/><a href="../../../../org/w3c/dom/traversal/NodeFilter.html">NodeFilter</a><p/><hr/><div class="classdoc-prototype">public interface <b>LSSerializerFilter</b><br/>implements <a href="../../../../org/w3c/dom/traversal/NodeFilter.html">NodeFilter</a></div><p/><div class="classdoc-class-comment-body"><code>LSSerializerFilter</code>s provide applications the ability to 
+ examine nodes as they are being serialized and decide what nodes should 
+ be serialized or not. The <code>LSSerializerFilter</code> interface is 
+ based on the <code>NodeFilter</code> interface defined in [<a href="http://www.w3.org/TR/2000/REC-DOM-Level-2-Traversal-Range-20001113">DOM Level 2 Traversal and      Range</a>]
+ . 
+ <p/><code>Document</code>, <code>DocumentType</code>, 
+ <code>DocumentFragment</code>, <code>Notation</code>, <code>Entity</code>
+ , and children of <code>Attr</code> nodes are not passed to the filter. 
+ The child nodes of an <code>EntityReference</code> node are only passed 
+ to the filter if the <code>EntityReference</code> node is skipped by the 
+ method <code>LSParserFilter.acceptNode()</code>. 
+ <p/> When serializing an <code>Element</code>, the element is passed to the 
+ filter before any of its attributes are passed to the filter. Namespace 
+ declaration attributes, and default attributes (except in the case when "
+ discard-default-content" is set to <code>false</code>), are never passed 
+ to the filter. 
+ <p/> The result of any attempt to modify a node passed to a 
+ <code>LSSerializerFilter</code> is implementation dependent. 
+ <p/> DOM applications must not raise exceptions in a filter. The effect of 
+ throwing exceptions from a filter is DOM implementation dependent. 
+ <p/> For efficiency, a node passed to the filter may not be the same as the 
+ one that is actually in the tree. And the actual node (node object 
+ identity) may be reused during the process of filtering and serializing a 
+ document. 
+ <p/>See also the <a href="http://www.w3.org/TR/2004/REC-DOM-Level-3-LS-20040407">Document Object Model (DOM) Level 3 Load
+and Save Specification</a>.
+</div><h1 class="classdoc-header">Method Summary</h1><table class="classdoc-table" width="100%" cellspacing="0" border="1"><tr><td class="no-border-r" valign="top" align="right" width="1%"><p class="prototype-type"> int</p></td><td class="with-border" valign="top" align="left"><p class="prototype"><a href="#getWhatToShow()">getWhatToShow</a>()</p><blockquote class="classdoc-summary-comment">  Tells the LSSerializer what types of nodes to show to the 
+ filter.</blockquote></td></tr></table><h1 class="classdoc-header">Method Details</h1><a name="getWhatToShow()"/><h3>getWhatToShow</h3><p class="prototype">public int <b>getWhatToShow</b>()</p><div class="classdoc-comment-body">  Tells the <code>LSSerializer</code> what types of nodes to show to the 
+ filter. If a node is not shown to the filter using this attribute, it 
+ is automatically serialized. See <code>NodeFilter</code> for 
+ definition of the constants. The constants <code>SHOW_DOCUMENT</code>
+ , <code>SHOW_DOCUMENT_TYPE</code>, <code>SHOW_DOCUMENT_FRAGMENT</code>
+ , <code>SHOW_NOTATION</code>, and <code>SHOW_ENTITY</code> are 
+ meaningless here, such nodes will never be passed to a 
+ <code>LSSerializerFilter</code>. 
+ <br/> Unlike [<a href="http://www.w3.org/TR/2000/REC-DOM-Level-2-Traversal-Range-20001113">DOM Level 2 Traversal and      Range</a>]
+ , the <code>SHOW_ATTRIBUTE</code> constant indicates that the 
+ <code>Attr</code> nodes are shown and passed to the filter. 
+ <br/> The constants used here are defined in [<a href="http://www.w3.org/TR/2000/REC-DOM-Level-2-Traversal-Range-20001113">DOM Level 2 Traversal and      Range</a>]
+ . 
+</div><p/><hr class="footer"/><div class="footer">Generated on
+  October 6, 2004
+  by <a target="cptoolsinfo" href="http://www.gnu.org/software/cp-tools">GNU Classpath Tools</a> (Gjdoc XmlDoclet 0.6.1).</div></body></html>

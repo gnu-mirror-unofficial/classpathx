@@ -1,0 +1,73 @@
+<html xmlns="http://www.w3.org/TR/REC-html40" xmlns:html="http://www.w3.org/TR/REC-html40" xmlns:gjdoc="http://www.gnu.org/software/cp-tools/gjdocxml"><head><link href="../../../../gjdochtml.css" type="text/css" rel="stylesheet"/><title>DOMImplementationLS</title></head><body onload="top.document.title=document.title;" class="classdoc"><div class="header"><span class="navi-button">&rArr;&nbsp;<a target="_top" href="../../../../index.html">Index&nbsp;(Frames)</a></span>&nbsp;|&nbsp;
+      <span class="navi-button">&rArr;&nbsp;<a target="_top" href="../../../../index_noframes.html">Index&nbsp;(No&nbsp;Frames)</a></span>&nbsp;|&nbsp;
+      <span class="navi-button">&rArr;&nbsp;<a href="package-summary.html">Package</a></span>&nbsp;|&nbsp;
+      <span class="navi-button">&rArr;&nbsp;<a href="package-tree.html">Package&nbsp;Tree</a></span>&nbsp;|&nbsp;
+      <span class="navi-button">&rArr;&nbsp;<a href="../../../../fulltree.html">Full Tree</a></span>&nbsp;
+    </div><div class="classdoc-head"><div class="classdoc-head-inner"><b class="classdoc-head-packagename">org.w3c.dom.ls</b><br/><h1 class="classdoc-head-classname">Interface DOMImplementationLS</h1></div></div><p/><hr/><div class="classdoc-prototype">public interface <b>DOMImplementationLS</b><br/></div><p/><div class="classdoc-class-comment-body"><code>DOMImplementationLS</code> contains the factory methods for creating 
+ Load and Save objects. 
+ <p/> The expectation is that an instance of the 
+ <code>DOMImplementationLS</code> interface can be obtained by using 
+ binding-specific casting methods on an instance of the 
+ <code>DOMImplementation</code> interface or, if the <code>Document</code> 
+ supports the feature <code>"Core"</code> version <code>"3.0"</code> 
+ defined in [<a href="http://www.w3.org/TR/2004/REC-DOM-Level-3-Core-20040407">DOM Level 3 Core</a>]
+ , by using the method <code>DOMImplementation.getFeature</code> with 
+ parameter values <code>"LS"</code> (or <code>"LS-Async"</code>) and 
+ <code>"3.0"</code> (respectively). 
+ <p/>See also the <a href="http://www.w3.org/TR/2004/REC-DOM-Level-3-LS-20040407">Document Object Model (DOM) Level 3 Load
+and Save Specification</a>.
+</div><h1 class="classdoc-header">Field Summary</h1><table class="classdoc-table" width="100%" cellspacing="0" border="1"><tr><td class="no-border-r" valign="top" align="right" width="1%"><p class="prototype-type">static short</p></td><td class="with-border" valign="top" align="left"><p class="prototype"><a href="#MODE_ASYNCHRONOUS">MODE_ASYNCHRONOUS</a></p><blockquote class="classdoc-summary-comment"> Create an asynchronous LSParser.</blockquote></td></tr><tr><td class="no-border-r" valign="top" align="right" width="1%"><p class="prototype-type">static short</p></td><td class="with-border" valign="top" align="left"><p class="prototype"><a href="#MODE_SYNCHRONOUS">MODE_SYNCHRONOUS</a></p><blockquote class="classdoc-summary-comment"> Create a synchronous LSParser.</blockquote></td></tr></table><h1 class="classdoc-header">Method Summary</h1><table class="classdoc-table" width="100%" cellspacing="0" border="1"><tr><td class="no-border-r" valign="top" align="right" width="1%"><p class="prototype-type"> <a href="../../../../org/w3c/dom/ls/LSInput.html">LSInput</a></p></td><td class="with-border" valign="top" align="left"><p class="prototype"><a href="#createLSInput()">createLSInput</a>()</p><blockquote class="classdoc-summary-comment">  Create a new empty input source object where 
+ LSInput.characterStream, LSInput.byteStream
+ , LSInput.stringDataLSInput.systemId, 
+ LSInput.publicId, LSInput.baseURI, and 
+ LSInput.encoding are null, and 
+ LSInput.certifiedText is false.</blockquote></td></tr><tr><td class="no-border-r" valign="top" align="right" width="1%"><p class="prototype-type"> <a href="../../../../org/w3c/dom/ls/LSOutput.html">LSOutput</a></p></td><td class="with-border" valign="top" align="left"><p class="prototype"><a href="#createLSOutput()">createLSOutput</a>()</p><blockquote class="classdoc-summary-comment">  Create a new empty output destination object where 
+ LSOutput.characterStream, 
+ LSOutput.byteStream, LSOutput.systemId, 
+ LSOutput.encoding are null.</blockquote></td></tr><tr><td class="no-border-r" valign="top" align="right" width="1%"><p class="prototype-type"> <a href="../../../../org/w3c/dom/ls/LSParser.html">LSParser</a></p></td><td class="with-border" valign="top" align="left"><p class="prototype"><a href="#createLSParser(short,String)">createLSParser</a>(<span class="parameter">short&nbsp;mode,</span> <span class="parameter">String&nbsp;schemaType</span>)</p><blockquote class="classdoc-summary-comment"> Create a new LSParser.</blockquote></td></tr><tr><td class="no-border-r" valign="top" align="right" width="1%"><p class="prototype-type"> <a href="../../../../org/w3c/dom/ls/LSSerializer.html">LSSerializer</a></p></td><td class="with-border" valign="top" align="left"><p class="prototype"><a href="#createLSSerializer()">createLSSerializer</a>()</p><blockquote class="classdoc-summary-comment">  Create a new LSSerializer object.</blockquote></td></tr></table><h1 class="classdoc-header">Field Details</h1><a name="MODE_ASYNCHRONOUS"/><h3>MODE_ASYNCHRONOUS</h3><p class="prototype">public static final short <b>MODE_ASYNCHRONOUS</b></p><p/><div class="classdoc-comment-body"> Create an asynchronous <code>LSParser</code>.
+</div><p/><hr/><a name="MODE_SYNCHRONOUS"/><h3>MODE_SYNCHRONOUS</h3><p class="prototype">public static final short <b>MODE_SYNCHRONOUS</b></p><p/><div class="classdoc-comment-body"> Create a synchronous <code>LSParser</code>.
+</div><p/><h1 class="classdoc-header">Method Details</h1><a name="createLSInput()"/><h3>createLSInput</h3><p class="prototype">public LSInput <b>createLSInput</b>()</p><div class="classdoc-comment-body">  Create a new empty input source object where 
+ <code>LSInput.characterStream</code>, <code>LSInput.byteStream</code>
+ , <code>LSInput.stringData</code><code>LSInput.systemId</code>, 
+ <code>LSInput.publicId</code>, <code>LSInput.baseURI</code>, and 
+ <code>LSInput.encoding</code> are null, and 
+ <code>LSInput.certifiedText</code> is false. 
+</div><p/><div class="classdoc-tag-section-header">Returns:</div><dl class="classdoc-list"><dt>The newly created input object.</dt></dl><hr/><a name="createLSOutput()"/><h3>createLSOutput</h3><p class="prototype">public LSOutput <b>createLSOutput</b>()</p><div class="classdoc-comment-body">  Create a new empty output destination object where 
+ <code>LSOutput.characterStream</code>, 
+ <code>LSOutput.byteStream</code>, <code>LSOutput.systemId</code>, 
+ <code>LSOutput.encoding</code> are null. 
+</div><p/><div class="classdoc-tag-section-header">Returns:</div><dl class="classdoc-list"><dt>The newly created output object.</dt></dl><hr/><a name="createLSParser(short,String)"/><h3>createLSParser</h3><p class="prototype">public LSParser <b>createLSParser</b>(<span class="parameter">short&nbsp;mode,</span> <span class="parameter">String&nbsp;schemaType</span>)</p><div class="classdoc-comment-body"> Create a new <code>LSParser</code>. The newly constructed parser may 
+ then be configured by means of its <code>DOMConfiguration</code> 
+ object, and used to parse documents by means of its <code>parse</code>
+  method. 
+</div><p/><div class="classdoc-tag-section-header">Parameters:</div><dl class="classdoc-list"><dt><span class="prototype-name">mode</span> - The mode argument is either 
+MODE_SYNCHRONOUS or MODE_ASYNCHRONOUS, if 
+mode is MODE_SYNCHRONOUS then the 
+LSParser that is created will operate in synchronous 
+mode, if it's MODE_ASYNCHRONOUS then the 
+LSParser that is created will operate in asynchronous 
+mode.</dt><dt><span class="prototype-name">schemaType</span> - An absolute URI representing the type of the schema 
+language used during the load of a Document using the 
+newly created LSParser.</dt></dl><div class="classdoc-tag-section-header">Returns:</div><dl class="classdoc-list"><dt>The newly created LSParser object. This 
+LSParser is either synchronous or asynchronous 
+depending on the value of the mode argument. 
+Note:    By default, the newly created LSParser 
+does not contain a DOMErrorHandler, i.e. the value of 
+the "
+error-handler" configuration parameter is null. However, implementations 
+may provide a default error handler at creation time. In that case, 
+the initial value of the "error-handler" configuration 
+parameter on the new LSParser object contains a 
+reference to the default error handler.</dt></dl><div class="classdoc-tag-section-header">Throws:</div><dl class="classdoc-list"><dt><code><a href="../../../../org/w3c/dom/DOMException.html">DOMException</a></code> - NOT_SUPPORTED_ERR: Raised if the requested mode or schema type is 
+not supported.</dt></dl><hr/><a name="createLSSerializer()"/><h3>createLSSerializer</h3><p class="prototype">public LSSerializer <b>createLSSerializer</b>()</p><div class="classdoc-comment-body">  Create a new <code>LSSerializer</code> object. 
+</div><p/><div class="classdoc-tag-section-header">Returns:</div><dl class="classdoc-list"><dt>The newly created LSSerializer object.
+Note:    By default, the newly created 
+LSSerializer has no DOMErrorHandler, i.e. 
+the value of the "error-handler" configuration 
+parameter is null. However, implementations may 
+provide a default error handler at creation time. In that case, the 
+initial value of the "error-handler" configuration 
+parameter on the new LSSerializer object contains a 
+reference to the default error handler.</dt></dl><hr class="footer"/><div class="footer">Generated on
+  October 6, 2004
+  by <a target="cptoolsinfo" href="http://www.gnu.org/software/cp-tools">GNU Classpath Tools</a> (Gjdoc XmlDoclet 0.6.1).</div></body></html>

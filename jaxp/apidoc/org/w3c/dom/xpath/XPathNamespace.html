@@ -1,0 +1,46 @@
+<html xmlns="http://www.w3.org/TR/REC-html40" xmlns:html="http://www.w3.org/TR/REC-html40" xmlns:gjdoc="http://www.gnu.org/software/cp-tools/gjdocxml"><head><link href="../../../../gjdochtml.css" type="text/css" rel="stylesheet"/><title>XPathNamespace</title></head><body onload="top.document.title=document.title;" class="classdoc"><div class="header"><span class="navi-button">&rArr;&nbsp;<a target="_top" href="../../../../index.html">Index&nbsp;(Frames)</a></span>&nbsp;|&nbsp;
+      <span class="navi-button">&rArr;&nbsp;<a target="_top" href="../../../../index_noframes.html">Index&nbsp;(No&nbsp;Frames)</a></span>&nbsp;|&nbsp;
+      <span class="navi-button">&rArr;&nbsp;<a href="package-summary.html">Package</a></span>&nbsp;|&nbsp;
+      <span class="navi-button">&rArr;&nbsp;<a href="package-tree.html">Package&nbsp;Tree</a></span>&nbsp;|&nbsp;
+      <span class="navi-button">&rArr;&nbsp;<a href="../../../../fulltree.html">Full Tree</a></span>&nbsp;
+    </div><div class="classdoc-head"><div class="classdoc-head-inner"><b class="classdoc-head-packagename">org.w3c.dom.xpath</b><br/><h1 class="classdoc-head-classname">Interface XPathNamespace</h1></div></div><p/><b>All Superinterfaces:</b><br/><a href="../../../../org/w3c/dom/Node.html">Node</a><p/><hr/><div class="classdoc-prototype">public interface <b>XPathNamespace</b><br/>implements <a href="../../../../org/w3c/dom/Node.html">Node</a></div><p/><div class="classdoc-class-comment-body"> The <code>XPathNamespace</code> interface is returned by 
+ <code>XPathResult</code> interfaces to represent the XPath namespace node 
+ type that DOM lacks. There is no public constructor for this node type. 
+ Attempts to place it into a hierarchy or a NamedNodeMap result in a 
+ <code>DOMException</code> with the code <code>HIERARCHY_REQUEST_ERR</code>
+ . This node is read only, so methods or setting of attributes that would 
+ mutate the node result in a DOMException with the code 
+ <code>NO_MODIFICATION_ALLOWED_ERR</code>.
+ <p/>The core specification describes attributes of the <code>Node</code> 
+ interface that are different for different node types but does not 
+ describe <code>XPATH_NAMESPACE_NODE</code>, so here is a description of 
+ those attributes for this node type. All attributes of <code>Node</code> 
+ not described in this section have a <code>null</code> or 
+ <code>false</code> value.
+ <p/><code>ownerDocument</code> matches the <code>ownerDocument</code> of the 
+ <code>ownerElement</code> even if the element is later adopted.
+ <p/><code>nodeName</code> is always the string "<code>#namespace</code>".
+ <p/><code>prefix</code> is the prefix of the namespace represented by the 
+ node.
+ <p/><code>localName</code> is the same as <code>prefix</code>.
+ <p/><code>nodeType</code> is equal to <code>XPATH_NAMESPACE_NODE</code>.
+ <p/><code>namespaceURI</code> is the namespace URI of the namespace 
+ represented by the node.
+ <p/><code>nodeValue</code> is the same as <code>namespaceURI</code>.
+ <p/><code>adoptNode</code>, <code>cloneNode</code>, and 
+ <code>importNode</code> fail on this node type by raising a 
+ <code>DOMException</code> with the code <code>NOT_SUPPORTED_ERR</code>.
+ <p/><b>Note:</b> In future versions of the XPath specification, the 
+ definition of a namespace node may be changed incomatibly, in which case 
+ incompatible changes to field values may be required to implement 
+ versions beyond XPath 1.0.
+ <p/>See also the <a href="http://www.w3.org/TR/2004/NOTE-DOM-Level-3-XPath-20040226">Document Object Model (DOM) Level 3 XPath Specification</a>.
+</div><h1 class="classdoc-header">Field Summary</h1><table class="classdoc-table" width="100%" cellspacing="0" border="1"><tr><td class="no-border-r" valign="top" align="right" width="1%"><p class="prototype-type">static short</p></td><td class="with-border" valign="top" align="left"><p class="prototype"><a href="#XPATH_NAMESPACE_NODE">XPATH_NAMESPACE_NODE</a></p><blockquote class="classdoc-summary-comment"> The node is a Namespace.</blockquote></td></tr></table><h1 class="classdoc-header">Method Summary</h1><table class="classdoc-table" width="100%" cellspacing="0" border="1"><tr><td class="no-border-r" valign="top" align="right" width="1%"><p class="prototype-type"> <a href="../../../../org/w3c/dom/Element.html">Element</a></p></td><td class="with-border" valign="top" align="left"><p class="prototype"><a href="#getOwnerElement()">getOwnerElement</a>()</p><blockquote class="classdoc-summary-comment"> The Element on which the namespace was in scope when it 
+ was requested.</blockquote></td></tr></table><h1 class="classdoc-header">Field Details</h1><a name="XPATH_NAMESPACE_NODE"/><h3>XPATH_NAMESPACE_NODE</h3><p class="prototype">public static final short <b>XPATH_NAMESPACE_NODE</b></p><p/><div class="classdoc-comment-body"> The node is a <code>Namespace</code>.
+</div><p/><h1 class="classdoc-header">Method Details</h1><a name="getOwnerElement()"/><h3>getOwnerElement</h3><p class="prototype">public Element <b>getOwnerElement</b>()</p><div class="classdoc-comment-body"> The <code>Element</code> on which the namespace was in scope when it 
+ was requested. This does not change on a returned namespace node even 
+ if the document changes such that the namespace goes out of scope on 
+ that element and this node is no longer found there by XPath.
+</div><p/><hr class="footer"/><div class="footer">Generated on
+  October 6, 2004
+  by <a target="cptoolsinfo" href="http://www.gnu.org/software/cp-tools">GNU Classpath Tools</a> (Gjdoc XmlDoclet 0.6.1).</div></body></html>

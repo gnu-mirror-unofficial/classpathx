@@ -1,0 +1,27 @@
+<html xmlns="http://www.w3.org/TR/REC-html40" xmlns:html="http://www.w3.org/TR/REC-html40" xmlns:gjdoc="http://www.gnu.org/software/cp-tools/gjdocxml"><head><link href="../../../../gjdochtml.css" type="text/css" rel="stylesheet"/><title>CSSCharsetRule</title></head><body onload="top.document.title=document.title;" class="classdoc"><div class="header"><span class="navi-button">&rArr;&nbsp;<a target="_top" href="../../../../index.html">Index&nbsp;(Frames)</a></span>&nbsp;|&nbsp;
+      <span class="navi-button">&rArr;&nbsp;<a target="_top" href="../../../../index_noframes.html">Index&nbsp;(No&nbsp;Frames)</a></span>&nbsp;|&nbsp;
+      <span class="navi-button">&rArr;&nbsp;<a href="package-summary.html">Package</a></span>&nbsp;|&nbsp;
+      <span class="navi-button">&rArr;&nbsp;<a href="package-tree.html">Package&nbsp;Tree</a></span>&nbsp;|&nbsp;
+      <span class="navi-button">&rArr;&nbsp;<a href="../../../../fulltree.html">Full Tree</a></span>&nbsp;
+    </div><div class="classdoc-head"><div class="classdoc-head-inner"><b class="classdoc-head-packagename">org.w3c.dom.css</b><br/><h1 class="classdoc-head-classname">Interface CSSCharsetRule</h1></div></div><p/><b>All Superinterfaces:</b><br/><a href="../../../../org/w3c/dom/css/CSSRule.html">CSSRule</a><p/><hr/><div class="classdoc-prototype">public interface <b>CSSCharsetRule</b><br/>implements <a href="../../../../org/w3c/dom/css/CSSRule.html">CSSRule</a></div><p/><div class="classdoc-class-comment-body">  The <code>CSSCharsetRule</code> interface represents a @charset rule in a 
+ CSS style sheet. The value of the <code>encoding</code> attribute does 
+ not affect the encoding of text data in the DOM objects; this encoding is 
+ always UTF-16. After a stylesheet is loaded, the value of the 
+ <code>encoding</code> attribute is the value found in the 
+ <code>@charset</code> rule. If there was no <code>@charset</code> in the 
+ original document, then no <code>CSSCharsetRule</code> is created. The 
+ value of the <code>encoding</code> attribute may also be used as a hint 
+ for the encoding used on serialization of the style sheet. 
+ <p/> The value of the @charset rule (and therefore of the 
+ <code>CSSCharsetRule</code>) may not correspond to the encoding the 
+ document actually came in; character encoding information e.g. in an HTTP 
+ header, has priority (see CSS document representation) but this is not 
+ reflected in the <code>CSSCharsetRule</code>. 
+ <p/>See also the <a href="http://www.w3.org/TR/2000/REC-DOM-Level-2-Style-20001113">Document Object Model (DOM) Level 2 Style Specification</a>.
+</div><div class="classdoc-tag-section-header">Since:</div><dl class="classdoc-list"><dt>DOM Level 2</dt></dl><h1 class="classdoc-header">Method Summary</h1><table class="classdoc-table" width="100%" cellspacing="0" border="1"><tr><td class="no-border-r" valign="top" align="right" width="1%"><p class="prototype-type"> String</p></td><td class="with-border" valign="top" align="left"><p class="prototype"><a href="#getEncoding()">getEncoding</a>()</p><blockquote class="classdoc-summary-comment">  The encoding information used in this @charset rule.</blockquote></td></tr><tr><td class="no-border-r" valign="top" align="right" width="1%"><p class="prototype-type"> void</p></td><td class="with-border" valign="top" align="left"><p class="prototype"><a href="#setEncoding(String)">setEncoding</a>(<span class="parameter">String&nbsp;encoding</span>)</p><blockquote class="classdoc-summary-comment">  The encoding information used in this @charset rule.</blockquote></td></tr></table><h1 class="classdoc-header">Method Details</h1><a name="getEncoding()"/><h3>getEncoding</h3><p class="prototype">public String <b>getEncoding</b>()</p><div class="classdoc-comment-body">  The encoding information used in this <code>@charset</code> rule. 
+</div><p/><div class="classdoc-tag-section-header">Throws:</div><dl class="classdoc-list"><dt><code><a href="../../../../org/w3c/dom/DOMException.html">DOMException</a></code> - SYNTAX_ERR: Raised if the specified encoding value has a syntax error 
+and is unparsable.</dt></dl><hr/><a name="setEncoding(String)"/><h3>setEncoding</h3><p class="prototype">public void <b>setEncoding</b>(<span class="parameter">String&nbsp;encoding</span>)</p><div class="classdoc-comment-body">  The encoding information used in this <code>@charset</code> rule. 
+</div><p/><div class="classdoc-tag-section-header">Parameters:</div><dl class="classdoc-list"><dt><span class="prototype-name">encoding</span></dt></dl><div class="classdoc-tag-section-header">Throws:</div><dl class="classdoc-list"><dt><code><a href="../../../../org/w3c/dom/DOMException.html">DOMException</a></code> - SYNTAX_ERR: Raised if the specified encoding value has a syntax error 
+and is unparsable.</dt></dl><hr class="footer"/><div class="footer">Generated on
+  October 6, 2004
+  by <a target="cptoolsinfo" href="http://www.gnu.org/software/cp-tools">GNU Classpath Tools</a> (Gjdoc XmlDoclet 0.6.1).</div></body></html>

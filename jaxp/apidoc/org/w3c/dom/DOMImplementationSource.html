@@ -1,0 +1,24 @@
+<html xmlns="http://www.w3.org/TR/REC-html40" xmlns:html="http://www.w3.org/TR/REC-html40" xmlns:gjdoc="http://www.gnu.org/software/cp-tools/gjdocxml"><head><link href="../../../gjdochtml.css" type="text/css" rel="stylesheet"/><title>DOMImplementationSource</title></head><body onload="top.document.title=document.title;" class="classdoc"><div class="header"><span class="navi-button">&rArr;&nbsp;<a target="_top" href="../../../index.html">Index&nbsp;(Frames)</a></span>&nbsp;|&nbsp;
+      <span class="navi-button">&rArr;&nbsp;<a target="_top" href="../../../index_noframes.html">Index&nbsp;(No&nbsp;Frames)</a></span>&nbsp;|&nbsp;
+      <span class="navi-button">&rArr;&nbsp;<a href="package-summary.html">Package</a></span>&nbsp;|&nbsp;
+      <span class="navi-button">&rArr;&nbsp;<a href="package-tree.html">Package&nbsp;Tree</a></span>&nbsp;|&nbsp;
+      <span class="navi-button">&rArr;&nbsp;<a href="../../../fulltree.html">Full Tree</a></span>&nbsp;
+    </div><div class="classdoc-head"><div class="classdoc-head-inner"><b class="classdoc-head-packagename">org.w3c.dom</b><br/><h1 class="classdoc-head-classname">Interface DOMImplementationSource</h1></div></div><p/><hr/><div class="classdoc-prototype">public interface <b>DOMImplementationSource</b><br/></div><p/><div class="classdoc-class-comment-body"> This interface permits a DOM implementer to supply one or more 
+ implementations, based upon requested features and versions, as specified 
+ in . Each implemented <code>DOMImplementationSource</code> object is 
+ listed in the binding-specific list of available sources so that its 
+ <code>DOMImplementation</code> objects are made available.
+ <p/>See also the <a href="http://www.w3.org/TR/2004/REC-DOM-Level-3-Core-20040407">Document Object Model (DOM) Level 3 Core Specification</a>.
+</div><div class="classdoc-tag-section-header">Since:</div><dl class="classdoc-list"><dt>DOM Level 3</dt></dl><h1 class="classdoc-header">Method Summary</h1><table class="classdoc-table" width="100%" cellspacing="0" border="1"><tr><td class="no-border-r" valign="top" align="right" width="1%"><p class="prototype-type"> <a href="../../../org/w3c/dom/DOMImplementation.html">DOMImplementation</a></p></td><td class="with-border" valign="top" align="left"><p class="prototype"><a href="#getDOMImplementation(String)">getDOMImplementation</a>(<span class="parameter">String&nbsp;features</span>)</p><blockquote class="classdoc-summary-comment">  A method to request the first DOM implementation that supports the 
+ specified features.</blockquote></td></tr><tr><td class="no-border-r" valign="top" align="right" width="1%"><p class="prototype-type"> <a href="../../../org/w3c/dom/DOMImplementationList.html">DOMImplementationList</a></p></td><td class="with-border" valign="top" align="left"><p class="prototype"><a href="#getDOMImplementationList(String)">getDOMImplementationList</a>(<span class="parameter">String&nbsp;features</span>)</p><blockquote class="classdoc-summary-comment"> A method to request a list of DOM implementations that support the 
+ specified features and versions, as specified in .</blockquote></td></tr></table><h1 class="classdoc-header">Method Details</h1><a name="getDOMImplementation(String)"/><h3>getDOMImplementation</h3><p class="prototype">public DOMImplementation <b>getDOMImplementation</b>(<span class="parameter">String&nbsp;features</span>)</p><div class="classdoc-comment-body">  A method to request the first DOM implementation that supports the 
+ specified features. 
+</div><p/><div class="classdoc-tag-section-header">Parameters:</div><dl class="classdoc-list"><dt><span class="prototype-name">features</span> - A string that specifies which features and versions 
+are required.</dt></dl><div class="classdoc-tag-section-header">Returns:</div><dl class="classdoc-list"><dt>The first DOM implementation that support the desired 
+features, or null if this source has none.</dt></dl><hr/><a name="getDOMImplementationList(String)"/><h3>getDOMImplementationList</h3><p class="prototype">public DOMImplementationList <b>getDOMImplementationList</b>(<span class="parameter">String&nbsp;features</span>)</p><div class="classdoc-comment-body"> A method to request a list of DOM implementations that support the 
+ specified features and versions, as specified in .
+</div><p/><div class="classdoc-tag-section-header">Parameters:</div><dl class="classdoc-list"><dt><span class="prototype-name">features</span> - A string that specifies which features and versions 
+are required.</dt></dl><div class="classdoc-tag-section-header">Returns:</div><dl class="classdoc-list"><dt>A list of DOM implementations that support the desired 
+features.</dt></dl><hr class="footer"/><div class="footer">Generated on
+  October 6, 2004
+  by <a target="cptoolsinfo" href="http://www.gnu.org/software/cp-tools">GNU Classpath Tools</a> (Gjdoc XmlDoclet 0.6.1).</div></body></html>

@@ -1,0 +1,121 @@
+<html xmlns="http://www.w3.org/TR/REC-html40" xmlns:html="http://www.w3.org/TR/REC-html40" xmlns:gjdoc="http://www.gnu.org/software/cp-tools/gjdocxml"><head><link href="../../../../gjdochtml.css" type="text/css" rel="stylesheet"/><title>XPathResult</title></head><body onload="top.document.title=document.title;" class="classdoc"><div class="header"><span class="navi-button">&rArr;&nbsp;<a target="_top" href="../../../../index.html">Index&nbsp;(Frames)</a></span>&nbsp;|&nbsp;
+      <span class="navi-button">&rArr;&nbsp;<a target="_top" href="../../../../index_noframes.html">Index&nbsp;(No&nbsp;Frames)</a></span>&nbsp;|&nbsp;
+      <span class="navi-button">&rArr;&nbsp;<a href="package-summary.html">Package</a></span>&nbsp;|&nbsp;
+      <span class="navi-button">&rArr;&nbsp;<a href="package-tree.html">Package&nbsp;Tree</a></span>&nbsp;|&nbsp;
+      <span class="navi-button">&rArr;&nbsp;<a href="../../../../fulltree.html">Full Tree</a></span>&nbsp;
+    </div><div class="classdoc-head"><div class="classdoc-head-inner"><b class="classdoc-head-packagename">org.w3c.dom.xpath</b><br/><h1 class="classdoc-head-classname">Interface XPathResult</h1></div></div><p/><hr/><div class="classdoc-prototype">public interface <b>XPathResult</b><br/></div><p/><div class="classdoc-class-comment-body"> The <code>XPathResult</code> interface represents the result of the 
+ evaluation of an XPath 1.0 expression within the context of a particular 
+ node. Since evaluation of an XPath expression can result in various 
+ result types, this object makes it possible to discover and manipulate 
+ the type and value of the result.
+ <p/>See also the <a href="http://www.w3.org/TR/2004/NOTE-DOM-Level-3-XPath-20040226">Document Object Model (DOM) Level 3 XPath Specification</a>.
+</div><h1 class="classdoc-header">Field Summary</h1><table class="classdoc-table" width="100%" cellspacing="0" border="1"><tr><td class="no-border-r" valign="top" align="right" width="1%"><p class="prototype-type">static short</p></td><td class="with-border" valign="top" align="left"><p class="prototype"><a href="#ANY_TYPE">ANY_TYPE</a></p><blockquote class="classdoc-summary-comment"> This code does not represent a specific type.</blockquote></td></tr><tr><td class="no-border-r" valign="top" align="right" width="1%"><p class="prototype-type">static short</p></td><td class="with-border" valign="top" align="left"><p class="prototype"><a href="#ANY_UNORDERED_NODE_TYPE">ANY_UNORDERED_NODE_TYPE</a></p><blockquote class="classdoc-summary-comment"> The result is a node set as defined by [XPath 1.0] and 
+ will be accessed as a single node, which may be nullif 
+ the node set is empty.</blockquote></td></tr><tr><td class="no-border-r" valign="top" align="right" width="1%"><p class="prototype-type">static short</p></td><td class="with-border" valign="top" align="left"><p class="prototype"><a href="#BOOLEAN_TYPE">BOOLEAN_TYPE</a></p><blockquote class="classdoc-summary-comment"> The result is a boolean as defined by [XPath 1.0].</blockquote></td></tr><tr><td class="no-border-r" valign="top" align="right" width="1%"><p class="prototype-type">static short</p></td><td class="with-border" valign="top" align="left"><p class="prototype"><a href="#FIRST_ORDERED_NODE_TYPE">FIRST_ORDERED_NODE_TYPE</a></p><blockquote class="classdoc-summary-comment"> The result is a node set as defined by [XPath 1.0] and 
+ will be accessed as a single node, which may be null if 
+ the node set is empty.</blockquote></td></tr><tr><td class="no-border-r" valign="top" align="right" width="1%"><p class="prototype-type">static short</p></td><td class="with-border" valign="top" align="left"><p class="prototype"><a href="#NUMBER_TYPE">NUMBER_TYPE</a></p><blockquote class="classdoc-summary-comment"> The result is a number as defined by [XPath 1.0].</blockquote></td></tr><tr><td class="no-border-r" valign="top" align="right" width="1%"><p class="prototype-type">static short</p></td><td class="with-border" valign="top" align="left"><p class="prototype"><a href="#ORDERED_NODE_ITERATOR_TYPE">ORDERED_NODE_ITERATOR_TYPE</a></p><blockquote class="classdoc-summary-comment"> The result is a node set as defined by [XPath 1.0] that 
+ will be accessed iteratively, which will produce document-ordered 
+ nodes.</blockquote></td></tr><tr><td class="no-border-r" valign="top" align="right" width="1%"><p class="prototype-type">static short</p></td><td class="with-border" valign="top" align="left"><p class="prototype"><a href="#ORDERED_NODE_SNAPSHOT_TYPE">ORDERED_NODE_SNAPSHOT_TYPE</a></p><blockquote class="classdoc-summary-comment"> The result is a node set as defined by [XPath 1.0] that 
+ will be accessed as a snapshot list of nodes that will be in original 
+ document order.</blockquote></td></tr><tr><td class="no-border-r" valign="top" align="right" width="1%"><p class="prototype-type">static short</p></td><td class="with-border" valign="top" align="left"><p class="prototype"><a href="#STRING_TYPE">STRING_TYPE</a></p><blockquote class="classdoc-summary-comment"> The result is a string as defined by [XPath 1.0].</blockquote></td></tr><tr><td class="no-border-r" valign="top" align="right" width="1%"><p class="prototype-type">static short</p></td><td class="with-border" valign="top" align="left"><p class="prototype"><a href="#UNORDERED_NODE_ITERATOR_TYPE">UNORDERED_NODE_ITERATOR_TYPE</a></p><blockquote class="classdoc-summary-comment"> The result is a node set as defined by [XPath 1.0] that 
+ will be accessed iteratively, which may not produce nodes in a 
+ particular order.</blockquote></td></tr><tr><td class="no-border-r" valign="top" align="right" width="1%"><p class="prototype-type">static short</p></td><td class="with-border" valign="top" align="left"><p class="prototype"><a href="#UNORDERED_NODE_SNAPSHOT_TYPE">UNORDERED_NODE_SNAPSHOT_TYPE</a></p><blockquote class="classdoc-summary-comment"> The result is a node set as defined by [XPath 1.0] that 
+ will be accessed as a snapshot list of nodes that may not be in a 
+ particular order.</blockquote></td></tr></table><h1 class="classdoc-header">Method Summary</h1><table class="classdoc-table" width="100%" cellspacing="0" border="1"><tr><td class="no-border-r" valign="top" align="right" width="1%"><p class="prototype-type"> boolean</p></td><td class="with-border" valign="top" align="left"><p class="prototype"><a href="#getBooleanValue()">getBooleanValue</a>()</p><blockquote class="classdoc-summary-comment"> The value of this boolean result.</blockquote></td></tr><tr><td class="no-border-r" valign="top" align="right" width="1%"><p class="prototype-type"> boolean</p></td><td class="with-border" valign="top" align="left"><p class="prototype"><a href="#getInvalidIteratorState()">getInvalidIteratorState</a>()</p><blockquote class="classdoc-summary-comment"> Signifies that the iterator has become invalid.</blockquote></td></tr><tr><td class="no-border-r" valign="top" align="right" width="1%"><p class="prototype-type"> double</p></td><td class="with-border" valign="top" align="left"><p class="prototype"><a href="#getNumberValue()">getNumberValue</a>()</p><blockquote class="classdoc-summary-comment"> The value of this number result.</blockquote></td></tr><tr><td class="no-border-r" valign="top" align="right" width="1%"><p class="prototype-type"> short</p></td><td class="with-border" valign="top" align="left"><p class="prototype"><a href="#getResultType()">getResultType</a>()</p><blockquote class="classdoc-summary-comment"> A code representing the type of this result, as defined by the type 
+ constants.</blockquote></td></tr><tr><td class="no-border-r" valign="top" align="right" width="1%"><p class="prototype-type"> <a href="../../../../org/w3c/dom/Node.html">Node</a></p></td><td class="with-border" valign="top" align="left"><p class="prototype"><a href="#getSingleNodeValue()">getSingleNodeValue</a>()</p><blockquote class="classdoc-summary-comment"> The value of this single node result, which may be null.</blockquote></td></tr><tr><td class="no-border-r" valign="top" align="right" width="1%"><p class="prototype-type"> int</p></td><td class="with-border" valign="top" align="left"><p class="prototype"><a href="#getSnapshotLength()">getSnapshotLength</a>()</p><blockquote class="classdoc-summary-comment"> The number of nodes in the result snapshot.</blockquote></td></tr><tr><td class="no-border-r" valign="top" align="right" width="1%"><p class="prototype-type"> String</p></td><td class="with-border" valign="top" align="left"><p class="prototype"><a href="#getStringValue()">getStringValue</a>()</p><blockquote class="classdoc-summary-comment"> The value of this string result.</blockquote></td></tr><tr><td class="no-border-r" valign="top" align="right" width="1%"><p class="prototype-type"> <a href="../../../../org/w3c/dom/Node.html">Node</a></p></td><td class="with-border" valign="top" align="left"><p class="prototype"><a href="#iterateNext()">iterateNext</a>()</p><blockquote class="classdoc-summary-comment"> Iterates and returns the next node from the node set or 
+ nullif there are no more nodes.</blockquote></td></tr><tr><td class="no-border-r" valign="top" align="right" width="1%"><p class="prototype-type"> <a href="../../../../org/w3c/dom/Node.html">Node</a></p></td><td class="with-border" valign="top" align="left"><p class="prototype"><a href="#snapshotItem(int)">snapshotItem</a>(<span class="parameter">int&nbsp;index</span>)</p><blockquote class="classdoc-summary-comment"> Returns the indexth item in the snapshot collection.</blockquote></td></tr></table><h1 class="classdoc-header">Field Details</h1><a name="ANY_TYPE"/><h3>ANY_TYPE</h3><p class="prototype">public static final short <b>ANY_TYPE</b></p><p/><div class="classdoc-comment-body"> This code does not represent a specific type. An evaluation of an XPath 
+ expression will never produce this type. If this type is requested, 
+ then the evaluation returns whatever type naturally results from 
+ evaluation of the expression. 
+ <br/>If the natural result is a node set when <code>ANY_TYPE</code> was 
+ requested, then <code>UNORDERED_NODE_ITERATOR_TYPE</code> is always 
+ the resulting type. Any other representation of a node set must be 
+ explicitly requested.
+</div><p/><hr/><a name="ANY_UNORDERED_NODE_TYPE"/><h3>ANY_UNORDERED_NODE_TYPE</h3><p class="prototype">public static final short <b>ANY_UNORDERED_NODE_TYPE</b></p><p/><div class="classdoc-comment-body"> The result is a <a href="http://www.w3.org/TR/1999/REC-xpath-19991116#node-sets">node set</a> as defined by [<a href="http://www.w3.org/TR/1999/REC-xpath-19991116">XPath 1.0</a>] and 
+ will be accessed as a single node, which may be <code>null</code>if 
+ the node set is empty. Document modification does not invalidate the 
+ node, but may mean that the result node no longer corresponds to the 
+ current document. This is a convenience that permits optimization 
+ since the implementation can stop once any node in the resulting set 
+ has been found.
+ <br/>If there is more than one node in the actual result, the single 
+ node returned might not be the first in document order.
+</div><p/><hr/><a name="BOOLEAN_TYPE"/><h3>BOOLEAN_TYPE</h3><p class="prototype">public static final short <b>BOOLEAN_TYPE</b></p><p/><div class="classdoc-comment-body"> The result is a <a href="http://www.w3.org/TR/1999/REC-xpath-19991116#booleans">boolean</a> as defined by [<a href="http://www.w3.org/TR/1999/REC-xpath-19991116">XPath 1.0</a>]. 
+ Document modification does not invalidate the boolean, but may mean 
+ that reevaluation would not yield the same boolean.
+</div><p/><hr/><a name="FIRST_ORDERED_NODE_TYPE"/><h3>FIRST_ORDERED_NODE_TYPE</h3><p class="prototype">public static final short <b>FIRST_ORDERED_NODE_TYPE</b></p><p/><div class="classdoc-comment-body"> The result is a <a href="http://www.w3.org/TR/1999/REC-xpath-19991116#node-sets">node set</a> as defined by [<a href="http://www.w3.org/TR/1999/REC-xpath-19991116">XPath 1.0</a>] and 
+ will be accessed as a single node, which may be <code>null</code> if 
+ the node set is empty. Document modification does not invalidate the 
+ node, but may mean that the result node no longer corresponds to the 
+ current document. This is a convenience that permits optimization 
+ since the implementation can stop once the first node in document 
+ order of the resulting set has been found.
+ <br/>If there are more than one node in the actual result, the single 
+ node returned will be the first in document order.
+</div><p/><hr/><a name="NUMBER_TYPE"/><h3>NUMBER_TYPE</h3><p class="prototype">public static final short <b>NUMBER_TYPE</b></p><p/><div class="classdoc-comment-body"> The result is a <a href="http://www.w3.org/TR/1999/REC-xpath-19991116#numbers">number</a> as defined by [<a href="http://www.w3.org/TR/1999/REC-xpath-19991116">XPath 1.0</a>]. 
+ Document modification does not invalidate the number, but may mean 
+ that reevaluation would not yield the same number.
+</div><p/><hr/><a name="ORDERED_NODE_ITERATOR_TYPE"/><h3>ORDERED_NODE_ITERATOR_TYPE</h3><p class="prototype">public static final short <b>ORDERED_NODE_ITERATOR_TYPE</b></p><p/><div class="classdoc-comment-body"> The result is a node set as defined by [<a href="http://www.w3.org/TR/1999/REC-xpath-19991116">XPath 1.0</a>] that 
+ will be accessed iteratively, which will produce document-ordered 
+ nodes. Document modification invalidates the iteration.
+</div><p/><hr/><a name="ORDERED_NODE_SNAPSHOT_TYPE"/><h3>ORDERED_NODE_SNAPSHOT_TYPE</h3><p class="prototype">public static final short <b>ORDERED_NODE_SNAPSHOT_TYPE</b></p><p/><div class="classdoc-comment-body"> The result is a <a href="http://www.w3.org/TR/1999/REC-xpath-19991116#node-sets">node set</a> as defined by [<a href="http://www.w3.org/TR/1999/REC-xpath-19991116">XPath 1.0</a>] that 
+ will be accessed as a snapshot list of nodes that will be in original 
+ document order. Document modification does not invalidate the 
+ snapshot but may mean that reevaluation would not yield the same 
+ snapshot and nodes in the snapshot may have been altered, moved, or 
+ removed from the document.
+</div><p/><hr/><a name="STRING_TYPE"/><h3>STRING_TYPE</h3><p class="prototype">public static final short <b>STRING_TYPE</b></p><p/><div class="classdoc-comment-body"> The result is a <a href="http://www.w3.org/TR/1999/REC-xpath-19991116#strings">string</a> as defined by [<a href="http://www.w3.org/TR/1999/REC-xpath-19991116">XPath 1.0</a>]. 
+ Document modification does not invalidate the string, but may mean 
+ that the string no longer corresponds to the current document.
+</div><p/><hr/><a name="UNORDERED_NODE_ITERATOR_TYPE"/><h3>UNORDERED_NODE_ITERATOR_TYPE</h3><p class="prototype">public static final short <b>UNORDERED_NODE_ITERATOR_TYPE</b></p><p/><div class="classdoc-comment-body"> The result is a <a href="http://www.w3.org/TR/1999/REC-xpath-19991116#node-sets">node set</a> as defined by [<a href="http://www.w3.org/TR/1999/REC-xpath-19991116">XPath 1.0</a>] that 
+ will be accessed iteratively, which may not produce nodes in a 
+ particular order. Document modification invalidates the iteration.
+ <br/>This is the default type returned if the result is a node set and 
+ <code>ANY_TYPE</code> is requested.
+</div><p/><hr/><a name="UNORDERED_NODE_SNAPSHOT_TYPE"/><h3>UNORDERED_NODE_SNAPSHOT_TYPE</h3><p class="prototype">public static final short <b>UNORDERED_NODE_SNAPSHOT_TYPE</b></p><p/><div class="classdoc-comment-body"> The result is a <a href="http://www.w3.org/TR/1999/REC-xpath-19991116#node-sets">node set</a> as defined by [<a href="http://www.w3.org/TR/1999/REC-xpath-19991116">XPath 1.0</a>] that 
+ will be accessed as a snapshot list of nodes that may not be in a 
+ particular order. Document modification does not invalidate the 
+ snapshot but may mean that reevaluation would not yield the same 
+ snapshot and nodes in the snapshot may have been altered, moved, or 
+ removed from the document.
+</div><p/><h1 class="classdoc-header">Method Details</h1><a name="getBooleanValue()"/><h3>getBooleanValue</h3><p class="prototype">public boolean <b>getBooleanValue</b>()</p><div class="classdoc-comment-body"> The value of this boolean result.
+</div><p/><div class="classdoc-tag-section-header">Throws:</div><dl class="classdoc-list"><dt><code><a href="../../../../org/w3c/dom/xpath/XPathException.html">XPathException</a></code> - TYPE_ERR: raised if resultType is not 
+BOOLEAN_TYPE.</dt></dl><hr/><a name="getInvalidIteratorState()"/><h3>getInvalidIteratorState</h3><p class="prototype">public boolean <b>getInvalidIteratorState</b>()</p><div class="classdoc-comment-body"> Signifies that the iterator has become invalid. True if 
+ <code>resultType</code> is <code>UNORDERED_NODE_ITERATOR_TYPE</code> 
+ or <code>ORDERED_NODE_ITERATOR_TYPE</code> and the document has been 
+ modified since this result was returned.
+</div><p/><hr/><a name="getNumberValue()"/><h3>getNumberValue</h3><p class="prototype">public double <b>getNumberValue</b>()</p><div class="classdoc-comment-body"> The value of this number result. If the native double type of the DOM 
+ binding does not directly support the exact IEEE 754 result of the 
+ XPath expression, then it is up to the definition of the binding to 
+ specify how the XPath number is converted to the native binding 
+ number.
+</div><p/><div class="classdoc-tag-section-header">Throws:</div><dl class="classdoc-list"><dt><code><a href="../../../../org/w3c/dom/xpath/XPathException.html">XPathException</a></code> - TYPE_ERR: raised if resultType is not 
+NUMBER_TYPE.</dt></dl><hr/><a name="getResultType()"/><h3>getResultType</h3><p class="prototype">public short <b>getResultType</b>()</p><div class="classdoc-comment-body"> A code representing the type of this result, as defined by the type 
+ constants.
+</div><p/><hr/><a name="getSingleNodeValue()"/><h3>getSingleNodeValue</h3><p class="prototype">public Node <b>getSingleNodeValue</b>()</p><div class="classdoc-comment-body"> The value of this single node result, which may be <code>null</code>.
+</div><p/><div class="classdoc-tag-section-header">Throws:</div><dl class="classdoc-list"><dt><code><a href="../../../../org/w3c/dom/xpath/XPathException.html">XPathException</a></code> - TYPE_ERR: raised if resultType is not 
+ANY_UNORDERED_NODE_TYPE or 
+FIRST_ORDERED_NODE_TYPE.</dt></dl><hr/><a name="getSnapshotLength()"/><h3>getSnapshotLength</h3><p class="prototype">public int <b>getSnapshotLength</b>()</p><div class="classdoc-comment-body"> The number of nodes in the result snapshot. Valid values for 
+ snapshotItem indices are <code>0</code> to 
+ <code>snapshotLength-1</code> inclusive.
+</div><p/><div class="classdoc-tag-section-header">Throws:</div><dl class="classdoc-list"><dt><code><a href="../../../../org/w3c/dom/xpath/XPathException.html">XPathException</a></code> - TYPE_ERR: raised if resultType is not 
+UNORDERED_NODE_SNAPSHOT_TYPE or 
+ORDERED_NODE_SNAPSHOT_TYPE.</dt></dl><hr/><a name="getStringValue()"/><h3>getStringValue</h3><p class="prototype">public String <b>getStringValue</b>()</p><div class="classdoc-comment-body"> The value of this string result.
+</div><p/><div class="classdoc-tag-section-header">Throws:</div><dl class="classdoc-list"><dt><code><a href="../../../../org/w3c/dom/xpath/XPathException.html">XPathException</a></code> - TYPE_ERR: raised if resultType is not 
+STRING_TYPE.</dt></dl><hr/><a name="iterateNext()"/><h3>iterateNext</h3><p class="prototype">public Node <b>iterateNext</b>()</p><div class="classdoc-comment-body"> Iterates and returns the next node from the node set or 
+ <code>null</code>if there are no more nodes.
+</div><p/><div class="classdoc-tag-section-header">Returns:</div><dl class="classdoc-list"><dt>Returns the next node.</dt></dl><div class="classdoc-tag-section-header">Throws:</div><dl class="classdoc-list"><dt><code><a href="../../../../org/w3c/dom/xpath/XPathException.html">XPathException</a></code> - TYPE_ERR: raised if resultType is not 
+UNORDERED_NODE_ITERATOR_TYPE or 
+ORDERED_NODE_ITERATOR_TYPE.</dt><dt><code><a href="../../../../org/w3c/dom/DOMException.html">DOMException</a></code> - INVALID_STATE_ERR: The document has been mutated since the result was 
+returned.</dt></dl><hr/><a name="snapshotItem(int)"/><h3>snapshotItem</h3><p class="prototype">public Node <b>snapshotItem</b>(<span class="parameter">int&nbsp;index</span>)</p><div class="classdoc-comment-body"> Returns the <code>index</code>th item in the snapshot collection. If 
+ <code>index</code> is greater than or equal to the number of nodes in 
+ the list, this method returns <code>null</code>. Unlike the iterator 
+ result, the snapshot does not become invalid, but may not correspond 
+ to the current document if it is mutated.
+</div><p/><div class="classdoc-tag-section-header">Parameters:</div><dl class="classdoc-list"><dt><span class="prototype-name">index</span> - Index into the snapshot collection.</dt></dl><div class="classdoc-tag-section-header">Returns:</div><dl class="classdoc-list"><dt>The node at the indexth position in the 
+NodeList, or null if that is not a valid 
+index.</dt></dl><div class="classdoc-tag-section-header">Throws:</div><dl class="classdoc-list"><dt><code><a href="../../../../org/w3c/dom/xpath/XPathException.html">XPathException</a></code> - TYPE_ERR: raised if resultType is not 
+UNORDERED_NODE_SNAPSHOT_TYPE or 
+ORDERED_NODE_SNAPSHOT_TYPE.</dt></dl><hr class="footer"/><div class="footer">Generated on
+  October 6, 2004
+  by <a target="cptoolsinfo" href="http://www.gnu.org/software/cp-tools">GNU Classpath Tools</a> (Gjdoc XmlDoclet 0.6.1).</div></body></html>

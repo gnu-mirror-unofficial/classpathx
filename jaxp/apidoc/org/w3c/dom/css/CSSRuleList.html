@@ -1,0 +1,22 @@
+<html xmlns="http://www.w3.org/TR/REC-html40" xmlns:html="http://www.w3.org/TR/REC-html40" xmlns:gjdoc="http://www.gnu.org/software/cp-tools/gjdocxml"><head><link href="../../../../gjdochtml.css" type="text/css" rel="stylesheet"/><title>CSSRuleList</title></head><body onload="top.document.title=document.title;" class="classdoc"><div class="header"><span class="navi-button">&rArr;&nbsp;<a target="_top" href="../../../../index.html">Index&nbsp;(Frames)</a></span>&nbsp;|&nbsp;
+      <span class="navi-button">&rArr;&nbsp;<a target="_top" href="../../../../index_noframes.html">Index&nbsp;(No&nbsp;Frames)</a></span>&nbsp;|&nbsp;
+      <span class="navi-button">&rArr;&nbsp;<a href="package-summary.html">Package</a></span>&nbsp;|&nbsp;
+      <span class="navi-button">&rArr;&nbsp;<a href="package-tree.html">Package&nbsp;Tree</a></span>&nbsp;|&nbsp;
+      <span class="navi-button">&rArr;&nbsp;<a href="../../../../fulltree.html">Full Tree</a></span>&nbsp;
+    </div><div class="classdoc-head"><div class="classdoc-head-inner"><b class="classdoc-head-packagename">org.w3c.dom.css</b><br/><h1 class="classdoc-head-classname">Interface CSSRuleList</h1></div></div><p/><hr/><div class="classdoc-prototype">public interface <b>CSSRuleList</b><br/></div><p/><div class="classdoc-class-comment-body">  The <code>CSSRuleList</code> interface provides the abstraction of an 
+ ordered collection of CSS rules. 
+ <p/> The items in the <code>CSSRuleList</code> are accessible via an 
+ integral index, starting from 0. 
+ <p/>See also the <a href="http://www.w3.org/TR/2000/REC-DOM-Level-2-Style-20001113">Document Object Model (DOM) Level 2 Style Specification</a>.
+</div><div class="classdoc-tag-section-header">Since:</div><dl class="classdoc-list"><dt>DOM Level 2</dt></dl><h1 class="classdoc-header">Method Summary</h1><table class="classdoc-table" width="100%" cellspacing="0" border="1"><tr><td class="no-border-r" valign="top" align="right" width="1%"><p class="prototype-type"> int</p></td><td class="with-border" valign="top" align="left"><p class="prototype"><a href="#getLength()">getLength</a>()</p><blockquote class="classdoc-summary-comment">  The number of CSSRules in the list.</blockquote></td></tr><tr><td class="no-border-r" valign="top" align="right" width="1%"><p class="prototype-type"> <a href="../../../../org/w3c/dom/css/CSSRule.html">CSSRule</a></p></td><td class="with-border" valign="top" align="left"><p class="prototype"><a href="#item(int)">item</a>(<span class="parameter">int&nbsp;index</span>)</p><blockquote class="classdoc-summary-comment">  Used to retrieve a CSS rule by ordinal index.</blockquote></td></tr></table><h1 class="classdoc-header">Method Details</h1><a name="getLength()"/><h3>getLength</h3><p class="prototype">public int <b>getLength</b>()</p><div class="classdoc-comment-body">  The number of <code>CSSRules</code> in the list. The range of valid 
+ child rule indices is <code>0</code> to <code>length-1</code> 
+ inclusive. 
+</div><p/><hr/><a name="item(int)"/><h3>item</h3><p class="prototype">public CSSRule <b>item</b>(<span class="parameter">int&nbsp;index</span>)</p><div class="classdoc-comment-body">  Used to retrieve a CSS rule by ordinal index. The order in this 
+ collection represents the order of the rules in the CSS style sheet. 
+ If index is greater than or equal to the number of rules in the list, 
+ this returns <code>null</code>. 
+</div><p/><div class="classdoc-tag-section-header">Parameters:</div><dl class="classdoc-list"><dt><span class="prototype-name">index</span> - Index into the collection</dt></dl><div class="classdoc-tag-section-header">Returns:</div><dl class="classdoc-list"><dt>The style rule at the index position in the 
+CSSRuleList, or null if that is not a 
+valid index.</dt></dl><hr class="footer"/><div class="footer">Generated on
+  October 6, 2004
+  by <a target="cptoolsinfo" href="http://www.gnu.org/software/cp-tools">GNU Classpath Tools</a> (Gjdoc XmlDoclet 0.6.1).</div></body></html>

@@ -1,0 +1,62 @@
+<html xmlns="http://www.w3.org/TR/REC-html40" xmlns:html="http://www.w3.org/TR/REC-html40" xmlns:gjdoc="http://www.gnu.org/software/cp-tools/gjdocxml"><head><link href="../../../../gjdochtml.css" type="text/css" rel="stylesheet"/><title>XPathEvaluator</title></head><body onload="top.document.title=document.title;" class="classdoc"><div class="header"><span class="navi-button">&rArr;&nbsp;<a target="_top" href="../../../../index.html">Index&nbsp;(Frames)</a></span>&nbsp;|&nbsp;
+      <span class="navi-button">&rArr;&nbsp;<a target="_top" href="../../../../index_noframes.html">Index&nbsp;(No&nbsp;Frames)</a></span>&nbsp;|&nbsp;
+      <span class="navi-button">&rArr;&nbsp;<a href="package-summary.html">Package</a></span>&nbsp;|&nbsp;
+      <span class="navi-button">&rArr;&nbsp;<a href="package-tree.html">Package&nbsp;Tree</a></span>&nbsp;|&nbsp;
+      <span class="navi-button">&rArr;&nbsp;<a href="../../../../fulltree.html">Full Tree</a></span>&nbsp;
+    </div><div class="classdoc-head"><div class="classdoc-head-inner"><b class="classdoc-head-packagename">org.w3c.dom.xpath</b><br/><h1 class="classdoc-head-classname">Interface XPathEvaluator</h1></div></div><p/><hr/><div class="classdoc-prototype">public interface <b>XPathEvaluator</b><br/></div><p/><div class="classdoc-class-comment-body">  The evaluation of XPath expressions is provided by 
+ <code>XPathEvaluator</code>. In a DOM implementation which supports the 
+ XPath 3.0 feature, as described above, the <code>XPathEvaluator</code> 
+ interface will be implemented on the same object which implements the 
+ <code>Document</code> interface permitting it to be obtained by the usual 
+ binding-specific method such as casting or by using the DOM Level 3 
+ getInterface method. In this case the implementation obtained from the 
+ Document supports the XPath DOM module and is compatible with the XPath 
+ 1.0 specification. 
+ <p/>Evaluation of expressions with specialized extension functions or 
+ variables may not work in all implementations and is, therefore, not 
+ portable. <code>XPathEvaluator</code> implementations may be available 
+ from other sources that could provide specific support for specialized 
+ extension functions or variables as would be defined by other 
+ specifications. 
+ <p/>See also the <a href="http://www.w3.org/TR/2004/NOTE-DOM-Level-3-XPath-20040226">Document Object Model (DOM) Level 3 XPath Specification</a>.
+</div><h1 class="classdoc-header">Method Summary</h1><table class="classdoc-table" width="100%" cellspacing="0" border="1"><tr><td class="no-border-r" valign="top" align="right" width="1%"><p class="prototype-type"> <a href="../../../../org/w3c/dom/xpath/XPathExpression.html">XPathExpression</a></p></td><td class="with-border" valign="top" align="left"><p class="prototype"><a href="#createExpression(String,org.w3c.dom.xpath.XPathNSResolver)">createExpression</a>(<span class="parameter">String&nbsp;expression,</span> <span class="parameter"><a href="../../../../org/w3c/dom/xpath/XPathNSResolver.html">XPathNSResolver</a>&nbsp;resolver</span>)</p><blockquote class="classdoc-summary-comment"> Creates a parsed XPath expression with resolved namespaces.</blockquote></td></tr><tr><td class="no-border-r" valign="top" align="right" width="1%"><p class="prototype-type"> <a href="../../../../org/w3c/dom/xpath/XPathNSResolver.html">XPathNSResolver</a></p></td><td class="with-border" valign="top" align="left"><p class="prototype"><a href="#createNSResolver(org.w3c.dom.Node)">createNSResolver</a>(<span class="parameter"><a href="../../../../org/w3c/dom/Node.html">Node</a>&nbsp;nodeResolver</span>)</p><blockquote class="classdoc-summary-comment"> Adapts any DOM node to resolve namespaces so that an XPath expression 
+ can be easily evaluated relative to the context of the node where it 
+ appeared within the document.</blockquote></td></tr><tr><td class="no-border-r" valign="top" align="right" width="1%"><p class="prototype-type"> Object</p></td><td class="with-border" valign="top" align="left"><p class="prototype"><a href="#evaluate(String,org.w3c.dom.Node,org.w3c.dom.xpath.XPathNSResolver,short,Object)">evaluate</a>(<span class="parameter">String&nbsp;expression,</span> <span class="parameter"><a href="../../../../org/w3c/dom/Node.html">Node</a>&nbsp;contextNode,</span> <span class="parameter"><a href="../../../../org/w3c/dom/xpath/XPathNSResolver.html">XPathNSResolver</a>&nbsp;resolver,</span> <span class="parameter">short&nbsp;type,</span> <span class="parameter">Object&nbsp;result</span>)</p><blockquote class="classdoc-summary-comment"> Evaluates an XPath expression string and returns a result of the 
+ specified type if possible.</blockquote></td></tr></table><h1 class="classdoc-header">Method Details</h1><a name="createExpression(String,org.w3c.dom.xpath.XPathNSResolver)"/><h3>createExpression</h3><p class="prototype">public XPathExpression <b>createExpression</b>(<span class="parameter">String&nbsp;expression,</span> <span class="parameter"><a href="../../../../org/w3c/dom/xpath/XPathNSResolver.html">XPathNSResolver</a>&nbsp;resolver</span>)</p><div class="classdoc-comment-body"> Creates a parsed XPath expression with resolved namespaces. This is 
+ useful when an expression will be reused in an application since it 
+ makes it possible to compile the expression string into a more 
+ efficient internal form and preresolve all namespace prefixes which 
+ occur within the expression.
+</div><p/><div class="classdoc-tag-section-header">Parameters:</div><dl class="classdoc-list"><dt><span class="prototype-name">expression</span> - The XPath expression string to be parsed.</dt><dt><span class="prototype-name">resolver</span> - The resolver permits translation of all 
+prefixes, including the xml namespace prefix, within 
+the XPath expression into appropriate namespace URIs.</dt></dl><div class="classdoc-tag-section-header">Returns:</div><dl class="classdoc-list"><dt>The compiled form of the XPath expression.</dt></dl><div class="classdoc-tag-section-header">Throws:</div><dl class="classdoc-list"><dt><code><a href="../../../../org/w3c/dom/xpath/XPathException.html">XPathException</a></code> - INVALID_EXPRESSION_ERR: Raised if the expression is not legal 
+according to the rules of the XPathEvaluator.</dt><dt><code><a href="../../../../org/w3c/dom/DOMException.html">DOMException</a></code> - NAMESPACE_ERR: Raised if the expression contains namespace prefixes 
+which cannot be resolved by the specified 
+XPathNSResolver.</dt></dl><hr/><a name="createNSResolver(org.w3c.dom.Node)"/><h3>createNSResolver</h3><p class="prototype">public XPathNSResolver <b>createNSResolver</b>(<span class="parameter"><a href="../../../../org/w3c/dom/Node.html">Node</a>&nbsp;nodeResolver</span>)</p><div class="classdoc-comment-body"> Adapts any DOM node to resolve namespaces so that an XPath expression 
+ can be easily evaluated relative to the context of the node where it 
+ appeared within the document. This adapter works like the DOM Level 3 
+ method <code>lookupNamespaceURI</code> on nodes in resolving the 
+ namespaceURI from a given prefix using the current information 
+ available in the node's hierarchy at the time lookupNamespaceURI is 
+ called. also correctly resolving the implicit xml prefix.
+</div><p/><div class="classdoc-tag-section-header">Parameters:</div><dl class="classdoc-list"><dt><span class="prototype-name">nodeResolver</span> - The node to be used as a context for namespace 
+resolution.</dt></dl><div class="classdoc-tag-section-header">Returns:</div><dl class="classdoc-list"><dt>XPathNSResolver which resolves namespaces with 
+respect to the definitions in scope for a specified node.</dt></dl><hr/><a name="evaluate(String,org.w3c.dom.Node,org.w3c.dom.xpath.XPathNSResolver,short,Object)"/><h3>evaluate</h3><p class="prototype">public Object <b>evaluate</b>(<span class="parameter">String&nbsp;expression,</span> <span class="parameter"><a href="../../../../org/w3c/dom/Node.html">Node</a>&nbsp;contextNode,</span> <span class="parameter"><a href="../../../../org/w3c/dom/xpath/XPathNSResolver.html">XPathNSResolver</a>&nbsp;resolver,</span> <span class="parameter">short&nbsp;type,</span> <span class="parameter">Object&nbsp;result</span>)</p><div class="classdoc-comment-body"> Evaluates an XPath expression string and returns a result of the 
+ specified type if possible.
+</div><p/><div class="classdoc-tag-section-header">Parameters:</div><dl class="classdoc-list"><dt><span class="prototype-name">expression</span> - The XPath expression string to be parsed and 
+evaluated.</dt><dt><span class="prototype-name">contextNode</span> - The context is context node for the 
+evaluation of this XPath expression.</dt><dt><span class="prototype-name">resolver</span> - The resolver permits translation of all 
+prefixes, including the xml namespace prefix, within 
+the XPath expression into appropriate namespace URIs.</dt><dt><span class="prototype-name">type</span> - If a specific type is specified, then the 
+result will be returned as the corresponding type.For XPath 1.0 
+results, this must be one of the codes of the 
+XPathResult interface.</dt><dt><span class="prototype-name">result</span> - The result specifies a specific result 
+object which may be reused and returned by this method.</dt></dl><div class="classdoc-tag-section-header">Returns:</div><dl class="classdoc-list"><dt>The result of the evaluation of the XPath expression.For XPath 
+1.0 results, this object will be of type XPathResult.</dt></dl><div class="classdoc-tag-section-header">Throws:</div><dl class="classdoc-list"><dt><code><a href="../../../../org/w3c/dom/xpath/XPathException.html">XPathException</a></code> - INVALID_EXPRESSION_ERR: Raised if the expression is not legal 
+according to the rules of the XPathEvaluatori
+TYPE_ERR: Raised if the result cannot be converted to return the 
+specified type.</dt><dt><code><a href="../../../../org/w3c/dom/DOMException.html">DOMException</a></code> - NAMESPACE_ERR: Raised if the expression contains namespace prefixes 
+which cannot be resolved by the specified 
+XPathNSResolver.</dt></dl><hr class="footer"/><div class="footer">Generated on
+  October 6, 2004
+  by <a target="cptoolsinfo" href="http://www.gnu.org/software/cp-tools">GNU Classpath Tools</a> (Gjdoc XmlDoclet 0.6.1).</div></body></html>

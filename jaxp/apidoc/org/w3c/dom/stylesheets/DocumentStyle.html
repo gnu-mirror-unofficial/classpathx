@@ -1,0 +1,20 @@
+<html xmlns="http://www.w3.org/TR/REC-html40" xmlns:html="http://www.w3.org/TR/REC-html40" xmlns:gjdoc="http://www.gnu.org/software/cp-tools/gjdocxml"><head><link href="../../../../gjdochtml.css" type="text/css" rel="stylesheet"/><title>DocumentStyle</title></head><body onload="top.document.title=document.title;" class="classdoc"><div class="header"><span class="navi-button">&rArr;&nbsp;<a target="_top" href="../../../../index.html">Index&nbsp;(Frames)</a></span>&nbsp;|&nbsp;
+      <span class="navi-button">&rArr;&nbsp;<a target="_top" href="../../../../index_noframes.html">Index&nbsp;(No&nbsp;Frames)</a></span>&nbsp;|&nbsp;
+      <span class="navi-button">&rArr;&nbsp;<a href="package-summary.html">Package</a></span>&nbsp;|&nbsp;
+      <span class="navi-button">&rArr;&nbsp;<a href="package-tree.html">Package&nbsp;Tree</a></span>&nbsp;|&nbsp;
+      <span class="navi-button">&rArr;&nbsp;<a href="../../../../fulltree.html">Full Tree</a></span>&nbsp;
+    </div><div class="classdoc-head"><div class="classdoc-head-inner"><b class="classdoc-head-packagename">org.w3c.dom.stylesheets</b><br/><h1 class="classdoc-head-classname">Interface DocumentStyle</h1></div></div><p/><b>All Known Direct Subinterfaces:</b><br/><a href="../../../../org/w3c/dom/css/DocumentCSS.html">DocumentCSS</a><hr/><div class="classdoc-prototype">public interface <b>DocumentStyle</b><br/></div><p/><div class="classdoc-class-comment-body">  The <code>DocumentStyle</code> interface provides a mechanism by which the 
+ style sheets embedded in a document can be retrieved. The expectation is 
+ that an instance of the <code>DocumentStyle</code> interface can be 
+ obtained by using binding-specific casting methods on an instance of the 
+ <code>Document</code> interface. 
+ <p/>See also the <a href="http://www.w3.org/TR/2000/REC-DOM-Level-2-Style-20001113">Document Object Model (DOM) Level 2 Style Specification</a>.
+</div><div class="classdoc-tag-section-header">Since:</div><dl class="classdoc-list"><dt>DOM Level 2</dt></dl><h1 class="classdoc-header">Method Summary</h1><table class="classdoc-table" width="100%" cellspacing="0" border="1"><tr><td class="no-border-r" valign="top" align="right" width="1%"><p class="prototype-type"> <a href="../../../../org/w3c/dom/stylesheets/StyleSheetList.html">StyleSheetList</a></p></td><td class="with-border" valign="top" align="left"><p class="prototype"><a href="#getStyleSheets()">getStyleSheets</a>()</p><blockquote class="classdoc-summary-comment">  A list containing all the style sheets explicitly linked into or 
+ embedded in a document.</blockquote></td></tr></table><h1 class="classdoc-header">Method Details</h1><a name="getStyleSheets()"/><h3>getStyleSheets</h3><p class="prototype">public StyleSheetList <b>getStyleSheets</b>()</p><div class="classdoc-comment-body">  A list containing all the style sheets explicitly linked into or 
+ embedded in a document. For HTML documents, this includes external 
+ style sheets, included via the HTML  LINK element, and inline  STYLE 
+ elements. In XML, this includes external style sheets, included via 
+ style sheet processing instructions (see ). 
+</div><p/><hr class="footer"/><div class="footer">Generated on
+  October 6, 2004
+  by <a target="cptoolsinfo" href="http://www.gnu.org/software/cp-tools">GNU Classpath Tools</a> (Gjdoc XmlDoclet 0.6.1).</div></body></html>
