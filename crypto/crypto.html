@@ -2,6 +2,11 @@
 
 <head>
 <title>GNU Crypto - GNU Project - Free Software Foundation (FSF)</title>
+<STYLE>
+<!--
+code         { font-family: Courier New; font-size: 10pt }
+-->
+</STYLE>
 </head>
 
 <body bgcolor="#FFFFFF" text="#000000" link="#1F00FF" alink="#FF0000" vlink="#9900DD">
@@ -15,9 +20,8 @@
   <a href="#introduction" name="introduction">Introduction</a>
 | <a href="#helpwanted" name="helpwanted">Help wanted</a>
 | <a href="#status" name="status">Project status</a>
-| <a href="#documentation" name="documentation">Documentation</a>
-<br/>
-  <a href="#lists" name="lists">Mailing lists</a>
+| <A HREF="#documentation" NAME="documentation">Documentation</A> |<br/>
+  <A HREF="#primality">Notes on primality testing</A> | <a href="#lists" name="lists">Mailing lists</a>
 | <A HREF="#downloading" NAME="downloading">Downloads</A>
 | <a href="#bug" name="bug">Report a bug</a>
 | <a href="#coding" name="coding">Coding styles</a>
@@ -299,9 +303,36 @@ in terms of cryptographic algorithms:</p>
 			<TD WIDTH="36%" VALIGN="top">
 				Generic hash-based generator</TD>
 			<TD WIDTH="64%">
-				<P>A PRNG configurable with a hash function and a seed. The
+                A PRNG configurable with a hash function and a seed. The
 				generator continuously updates its context with the result of each
-				request for random bytes.</P>
+				request for random bytes.
+			</TD>
+		</TR>
+		<TR>
+			<TD WIDTH="100%" VALIGN="top" COLSPAN="2" BGCOLOR="#CCCCFF">
+                <I><B>Digital signature schemes</B></I></TD>
+		</TR>
+		<TR>
+			<TD WIDTH="36%" VALIGN="top">
+                <A HREF="http://www.itl.nist.gov/fipspubs/fip186.htm">Digital
+                Signature Standard</A> (DSS)</TD>
+			<TD WIDTH="64%">
+				<P>This Standard specifies a Digital Signature Algorithm (DSA)
+                appropriate for applications requiring a digital rather than
+                written signature. The DSA digital signature is a pair of large
+                numbers represented in a computer as strings of binary digits.
+                The digital signature is computed using a set of rules (i.e.,
+                the DSA) and a set of parameters such that the identity of the
+                signatory and integrity of the data can be verified. The DSA
+                provides the capability to generate and verify signatures.
+                Signature generation makes use of a private key to generate a
+                digital signature. Signature verification makes use of a public
+                key which corresponds to, but is not the same as, the private
+                key. Each user possesses a private and public key pair. Public
+                keys are assumed to be known to the public in general. Private
+                keys are never shared. Anyone can verify the signature of a user
+                by employing that user's public key. Signature generation can be
+                performed only by the possessor of the user's private key.</P>
 			</TD>
 		</TR>
 	</TABLE>
@@ -329,7 +360,9 @@ list:</p>
 	<LI>The <A HREF="http://planeta.terra.com.br/informatica/paulobarreto/WhirlpoolPage.html">WHIRLPOOL</A> Hashing Function,</LI>
 	<LI><A HREF="http://www.counterpane.com/twofish-paper.html">Twofish</A>: A 128-bit Block Cipher,</LI>
 	<LI><A HREF="http://www.itl.nist.gov/fipspubs/fip180-1.htm">SECURE HASH STANDARD</A>,</LI>
-	<LI>The <A HREF="http://www.ietf.org/rfc/rfc1321.txt">MD5</A> Message-Digest Algorithm.</LI>
+	<LI><A HREF="http://www.ietf.org/rfc/rfc1321.txt">RFC 1321</A>: The MD5 Message-Digest Algorithm.</LI>
+	<LI><A HREF="http://http://www.itl.nist.gov/fipspubs/fip186.htm">DIGITAL
+      SIGNATURE STANDARD</A>.</LI>
 </UL>
 
 <P>Test vectors, when not included in the reference documents, are made available
@@ -376,6 +409,113 @@ against the following test vectors:</P>
 		</UL>
 	<LI><A HREF="vectors/whirltweak-test-vectors.txt">Whirlpool</A>.</LI>
 </UL>
+
+<h3><a name="primality">Note on primality testing</a></h3>
+
+<P>This library includes a Java port of <A HREF="mailto:colin@nyx.net">Colin
+Plumb</A>'s implementation of Euler's Criterion for primality testing, from his <A
+HREF="http://http://munitions.vipul.net/software/libraries/mathematics/bnlib-1.1.tar.gz">bnlib</A>
+(version 1.1) package. This test is consistently used, throughout this package,
+in preference to the Miller-Rabin probabilistic primality test --which is also
+implemented and included.</P>
+
+<P>During the development, and tests, of the primality testing code, certain
+large numbers where found to be possible primes, even though the invocation of
+the <FONT FACE="Courier New" SIZE="2">isProbablePrime()</FONT> method, provided
+by the <FONT SIZE="2" FACE="Courier New">java.math.BigInteger</FONT> class
+claimed otherwise; i.e. returned <FONT SIZE="2" FACE="Courier New">false</FONT>.
+I then ran those numbers through a primality proving application: <A
+HREF="http://http://www.znz.freesurf.fr/pages/primo.html">PRIMO</A>.
+Consistently, PRIMO claimed those numbers to be indeed primes. I'm including the
+certificates PRIMO emits for review and to help debug the code in <FONT SIZE="2"
+FACE="Courier New">BigInteger</FONT> since I cannot myself look at its source.</P>
+<DIV ALIGN="left">
+   <TABLE BORDER="1" CELLPADDING="10" CELLSPACING="0" WIDTH="90%">
+      <TR>
+         <TD WIDTH="64%" BGCOLOR="#CCCCFF"><I><B>N (hexadecimal representation)</B></I></TD>
+         <TD WIDTH="36%" VALIGN="top" BGCOLOR="#CCCCFF"><I><B>Primality
+            Certificate</B></I></TD>
+      </TR>
+      <TR>
+         <TD WIDTH="64%"><FONT SIZE="2" FACE="Courier New">f995 c828 4492 6e6c
+            423e c13c 8fa2 63d9 19b0 4811 eddf 414b 5fe8 354d 4d2a 4ed0 2964
+            7ef0 57e0 93e6 64ca 0fef 0d91 5f3b 6815 ee8f 77d7 0ef4 dab9 ddc0
+            b795 ff0b</FONT></TD>
+         <TD WIDTH="36%" VALIGN="top"><A HREF="primes/Primo-B26DD02359EFD-S.out">Primo-B26DD02359EFD</A></TD>
+      </TR>
+      <TR>
+         <TD WIDTH="64%"><FONT SIZE="2" FACE="Courier New">c95d 51d8 e607 7fae
+            49b9 a08b 844d 25d0 2c91 b830 15ca ea6f 70d7 14a4 5f8f 144e addf
+            b15c c330 8cdc fdc0 42ad f922 8ac2 14bc bed1 d33c 4731 fc92 32c0
+            d775 099f</FONT></TD>
+         <TD WIDTH="36%" VALIGN="top"><A HREF="primes/Primo-B26DD02344176-S.out">Primo-B26DD02344176</A></TD>
+      </TR>
+      <TR>
+         <TD WIDTH="64%"><FONT SIZE="2" FACE="Courier New">c59b ca6d fd38 0e00
+            1a4a 9e71 c98e f306 7b94 366f feda 6232 3e3a 6994 aad8 7a7d 810f
+            175f bc6b 9cce 645d 2ee0 cce5 b772 5968 b371 ad7b a997 f8b2 b25f
+            332b e307</FONT></TD>
+         <TD WIDTH="36%" VALIGN="top"><A HREF="primes/Primo-B26DD02335DF2-S.out">P</A><A
+            HREF="primes/Primo-B26DD02335DF2-S.out">rimo-B26DD02335DF2</A></TD>
+      </TR>
+      <TR>
+         <TD WIDTH="64%"><FONT SIZE="2" FACE="Courier New">f58e 966a 4a81 d899
+            8518 dfc5 5407 7723 8d57 f1d1 5717 d69d 0f01 526b e88d db79 b9dc
+            4bd2 23f4 6585 cbe0 25b4 87a3 1416 3f75 5c39 27f8 5592 8819 d03c
+            df76 5643</FONT></TD>
+         <TD WIDTH="36%" VALIGN="top"><A HREF="primes/Primo-B26DD023281FB-S.out">Primo-B26DD023281FB</A></TD>
+      </TR>
+      <TR>
+         <TD WIDTH="64%"><FONT SIZE="2" FACE="Courier New">bf29 1985 1a94 9a52
+            02d9 c734 f109 2140 2d19 1cf1 ef6f 84d0 5d44 8f3d 0566 99e9 1bdf
+            0e72 cea7 3922 af25 3cb0 a6db de6f a1ce 2d89 425b 2161 c757 8ebe
+            d952 8c8b</FONT></TD>
+         <TD WIDTH="36%" VALIGN="top"><A HREF="primes/Primo-B26DD023184EC-S.out">Primo-B26DD023184EC</A></TD>
+      </TR>
+      <TR>
+         <TD WIDTH="64%"><FONT SIZE="2" FACE="Courier New">f986 370b 2bb2 4bdd
+            feeb 53ff 1678 59bf 7b00 aed6 b3d6 52fa c3f0 6131 25f3 101c 625e
+            8003 1aef e6c8 7aef d3d6 3f92 3e6c 4d37 54dd a810 587d 0d71 fe5d
+            18fb baa7</FONT></TD>
+         <TD WIDTH="36%" VALIGN="top"><A HREF="primes/Primo-B26DD02306259-S.out">Primo-B26DD02306259</A></TD>
+      </TR>
+      <TR>
+         <TD WIDTH="64%"><FONT SIZE="2" FACE="Courier New">a862 42e7 489d 79f3
+            153c 561b 5e53 00ab 736b 383f</FONT></TD>
+         <TD WIDTH="36%" VALIGN="top"><A HREF="primes/Primo-B26DD022F8215-S.out">Primo-B26DD022F8215</A></TD>
+      </TR>
+      <TR>
+         <TD WIDTH="64%"><FONT FACE="Courier New" SIZE="2">8b4e 4b8d 746e d8b7
+            ad6d 5459 9084 8417 b0a6 71c3</FONT></TD>
+         <TD WIDTH="36%" VALIGN="top"><A HREF="primes/Primo-B26DD022E8253-S.out">Primo-B26DD022E8253</A></TD>
+      </TR>
+      <TR>
+         <TD WIDTH="64%"><FONT SIZE="2" FACE="Courier New">888f a43a 2162 ca5c
+            cdcf 7692 bcf5 f7a5 8f74 ff17</FONT></TD>
+         <TD WIDTH="36%" VALIGN="top"><A HREF="primes/Primo-B26DD022D8AB3-S.out">Primo-B26DD022D8AB3</A></TD>
+      </TR>
+      <TR>
+         <TD WIDTH="64%"><FONT SIZE="2" FACE="Courier New">a2e0 44da ff1c f529
+            f536 66ab 1861 d9c8 4d20 f4af</FONT></TD>
+         <TD WIDTH="36%" VALIGN="top"><A HREF="primes/Primo-B26DD022BF582-S.out">Primo-B26DD022BF582</A></TD>
+      </TR>
+      <TR>
+         <TD WIDTH="64%"><FONT SIZE="2" FACE="Courier New">9637 bddd 6b61 7916
+            4abe 971f 5051 6e4c 21de d7fb</FONT></TD>
+         <TD WIDTH="36%" VALIGN="top"><A HREF="primes/Primo-B26DD022A073E-S.out">Primo-B26DD022A073E</A></TD>
+      </TR>
+      <TR>
+         <TD WIDTH="64%"><FONT SIZE="2" FACE="Courier New">e844 990a 2f38 a72e
+            6301 97ca 3846 d75d e56e 2e53</FONT></TD>
+         <TD WIDTH="36%" VALIGN="top"><A HREF="primes/Primo-B26DD0228AF78-S.out">Primo-B26DD0228AF78</A></TD>
+      </TR>
+      <TR>
+         <TD WIDTH="64%"><FONT SIZE="2" FACE="Courier New">de09 f190 2cf4 84f2
+            32fe e5d2 7262 372d 1c60 72d7</FONT></TD>
+         <TD WIDTH="36%" VALIGN="top"><A HREF="primes/Primo-B26DC04CD92D1-S.out">Primo-B26DC04CD92D1</A></TD>
+      </TR>
+   </TABLE>
+</DIV>
 
 <h3><a name="lists">Mailing lists</a></h3>
 <p>The main discussion list is <A HREF="mailto:classpathx-crypto@gnu.org">&lt;classpathx-crypto@gnu.org&gt;</A>,
@@ -436,7 +576,7 @@ send other questions to <a href="mailto:gnu@gnu.org"><em>gnu@gnu.org</em></a>.</
 medium, provided this notice is preserved.</p>
 
 <hr/>
-<p>Last Modified: <i>$Date: 2001/12/08 22:52:43 $</i></p>
+<p>Last Modified: <i>$Date: 2001/12/30 16:04:26 $</i></p>
 
 </body>
 </html>
