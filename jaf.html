@@ -11,7 +11,7 @@
 
 <IMG align="right" SRC="classpathx-logo-small.jpg" ALT=" [ gnu -classpath ext:ens:ions ] ">
 
-<h2>Java<sup>TM</sup> Beans Activation Framework</h2>
+<h2>GNU-JAF: Java<sup>TM</sup> Beans Activation Framework</h2>
 
 <p>The JAF is a system for declaring what beans operate on what MIME
 type data. Content handler beans can be defined to handle particular
@@ -21,17 +21,40 @@ with Java<sup>TM</sup> beans.
 
 
 <br>
-<h4>Downloading the JAF</h4>
+<h4>Downloading GNU-JAF</h4>
 
-<p>Will be from here. Since the FTP upload stuff isn't working from
-savannah yet I haven't done this.
+<p>There are several ways of getting GNU-JAF:
+</p>
+
+<blockquote>
+<p><a href="downloads/gnujaf.tar.gz">GNU-JAF tar file</a></p>
+<p><a href="downloads/gnujaf.jar">GNU-JAF jar file (just the class files)</a></p>
+<p>Or you can download the CVS repository, see
+<a href="http://savannah.gnu.org/projects/classpathx/">Classpathx project</a>
+for more details.
+</p>
+</blockquote>
+
+<br>
+<h4>Installing GNU-JAF</h4>
+<p>If you're Java VM does not support extension library directories then 
+you will need to reference <code>gnu-jaf.jar</code> file in your 
+<code>CLASSPATH</code>. If it does use extension library directories simply
+copy the jar file to the correct dir.
 </p>
 
 
 <br>
-<h4>javadoc documentation</h4>
+<h4>Documentation</h4>
 
-<p>Will be linked from here. The documentation hasn't been loaded yet.
+<p>The <a href="jaf-javadoc/javax/activation/package-summary.html">API documentation is 
+available here</a>.
+</p>
+
+<p>The classes <a href="jaf-javadoc/javax/activation/MailcapCommandMap.html">MailcapCommandMap</a>
+and <a href="jaf-javadoc/javax/activation/MimetypesFileTypeMap.html">MimetypesFileTypeMap</a>
+have a command line interface so that it's possible to tell what the GNU-JAF's understanding
+of <code>mailcap</code> and <code>mime.types</code> files are.
 </p>
 
 
@@ -97,7 +120,7 @@ Verbatim copying and distribution of this entire article is
 permitted in any medium, provided this notice is preserved.<P>
 Updated:
 <!-- timestamp start -->
-$Date: 2001/05/29 11:33:59 $ $Author: nferrier $
+$Date: 2001/05/30 17:59:32 $ $Author: nferrier $
 <!-- timestamp end -->
 <HR>
 </BODY>
