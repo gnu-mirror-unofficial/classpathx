@@ -34,9 +34,9 @@ the standard XML processing APIs for Java:
 <ul>
 <li><a href='http://www.saxproject.org/'>SAX</a> 2.0, the Streaming API for
 XML parsing,</li>
-<li><a href='http://www.w3c.org/DOM'>DOM</a> Level 2, the web standard API
+<li><a href='http://www.w3c.org/DOM'>DOM</a> Level 3, the web standard API
 for processing XML, and</li>
-<li>Sun's <a href='http://java.sun.com/xml/xml_jaxp.html'>JAXP</a> 1.1</li>
+<li>Sun's <a href='http://java.sun.com/xml/xml_jaxp.html'>JAXP</a> 1.3</li>
 </ul>
 </p>
 
@@ -44,13 +44,46 @@ for processing XML, and</li>
 
 <p>
 GNU JAXP provides the &AElig;lfred2 SAX2 parser, and is configured to use
-its optionally validating module by default. It includes the DOM Level 2
-implementation provided by the World Wide Web Consortium.  These
-are accessible through the JAXP 1.1 bootstrapping APIs.
+its optionally validating module by default. It includes an implementation
+of the DOM Level 3 interfaces provided by the World Wide Web Consortium.
+There is also a (fast!) XPath 1.0 and XSLT 1.0 implementation which supports
+all options for input (source) and output (result).
+These are accessible through the JAXP 1.1 bootstrapping APIs.
 </p>
 
 <p>
-At this writing, no XSLT support is bundled.
+The following W3C DOM APIs are supported:
+<ul>
+<li>DOM Level 3 Core</li>
+<li>DOM Level 3 Load &amp; Save</li>
+<li>DOM Level 3 XPath</li>
+<li>DOM Level 2 Events</li>
+<li>DOM Level 2 Traversal</li>
+</ul>
+<p>
+
+<p>
+GNU JAXP additionally provides a mostly-complete alternative implementation of
+DOM Level 3 Core and XPath, a SAX2 parser, and a JAXP XSLT transformer that
+use the Gnome <a href='http://www.xmlsoft.org/'>libxml2</a> and
+<a href='http://www.xmlsoft.org/XSLT/'>libxslt</a> libraries. These
+libraries, implemented in C, provide very fast parsing and transformation.
+The libxmlj library, a JNI wrapper for the Gnome libraries, allows you to
+leverage this speed via the JAXP interfaces. However, libxmlj is still
+experimental and does not conform as well to the published SAX and DOM
+conformance tests, and JNI deployment may be a barrier to entry.
+</p>
+
+<p>
+At the current time, libxmlj does not support the JAXP XPath interface,
+only the W3C DOM one.
+</p>
+
+<p>
+GNU JAXP is not a complete implementation of JAXP 1.3. It does not currently
+provide support for tree validation: the only validation available is XML
+(DTD) validation by the SAX parser. We are still working on W3C XML Schema
+and RELAX NG validators and the integration of the PSVI into the DOM.
 </p>
 
 <h3><a name="docs">Documentation</a></h3>
@@ -62,19 +95,32 @@ You can browse the API documentation for GNU JAXP online
 </p>
 
 <p>
-With JDK 1.2 or later the <code>gnujaxp.jar</code> file is most easily
-installed in <em>$JAVA_HOME/jre/lib/ext</em>; otherwise you may prefer
-to modify your CLASSPATH.
-If you have other JAXP
-parsers installed you may also wish to set up
-<em>$JAVA_HOME/jre/lib/jaxp.properties</em> so
-the two GNU JAXP drivers are used by default:
+GNU JAXP requires JDK 1.4 or later.
+The <code>gnujaxp.jar</code> file is most easily installed in
+<code>$JAVA_HOME/jre/lib/ext</code>;
+otherwise you may prefer to modify your CLASSPATH.
+If you have other JAXP parsers installed you may also wish to set up
+<code>$JAVA_HOME/jre/lib/jaxp.properties</code>
+so the GNU JAXP drivers are used by default:
 </p>
 
 <pre class='config'>
 # make JAXP clients prefer the GNU implementations
-javax.xml.parsers.SAXParserFactory = gnu.xml.aelfred2.JAXPFactory
-javax.xml.parsers.DocumentBuilderFactory = gnu.xml.dom.JAXPFactory
+javax.xml.parsers.SAXParserFactory=gnu.xml.aelfred2.JAXPFactory
+javax.xml.parsers.DocumentBuilderFactory=gnu.xml.dom.DomDocumentBuilderFactory
+javax.xml.transform.TransformerFactory=gnu.xml.transform.TransformerFactoryImpl
+javax.xml.xpath.XPathFactory=gnu.xml.xpath.XPathFactoryImpl
+</pre>
+
+<p>
+Alternatively, you may specify the use of the experimental libxmlj
+implementations, as follows:
+</p>
+
+<pre class='config'>
+javax.xml.parsers.SAXParserFactory=gnu.xml.libxmlj.sax.GnomeSAXParserFactory
+javax.xml.parsers.DocumentBuilderFactory=gnu.xml.libxmlj.dom.GnomeDocumentBuilderFactory
+javax.xml.trasform.TransformerFactory=gnu.xml.libxmlj.transform.GnomeTransformerFactory
 </pre>
 
 <p>
@@ -88,7 +134,9 @@ may not return the parser you expect.
 </p>
 
 <p>
-More information will be provided later.
+If using GNU JAXP as part of GNU Classpath or if the GNU JAXP jar
+appears before any other JAXP implementations in the classpath, no
+configuration should be necessary.
 </p>
 
 <h3><a name="help-wanted">Help wanted!</a></h3>
@@ -98,7 +146,8 @@ More information will be provided later.
 you can also contribute!</b> We need lots of help to finish the
 current APIs and to keep track of future enhancements. There are also
 opportunities for testers, web authors, and documentors. Please post
-to one of the classpathx mailing lists if you're interested helping.
+to one of the classpathx or classpath mailing lists if you're
+interested in helping.
 </p>
 
 <h3><a name="mailing-lists">Mailing lists</a></h3>
@@ -135,22 +184,20 @@ although the mirrors may not be current.
 
 <p>
 At this writing, the current release is in a file called
-<em>gnujaxp-1.0beta1.zip</em>, which includes a pre-compiled
-JAR library, full javadoc, and source code.
-Make sure you use <em>zip</em> to unpack it, not <em>jar</em>,
-since some versions of "jar" don't handle execute permissions correctly.
-The download site is liable to change.
-Note that this is called <em>1.0beta1</em> mostly because it's
-the first release of this code from the GNU project.
-In fact, most of the code has been in use for several years now.
-We expect that the <em>1.0 release</em> will include full support
-for building to native code using GCJ.
+<a href='ftp://ftp.gnu.org/gnu/classpathx/jaxp-1.3.tar.gz'><code>jaxp-1.3.tar.gz</code></a>.
+This is the last release of GNU JAXP as a separate GNU package.
+The JAXP code has been merged into
+<a href='http://www.gnu.org/software/classpath'>GNU Classpath</a>
+and will be maintained as part of that package.
 </p>
 
 <p>
-Interested parties can view up-to-the-second code in the
+Interested parties can view the current JAXP code in the
 <a href="http://savannah.gnu.org/cgi-bin/viewcvs/classpathx/jaxp">jaxp</a>
-module <a href="http://savannah.gnu.org/cvs/?group_id=139">through CVS</a>.
+module <a href="http://savannah.gnu.org/cvs/?group_id=139">through CVS</a>,
+or the
+<a href='http://savannah.gnu.org/cgi-bin/viewcvs/classpath/classpath'>current
+Classpath code</a>.
 </p>
 
 <h3><a name="bugs">Report a bug</a></h3>
