@@ -1,3 +1,4 @@
+gnu.crypto
 gnu.crypto.cipher
 gnu.crypto.hash
 gnu.crypto.mode
@@ -5,5 +6,6 @@ gnu.crypto.pad
 gnu.crypto.prng
 gnu.crypto.sig
 gnu.crypto.sig.dss
+gnu.crypto.sig.rsa
 gnu.crypto.tool
 gnu.crypto.util
