@@ -7,7 +7,7 @@
 
 <body bgcolor="#FFFFFF" text="#000000" link="#1F00FF" alink="#FF0000" vlink="#9900DD">
 
-<img align="right" src="/software/classpathx/classpathx-logo-small.jpg" alt=" [ gnu -classpath ext:ens:ions ] ">
+<img align="right" src="classpathx-logo-small.jpg" alt=" [ gnu -classpath ext:ens:ions ] ">
 <h2>The GNU JAXP Project</h2>
 
 <center>
@@ -23,13 +23,14 @@
 
 <br>
 <h3><a name="introduction">Introduction</a></h3>
-<p>GNU JAXP, a part of the <a href="..">GNU Classpath Extensions</a>
+<p>GNU JAXP, a part of the <a href="classpathx.html">GNU Classpath
+Extensions</a>
 project, is a <a href="/philosophy/free-sw.html">free</a>
 implementation of the standard XML processing APIs for Java:
 
 <ul>
-<li> SAX2</li>
-<li> DOM Level 2</li>
+<li> SAX2, including the two "extensions" </li>
+<li> DOM Level 2, including events and other optional modules</li>
 <li> Sun's JAXP v1.1</li>
 </ul>
 
@@ -59,7 +60,9 @@ to one of the classpathx mailing lists if you're interested helping.
 <br>
 <h3><a name="status">Project Status</a></h3>
 <p> GNU JAXP includes the &AElig;lfred2 SAX2 parser, and is
-configured to use its optionally validating module by default.
+configured to use its optionally validating module.
+(The nonvalidating driver is still available, if you need
+to configure a system with only a very small parser.)
 It includes the DOM2 implementation of DOM Level 2.  These
 are accessible through the JAXP 1.1 bootstrapping APIs.
 </p>
@@ -70,6 +73,34 @@ are accessible through the JAXP 1.1 bootstrapping APIs.
 <br>
 <h3><a name="documentation">Documentation</a></h3>
 <p> Javadoc for GNU JAXP is <a href="jaxp/apidoc/index.html">here</a>.
+</p>
+
+<p> With JDK 1.2 or later the <code>gnujaxp.jar</code> file is most easily
+installed in <em>$JAVA_HOME/jre/lib/ext</em>; otherwise you may prefer
+to modify your CLASSPATH.
+If you have other JAXP
+parsers installed you may also wish to set up
+<em>$JAVA_HOME/lib/jaxp.properties</em> so
+the two GNU JAXP drivers are used by default:
+</p>
+
+<center>
+<table width="80%" border="1" cellpadding="8"><tr><td bgcolor="#ccccff">
+<pre>
+# make JAXP clients prefer the GNU implementations
+javax.xml.parsers.SAXParserFactory = gnu.xml.aelfred2.JAXPFactory
+javax.xml.parsers.DocumentBuilderFactory = gnu.xml.dom.JAXPFactory
+</pre>
+</td></tr></table>
+</center>
+
+<p>If you are using the portable SAX2 bootstrapping APIs, you may want
+to set the <code>org.xml.sax.driver</code> system property on each
+JVM invocation to be
+<em>gnu.xml.aelfred2.SAXDriver</em> (non-validating) or
+<em>gnu.xml.aelfred2.XMLReader</em> (optionally validating).
+Otherwise the <code>org.xml.sax.helpers.XMLReaderFactory</code>
+may not return the parser you expect.
 </p>
 
 <p> More information will be provided later.
@@ -128,6 +159,6 @@ send other questions to
 <p> Verbatim copying and distribution of this entire article is
 permitted in any medium, provided this notice is preserved.
 
-<p> <hr> Last Modified: <i>$Date: 2001/07/15 01:33:46 $</i>
+<p> <hr> Last Modified: <i>$Date: 2001/07/17 04:23:01 $</i>
 
 </body></html>
