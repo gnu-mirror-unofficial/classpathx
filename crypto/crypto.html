@@ -310,7 +310,7 @@ in terms of cryptographic algorithms:</p>
 		</TR>
 		<TR>
 			<TD WIDTH="100%" VALIGN="top" COLSPAN="2" BGCOLOR="#CCCCFF">
-                <I><B>Digital signature schemes</B></I></TD>
+                <I><B>Digital signature scheme</B></I></TD>
 		</TR>
 		<TR>
 			<TD WIDTH="36%" VALIGN="top">
@@ -333,6 +333,25 @@ in terms of cryptographic algorithms:</p>
                 keys are never shared. Anyone can verify the signature of a user
                 by employing that user's public key. Signature generation can be
                 performed only by the possessor of the user's private key.</P>
+			</TD>
+		</TR>
+		<TR>
+			<TD WIDTH="36%" VALIGN="top">
+                <A
+                HREF="http://www.cosic.esat.kuleuven.ac.be/nessie/workshop/submissions/rsa-pss.zip">RSA-PSS</A></TD>
+			<TD WIDTH="64%">
+                <FONT FACE="CMR10" SIZE="3">
+                <P ALIGN="LEFT">RSA-PSS is a public-key encryption scheme
+                combining the RSA algorithm with the </FONT><FONT FACE="CMTI10"
+                SIZE="3">Probabilistic Signature Scheme </FONT><FONT
+                FACE="CMR10" SIZE="3">(PSS) encoding method. The inventors of
+                RSA are Ronald L. Rivest, Adi Shamir, and Leonard Adleman, while
+                the inventors of the PSS encoding method are Mihir Bellare and
+                Phillip Rogaway.During efforts to adopt RSA-PSS into the P1363a
+                standards effort, certain adaptations to the original version of
+                RSA-PSS were made by Mihir Bellare and Phillip Rogaway and also
+                by Burt Kaliski (the editor of IEEE P1363a) to facilitate
+                implementation and integration into existing protocols.</FONT>
 			</TD>
 		</TR>
 	</TABLE>
@@ -363,6 +382,9 @@ list:</p>
 	<LI><A HREF="http://www.ietf.org/rfc/rfc1321.txt">RFC 1321</A>: The MD5 Message-Digest Algorithm.</LI>
 	<LI><A HREF="http://http://www.itl.nist.gov/fipspubs/fip186.htm">DIGITAL
       SIGNATURE STANDARD</A>.</LI>
+	<LI><A
+      HREF="http://www.cosic.esat.kuleuven.ac.be/nessie/workshop/submissions/rsa-pss.zip">RSA-PSS</A>
+      Signature Scheme with Appendix.</LI>
 </UL>
 
 <P>Test vectors, when not included in the reference documents, are made available
@@ -426,7 +448,7 @@ by the <FONT SIZE="2" FACE="Courier New">java.math.BigInteger</FONT> class
 claimed otherwise; i.e. returned <FONT SIZE="2" FACE="Courier New">false</FONT>.
 I then ran those numbers through a primality proving application: <A
 HREF="http://http://www.znz.freesurf.fr/pages/primo.html">PRIMO</A>.
-Consistently, PRIMO claimed those numbers to be indeed primes. I'm including the
+Consistently, PRIMO proved those numbers to be indeed primes. I'm including the
 certificates PRIMO emits for review and to help debug the code in <FONT SIZE="2"
 FACE="Courier New">BigInteger</FONT> since I cannot myself look at its source.</P>
 <DIV ALIGN="left">
@@ -514,6 +536,25 @@ FACE="Courier New">BigInteger</FONT> since I cannot myself look at its source.</
             32fe e5d2 7262 372d 1c60 72d7</FONT></TD>
          <TD WIDTH="36%" VALIGN="top"><A HREF="primes/Primo-B26DC04CD92D1-S.out">Primo-B26DC04CD92D1</A></TD>
       </TR>
+      <TR>
+         <TD WIDTH="64%"><FONT SIZE="2" FACE="Courier New">964f cbaa 6a75 797d
+            c797 ef47 6939 9c9d da13 b382 4fe9 c38c 15c8 2e48 64ff 8cf6 ef83
+            1924 90b0 c881 3f57 caa8 c4d9 7bb7 0ec5 56bf 7e86 9a59 4715 a1c6
+            507a d04f</FONT></TD>
+         <TD WIDTH="36%" VALIGN="top"><A HREF="primes/Primo-B26E900ADFBBA-S.out">Primo-B26E900ADFBBA</A></TD>
+      </TR>
+      <TR>
+         <TD WIDTH="64%"><FONT SIZE="2" FACE="Courier New">de09 f190 2cf4 84f2
+            32fe e5d2 7262 372d 1c60 72d7</FONT></TD>
+         <TD WIDTH="36%" VALIGN="top"><A HREF="primes/Primo-B26E900B4CF01-S.out">Primo-B26E900B4CF01</A></TD>
+      </TR>
+      <TR>
+         <TD WIDTH="64%"><FONT SIZE="2" FACE="Courier New">f424 25be 8d04 1b16
+            5929 d2b5 eeab 27f1 3e03 15e0 542c dc33 9a95 eba6 abcd e3ab c165
+            6b6f f873 bde6 d7de 4856 2c7c 6a18 aba7 e222 a853 69a6 72de 52ea
+            ea71 34f3</FONT></TD>
+         <TD WIDTH="36%" VALIGN="top"><A HREF="primes/Primo-B26E900B6F8B1-S.out">Primo-B26E900B6F8B1</A></TD>
+      </TR>
    </TABLE>
 </DIV>
 
@@ -576,7 +617,7 @@ send other questions to <a href="mailto:gnu@gnu.org"><em>gnu@gnu.org</em></a>.</
 medium, provided this notice is preserved.</p>
 
 <hr/>
-<p>Last Modified: <i>$Date: 2001/12/30 16:04:26 $</i></p>
+<p>Last Modified: <i>$Date: 2002/01/13 00:03:16 $</i></p>
 
 </body>
 </html>
