@@ -2,876 +2,886 @@
 <html>
 <head>
   <title>GNU Crypto - GNU Project - Free Software Foundation (FSF)</title>
-  
-  <style>
-<!--
-code         { font-family: Courier New; font-size: 10pt }
--->
+         
+  <style>
+<!--
+code         { font-family: Courier New; font-size: 10pt }
+-->
   </style>
 </head>
   <body bgcolor="#ffffff" text="#000000" link="#1f00ff" alink="#ff0000"
  vlink="#9900dd">
-  <img align="right" src="../classpathx-logo-small.jpg"
+   <img align="right" src="../classpathx-logo-small.jpg"
  alt=" [ gnu -classpath ext:ens:ions ] " width="252" height="24">
-  
+    
 <h2>The GNU Crypto project</h2>
-  
-<center>   <a href="#introduction" name="introduction">Introduction</a> |
+    
+<center>   <a href="#introduction" name="introduction">Introduction</a> | 
 <a href="#helpwanted" name="helpwanted">Help wanted</a> | <a
  href="#status" name="status">Project status</a> | <a
  href="#documentation" name="documentation">Documentation</a> |<br>
-   <a href="#primality">Note on primality testing</a> |&nbsp;<br>
-   <a href="#configuration">Configuration parameters</a> | <a
+    <a href="#primality">Note on primality testing</a> |&nbsp;<br>
+    <a href="#configuration">Configuration parameters</a> | <a
  href="#lists" name="lists">Mailing lists</a> | <a href="#downloading"
- name="downloading">Downloads</a> | <a href="#bug" name="bug">Report a bug</a> 
-| <a href="#coding" name="coding">Coding styles</a> </center>
-  
+ name="downloading">Downloads</a> | <a href="#bug" name="bug">Report a bug</a>
+ | <a href="#coding" name="coding">Coding styles</a> </center>
+    
 <h3><a name="introduction">Introduction</a></h3>
- 
-<p>GNU Crypto, part of the GNU project, released under the aegis of GNU,
-and hosted under the <a href="../">GNU Classpath Extensions</a> project (at 
-<a href="http://savannah.gnu.org/projects/classpathx">savannah.gnu.org</a>) 
-aims at providing <a href="/philosophy/free-sw.html">free</a>, versatile, 
-high-quality, and provably correct implementations of cryptographic primitives 
-and tools in the Java programming language for use by programmers and end-users.</p>
-  
+   
+<p>GNU Crypto, part of the GNU project, released under the aegis of GNU, and
+hosted under the <a href="../">GNU Classpath Extensions</a> project (at  <a
+ href="http://savannah.gnu.org/projects/classpathx">savannah.gnu.org</a>)
+ aims at providing <a href="/philosophy/free-sw.html">free</a>, versatile,
+ high-quality, and provably correct implementations of cryptographic primitives
+ and tools in the Java programming language for use by programmers and end-users.</p>
+    
 <p>GNU Crypto is licensed under the terms of the <a
- href="/copyleft/gpl.html">GNU General Public License</a>, with the "library 
-exception" which permits its use as a library in conjunction with non-Free 
-software:</p>
-  <em>
-<blockquote> 	As a special exception, if you link this library with 	other
-files to produce an executable, this library does 	not by itself cause the
-resulting executable to be covered 	by the GNU General Public License. This
-exception does 	not however invalidate any other reasons why the executable 
-	file might be covered by the GNU General Public License. </blockquote>
-</em>  
-<p>The effect of that license is similar to using the LGPL, except that static 
-linking is permitted. GPL with that exception is sometimes called the <em>Guile 
-License</em>, because the <a href="http://www.gnu.org/software/guile">Guile</a> 
-implementation of Scheme (for embedding) uses this license.</p>
-  
+ href="/copyleft/gpl.html">GNU General Public License</a>, with the "library
+ exception" which permits its use as a library in conjunction with non-Free
+ software:</p>
+   <em> 
+<blockquote> 	As a special exception, if you link this library with 	other 
+files to produce an executable, this library does 	not by itself cause the 
+resulting executable to be covered 	by the GNU General Public License. This 
+exception does 	not however invalidate any other reasons why the executable
+ 	file might be covered by the GNU General Public License. </blockquote>
+ </em>   
+<p>The effect of that license is similar to using the LGPL, except that static
+ linking is permitted. GPL with that exception is sometimes called the <em>Guile
+ License</em>, because the <a href="http://www.gnu.org/software/guile">Guile</a>
+ implementation of Scheme (for embedding) uses this license.</p>
+    
 <h3><a name="helpwanted">Help wanted!</a></h3>
- 
-<p><b>Development of GNU Crypto is a volunteer effort, and you can also contribute!</b>
-We need lots of help to finish the current APIs and to keep track of future
-additions and enhancements. There are also opportunities for testers, web
-authors, and documenters. Please post to one of the classpathx mailing lists
+   
+<p><b>Development of GNU Crypto is a volunteer effort, and you can also contribute!</b> 
+We need lots of help to finish the current APIs and to keep track of future 
+additions and enhancements. There are also opportunities for testers, web 
+authors, and documenters. Please post to one of the classpathx mailing lists 
 if you're interested in helping.</p>
-  
+    
 <h3><a name="status">Project status</a></h3>
- 
-<p>The following table summarises the current contents of the GNU Crypto
-library in terms of cryptographic algorithms:</p>
-  	
+   
+<p>The following table summarises the current contents of the GNU Crypto library
+in terms of cryptographic algorithms:</p>
+   	 
 <table border="1" cellpadding="10" cellspacing="0" width="90%">
- 		<tbody>
-    <tr>
- 			<td width="36%" bgcolor="#808080" valign="top"> 				<b>Family / Algorithm</b> 
-			</td>
- 			<td width="64%" bgcolor="#808080"> 				<b>Abstract</b> 			</td>
- 		</tr>
- 		<tr>
- 			<td width="100%" colspan="2" bgcolor="#ccccff" valign="top"> 				<i><b>Block
+  		<tbody>
+     <tr>
+  			<td width="36%" bgcolor="#808080" valign="top"> 				<b>Family / Algorithm</b>
+ 			</td>
+  			<td width="64%" bgcolor="#808080"> 				<b>Abstract</b> 			</td>
+  		</tr>
+  		<tr>
+  			<td width="100%" colspan="2" bgcolor="#ccccff" valign="top"> 				<i><b>Block 
 cipher</b></i> 			</td>
- 		</tr>
- 		<tr>
- 			<td width="36%" valign="top"> 				<a
- href="http://planeta.terra.com.br/informatica/paulobarreto/AnubisPage.html">Anubis</a> 
-			</td>
- 			<td width="64%"> 				
-      <p>A 128-bit block cipher that accepts a variable 				length key. The
-cipher is a uniform substitution-permutation network 				whose inverse only
-differs from the forward operation in the key 				schedule. The design of
-both the round transformation and the key 				schedule is based upon the
-Wide Trail strategy and permits a wide 				variety of implementation tradeoffs.</p>
+  		</tr>
+  		<tr>
+  			<td width="36%" valign="top"> 				<a
+ href="http://planeta.terra.com.br/informatica/paulobarreto/AnubisPage.html">Anubis</a>
  			</td>
- 		</tr>
- 		<tr>
- 			<td width="36%" valign="top"> 				<a
- href="http://planeta.terra.com.br/informatica/paulobarreto/KhazadPage.html">Khazad</a> 
-			</td>
- 			<td width="64%"> 				
-      <p>A 64-bit (legacy) block cipher that accepts a 				128-bit key. The
-cipher is a uniform substitution-permutation 				network whose inverse only
-differs from the forward operation in the 				key schedule. The overall cipher
-design follows the Wide Trail 				strategy, favours component reuse, and
-permits a wide variety of 				implementation tradeoffs.</p>
+  			<td width="64%"> 				       
+      <p>A 128-bit block cipher that accepts a variable 				length key. The 
+cipher is a uniform substitution-permutation network 				whose inverse only 
+differs from the forward operation in the key 				schedule. The design of 
+both the round transformation and the key 				schedule is based upon the Wide
+Trail strategy and permits a wide 				variety of implementation tradeoffs.</p>
+  			</td>
+  		</tr>
+  		<tr>
+  			<td width="36%" valign="top"> 				<a
+ href="http://planeta.terra.com.br/informatica/paulobarreto/KhazadPage.html">Khazad</a>
  			</td>
- 		</tr>
- 		<tr>
- 			<td width="36%" valign="top"> 				<a
+  			<td width="64%"> 				       
+      <p>A 64-bit (legacy) block cipher that accepts a 				128-bit key. The 
+cipher is a uniform substitution-permutation 				network whose inverse only 
+differs from the forward operation in the 				key schedule. The overall cipher 
+design follows the Wide Trail 				strategy, favours component reuse, and permits
+a wide variety of 				implementation tradeoffs.</p>
+  			</td>
+  		</tr>
+  		<tr>
+  			<td width="36%" valign="top"> 				<a
  href="http://www.esat.kuleuven.ac.be/%7Erijmen/rijndael/">Rijndael</a> 			</td>
- 			<td width="64%"> 				
-      <p>Rijndael is an iterated block cipher with a variable 				block length
-and a variable key length. The block length and the key 				length can be
+  			<td width="64%"> 				       
+      <p>Rijndael is an iterated block cipher with a variable 				block length 
+and a variable key length. The block length and the key 				length can be 
 independently specified to 128, 192 or 256 bits.</p>
-  				
+   				       
       <p>Rijndael is the AES (Advanced Encryption Standard).</p>
- 			</td>
- 		</tr>
- 		<tr>
-      <td valign="top"><a
+  			</td>
+  		</tr>
+  		<tr>
+       <td valign="top"><a
  href="http://www.cl.cam.ac.uk/%7Erja14/serpent.htm">Serpent</a><br>
-      </td>
-      <td valign="top">Serpent is a 32-round substitution-permutation network
+       </td>
+       <td valign="top">Serpent is a 32-round substitution-permutation network 
 block cipher,<br>
-operating on 128-bit blocks and accepting keys of 128, 192, and 256 bits
-in length. At each round the plaintext is XORed with a 128 bit portion of
-the session key -- a 4224 bit key computed from the input key -- then one
-of eight S-boxes are applied, and finally a simple linear transformation
-is done. Decryption does the exact same thing in reverse order, and using
-the eight inverses of the S-boxes.<br>
-      <br>
-Serpent was designed by Ross Anderson, Eli Biham, and Lars Knudsen as a proposed
-cipher for the Advanced Encryption Standard.<br>
-      <br>
-Serpent can be sped up greatly by replacing S-box substitution with a sequence
-of binary operations, and the optimal implementation depends upon finding
-the fastest sequence of binary operations that reproduce this substitution.
+ operating on 128-bit blocks and accepting keys of 128, 192, and 256 bits 
+in length. At each round the plaintext is XORed with a 128 bit portion of 
+the session key -- a 4224 bit key computed from the input key -- then one 
+of eight S-boxes are applied, and finally a simple linear transformation is
+done. Decryption does the exact same thing in reverse order, and using the
+eight inverses of the S-boxes.<br>
+       <br>
+ Serpent was designed by Ross Anderson, Eli Biham, and Lars Knudsen as a
+proposed cipher for the Advanced Encryption Standard.<br>
+       <br>
+ Serpent can be sped up greatly by replacing S-box substitution with a sequence 
+of binary operations, and the optimal implementation depends upon finding 
+the fastest sequence of binary operations that reproduce this substitution. 
 This implementation uses the S-boxes discovered by <a
- href="http://www.ii.uib.no/%7Eosvik/">Dag Arne Osvik</a>, which are optimized
+ href="http://www.ii.uib.no/%7Eosvik/">Dag Arne Osvik</a>, which are optimized 
 for the Pentium family of processors.<br>
-      </td>
-    </tr>
-    <tr>
- 			<td width="36%" valign="top"> 				<a
+       </td>
+     </tr>
+     <tr>
+  			<td width="36%" valign="top"> 				<a
  href="http://www.esat.kuleuven.ac.be/%7Erijmen/square/">Square</a> 			</td>
- 			<td width="64%"> 				
-      <p>A 128-bit block, 128-bit key cipher. The original 				design of
-Square concentrates on the resistance against differential 				and linear
-cryptanalysis.</p>
- 			</td>
- 		</tr>
- 		<tr>
- 			<td width="36%" valign="top"> 				<a
+  			<td width="64%"> 				       
+      <p>A 128-bit block, 128-bit key cipher. The original 				design of Square
+concentrates on the resistance against differential 				and linear cryptanalysis.</p>
+  			</td>
+  		</tr>
+  		<tr>
+  			<td width="36%" valign="top"> 				<a
  href="http://www.counterpane.com/twofish-paper.html">Twofish</a> 			</td>
- 			<td width="64%">A 128-bit block cipher that accepts a variable-length 
-				key up to 256 bits.</td>
- 		</tr>
- 		<tr>
- 			<td width="100%" colspan="2" bgcolor="#ccccff" valign="top"> 				<i><b>Mode
+  			<td width="64%">A 128-bit block cipher that accepts a variable-length
+ 				key up to 256 bits.</td>
+  		</tr>
+  		<tr>
+  			<td width="100%" colspan="2" bgcolor="#ccccff" valign="top"> 				<i><b>Mode 
 of operation</b></i> 			</td>
- 		</tr>
- 		<tr>
- 			<td width="36%" valign="top"> 				<a
- href="http://csrc.nist.gov/publications/nistpubs/800-38a/sp800-38a.pdf">Counter 
-					mode (CTR) 				</a> 			</td>
- 			<td width="64%"> 				
-      <p>The Counter (CTR) mode is a confidentiality mode that requires a 
-				sequence of blocks, called counters, with the property that each 				block
-in the sequence is different than every other block. This 				condition is
-not restricted to a single message: across all of the 				messages that are
+  		</tr>
+  		<tr>
+  			<td width="36%" valign="top"> 				<a
+ href="http://csrc.nist.gov/publications/nistpubs/800-38a/sp800-38a.pdf">Counter
+ 					mode (CTR) 				</a> 			</td>
+  			<td width="64%"> 				       
+      <p>The Counter (CTR) mode is a confidentiality mode that requires a
+ 				sequence of blocks, called counters, with the property that each 				block 
+in the sequence is different than every other block. This 				condition is 
+not restricted to a single message: across all of the 				messages that are 
 encrypted under the given key, all of the counters 				must be distinct.</p>
- 			</td>
- 		</tr>
- 		<tr>
- 			<td width="36%" valign="top"> 				<a
- href="http://csrc.nist.gov/publications/nistpubs/800-38a/sp800-38a.pdf">Electronic 
-				Codebook (ECB)</a> 			</td>
- 			<td width="64%"> 				
-      <p>The Electronic Codebook (ECB) mode is a 				confidentiality mode
+  			</td>
+  		</tr>
+  		<tr>
+  			<td width="36%" valign="top"> 				<a
+ href="http://csrc.nist.gov/publications/nistpubs/800-38a/sp800-38a.pdf">Electronic
+ 				Codebook (ECB)</a> 			</td>
+  			<td width="64%"> 				       
+      <p>The Electronic Codebook (ECB) mode is a 				confidentiality mode 
 that is defined as follows:</p>
-  				
-      <p>Encryption: C<i><sub>j</sub> </i>= <i>CIPH<sub>K</sub></i>(<i>P<sub>j</sub></i>) 
-				for <i>j </i>= 1.<i>n</i>.<br>
- 				Decryption: <i>P<sub>j</sub> </i>= <i>CIPH<sup>-1</sup><sub>K</sub></i>(<i>C<sub>j</sub></i>) 
-				for <i>j </i>= 1.<i>n</i>.</p>
-  				
-      <p>In ECB encryption, the forward cipher function is 				applied directly,
-and independently, to each block of the plaintext. 				The resulting sequence
+   				       
+      <p>Encryption: C<i><sub>j</sub> </i>= <i>CIPH<sub>K</sub></i>(<i>P<sub>j</sub></i>)
+ 				for <i>j </i>= 1.<i>n</i>.<br>
+  				Decryption: <i>P<sub>j</sub> </i>= <i>CIPH<sup>-1</sup><sub>K</sub></i>(<i>C<sub>j</sub></i>)
+ 				for <i>j </i>= 1.<i>n</i>.</p>
+   				       
+      <p>In ECB encryption, the forward cipher function is 				applied directly, 
+and independently, to each block of the plaintext. 				The resulting sequence 
 of output blocks is the ciphertext.</p>
-  				
-      <p>In ECB decryption, the inverse cipher function is 				applied directly,
-and independently, to each block of the 				ciphertext. The resulting sequence
+   				       
+      <p>In ECB decryption, the inverse cipher function is 				applied directly, 
+and independently, to each block of the 				ciphertext. The resulting sequence 
 of output blocks is the 				plaintext.</p>
- 			</td>
- 		</tr>
- 		<tr>
- 			<td width="36%" valign="top"> 				<a
- href="http://www.ietf.org/internet-drafts/draft-mcgrew-saag-icm-00.txt">Integer
+  			</td>
+  		</tr>
+  		<tr>
+  			<td width="36%" valign="top"> 				<a
+ href="http://www.ietf.org/internet-drafts/draft-mcgrew-saag-icm-00.txt">Integer 
 Counter Mode 				(ICM)</a> 			</td>
- 			<td width="64%">Counter Mode is a way to define a pseudorandom 				key-stream
-generator  using a block cipher. The key-stream can be 				used for additive
-encryption, key derivation, or any other 				application requiring pseudorandom
-data. In ICM, the key-stream is 				logically broken into segments.  Each
- segment is identified with a 				segment index, and the segments have  equal
-lengths. This 				segmentation makes ICM especially appropriate for securing 
-				packet-based protocols. 			</td>
- 		</tr>
- 		<tr>
-      <td valign="top"><a
- href="http://csrc.nist.gov/publications/nistpubs/800-38a/sp800-38a.pdf">Output
+  			<td width="64%">Counter Mode is a way to define a pseudorandom 				key-stream 
+generator  using a block cipher. The key-stream can be 				used for additive 
+encryption, key derivation, or any other 				application requiring pseudorandom 
+data. In ICM, the key-stream is 				logically broken into segments.  Each 
+ segment is identified with a 				segment index, and the segments have  equal 
+lengths. This 				segmentation makes ICM especially appropriate for securing
+ 				packet-based protocols. 			</td>
+  		</tr>
+  		<tr>
+       <td valign="top"><a
+ href="http://csrc.nist.gov/publications/nistpubs/800-38a/sp800-38a.pdf">Output 
 Feedback Mode (OFB)</a><br>
-      </td>
-      <td valign="top">The Output Feedback (OFB) mode is a confidentiality
-mode that features the iteration of the forward cipher on an IV to generate
-a sequence of output blocks that are exclusive-ORed with the plaintext to
-produce the ciphertext, and vice versa. The OFB mode requires that the IV
+       </td>
+       <td valign="top">The Output Feedback (OFB) mode is a confidentiality 
+mode that features the iteration of the forward cipher on an IV to generate 
+a sequence of output blocks that are exclusive-ORed with the plaintext to 
+produce the ciphertext, and vice versa. The OFB mode requires that the IV 
 is a<br>
-nonce, i.e., the IV must be unique for each execution of the mode under the
-given key.<br>
-      </td>
-    </tr>
-    <tr>
- 			<td width="100%" colspan="2" bgcolor="#ccccff" valign="top"> 				<i><b>Padding
+ nonce, i.e., the IV must be unique for each execution of the mode under
+the given key.<br>
+       </td>
+     </tr>
+     <tr>
+  			<td width="100%" colspan="2" bgcolor="#ccccff" valign="top"> 				<i><b>Padding 
 scheme</b></i> 			</td>
- 		</tr>
- 		<tr>
- 			<td width="36%" valign="top"> 				<a
+  		</tr>
+  		<tr>
+  			<td width="36%" valign="top"> 				<a
  href="http://www.rsasecurity.com/rsalabs/pkcs/pkcs-7/">PKCS-7</a></td>
- 			<td width="64%"> 				
-      <p>Let <i>B </i>be the number of octets in the data 				blocks (or
-segments) and let <i>L </i>be the number of octets in the 				data string.
-The data string is padded at the trailing end with 				<i>B</i>-(<i>L</i>mod
-      <i>B</i>) octets, each of which is the binary 				representation of
-      <i>B</i>-(<i>L </i>mod <i>B</i>).</p>
- 			</td>
- 		</tr>
- 		<tr>
- 			<td width="36%" valign="top"> 				<a
- href="http://csrc.nist.gov/encryption/modes/Recommendation/Modes01.pdf">Trailing 
-					Bit Complement (TBC)</a></td>
- 			<td width="64%"> 				
-      <p>With TBC, the data string is padded at the trailing 				end with
-the complement of the trailing bit of the unpadded message: 				if the trailing
-bit is `1,' then `0' bits are appended, and 				if the trailing bit is `0,'
-then `1' bits are appended. As 				few bits are added as are necessary to
+  			<td width="64%"> 				       
+      <p>Let <i>B </i>be the number of octets in the data 				blocks (or segments)
+and let <i>L </i>be the number of octets in the 				data string. The data
+string is padded at the trailing end with 				<i>B</i>-(<i>L</i>mod     
+ <i>B</i>) octets, each of which is the binary 				representation of    
+  <i>B</i>-(<i>L </i>mod <i>B</i>).</p>
+  			</td>
+  		</tr>
+  		<tr>
+  			<td width="36%" valign="top"> 				<a
+ href="http://csrc.nist.gov/encryption/modes/Recommendation/Modes01.pdf">Trailing
+ 					Bit Complement (TBC)</a></td>
+  			<td width="64%"> 				       
+      <p>With TBC, the data string is padded at the trailing 				end with 
+the complement of the trailing bit of the unpadded message: 				if the trailing 
+bit is `1,' then `0' bits are appended, and 				if the trailing bit is `0,' 
+then `1' bits are appended. As 				few bits are added as are necessary to 
 meet the formatting size 				requirement.</p>
- 			</td>
- 		</tr>
- 		<tr>
- 			<td width="100%" colspan="2" bgcolor="#ccccff" valign="top"> 				<i><b>Message
+  			</td>
+  		</tr>
+  		<tr>
+  			<td width="100%" colspan="2" bgcolor="#ccccff" valign="top"> 				<i><b>Message 
 digest (hash)</b></i> 			</td>
- 		</tr>
- 		<tr>
- 			<td width="36%" valign="top"> 				<a
- href="http://planeta.terra.com.br/informatica/paulobarreto/WhirlpoolPage.html">Whirlpool</a> 
-			</td>
- 			<td width="64%"> 				
-      <p>A new 512-bit hashing function operating on messages 				less than
-2<sup>256</sup> bits in length. The function structure is 				designed according
-to the Wide Trail strategy and permits a wide 				variety of implementation
+  		</tr>
+  		<tr>
+  			<td width="36%" valign="top"> 				<a
+ href="http://planeta.terra.com.br/informatica/paulobarreto/WhirlpoolPage.html">Whirlpool</a>
+ 			</td>
+  			<td width="64%"> 				       
+      <p>A new 512-bit hashing function operating on messages 				less than 
+2<sup>256</sup> bits in length. The function structure is 				designed according 
+to the Wide Trail strategy and permits a wide 				variety of implementation 
 tradeoffs.</p>
+  			</td>
+  		</tr>
+  		<tr>
+  			<td width="36%" valign="top"> 				<a
+ href="http://www.esat.kuleuven.ac.be/%7Ebosselae/ripemd160.html">RIPEMD-128</a>
  			</td>
- 		</tr>
- 		<tr>
- 			<td width="36%" valign="top"> 				<a
- href="http://www.esat.kuleuven.ac.be/%7Ebosselae/ripemd160.html">RIPEMD-128</a> 
-			</td>
- 			<td width="64%"> 				
-      <p>The main difference with RIPEMD-160 is that we keep 				a hash result
-and chaining variable of 128 bits (four 32 bit words); 				only four rounds
+  			<td width="64%"> 				       
+      <p>The main difference with RIPEMD-160 is that we keep 				a hash result 
+and chaining variable of 128 bits (four 32 bit words); 				only four rounds 
 are used.</p>
+  			</td>
+  		</tr>
+  		<tr>
+  			<td width="36%" valign="top"> 				<a
+ href="http://www.esat.kuleuven.ac.be/%7Ebosselae/ripemd160.html">RIPEMD-160</a>
  			</td>
- 		</tr>
- 		<tr>
- 			<td width="36%" valign="top"> 				<a
- href="http://www.esat.kuleuven.ac.be/%7Ebosselae/ripemd160.html">RIPEMD-160</a> 
-			</td>
- 			<td width="64%"> 				
-      <p>The bit-size of the hash result and chaining 				variable are increased
-to 160 bits (five 32-bit words), the number 				of rounds is increased from
-three to five, and the two lines are 				made more different (not only the
-constants are modified, but also 				the Boolean functions and the order
-of the message words).</p>
- 			</td>
- 		</tr>
- 		<tr>
- 			<td width="36%" valign="top"> 				<a
+  			<td width="64%"> 				       
+      <p>The bit-size of the hash result and chaining 				variable are increased 
+to 160 bits (five 32-bit words), the number 				of rounds is increased from 
+three to five, and the two lines are 				made more different (not only the 
+constants are modified, but also 				the Boolean functions and the order of
+the message words).</p>
+  			</td>
+  		</tr>
+  		<tr>
+  			<td width="36%" valign="top"> 				<a
  href="http://www.itl.nist.gov/fipspubs/fip180-1.htm">SHA-1</a> 			</td>
- 			<td width="64%"> 				
-      <p>The Secure Hash Algorithm (SHA-1) is required for use with the 				Digital
-Signature Algorithm (DSA) as specified in the Digital 				Signature Standard
-(DSS) and whenever a secure hash algorithm is 				required for US federal
-applications. For a message of length less 				than 2<sup>64</sup> bits,
-the SHA-1 produces a 160-bit condensed 				representation of the message
-called a message digest.</p>
- 			</td>
- 		</tr>
- 		<tr>
- 			<td width="36%" valign="top"> 				<a
+  			<td width="64%"> 				       
+      <p>The Secure Hash Algorithm (SHA-1) is required for use with the 				Digital 
+Signature Algorithm (DSA) as specified in the Digital 				Signature Standard 
+(DSS) and whenever a secure hash algorithm is 				required for US federal 
+applications. For a message of length less 				than 2<sup>64</sup> bits, the
+SHA-1 produces a 160-bit condensed 				representation of the message called
+a message digest.</p>
+  			</td>
+  		</tr>
+  		<tr>
+  			<td width="36%" valign="top"> 				<a
  href="http://www.ietf.org/rfc/rfc1321.txt">MD5</a> 			</td>
- 			<td width="64%"> 				
-      <p>The MD5 message-digest algorithm takes as input a message of 				arbitrary
-length and produces as output a 128-bit <i>fingerprint</i> 				or <i>message
+  			<td width="64%"> 				       
+      <p>The MD5 message-digest algorithm takes as input a message of 				arbitrary 
+length and produces as output a 128-bit <i>fingerprint</i> 				or <i>message 
 digest</i> of the input.</p>
- 			</td>
- 		</tr>
- 		<tr>
-      <td valign="top" rowspan="1" colspan="2" bgcolor="#ccccff"><i><b>Message
+  			</td>
+  		</tr>
+  		<tr>
+      <td valign="top"><a href="http://www.ietf.org/rfc/rfc1320.txt">MD4</a><br>
+      </td>
+      <td valign="top">MD4 (a 128-bit output size hash algorithm) was the
+precursor to the stronger MD5 message-digest algorithm.<br>
+      <br>
+While not considered cryptograpically secure itself, MD4 is in use in various
+applications. It is slightly faster than MD5.<br>
+      </td>
+    </tr>
+    <tr>
+       <td valign="top" rowspan="1" colspan="2" bgcolor="#ccccff"><i><b>Message 
 authentication code (MAC)</b></i><br>
-      </td>
-    </tr>
-    <tr>
-      <td valign="top"><a href="http://www.ietf.org/rfc/rfc2104.txt">HMAC</a><br>
-      </td>
-      <td valign="top">HMAC is a mechanism for message authentication using
-cryptographic hash functions. HMAC can be used with any iterative cryptographic
-hash function, e.g., MD5, SHA-1, in combination with a secret shared key.
- The cryptographic strength of HMAC depends on the properties of the underlying
+       </td>
+     </tr>
+     <tr>
+       <td valign="top"><a href="http://www.ietf.org/rfc/rfc2104.txt">HMAC</a><br>
+       </td>
+       <td valign="top">HMAC is a mechanism for message authentication using 
+cryptographic hash functions. HMAC can be used with any iterative cryptographic 
+hash function, e.g., MD5, SHA-1, in combination with a secret shared key. 
+ The cryptographic strength of HMAC depends on the properties of the underlying 
 hash function.</td>
-    </tr>
-    <tr>
-      <td valign="top"><a
+     </tr>
+     <tr>
+       <td valign="top"><a
  href="https://www.cosic.esat.kuleuven.ac.be/nessie/workshop/submissions/umac.zip">UHash32</a><br>
-      </td>
-      <td valign="top">UHASH is a keyed hash function, which takes as input
-a string of arbitrary length, and produces as output a string of fixed length
+       </td>
+       <td valign="top">UHASH is a keyed hash function, which takes as input 
+a string of arbitrary length, and produces as output a string of fixed length 
 (such as 8 bytes). The actual output length depends on the parameter UMAC-OUTPUT-LEN.<br>
-      <br>
-UHASH has been shown to be epsilon-ASU (<i>Almost Strongly Universal</i>),
-where epsilon is a small (parameter-dependent) real number. Informally, saying
-that a keyed hash function is epsilon-ASU means that for any two distinct
-fixed input strings, the two outputs of the hash function with a random key<i>
-look almost like a pair of random strings</i>. The number epsilon measures
+       <br>
+ UHASH has been shown to be epsilon-ASU (<i>Almost Strongly Universal</i>), 
+where epsilon is a small (parameter-dependent) real number. Informally, saying 
+that a keyed hash function is epsilon-ASU means that for any two distinct 
+fixed input strings, the two outputs of the hash function with a random key<i> 
+look almost like a pair of random strings</i>. The number epsilon measures 
 how non-random the output strings may be.<br>
-      <br>
-UHASH has been designed to be fast by exploiting several architectural features
-of modern commodity processors. It was specifically designed for use in UMAC.
-But UHASH is useful beyond that domain, and can be easily adopted for other
+       <br>
+ UHASH has been designed to be fast by exploiting several architectural features 
+of modern commodity processors. It was specifically designed for use in UMAC. 
+But UHASH is useful beyond that domain, and can be easily adopted for other 
 purposes.<br>
-      <br>
-UHASH&lt;/i&gt; does its work in three layers. First, a hash function called
-NH is used to compress input messages into strings which are typically many
-times smaller than the input message. Second, the compressed message is hashed
-with an optimized polynomial hash function into a fixed-length 16-byte string.
-Finally, the 16-byte string is hashed using an inner-product hash into a
-string of length WORD-LEN bytes. These three layers are repeated (with a
-modified key) until the outputs total UMAC-OUTPUT-LEN bytes.<br>
-      </td>
-    </tr>
-    <tr>
-      <td valign="top"><a
+       <br>
+ UHASH&lt;/i&gt; does its work in three layers. First, a hash function called 
+NH is used to compress input messages into strings which are typically many 
+times smaller than the input message. Second, the compressed message is hashed 
+with an optimized polynomial hash function into a fixed-length 16-byte string. 
+Finally, the 16-byte string is hashed using an inner-product hash into a string
+of length WORD-LEN bytes. These three layers are repeated (with a modified
+key) until the outputs total UMAC-OUTPUT-LEN bytes.<br>
+       </td>
+     </tr>
+     <tr>
+       <td valign="top"><a
  href="https://www.cosic.esat.kuleuven.ac.be/nessie/workshop/submissions/umac.zip">UMac32</a><br>
-      </td>
-      <td valign="top">The UMAC algorithms are parameterized. This means
-that various low-level choices, like the endian convention and the underlying
-cryptographic primitive, have not been fixed. One must choose values for
-these parameters before the authentication tag generated by UMAC (for a given
-message, key, and nonce) becomes fully-defined. In this document we provide
-two collections of parameter settings, and have named the sets UMAC16 and
-UMAC32. The parameter sets have been chosen based on experimentation and
-provide good performance on a wide variety of processors. UMAC16 is designed
-to excel on processors which provide small-scale SIMD parallelism of the
-type found in Intel's MMX and Motorola's AltiVec instruction sets, while
-UMAC32 is designed to do well on processors with good 32- and 64- bit support.
-UMAC32 may take advantage of SIMD parallelism in future processors.<br>
-      <br>
-UMAC has been designed to allow implementations which accommodate on-line
-authentication. This means that pieces of the message may be presented to
-&lt;i&gt;UMAC&lt;/i&gt; at different times (but in correct order) and an
-on-line implementation will be able to process the message correctly without
-the need to buffer more than a few dozen bytes of the message. For simplicity,
-the algorithms in this specification are presented as if the entire message
+       </td>
+       <td valign="top">The UMAC algorithms are parameterized. This means 
+that various low-level choices, like the endian convention and the underlying 
+cryptographic primitive, have not been fixed. One must choose values for these
+parameters before the authentication tag generated by UMAC (for a given message,
+key, and nonce) becomes fully-defined. In this document we provide two collections
+of parameter settings, and have named the sets UMAC16 and UMAC32. The parameter
+sets have been chosen based on experimentation and provide good performance
+on a wide variety of processors. UMAC16 is designed to excel on processors
+which provide small-scale SIMD parallelism of the type found in Intel's MMX
+and Motorola's AltiVec instruction sets, while UMAC32 is designed to do well
+on processors with good 32- and 64- bit support. UMAC32 may take advantage
+of SIMD parallelism in future processors.<br>
+       <br>
+ UMAC has been designed to allow implementations which accommodate on-line 
+authentication. This means that pieces of the message may be presented to 
+&lt;i&gt;UMAC&lt;/i&gt; at different times (but in correct order) and an on-line
+implementation will be able to process the message correctly without the
+need to buffer more than a few dozen bytes of the message. For simplicity, 
+the algorithms in this specification are presented as if the entire message 
 being authenticated were available at once.<br>
-      </td>
-    </tr>
-    <tr>
- 			<td width="100%" colspan="2" bgcolor="#ccccff" valign="top"><i><b>Pseudo-random 
-				number generator (PRNG)</b></i></td>
- 		</tr>
- 		<tr>
- 			<td width="36%" valign="top"><a
- href="http://www.ietf.org/internet-drafts/draft-mcgrew-saag-icm-00.txt">Integer
+       </td>
+     </tr>
+     <tr>
+  			<td width="100%" colspan="2" bgcolor="#ccccff" valign="top"><i><b>Pseudo-random
+ 				number generator (PRNG)</b></i></td>
+  		</tr>
+  		<tr>
+  			<td width="36%" valign="top"><a
+ href="http://www.ietf.org/internet-drafts/draft-mcgrew-saag-icm-00.txt">Integer 
 Counter Mode (ICM) 				key-stream generator</a></td>
- 			<td width="64%"> 				
-      <p>Counter Mode is a way to define a pseudorandom key-stream 				generator
-using a block cipher. The key-stream can be used for 				additive encryption,
+  			<td width="64%"> 				       
+      <p>Counter Mode is a way to define a pseudorandom key-stream 				generator 
+using a block cipher. The key-stream can be used for 				additive encryption, 
 key derivation, or any other application 				requiring pseudorandom data.</p>
- 			</td>
- 		</tr>
- 		<tr>
- 			<td width="36%" valign="top"> 				Generic hash-based generator</td>
- 			<td width="64%">                 A PRNG configurable with a hash function
-and a seed. The 				generator continuously updates its context with the result
+  			</td>
+  		</tr>
+  		<tr>
+  			<td width="36%" valign="top"> 				Generic hash-based generator</td>
+  			<td width="64%">                 A PRNG configurable with a hash function 
+and a seed. The 				generator continuously updates its context with the result 
 of each 				request for random bytes. 			</td>
- 		</tr>
- 		<tr>
-      <td valign="top"><a
- href="https://www.cosic.esat.kuleuven.ac.be/nessie/workshop/submissions/umac.zip">UMAC
+  		</tr>
+  		<tr>
+       <td valign="top"><a
+ href="https://www.cosic.esat.kuleuven.ac.be/nessie/workshop/submissions/umac.zip">UMAC 
       </a>key-stream generator<br>
-      </td>
-      <td valign="top">From the UMAC draft:<br>
-      <br>
-"Stretching the user-supplied key into pseudorandom bits used internally
-by UMAC is done with a key-derivation function (UMacGenerator). In this section
-we define a UMacGenerator which is efficiently instantiated with a block
-cipher. The Advanced Encryption Standard (AES) is used in output-feedback
-mode to produce the required bits."<br>
-      </td>
-    </tr>
-    <tr>
- 			<td width="100%" valign="top" colspan="2" bgcolor="#ccccff">        
-        <i><b>Digital signature scheme</b></i></td>
- 		</tr>
- 		<tr>
- 			<td width="36%" valign="top">                 <a
- href="http://www.itl.nist.gov/fipspubs/fip186.htm">Digital             
-   Signature Standard</a> (DSS)</td>
- 			<td width="64%"> 				
-      <p>This Standard specifies a Digital Signature Algorithm (DSA)    
-            appropriate for applications requiring a digital rather than 
-               written signature. The DSA digital signature is a pair of
-large                 numbers represented in a computer as strings of binary
-digits.                 The digital signature is computed using a set of
-rules (i.e.,                 the DSA) and a set of parameters such that the
-identity of the                 signatory and integrity of the data can be
-verified. The DSA                 provides the capability to generate and
-verify signatures.                 Signature generation makes use of a private
-key to generate a                 digital signature. Signature verification
-makes use of a public                 key which corresponds to, but is not
-the same as, the private                 key. Each user possesses a private
-and public key pair. Public                 keys are assumed to be known
-to the public in general. Private                 keys are never shared.
-Anyone can verify the signature of a user                 by employing that
-user's public key. Signature generation can be                 performed
-only by the possessor of the user's private key.</p>
- 			</td>
- 		</tr>
- 		<tr>
- 			<td width="36%" valign="top">                 <a
+       </td>
+       <td valign="top">From the UMAC draft:<br>
+       <br>
+ "Stretching the user-supplied key into pseudorandom bits used internally 
+by UMAC is done with a key-derivation function (UMacGenerator). In this section 
+we define a UMacGenerator which is efficiently instantiated with a block cipher.
+The Advanced Encryption Standard (AES) is used in output-feedback mode to
+produce the required bits."<br>
+       </td>
+     </tr>
+     <tr>
+  			<td width="100%" valign="top" colspan="2" bgcolor="#ccccff">       
+         <i><b>Digital signature scheme</b></i></td>
+  		</tr>
+  		<tr>
+  			<td width="36%" valign="top">                 <a
+ href="http://www.itl.nist.gov/fipspubs/fip186.htm">Digital              
+  Signature Standard</a> (DSS)</td>
+  			<td width="64%"> 				       
+      <p>This Standard specifies a Digital Signature Algorithm (DSA)     
+           appropriate for applications requiring a digital rather than  
+              written signature. The DSA digital signature is a pair of large
+                numbers represented in a computer as strings of binary digits.
+                The digital signature is computed using a set of rules (i.e.,
+                the DSA) and a set of parameters such that the identity of
+the                 signatory and integrity of the data can be verified.
+The DSA                 provides the capability to generate and verify signatures.
+                Signature generation makes use of a private key to generate
+a                 digital signature. Signature verification makes use of
+a public                 key which corresponds to, but is not the same as,
+the private                 key. Each user possesses a private and public
+key pair. Public                 keys are assumed to be known to the public
+in general. Private                 keys are never shared. Anyone can verify
+the signature of a user                 by employing that user's public key.
+Signature generation can be                 performed only by the possessor
+of the user's private key.</p>
+  			</td>
+  		</tr>
+  		<tr>
+  			<td width="36%" valign="top">                 <a
  href="http://www.cosic.esat.kuleuven.ac.be/nessie/workshop/submissions/rsa-pss.zip">RSA-PSS</a></td>
- 			<td width="64%">                 <font face="CMR10" size="3">       
-         </font>
-      <p align="left"><font face="CMR10" size="3">RSA-PSS is a public-key
+  			<td width="64%">                 <font face="CMR10" size="3">      
+          </font>       
+      <p align="left"><font face="CMR10" size="3">RSA-PSS is a public-key 
 encryption scheme                 combining the RSA algorithm with the </font><font
  face="CMTI10" size="3">Probabilistic Signature Scheme </font><font
- face="CMR10" size="3">(PSS) encoding method. The inventors of          
-      RSA are Ronald L. Rivest, Adi Shamir, and Leonard Adleman, while  
-              the inventors of the PSS encoding method are Mihir Bellare
-and                 Phillip Rogaway.During efforts to adopt RSA-PSS into
-the P1363a                 standards effort, certain adaptations to the original
-version of                 RSA-PSS were made by Mihir Bellare and Phillip
-Rogaway and also                 by Burt Kaliski (the editor of IEEE P1363a)
-to facilitate                 implementation and integration into existing
+ face="CMR10" size="3">(PSS) encoding method. The inventors of           
+     RSA are Ronald L. Rivest, Adi Shamir, and Leonard Adleman, while   
+             the inventors of the PSS encoding method are Mihir Bellare and
+                Phillip Rogaway.During efforts to adopt RSA-PSS into the
+P1363a                 standards effort, certain adaptations to the original 
+version of                 RSA-PSS were made by Mihir Bellare and Phillip 
+Rogaway and also                 by Burt Kaliski (the editor of IEEE P1363a) 
+to facilitate                 implementation and integration into existing 
 protocols.</font> 			</p>
-      </td>
- 		</tr>
- 	
-  </tbody>
+       </td>
+  		</tr>
+  	   
+  </tbody> 
 </table>
-  
+    
 <h3><a name="documentation">Documentation</a></h3>
- 
-<p>JavaDoc HTML pages for the GNU Crypto packages are available, for on-line 
-browsing, <a href="api/index.html">with</a> and <a
+   
+<p>JavaDoc HTML pages for the GNU Crypto packages are available, for on-line
+ browsing, <a href="api/index.html">with</a> and <a
  href="api/overview-summary.html">without</a> frames.</p>
-  
-<p>Reference documents describing the details of the cryptographic algorithms 
-implemented in this library are available for viewing/downloading. Here is
-the list:</p>
-  
+    
+<p>Reference documents describing the details of the cryptographic algorithms
+ implemented in this library are available for viewing/downloading. Here
+is the list:</p>
+    
 <ul>
- 	<li><a href="http://www.esat.kuleuven.ac.be/%7Erijmen/rijndael/">AES Proposal:
+  	<li><a href="http://www.esat.kuleuven.ac.be/%7Erijmen/rijndael/">AES Proposal: 
 Rijndael</a>,</li>
- 	<li><a
- href="http://www.ietf.org/internet-drafts/draft-mcgrew-saag-icm-00.txt">Integer
+  	<li><a
+ href="http://www.ietf.org/internet-drafts/draft-mcgrew-saag-icm-00.txt">Integer 
 Counter Mode</a>,</li>
- 	<li><a href="http://www.rsasecurity.com/rsalabs/pkcs/pkcs-7/">PKCS #7</a>:
+  	<li><a href="http://www.rsasecurity.com/rsalabs/pkcs/pkcs-7/">PKCS #7</a>: 
 Cryptographic Message Syntax Standard,</li>
- 	<li><a href="http://www.ietf.org/rfc/rfc1423.txt">RFC 1423</a>: Privacy
-Enhancement for 		Internet Electronic Mail: Part III: Algorithms, Modes,
-and Identifiers,</li>
- 	<li>Recommendation for <a
- href="http://csrc.nist.gov/encryption/modes/Recommendation/Modes01.pdf">Block
+  	<li><a href="http://www.ietf.org/rfc/rfc1423.txt">RFC 1423</a>: Privacy 
+Enhancement for 		Internet Electronic Mail: Part III: Algorithms, Modes, and
+Identifiers,</li>
+  	<li>Recommendation for <a
+ href="http://csrc.nist.gov/encryption/modes/Recommendation/Modes01.pdf">Block 
 Cipher Modes of Operation</a>,</li>
- 	<li><a
- href="http://www.esat.kuleuven.ac.be/%7Ebosselae/ripemd160.html">RIPEMD-160</a>:
+  	<li><a
+ href="http://www.esat.kuleuven.ac.be/%7Ebosselae/ripemd160.html">RIPEMD-160</a>: 
 A Strengthened Version of RIPEMD,</li>
- 	<li>The <a
- href="http://planeta.terra.com.br/informatica/paulobarreto/AnubisPage.html">ANUBIS</a>
+  	<li>The <a
+ href="http://planeta.terra.com.br/informatica/paulobarreto/AnubisPage.html">ANUBIS</a> 
 Block Cipher,</li>
- 	<li>The Block Cipher <a
+  	<li>The Block Cipher <a
  href="http://www.esat.kuleuven.ac.be/%7Erijmen/square/">Square</a>,</li>
- 	<li>The <a
- href="http://planeta.terra.com.br/informatica/paulobarreto/KhazadPage.html">KHAZAD</a>
+  	<li>The <a
+ href="http://planeta.terra.com.br/informatica/paulobarreto/KhazadPage.html">KHAZAD</a> 
 Legacy-Level Block Cipher,</li>
- 	<li>The <a
- href="http://planeta.terra.com.br/informatica/paulobarreto/WhirlpoolPage.html">WHIRLPOOL</a>
+  	<li>The <a
+ href="http://planeta.terra.com.br/informatica/paulobarreto/WhirlpoolPage.html">WHIRLPOOL</a> 
 Hashing Function,</li>
- 	<li><a href="http://www.counterpane.com/twofish-paper.html">Twofish</a>:
+  	<li><a href="http://www.counterpane.com/twofish-paper.html">Twofish</a>: 
 A 128-bit Block Cipher,</li>
- 	<li><a href="http://www.itl.nist.gov/fipspubs/fip180-1.htm">SECURE HASH
+  	<li><a href="http://www.itl.nist.gov/fipspubs/fip180-1.htm">SECURE HASH 
 STANDARD</a>,</li>
- 	<li><a href="http://www.ietf.org/rfc/rfc1321.txt">RFC 1321</a>: The MD5
+  	<li><a href="http://www.ietf.org/rfc/rfc1321.txt">RFC 1321</a>: The MD5 
 Message-Digest Algorithm.</li>
- 	<li><a href="http://www.itl.nist.gov/fipspubs/fip186.htm">DIGITAL     
- SIGNATURE STANDARD</a>.</li>
- 	<li><a
- href="http://www.cosic.esat.kuleuven.ac.be/nessie/workshop/submissions/rsa-pss.zip">RSA-PSS</a> 
-      Signature Scheme with Appendix.</li>
- 
+  	<li><a href="http://www.itl.nist.gov/fipspubs/fip186.htm">DIGITAL    
+  SIGNATURE STANDARD</a>.</li>
+  	<li><a
+ href="http://www.cosic.esat.kuleuven.ac.be/nessie/workshop/submissions/rsa-pss.zip">RSA-PSS</a>
+       Signature Scheme with Appendix.</li>
+   
 </ul>
-  
-<p>Test vectors, when not included in the reference documents, are made available 
-by the designers of the algorithms. The current implementation was checked 
-against the following test vectors:</p>
-  
+    
+<p>Test vectors, when not included in the reference documents, are made available
+ by the designers of the algorithms. The current implementation was checked
+ against the following test vectors:</p>
+    
 <ul>
- 	<li>Anubis:</li>
- 		
+  	<li>Anubis:</li>
+  		   
   <ul>
- 			<li><a href="vectors/anubis-test-vectors-128.txt">128-bit	key</a>,</li>
- 			<li><a href="vectors/anubis-test-vectors-160.txt">160-bit key</a>,</li>
- 			<li><a href="vectors/anubis-test-vectors-192.txt">192-bit key</a>,</li>
- 			<li><a href="vectors/anubis-test-vectors-224.txt">224-bit key</a>,</li>
- 			<li><a href="vectors/anubis-test-vectors-256.txt">256-bit key</a>,</li>
- 			<li><a href="vectors/anubis-test-vectors-288.txt">288-bit key</a>,</li>
- 			<li><a href="vectors/anubis-test-vectors-320.txt">320-bit key</a>.</li>
- 		
+  			<li><a href="vectors/anubis-test-vectors-128.txt">128-bit	key</a>,</li>
+  			<li><a href="vectors/anubis-test-vectors-160.txt">160-bit key</a>,</li>
+  			<li><a href="vectors/anubis-test-vectors-192.txt">192-bit key</a>,</li>
+  			<li><a href="vectors/anubis-test-vectors-224.txt">224-bit key</a>,</li>
+  			<li><a href="vectors/anubis-test-vectors-256.txt">256-bit key</a>,</li>
+  			<li><a href="vectors/anubis-test-vectors-288.txt">288-bit key</a>,</li>
+  			<li><a href="vectors/anubis-test-vectors-320.txt">320-bit key</a>.</li>
+  		   
   </ul>
- 	<li><a href="vectors/khazad-tweak-test-vectors.txt">Khazad</a>,</li>
- 	<li> 		Rijndael: 	</li>
- 		
+  	<li><a href="vectors/khazad-tweak-test-vectors.txt">Khazad</a>,</li>
+  	<li> 		Rijndael: 	</li>
+  		   
   <ul>
- 			<li>Monte-Carlo Tests</li>
- 				
+  			<li>Monte-Carlo Tests</li>
+  				     
     <ul>
- 					<li>ECB Mode: <a href="vectors/rijndael-ecb_e_m.txt">Encryption</a>, 
-						<a href="vectors/rijndael-ecb_d_m.txt"> Decryption</a>,</li>
- 				  <li>CBC Mode: <a href="vectors/rijndael-cbc_e_m.txt">Encryption</a>, 
-						<a href="vectors/rijndael-cbc_d_m.txt"> Decryption</a>,</li>
- 				
+  					<li>ECB Mode: <a href="vectors/rijndael-ecb_e_m.txt">Encryption</a>,
+ 						<a href="vectors/rijndael-ecb_d_m.txt"> Decryption</a>,</li>
+  				  <li>CBC Mode: <a href="vectors/rijndael-cbc_e_m.txt">Encryption</a>,
+ 						<a href="vectors/rijndael-cbc_d_m.txt"> Decryption</a>,</li>
+  				     
     </ul>
- 			<li><a href="vectors/rijndael-ecb_vk.txt">Variable Key Known Answer Test</a>,</li>
- 			<li><a href="vectors/rijndael-ecb_vt.txt">Variable Text Known Answer
+  			<li><a href="vectors/rijndael-ecb_vk.txt">Variable Key Known Answer
+Test</a>,</li>
+  			<li><a href="vectors/rijndael-ecb_vt.txt">Variable Text Known Answer 
 Test</a>.</li>
- 		
+  		   
   </ul>
- 	<li>Twofish:</li>
- 		
+  	<li>Twofish:</li>
+  		   
   <ul>
- 			<li>Monte-Carlo Tests</li>
- 				
+  			<li>Monte-Carlo Tests</li>
+  				     
     <ul>
- 					<li>ECB Mode: <a href="vectors/twofish-Ecb_e_m.txt">Encryption</a>, 
-						<a href="vectors/twofish-Ecb_d_m.txt"> Decryption</a>,</li>
- 				  <li>CBC Mode: <a href="vectors/twofish-Cbc_e_m.txt">Encryption</a>, 
-						<a href="vectors/twofish-Cbc_d_m.txt"> Decryption</a>,</li>
- 				
+  					<li>ECB Mode: <a href="vectors/twofish-Ecb_e_m.txt">Encryption</a>,
+ 						<a href="vectors/twofish-Ecb_d_m.txt"> Decryption</a>,</li>
+  				  <li>CBC Mode: <a href="vectors/twofish-Cbc_e_m.txt">Encryption</a>,
+ 						<a href="vectors/twofish-Cbc_d_m.txt"> Decryption</a>,</li>
+  				     
     </ul>
- 			<li><a href="vectors/twofish-Ecb_vk.txt">Variable Key Known Answer Test</a>,</li>
- 			<li><a href="vectors/twofish-Ecb_vt.txt">Variable Text Known Answer Test</a>.</li>
- 		
+  			<li><a href="vectors/twofish-Ecb_vk.txt">Variable Key Known Answer Test</a>,</li>
+  			<li><a href="vectors/twofish-Ecb_vt.txt">Variable Text Known Answer
+Test</a>.</li>
+  		   
   </ul>
- 	<li><a href="vectors/whirltweak-test-vectors.txt">Whirlpool</a>.</li>
- 
+  	<li><a href="vectors/whirltweak-test-vectors.txt">Whirlpool</a>.</li>
+   
 </ul>
-  
+    
 <h3><a name="primality">Note on primality testing</a></h3>
-  
-<p>This library includes a Java port of <a href="mailto:colin@nyx.net">Colin 
-Plumb</a>'s implementation of Euler's Criterion for primality testing, from
+    
+<p>This library includes a Java port of <a href="mailto:colin@nyx.net">Colin
+ Plumb</a>'s implementation of Euler's Criterion for primality testing, from 
 his <a
- href="http://munitions.vipul.net/software/libraries/mathematics/bnlib-1.1.tar.gz">bnlib</a> 
-(version 1.1) package. This test is consistently used, throughout this package, 
-in preference to the Miller-Rabin probabilistic primality test --which is
+ href="http://munitions.vipul.net/software/libraries/mathematics/bnlib-1.1.tar.gz">bnlib</a>
+ (version 1.1) package. This test is consistently used, throughout this package,
+ in preference to the Miller-Rabin probabilistic primality test --which is 
 also implemented and included.</p>
-  
-<p>During the development, and tests, of the primality testing code, certain 
-large numbers where found to be possible primes, even though the invocation
-of the <font face="Courier New" size="2">isProbablePrime()</font> method,
-provided by the <font size="2" face="Courier New">java.math.BigInteger</font>
-class claimed otherwise; i.e. returned <font size="2" face="Courier New">false</font>. 
-I then ran those numbers through a primality proving application: <a
- href="http://www.znz.freesurf.fr/pages/primo.html">PRIMO</a>. Consistently,
-PRIMO proved those numbers to be indeed primes. I'm including the certificates
+    
+<p>During the development, and tests, of the primality testing code, certain
+ large numbers where found to be possible primes, even though the invocation 
+of the <font face="Courier New" size="2">isProbablePrime()</font> method, 
+provided by the <font size="2" face="Courier New">java.math.BigInteger</font> 
+class claimed otherwise; i.e. returned <font size="2" face="Courier New">false</font>.
+ I then ran those numbers through a primality proving application: <a
+ href="http://www.znz.freesurf.fr/pages/primo.html">PRIMO</a>. Consistently, 
+PRIMO proved those numbers to be indeed primes. I'm including the certificates 
 PRIMO emits for review and to help debug the code in <font size="2"
  face="Courier New">BigInteger</font> since I cannot myself look at its source.</p>
- 
-<div align="left">    
+   
+<div align="left">     
 <table border="1" cellpadding="10" cellspacing="0" width="90%">
-       <tbody>
-    <tr>
-          <td width="64%" bgcolor="#ccccff"><i><b>N (hexadecimal representation)</b></i></td>
-          <td width="36%" valign="top" bgcolor="#ccccff"><i><b>Primality 
-           Certificate</b></i></td>
-       </tr>
-       <tr>
-          <td width="64%"><font size="2" face="Courier New">888f a43a 2162
+        <tbody>
+     <tr>
+           <td width="64%" bgcolor="#ccccff"><i><b>N (hexadecimal representation)</b></i></td>
+           <td width="36%" valign="top" bgcolor="#ccccff"><i><b>Primality
+            Certificate</b></i></td>
+        </tr>
+        <tr>
+           <td width="64%"><font size="2" face="Courier New">888f a43a 2162 
 ca5c             cdcf 7692 bcf5 f7a5 8f74 ff17</font></td>
-          <td width="36%" valign="top"><a
+           <td width="36%" valign="top"><a
  href="primes/Primo-B26DD022D8AB3-S.out">Primo-B26DD022D8AB3</a></td>
-       </tr>
-       <tr>
-          <td width="64%"><font size="2" face="Courier New">9637 bddd 6b61
+        </tr>
+        <tr>
+           <td width="64%"><font size="2" face="Courier New">9637 bddd 6b61 
 7916             4abe 971f 5051 6e4c 21de d7fb</font></td>
-          <td width="36%" valign="top"><a
+           <td width="36%" valign="top"><a
  href="primes/Primo-B26DD022A073E-S.out">Primo-B26DD022A073E</a></td>
-       </tr>
-       <tr>
-          <td width="64%"><font face="Courier New" size="2">9f78 298f 3a49
+        </tr>
+        <tr>
+           <td width="64%"><font face="Courier New" size="2">9f78 298f 3a49 
 3f5a             12fa 74b7 8881 61d6 5f01 9943</font></td>
-          <td width="36%" valign="top"><a
+           <td width="36%" valign="top"><a
  href="primes/Primo-B26F102996AB4-S.out">Primo-B26F102996AB4</a></td>
-       </tr>
-       <tr>
-          <td width="64%"><font size="2" face="Courier New">a2e0 44da ff1c
+        </tr>
+        <tr>
+           <td width="64%"><font size="2" face="Courier New">a2e0 44da ff1c 
 f529             f536 66ab 1861 d9c8 4d20 f4af</font></td>
-          <td width="36%" valign="top"><a
+           <td width="36%" valign="top"><a
  href="primes/Primo-B26DD022BF582-S.out">Primo-B26DD022BF582</a></td>
-       </tr>
-       <tr>
-          <td width="64%"><font size="2" face="Courier New">a862 42e7 489d
+        </tr>
+        <tr>
+           <td width="64%"><font size="2" face="Courier New">a862 42e7 489d 
 79f3             153c 561b 5e53 00ab 736b 383f</font></td>
-          <td width="36%" valign="top"><a
+           <td width="36%" valign="top"><a
  href="primes/Primo-B26DD022F8215-S.out">Primo-B26DD022F8215</a></td>
-       </tr>
-       <tr>
-          <td width="64%"><font size="2" face="Courier New">de09 f190 2cf4
+        </tr>
+        <tr>
+           <td width="64%"><font size="2" face="Courier New">de09 f190 2cf4 
 84f2             32fe e5d2 7262 372d 1c60 72d7</font></td>
-          <td width="36%" valign="top"><a
+           <td width="36%" valign="top"><a
  href="primes/Primo-B26DC04CD92D1-S.out">Primo-B26DC04CD92D1</a></td>
-       </tr>
-       <tr>
-          <td width="64%"><font size="2" face="Courier New">e844 990a 2f38
+        </tr>
+        <tr>
+           <td width="64%"><font size="2" face="Courier New">e844 990a 2f38 
 a72e             6301 97ca 3846 d75d e56e 2e53</font></td>
-          <td width="36%" valign="top"><a
+           <td width="36%" valign="top"><a
  href="primes/Primo-B26DD0228AF78-S.out">Primo-B26DD0228AF78</a></td>
-       </tr>
-       <tr>
-          <td width="64%"><font size="2" face="Courier New">964f cbaa 6a75
-797d             c797 ef47 6939 9c9d da13 b382 4fe9 c38c 15c8 2e48 64ff 8cf6
-ef83             1924 90b0 c881 3f57 caa8 c4d9 7bb7 0ec5 56bf 7e86 9a59 4715
+        </tr>
+        <tr>
+           <td width="64%"><font size="2" face="Courier New">964f cbaa 6a75 
+797d             c797 ef47 6939 9c9d da13 b382 4fe9 c38c 15c8 2e48 64ff 8cf6 
+ef83             1924 90b0 c881 3f57 caa8 c4d9 7bb7 0ec5 56bf 7e86 9a59 4715 
 a1c6             507a d04f</font></td>
-          <td width="36%" valign="top"><a
+           <td width="36%" valign="top"><a
  href="primes/Primo-B26E900ADFBBA-S.out">Primo-B26E900ADFBBA</a></td>
-       </tr>
-       <tr>
-          <td width="64%"><font face="Courier New" size="2">b966 49d9 7158
-2f37             d3f8 3ee1 ddee dc10 63cb 74ed 6411 6bcc 62c1 52b5 9ec2 04f3
-3c22             bf11 2f05 3669 cdde ebc1 68d3 54f3 eb6d 3130 52b7 2b05 3ad2
+        </tr>
+        <tr>
+           <td width="64%"><font face="Courier New" size="2">b966 49d9 7158 
+2f37             d3f8 3ee1 ddee dc10 63cb 74ed 6411 6bcc 62c1 52b5 9ec2 04f3 
+3c22             bf11 2f05 3669 cdde ebc1 68d3 54f3 eb6d 3130 52b7 2b05 3ad2 
 a6ee             9ee8 9847</font></td>
-          <td width="36%" valign="top"><a
+           <td width="36%" valign="top"><a
  href="primes/Primo-B26F102965B00-S.out">Primo-B26F102965B00</a></td>
-       </tr>
-       <tr>
-          <td width="64%"><font size="2" face="Courier New">bf29 1985 1a94
-9a52             02d9 c734 f109 2140 2d19 1cf1 ef6f 84d0 5d44 8f3d 0566 99e9
-1bdf             0e72 cea7 3922 af25 3cb0 a6db de6f a1ce 2d89 425b 2161 c757
+        </tr>
+        <tr>
+           <td width="64%"><font size="2" face="Courier New">bf29 1985 1a94 
+9a52             02d9 c734 f109 2140 2d19 1cf1 ef6f 84d0 5d44 8f3d 0566 99e9 
+1bdf             0e72 cea7 3922 af25 3cb0 a6db de6f a1ce 2d89 425b 2161 c757 
 8ebe             d952 8c8b</font></td>
-          <td width="36%" valign="top"><a
+           <td width="36%" valign="top"><a
  href="primes/Primo-B26DD023184EC-S.out">Primo-B26DD023184EC</a></td>
-       </tr>
-       <tr>
-          <td width="64%"><font size="2" face="Courier New">c59b ca6d fd38
-0e00             1a4a 9e71 c98e f306 7b94 366f feda 6232 3e3a 6994 aad8 7a7d
-810f             175f bc6b 9cce 645d 2ee0 cce5 b772 5968 b371 ad7b a997 f8b2
+        </tr>
+        <tr>
+           <td width="64%"><font size="2" face="Courier New">c59b ca6d fd38 
+0e00             1a4a 9e71 c98e f306 7b94 366f feda 6232 3e3a 6994 aad8 7a7d 
+810f             175f bc6b 9cce 645d 2ee0 cce5 b772 5968 b371 ad7b a997 f8b2 
 b25f             332b e307</font></td>
-          <td width="36%" valign="top"><a
+           <td width="36%" valign="top"><a
  href="primes/Primo-B26DD02335DF2-S.out">Primo-B26DD02335DF2</a></td>
-       </tr>
-       <tr>
-          <td width="64%"><font size="2" face="Courier New">c95d 51d8 e607
-7fae             49b9 a08b 844d 25d0 2c91 b830 15ca ea6f 70d7 14a4 5f8f 144e
-addf             b15c c330 8cdc fdc0 42ad f922 8ac2 14bc bed1 d33c 4731 fc92
+        </tr>
+        <tr>
+           <td width="64%"><font size="2" face="Courier New">c95d 51d8 e607 
+7fae             49b9 a08b 844d 25d0 2c91 b830 15ca ea6f 70d7 14a4 5f8f 144e 
+addf             b15c c330 8cdc fdc0 42ad f922 8ac2 14bc bed1 d33c 4731 fc92 
 32c0             d775 099f</font></td>
-          <td width="36%" valign="top"><a
+           <td width="36%" valign="top"><a
  href="primes/Primo-B26DD02344176-S.out">Primo-B26DD02344176</a></td>
-       </tr>
-       <tr>
-          <td width="64%"><font face="Courier New" size="2">e9ed cdbe a826
-4c1a             e2ff 4c3b e0c9 3980 05bf b699 3c50 18f9 0b10 f72c 0da9 7e0c
-d161             269b 8693 c988 1d07 9997 5f96 fbb8 8e61 98f9 90c1 fff6 add4
+        </tr>
+        <tr>
+           <td width="64%"><font face="Courier New" size="2">e9ed cdbe a826 
+4c1a             e2ff 4c3b e0c9 3980 05bf b699 3c50 18f9 0b10 f72c 0da9 7e0c 
+d161             269b 8693 c988 1d07 9997 5f96 fbb8 8e61 98f9 90c1 fff6 add4 
 8817             e2ef d03f</font></td>
-          <td width="36%" valign="top"><a
+           <td width="36%" valign="top"><a
  href="primes/Primo-B26F1028E6A9F-S.out">Primo-B26F1028E6A9F</a></td>
-       </tr>
-       <tr>
-          <td width="64%"><font face="Courier New" size="2">f2a4 85e4 2143
-bc7a             59a8 4cf3 4ad6 a21c c297 05b4 418a 1a9b c1ef 29d5 133b e476
-4f88             c79a 87d0 8a4f 2234 8e84 3fa3 ee33 636f 97e7 5265 da69 dad6
+        </tr>
+        <tr>
+           <td width="64%"><font face="Courier New" size="2">f2a4 85e4 2143 
+bc7a             59a8 4cf3 4ad6 a21c c297 05b4 418a 1a9b c1ef 29d5 133b e476 
+4f88             c79a 87d0 8a4f 2234 8e84 3fa3 ee33 636f 97e7 5265 da69 dad6 
 9563             74ef 534b</font></td>
-          <td width="36%" valign="top"><a
+           <td width="36%" valign="top"><a
  href="primes/Primo-B26F10293C5EE-S.out">Primo-B26F10293C5EE</a></td>
-       </tr>
-       <tr>
-          <td width="64%"><font size="2" face="Courier New">f424 25be 8d04
-1b16             5929 d2b5 eeab 27f1 3e03 15e0 542c dc33 9a95 eba6 abcd e3ab
-c165             6b6f f873 bde6 d7de 4856 2c7c 6a18 aba7 e222 a853 69a6 72de
+        </tr>
+        <tr>
+           <td width="64%"><font size="2" face="Courier New">f424 25be 8d04 
+1b16             5929 d2b5 eeab 27f1 3e03 15e0 542c dc33 9a95 eba6 abcd e3ab 
+c165             6b6f f873 bde6 d7de 4856 2c7c 6a18 aba7 e222 a853 69a6 72de 
 52ea             ea71 34f3</font></td>
-          <td width="36%" valign="top"><a
+           <td width="36%" valign="top"><a
  href="primes/Primo-B26E900B6F8B1-S.out">Primo-B26E900B6F8B1</a></td>
-       </tr>
-       <tr>
-          <td width="64%"><font size="2" face="Courier New">f58e 966a 4a81
-d899             8518 dfc5 5407 7723 8d57 f1d1 5717 d69d 0f01 526b e88d db79
-b9dc             4bd2 23f4 6585 cbe0 25b4 87a3 1416 3f75 5c39 27f8 5592 8819
+        </tr>
+        <tr>
+           <td width="64%"><font size="2" face="Courier New">f58e 966a 4a81 
+d899             8518 dfc5 5407 7723 8d57 f1d1 5717 d69d 0f01 526b e88d db79 
+b9dc             4bd2 23f4 6585 cbe0 25b4 87a3 1416 3f75 5c39 27f8 5592 8819 
 d03c             df76 5643</font></td>
-          <td width="36%" valign="top"><a
+           <td width="36%" valign="top"><a
  href="primes/Primo-B26DD023281FB-S.out">Primo-B26DD023281FB</a></td>
-       </tr>
-       <tr>
-          <td width="64%"><font size="2" face="Courier New">f986 370b 2bb2
-4bdd             feeb 53ff 1678 59bf 7b00 aed6 b3d6 52fa c3f0 6131 25f3 101c
-625e             8003 1aef e6c8 7aef d3d6 3f92 3e6c 4d37 54dd a810 587d 0d71
+        </tr>
+        <tr>
+           <td width="64%"><font size="2" face="Courier New">f986 370b 2bb2 
+4bdd             feeb 53ff 1678 59bf 7b00 aed6 b3d6 52fa c3f0 6131 25f3 101c 
+625e             8003 1aef e6c8 7aef d3d6 3f92 3e6c 4d37 54dd a810 587d 0d71 
 fe5d             18fb baa7</font></td>
-          <td width="36%" valign="top"><a
+           <td width="36%" valign="top"><a
  href="primes/Primo-B26DD02306259-S.out">Primo-B26DD02306259</a></td>
-       </tr>
-       <tr>
-          <td width="64%"><font size="2" face="Courier New">f995 c828 4492
-6e6c             423e c13c 8fa2 63d9 19b0 4811 eddf 414b 5fe8 354d 4d2a 4ed0
-2964             7ef0 57e0 93e6 64ca 0fef 0d91 5f3b 6815 ee8f 77d7 0ef4 dab9
+        </tr>
+        <tr>
+           <td width="64%"><font size="2" face="Courier New">f995 c828 4492 
+6e6c             423e c13c 8fa2 63d9 19b0 4811 eddf 414b 5fe8 354d 4d2a 4ed0 
+2964             7ef0 57e0 93e6 64ca 0fef 0d91 5f3b 6815 ee8f 77d7 0ef4 dab9 
 ddc0             b795 ff0b</font></td>
-          <td width="36%" valign="top"><a
+           <td width="36%" valign="top"><a
  href="primes/Primo-B26DD02359EFD-S.out">Primo-B26DD02359EFD</a></td>
-       </tr>
-    
-  </tbody>
+        </tr>
+        
+  </tbody> 
 </table>
- </div>
-  
+  </div>
+    
 <h3><a name="configuration">Configuration parameters</a></h3>
- 
-<p>There are two parameters that would impact the behaviour of the binaries.
+   
+<p>There are two parameters that would impact the behaviour of the binaries. 
  These are:</p>
- 
+   
 <ul>
-    <li><font face="Courier New" size="2"><b>DO_MILLER_RABIN</b></font>:
+     <li><font face="Courier New" size="2"><b>DO_MILLER_RABIN</b></font>: 
 in <font face="Courier New" size="2"> gnu.crypto.util.Prime</font>, and</li>
-    <li><font face="Courier New" size="2"><b>REPRODUCIBLE</b></font>: in
+     <li><font face="Courier New" size="2"><b>REPRODUCIBLE</b></font>: in 
     <font face="Courier New" size="2"> gnu.crypto.util.PRNG</font>.</li>
- 
+   
 </ul>
- 
+   
 <h4> DO_MILLER_RABIN</h4>
- 
-<p>In various places throughout this library, large positive prime numbers
-are generated and used; e.g. keypair generation, digital signature scheme
-signing process.  When needing to test the probable primality of such numbers,
+   
+<p>In various places throughout this library, large positive prime numbers 
+are generated and used; e.g. keypair generation, digital signature scheme 
+signing process.  When needing to test the probable primality of such numbers, 
 the code in this library invokes the method <font face="Courier New"
- size="2"> Prime.isProbablePrime(x)</font>, which is then translated into
-<font face="Courier New" size="2"> Prime.isProbablePrime(x, DO_MILLER_RABIN)</font>.
- By default, this constant --<font face="Courier New" size="2">DO_MILLER_RABIN</font>--
-is set to <font face="Courier New" size="2">false</font>, implying that if
-the designated number passes Euler Criterion (a Java port of Colin Plumb
-implementation in C, included in his bnlib version 1.1) the number is then
-declared a probable prime and no further tests are carried out.  This is
-in agreement to Colin's comment in the code that <i> "...everything else
-is just gravy..."</i>  However, if you wish to change this behaviour to conduct
-a Miller-Rabin strong probabilistic primality test as described in the literature,
-then you should change the value of this constant --<font
- face="Courier New" size="2">DO_MILLER_RABIN</font>-- to <font
- face="Courier New" size="2">true</font> <b>and</b> regenerate the binaries
-(jars) --if using ANT, by invoking:</p>
- 
+ size="2"> Prime.isProbablePrime(x)</font>, which is then translated into 
+<font face="Courier New" size="2"> Prime.isProbablePrime(x, DO_MILLER_RABIN)</font>. 
+ By default, this constant --<font face="Courier New" size="2">DO_MILLER_RABIN</font>-- 
+is set to <font face="Courier New" size="2">false</font>, implying that if 
+the designated number passes Euler Criterion (a Java port of Colin Plumb implementation
+in C, included in his bnlib version 1.1) the number is then declared a probable
+prime and no further tests are carried out.  This is in agreement to Colin's
+comment in the code that <i> "...everything else is just gravy..."</i>  However,
+if you wish to change this behaviour to conduct a Miller-Rabin strong probabilistic
+primality test as described in the literature, then you should change the
+value of this constant --<font face="Courier New" size="2">DO_MILLER_RABIN</font>--
+to <font face="Courier New" size="2">true</font> <b>and</b> regenerate the
+binaries (jars) --if using ANT, by invoking:</p>
+   
 <p>&nbsp;&nbsp;&nbsp; ant jar</p>
- 
+   
 <p>Doing so, causes an (additional) invocation to the <font
- face="Courier New" size="2"> Prime.passMillerRabin(x)</font> method, if
-the designated number passes all other tests.  The final result becomes then
-that of the <font face="Courier New" size="2"> Prime.passMillerRabin()</font>
-method.</p>
- 
+ face="Courier New" size="2"> Prime.passMillerRabin(x)</font> method, if the
+designated number passes all other tests.  The final result becomes then that
+of the <font face="Courier New" size="2"> Prime.passMillerRabin()</font> method.</p>
+   
 <h4>REPRODUCIBLE</h4>
- 
-<p>For the sake of convenience, all invocations in this library to generate
-cryptographically strong pseudo-random data (bytes) are done through a classloader
-Singleton, inside the <font face="Courier New" size="2"> gnu.crypto.util.PRNG</font>
-class.  This Singleton generator is an instance of the pseudo-random number
+   
+<p>For the sake of convenience, all invocations in this library to generate 
+cryptographically strong pseudo-random data (bytes) are done through a classloader 
+Singleton, inside the <font face="Courier New" size="2"> gnu.crypto.util.PRNG</font> 
+class.  This Singleton generator is an instance of the pseudo-random number 
 generator based on a generic hash function --the class <font
- face="Courier New" size="2"> gnu.crypto.prng.MDGenerator</font>-- using,
-in this case, the Secure Hash Standard (SHS, also known as the Secure Hash
-Algorithm SHA with 160-bit output block size).  This is appropriate for two
+ face="Courier New" size="2"> gnu.crypto.prng.MDGenerator</font>-- using, 
+in this case, the Secure Hash Standard (SHS, also known as the Secure Hash 
+Algorithm SHA with 160-bit output block size).  This is appropriate for two 
 reasons:</p>
- 
+   
 <ol>
-    <li>this method of generating random data is the one prescribed in the
+     <li>this method of generating random data is the one prescribed in the 
 Digital		Signature Standard (DSS),</li>
-    <li>other digital signature schemes, implemented so far in this library,
+     <li>other digital signature schemes, implemented so far in this library, 
 do		not mandate any prescribed way for generating random data.</li>
- 
+   
 </ol>
- 
-<p>However, this type of generator works by hashing the output of a previous
+   
+<p>However, this type of generator works by hashing the output of a previous 
 digest operation; i.e. the input to the hash function at time <font
  face="Courier New" size="2"> N</font> is its output at time <font
- face="Courier New" size="2">N-1</font>, with the starting input being a
-0-long octet string.  The sequence of generated bytes from such a generator
-is then <b>reproducible</b>.  This is useful for test and debugging purposes
-only and obviously should not be the case in any security-conscious application.</p>
- 
+ face="Courier New" size="2">N-1</font>, with the starting input being a 0-long
+octet string.  The sequence of generated bytes from such a generator is then
+<b>reproducible</b>.  This is useful for test and debugging purposes only
+and obviously should not be the case in any security-conscious application.</p>
+   
 <p>To change this behaviour, change the value of the constant <font
  face="Courier New" size="2"> REPRODUCIBLE</font> in the class <font
  face="Courier New" size="2"> gnu.crypto.util.PRNG</font> to <font
- face="Courier New" size="2">false</font> <b>and</b> regenerate the binaries
+ face="Courier New" size="2">false</font> <b>and</b> regenerate the binaries 
 (jars) --if using ANT, by invoking:</p>
- 
+   
 <p><font face="Courier New" size="2">&nbsp;&nbsp;&nbsp; ant jar</font></p>
- 
-<p>Doing so, causes a <font face="Courier New" size="2"> SEED</font> value,
-based on the system current time in milliseconds, to be injected into the
+   
+<p>Doing so, causes a <font face="Courier New" size="2"> SEED</font> value, 
+based on the system current time in milliseconds, to be injected into the 
 initial input.</p>
-  
+    
 <h3><a name="lists">Mailing lists</a></h3>
- 
+   
 <p>The main discussion list is <a
- href="mailto:classpathx-crypto@gnu.org">&lt;classpathx-crypto@gnu.org&gt;</a>, 
-and is used to discuss all aspects of GNU Crypto project.</p>
-  
-<p>Announcements about GNU Crypto and other classpathx software are made
-on the low-volume <a href="mailto:classpathx-announce@gnu.org">&lt;classpathx-announce@gnu.org&gt;</a> 
-mailing list.</p>
-  
+ href="mailto:classpathx-crypto@gnu.org">&lt;classpathx-crypto@gnu.org&gt;</a>,
+ and is used to discuss all aspects of GNU Crypto project.</p>
+    
+<p>Announcements about GNU Crypto and other classpathx software are made on
+the low-volume <a href="mailto:classpathx-announce@gnu.org">&lt;classpathx-announce@gnu.org&gt;</a>
+ mailing list.</p>
+    
 <p> For subscription information, see the mailing list info from the <a
- href="http://savannah.gnu.org/mail/?group_id=139">ClasspathX project page</a>. 
-</p>
-  
+ href="http://savannah.gnu.org/mail/?group_id=139">ClasspathX project page</a>.
+ </p>
+    
 <h3><a name="downloading">Downloads</a></h3>
-  
+    
 <p>You can download the latest software from <a
- href="ftp://ftp.gnu.org/pub/gnu/classpathx"> ftp://ftp.gnu.org/pub/gnu/classpathx</a>.
+ href="ftp://ftp.gnu.org/pub/gnu/classpathx"> ftp://ftp.gnu.org/pub/gnu/classpathx</a>. 
 You'll probably want to use one of the <a
- href="http://www.gnu.org/order/ftp.html">FTP mirror sites</a>, although
-the mirrors may not be current.</p>
-  
+ href="http://www.gnu.org/order/ftp.html">FTP mirror sites</a>, although the
+mirrors may not be current.</p>
+    
 <p>The current distribution is available as:</p>
- 
+   
 <ul>
- 	<li>A gzipped tar: <a href="release/gnu-crypto-1.0.0.tar.gz">gnu-crypto-1.0.0.tar.gz</a></li>
- 	<li>A zipped archive: <a href="release/gnu-crypto-1.0.0.zip">gnu-crypto-1.0.0.zip</a></li>
- 
+  	<li>A gzipped tar: <a href="release/gnu-crypto-1.0.0.tar.gz">gnu-crypto-1.0.0.tar.gz</a></li>
+  	<li>A zipped archive: <a href="release/gnu-crypto-1.0.0.zip">gnu-crypto-1.0.0.zip</a></li>
+   
 </ul>
-  
+    
 <p>Up-to-date source code for this project is available in the <a
- href="http://savannah.gnu.org/cgi-bin/viewcvs/classpathx/crypto">crypto</a> 
-module <a href="http://savannah.gnu.org/cvs/?group_id=139">through CVS</a>.</p>
-  
+ href="http://savannah.gnu.org/cgi-bin/viewcvs/classpathx/crypto">crypto</a>
+ module <a href="http://savannah.gnu.org/cvs/?group_id=139">through CVS</a>.</p>
+    
 <h3><a name="bug">Report a bug</a></h3>
- 
-<p>If you think you have found a bug in GNU Crypto, then you should send
-as complete a report as possible to <a
- href="mailto:classpathx-crypto@gnu.org">&lt;classpathx-crypto@gnu.org&gt;</a>. 
-</p>
-  
+   
+<p>If you think you have found a bug in GNU Crypto, then you should send as
+complete a report as possible to <a
+ href="mailto:classpathx-crypto@gnu.org">&lt;classpathx-crypto@gnu.org&gt;</a>.
+ </p>
+    
 <h3><a name="coding">Coding styles</a></h3>
- 
-<p>The source files in this project follow a strict coding style, for both 
-<a href="guide/JavaStyle.html">Java</a> and <a
- href="guide/AntStyle.html">ANT</a> (build.xml) files. Contributors are urged
+   
+<p>The source files in this project follow a strict coding style, for both
+ <a href="guide/JavaStyle.html">Java</a> and <a
+ href="guide/AntStyle.html">ANT</a> (build.xml) files. Contributors are urged 
 to abide by these guidelines.</p>
-  
-<hr> 
+    
+<hr>  
 <p>Return to <a href="/home.html">GNU's home page</a>.</p>
-  
+    
 <p>Please send FSF &amp; GNU inquiries &amp; questions to <a
  href="mailto:gnu@gnu.org"><em>gnu@gnu.org</em></a>. There are also <a
  href="/home.html#ContactInfo">other ways to contact</a> the FSF.</p>
-  
+    
 <p> Please send comments on these web pages to <a
- href="mailto:webmasters@gnu.org"><em>webmasters@gnu.org</em></a>, send other
+ href="mailto:webmasters@gnu.org"><em>webmasters@gnu.org</em></a>, send other 
 questions to <a href="mailto:gnu@gnu.org"><em>gnu@gnu.org</em></a>.</p>
-  
-<p>Copyright (C) 2001 Free Software Foundation, Inc., 59 Temple Place - Suite
+    
+<p>Copyright (C) 2001 Free Software Foundation, Inc., 59 Temple Place - Suite 
 330, Boston, MA  02111,  USA.</p>
-  
-<p>Verbatim copying and distribution of this entire article is permitted
-in any medium, provided this notice is preserved.</p>
-  
-<hr> 
-<p>Last Modified: <i>$Date: 2002/06/08 07:50:57 $</i></p>
-  <br>
+    
+<p>Verbatim copying and distribution of this entire article is permitted in
+any medium, provided this notice is preserved.</p>
+    
+<hr>  
+<p>Last Modified: <i>$Date: 2002/06/12 10:37:26 $</i></p>
+   <br>
+ <br>
 </body>
 </html>
