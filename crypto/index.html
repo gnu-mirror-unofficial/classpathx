@@ -78,7 +78,7 @@ in terms of cryptographic algorithms:</p>
 		</TR>
 		<TR>
 			<TD WIDTH="36%" VALIGN="top">
-				<A HREF="refs/Anubis-tweak.pdf">Anubis</A>
+				<A HREF="http://planeta.terra.com.br/informatica/paulobarreto/AnubisPage.html">Anubis</A>
 			</TD>
 			<TD WIDTH="64%">
 				<P>A 128-bit block cipher that accepts a variable
@@ -91,7 +91,8 @@ in terms of cryptographic algorithms:</p>
 		</TR>
 		<TR>
 			<TD WIDTH="36%" VALIGN="top">
-				<A HREF="refs/Khazad-tweak.pdf">Khazad</A></TD>
+				<A HREF="http://planeta.terra.com.br/informatica/paulobarreto/KhazadPage.html">Khazad</A>
+			</TD>
 			<TD WIDTH="64%">
 				<P>A 64-bit (legacy) block cipher that accepts a
 				128-bit key. The cipher is a uniform substitution-permutation
@@ -103,7 +104,7 @@ in terms of cryptographic algorithms:</p>
 		</TR>
 		<TR>
 			<TD WIDTH="36%" VALIGN="top">
-				<A HREF="refs/rijndael%20doc%20V2.pdf">Rijndael</A>
+				<A HREF="http://www.esat.kuleuven.ac.be/~rijmen/rijndael/">Rijndael</A>
 			</TD>
 			<TD WIDTH="64%">
 				<P>Rijndael is an iterated block cipher with a variable
@@ -114,7 +115,9 @@ in terms of cryptographic algorithms:</p>
 			</TD>
 		</TR>
 		<TR>
-			<TD WIDTH="36%" VALIGN="top"><A HREF="refs/VR-9700.pdf">Square</A></TD>
+			<TD WIDTH="36%" VALIGN="top">
+				<A HREF="http://www.esat.kuleuven.ac.be/~rijmen/square/">Square</A>
+			</TD>
 			<TD WIDTH="64%">
 				<P>A 128-bit block, 128-bit key cipher. The original
 				design of Square concentrates on the resistance against differential
@@ -122,27 +125,35 @@ in terms of cryptographic algorithms:</p>
 			</TD>
 		</TR>
 		<TR>
-			<TD WIDTH="36%" VALIGN="top"><A HREF="refs/twofish.pdf">Twofish</A></TD>
+			<TD WIDTH="36%" VALIGN="top">
+				<A HREF="http://www.counterpane.com/twofish-paper.html">Twofish</A>
+			</TD>
 			<TD WIDTH="64%">A 128-bit block cipher that accepts a variable-length
 				key up to 256 bits.</TD>
 		</TR>
 		<TR>
 			<TD WIDTH="100%" COLSPAN="2" BGCOLOR="#CCCCFF" VALIGN="top"><I><B>Mode
-				of operation</B></I></TD>
-		</TR>
-		<TR>
-			<TD WIDTH="36%" VALIGN="top"><A HREF="refs/Modes01.pdf">Counter mode (CTR)</A></TD>
-			<TD WIDTH="64%">
-				<P>The Counter (CTR) mode is a confidentiality mode
-				that requires a sequence of blocks, called counters, with the
-				property that each block in the sequence is different than every
-				other block. This condition is not restricted to a single message:
-				across all of the messages that are encrypted under the given key,
-				all of the counters must be distinct.</P>
+				of operation</B></I>
 			</TD>
 		</TR>
 		<TR>
-			<TD WIDTH="36%" VALIGN="top"><A HREF="refs/Modes01.pdf">Electronic
+			<TD WIDTH="36%" VALIGN="top">
+				<A HREF="http://csrc.nist.gov/encryption/modes/Recommendation/Modes01.pdf">Counter
+					mode (CTR)
+				</A>
+			</TD>
+			<TD WIDTH="64%">
+				<P>The Counter (CTR) mode is a confidentiality mode that requires a
+				sequence of blocks, called counters, with the property that each
+				block in the sequence is different than every other block. This
+				condition is not restricted to a single message: across all of the
+				messages that are encrypted under the given key, all of the counters
+				must be distinct.</P>
+			</TD>
+		</TR>
+		<TR>
+			<TD WIDTH="36%" VALIGN="top">
+				<A HREF="http://csrc.nist.gov/encryption/modes/Recommendation/Modes01.pdf">Electronic
 				Codebook (ECB)</A></TD>
 			<TD WIDTH="64%">
 				<P>The Electronic Codebook (ECB) mode is a
@@ -165,7 +176,7 @@ in terms of cryptographic algorithms:</p>
 		</TR>
 		<TR>
 			<TD WIDTH="36%" VALIGN="top">
-				<A HREF="refs/draft-mcgrew-saag-icm-00.txt">Integer Counter Mode
+				<A HREF="http://www.ietf.org/internet-drafts/draft-mcgrew-saag-icm-00.txt">Integer Counter Mode
 				(ICM)</A>
 			</TD>
 			<TD WIDTH="64%">Counter Mode is a way to define a pseudorandom
@@ -183,7 +194,8 @@ in terms of cryptographic algorithms:</p>
 				scheme</B></I></TD>
 		</TR>
 		<TR>
-			<TD WIDTH="36%" VALIGN="top"><A HREF="refs/pkcs-7.txt">PKCS-7</A></TD>
+			<TD WIDTH="36%" VALIGN="top">
+				<A HREF="http://www.rsasecurity.com/rsalabs/pkcs/pkcs-7/">PKCS-7</A></TD>
 			<TD WIDTH="64%">
 				<P>Let <I>B </I>be the number of octets in the data
 				blocks (or segments) and let <I>L </I>be the number of octets in the
@@ -193,8 +205,9 @@ in terms of cryptographic algorithms:</p>
 			</TD>
 		</TR>
 		<TR>
-			<TD WIDTH="36%" VALIGN="top"><A HREF="refs/Modes01.pdf">Trailing Bit
-				Complement (TBC)</A></TD>
+			<TD WIDTH="36%" VALIGN="top">
+				<A HREF="http://csrc.nist.gov/encryption/modes/Recommendation/Modes01.pdf">Trailing
+					Bit Complement (TBC)</A></TD>
 			<TD WIDTH="64%">
 				<P>With TBC, the data string is padded at the trailing
 				end with the complement of the trailing bit of the unpadded message:
@@ -205,11 +218,14 @@ in terms of cryptographic algorithms:</p>
 			</TD>
 		</TR>
 		<TR>
-			<TD WIDTH="100%" COLSPAN="2" BGCOLOR="#CCCCFF" VALIGN="top"><I><B>Message
-				digest (hash)</B></I></TD>
+			<TD WIDTH="100%" COLSPAN="2" BGCOLOR="#CCCCFF" VALIGN="top">
+				<I><B>Message digest (hash)</B></I>
+			</TD>
 		</TR>
 		<TR>
-			<TD WIDTH="36%" VALIGN="top"><A HREF="refs/ripemd160.pdf">RIPEMD-128</A></TD>
+			<TD WIDTH="36%" VALIGN="top">
+				<A HREF="http://www.esat.kuleuven.ac.be/~bosselae/ripemd160.html">RIPEMD-128</A>
+			</TD>
 			<TD WIDTH="64%">
 				<P>The main difference with RIPEMD-160 is that we keep
 				a hash result and chaining variable of 128 bits (four 32 bit words);
@@ -217,7 +233,9 @@ in terms of cryptographic algorithms:</p>
 			</TD>
 		</TR>
 		<TR>
-			<TD WIDTH="36%" VALIGN="top"><A HREF="refs/ripemd160.pdf">RIPEMD-160</A></TD>
+			<TD WIDTH="36%" VALIGN="top">
+				<A HREF="http://www.esat.kuleuven.ac.be/~bosselae/ripemd160.html">RIPEMD-160</A>
+			</TD>
 			<TD WIDTH="64%">
 				<P>The bit-size of the hash result and chaining
 				variable are increased to 160 bits (five 32-bit words), the number
@@ -227,7 +245,9 @@ in terms of cryptographic algorithms:</p>
 			</TD>
 		</TR>
 		<TR>
-			<TD WIDTH="36%" VALIGN="top"><A HREF="refs/Whirlpool-tweak.pdf">Whirlpool</A></TD>
+			<TD WIDTH="36%" VALIGN="top">
+				<A HREF="http://planeta.terra.com.br/informatica/paulobarreto/WhirlpoolPage.html">Whirlpool</A>
+			</TD>
 			<TD WIDTH="64%">
 				<P>A new 512-bit hashing function operating on messages
 				less than 2<SUP>256</SUP> bits in length. The function structure is
@@ -241,7 +261,7 @@ in terms of cryptographic algorithms:</p>
 		</TR>
 		<TR>
 			<TD WIDTH="36%" VALIGN="top"><A
-				HREF="refs/draft-mcgrew-saag-icm-00.txt">Integer Counter Mode (ICM)
+				HREF="http://www.ietf.org/internet-drafts/draft-mcgrew-saag-icm-00.txt">Integer Counter Mode (ICM)
 				key-stream generator</A></TD>
 			<TD WIDTH="64%">Counter Mode is a way to define a pseudorandom key-stream generator  using a block cipher.  The
 				key-stream can be used for  additive encryption, key derivation, or any other application  requiring pseudorandom data.</TD>
@@ -376,7 +396,7 @@ send other questions to <a href="mailto:gnu@gnu.org"><em>gnu@gnu.org</em></a>.</
 medium, provided this notice is preserved.</p>
 
 <hr/>
-<p>Last Modified: <i>$Date: 2001/12/04 13:09:16 $</i></p>
+<p>Last Modified: <i>$Date: 2001/12/04 13:27:11 $</i></p>
 
 </body>
 </html>
