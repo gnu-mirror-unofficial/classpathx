@@ -132,8 +132,8 @@ in terms of cryptographic algorithms:</p>
 				key up to 256 bits.</TD>
 		</TR>
 		<TR>
-			<TD WIDTH="100%" COLSPAN="2" BGCOLOR="#CCCCFF" VALIGN="top"><I><B>Mode
-				of operation</B></I>
+			<TD WIDTH="100%" COLSPAN="2" BGCOLOR="#CCCCFF" VALIGN="top">
+				<I><B>Mode of operation</B></I>
 			</TD>
 		</TR>
 		<TR>
@@ -154,7 +154,8 @@ in terms of cryptographic algorithms:</p>
 		<TR>
 			<TD WIDTH="36%" VALIGN="top">
 				<A HREF="http://csrc.nist.gov/encryption/modes/Recommendation/Modes01.pdf">Electronic
-				Codebook (ECB)</A></TD>
+				Codebook (ECB)</A>
+			</TD>
 			<TD WIDTH="64%">
 				<P>The Electronic Codebook (ECB) mode is a
 				confidentiality mode that is defined as follows:</P>
@@ -190,8 +191,9 @@ in terms of cryptographic algorithms:</p>
 			</TD>
 		</TR>
 		<TR>
-			<TD WIDTH="100%" COLSPAN="2" BGCOLOR="#CCCCFF" VALIGN="top"><I><B>Padding
-				scheme</B></I></TD>
+			<TD WIDTH="100%" COLSPAN="2" BGCOLOR="#CCCCFF" VALIGN="top">
+				<I><B>Padding scheme</B></I>
+			</TD>
 		</TR>
 		<TR>
 			<TD WIDTH="36%" VALIGN="top">
@@ -224,6 +226,17 @@ in terms of cryptographic algorithms:</p>
 		</TR>
 		<TR>
 			<TD WIDTH="36%" VALIGN="top">
+				<A HREF="http://planeta.terra.com.br/informatica/paulobarreto/WhirlpoolPage.html">Whirlpool</A>
+			</TD>
+			<TD WIDTH="64%">
+				<P>A new 512-bit hashing function operating on messages
+				less than 2<SUP>256</SUP> bits in length. The function structure is
+				designed according to the Wide Trail strategy and permits a wide
+				variety of implementation tradeoffs.</P>
+			</TD>
+		</TR>
+		<TR>
+			<TD WIDTH="36%" VALIGN="top">
 				<A HREF="http://www.esat.kuleuven.ac.be/~bosselae/ripemd160.html">RIPEMD-128</A>
 			</TD>
 			<TD WIDTH="64%">
@@ -246,13 +259,25 @@ in terms of cryptographic algorithms:</p>
 		</TR>
 		<TR>
 			<TD WIDTH="36%" VALIGN="top">
-				<A HREF="http://planeta.terra.com.br/informatica/paulobarreto/WhirlpoolPage.html">Whirlpool</A>
+				<A HREF="http://www.itl.nist.gov/fipspubs/fip180-1.htm">SHA-1</A>
 			</TD>
 			<TD WIDTH="64%">
-				<P>A new 512-bit hashing function operating on messages
-				less than 2<SUP>256</SUP> bits in length. The function structure is
-				designed according to the Wide Trail strategy and permits a wide
-				variety of implementation tradeoffs.</P>
+				<P>The Secure Hash Algorithm (SHA-1) is required for use with the
+				Digital Signature Algorithm (DSA) as specified in the Digital
+				Signature Standard (DSS) and whenever a secure hash algorithm is
+				required for US federal applications. For a message of length less
+				than 2<SUP>64</SUP> bits, the SHA-1 produces a 160-bit condensed
+				representation of the message called a message digest.</P>
+			</TD>
+		</TR>
+		<TR>
+			<TD WIDTH="36%" VALIGN="top">
+				<A HREF="http://www.ietf.org/rfc/rfc1321.txt">MD5</A>
+			</TD>
+			<TD WIDTH="64%">
+				<P>The MD5 message-digest algorithm takes as input a message of
+				arbitrary length and produces as output a 128-bit <i>fingerprint</i>
+				or <i>message digest</i> of the input.</P>
 			</TD>
 		</TR>
 		<TR>
@@ -263,8 +288,21 @@ in terms of cryptographic algorithms:</p>
 			<TD WIDTH="36%" VALIGN="top"><A
 				HREF="http://www.ietf.org/internet-drafts/draft-mcgrew-saag-icm-00.txt">Integer Counter Mode (ICM)
 				key-stream generator</A></TD>
-			<TD WIDTH="64%">Counter Mode is a way to define a pseudorandom key-stream generator  using a block cipher.  The
-				key-stream can be used for  additive encryption, key derivation, or any other application  requiring pseudorandom data.</TD>
+			<TD WIDTH="64%">
+				<P>Counter Mode is a way to define a pseudorandom key-stream
+				generator using a block cipher. The key-stream can be used for
+				additive encryption, key derivation, or any other application
+				requiring pseudorandom data.</P>
+			</TD>
+		</TR>
+		<TR>
+			<TD WIDTH="36%" VALIGN="top">
+				Generic hash-based generator</TD>
+			<TD WIDTH="64%">
+				<P>A PRNG configurable with a hash function and a seed. The
+				generator continuously updates its context with the result of each
+				request for random bytes.</P>
+			</TD>
 		</TR>
 	</TABLE>
 
@@ -289,7 +327,9 @@ list:</p>
 	<LI>The Block Cipher <A HREF="http://www.esat.kuleuven.ac.be/~rijmen/square/">Square</A>,</LI>
 	<LI>The <A HREF="http://planeta.terra.com.br/informatica/paulobarreto/KhazadPage.html">KHAZAD</A> Legacy-Level Block Cipher,</LI>
 	<LI>The <A HREF="http://planeta.terra.com.br/informatica/paulobarreto/WhirlpoolPage.html">WHIRLPOOL</A> Hashing Function,</LI>
-	<LI><A HREF="http://www.counterpane.com/twofish-paper.html">Twofish</A>: A 128-bit Block Cipher.</LI>
+	<LI><A HREF="http://www.counterpane.com/twofish-paper.html">Twofish</A>: A 128-bit Block Cipher,</LI>
+	<LI><A HREF="http://www.itl.nist.gov/fipspubs/fip180-1.htm">SECURE HASH STANDARD</A>,</LI>
+	<LI>The <A HREF="http://www.ietf.org/rfc/rfc1321.txt">MD5</A> Message-Digest Algorithm.</LI>
 </UL>
 
 <P>Test vectors, when not included in the reference documents, are made available
@@ -396,7 +436,7 @@ send other questions to <a href="mailto:gnu@gnu.org"><em>gnu@gnu.org</em></a>.</
 medium, provided this notice is preserved.</p>
 
 <hr/>
-<p>Last Modified: <i>$Date: 2001/12/04 23:18:29 $</i></p>
+<p>Last Modified: <i>$Date: 2001/12/08 22:52:43 $</i></p>
 
 </body>
 </html>
