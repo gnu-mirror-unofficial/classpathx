@@ -2,12 +2,13 @@
 
 <head>
 <title>GNU JAXP - GNU Project - Free Software Foundation (FSF)</title>
-
 </head>
 
 <body bgcolor="#FFFFFF" text="#000000" link="#1F00FF" alink="#FF0000" vlink="#9900DD">
 
-<img align="right" src="../classpathx-logo-small.jpg" alt=" [ gnu -classpath ext:ens:ions ] " width="252" height="24">
+<img align="right" src="../classpathx-logo-small.jpg"
+	  alt=" [ gnu -classpath ext:ens:ions ] " width="252" height="24"/>
+
 <h2>The GNU Crypto project</h2>
 
 <center>
@@ -15,24 +16,26 @@
 | <a href="#helpwanted" name="helpwanted">Help wanted</a>
 | <a href="#status" name="status">Project status</a>
 | <a href="#documentation" name="documentation">Documentation</a>
-<br>
+<br/>
   <a href="#lists" name="lists">Mailing lists</a>
-| <A HREF="#downloading" NAME="downloading">Downloads</A> | <a href="#bug" name="bug">Report a
-  bug</a>
+| <A HREF="#downloading" NAME="downloading">Downloads</A>
+| <a href="#bug" name="bug">Report a bug</a>
 </center>
 
 <h3><a name="introduction">Introduction</a></h3>
-<p>GNU Crypto, part of the GNU project, released under the aegis of GNU, and hosted under the <A HREF="../">GNU Classpath Extensions</A>
-project (at
-<a href="http://savannah.gnu.org/projects/classpathx">savannah.gnu.org</a>) aims at providing <a href="/philosophy/free-sw.html">free</a>,
-versatile, high-quality, and provably correct implementations of cryptographic primitives and tools in the Java
-programming language for use by programmers and end-users.
+<p>GNU Crypto, part of the GNU project, released under the aegis of GNU, and
+hosted under the <A HREF="../">GNU Classpath Extensions</A> project (at
+<a href="http://savannah.gnu.org/projects/classpathx">savannah.gnu.org</a>)
+aims at providing <a href="/philosophy/free-sw.html">free</a>, versatile,
+high-quality, and provably correct implementations of cryptographic primitives
+and tools in the Java programming language for use by programmers and
+end-users.</p>
 
 <p>GNU Crypto is licensed under the terms of the
-<a href="/copyleft/gpl.html">GNU General Public License</a>,
-with the "library exception" which permits its use as a library
-in conjunction with non-Free software:
-</p>
+<a href="/copyleft/gpl.html">GNU General Public License</a>, with the "library
+exception" which permits its use as a library in conjunction with non-Free
+software:</p>
+
 <em><blockquote>
 	As a special exception, if you link this library with
 	other files to produce an executable, this library does
@@ -42,355 +45,329 @@ in conjunction with non-Free software:
 	file might be covered by the GNU General Public License.
 </blockquote></em>
 
-<p>The effect of that license is similar to using the LGPL, except
-that static linking is permitted.
-GPL with that exception is sometimes called the <em>Guile License</em>,
-because the <a href="http://www.gnu.org/software/guile">Guile</a>
-implementation of Scheme (for embedding) uses this license.
-</p>
+<p>The effect of that license is similar to using the LGPL, except that static
+linking is permitted. GPL with that exception is sometimes called the <em>Guile
+License</em>, because the <a href="http://www.gnu.org/software/guile">Guile</a>
+implementation of Scheme (for embedding) uses this license.</p>
 
 <h3><a name="helpwanted">Help wanted!</a></h3>
-<p><b>Development of GNU Crypto is a volunteer effort, and
-you can also contribute!</b> We need lots of help to finish the
-current APIs and to keep track of future additions and enhancements. There are also
-opportunities for testers, web authors, and documenters. Please post
-to one of the classpathx mailing lists if you're interested in helping.
-</p>
+<p><b>Development of GNU Crypto is a volunteer effort, and you can also
+contribute!</b> We need lots of help to finish the current APIs and to keep
+track of future additions and enhancements. There are also opportunities for
+testers, web authors, and documenters. Please post to one of the classpathx
+mailing lists if you're interested in helping.</p>
 
 <h3><a name="status">Project status</a></h3>
-<p> The following table summarises the current contents of the GNU Crypto
-library in terms of cryptographic algorithms:
-</p>
+<p>The following table summarises the current contents of the GNU Crypto library
+in terms of cryptographic algorithms:</p>
 
-<DIV ALIGN="left">
-   <TABLE BORDER="1" CELLPADDING="10" CELLSPACING="0" WIDTH="90%">
-      <TR>
-         <TD WIDTH="36%" BGCOLOR="#808080" VALIGN="top"><B>Family / Algorithm</B></TD>
-         <TD WIDTH="64%" BGCOLOR="#808080"><B>Abstract</B></TD>
-      </TR>
-      <TR>
-         <TD WIDTH="100%" COLSPAN="2" BGCOLOR="#CCCCFF" VALIGN="top"><I><B>Block
-            cipher</B></I></TD>
-      </TR>
-      <TR>
-         <TD WIDTH="36%" VALIGN="top"><A HREF="refs/Anubis-tweak.pdf">Anubis</A></TD>
-         <TD WIDTH="64%">
-            <P ALIGN="LEFT">A 128-bit block cipher that accepts a variable
-            length key. The cipher is a uniform substitution-permutation network
-            whose inverse only differs from the forward operation in the key
-            schedule. The design of both the round transformation and the key
-            schedule is based upon the Wide Trail strategy and permits a wide
-            variety of implementation tradeoffs.</TD>
-      </TR>
-      <TR>
-         <TD WIDTH="36%" VALIGN="top"><A HREF="refs/Khazad-tweak.pdf">Khazad</A></TD>
-         <TD WIDTH="64%">
-            <P ALIGN="LEFT">A 64-bit (legacy) block cipher that accepts a
-            128-bit key. The cipher is a uniform substitution-permutation
-            network whose inverse only differs from the forward operation in the
-            key schedule. The overall cipher design follows the Wide Trail
-            strategy, favours component reuse, and permits a wide variety of
-            implementation tradeoffs.</TD>
-      </TR>
-      <TR>
-         <TD WIDTH="36%" VALIGN="top"><A HREF="refs/rijndael%20doc%20V2.pdf">Rijndael</A></TD>
-         <TD WIDTH="64%">
-            <P ALIGN="LEFT">Rijndael is an iterated block cipher with a variable
-            block length and a variable key length. The block length and the key
-            length can be independently specified to 128, 192 or 256 bits.</P>
-            <P>Rijndael is the AES (Advanced Encryption Standard).</TD>
-      </TR>
-      <TR>
-         <TD WIDTH="36%" VALIGN="top"><A HREF="refs/VR-9700.pdf">Square</A></TD>
-         <TD WIDTH="64%">
-            <P ALIGN="LEFT">A 128-bit block, 128-bit key cipher. The original
-            design of Square concentrates on the resistance against differential
-            and linear cryptanalysis.</TD>
-      </TR>
-      <TR>
-         <TD WIDTH="36%" VALIGN="top"><A HREF="refs/twofish.pdf">Twofish</A></TD>
-         <TD WIDTH="64%">A 128-bit block cipher that accepts a variable-length
-            key up to 256 bits.</TD>
-      </TR>
-      <TR>
-         <TD WIDTH="100%" COLSPAN="2" BGCOLOR="#CCCCFF" VALIGN="top"><I><B>Mode
-            of operation</B></I></TD>
-      </TR>
-      <TR>
-         <TD WIDTH="36%" VALIGN="top"><A HREF="refs/Modes01.pdf">Counter mode (CTR)</A></TD>
-         <TD WIDTH="64%">
-            <P ALIGN="LEFT">The Counter (CTR) mode is a confidentiality mode
-            that requires a sequence of blocks, called counters, with the
-            property that each block in the sequence is different than every
-            other block. This condition is not restricted to a single message:
-            across all of the messages that are encrypted under the given key,
-            all of the counters must be distinct.</TD>
-      </TR>
-      <TR>
-         <TD WIDTH="36%" VALIGN="top"><A HREF="refs/Modes01.pdf">Electronic
-            Codebook (ECB)</A></TD>
-         <TD WIDTH="64%">
-            <P ALIGN="LEFT">The Electronic Codebook (ECB) mode is a
-            confidentiality mode that is defined as follows:</P>
-            <P ALIGN="LEFT">Encryption: C<I><SUB>j</SUB> </I>= <I>CIPH<SUB>K</SUB></I>(<I>P<SUB>j</SUB></I>)
-            for <I>j </I>= 1…<I>n</I>.<BR>
-            Decryption: <I>P<SUB>j</SUB> </I>= <I>CIPH<SUP>-1</SUP><SUB>K</SUB></I>(<I>C<SUB>j</SUB></I>)
-            for <I>j </I>= 1…<I>n</I>.</P>
-            <P ALIGN="LEFT">In ECB encryption, the forward cipher function is
-            applied directly, and independently, to each block of the plaintext.
-            The resulting sequence of output blocks is the ciphertext.</P>
-            <P ALIGN="LEFT">In ECB decryption, the inverse cipher function is
-            applied directly, and independently, to each block of the
-            ciphertext. The resulting sequence of output blocks is the
-            plaintext.</TD>
-      </TR>
-      <TR>
-         <TD WIDTH="36%" VALIGN="top"><A
-            HREF="refs/draft-mcgrew-saag-icm-00.txt">Integer Counter Mode (ICM)</A></TD>
-         <TD WIDTH="64%">Counter Mode is a way to define a pseudorandom key-stream generator  using a block cipher.
-            The key-stream can be used for  additive encryption, key derivation, or any other application  requiring pseudorandom data.  In ICM, the
-            key-stream is logically broken into segments.  Each  segment is identified with a segment index, and the segments have  equal lengths.  This segmentation makes ICM especially appropriate<BR>
-  for securing packet-based protocols.</TD>
-      </TR>
-      <TR>
-         <TD WIDTH="100%" COLSPAN="2" BGCOLOR="#CCCCFF" VALIGN="top"><I><B>Padding
-            scheme</B></I></TD>
-      </TR>
-      <TR>
-         <TD WIDTH="36%" VALIGN="top"><A HREF="refs/pkcs-7.txt">PKCS-7</A></TD>
-         <TD WIDTH="64%">
-            <P ALIGN="LEFT">Let <I>B </I>be the number of octets in the data
-            blocks (or segments) and let <I>L </I>be the number of octets in the
-            data string. The data string is padded at the trailing end with <I>B</I>-(<I>L
-            </I>mod <I>B</I>) octets, each of which is the binary representation
-            of <I>B</I>-(<I>L </I>mod <I>B</I>).</TD>
-      </TR>
-      <TR>
-         <TD WIDTH="36%" VALIGN="top"><A HREF="refs/Modes01.pdf">Trailing Bit
-            Complement (TBC)</A></TD>
-         <TD WIDTH="64%">
-            <P ALIGN="LEFT">With TBC, the data string is padded at the trailing
-            end with the complement of the trailing bit of the unpadded message:
-            if the trailing bit is ‘1,’ then ‘0’ bits are appended, and
-            if the trailing bit is ‘0,’ then ‘1’ bits are appended. As
-            few bits are added as are necessary to meet the formatting size
-            requirement.</TD>
-      </TR>
-      <TR>
-         <TD WIDTH="100%" COLSPAN="2" BGCOLOR="#CCCCFF" VALIGN="top"><I><B>Message
-            digest (hash)</B></I></TD>
-      </TR>
-      <TR>
-         <TD WIDTH="36%" VALIGN="top"><A HREF="refs/ripemd160.pdf">RIPEMD-128</A></TD>
-         <TD WIDTH="64%">
-            <P ALIGN="LEFT">The main difference with RIPEMD-160 is that we keep
-            a hash result and chaining variable of 128 bits (four 32&nbsp;<BR>
-            bit words); only four rounds are used.</TD>
-      </TR>
-      <TR>
-         <TD WIDTH="36%" VALIGN="top"><A HREF="refs/ripemd160.pdf">RIPEMD-160</A></TD>
-         <TD WIDTH="64%">
-            <P ALIGN="LEFT">The bit-size of the hash result and chaining
-            variable are increased to 160 bits (five 32-bit words), the number
-            of rounds is increased from three to five, and the two lines are
-            made more different (not only the constants are modified, but also
-            the Boolean functions and the order of the message words).</TD>
-      </TR>
-      <TR>
-         <TD WIDTH="36%" VALIGN="top"><A HREF="refs/Whirlpool-tweak.pdf">Whirlpool</A></TD>
-         <TD WIDTH="64%">
-            <P ALIGN="LEFT">A new 512-bit hashing function operating on messages
-            less than 2<SUP>256</SUP> bits in length. The function structure is
-            designed according to the Wide Trail strategy and permits a wide
-            variety of implementation tradeoffs.</TD>
-      </TR>
-      <TR>
-         <TD WIDTH="100%" COLSPAN="2" BGCOLOR="#CCCCFF" VALIGN="top"><I><B>Pseudo-random
-            number generator (PRNG)</B></I></TD>
-      </TR>
-      <TR>
-         <TD WIDTH="36%" VALIGN="top"><A
-            HREF="refs/draft-mcgrew-saag-icm-00.txt">Integer Counter Mode (ICM)
-            key-stream generator</A></TD>
-         <TD WIDTH="64%">Counter Mode is a way to define a pseudorandom key-stream generator  using a block cipher.  The
-            key-stream can be used for  additive encryption, key derivation, or any other application  requiring pseudorandom data.</TD>
-      </TR>
-   </TABLE>
-</DIV>
+	<TABLE BORDER="1" CELLPADDING="10" CELLSPACING="0" WIDTH="90%">
+		<TR>
+			<TD WIDTH="36%" BGCOLOR="#808080" VALIGN="top">
+				<B>Family / Algorithm</B>
+			</TD>
+			<TD WIDTH="64%" BGCOLOR="#808080">
+				<B>Abstract</B>
+			</TD>
+		</TR>
+		<TR>
+			<TD WIDTH="100%" COLSPAN="2" BGCOLOR="#CCCCFF" VALIGN="top">
+				<I><B>Block cipher</B></I>
+			</TD>
+		</TR>
+		<TR>
+			<TD WIDTH="36%" VALIGN="top">
+				<A HREF="refs/Anubis-tweak.pdf">Anubis</A>
+			</TD>
+			<TD WIDTH="64%">
+				<P>A 128-bit block cipher that accepts a variable
+				length key. The cipher is a uniform substitution-permutation network
+				whose inverse only differs from the forward operation in the key
+				schedule. The design of both the round transformation and the key
+				schedule is based upon the Wide Trail strategy and permits a wide
+				variety of implementation tradeoffs.</P>
+			</TD>
+		</TR>
+		<TR>
+			<TD WIDTH="36%" VALIGN="top">
+				<A HREF="refs/Khazad-tweak.pdf">Khazad</A></TD>
+			<TD WIDTH="64%">
+				<P>A 64-bit (legacy) block cipher that accepts a
+				128-bit key. The cipher is a uniform substitution-permutation
+				network whose inverse only differs from the forward operation in the
+				key schedule. The overall cipher design follows the Wide Trail
+				strategy, favours component reuse, and permits a wide variety of
+				implementation tradeoffs.</P>
+			</TD>
+		</TR>
+		<TR>
+			<TD WIDTH="36%" VALIGN="top">
+				<A HREF="refs/rijndael%20doc%20V2.pdf">Rijndael</A>
+			</TD>
+			<TD WIDTH="64%">
+				<P>Rijndael is an iterated block cipher with a variable
+				block length and a variable key length. The block length and the key
+				length can be independently specified to 128, 192 or 256 bits.</P>
+
+				<P>Rijndael is the AES (Advanced Encryption Standard).</P>
+			</TD>
+		</TR>
+		<TR>
+			<TD WIDTH="36%" VALIGN="top"><A HREF="refs/VR-9700.pdf">Square</A></TD>
+			<TD WIDTH="64%">
+				<P>A 128-bit block, 128-bit key cipher. The original
+				design of Square concentrates on the resistance against differential
+				and linear cryptanalysis.</P>
+			</TD>
+		</TR>
+		<TR>
+			<TD WIDTH="36%" VALIGN="top"><A HREF="refs/twofish.pdf">Twofish</A></TD>
+			<TD WIDTH="64%">A 128-bit block cipher that accepts a variable-length
+				key up to 256 bits.</TD>
+		</TR>
+		<TR>
+			<TD WIDTH="100%" COLSPAN="2" BGCOLOR="#CCCCFF" VALIGN="top"><I><B>Mode
+				of operation</B></I></TD>
+		</TR>
+		<TR>
+			<TD WIDTH="36%" VALIGN="top"><A HREF="refs/Modes01.pdf">Counter mode (CTR)</A></TD>
+			<TD WIDTH="64%">
+				<P>The Counter (CTR) mode is a confidentiality mode
+				that requires a sequence of blocks, called counters, with the
+				property that each block in the sequence is different than every
+				other block. This condition is not restricted to a single message:
+				across all of the messages that are encrypted under the given key,
+				all of the counters must be distinct.</P>
+			</TD>
+		</TR>
+		<TR>
+			<TD WIDTH="36%" VALIGN="top"><A HREF="refs/Modes01.pdf">Electronic
+				Codebook (ECB)</A></TD>
+			<TD WIDTH="64%">
+				<P>The Electronic Codebook (ECB) mode is a
+				confidentiality mode that is defined as follows:</P>
+
+				<P>Encryption: C<I><SUB>j</SUB> </I>= <I>CIPH<SUB>K</SUB></I>(<I>P<SUB>j</SUB></I>)
+				for <I>j </I>= 1…<I>n</I>.<BR/>
+				Decryption: <I>P<SUB>j</SUB> </I>= <I>CIPH<SUP>-1</SUP><SUB>K</SUB></I>(<I>C<SUB>j</SUB></I>)
+				for <I>j </I>= 1…<I>n</I>.</P>
+
+				<P>In ECB encryption, the forward cipher function is
+				applied directly, and independently, to each block of the plaintext.
+				The resulting sequence of output blocks is the ciphertext.</P>
+
+				<P>In ECB decryption, the inverse cipher function is
+				applied directly, and independently, to each block of the
+				ciphertext. The resulting sequence of output blocks is the
+				plaintext.</P>
+			</TD>
+		</TR>
+		<TR>
+			<TD WIDTH="36%" VALIGN="top">
+				<A HREF="refs/draft-mcgrew-saag-icm-00.txt">Integer Counter Mode
+				(ICM)</A>
+			</TD>
+			<TD WIDTH="64%">Counter Mode is a way to define a pseudorandom
+				key-stream generator  using a block cipher. The key-stream can be
+				used for additive encryption, key derivation, or any other
+				application requiring pseudorandom data. In ICM, the key-stream is
+				logically broken into segments.  Each  segment is identified with a
+				segment index, and the segments have  equal lengths. This
+				segmentation makes ICM especially appropriate for securing
+				packet-based protocols.
+			</TD>
+		</TR>
+		<TR>
+			<TD WIDTH="100%" COLSPAN="2" BGCOLOR="#CCCCFF" VALIGN="top"><I><B>Padding
+				scheme</B></I></TD>
+		</TR>
+		<TR>
+			<TD WIDTH="36%" VALIGN="top"><A HREF="refs/pkcs-7.txt">PKCS-7</A></TD>
+			<TD WIDTH="64%">
+				<P>Let <I>B </I>be the number of octets in the data
+				blocks (or segments) and let <I>L </I>be the number of octets in the
+				data string. The data string is padded at the trailing end with
+				<I>B</I>-(<I>L</I>mod <I>B</I>) octets, each of which is the binary
+				representation of <I>B</I>-(<I>L </I>mod <I>B</I>).</P>
+			</TD>
+		</TR>
+		<TR>
+			<TD WIDTH="36%" VALIGN="top"><A HREF="refs/Modes01.pdf">Trailing Bit
+				Complement (TBC)</A></TD>
+			<TD WIDTH="64%">
+				<P>With TBC, the data string is padded at the trailing
+				end with the complement of the trailing bit of the unpadded message:
+				if the trailing bit is ‘1,’ then ‘0’ bits are appended, and
+				if the trailing bit is ‘0,’ then ‘1’ bits are appended. As
+				few bits are added as are necessary to meet the formatting size
+				requirement.</P>
+			</TD>
+		</TR>
+		<TR>
+			<TD WIDTH="100%" COLSPAN="2" BGCOLOR="#CCCCFF" VALIGN="top"><I><B>Message
+				digest (hash)</B></I></TD>
+		</TR>
+		<TR>
+			<TD WIDTH="36%" VALIGN="top"><A HREF="refs/ripemd160.pdf">RIPEMD-128</A></TD>
+			<TD WIDTH="64%">
+				<P>The main difference with RIPEMD-160 is that we keep
+				a hash result and chaining variable of 128 bits (four 32 bit words);
+				only four rounds are used.</P>
+			</TD>
+		</TR>
+		<TR>
+			<TD WIDTH="36%" VALIGN="top"><A HREF="refs/ripemd160.pdf">RIPEMD-160</A></TD>
+			<TD WIDTH="64%">
+				<P>The bit-size of the hash result and chaining
+				variable are increased to 160 bits (five 32-bit words), the number
+				of rounds is increased from three to five, and the two lines are
+				made more different (not only the constants are modified, but also
+				the Boolean functions and the order of the message words).</P>
+			</TD>
+		</TR>
+		<TR>
+			<TD WIDTH="36%" VALIGN="top"><A HREF="refs/Whirlpool-tweak.pdf">Whirlpool</A></TD>
+			<TD WIDTH="64%">
+				<P>A new 512-bit hashing function operating on messages
+				less than 2<SUP>256</SUP> bits in length. The function structure is
+				designed according to the Wide Trail strategy and permits a wide
+				variety of implementation tradeoffs.</P>
+			</TD>
+		</TR>
+		<TR>
+			<TD WIDTH="100%" COLSPAN="2" BGCOLOR="#CCCCFF" VALIGN="top"><I><B>Pseudo-random
+				number generator (PRNG)</B></I></TD>
+		</TR>
+		<TR>
+			<TD WIDTH="36%" VALIGN="top"><A
+				HREF="refs/draft-mcgrew-saag-icm-00.txt">Integer Counter Mode (ICM)
+				key-stream generator</A></TD>
+			<TD WIDTH="64%">Counter Mode is a way to define a pseudorandom key-stream generator  using a block cipher.  The
+				key-stream can be used for  additive encryption, key derivation, or any other application  requiring pseudorandom data.</TD>
+		</TR>
+	</TABLE>
 
 <h3><a name="documentation">Documentation</a></h3>
-<p> JavaDoc HTML pages for the GNU Crypto packages are available, for on-line
-browsing, <A HREF="api/index.html">with</A> and <A
-HREF="api/overview-summary.html">without</A> frames.
-</p>
+<p>JavaDoc HTML pages for the GNU Crypto packages are available, for on-line
+browsing, <A HREF="api/index.html">with</A> and
+<A HREF="api/overview-summary.html">without</A> frames.</p>
 
-<p> Reference documents describing the details of the cryptographic algorithms
+<p>Reference documents describing the details of the cryptographic algorithms
 implemented in this library are available for viewing/downloading. Here is the
-list:
-</p>
+list:</p>
 
 <UL>
-   <LI>
-      <P ALIGN="LEFT"><A HREF="refs/rijndael%20doc%20V2.pdf">AES Proposal:
-      Rijndael</A>,</LI>
-   <LI>
-      <P ALIGN="LEFT"><A HREF="refs/draft-mcgrew-saag-icm-00.txt">Integer Counter Mode</A>,</LI>
-   <LI>
-      <P ALIGN="LEFT"><A HREF="refs/pkcs-7.txt">PKCS #7: Cryptographic Message Syntax Standard</A>,</LI>
-   <LI>
-      <P ALIGN="LEFT"><A HREF="refs/Modes01.pdf">Recommendation for Block Cipher
-      Modes of Operation</A>,</LI>
-   <LI>
-      <P ALIGN="LEFT"><A HREF="refs/ripemd160.pdf">RIPEMD-160: A Strengthened
-      Version of RIPEMD</A>,</LI>
-   <LI><A HREF="refs/Anubis-tweak.pdf">The ANUBIS Block Cipher</A>,</LI>
-   <LI>
-      <P ALIGN="LEFT"><A HREF="refs/VR-9700.pdf">The Block Cipher Square</A>,</LI>
-   <LI><A HREF="refs/Khazad-tweak.pdf">The KHAZAD Legacy-Level Block Cipher</A>,</LI>
-   <LI>
-      <P ALIGN="LEFT"><A HREF="refs/Whirlpool-tweak.pdf">The WHIRLPOOL Hashing
-      Function</A>,</LI>
-   <LI>
-      <P ALIGN="LEFT"><A HREF="refs/twofish.pdf">Twofish: A 128-bit Block Cipher</A>.</LI>
+	<LI><A HREF="refs/rijndael%20doc%20V2.pdf">AES Proposal: Rijndael</A>,</LI>
+	<LI><A HREF="refs/draft-mcgrew-saag-icm-00.txt">Integer Counter Mode</A>,</LI>
+	<LI><A HREF="refs/pkcs-7.txt">PKCS #7: Cryptographic Message Syntax Standard</A>,</LI>
+	<LI><A HREF="refs/Modes01.pdf">Recommendation for Block Cipher Modes of Operation</A>,</LI>
+	<LI><A HREF="refs/ripemd160.pdf">RIPEMD-160: A Strengthened Version of RIPEMD</A>,</LI>
+	<LI><A HREF="refs/Anubis-tweak.pdf">The ANUBIS Block Cipher</A>,</LI>
+	<LI><A HREF="refs/VR-9700.pdf">The Block Cipher Square</A>,</LI>
+	<LI><A HREF="refs/Khazad-tweak.pdf">The KHAZAD Legacy-Level Block Cipher</A>,</LI>
+	<LI><A HREF="refs/Whirlpool-tweak.pdf">The WHIRLPOOL Hashing Function</A>,</LI>
+	<LI><A HREF="refs/twofish.pdf">Twofish: A 128-bit Block Cipher</A>.</LI>
 </UL>
-<P ALIGN="LEFT">Test vectors, when not included in the reference documents, are
-made available by the designers of the algorithms. The current implementation
-was checked against the following test vectors:</P>
+
+<P>Test vectors, when not included in the reference documents, are made available
+by the designers of the algorithms. The current implementation was checked
+against the following test vectors:</P>
+
 <UL>
-   <LI>
-      <P ALIGN="LEFT">Anubis:</LI>
-      <UL>
-   	      <LI>
-            <P ALIGN="LEFT"><A HREF="vectors/anubis-test-vectors-128.txt">128-bit
-            key</A>,</LI>
-         <LI>
-            <P ALIGN="LEFT"><A HREF="vectors/anubis-test-vectors-160.txt">160-bit key</A>,</LI>
-         <LI>
-            <P ALIGN="LEFT"><A HREF="vectors/anubis-test-vectors-192.txt">192-bit key</A>,</LI>
-         <LI>
-            <P ALIGN="LEFT"><A HREF="vectors/anubis-test-vectors-224.txt">224-bit key</A>,</LI>
-         <LI>
-            <P ALIGN="LEFT"><A HREF="vectors/anubis-test-vectors-256.txt">256-bit key</A>,</LI>
-         <LI>
-            <P ALIGN="LEFT"><A HREF="vectors/anubis-test-vectors-288.txt">288-bit key</A>,</LI>
-         <LI>
-            <P ALIGN="LEFT"><A HREF="vectors/anubis-test-vectors-320.txt">320-bit key</A>.</LI>
-      </UL>
-   <LI>
-      <P ALIGN="LEFT"><A HREF="vectors/khazad-tweak-test-vectors.txt">Khazad</A>,</LI>
-   <LI>
-      <P ALIGN="LEFT">Rijndael:</LI>
-         <UL>
-            <LI>
-               <P ALIGN="LEFT">Monte-Carlo Tests</LI>
-                  <UL>
-                     <LI>
-                        <P ALIGN="LEFT">ECB Mode: <A
-                        HREF="vectors/rijndael-ecb_e_m.txt">Encryption</A>, <A
-                        HREF="vectors/rijndael-ecb_d_m.txt"> Decryption</A>,</LI>
-                    <LI>
-                        <P ALIGN="LEFT">CBC Mode: <A
-                        HREF="vectors/rijndael-cbc_e_m.txt">Encryption</A>, <A
-                        HREF="vectors/rijndael-cbc_d_m.txt"> Decryption</A>,</LI>
-                  </UL>
-            <LI>
-               <P ALIGN="LEFT"><A HREF="vectors/rijndael-ecb_vk.txt">Variable
-               Key Known Answer Test</A>,</LI>
-            <LI>
-               <P ALIGN="LEFT"><A HREF="vectors/rijndael-ecb_vt.txt">Variable
-               Text Known Answer Test</A>.</LI>
-         </UL>
-   <LI>
-      <P ALIGN="LEFT">Twofish:</LI>
-         <UL>
-            <LI>
-               <P ALIGN="LEFT">Monte-Carlo Tests</LI>
-                  <UL>
-                     <LI>
-                        <P ALIGN="LEFT">ECB Mode: <A
-                        HREF="vectors/twofish-Ecb_e_m.txt">Encryption</A>, <A
-                        HREF="vectors/twofish-Ecb_d_m.txt"> Decryption</A>,</LI>
-                    <LI>
-                        <P ALIGN="LEFT">CBC Mode: <A
-                        HREF="vectors/twofish-Cbc_e_m.txt">Encryption</A>, <A
-                        HREF="vectors/twofish-Cbc_d_m.txt"> Decryption</A>,</LI>
-                  </UL>
-            <LI>
-               <P ALIGN="LEFT"><A HREF="vectors/twofish-Ecb_vk.txt">Variable
-               Key Known Answer Test</A>,</LI>
-            <LI>
-               <P ALIGN="LEFT"><A HREF="vectors/twofish-Ecb_vt.txt">Variable
-               Text Known Answer Test</A>.</LI>
-         </UL>
-   <LI>
-      <P ALIGN="LEFT"><A HREF="vectors/whirltweak-test-vectors.txt">Whirlpool</A>.</LI>
+	<LI>Anubis:</LI>
+		<UL>
+			<LI><A HREF="vectors/anubis-test-vectors-128.txt">128-bit	key</A>,</LI>
+			<LI><A HREF="vectors/anubis-test-vectors-160.txt">160-bit key</A>,</LI>
+			<LI><A HREF="vectors/anubis-test-vectors-192.txt">192-bit key</A>,</LI>
+			<LI><A HREF="vectors/anubis-test-vectors-224.txt">224-bit key</A>,</LI>
+			<LI><A HREF="vectors/anubis-test-vectors-256.txt">256-bit key</A>,</LI>
+			<LI><A HREF="vectors/anubis-test-vectors-288.txt">288-bit key</A>,</LI>
+			<LI><A HREF="vectors/anubis-test-vectors-320.txt">320-bit key</A>.</LI>
+		</UL>
+	<LI><A HREF="vectors/khazad-tweak-test-vectors.txt">Khazad</A>,</LI>
+	<LI>
+		Rijndael:
+	</LI>
+		<UL>
+			<LI>Monte-Carlo Tests</LI>
+				<UL>
+					<LI>ECB Mode: <A HREF="vectors/rijndael-ecb_e_m.txt">Encryption</A>,
+						<A HREF="vectors/rijndael-ecb_d_m.txt"> Decryption</A>,</LI>
+				  <LI>CBC Mode: <A HREF="vectors/rijndael-cbc_e_m.txt">Encryption</A>,
+						<A HREF="vectors/rijndael-cbc_d_m.txt"> Decryption</A>,</LI>
+				</UL>
+			<LI><A HREF="vectors/rijndael-ecb_vk.txt">Variable Key Known Answer Test</A>,</LI>
+			<LI><A HREF="vectors/rijndael-ecb_vt.txt">Variable Text Known Answer Test</A>.</LI>
+		</UL>
+	<LI>Twofish:</LI>
+		<UL>
+			<LI>Monte-Carlo Tests</LI>
+				<UL>
+					<LI>ECB Mode: <A HREF="vectors/twofish-Ecb_e_m.txt">Encryption</A>,
+						<A HREF="vectors/twofish-Ecb_d_m.txt"> Decryption</A>,</LI>
+				  <LI>CBC Mode: <A HREF="vectors/twofish-Cbc_e_m.txt">Encryption</A>,
+						<A HREF="vectors/twofish-Cbc_d_m.txt"> Decryption</A>,</LI>
+				</UL>
+			<LI><A HREF="vectors/twofish-Ecb_vk.txt">Variable Key Known Answer Test</A>,</LI>
+			<LI><A HREF="vectors/twofish-Ecb_vt.txt">Variable Text Known Answer Test</A>.</LI>
+		</UL>
+	<LI><A HREF="vectors/whirltweak-test-vectors.txt">Whirlpool</A>.</LI>
 </UL>
 
 <h3><a name="lists">Mailing lists</a></h3>
-<p> The main discussion list is <A HREF="mailto:classpathx-crypto@gnu.org">&lt;classpathx-crypto@gnu.org&gt;</A>,
-and is used to discuss all aspects of GNU Crypto project.
-</p>
-<p> Announcements about GNU Crypto and other classpathx software are
-made on the low-volume
-<a href="mailto:classpathx-announce@gnu.org"
->&lt;classpathx-announce@gnu.org&gt;</a> mailing list.
-</p>
+<p>The main discussion list is <A HREF="mailto:classpathx-crypto@gnu.org">&lt;classpathx-crypto@gnu.org&gt;</A>,
+and is used to discuss all aspects of GNU Crypto project.</p>
 
-<p> For subscription information, see the mailing list info from
-the <a href="http://savannah.gnu.org/mail/?group_id=139"
->ClasspathX project page</a>.
+<p>Announcements about GNU Crypto and other classpathx software are made on the
+low-volume
+<a href="mailto:classpathx-announce@gnu.org">&lt;classpathx-announce@gnu.org&gt;</a>
+mailing list.</p>
+
+<p> For subscription information, see the mailing list info from the
+<a href="http://savannah.gnu.org/mail/?group_id=139">ClasspathX project page</a>.
 </p>
 
 <h3><A NAME="downloading">Downloads</A></h3>
 
-<p> You can download the latest software from
-<a href="ftp://ftp.gnu.org/pub/gnu/classpathx">
-ftp://ftp.gnu.org/pub/gnu/classpathx</a>.
-You'll probably want to use one of the
-<a href="http://www.gnu.org/order/ftp.html">FTP mirror sites</a>,
-although the mirrors may not be current.
-</p>
+<p>You can download the latest software from <a href="ftp://ftp.gnu.org/pub/gnu/classpathx">
+ftp://ftp.gnu.org/pub/gnu/classpathx</a>. You'll probably want to use one of the
+<a href="http://www.gnu.org/order/ftp.html">FTP mirror sites</a>, although the
+mirrors may not be current.</p>
 
-<p>The current distribution is available as:
-</p>
-
+<p>The current distribution is available as:</p>
 <UL>
-   <LI>A gzipped tar: <A HREF="release/gnu-crypto-1.0.0.tar.gz">gnu-crypto-1.0.0.tar.gz</A></LI>
-   <LI>A zipped archive: <A HREF="release/gnu-crypto-1.0.0.zip">gnu-crypto-1.0.0.zip</A></LI>
+	<LI>A gzipped tar: <A HREF="release/gnu-crypto-1.0.0.tar.gz">gnu-crypto-1.0.0.tar.gz</A></LI>
+	<LI>A zipped archive: <A HREF="release/gnu-crypto-1.0.0.zip">gnu-crypto-1.0.0.zip</A></LI>
 </UL>
 
-<p> Up-to-date source code for this project is available in the <A
-HREF="http://savannah.gnu.org/cgi-bin/viewcvs/classpathx/crypto">crypto</A> module <a
-href="http://savannah.gnu.org/cvs/?group_id=139">through
-CVS</a>.
-</p>
+<p>Up-to-date source code for this project is available in the
+<A HREF="http://savannah.gnu.org/cgi-bin/viewcvs/classpathx/crypto">crypto</A>
+module <a href="http://savannah.gnu.org/cvs/?group_id=139">through CVS</a>.</p>
 
 <h3><a name="bug">Report a bug</a></h3>
-<p> If you think you have found a bug in GNU Crypto, then you
-should send as complete a report as possible to <A
-HREF="mailto:classpathx-crypto@gnu.org">&lt;classpathx-crypto@gnu.org&gt;</A>.
+<p>If you think you have found a bug in GNU Crypto, then you should send as
+complete a report as possible to
+<A HREF="mailto:classpathx-crypto@gnu.org">&lt;classpathx-crypto@gnu.org&gt;</A>.
 </p>
 
-<p><hr> Return to <a href="/home.html">GNU's home page</a>.
+<hr/>
+<p>Return to <a href="/home.html">GNU's home page</a>.</p>
 
-<p> Please send FSF &amp; GNU inquiries &amp; questions to
-<a href="mailto:gnu@gnu.org"><em>gnu@gnu.org</em></a>.
-There are also <a href="/home.html#ContactInfo">other ways to
-contact</a> the FSF.
-</p>
+<p>Please send FSF &amp; GNU inquiries &amp; questions to
+<a href="mailto:gnu@gnu.org"><em>gnu@gnu.org</em></a>. There are also
+<a href="/home.html#ContactInfo">other ways to contact</a> the FSF.</p>
 
 <p> Please send comments on these web pages to
 <a href="mailto:webmasters@gnu.org"><em>webmasters@gnu.org</em></a>,
-send other questions to
-<a href="mailto:gnu@gnu.org"><em>gnu@gnu.org</em></a>.
-</p>
+send other questions to <a href="mailto:gnu@gnu.org"><em>gnu@gnu.org</em></a>.</p>
 
 <p>Copyright (C) 2001 Free Software Foundation, Inc.,
-59 Temple Place - Suite 330, Boston, MA  02111,  USA
+59 Temple Place - Suite 330, Boston, MA  02111,  USA.</p>
 
-<p> Verbatim copying and distribution of this entire article is
-permitted in any medium, provided this notice is preserved.
+<p>Verbatim copying and distribution of this entire article is permitted in any
+medium, provided this notice is preserved.</p>
 
-<p> <hr> Last Modified: <i>$Date: 2001/12/03 11:21:40 $</i>
+<hr/>
+<p>Last Modified: <i>$Date: 2001/12/03 12:48:52 $</i></p>
 
 </body></html>
