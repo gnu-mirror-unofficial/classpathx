@@ -1,127 +1,138 @@
-<!DOCTYPE html PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "xhtml11.dtd">
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<meta http-equiv='Content-Type' content='text/html; charset=UTF-8'/>
+<title>GNU JAF - GNU Project - Free Software Foundation (FSF)</title>
+<link rel='stylesheet' href='../main.css' type='text/css'/>
+<link rel="made" href="mailto:dog@gnu.org">
+</head>
+<body>
 
-<HTML>
+<div class='logo'>
+<img src='../classpathx-logo-small.jpg' alt='[ gnu -classpath ext:ens:ions ]'/>
+</div>
 
-<HEAD>
-<TITLE>GNU and Java - GNU Project - Free Software Foundation (FSF)</TITLE>
-<LINK REV="made" HREF="mailto:nferrier@gnu.org">
-</HEAD>
+<h1>GNU JAF: JavaBeans&trade; Activation Framework</h1>
 
-<BODY BGCOLOR="#FFFFFF" TEXT="#000000" LINK="#1F00FF" ALINK="#FF0000" VLINK="#9900DD">
+<p class='toc'>
+  <a href='#introduction'>Introduction</a>
+| <a href='#download'>Download</a>
+| <a href='#javadoc'>API documentation</a>
+| <a href='#help-wanted'>Help wanted</a>
+| <a href='#mailing-lists'>Mailing lists</a>
+| <a href='#acknowledgements'>Acknowledgements</a>
+</p>
 
-<IMG align="right" SRC="classpathx-logo-small.jpg" ALT=" [ gnu -classpath ext:ens:ions ] ">
+<h3><a name='introduction'>Introduction</a></h3>
 
-<h2>GNU-JAF: Java<sup>TM</sup> Beans Activation Framework</h2>
-
-<p>The JAF is a system for declaring what beans operate on what MIME
+<p>
+GNU JAF is a framework for declaring what beans operate on what MIME
 type data. Content handler beans can be defined to handle particular
 MIME content. The JAF unites internet standards for declaring content
-with Java<sup>TM</sup> beans.
+with JavaBeans&trade;.
 </p>
 
-
-<br>
-<h4>Downloading GNU-JAF</h4>
-
-<p>There are several ways of getting GNU-JAF:
+<p>
+The JAF defines two mechanisms within the framework. The first, the file
+type map, specifies the MIME content type for a given file. The default
+implementation of this uses the UNIX <code>mime.types</code> format to map
+filename extensions to MIME types. The second mechanism, the command map,
+specifies the actions that can be applied to a given MIME content type. The
+default implementation of this uses the <a
+href='http://www.rfc-editor.org/rfc/1524.txt'>standard</a>
+<code>mailcap</code> format to map actions to JavaBean&trade; classes. These
+beans can then view, edit, print, or perform whatever other action is
+required on the underlying resource.
 </p>
 
-<blockquote>
-<p><a href="downloads/gnujaf.tar.gz">GNU-JAF tar file</a></p>
-<p><a href="downloads/gnujaf.jar">GNU-JAF jar file (just the class files)</a></p>
-<p>Or you can download the CVS repository, see
-<a href="http://savannah.gnu.org/projects/classpathx/">Classpathx project</a>
-for more details.
-</p>
-</blockquote>
+<h3><a name='download'>Download</a></h3>
 
-<br>
-<h4>Installing GNU-JAF</h4>
-<p>If your Java VM does not support extension library directories then 
-you will need to reference the <code>gnu-jaf.jar</code> file in your 
-<code>CLASSPATH</code>. If it does use extension library directories simply
-copy the jar file to the correct dir.
+<!--TODO-->
+
+<p>
+You can build the entire package and documentation from the CVS sources,
+available <a href='https://savannah.gnu.org/cvs/?group_id=139'>here</a>,
+module <b>activation</b>.
 </p>
 
+<h3><a name='javadoc'>API documentation</h3>
 
-<br>
-<h4>Documentation</h4>
-
-<p>The <a href="jaf-javadoc/javax/activation/package-summary.html">API documentation is 
-available here</a>.
+<p>
+You can build the API documentation yourself or browse it online
+<a href="javadoc/index.html">here</a>.
 </p>
 
-<p>The classes <a href="jaf-javadoc/javax/activation/MailcapCommandMap.html">MailcapCommandMap</a>
-and <a href="jaf-javadoc/javax/activation/MimetypesFileTypeMap.html">MimetypesFileTypeMap</a>
-have a command line interface so that it's possible to tell what the GNU-JAF's understanding
-of <code>mailcap</code> and <code>mime.types</code> files are.
-</p>
+<h3><a name='help-wanted'>We need help</a></h3>
 
-
-<br>
-<h4>We need help</h4>
-
-<p>The main part of the JAF is finished but we don't have any beans
-that actually handle content in anyway. We'd like to know what sort of
-content handlers you would like...  We'd like to build a large
+<p>
+Development of the JAF is finished but we'd still like your feedback on what
+content beans should be included. We currently supply only:
+<ul>
+<li>an image viewer,</li>
+<li>a text viewer, and</li>
+<li>a text editor.</li>
+</ul>
+However, ideally we'd like to build a large
 repository of beans that could be accessed over the internet.
-If you have an idea about a content type handler please contact 
-<a href="mailto:nferrier@gnu.org">Nic Ferrier (nferrier@gnu.org)</a>
-and let him know.
+If you have any ideas about content type handlers please contact 
+<a href="mailto:dog@gnu.org">Chris Burdess</a>.
 </p>
 
-<p>If you're a programmer and you're interested in java beans why not
+<p>
+If you're a programmer and you're interested in JavaBeans&trade; why not
 help us out with building the content handlers? See the 
 <a href="http://savannah.gnu.org/projects/classpathx">classpathx
-project page for more information</a>.
+project page</a> for more information.
 </p>
 
+<h3><a name='mailing-lists'>Discussing the JAF</a></h3>
 
-<br>
-<h4>Discussing the JAF</h4>
-
-<p>If you want to talk with other developers about JAF you can use 
+<p>
+If you want to talk with other developers about JAF you can use the
 <a href="http://mail.gnu.org/pipermail/classpathx-discuss/">classpathx 
 discussion list</a>. If you're not subscribed to this list you
 can do so by sending a mail with the subject <code>subscribe</code> to:
 <a href="mailto:classpathx-discuss-request@gnu.org">classpathx-discuss-request@gnu.org</a>.
 </p>
 
-<br>
-<h4>Thank yous</h4>
-<p>Andrew Selkirk wrote most of the JAF. Nic Ferrier updated the
-parsing of mailcap and mime.type files.
+<h3><a name='acknowledgements'>Acknowledgements</></h3>
+
+<p>
+Andrew Selkirk set up the project initially. The current 1.0.2
+implementation was written by Chris Burdess.
 </p>
 
-<HR>
+<!-- Begin standard GNU footer -->
+<hr/>
+
 <p>
-Return to <A HREF="/home.html">GNU's home page</A>.
+Return to <a href='/home.html'>GNU's home page</a>.
+<p>
 
-<P>
-Return to <a href="/software/classpathx/">Classpathx's home page</a>.
+<p>
+Please send FSF and GNU inquiries and questions to <a
+href='mailto:gnu@gnu.org'><em>gnu@gnu.org</em></a>. There are also <a
+href='/home.html#ContactInfo'>other ways</a> to contact the FSF.
+</p>
 
-Please send FSF &amp; GNU inquiries &amp; questions to 
+<p>
+Please send comments on these web pages to <a
+href='webmasters@gnu.org'><em>webmasters@gnu.org</em></a>, send other
+questions to <a href='mailto:gnu@gnu.org'><em>gnu@gnu.org</em></a>.
+</p>
 
-<A HREF="mailto:gnu@gnu.org"><EM>gnu@gnu.org</EM></A>.
-There are also <A HREF="/home.html#ContactInfo">other ways to
-contact</A> the FSF.
-<P>
-
-Please send comments on these web pages to
-
-<A HREF="mailto:webmasters@www.gnu.org"><EM>webmasters@www.gnu.org</EM></A>,
-send other questions to
-<A HREF="mailto:gnu@gnu.org"><EM>gnu@gnu.org</EM></A>.
-<P>
-Copyright (C) 2001 Free Software Foundation, Inc.,
+<p>
+Copyright (C) 1999 Free Software Foundation, Inc.,
 59 Temple Place - Suite 330, Boston, MA  02111,  USA
-<P>
-Verbatim copying and distribution of this entire article is
-permitted in any medium, provided this notice is preserved.<P>
-Updated:
-<!-- timestamp start -->
-$Date: 2001/12/04 14:25:07 $ $Author: nferrier $
-<!-- timestamp end -->
-<HR>
-</BODY>
-</HTML>
+</p>
+
+<p>
+Verbatim copying and distribution of this entire article is permitted in any
+medium, provided this notice is preserved.
+</p>
+
+<hr/>
+<!-- End standard GNU footer -->
+
+</body>
+</html>

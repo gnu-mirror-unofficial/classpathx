@@ -1,91 +1,68 @@
-<html>
-
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "xhtml11.dtd">
+<html xmlns='http://www.w3.org/1999/xhtml'>
 <head>
+<meta http-equiv='Content-Type' content='text/html; charset=UTF-8'/>
+<link rel='stylesheet' href='../main.css' type='text/css'/>
+<link rel='made' href='mailto:dog@gnu.org'/>
 <title>GNU JAXP - GNU Project - Free Software Foundation (FSF)</title>
-
 </head>
+<body>
 
-<body bgcolor="#FFFFFF" text="#000000" link="#1F00FF" alink="#FF0000" vlink="#9900DD">
+<div class='logo'>
+<img src='../classpathx-logo-small.jpg' alt='[ gnu -classpath ext:ens:ions
+]'/>
+</div>
 
-<img align="right" src="/software/classpathx/classpathx-logo-small.jpg" alt=" [ gnu -classpath ext:ens:ions ] ">
-<h2>The GNU JAXP Project</h2>
+<h1>The GNU JAXP Project</h1>
 
-<center>
-  <a href="#introduction" name="introduction">Introduction</a>
-| <a href="#helpwanted" name="helpwanted">Help Wanted</a>
-| <a href="#status" name="status">Project Status</a>
-| <a href="#documentation" name="documentation">Documentation</a>
-<br>
-  <a href="#lists" name="lists">Mailing Lists</a>
-| <a href="#downloading" name="downloading">Get the Software</a>
-| <a href="#bug" name="bug">Report a Bug</a>
-</center>
+<p class='toc'>
+  <a href='#introduction'>Introduction</a>
+| <a href='#status'>Status</a>
+| <a href='#docs'>Documentation</a>
+| <a href='#help-wanted'>Help wanted</a>
+| <a href='#mailing-lists'>Mailing lists</a>
+| <a href='#download'>Download</a>
+| <a href='#bugs'>Bugs</a>
+</p>
 
-<br>
 <h3><a name="introduction">Introduction</a></h3>
-<p>GNU JAXP, a part of the <a href="..">GNU Classpath Extensions</a>
-project (hosted at
-<a href="http://savannah.gnu.org/projects/classpathx">savannah.gnu.org</a>)
-is a <a href="/philosophy/free-sw.html">free</a>
-implementation of the standard XML processing APIs for Java:
 
+<p>
+GNU JAXP, part of the <a href='../index.html'>GNU Classpath Extensions</a>
+project, is a <a href='/philosophy/free-sw.html'>free</a> implementation of
+the standard XML processing APIs for Java:
 <ul>
-<li> <a href="http://www.saxproject.org/">SAX</a> Parser API</li>
-<li> <a href="http://www.w3c.org/DOM">DOM</a> Level 2 generic XML
-    data structures</li>
-<li> Sun's <a href="http://java.sun.com/xml/xml_jaxp.html">JAXP</a> v1.1
-    interfaces</li>
+<li><a href='http://www.saxproject.org/'>SAX</a> 2.0, the Streaming API for
+XML parsing,</li>
+<li><a href='http://www.w3c.org/DOM'>DOM</a> Level 2, the web standard API
+for processing XML, and</li>
+<li>Sun's <a href='http://java.sun.com/xml/xml_jaxp.html'>JAXP</a> 1.1</li>
 </ul>
-
-<p>GNU JAXP is licensed under the terms of the
-<a href="/copyleft/gpl.html">GNU General Public License</a>,
-with the "library exception" which permits its use as a library
-in conjunction with non-Free software:
-</p>
-<em><blockquote>
-	As a special exception, if you link this library with
-	other files to produce an executable, this library does
-	not by itself cause the resulting executable to be covered
-	by the GNU General Public License. This exception does
-	not however invalidate any other reasons why the executable
-	file might be covered by the GNU General Public License. 
-</blockquote></em>
-
-<p>The effect of that license is similar to using the LGPL, except
-that static linking is permitted.
-GPL with that exception is sometimes called the <em>Guile License</em>,
-because the <a href="http://www.gnu.org/software/guile">Guile</a>
-implementation of Scheme (for embedding) uses this license.
 </p>
 
-<br>
-<h3><a name="helpwanted">Help Wanted!</a></h3>
-<p><b>Development of GNU JAXP is a volunteer effort, and
-you can also contribute!</b> We need lots of help to finish the
-current APIs and to keep track of future enhancements. There are also
-opportunities for testers, web authors, and documentors. Please post
-to one of the classpathx mailing lists if you're interested helping.
-</p>
+<h3><a name="status">Project status</a></h3>
 
-<br>
-<h3><a name="status">Project Status</a></h3>
-<p> GNU JAXP includes the &AElig;lfred2 SAX2 parser, and is
-configured to use its optionally validating module by default.
-It includes the DOM2 implementation of DOM Level 2.  These
+<p>
+GNU JAXP provides the &AElig;lfred2 SAX2 parser, and is configured to use
+its optionally validating module by default. It includes the DOM Level 2
+implementation provided by the World Wide Web Consortium.  These
 are accessible through the JAXP 1.1 bootstrapping APIs.
 </p>
 
-<p> At this writing, no XSLT support is bundled.
+<p>
+At this writing, no XSLT support is bundled.
 </p>
 
-<br>
-<h3><a name="documentation">Documentation</a></h3>
-<p> Javadoc for GNU JAXP is
-<a href="apidoc/overview-summary.html">here</a>
-(also <a href="apidoc/index.html">with frames</a>).
+<h3><a name="docs">Documentation</a></h3>
+
+<p>
+You can browse the API documentation for GNU JAXP online
+<a href="apidoc/index.html">here</a>
+<small>(<a href="apidoc/overview-summary.html">no frames</a>)</small>.
 </p>
 
-<p> With JDK 1.2 or later the <code>gnujaxp.jar</code> file is most easily
+<p>
+With JDK 1.2 or later the <code>gnujaxp.jar</code> file is most easily
 installed in <em>$JAVA_HOME/jre/lib/ext</em>; otherwise you may prefer
 to modify your CLASSPATH.
 If you have other JAXP
@@ -94,51 +71,61 @@ parsers installed you may also wish to set up
 the two GNU JAXP drivers are used by default:
 </p>
 
-<center>
-<table width="80%" border="1" cellpadding="8"><tr><td bgcolor="#ccccff">
-<pre>
+<pre class='config'>
 # make JAXP clients prefer the GNU implementations
 javax.xml.parsers.SAXParserFactory = gnu.xml.aelfred2.JAXPFactory
 javax.xml.parsers.DocumentBuilderFactory = gnu.xml.dom.JAXPFactory
 </pre>
-</td>
-</tr>
-</table>
-</center>
 
-<p>If you are using the portable SAX2 bootstrapping APIs, you may want
+<p>
+If you are using the portable SAX2 bootstrapping APIs, you may want
 to set the <code>org.xml.sax.driver</code> system property on each
 JVM invocation to be
-<em>gnu.xml.aelfred2.SAXDriver</em> (non-validating) or
-<em>gnu.xml.aelfred2.XmlReader</em> (optionally validating).
+<code>gnu.xml.aelfred2.SAXDriver</code> (non-validating) or
+<code>gnu.xml.aelfred2.XmlReader</code> (optionally validating).
 Otherwise the <code>org.xml.sax.helpers.XMLReaderFactory</code>
 may not return the parser you expect.
 </p>
 
-<p> More information will be provided later.
+<p>
+More information will be provided later.
 </p>
 
-<br>
-<h3><a name="lists">Mailing Lists</a></h3>
-<p> The main discussion list is 
-<a href="mailto:classpathx-xml@gnu.org">&lt;classpathx-xml@gnu.org&gt;</a>,
-and is used to discuss all aspects of GNU JAXP.
+<h3><a name="help-wanted">Help wanted!</a></h3>
+
+<p>
+<b>Development of GNU JAXP is a volunteer effort, and
+you can also contribute!</b> We need lots of help to finish the
+current APIs and to keep track of future enhancements. There are also
+opportunities for testers, web authors, and documentors. Please post
+to one of the classpathx mailing lists if you're interested helping.
 </p>
-<p> Announcements about GNU JAXP and other classpathx software are
+
+<h3><a name="mailing-lists">Mailing lists</a></h3>
+
+<p>
+The main discussion list is 
+<a href="mailto:classpathx-xml@gnu.org">&lt;classpathx-xml@gnu.org&gt;</a>,
+which is used to discuss all aspects of GNU JAXP.
+</p>
+
+<p>
+Announcements about GNU JAXP and other classpathx software are
 made on the low-volume
 <a href="mailto:classpathx-announce@gnu.org"
 >&lt;classpathx-announce@gnu.org&gt;</a> mailing list.
 </p>
 
-<p> For subscription information, see the mailing list info from
+<p>
+For subscription information, see the mailing list info from
 the <a href="http://savannah.gnu.org/mail/?group_id=139"
 >ClasspathX project page</a>.
 </p>
 
-<br>
-<h3><a name="downloading">Get the Software</a></h3>
+<h3><a name="download">Get the Software</a></h3>
 
-<p> You can download the latest software from
+<p>
+You can download the latest software from
 <a href="ftp://ftp.gnu.org/pub/gnu/classpathx">
 ftp://ftp.gnu.org/pub/gnu/classpathx</a>.
 You'll probably want to use one of the
@@ -146,7 +133,8 @@ You'll probably want to use one of the
 although the mirrors may not be current.
 </p>
 
-<p>At this writing, the current release is in a file called
+<p>
+At this writing, the current release is in a file called
 <em>gnujaxp-1.0beta1.zip</em>, which includes a pre-compiled
 JAR library, full javadoc, and source code.
 Make sure you use <em>zip</em> to unpack it, not <em>jar</em>,
@@ -159,42 +147,51 @@ We expect that the <em>1.0 release</em> will include full support
 for building to native code using GCJ.
 </p>
 
-<p> Interested parties can
-view up-to-the-second code in the
-<a href="http://savannah.gnu.org/cgi-bin/viewcvs/classpathx/jaxp">
-jaxp</a> module <a
-href="http://savannah.gnu.org/cvs/?group_id=139">through
-CVS</a>.
+<p>
+Interested parties can view up-to-the-second code in the
+<a href="http://savannah.gnu.org/cgi-bin/viewcvs/classpathx/jaxp">jaxp</a>
+module <a href="http://savannah.gnu.org/cvs/?group_id=139">through CVS</a>.
 </p>
 
-<br>
-<h3><a name="bug">Report a Bug</a></h3>
-<p> If you think you have found a bug in GNU JAXP, then you
+<h3><a name="bugs">Report a bug</a></h3>
+
+<p>
+If you think you have found a bug in GNU JAXP, then you
 should send as complete a report as possible to
 <a href="mailto:classpathx-xml@gnu.org">&lt;classpathx-xml@gnu.org&gt;</a>.
 </p>
 
-<p><hr> Return to <a href="/home.html">GNU's home page</a>.
+<!-- Begin standard GNU footer -->
+<hr/>
+
+<p>
+Return to <a href='/home.html'>GNU's home page</a>.
+<p>
+
+<p>
+Please send FSF and GNU inquiries and questions to <a
+href='mailto:gnu@gnu.org'><em>gnu@gnu.org</em></a>. There are also <a
+href='/home.html#ContactInfo'>other ways</a> to contact the FSF.
 </p>
 
-<p> Please send FSF &amp; GNU inquiries &amp; questions to 
-<a href="mailto:gnu@gnu.org"><em>gnu@gnu.org</em></a>.
-There are also <a href="/home.html#ContactInfo">other ways to
-contact</a> the FSF.
+<p>
+Please send comments on these web pages to <a
+href='webmasters@gnu.org'><em>webmasters@gnu.org</em></a>, send other
+questions to <a href='mailto:gnu@gnu.org'><em>gnu@gnu.org</em></a>.
 </p>
 
-<p> Please send comments on these web pages to
-<a href="mailto:webmasters@gnu.org"><em>webmasters@gnu.org</em></a>,
-send other questions to
-<a href="mailto:gnu@gnu.org"><em>gnu@gnu.org</em></a>.
-</p>
-
-<p>Copyright (C) 1999 Free Software Foundation, Inc.,
+<p>
+Copyright (C) 1999 Free Software Foundation, Inc.,
 59 Temple Place - Suite 330, Boston, MA  02111,  USA
+</p>
 
-<p> Verbatim copying and distribution of this entire article is
-permitted in any medium, provided this notice is preserved.
+<p>
+Verbatim copying and distribution of this entire article is permitted in any
+medium, provided this notice is preserved.
+</p>
 
-<p> <hr> Last Modified: <i>$Date: 2001/11/24 22:46:57 $</i>
+<hr/>
+<!-- End standard GNU footer -->
 
-</body></html>
+</body>
+</html>

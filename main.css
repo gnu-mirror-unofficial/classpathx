@@ -14,3 +14,11 @@ a:active {
 .toc {
 	text-align: center;
 }
+.logo {
+	text-align: right;
+}
+.config {
+	border-width: 1;
+	border-color: black;
+	background-color: #ccccff;
+}
