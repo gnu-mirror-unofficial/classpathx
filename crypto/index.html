@@ -149,9 +149,9 @@ in terms of cryptographic algorithms:</p>
 				confidentiality mode that is defined as follows:</P>
 
 				<P>Encryption: C<I><SUB>j</SUB> </I>= <I>CIPH<SUB>K</SUB></I>(<I>P<SUB>j</SUB></I>)
-				for <I>j </I>= 1…<I>n</I>.<BR/>
+				for <I>j </I>= 1.<I>n</I>.<BR/>
 				Decryption: <I>P<SUB>j</SUB> </I>= <I>CIPH<SUP>-1</SUP><SUB>K</SUB></I>(<I>C<SUB>j</SUB></I>)
-				for <I>j </I>= 1…<I>n</I>.</P>
+				for <I>j </I>= 1.<I>n</I>.</P>
 
 				<P>In ECB encryption, the forward cipher function is
 				applied directly, and independently, to each block of the plaintext.
@@ -198,8 +198,8 @@ in terms of cryptographic algorithms:</p>
 			<TD WIDTH="64%">
 				<P>With TBC, the data string is padded at the trailing
 				end with the complement of the trailing bit of the unpadded message:
-				if the trailing bit is ‘1,’ then ‘0’ bits are appended, and
-				if the trailing bit is ‘0,’ then ‘1’ bits are appended. As
+				if the trailing bit is `1,' then `0' bits are appended, and
+				if the trailing bit is `0,' then `1' bits are appended. As
 				few bits are added as are necessary to meet the formatting size
 				requirement.</P>
 			</TD>
@@ -258,16 +258,18 @@ implemented in this library are available for viewing/downloading. Here is the
 list:</p>
 
 <UL>
-	<LI><A HREF="refs/rijndael%20doc%20V2.pdf">AES Proposal: Rijndael</A>,</LI>
-	<LI><A HREF="refs/draft-mcgrew-saag-icm-00.txt">Integer Counter Mode</A>,</LI>
-	<LI><A HREF="refs/pkcs-7.txt">PKCS #7: Cryptographic Message Syntax Standard</A>,</LI>
-	<LI><A HREF="refs/Modes01.pdf">Recommendation for Block Cipher Modes of Operation</A>,</LI>
-	<LI><A HREF="refs/ripemd160.pdf">RIPEMD-160: A Strengthened Version of RIPEMD</A>,</LI>
-	<LI><A HREF="refs/Anubis-tweak.pdf">The ANUBIS Block Cipher</A>,</LI>
-	<LI><A HREF="refs/VR-9700.pdf">The Block Cipher Square</A>,</LI>
-	<LI><A HREF="refs/Khazad-tweak.pdf">The KHAZAD Legacy-Level Block Cipher</A>,</LI>
-	<LI><A HREF="refs/Whirlpool-tweak.pdf">The WHIRLPOOL Hashing Function</A>,</LI>
-	<LI><A HREF="refs/twofish.pdf">Twofish: A 128-bit Block Cipher</A>.</LI>
+	<LI><A HREF="http://www.esat.kuleuven.ac.be/~rijmen/rijndael/">AES Proposal: Rijndael</A>,</LI>
+	<LI><A HREF="http://www.ietf.org/internet-drafts/draft-mcgrew-saag-icm-00.txt">Integer Counter Mode</A>,</LI>
+	<LI><A HREF="http://www.rsasecurity.com/rsalabs/pkcs/pkcs-7/">PKCS #7</A>: Cryptographic Message Syntax Standard,</LI>
+	<LI><A HREF="http://www.ietf.org/rfc/rfc1423.txt">RFC 1423</A>: Privacy Enhancement for
+		Internet Electronic Mail: Part III: Algorithms, Modes, and Identifiers,</LI>
+	<LI>Recommendation for <A HREF="http://csrc.nist.gov/encryption/modes/Recommendation/Modes01.pdf">Block Cipher Modes of Operation</A>,</LI>
+	<LI><A HREF="http://www.esat.kuleuven.ac.be/~bosselae/ripemd160.html">RIPEMD-160</A>: A Strengthened Version of RIPEMD,</LI>
+	<LI>The <A HREF="http://planeta.terra.com.br/informatica/paulobarreto/AnubisPage.html">ANUBIS</A> Block Cipher,</LI>
+	<LI>The Block Cipher <A HREF="http://www.esat.kuleuven.ac.be/~rijmen/square/">Square</A>,</LI>
+	<LI>The <A HREF="http://planeta.terra.com.br/informatica/paulobarreto/KhazadPage.html">KHAZAD</A> Legacy-Level Block Cipher,</LI>
+	<LI>The <A HREF="http://planeta.terra.com.br/informatica/paulobarreto/WhirlpoolPage.html">WHIRLPOOL</A> Hashing Function,</LI>
+	<LI><A HREF="http://www.counterpane.com/twofish-paper.html">Twofish</A>: A 128-bit Block Cipher.</LI>
 </UL>
 
 <P>Test vectors, when not included in the reference documents, are made available
@@ -374,7 +376,7 @@ send other questions to <a href="mailto:gnu@gnu.org"><em>gnu@gnu.org</em></a>.</
 medium, provided this notice is preserved.</p>
 
 <hr/>
-<p>Last Modified: <i>$Date: 2001/12/03 13:47:44 $</i></p>
+<p>Last Modified: <i>$Date: 2001/12/04 13:09:16 $</i></p>
 
 </body>
 </html>
