@@ -1,0 +1,16 @@
+body {
+	color: black;
+	background-color: white;
+}
+a:link {
+	color: #1f00ff;
+}
+a:visited {
+	color: #9900dd;
+}
+a:active {
+	color: red;
+}
+.toc {
+	text-align: center;
+}
