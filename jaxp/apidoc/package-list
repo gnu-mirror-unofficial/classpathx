@@ -8,6 +8,7 @@ javax.xml.transform.dom
 javax.xml.transform.sax
 javax.xml.transform.stream
 org.w3c.dom
+org.w3c.dom.events
 org.xml.sax
 org.xml.sax.ext
 org.xml.sax.helpers
