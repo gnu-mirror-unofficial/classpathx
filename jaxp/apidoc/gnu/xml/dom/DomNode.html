@@ -1,12 +1,5 @@
-<html xmlns="http://www.w3.org/TR/REC-html40" xmlns:html="http://www.w3.org/TR/REC-html40" xmlns:gjdoc="http://www.gnu.org/software/cp-tools/gjdocxml"><head><link href="../../../gjdochtml.css" type="text/css" rel="stylesheet"/><title>DomNode</title></head><body onload="top.document.title=document.title;" class="classdoc"><div class="header"><span class="navi-button">&rArr;&nbsp;<a target="_top" href="../../../index.html">Index&nbsp;(Frames)</a></span>&nbsp;|&nbsp;
-      <span class="navi-button">&rArr;&nbsp;<a target="_top" href="../../../index_noframes.html">Index&nbsp;(No&nbsp;Frames)</a></span>&nbsp;|&nbsp;
-      <span class="navi-button">&rArr;&nbsp;<a href="package-summary.html">Package</a></span>&nbsp;|&nbsp;
-      <span class="navi-button">&rArr;&nbsp;<a href="package-tree.html">Package&nbsp;Tree</a></span>&nbsp;|&nbsp;
-      <span class="navi-button">&rArr;&nbsp;<a href="../../../fulltree.html">Full Tree</a></span>&nbsp;
-    </div><div class="classdoc-head"><div class="classdoc-head-inner"><b class="classdoc-head-packagename">gnu.xml.dom</b><br/><h1 class="classdoc-head-classname">Class DomNode</h1></div></div><pre class="inheritance-tree">java.lang.Object
-|
-+--gnu.xml.dom.DomNode
-</pre><p/><b>All Implemented Interfaces:</b><br/>Cloneable, <a href="../../../org/w3c/dom/events/DocumentEvent.html">DocumentEvent</a>, <a href="../../../org/w3c/dom/events/EventTarget.html">EventTarget</a>, <a href="../../../org/w3c/dom/Node.html">Node</a>, <a href="../../../org/w3c/dom/NodeList.html">NodeList</a><p/><b>Known Direct Subclasses:</b><br/><a href="../../../gnu/xml/dom/DomCharacterData.html">DomCharacterData</a>, <a href="../../../gnu/xml/dom/DomDocument.html">DomDocument</a>, <a href="../../../gnu/xml/dom/DomEntityReference.html">DomEntityReference</a>, <a href="../../../gnu/xml/dom/DomExtern.html">DomExtern</a>, <a href="../../../gnu/xml/dom/DomFragment.html">DomFragment</a>, <a href="../../../gnu/xml/dom/DomNsNode.html">DomNsNode</a>, <a href="../../../gnu/xml/dom/DomPI.html">DomPI</a><hr/><div class="classdoc-prototype">public abstract class <b>DomNode</b><br/>extends java.lang.Object<br/>implements <a href="../../../org/w3c/dom/Node.html">Node</a>, <a href="../../../org/w3c/dom/NodeList.html">NodeList</a>, <a href="../../../org/w3c/dom/events/EventTarget.html">EventTarget</a>, <a href="../../../org/w3c/dom/events/DocumentEvent.html">DocumentEvent</a>, Cloneable</div><p/><div class="classdoc-class-comment-body"><p/> "Node", "EventTarget", and "DocumentEvent" implementation.
+<?xml version="1.0" encoding="null"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head><title>DomNode</title><meta http-equiv="Content-Type" content="text/html; charset=null"/></head><body><table class="navbar div top"><tr><td><div><span class="navbar item enabled"><a href="../../..//index-noframes.html">Overview</a></span> <span class="navbar item enabled"><a href="package-summary.html">Package</a></span> <span class="navbar item enabled"><a href="tree.html">Tree</a></span> <a href="../../..//alphaindex.html">Index</a> <a href="../../..//deprecated.html">Deprecated</a> <a href="../../..//help.html">Help</a> <a href="../../..//about.html">About</a></div></td></tr></table><div><h3>gnu.xml.dom</h3><h1>Class DomNode</h1><div><h4>Known Direct Subclasses:</h4><a href="../../..//gnu/xml/dom/DomCharacterData.html">DomCharacterData</a>, <a href="../../..//gnu/xml/dom/DomDocument.html">DomDocument</a>, <a href="../../..//gnu/xml/dom/DomEntityReference.html">DomEntityReference</a>, <a href="../../..//gnu/xml/dom/DomExtern.html">DomExtern</a>, <a href="../../..//gnu/xml/dom/DomFragment.html">DomFragment</a>, <a href="../../..//gnu/xml/dom/DomNsNode.html">DomNsNode</a>, <a href="../../..//gnu/xml/dom/DomPI.html">DomPI</a></h4><hr/><div><div>public abstract class DomNode</div><div>extends java.lang.Object</div><div>implements <a href="../../..//org/w3c/dom/Node.html">Node</a>, <a href="../../..//org/w3c/dom/NodeList.html">NodeList</a>, <a href="../../..//org/w3c/dom/events/EventTarget.html">EventTarget</a>, <a href="../../..//org/w3c/dom/events/DocumentEvent.html">DocumentEvent</a>, Cloneable, Comparable</div></div><hr/><div>  "Node", "EventTarget", and "DocumentEvent" implementation.
  This provides most of the core DOM functionality; only more
  specialized features are provided by subclasses.  Those subclasses may
  have some particular constraints they must implement, by overriding
@@ -33,61 +26,69 @@
  While mostly intended for use with elements and attributes, this should
  also be helpful for ProcessingInstruction nodes and some others which
  do not have namespace URIs.
-</div><div class="classdoc-tag-section-header">Author:</div><dl class="classdoc-list"><dt>David Brownell</dt></dl><h1 class="classdoc-header">Constructor Summary</h1><table class="classdoc-table" width="100%" cellspacing="0" border="1"><tr><td class="with-border" valign="top" align="left"><p class="prototype"><a href="#DomNode(org.w3c.dom.Document)">DomNode</a>(<span class="parameter"><a href="../../../org/w3c/dom/Document.html">Document</a>&nbsp;owner</span>)</p><blockquote class="classdoc-summary-comment"> Constructs a node and associates it with its owner.</blockquote></td></tr></table><h1 class="classdoc-header">Method Summary</h1><table class="classdoc-table" width="100%" cellspacing="0" border="1"><tr><td class="no-border-r" valign="top" align="right" width="1%"><p class="prototype-type"> void</p></td><td class="with-border" valign="top" align="left"><p class="prototype"><a href="#addEventListener(String,org.w3c.dom.events.EventListener,boolean)">addEventListener</a>(<span class="parameter">String&nbsp;type,</span> <span class="parameter"><a href="../../../org/w3c/dom/events/EventListener.html">EventListener</a>&nbsp;listener,</span> <span class="parameter">boolean&nbsp;useCapture</span>)</p><blockquote class="classdoc-summary-comment">DOM L2 (Events)
- Registers an event listener's interest in a class of events.</blockquote></td></tr><tr><td class="no-border-r" valign="top" align="right" width="1%"><p class="prototype-type"> <a href="../../../org/w3c/dom/Node.html">Node</a></p></td><td class="with-border" valign="top" align="left"><p class="prototype"><a href="#appendChild(org.w3c.dom.Node)">appendChild</a>(<span class="parameter"><a href="../../../org/w3c/dom/Node.html">Node</a>&nbsp;newChild</span>)</p><blockquote class="classdoc-summary-comment">DOM L1
- Appends the specified node to this node's list of children.</blockquote></td></tr><tr><td class="no-border-r" valign="top" align="right" width="1%"><p class="prototype-type"> Object</p></td><td class="with-border" valign="top" align="left"><p class="prototype"><a href="#clone()">clone</a>()</p><blockquote class="classdoc-summary-comment"> Clones this node; roughly equivalent to cloneNode(false).</blockquote></td></tr><tr><td class="no-border-r" valign="top" align="right" width="1%"><p class="prototype-type"> <a href="../../../org/w3c/dom/Node.html">Node</a></p></td><td class="with-border" valign="top" align="left"><p class="prototype"><a href="#cloneNode(boolean)">cloneNode</a>(<span class="parameter">boolean&nbsp;deep</span>)</p><blockquote class="classdoc-summary-comment">DOM L1
+</div><dl class="tag list"><dt class="tag section header"><b>Authors:</b></dt><dd class="tag item">David Brownell</dd><dd class="tag item"><a href='mailto:dog@gnu.org'>Chris Burdess</a></dd></dl><table class="class summary"><tr><td colspan="2"><h4>Constructor Summary</h4></td></tr><tr><td class="class summary left">protected </td><td class="class summary right"> <a href="#DomNode(short,gnu.xml.dom.DomDocument)">DomNode</a>(short nodeType, <a href="../../..//gnu/xml/dom/DomDocument.html">DomDocument</a> owner)</td></tr><tr><td></td><td> Constructs a node and associates it with its owner.</td></tr></table><table class="class summary"><tr><td colspan="2"><h4>Method Summary</h4></td></tr><tr><td class="class summary left">public final void</td><td class="class summary right"> <a href="#addEventListener(String,org.w3c.dom.events.EventListener,boolean)">addEventListener</a>(String type, <a href="../../..//org/w3c/dom/events/EventListener.html">EventListener</a> listener, boolean useCapture)</td></tr><tr><td></td><td> <b>DOM L2 (Events)</b>
+ Registers an event listener's interest in a class of events.</td></tr><tr><td class="class summary left">public <a href="../../..//org/w3c/dom/Node.html">Node</a></td><td class="class summary right"> <a href="#appendChild(org.w3c.dom.Node)">appendChild</a>(<a href="../../..//org/w3c/dom/Node.html">Node</a> newChild)</td></tr><tr><td></td><td> <b>DOM L1</b>
+ Appends the specified node to this node's list of children.</td></tr><tr><td class="class summary left">public <a href="../../..//org/w3c/dom/Node.html">Node</a></td><td class="class summary right"> <a href="#cloneNode(boolean)">cloneNode</a>(boolean deep)</td></tr><tr><td></td><td> <b>DOM L1</b>
  Returns a clone of this node which optionally includes cloned
- versions of child nodes.</blockquote></td></tr><tr><td class="no-border-r" valign="top" align="right" width="1%"><p class="prototype-type"> void</p></td><td class="with-border" valign="top" align="left"><p class="prototype"><a href="#compact()">compact</a>()</p><blockquote class="classdoc-summary-comment"> Reduces space utilization for this node.</blockquote></td></tr><tr><td class="no-border-r" valign="top" align="right" width="1%"><p class="prototype-type"> short</p></td><td class="with-border" valign="top" align="left"><p class="prototype"><a href="#compareDocumentPosition(org.w3c.dom.Node)">compareDocumentPosition</a>(<span class="parameter"><a href="../../../org/w3c/dom/Node.html">Node</a>&nbsp;other</span>)</p><blockquote class="classdoc-summary-comment"/></td></tr><tr><td class="no-border-r" valign="top" align="right" width="1%"><p class="prototype-type"> <a href="../../../org/w3c/dom/events/Event.html">Event</a></p></td><td class="with-border" valign="top" align="left"><p class="prototype"><a href="#createEvent(String)">createEvent</a>(<span class="parameter">String&nbsp;eventType</span>)</p><blockquote class="classdoc-summary-comment">DOM L2 (Events)
- Returns an instance of the specified type of event object.</blockquote></td></tr><tr><td class="no-border-r" valign="top" align="right" width="1%"><p class="prototype-type"> boolean</p></td><td class="with-border" valign="top" align="left"><p class="prototype"><a href="#dispatchEvent(org.w3c.dom.events.Event)">dispatchEvent</a>(<span class="parameter"><a href="../../../org/w3c/dom/events/Event.html">Event</a>&nbsp;event</span>)</p><blockquote class="classdoc-summary-comment">DOM L2 (Events)
+ versions of child nodes.</td></tr><tr><td class="class summary left">public Object</td><td class="class summary right"> <a href="#clone()">clone</a>()</td></tr><tr><td></td><td> Clones this node; roughly equivalent to cloneNode(false).</td></tr><tr><td class="class summary left">public void</td><td class="class summary right"> <a href="#compact()">compact</a>()</td></tr><tr><td></td><td> Reduces space utilization for this node.</td></tr><tr><td class="class summary left">public short</td><td class="class summary right"> <a href="#compareDocumentPosition(org.w3c.dom.Node)">compareDocumentPosition</a>(<a href="../../..//org/w3c/dom/Node.html">Node</a> other)</td></tr><tr><td></td><td> Compares the reference node, i.e.</td></tr><tr><td class="class summary left">public final int</td><td class="class summary right"> <a href="#compareTo(Object)">compareTo</a>(Object other)</td></tr><tr><td></td><td> DOM nodes have a natural ordering: document order.</td></tr><tr><td class="class summary left">public <a href="../../..//org/w3c/dom/events/Event.html">Event</a></td><td class="class summary right"> <a href="#createEvent(String)">createEvent</a>(String eventType)</td></tr><tr><td></td><td> <b>DOM L2 (Events)</b>
+ Returns an instance of the specified type of event object.</td></tr><tr><td class="class summary left">public final boolean</td><td class="class summary right"> <a href="#dispatchEvent(org.w3c.dom.events.Event)">dispatchEvent</a>(<a href="../../..//org/w3c/dom/events/Event.html">Event</a> event)</td></tr><tr><td></td><td> <b>DOM L2 (Events)</b>
  Delivers an event to all relevant listeners, returning true if the
- caller should perform their default action.</blockquote></td></tr><tr><td class="no-border-r" valign="top" align="right" width="1%"><p class="prototype-type"> <a href="../../../org/w3c/dom/NamedNodeMap.html">NamedNodeMap</a></p></td><td class="with-border" valign="top" align="left"><p class="prototype"><a href="#getAttributes()">getAttributes</a>()</p><blockquote class="classdoc-summary-comment">DOM L1
- Returns null; Element subclasses must override this method.</blockquote></td></tr><tr><td class="no-border-r" valign="top" align="right" width="1%"><p class="prototype-type"> String</p></td><td class="with-border" valign="top" align="left"><p class="prototype"><a href="#getBaseURI()">getBaseURI</a>()</p><blockquote class="classdoc-summary-comment"/></td></tr><tr><td class="no-border-r" valign="top" align="right" width="1%"><p class="prototype-type"> <a href="../../../org/w3c/dom/NodeList.html">NodeList</a></p></td><td class="with-border" valign="top" align="left"><p class="prototype"><a href="#getChildNodes()">getChildNodes</a>()</p><blockquote class="classdoc-summary-comment">DOM L1
- Returns a list, possibly empty, of the children of this node.</blockquote></td></tr><tr><td class="no-border-r" valign="top" align="right" width="1%"><p class="prototype-type"> <a href="../../../org/w3c/dom/NodeList.html">NodeList</a></p></td><td class="with-border" valign="top" align="left"><p class="prototype"><a href="#getElementsByTagName(String)">getElementsByTagName</a>(<span class="parameter">String&nbsp;tag</span>)</p><blockquote class="classdoc-summary-comment">DOM L1
+ caller should perform their default action.</td></tr><tr><td class="class summary left">public <a href="../../..//org/w3c/dom/NamedNodeMap.html">NamedNodeMap</a></td><td class="class summary right"> <a href="#getAttributes()">getAttributes</a>()</td></tr><tr><td></td><td> <b>DOM L1</b>
+ Returns null; Element subclasses must override this method.</td></tr><tr><td class="class summary left">public String</td><td class="class summary right"> <a href="#getBaseURI()">getBaseURI</a>()</td></tr><tr><td></td><td> The absolute base URI of this node or <code>null</code> if the 
+ implementation wasn't able to obtain an absolute URI.</td></tr><tr><td class="class summary left">public <a href="../../..//org/w3c/dom/NodeList.html">NodeList</a></td><td class="class summary right"> <a href="#getChildNodes()">getChildNodes</a>()</td></tr><tr><td></td><td> <b>DOM L1</b>
+ Returns a list, possibly empty, of the children of this node.</td></tr><tr><td class="class summary left">public <a href="../../..//org/w3c/dom/NodeList.html">NodeList</a></td><td class="class summary right"> <a href="#getElementsByTagNameNS(String,String)">getElementsByTagNameNS</a>(String namespace, String local)</td></tr><tr><td></td><td> <b>DOM L2</b>
  Creates a NodeList giving array-style access to elements with
- the specified name.</blockquote></td></tr><tr><td class="no-border-r" valign="top" align="right" width="1%"><p class="prototype-type"> <a href="../../../org/w3c/dom/NodeList.html">NodeList</a></p></td><td class="with-border" valign="top" align="left"><p class="prototype"><a href="#getElementsByTagNameNS(String,String)">getElementsByTagNameNS</a>(<span class="parameter">String&nbsp;namespace,</span> <span class="parameter">String&nbsp;local</span>)</p><blockquote class="classdoc-summary-comment">DOM L2
+ the specified namespace and local name.</td></tr><tr><td class="class summary left">public <a href="../../..//org/w3c/dom/NodeList.html">NodeList</a></td><td class="class summary right"> <a href="#getElementsByTagName(String)">getElementsByTagName</a>(String tag)</td></tr><tr><td></td><td> <b>DOM L1</b>
  Creates a NodeList giving array-style access to elements with
- the specified namespace and local name.</blockquote></td></tr><tr><td class="no-border-r" valign="top" align="right" width="1%"><p class="prototype-type"> Object</p></td><td class="with-border" valign="top" align="left"><p class="prototype"><a href="#getFeature(String,String)">getFeature</a>(<span class="parameter">String&nbsp;feature,</span> <span class="parameter">String&nbsp;version</span>)</p><blockquote class="classdoc-summary-comment"/></td></tr><tr><td class="no-border-r" valign="top" align="right" width="1%"><p class="prototype-type"> <a href="../../../org/w3c/dom/Node.html">Node</a></p></td><td class="with-border" valign="top" align="left"><p class="prototype"><a href="#getFirstChild()">getFirstChild</a>()</p><blockquote class="classdoc-summary-comment">DOM L1
- Returns the first child of this node, or null if there are none.</blockquote></td></tr><tr><td class="no-border-r" valign="top" align="right" width="1%"><p class="prototype-type"> <a href="../../../org/w3c/dom/Node.html">Node</a></p></td><td class="with-border" valign="top" align="left"><p class="prototype"><a href="#getLastChild()">getLastChild</a>()</p><blockquote class="classdoc-summary-comment">DOM L1
- Returns the last child of this node, or null if there are none.</blockquote></td></tr><tr><td class="no-border-r" valign="top" align="right" width="1%"><p class="prototype-type"> int</p></td><td class="with-border" valign="top" align="left"><p class="prototype"><a href="#getLength()">getLength</a>()</p><blockquote class="classdoc-summary-comment">DOM L1 (NodeList)
- Returns the number of elements in this NodeList.</blockquote></td></tr><tr><td class="no-border-r" valign="top" align="right" width="1%"><p class="prototype-type"> String</p></td><td class="with-border" valign="top" align="left"><p class="prototype"><a href="#getLocalName()">getLocalName</a>()</p><blockquote class="classdoc-summary-comment">DOM L2
+ the specified name.</td></tr><tr><td class="class summary left">public Object</td><td class="class summary right"> <a href="#getFeature(String,String)">getFeature</a>(String feature, String version)</td></tr><tr><td></td><td>  This method returns a specialized object which implements the 
+ specialized APIs of the specified feature and version, as specified 
+ in .</td></tr><tr><td class="class summary left">public <a href="../../..//org/w3c/dom/Node.html">Node</a></td><td class="class summary right"> <a href="#getFirstChild()">getFirstChild</a>()</td></tr><tr><td></td><td> <b>DOM L1</b>
+ Returns the first child of this node, or null if there are none.</td></tr><tr><td class="class summary left">public <a href="../../..//org/w3c/dom/Node.html">Node</a></td><td class="class summary right"> <a href="#getLastChild()">getLastChild</a>()</td></tr><tr><td></td><td> <b>DOM L1</b>
+ Returns the last child of this node, or null if there are none.</td></tr><tr><td class="class summary left">public int</td><td class="class summary right"> <a href="#getLength()">getLength</a>()</td></tr><tr><td></td><td> <b>DOM L1 (NodeList)</b>
+ Returns the number of elements in this NodeList.</td></tr><tr><td class="class summary left">public String</td><td class="class summary right"> <a href="#getLocalName()">getLocalName</a>()</td></tr><tr><td></td><td> <b>DOM L2</b>
  Returns the node name; this must be overridden for element and
- attribute nodes.</blockquote></td></tr><tr><td class="no-border-r" valign="top" align="right" width="1%"><p class="prototype-type"> String</p></td><td class="with-border" valign="top" align="left"><p class="prototype"><a href="#getNamespaceURI()">getNamespaceURI</a>()</p><blockquote class="classdoc-summary-comment">DOM L2
+ attribute nodes.</td></tr><tr><td class="class summary left">public String</td><td class="class summary right"> <a href="#getNamespaceURI()">getNamespaceURI</a>()</td></tr><tr><td></td><td> <b>DOM L2</b>
  Returns null; this must be overridden for element and
- attribute nodes.</blockquote></td></tr><tr><td class="no-border-r" valign="top" align="right" width="1%"><p class="prototype-type"> <a href="../../../org/w3c/dom/Node.html">Node</a></p></td><td class="with-border" valign="top" align="left"><p class="prototype"><a href="#getNextSibling()">getNextSibling</a>()</p><blockquote class="classdoc-summary-comment">DOM L1
- Returns the previous sibling, if one is known.</blockquote></td></tr><tr><td class="no-border-r" valign="top" align="right" width="1%"><p class="prototype-type"> String</p></td><td class="with-border" valign="top" align="left"><p class="prototype"><a href="#getNodeName()">getNodeName</a>()</p><blockquote class="classdoc-summary-comment">This forces GCJ compatibility.</blockquote></td></tr><tr><td class="no-border-r" valign="top" align="right" width="1%"><p class="prototype-type"> short</p></td><td class="with-border" valign="top" align="left"><p class="prototype"><a href="#getNodeType()">getNodeType</a>()</p><blockquote class="classdoc-summary-comment">This forces GCJ compatibility.</blockquote></td></tr><tr><td class="no-border-r" valign="top" align="right" width="1%"><p class="prototype-type"> String</p></td><td class="with-border" valign="top" align="left"><p class="prototype"><a href="#getNodeValue()">getNodeValue</a>()</p><blockquote class="classdoc-summary-comment">DOM L1
+ attribute nodes.</td></tr><tr><td class="class summary left">public <a href="../../..//org/w3c/dom/Node.html">Node</a></td><td class="class summary right"> <a href="#getNextSibling()">getNextSibling</a>()</td></tr><tr><td></td><td> <b>DOM L1</b>
+ Returns the previous sibling, if one is known.</td></tr><tr><td class="class summary left">public String</td><td class="class summary right"> <a href="#getNodeName()">getNodeName</a>()</td></tr><tr><td></td><td>This forces GCJ compatibility.</td></tr><tr><td class="class summary left">public final short</td><td class="class summary right"> <a href="#getNodeType()">getNodeType</a>()</td></tr><tr><td></td><td>This forces GCJ compatibility.</td></tr><tr><td class="class summary left">public String</td><td class="class summary right"> <a href="#getNodeValue()">getNodeValue</a>()</td></tr><tr><td></td><td> <b>DOM L1</b>
  Returns null; this must be overridden for nodes types with
- a defined value, along with the setNodeValue method.</blockquote></td></tr><tr><td class="no-border-r" valign="top" align="right" width="1%"><p class="prototype-type"> <a href="../../../org/w3c/dom/Document.html">Document</a></p></td><td class="with-border" valign="top" align="left"><p class="prototype"><a href="#getOwnerDocument()">getOwnerDocument</a>()</p><blockquote class="classdoc-summary-comment">DOM L1 (modified in L2)
- Returns the owner document.</blockquote></td></tr><tr><td class="no-border-r" valign="top" align="right" width="1%"><p class="prototype-type"> <a href="../../../org/w3c/dom/Node.html">Node</a></p></td><td class="with-border" valign="top" align="left"><p class="prototype"><a href="#getParentNode()">getParentNode</a>()</p><blockquote class="classdoc-summary-comment">DOM L1
- Returns the parent node, if one is known.</blockquote></td></tr><tr><td class="no-border-r" valign="top" align="right" width="1%"><p class="prototype-type"> String</p></td><td class="with-border" valign="top" align="left"><p class="prototype"><a href="#getPrefix()">getPrefix</a>()</p><blockquote class="classdoc-summary-comment">DOM L2
+ a defined value, along with the setNodeValue method.</td></tr><tr><td class="class summary left">public final <a href="../../..//org/w3c/dom/Document.html">Document</a></td><td class="class summary right"> <a href="#getOwnerDocument()">getOwnerDocument</a>()</td></tr><tr><td></td><td> <b>DOM L1 (modified in L2)</b>
+ Returns the owner document.</td></tr><tr><td class="class summary left">public <a href="../../..//org/w3c/dom/Node.html">Node</a></td><td class="class summary right"> <a href="#getParentNode()">getParentNode</a>()</td></tr><tr><td></td><td> <b>DOM L1</b>
+ Returns the parent node, if one is known.</td></tr><tr><td class="class summary left">public String</td><td class="class summary right"> <a href="#getPrefix()">getPrefix</a>()</td></tr><tr><td></td><td> <b>DOM L2</b>
  Returns null; this must be overridden for element and
- attribute nodes.</blockquote></td></tr><tr><td class="no-border-r" valign="top" align="right" width="1%"><p class="prototype-type"> <a href="../../../org/w3c/dom/Node.html">Node</a></p></td><td class="with-border" valign="top" align="left"><p class="prototype"><a href="#getPreviousSibling()">getPreviousSibling</a>()</p><blockquote class="classdoc-summary-comment">DOM L1
- Returns the previous sibling, if one is known.</blockquote></td></tr><tr><td class="no-border-r" valign="top" align="right" width="1%"><p class="prototype-type"> String</p></td><td class="with-border" valign="top" align="left"><p class="prototype"><a href="#getTextContent()">getTextContent</a>()</p><blockquote class="classdoc-summary-comment"/></td></tr><tr><td class="no-border-r" valign="top" align="right" width="1%"><p class="prototype-type"> Object</p></td><td class="with-border" valign="top" align="left"><p class="prototype"><a href="#getUserData(String)">getUserData</a>(<span class="parameter">String&nbsp;key</span>)</p><blockquote class="classdoc-summary-comment"/></td></tr><tr><td class="no-border-r" valign="top" align="right" width="1%"><p class="prototype-type"> boolean</p></td><td class="with-border" valign="top" align="left"><p class="prototype"><a href="#hasAttributes()">hasAttributes</a>()</p><blockquote class="classdoc-summary-comment">DOM L2>
- Returns true iff this is an element node with attributes.</blockquote></td></tr><tr><td class="no-border-r" valign="top" align="right" width="1%"><p class="prototype-type"> boolean</p></td><td class="with-border" valign="top" align="left"><p class="prototype"><a href="#hasChildNodes()">hasChildNodes</a>()</p><blockquote class="classdoc-summary-comment">DOM L1
- Returns true if this node has children.</blockquote></td></tr><tr><td class="no-border-r" valign="top" align="right" width="1%"><p class="prototype-type"> <a href="../../../org/w3c/dom/Node.html">Node</a></p></td><td class="with-border" valign="top" align="left"><p class="prototype"><a href="#insertBefore(org.w3c.dom.Node,org.w3c.dom.Node)">insertBefore</a>(<span class="parameter"><a href="../../../org/w3c/dom/Node.html">Node</a>&nbsp;newChild,</span> <span class="parameter"><a href="../../../org/w3c/dom/Node.html">Node</a>&nbsp;refChild</span>)</p><blockquote class="classdoc-summary-comment">DOM L1
- Inserts the specified node in this node's list of children.</blockquote></td></tr><tr><td class="no-border-r" valign="top" align="right" width="1%"><p class="prototype-type"> boolean</p></td><td class="with-border" valign="top" align="left"><p class="prototype"><a href="#isDefaultNamespace(String)">isDefaultNamespace</a>(<span class="parameter">String&nbsp;namespaceURI</span>)</p><blockquote class="classdoc-summary-comment"/></td></tr><tr><td class="no-border-r" valign="top" align="right" width="1%"><p class="prototype-type"> boolean</p></td><td class="with-border" valign="top" align="left"><p class="prototype"><a href="#isEqualNode(org.w3c.dom.Node)">isEqualNode</a>(<span class="parameter"><a href="../../../org/w3c/dom/Node.html">Node</a>&nbsp;arg</span>)</p><blockquote class="classdoc-summary-comment"/></td></tr><tr><td class="no-border-r" valign="top" align="right" width="1%"><p class="prototype-type"> boolean</p></td><td class="with-border" valign="top" align="left"><p class="prototype"><a href="#isReadonly()">isReadonly</a>()</p><blockquote class="classdoc-summary-comment"> Exposes the internal "readonly" flag.</blockquote></td></tr><tr><td class="no-border-r" valign="top" align="right" width="1%"><p class="prototype-type"> boolean</p></td><td class="with-border" valign="top" align="left"><p class="prototype"><a href="#isSameNode(org.w3c.dom.Node)">isSameNode</a>(<span class="parameter"><a href="../../../org/w3c/dom/Node.html">Node</a>&nbsp;other</span>)</p><blockquote class="classdoc-summary-comment"/></td></tr><tr><td class="no-border-r" valign="top" align="right" width="1%"><p class="prototype-type"> boolean</p></td><td class="with-border" valign="top" align="left"><p class="prototype"><a href="#isSupported(String,String)">isSupported</a>(<span class="parameter">String&nbsp;feature,</span> <span class="parameter">String&nbsp;version</span>)</p><blockquote class="classdoc-summary-comment">DOM L2
+ attribute nodes.</td></tr><tr><td class="class summary left">public <a href="../../..//org/w3c/dom/Node.html">Node</a></td><td class="class summary right"> <a href="#getPreviousSibling()">getPreviousSibling</a>()</td></tr><tr><td></td><td> <b>DOM L1</b>
+ Returns the previous sibling, if one is known.</td></tr><tr><td class="class summary left">public final String</td><td class="class summary right"> <a href="#getTextContent()">getTextContent</a>()</td></tr><tr><td></td><td> This attribute returns the text content of this node and its 
+ descendants.</td></tr><tr><td class="class summary left">public Object</td><td class="class summary right"> <a href="#getUserData(String)">getUserData</a>(String key)</td></tr><tr><td></td><td> Retrieves the object associated to a key on a this node.</td></tr><tr><td class="class summary left">public boolean</td><td class="class summary right"> <a href="#hasAttributes()">hasAttributes</a>()</td></tr><tr><td></td><td> <b>DOM L2&gt;</b>
+ Returns true iff this is an element node with attributes.</td></tr><tr><td class="class summary left">public boolean</td><td class="class summary right"> <a href="#hasChildNodes()">hasChildNodes</a>()</td></tr><tr><td></td><td> <b>DOM L1</b>
+ Returns true if this node has children.</td></tr><tr><td class="class summary left">public <a href="../../..//org/w3c/dom/Node.html">Node</a></td><td class="class summary right"> <a href="#insertBefore(org.w3c.dom.Node,org.w3c.dom.Node)">insertBefore</a>(<a href="../../..//org/w3c/dom/Node.html">Node</a> newChild, <a href="../../..//org/w3c/dom/Node.html">Node</a> refChild)</td></tr><tr><td></td><td> <b>DOM L1</b>
+ Inserts the specified node in this node's list of children.</td></tr><tr><td class="class summary left">public boolean</td><td class="class summary right"> <a href="#isDefaultNamespace(String)">isDefaultNamespace</a>(String namespaceURI)</td></tr><tr><td></td><td>  This method checks if the specified <code>namespaceURI</code> is the 
+ default namespace or not.</td></tr><tr><td class="class summary left">public boolean</td><td class="class summary right"> <a href="#isEqualNode(org.w3c.dom.Node)">isEqualNode</a>(<a href="../../..//org/w3c/dom/Node.html">Node</a> arg)</td></tr><tr><td></td><td> Tests whether two nodes are equal.</td></tr><tr><td class="class summary left">public final boolean</td><td class="class summary right"> <a href="#isReadonly()">isReadonly</a>()</td></tr><tr><td></td><td> Exposes the internal "readonly" flag.</td></tr><tr><td class="class summary left">public boolean</td><td class="class summary right"> <a href="#isSameNode(org.w3c.dom.Node)">isSameNode</a>(<a href="../../..//org/w3c/dom/Node.html">Node</a> other)</td></tr><tr><td></td><td> Returns whether this node is the same node as the given one.</td></tr><tr><td class="class summary left">public boolean</td><td class="class summary right"> <a href="#isSupported(String,String)">isSupported</a>(String feature, String version)</td></tr><tr><td></td><td> <b>DOM L2</b>
  Consults the DOM implementation to determine if the requested
- feature is supported.</blockquote></td></tr><tr><td class="no-border-r" valign="top" align="right" width="1%"><p class="prototype-type"> <a href="../../../org/w3c/dom/Node.html">Node</a></p></td><td class="with-border" valign="top" align="left"><p class="prototype"><a href="#item(int)">item</a>(<span class="parameter">int&nbsp;index</span>)</p><blockquote class="classdoc-summary-comment">DOM L1 (NodeList)
+ feature is supported.</td></tr><tr><td class="class summary left">public <a href="../../..//org/w3c/dom/Node.html">Node</a></td><td class="class summary right"> <a href="#item(int)">item</a>(int index)</td></tr><tr><td></td><td> <b>DOM L1 (NodeList)</b>
  Returns the item with the specified index in this NodeList,
- else null.</blockquote></td></tr><tr><td class="no-border-r" valign="top" align="right" width="1%"><p class="prototype-type"> String</p></td><td class="with-border" valign="top" align="left"><p class="prototype"><a href="#lookupNamespaceURI(String)">lookupNamespaceURI</a>(<span class="parameter">String&nbsp;prefix</span>)</p><blockquote class="classdoc-summary-comment"/></td></tr><tr><td class="no-border-r" valign="top" align="right" width="1%"><p class="prototype-type"> String</p></td><td class="with-border" valign="top" align="left"><p class="prototype"><a href="#lookupPrefix(String)">lookupPrefix</a>(<span class="parameter">String&nbsp;namespaceURI</span>)</p><blockquote class="classdoc-summary-comment"/></td></tr><tr><td class="no-border-r" valign="top" align="right" width="1%"><p class="prototype-type"> void</p></td><td class="with-border" valign="top" align="left"><p class="prototype"><a href="#makeReadonly()">makeReadonly</a>()</p><blockquote class="classdoc-summary-comment"> Sets the internal "readonly" flag so this subtree can't be changed.</blockquote></td></tr><tr><td class="no-border-r" valign="top" align="right" width="1%"><p class="prototype-type"> boolean</p></td><td class="with-border" valign="top" align="left"><p class="prototype"><a href="#nameAndTypeEquals(org.w3c.dom.Node)">nameAndTypeEquals</a>(<span class="parameter"><a href="../../../org/w3c/dom/Node.html">Node</a>&nbsp;other</span>)</p><blockquote class="classdoc-summary-comment"> Returns true iff node types match, and either (a) both nodes have no
+ else null.</td></tr><tr><td class="class summary left">public String</td><td class="class summary right"> <a href="#lookupNamespaceURI(String)">lookupNamespaceURI</a>(String prefix)</td></tr><tr><td></td><td> Look up the namespace URI associated to the given prefix, starting from 
+ this node.</td></tr><tr><td class="class summary left">public String</td><td class="class summary right"> <a href="#lookupPrefix(String)">lookupPrefix</a>(String namespaceURI)</td></tr><tr><td></td><td> Look up the prefix associated to the given namespace URI, starting from 
+ this node.</td></tr><tr><td class="class summary left">public void</td><td class="class summary right"> <a href="#makeReadonly()">makeReadonly</a>()</td></tr><tr><td></td><td> Sets the internal "readonly" flag so this subtree can't be changed.</td></tr><tr><td class="class summary left">public boolean</td><td class="class summary right"> <a href="#nameAndTypeEquals(org.w3c.dom.Node)">nameAndTypeEquals</a>(<a href="../../..//org/w3c/dom/Node.html">Node</a> other)</td></tr><tr><td></td><td> Returns true iff node types match, and either (a) both nodes have no
  namespace and their getNodeName() values are the same, or (b) both
- nodes have the same getNamespaceURI() and same getLocalName() values.</blockquote></td></tr><tr><td class="no-border-r" valign="top" align="right" width="1%"><p class="prototype-type"> void</p></td><td class="with-border" valign="top" align="left"><p class="prototype"><a href="#normalize()">normalize</a>()</p><blockquote class="classdoc-summary-comment">DOM L1 (relocated in DOM L2)
+ nodes have the same getNamespaceURI() and same getLocalName() values.</td></tr><tr><td class="class summary left">public final void</td><td class="class summary right"> <a href="#normalize()">normalize</a>()</td></tr><tr><td></td><td> <b>DOM L1 (relocated in DOM L2)</b>
  In this node and all contained nodes (including attributes if
- relevant) merge adjacent text nodes.</blockquote></td></tr><tr><td class="no-border-r" valign="top" align="right" width="1%"><p class="prototype-type"> <a href="../../../org/w3c/dom/Node.html">Node</a></p></td><td class="with-border" valign="top" align="left"><p class="prototype"><a href="#removeChild(org.w3c.dom.Node)">removeChild</a>(<span class="parameter"><a href="../../../org/w3c/dom/Node.html">Node</a>&nbsp;refChild</span>)</p><blockquote class="classdoc-summary-comment">DOM L1
+ relevant) merge adjacent text nodes.</td></tr><tr><td class="class summary left">public <a href="../../..//org/w3c/dom/Node.html">Node</a></td><td class="class summary right"> <a href="#removeChild(org.w3c.dom.Node)">removeChild</a>(<a href="../../..//org/w3c/dom/Node.html">Node</a> refChild)</td></tr><tr><td></td><td> <b>DOM L1</b>
  Removes the specified child from this node's list of children,
- or else reports an exception.</blockquote></td></tr><tr><td class="no-border-r" valign="top" align="right" width="1%"><p class="prototype-type"> void</p></td><td class="with-border" valign="top" align="left"><p class="prototype"><a href="#removeEventListener(String,org.w3c.dom.events.EventListener,boolean)">removeEventListener</a>(<span class="parameter">String&nbsp;type,</span> <span class="parameter"><a href="../../../org/w3c/dom/events/EventListener.html">EventListener</a>&nbsp;listener,</span> <span class="parameter">boolean&nbsp;useCapture</span>)</p><blockquote class="classdoc-summary-comment">DOM L2 (Events)
- Unregisters an event listener.</blockquote></td></tr><tr><td class="no-border-r" valign="top" align="right" width="1%"><p class="prototype-type"> <a href="../../../org/w3c/dom/Node.html">Node</a></p></td><td class="with-border" valign="top" align="left"><p class="prototype"><a href="#replaceChild(org.w3c.dom.Node,org.w3c.dom.Node)">replaceChild</a>(<span class="parameter"><a href="../../../org/w3c/dom/Node.html">Node</a>&nbsp;newChild,</span> <span class="parameter"><a href="../../../org/w3c/dom/Node.html">Node</a>&nbsp;refChild</span>)</p><blockquote class="classdoc-summary-comment">DOM L1
- Replaces the specified node in this node's list of children.</blockquote></td></tr><tr><td class="no-border-r" valign="top" align="right" width="1%"><p class="prototype-type"> void</p></td><td class="with-border" valign="top" align="left"><p class="prototype"><a href="#setNodeValue(String)">setNodeValue</a>(<span class="parameter">String&nbsp;value</span>)</p><blockquote class="classdoc-summary-comment">DOM L1
+ or else reports an exception.</td></tr><tr><td class="class summary left">public final void</td><td class="class summary right"> <a href="#removeEventListener(String,org.w3c.dom.events.EventListener,boolean)">removeEventListener</a>(String type, <a href="../../..//org/w3c/dom/events/EventListener.html">EventListener</a> listener, boolean useCapture)</td></tr><tr><td></td><td> <b>DOM L2 (Events)</b>
+ Unregisters an event listener.</td></tr><tr><td class="class summary left">public <a href="../../..//org/w3c/dom/Node.html">Node</a></td><td class="class summary right"> <a href="#replaceChild(org.w3c.dom.Node,org.w3c.dom.Node)">replaceChild</a>(<a href="../../..//org/w3c/dom/Node.html">Node</a> newChild, <a href="../../..//org/w3c/dom/Node.html">Node</a> refChild)</td></tr><tr><td></td><td> <b>DOM L1</b>
+ Replaces the specified node in this node's list of children.</td></tr><tr><td class="class summary left">public void</td><td class="class summary right"> <a href="#setNodeValue(String)">setNodeValue</a>(String value)</td></tr><tr><td></td><td> <b>DOM L1</b>
  Does nothing; this must be overridden (along with the
- getNodeValue method) for nodes with a non-null defined value.</blockquote></td></tr><tr><td class="no-border-r" valign="top" align="right" width="1%"><p class="prototype-type"> void</p></td><td class="with-border" valign="top" align="left"><p class="prototype"><a href="#setPrefix(String)">setPrefix</a>(<span class="parameter">String&nbsp;prefix</span>)</p><blockquote class="classdoc-summary-comment">DOM L2
+ getNodeValue method) for nodes with a non-null defined value.</td></tr><tr><td class="class summary left">public void</td><td class="class summary right"> <a href="#setPrefix(String)">setPrefix</a>(String prefix)</td></tr><tr><td></td><td> <b>DOM L2</b>
  Does nothing; this must be overridden (along with the
- getPrefix method) for element and attribute nodes.</blockquote></td></tr><tr><td class="no-border-r" valign="top" align="right" width="1%"><p class="prototype-type"> void</p></td><td class="with-border" valign="top" align="left"><p class="prototype"><a href="#setTextContent(String)">setTextContent</a>(<span class="parameter">String&nbsp;textContent</span>)</p><blockquote class="classdoc-summary-comment"/></td></tr><tr><td class="no-border-r" valign="top" align="right" width="1%"><p class="prototype-type"> Object</p></td><td class="with-border" valign="top" align="left"><p class="prototype"><a href="#setUserData(String,Object,org.w3c.dom.UserDataHandler)">setUserData</a>(<span class="parameter">String&nbsp;key,</span> <span class="parameter">Object&nbsp;data,</span> <span class="parameter"><a href="../../../org/w3c/dom/UserDataHandler.html">UserDataHandler</a>&nbsp;handler</span>)</p><blockquote class="classdoc-summary-comment"/></td></tr><tr><td class="no-border-r" valign="top" align="right" width="1%"><p class="prototype-type"> void</p></td><td class="with-border" valign="top" align="left"><p class="prototype"><a href="#trimToSize()">trimToSize</a>()</p><blockquote class="classdoc-summary-comment"> Minimize extra space consumed by this node to hold children and event
- listeners.</blockquote></td></tr></table><h1 class="classdoc-header">Constructor Details</h1><a name="DomNode(org.w3c.dom.Document)"/><h3>DomNode</h3><p class="prototype">protected  <b>DomNode</b>(<span class="parameter"><a href="../../../org/w3c/dom/Document.html">Document</a>&nbsp;owner</span>)</p><div class="classdoc-comment-body"> Constructs a node and associates it with its owner.  Only
+ getPrefix method) for element and attribute nodes.</td></tr><tr><td class="class summary left">public void</td><td class="class summary right"> <a href="#setTextContent(String)">setTextContent</a>(String textContent)</td></tr><tr><td></td><td> This attribute returns the text content of this node and its 
+ descendants.</td></tr><tr><td class="class summary left">public Object</td><td class="class summary right"> <a href="#setUserData(String,Object,org.w3c.dom.UserDataHandler)">setUserData</a>(String key, Object data, <a href="../../..//org/w3c/dom/UserDataHandler.html">UserDataHandler</a> handler)</td></tr><tr><td></td><td> Associate an object to a key on this node.</td></tr><tr><td class="class summary left">public String</td><td class="class summary right"> <a href="#toString()">toString</a>()</td></tr><tr><td></td><td></td></tr><tr><td class="class summary left">public void</td><td class="class summary right"> <a href="#trimToSize()">trimToSize</a>()</td></tr><tr><td></td><td> Minimize extra space consumed by this node to hold children and event
+ listeners.</td></tr></table><h4>Constructor Details</h4><a name="DomNode(short,gnu.xml.dom.DomDocument)"/><div><h3>DomNode</h3><p>protected DomNode(short nodeType, <a href="../../..//gnu/xml/dom/DomDocument.html">DomDocument</a> owner)</p><div> Constructs a node and associates it with its owner.  Only
  Document and DocumentType nodes may be created with no owner,
  and DocumentType nodes get an owner as soon as they are
  associated with a document.
-</div><p/><div class="classdoc-tag-section-header">Parameters:</div><dl class="classdoc-list"><dt><span class="prototype-name">owner</span></dt></dl><h1 class="classdoc-header">Method Details</h1><a name="addEventListener(String,org.w3c.dom.events.EventListener,boolean)"/><h3>addEventListener</h3><p class="prototype">public final void <b>addEventListener</b>(<span class="parameter">String&nbsp;type,</span> <span class="parameter"><a href="../../../org/w3c/dom/events/EventListener.html">EventListener</a>&nbsp;listener,</span> <span class="parameter">boolean&nbsp;useCapture</span>)</p><div class="classdoc-comment-body"><b>DOM L2 (Events)</b>
+</div><div><h4>Parameters:</h4><div>nodeType</div><div>owner</div></div></div><h4>Method Details</h4><a name="addEventListener(String,org.w3c.dom.events.EventListener,boolean)"/><div><h3>addEventListener</h3><p>public final void addEventListener(String type, <a href="../../..//org/w3c/dom/events/EventListener.html">EventListener</a> listener, boolean useCapture)</p><div> <b>DOM L2 (Events)</b>
  Registers an event listener's interest in a class of events.
-</div><p/><div class="classdoc-tag-section-header">Parameters:</div><dl class="classdoc-list"><dt><span class="prototype-name">type</span></dt><dt><span class="prototype-name">listener</span></dt><dt><span class="prototype-name">useCapture</span></dt></dl><hr/><a name="appendChild(org.w3c.dom.Node)"/><h3>appendChild</h3><p class="prototype">public Node <b>appendChild</b>(<span class="parameter"><a href="../../../org/w3c/dom/Node.html">Node</a>&nbsp;newChild</span>)</p><div class="classdoc-comment-body"><b>DOM L1</b>
+</div><div><h4>Specified by:</h4><div>addEventListener in interface <a href="../../..//org/w3c/dom/events/EventTarget.html">EventTarget</a></div></div><div><h4>Parameters:</h4><div>type</div><div>listener</div><div>useCapture</div></div></div><hr/><a name="appendChild(org.w3c.dom.Node)"/><div><h3>appendChild</h3><p>public <a href="../../..//org/w3c/dom/Node.html">Node</a> appendChild(<a href="../../..//org/w3c/dom/Node.html">Node</a> newChild)</p><div> <b>DOM L1</b>
  Appends the specified node to this node's list of children.
  Document subclasses must override this to enforce the restrictions
  that there be only one element and document type child.
@@ -101,18 +102,25 @@
 
  <p/> If this DOM has been compiled without mutation event support,
  these events will not be reported.
-</div><p/><div class="classdoc-tag-section-header">Parameters:</div><dl class="classdoc-list"><dt><span class="prototype-name">newChild</span></dt></dl><hr/><a name="clone()"/><h3>clone</h3><p class="prototype">public Object <b>clone</b>()</p><div class="classdoc-comment-body"> Clones this node; roughly equivalent to cloneNode(false).
+</div><div><h4>Specified by:</h4><div>appendChild in interface <a href="../../..//org/w3c/dom/Node.html">Node</a></div></div><div><h4>Parameters:</h4><div>newChild</div></div></div><hr/><a name="cloneNode(boolean)"/><div><h3>cloneNode</h3><p>public <a href="../../..//org/w3c/dom/Node.html">Node</a> cloneNode(boolean deep)</p><div> <b>DOM L1</b>
+ Returns a clone of this node which optionally includes cloned
+ versions of child nodes.  Clones are always mutable, except for
+ entity reference nodes.
+</div><div><h4>Specified by:</h4><div>cloneNode in interface <a href="../../..//org/w3c/dom/Node.html">Node</a></div></div><div><h4>Parameters:</h4><div>deep</div></div></div><hr/><a name="clone()"/><div><h3>clone</h3><p>public Object clone()</p><div> Clones this node; roughly equivalent to cloneNode(false).
  Element subclasses must provide a new implementation which
  invokes this method to handle the basics, and then arranges
  to clone any element attributes directly.  Attribute subclasses
  must make similar arrangements, ensuring that existing ties to
  elements are broken by cloning.
-</div><p/><hr/><a name="cloneNode(boolean)"/><h3>cloneNode</h3><p class="prototype">public Node <b>cloneNode</b>(<span class="parameter">boolean&nbsp;deep</span>)</p><div class="classdoc-comment-body"><b>DOM L1</b>
- Returns a clone of this node which optionally includes cloned
- versions of child nodes.  Clones are always mutable, except for
- entity reference nodes.
-</div><p/><div class="classdoc-tag-section-header">Parameters:</div><dl class="classdoc-list"><dt><span class="prototype-name">deep</span></dt></dl><hr/><a name="compact()"/><h3>compact</h3><p class="prototype">public void <b>compact</b>()</p><div class="classdoc-comment-body"> Reduces space utilization for this node.
-</div><p/><hr/><a name="compareDocumentPosition(org.w3c.dom.Node)"/><h3>compareDocumentPosition</h3><p class="prototype">public short <b>compareDocumentPosition</b>(<span class="parameter"><a href="../../../org/w3c/dom/Node.html">Node</a>&nbsp;other</span>)</p><p/><div class="classdoc-tag-section-header">Parameters:</div><dl class="classdoc-list"><dt><span class="prototype-name">other</span></dt></dl><hr/><a name="createEvent(String)"/><h3>createEvent</h3><p class="prototype">public Event <b>createEvent</b>(<span class="parameter">String&nbsp;eventType</span>)</p><div class="classdoc-comment-body"><b>DOM L2 (Events)</b>
+</div></div><hr/><a name="compact()"/><div><h3>compact</h3><p>public void compact()</p><div> Reduces space utilization for this node.
+</div></div><hr/><a name="compareDocumentPosition(org.w3c.dom.Node)"/><div><h3>compareDocumentPosition</h3><p>public short compareDocumentPosition(<a href="../../..//org/w3c/dom/Node.html">Node</a> other)</p><div> Compares the reference node, i.e. the node on which this method is 
+ being called, with a node, i.e. the one passed as a parameter, with 
+ regard to their position in the document and according to the 
+ document order.
+</div><div><h4>Specified by:</h4><div>compareDocumentPosition in interface <a href="../../..//org/w3c/dom/Node.html">Node</a></div></div><div><h4>Parameters:</h4><div>other - The node to compare against the reference node.</div></div><div><h4>Throws:</h4><div><a href="../../..//org/w3c/dom/DOMException.html">DOMException</a> - NOT_SUPPORTED_ERR: when the compared nodes are from different DOM 
+implementations that do not coordinate to return consistent 
+implementation-specific results.</div></div><dl class="tag list"><dt class="tag section header"><b>Since:</b></dt><dd>DOM Level 3</dt></dl></div><hr/><a name="compareTo(Object)"/><div><h3>compareTo</h3><p>public final int compareTo(Object other)</p><div> DOM nodes have a natural ordering: document order.
+</div><div><h4>Parameters:</h4><div>other</div></div></div><hr/><a name="createEvent(String)"/><div><h3>createEvent</h3><p>public <a href="../../..//org/w3c/dom/events/Event.html">Event</a> createEvent(String eventType)</p><div> <b>DOM L2 (Events)</b>
  Returns an instance of the specified type of event object.
  Understands about DOM Mutation, HTML, and UI events.
 
@@ -123,71 +131,131 @@
  classes and initialize it using use such a "USER-" event type name;
  or defin, instantiate, and initialize an application-specific subclass
  of DomEvent and pass that to dispatchEvent().
-</div><p/><div class="classdoc-tag-section-header">Parameters:</div><dl class="classdoc-list"><dt><span class="prototype-name">eventType</span> - Identifies the particular DOM feature module
-defining the type of event, such as "MutationEvents".</dt></dl><hr/><a name="dispatchEvent(org.w3c.dom.events.Event)"/><h3>dispatchEvent</h3><p class="prototype">public final boolean <b>dispatchEvent</b>(<span class="parameter"><a href="../../../org/w3c/dom/events/Event.html">Event</a>&nbsp;event</span>)</p><div class="classdoc-comment-body"><b>DOM L2 (Events)</b>
+</div><div><h4>Specified by:</h4><div>createEvent in interface <a href="../../..//org/w3c/dom/events/DocumentEvent.html">DocumentEvent</a></div></div><div><h4>Parameters:</h4><div>eventType - Identifies the particular DOM feature module
+defining the type of event, such as "MutationEvents".
+<em>The event "name" is a different kind of "type".</em></div></div></div><hr/><a name="dispatchEvent(org.w3c.dom.events.Event)"/><div><h3>dispatchEvent</h3><p>public final boolean dispatchEvent(<a href="../../..//org/w3c/dom/events/Event.html">Event</a> event)</p><div> <b>DOM L2 (Events)</b>
  Delivers an event to all relevant listeners, returning true if the
  caller should perform their default action.  Note that the event
  must have been provided by the createEvent() method on this
  class, else it can't be dispatched.
-</div><p/><div class="classdoc-tag-section-header">Parameters:</div><dl class="classdoc-list"><dt><span class="prototype-name">event</span></dt></dl><div class="classdoc-tag-section-header">Throws:</div><dl class="classdoc-list"><dt><code/> - When a null event is passed.</dt><dt><code/> - When the event wasn't provided by
-the createEvent method, or otherwise isn't a DomEvent.</dt><dt><code><a href="../../../org/w3c/dom/events/EventException.html">EventException</a></code> - If the event type wasn't specified</dt></dl><div class="classdoc-tag-section-header">See Also:</div><dl class="classdoc-list"><dt><code><a href="#createEvent
-
-">createEvent</a></code></dt></dl><hr/><a name="getAttributes()"/><h3>getAttributes</h3><p class="prototype">public NamedNodeMap <b>getAttributes</b>()</p><div class="classdoc-comment-body"><b>DOM L1</b>
+</div><div><h4>Specified by:</h4><div>dispatchEvent in interface <a href="../../..//org/w3c/dom/events/EventTarget.html">EventTarget</a></div></div><div><h4>Parameters:</h4><div>event</div></div><div><h4>Throws:</h4><div><a href="../../..//org/w3c/dom/events/EventException.html">EventException</a> - If the event type wasn't specified</div></div></div><hr/><a name="getAttributes()"/><div><h3>getAttributes</h3><p>public <a href="../../..//org/w3c/dom/NamedNodeMap.html">NamedNodeMap</a> getAttributes()</p><div> <b>DOM L1</b>
  Returns null; Element subclasses must override this method.
-</div><p/><hr/><a name="getBaseURI()"/><h3>getBaseURI</h3><p class="prototype">public String <b>getBaseURI</b>()</p><p/><hr/><a name="getChildNodes()"/><h3>getChildNodes</h3><p class="prototype">public NodeList <b>getChildNodes</b>()</p><div class="classdoc-comment-body"><b>DOM L1</b>
+</div><div><h4>Specified by:</h4><div>getAttributes in interface <a href="../../..//org/w3c/dom/Node.html">Node</a></div></div></div><hr/><a name="getBaseURI()"/><div><h3>getBaseURI</h3><p>public String getBaseURI()</p><div> The absolute base URI of this node or <code>null</code> if the 
+ implementation wasn't able to obtain an absolute URI. This value is 
+ computed as described in . However, when the <code>Document</code> 
+ supports the feature "HTML" [<a href="http://www.w3.org/TR/2003/REC-DOM-Level-2-HTML-20030109">DOM Level 2 HTML</a>]
+ , the base URI is computed using first the value of the href 
+ attribute of the HTML BASE element if any, and the value of the 
+ <code>documentURI</code> attribute from the <code>Document</code> 
+ interface otherwise.
+</div><div><h4>Specified by:</h4><div>getBaseURI in interface <a href="../../..//org/w3c/dom/Node.html">Node</a></div></div><dl class="tag list"><dt class="tag section header"><b>Since:</b></dt><dd>DOM Level 3</dt></dl></div><hr/><a name="getChildNodes()"/><div><h3>getChildNodes</h3><p>public <a href="../../..//org/w3c/dom/NodeList.html">NodeList</a> getChildNodes()</p><div> <b>DOM L1</b>
  Returns a list, possibly empty, of the children of this node.
  In this implementation, to conserve memory, nodes are the same
  as their list of children.  This can have ramifications for
  subclasses, which may need to provide their own getLength method
  for reasons unrelated to the NodeList method of the same name.
-</div><p/><hr/><a name="getElementsByTagName(String)"/><h3>getElementsByTagName</h3><p class="prototype">public NodeList <b>getElementsByTagName</b>(<span class="parameter">String&nbsp;tag</span>)</p><div class="classdoc-comment-body"><b>DOM L1</b>
- Creates a NodeList giving array-style access to elements with
- the specified name.  Access is fastest if indices change by
- small values, and the DOM is not modified.
-</div><p/><div class="classdoc-tag-section-header">Parameters:</div><dl class="classdoc-list"><dt><span class="prototype-name">tag</span></dt></dl><hr/><a name="getElementsByTagNameNS(String,String)"/><h3>getElementsByTagNameNS</h3><p class="prototype">public NodeList <b>getElementsByTagNameNS</b>(<span class="parameter">String&nbsp;namespace,</span> <span class="parameter">String&nbsp;local</span>)</p><div class="classdoc-comment-body"><b>DOM L2</b>
+</div><div><h4>Specified by:</h4><div>getChildNodes in interface <a href="../../..//org/w3c/dom/Node.html">Node</a></div></div></div><hr/><a name="getElementsByTagNameNS(String,String)"/><div><h3>getElementsByTagNameNS</h3><p>public <a href="../../..//org/w3c/dom/NodeList.html">NodeList</a> getElementsByTagNameNS(String namespace, String local)</p><div> <b>DOM L2</b>
  Creates a NodeList giving array-style access to elements with
  the specified namespace and local name.  Access is fastest if
  indices change by small values, and the DOM is not modified.
-</div><p/><div class="classdoc-tag-section-header">Parameters:</div><dl class="classdoc-list"><dt><span class="prototype-name">namespace</span></dt><dt><span class="prototype-name">local</span></dt></dl><hr/><a name="getFeature(String,String)"/><h3>getFeature</h3><p class="prototype">public Object <b>getFeature</b>(<span class="parameter">String&nbsp;feature,</span> <span class="parameter">String&nbsp;version</span>)</p><p/><div class="classdoc-tag-section-header">Parameters:</div><dl class="classdoc-list"><dt><span class="prototype-name">feature</span></dt><dt><span class="prototype-name">version</span></dt></dl><hr/><a name="getFirstChild()"/><h3>getFirstChild</h3><p class="prototype">public final Node <b>getFirstChild</b>()</p><div class="classdoc-comment-body"><b>DOM L1</b>
+</div><div><h4>Parameters:</h4><div>namespace</div><div>local</div></div></div><hr/><a name="getElementsByTagName(String)"/><div><h3>getElementsByTagName</h3><p>public <a href="../../..//org/w3c/dom/NodeList.html">NodeList</a> getElementsByTagName(String tag)</p><div> <b>DOM L1</b>
+ Creates a NodeList giving array-style access to elements with
+ the specified name.  Access is fastest if indices change by
+ small values, and the DOM is not modified.
+</div><div><h4>Parameters:</h4><div>tag</div></div></div><hr/><a name="getFeature(String,String)"/><div><h3>getFeature</h3><p>public Object getFeature(String feature, String version)</p><div>  This method returns a specialized object which implements the 
+ specialized APIs of the specified feature and version, as specified 
+ in . The specialized object may also be obtained by using 
+ binding-specific casting methods but is not necessarily expected to, 
+ as discussed in . This method also allow the implementation to 
+ provide specialized objects which do not support the <code>Node</code>
+  interface. 
+</div><div><h4>Specified by:</h4><div>getFeature in interface <a href="../../..//org/w3c/dom/Node.html">Node</a></div></div><div><h4>Parameters:</h4><div>feature - The name of the feature requested. Note that any plus 
+sign "+" prepended to the name of the feature will be ignored since 
+it is not significant in the context of this method.</div><div>version - This is the version number of the feature to test.</div></div><dl class="tag list"><dt class="tag section header"><b>Since:</b></dt><dd>DOM Level 3</dt></dl></div><hr/><a name="getFirstChild()"/><div><h3>getFirstChild</h3><p>public <a href="../../..//org/w3c/dom/Node.html">Node</a> getFirstChild()</p><div> <b>DOM L1</b>
  Returns the first child of this node, or null if there are none.
-</div><p/><hr/><a name="getLastChild()"/><h3>getLastChild</h3><p class="prototype">public final Node <b>getLastChild</b>()</p><div class="classdoc-comment-body"><b>DOM L1</b>
+</div><div><h4>Specified by:</h4><div>getFirstChild in interface <a href="../../..//org/w3c/dom/Node.html">Node</a></div></div></div><hr/><a name="getLastChild()"/><div><h3>getLastChild</h3><p>public <a href="../../..//org/w3c/dom/Node.html">Node</a> getLastChild()</p><div> <b>DOM L1</b>
  Returns the last child of this node, or null if there are none.
-</div><p/><hr/><a name="getLength()"/><h3>getLength</h3><p class="prototype">public int <b>getLength</b>()</p><div class="classdoc-comment-body"><b>DOM L1 (NodeList)</b>
+</div><div><h4>Specified by:</h4><div>getLastChild in interface <a href="../../..//org/w3c/dom/Node.html">Node</a></div></div></div><hr/><a name="getLength()"/><div><h3>getLength</h3><p>public int getLength()</p><div> <b>DOM L1 (NodeList)</b>
  Returns the number of elements in this NodeList.
  (Note that many interfaces have a "Length" property, not just
  NodeList, and if a node subtype must implement one of those,
  it will also need to override getChildNodes.)
-</div><p/><hr/><a name="getLocalName()"/><h3>getLocalName</h3><p class="prototype">public String <b>getLocalName</b>()</p><div class="classdoc-comment-body"><b>DOM L2</b>
+</div><div><h4>Specified by:</h4><div>getLength in interface <a href="../../..//org/w3c/dom/NodeList.html">NodeList</a></div></div></div><hr/><a name="getLocalName()"/><div><h3>getLocalName</h3><p>public String getLocalName()</p><div> <b>DOM L2</b>
  Returns the node name; this must be overridden for element and
  attribute nodes.
-</div><p/><hr/><a name="getNamespaceURI()"/><h3>getNamespaceURI</h3><p class="prototype">public String <b>getNamespaceURI</b>()</p><div class="classdoc-comment-body"><b>DOM L2</b>
+</div><div><h4>Specified by:</h4><div>getLocalName in interface <a href="../../..//org/w3c/dom/Node.html">Node</a></div></div></div><hr/><a name="getNamespaceURI()"/><div><h3>getNamespaceURI</h3><p>public String getNamespaceURI()</p><div> <b>DOM L2</b>
  Returns null; this must be overridden for element and
  attribute nodes.
-</div><p/><hr/><a name="getNextSibling()"/><h3>getNextSibling</h3><p class="prototype">public final Node <b>getNextSibling</b>()</p><div class="classdoc-comment-body"><b>DOM L1</b>
+</div><div><h4>Specified by:</h4><div>getNamespaceURI in interface <a href="../../..//org/w3c/dom/Node.html">Node</a></div></div></div><hr/><a name="getNextSibling()"/><div><h3>getNextSibling</h3><p>public <a href="../../..//org/w3c/dom/Node.html">Node</a> getNextSibling()</p><div> <b>DOM L1</b>
  Returns the previous sibling, if one is known.
-</div><p/><hr/><a name="getNodeName()"/><h3>getNodeName</h3><p class="prototype">public String <b>getNodeName</b>()</p><div class="classdoc-comment-body">This forces GCJ compatibility.
+</div><div><h4>Specified by:</h4><div>getNextSibling in interface <a href="../../..//org/w3c/dom/Node.html">Node</a></div></div></div><hr/><a name="getNodeName()"/><div><h3>getNodeName</h3><p>public String getNodeName()</p><div>This forces GCJ compatibility.
  Without this method GCJ seems unable to natively compile GNUJAXP.
-</div><p/><hr/><a name="getNodeType()"/><h3>getNodeType</h3><p class="prototype">public short <b>getNodeType</b>()</p><div class="classdoc-comment-body">This forces GCJ compatibility.
+</div><div><h4>Specified by:</h4><div>getNodeName in interface <a href="../../..//org/w3c/dom/Node.html">Node</a></div></div></div><hr/><a name="getNodeType()"/><div><h3>getNodeType</h3><p>public final short getNodeType()</p><div>This forces GCJ compatibility.
  Without this method GCJ is unable to compile to byte code.
-</div><p/><hr/><a name="getNodeValue()"/><h3>getNodeValue</h3><p class="prototype">public String <b>getNodeValue</b>()</p><div class="classdoc-comment-body"><b>DOM L1</b>
+</div><div><h4>Specified by:</h4><div>getNodeType in interface <a href="../../..//org/w3c/dom/Node.html">Node</a></div></div></div><hr/><a name="getNodeValue()"/><div><h3>getNodeValue</h3><p>public String getNodeValue()</p><div> <b>DOM L1</b>
  Returns null; this must be overridden for nodes types with
  a defined value, along with the setNodeValue method.
-</div><p/><hr/><a name="getOwnerDocument()"/><h3>getOwnerDocument</h3><p class="prototype">public final Document <b>getOwnerDocument</b>()</p><div class="classdoc-comment-body"><b>DOM L1 (modified in L2)</b>
+</div><div><h4>Specified by:</h4><div>getNodeValue in interface <a href="../../..//org/w3c/dom/Node.html">Node</a></div></div></div><hr/><a name="getOwnerDocument()"/><div><h3>getOwnerDocument</h3><p>public final <a href="../../..//org/w3c/dom/Document.html">Document</a> getOwnerDocument()</p><div> <b>DOM L1 (modified in L2)</b>
  Returns the owner document.  This is only null for Document nodes,
  and (new in L2) for DocumentType nodes which have not yet been
  associated with the rest of their document.
-</div><p/><hr/><a name="getParentNode()"/><h3>getParentNode</h3><p class="prototype">public final Node <b>getParentNode</b>()</p><div class="classdoc-comment-body"><b>DOM L1</b>
+</div><div><h4>Specified by:</h4><div>getOwnerDocument in interface <a href="../../..//org/w3c/dom/Node.html">Node</a></div></div></div><hr/><a name="getParentNode()"/><div><h3>getParentNode</h3><p>public <a href="../../..//org/w3c/dom/Node.html">Node</a> getParentNode()</p><div> <b>DOM L1</b>
  Returns the parent node, if one is known.
-</div><p/><hr/><a name="getPrefix()"/><h3>getPrefix</h3><p class="prototype">public String <b>getPrefix</b>()</p><div class="classdoc-comment-body"><b>DOM L2</b>
+</div><div><h4>Specified by:</h4><div>getParentNode in interface <a href="../../..//org/w3c/dom/Node.html">Node</a></div></div></div><hr/><a name="getPrefix()"/><div><h3>getPrefix</h3><p>public String getPrefix()</p><div> <b>DOM L2</b>
  Returns null; this must be overridden for element and
  attribute nodes.
-</div><p/><hr/><a name="getPreviousSibling()"/><h3>getPreviousSibling</h3><p class="prototype">public final Node <b>getPreviousSibling</b>()</p><div class="classdoc-comment-body"><b>DOM L1</b>
+</div><div><h4>Specified by:</h4><div>getPrefix in interface <a href="../../..//org/w3c/dom/Node.html">Node</a></div></div></div><hr/><a name="getPreviousSibling()"/><div><h3>getPreviousSibling</h3><p>public <a href="../../..//org/w3c/dom/Node.html">Node</a> getPreviousSibling()</p><div> <b>DOM L1</b>
  Returns the previous sibling, if one is known.
-</div><p/><hr/><a name="getTextContent()"/><h3>getTextContent</h3><p class="prototype">public String <b>getTextContent</b>()</p><p/><hr/><a name="getUserData(String)"/><h3>getUserData</h3><p class="prototype">public Object <b>getUserData</b>(<span class="parameter">String&nbsp;key</span>)</p><p/><div class="classdoc-tag-section-header">Parameters:</div><dl class="classdoc-list"><dt><span class="prototype-name">key</span></dt></dl><hr/><a name="hasAttributes()"/><h3>hasAttributes</h3><p class="prototype">public boolean <b>hasAttributes</b>()</p><div class="classdoc-comment-body"><b>DOM L2&gt;</b>
+</div><div><h4>Specified by:</h4><div>getPreviousSibling in interface <a href="../../..//org/w3c/dom/Node.html">Node</a></div></div></div><hr/><a name="getTextContent()"/><div><h3>getTextContent</h3><p>public final String getTextContent()</p><div> This attribute returns the text content of this node and its 
+ descendants. When it is defined to be <code>null</code>, setting it 
+ has no effect. On setting, any possible children this node may have 
+ are removed and, if it the new string is not empty or 
+ <code>null</code>, replaced by a single <code>Text</code> node 
+ containing the string this attribute is set to. 
+ <br/> On getting, no serialization is performed, the returned string 
+ does not contain any markup. No whitespace normalization is performed 
+ and the returned string does not contain the white spaces in element 
+ content (see the attribute 
+ <code>Text.isElementContentWhitespace</code>). Similarly, on setting, 
+ no parsing is performed either, the input string is taken as pure 
+ textual content. 
+ <br/>The string returned is made of the text content of this node 
+ depending on its type, as defined below: 
+ <table border="1" cellpadding="3">
+ <tr>
+ <th>Node type</th>
+ <th>Content</th>
+ </tr>
+ <tr>
+ <td valign="top" rowspan="1" colspan="1">
+ ELEMENT_NODE, ATTRIBUTE_NODE, ENTITY_NODE, ENTITY_REFERENCE_NODE, 
+ DOCUMENT_FRAGMENT_NODE</td>
+ <td valign="top" rowspan="1" colspan="1">concatenation of the <code>textContent</code> 
+ attribute value of every child node, excluding COMMENT_NODE and 
+ PROCESSING_INSTRUCTION_NODE nodes. This is the empty string if the 
+ node has no children.</td>
+ </tr>
+ <tr>
+ <td valign="top" rowspan="1" colspan="1">TEXT_NODE, CDATA_SECTION_NODE, COMMENT_NODE, 
+ PROCESSING_INSTRUCTION_NODE</td>
+ <td valign="top" rowspan="1" colspan="1"><code>nodeValue</code></td>
+ </tr>
+ <tr>
+ <td valign="top" rowspan="1" colspan="1">DOCUMENT_NODE, 
+ DOCUMENT_TYPE_NODE, NOTATION_NODE</td>
+ <td valign="top" rowspan="1" colspan="1"><em>null</em></td>
+ </tr>
+ </table>
+</div><div><h4>Specified by:</h4><div>getTextContent in interface <a href="../../..//org/w3c/dom/Node.html">Node</a></div></div><div><h4>Throws:</h4><div><a href="../../..//org/w3c/dom/DOMException.html">DOMException</a> - DOMSTRING_SIZE_ERR: Raised when it would return more characters than 
+fit in a <code>DOMString</code> variable on the implementation 
+platform.</div></div><dl class="tag list"><dt class="tag section header"><b>Since:</b></dt><dd>DOM Level 3</dt></dl></div><hr/><a name="getUserData(String)"/><div><h3>getUserData</h3><p>public Object getUserData(String key)</p><div> Retrieves the object associated to a key on a this node. The object 
+ must first have been set to this node by calling 
+ <code>setUserData</code> with the same key.
+</div><div><h4>Specified by:</h4><div>getUserData in interface <a href="../../..//org/w3c/dom/Node.html">Node</a></div></div><div><h4>Parameters:</h4><div>key - The key the object is associated to.</div></div><dl class="tag list"><dt class="tag section header"><b>Since:</b></dt><dd>DOM Level 3</dt></dl></div><hr/><a name="hasAttributes()"/><div><h3>hasAttributes</h3><p>public boolean hasAttributes()</p><div> <b>DOM L2&gt;</b>
  Returns true iff this is an element node with attributes.
-</div><p/><hr/><a name="hasChildNodes()"/><h3>hasChildNodes</h3><p class="prototype">public final boolean <b>hasChildNodes</b>()</p><div class="classdoc-comment-body"><b>DOM L1</b>
+</div><div><h4>Specified by:</h4><div>hasAttributes in interface <a href="../../..//org/w3c/dom/Node.html">Node</a></div></div></div><hr/><a name="hasChildNodes()"/><div><h3>hasChildNodes</h3><p>public boolean hasChildNodes()</p><div> <b>DOM L1</b>
  Returns true if this node has children.
-</div><p/><hr/><a name="insertBefore(org.w3c.dom.Node,org.w3c.dom.Node)"/><h3>insertBefore</h3><p class="prototype">public Node <b>insertBefore</b>(<span class="parameter"><a href="../../../org/w3c/dom/Node.html">Node</a>&nbsp;newChild,</span> <span class="parameter"><a href="../../../org/w3c/dom/Node.html">Node</a>&nbsp;refChild</span>)</p><div class="classdoc-comment-body"><b>DOM L1</b>
+</div><div><h4>Specified by:</h4><div>hasChildNodes in interface <a href="../../..//org/w3c/dom/Node.html">Node</a></div></div></div><hr/><a name="insertBefore(org.w3c.dom.Node,org.w3c.dom.Node)"/><div><h3>insertBefore</h3><p>public <a href="../../..//org/w3c/dom/Node.html">Node</a> insertBefore(<a href="../../..//org/w3c/dom/Node.html">Node</a> newChild, <a href="../../..//org/w3c/dom/Node.html">Node</a> refChild)</p><div> <b>DOM L1</b>
  Inserts the specified node in this node's list of children.
  Document subclasses must override this to enforce the restrictions
  that there be only one element and document type child.
@@ -201,24 +269,100 @@ the createEvent method, or otherwise isn't a DomEvent.</dt><dt><code><a href="..
 
  <p/> If this DOM has been compiled without mutation event support,
  these events will not be reported.
-</div><p/><div class="classdoc-tag-section-header">Parameters:</div><dl class="classdoc-list"><dt><span class="prototype-name">newChild</span></dt><dt><span class="prototype-name">refChild</span></dt></dl><hr/><a name="isDefaultNamespace(String)"/><h3>isDefaultNamespace</h3><p class="prototype">public boolean <b>isDefaultNamespace</b>(<span class="parameter">String&nbsp;namespaceURI</span>)</p><p/><div class="classdoc-tag-section-header">Parameters:</div><dl class="classdoc-list"><dt><span class="prototype-name">namespaceURI</span></dt></dl><hr/><a name="isEqualNode(org.w3c.dom.Node)"/><h3>isEqualNode</h3><p class="prototype">public boolean <b>isEqualNode</b>(<span class="parameter"><a href="../../../org/w3c/dom/Node.html">Node</a>&nbsp;arg</span>)</p><p/><div class="classdoc-tag-section-header">Parameters:</div><dl class="classdoc-list"><dt><span class="prototype-name">arg</span></dt></dl><hr/><a name="isReadonly()"/><h3>isReadonly</h3><p class="prototype">public final boolean <b>isReadonly</b>()</p><div class="classdoc-comment-body"> Exposes the internal "readonly" flag.  In DOM, children of
+</div><div><h4>Specified by:</h4><div>insertBefore in interface <a href="../../..//org/w3c/dom/Node.html">Node</a></div></div><div><h4>Parameters:</h4><div>newChild</div><div>refChild</div></div></div><hr/><a name="isDefaultNamespace(String)"/><div><h3>isDefaultNamespace</h3><p>public boolean isDefaultNamespace(String namespaceURI)</p><div>  This method checks if the specified <code>namespaceURI</code> is the 
+ default namespace or not. 
+</div><div><h4>Specified by:</h4><div>isDefaultNamespace in interface <a href="../../..//org/w3c/dom/Node.html">Node</a></div></div><div><h4>Parameters:</h4><div>namespaceURI - The namespace URI to look for.</div></div><dl class="tag list"><dt class="tag section header"><b>Since:</b></dt><dd>DOM Level 3</dt></dl></div><hr/><a name="isEqualNode(org.w3c.dom.Node)"/><div><h3>isEqualNode</h3><p>public boolean isEqualNode(<a href="../../..//org/w3c/dom/Node.html">Node</a> arg)</p><div> Tests whether two nodes are equal.
+ <br/>This method tests for equality of nodes, not sameness (i.e., 
+ whether the two nodes are references to the same object) which can be 
+ tested with <code>Node.isSameNode()</code>. All nodes that are the 
+ same will also be equal, though the reverse may not be true.
+ <br/>Two nodes are equal if and only if the following conditions are 
+ satisfied: 
+ <ul>
+ <li>The two nodes are of the same type.
+ </li>
+ <li>The following string 
+ attributes are equal: <code>nodeName</code>, <code>localName</code>, 
+ <code>namespaceURI</code>, <code>prefix</code>, <code>nodeValue</code>
+ . This is: they are both <code>null</code>, or they have the same 
+ length and are character for character identical.
+ </li>
+ <li>The 
+ <code>attributes</code> <code>NamedNodeMaps</code> are equal. This 
+ is: they are both <code>null</code>, or they have the same length and 
+ for each node that exists in one map there is a node that exists in 
+ the other map and is equal, although not necessarily at the same 
+ index.
+ </li>
+ <li>The <code>childNodes</code> <code>NodeLists</code> are equal. 
+ This is: they are both <code>null</code>, or they have the same 
+ length and contain equal nodes at the same index. Note that 
+ normalization can affect equality; to avoid this, nodes should be 
+ normalized before being compared.
+ </li>
+ </ul> 
+ <br/>For two <code>DocumentType</code> nodes to be equal, the following 
+ conditions must also be satisfied: 
+ <ul>
+ <li>The following string attributes 
+ are equal: <code>publicId</code>, <code>systemId</code>, 
+ <code>internalSubset</code>.
+ </li>
+ <li>The <code>entities</code> 
+ <code>NamedNodeMaps</code> are equal.
+ </li>
+ <li>The <code>notations</code> 
+ <code>NamedNodeMaps</code> are equal.
+ </li>
+ </ul> 
+ <br/>On the other hand, the following do not affect equality: the 
+ <code>ownerDocument</code>, <code>baseURI</code>, and 
+ <code>parentNode</code> attributes, the <code>specified</code> 
+ attribute for <code>Attr</code> nodes, the <code>schemaTypeInfo</code>
+  attribute for <code>Attr</code> and <code>Element</code> nodes, the 
+ <code>Text.isElementContentWhitespace</code> attribute for 
+ <code>Text</code> nodes, as well as any user data or event listeners 
+ registered on the nodes. 
+ <p/><b>Note:</b>  As a general rule, anything not mentioned in the 
+ description above is not significant in consideration of equality 
+ checking. Note that future versions of this specification may take 
+ into account more attributes and implementations conform to this 
+ specification are expected to be updated accordingly. 
+</div><div><h4>Specified by:</h4><div>isEqualNode in interface <a href="../../..//org/w3c/dom/Node.html">Node</a></div></div><div><h4>Parameters:</h4><div>arg - The node to compare equality with.</div></div><dl class="tag list"><dt class="tag section header"><b>Since:</b></dt><dd>DOM Level 3</dt></dl></div><hr/><a name="isReadonly()"/><div><h3>isReadonly</h3><p>public final boolean isReadonly()</p><div> Exposes the internal "readonly" flag.  In DOM, children of
  entities and entity references are readonly, as are the
  objects associated with DocumentType objets.
-</div><p/><hr/><a name="isSameNode(org.w3c.dom.Node)"/><h3>isSameNode</h3><p class="prototype">public boolean <b>isSameNode</b>(<span class="parameter"><a href="../../../org/w3c/dom/Node.html">Node</a>&nbsp;other</span>)</p><p/><div class="classdoc-tag-section-header">Parameters:</div><dl class="classdoc-list"><dt><span class="prototype-name">other</span></dt></dl><hr/><a name="isSupported(String,String)"/><h3>isSupported</h3><p class="prototype">public boolean <b>isSupported</b>(<span class="parameter">String&nbsp;feature,</span> <span class="parameter">String&nbsp;version</span>)</p><div class="classdoc-comment-body"><b>DOM L2</b>
+</div></div><hr/><a name="isSameNode(org.w3c.dom.Node)"/><div><h3>isSameNode</h3><p>public boolean isSameNode(<a href="../../..//org/w3c/dom/Node.html">Node</a> other)</p><div> Returns whether this node is the same node as the given one.
+ <br/>This method provides a way to determine whether two 
+ <code>Node</code> references returned by the implementation reference 
+ the same object. When two <code>Node</code> references are references 
+ to the same object, even if through a proxy, the references may be 
+ used completely interchangeably, such that all attributes have the 
+ same values and calling the same DOM method on either reference 
+ always has exactly the same effect.
+</div><div><h4>Specified by:</h4><div>isSameNode in interface <a href="../../..//org/w3c/dom/Node.html">Node</a></div></div><div><h4>Parameters:</h4><div>other - The node to test against.</div></div><dl class="tag list"><dt class="tag section header"><b>Since:</b></dt><dd>DOM Level 3</dt></dl></div><hr/><a name="isSupported(String,String)"/><div><h3>isSupported</h3><p>public boolean isSupported(String feature, String version)</p><div> <b>DOM L2</b>
  Consults the DOM implementation to determine if the requested
  feature is supported.  DocumentType subclasses must override
  this method, and associate themselves directly with the
  DOMImplementation node used.  (This method relies on being able
  to access the DOMImplementation from the owner document, but
  DocumentType nodes can be created without an owner.)
-</div><p/><div class="classdoc-tag-section-header">Parameters:</div><dl class="classdoc-list"><dt><span class="prototype-name">feature</span></dt><dt><span class="prototype-name">version</span></dt></dl><hr/><a name="item(int)"/><h3>item</h3><p class="prototype">public final Node <b>item</b>(<span class="parameter">int&nbsp;index</span>)</p><div class="classdoc-comment-body"><b>DOM L1 (NodeList)</b>
+</div><div><h4>Specified by:</h4><div>isSupported in interface <a href="../../..//org/w3c/dom/Node.html">Node</a></div></div><div><h4>Parameters:</h4><div>feature</div><div>version</div></div></div><hr/><a name="item(int)"/><div><h3>item</h3><p>public <a href="../../..//org/w3c/dom/Node.html">Node</a> item(int index)</p><div> <b>DOM L1 (NodeList)</b>
  Returns the item with the specified index in this NodeList,
  else null.
-</div><p/><div class="classdoc-tag-section-header">Parameters:</div><dl class="classdoc-list"><dt><span class="prototype-name">index</span></dt></dl><hr/><a name="lookupNamespaceURI(String)"/><h3>lookupNamespaceURI</h3><p class="prototype">public String <b>lookupNamespaceURI</b>(<span class="parameter">String&nbsp;prefix</span>)</p><p/><div class="classdoc-tag-section-header">Parameters:</div><dl class="classdoc-list"><dt><span class="prototype-name">prefix</span></dt></dl><hr/><a name="lookupPrefix(String)"/><h3>lookupPrefix</h3><p class="prototype">public String <b>lookupPrefix</b>(<span class="parameter">String&nbsp;namespaceURI</span>)</p><p/><div class="classdoc-tag-section-header">Parameters:</div><dl class="classdoc-list"><dt><span class="prototype-name">namespaceURI</span></dt></dl><hr/><a name="makeReadonly()"/><h3>makeReadonly</h3><p class="prototype">public void <b>makeReadonly</b>()</p><div class="classdoc-comment-body"> Sets the internal "readonly" flag so this subtree can't be changed.
+</div><div><h4>Specified by:</h4><div>item in interface <a href="../../..//org/w3c/dom/NodeList.html">NodeList</a></div></div><div><h4>Parameters:</h4><div>index</div></div></div><hr/><a name="lookupNamespaceURI(String)"/><div><h3>lookupNamespaceURI</h3><p>public String lookupNamespaceURI(String prefix)</p><div> Look up the namespace URI associated to the given prefix, starting from 
+ this node.
+ <br/>See  for details on the algorithm used by this method.
+</div><div><h4>Specified by:</h4><div>lookupNamespaceURI in interface <a href="../../..//org/w3c/dom/Node.html">Node</a></div></div><div><h4>Parameters:</h4><div>prefix - The prefix to look for. If this parameter is 
+<code>null</code>, the method will return the default namespace URI 
+if any.</div></div><dl class="tag list"><dt class="tag section header"><b>Since:</b></dt><dd>DOM Level 3</dt></dl></div><hr/><a name="lookupPrefix(String)"/><div><h3>lookupPrefix</h3><p>public String lookupPrefix(String namespaceURI)</p><div> Look up the prefix associated to the given namespace URI, starting from 
+ this node. The default namespace declarations are ignored by this 
+ method.
+ <br/>See  for details on the algorithm used by this method.
+</div><div><h4>Specified by:</h4><div>lookupPrefix in interface <a href="../../..//org/w3c/dom/Node.html">Node</a></div></div><div><h4>Parameters:</h4><div>namespaceURI - The namespace URI to look for.</div></div><dl class="tag list"><dt class="tag section header"><b>Since:</b></dt><dd>DOM Level 3</dt></dl></div><hr/><a name="makeReadonly()"/><div><h3>makeReadonly</h3><p>public void makeReadonly()</p><div> Sets the internal "readonly" flag so this subtree can't be changed.
  Subclasses need to override this method for any associated content
  that's not a child node, such as an element's attributes or the
  (few) declarations associated with a DocumentType.
-</div><p/><hr/><a name="nameAndTypeEquals(org.w3c.dom.Node)"/><h3>nameAndTypeEquals</h3><p class="prototype">public boolean <b>nameAndTypeEquals</b>(<span class="parameter"><a href="../../../org/w3c/dom/Node.html">Node</a>&nbsp;other</span>)</p><div class="classdoc-comment-body"> Returns true iff node types match, and either (a) both nodes have no
+</div></div><hr/><a name="nameAndTypeEquals(org.w3c.dom.Node)"/><div><h3>nameAndTypeEquals</h3><p>public boolean nameAndTypeEquals(<a href="../../..//org/w3c/dom/Node.html">Node</a> other)</p><div> Returns true iff node types match, and either (a) both nodes have no
  namespace and their getNodeName() values are the same, or (b) both
  nodes have the same getNamespaceURI() and same getLocalName() values.
 
@@ -228,11 +372,11 @@ the createEvent method, or otherwise isn't a DomEvent.</dt><dt><code><a href="..
  typically by not bothering to check nameAndTypeEquals for attributes
  without namespace URIs unless you already know their elements are
  nameAndTypeEquals.
-</div><p/><div class="classdoc-tag-section-header">Parameters:</div><dl class="classdoc-list"><dt><span class="prototype-name">other</span></dt></dl><hr/><a name="normalize()"/><h3>normalize</h3><p class="prototype">public void <b>normalize</b>()</p><div class="classdoc-comment-body"><b>DOM L1 (relocated in DOM L2)</b>
+</div><div><h4>Parameters:</h4><div>other</div></div></div><hr/><a name="normalize()"/><div><h3>normalize</h3><p>public final void normalize()</p><div> <b>DOM L1 (relocated in DOM L2)</b>
  In this node and all contained nodes (including attributes if
  relevant) merge adjacent text nodes.  This is done while ignoring
  text which happens to use CDATA delimiters).
-</div><p/><hr/><a name="removeChild(org.w3c.dom.Node)"/><h3>removeChild</h3><p class="prototype">public Node <b>removeChild</b>(<span class="parameter"><a href="../../../org/w3c/dom/Node.html">Node</a>&nbsp;refChild</span>)</p><div class="classdoc-comment-body"><b>DOM L1</b>
+</div><div><h4>Specified by:</h4><div>normalize in interface <a href="../../..//org/w3c/dom/Node.html">Node</a></div></div></div><hr/><a name="removeChild(org.w3c.dom.Node)"/><div><h3>removeChild</h3><p>public <a href="../../..//org/w3c/dom/Node.html">Node</a> removeChild(<a href="../../..//org/w3c/dom/Node.html">Node</a> refChild)</p><div> <b>DOM L1</b>
  Removes the specified child from this node's list of children,
  or else reports an exception.
 
@@ -240,9 +384,9 @@ the createEvent method, or otherwise isn't a DomEvent.</dt><dt><code><a href="..
 
  <p/> If this DOM has been compiled without mutation event support,
  these events will not be reported.
-</div><p/><div class="classdoc-tag-section-header">Parameters:</div><dl class="classdoc-list"><dt><span class="prototype-name">refChild</span></dt></dl><hr/><a name="removeEventListener(String,org.w3c.dom.events.EventListener,boolean)"/><h3>removeEventListener</h3><p class="prototype">public final void <b>removeEventListener</b>(<span class="parameter">String&nbsp;type,</span> <span class="parameter"><a href="../../../org/w3c/dom/events/EventListener.html">EventListener</a>&nbsp;listener,</span> <span class="parameter">boolean&nbsp;useCapture</span>)</p><div class="classdoc-comment-body"><b>DOM L2 (Events)</b>
+</div><div><h4>Specified by:</h4><div>removeChild in interface <a href="../../..//org/w3c/dom/Node.html">Node</a></div></div><div><h4>Parameters:</h4><div>refChild</div></div></div><hr/><a name="removeEventListener(String,org.w3c.dom.events.EventListener,boolean)"/><div><h3>removeEventListener</h3><p>public final void removeEventListener(String type, <a href="../../..//org/w3c/dom/events/EventListener.html">EventListener</a> listener, boolean useCapture)</p><div> <b>DOM L2 (Events)</b>
  Unregisters an event listener.
-</div><p/><div class="classdoc-tag-section-header">Parameters:</div><dl class="classdoc-list"><dt><span class="prototype-name">type</span></dt><dt><span class="prototype-name">listener</span></dt><dt><span class="prototype-name">useCapture</span></dt></dl><hr/><a name="replaceChild(org.w3c.dom.Node,org.w3c.dom.Node)"/><h3>replaceChild</h3><p class="prototype">public Node <b>replaceChild</b>(<span class="parameter"><a href="../../../org/w3c/dom/Node.html">Node</a>&nbsp;newChild,</span> <span class="parameter"><a href="../../../org/w3c/dom/Node.html">Node</a>&nbsp;refChild</span>)</p><div class="classdoc-comment-body"><b>DOM L1</b>
+</div><div><h4>Specified by:</h4><div>removeEventListener in interface <a href="../../..//org/w3c/dom/events/EventTarget.html">EventTarget</a></div></div><div><h4>Parameters:</h4><div>type</div><div>listener</div><div>useCapture</div></div></div><hr/><a name="replaceChild(org.w3c.dom.Node,org.w3c.dom.Node)"/><div><h3>replaceChild</h3><p>public <a href="../../..//org/w3c/dom/Node.html">Node</a> replaceChild(<a href="../../..//org/w3c/dom/Node.html">Node</a> newChild, <a href="../../..//org/w3c/dom/Node.html">Node</a> refChild)</p><div> <b>DOM L1</b>
  Replaces the specified node in this node's list of children.
  Document subclasses must override this to test the restrictions
  that there be only one element and document type child.
@@ -265,14 +409,57 @@ the createEvent method, or otherwise isn't a DomEvent.</dt><dt><code><a href="..
 
  <p/> If this DOM has been compiled without mutation event support,
  these events will not be reported.
-</div><p/><div class="classdoc-tag-section-header">Parameters:</div><dl class="classdoc-list"><dt><span class="prototype-name">newChild</span></dt><dt><span class="prototype-name">refChild</span></dt></dl><hr/><a name="setNodeValue(String)"/><h3>setNodeValue</h3><p class="prototype">public void <b>setNodeValue</b>(<span class="parameter">String&nbsp;value</span>)</p><div class="classdoc-comment-body"><b>DOM L1</b>
+</div><div><h4>Specified by:</h4><div>replaceChild in interface <a href="../../..//org/w3c/dom/Node.html">Node</a></div></div><div><h4>Parameters:</h4><div>newChild</div><div>refChild</div></div></div><hr/><a name="setNodeValue(String)"/><div><h3>setNodeValue</h3><p>public void setNodeValue(String value)</p><div> <b>DOM L1</b>
  Does nothing; this must be overridden (along with the
  getNodeValue method) for nodes with a non-null defined value.
-</div><p/><div class="classdoc-tag-section-header">Parameters:</div><dl class="classdoc-list"><dt><span class="prototype-name">value</span></dt></dl><hr/><a name="setPrefix(String)"/><h3>setPrefix</h3><p class="prototype">public void <b>setPrefix</b>(<span class="parameter">String&nbsp;prefix</span>)</p><div class="classdoc-comment-body"><b>DOM L2</b>
+</div><div><h4>Specified by:</h4><div>setNodeValue in interface <a href="../../..//org/w3c/dom/Node.html">Node</a></div></div><div><h4>Parameters:</h4><div>value</div></div></div><hr/><a name="setPrefix(String)"/><div><h3>setPrefix</h3><p>public void setPrefix(String prefix)</p><div> <b>DOM L2</b>
  Does nothing; this must be overridden (along with the
  getPrefix method) for element and attribute nodes.
-</div><p/><div class="classdoc-tag-section-header">Parameters:</div><dl class="classdoc-list"><dt><span class="prototype-name">prefix</span></dt></dl><hr/><a name="setTextContent(String)"/><h3>setTextContent</h3><p class="prototype">public void <b>setTextContent</b>(<span class="parameter">String&nbsp;textContent</span>)</p><p/><div class="classdoc-tag-section-header">Parameters:</div><dl class="classdoc-list"><dt><span class="prototype-name">textContent</span></dt></dl><hr/><a name="setUserData(String,Object,org.w3c.dom.UserDataHandler)"/><h3>setUserData</h3><p class="prototype">public Object <b>setUserData</b>(<span class="parameter">String&nbsp;key,</span> <span class="parameter">Object&nbsp;data,</span> <span class="parameter"><a href="../../../org/w3c/dom/UserDataHandler.html">UserDataHandler</a>&nbsp;handler</span>)</p><p/><div class="classdoc-tag-section-header">Parameters:</div><dl class="classdoc-list"><dt><span class="prototype-name">key</span></dt><dt><span class="prototype-name">data</span></dt><dt><span class="prototype-name">handler</span></dt></dl><hr/><a name="trimToSize()"/><h3>trimToSize</h3><p class="prototype">public void <b>trimToSize</b>()</p><div class="classdoc-comment-body"> Minimize extra space consumed by this node to hold children and event
+</div><div><h4>Specified by:</h4><div>setPrefix in interface <a href="../../..//org/w3c/dom/Node.html">Node</a></div></div><div><h4>Parameters:</h4><div>prefix</div></div></div><hr/><a name="setTextContent(String)"/><div><h3>setTextContent</h3><p>public void setTextContent(String textContent)</p><div> This attribute returns the text content of this node and its 
+ descendants. When it is defined to be <code>null</code>, setting it 
+ has no effect. On setting, any possible children this node may have 
+ are removed and, if it the new string is not empty or 
+ <code>null</code>, replaced by a single <code>Text</code> node 
+ containing the string this attribute is set to. 
+ <br/> On getting, no serialization is performed, the returned string 
+ does not contain any markup. No whitespace normalization is performed 
+ and the returned string does not contain the white spaces in element 
+ content (see the attribute 
+ <code>Text.isElementContentWhitespace</code>). Similarly, on setting, 
+ no parsing is performed either, the input string is taken as pure 
+ textual content. 
+ <br/>The string returned is made of the text content of this node 
+ depending on its type, as defined below: 
+ <table border="1" cellpadding="3">
+ <tr>
+ <th>Node type</th>
+ <th>Content</th>
+ </tr>
+ <tr>
+ <td valign="top" rowspan="1" colspan="1">
+ ELEMENT_NODE, ATTRIBUTE_NODE, ENTITY_NODE, ENTITY_REFERENCE_NODE, 
+ DOCUMENT_FRAGMENT_NODE</td>
+ <td valign="top" rowspan="1" colspan="1">concatenation of the <code>textContent</code> 
+ attribute value of every child node, excluding COMMENT_NODE and 
+ PROCESSING_INSTRUCTION_NODE nodes. This is the empty string if the 
+ node has no children.</td>
+ </tr>
+ <tr>
+ <td valign="top" rowspan="1" colspan="1">TEXT_NODE, CDATA_SECTION_NODE, COMMENT_NODE, 
+ PROCESSING_INSTRUCTION_NODE</td>
+ <td valign="top" rowspan="1" colspan="1"><code>nodeValue</code></td>
+ </tr>
+ <tr>
+ <td valign="top" rowspan="1" colspan="1">DOCUMENT_NODE, 
+ DOCUMENT_TYPE_NODE, NOTATION_NODE</td>
+ <td valign="top" rowspan="1" colspan="1"><em>null</em></td>
+ </tr>
+ </table>
+</div><div><h4>Specified by:</h4><div>setTextContent in interface <a href="../../..//org/w3c/dom/Node.html">Node</a></div></div><div><h4>Parameters:</h4><div>textContent</div></div><div><h4>Throws:</h4><div><a href="../../..//org/w3c/dom/DOMException.html">DOMException</a> - NO_MODIFICATION_ALLOWED_ERR: Raised when the node is readonly.</div></div><dl class="tag list"><dt class="tag section header"><b>Since:</b></dt><dd>DOM Level 3</dt></dl></div><hr/><a name="setUserData(String,Object,org.w3c.dom.UserDataHandler)"/><div><h3>setUserData</h3><p>public Object setUserData(String key, Object data, <a href="../../..//org/w3c/dom/UserDataHandler.html">UserDataHandler</a> handler)</p><div> Associate an object to a key on this node. The object can later be 
+ retrieved from this node by calling <code>getUserData</code> with the 
+ same key.
+</div><div><h4>Specified by:</h4><div>setUserData in interface <a href="../../..//org/w3c/dom/Node.html">Node</a></div></div><div><h4>Parameters:</h4><div>key - The key to associate the object to.</div><div>data - The object to associate to the given key, or 
+<code>null</code> to remove any existing association to that key.</div><div>handler - The handler to associate to that key, or 
+<code>null</code>.</div></div><dl class="tag list"><dt class="tag section header"><b>Since:</b></dt><dd>DOM Level 3</dt></dl></div><hr/><a name="toString()"/><div><h3>toString</h3><p>public String toString()</p><div></div></div><hr/><a name="trimToSize()"/><div><h3>trimToSize</h3><p>public void trimToSize()</p><div> Minimize extra space consumed by this node to hold children and event
  listeners.
-</div><p/><hr class="footer"/><div class="footer">Generated on
-  October 6, 2004
-  by <a target="cptoolsinfo" href="http://www.gnu.org/software/cp-tools">GNU Classpath Tools</a> (Gjdoc XmlDoclet 0.6.1).</div></body></html>
+</div></div><p> </p><table class="navbar div bottom"><tr><td><div><span class="navbar item enabled"><a href="../../..//index-noframes.html">Overview</a></span> <span class="navbar item enabled"><a href="package-summary.html">Package</a></span> <span class="navbar item enabled"><a href="tree.html">Tree</a></span> <a href="../../..//alphaindex.html">Index</a> <a href="../../..//deprecated.html">Deprecated</a> <a href="../../..//help.html">Help</a> <a href="../../..//about.html">About</a></div></td></tr></table></body></html>

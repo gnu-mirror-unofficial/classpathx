@@ -1,20 +1,19 @@
-<html xmlns="http://www.w3.org/TR/REC-html40" xmlns:html="http://www.w3.org/TR/REC-html40" xmlns:gjdoc="http://www.gnu.org/software/cp-tools/gjdocxml"><head><link href="../../../gjdochtml.css" type="text/css" rel="stylesheet"/><title>AttributeList</title></head><body onload="top.document.title=document.title;" class="classdoc"><div class="header"><span class="navi-button">&rArr;&nbsp;<a target="_top" href="../../../index.html">Index&nbsp;(Frames)</a></span>&nbsp;|&nbsp;
-      <span class="navi-button">&rArr;&nbsp;<a target="_top" href="../../../index_noframes.html">Index&nbsp;(No&nbsp;Frames)</a></span>&nbsp;|&nbsp;
-      <span class="navi-button">&rArr;&nbsp;<a href="package-summary.html">Package</a></span>&nbsp;|&nbsp;
-      <span class="navi-button">&rArr;&nbsp;<a href="package-tree.html">Package&nbsp;Tree</a></span>&nbsp;|&nbsp;
-      <span class="navi-button">&rArr;&nbsp;<a href="../../../fulltree.html">Full Tree</a></span>&nbsp;
-    </div><div class="classdoc-head"><div class="classdoc-head-inner"><b class="classdoc-head-packagename">org.xml.sax</b><br/><h1 class="classdoc-head-classname">Interface AttributeList</h1></div></div><p/><hr/><div class="classdoc-prototype">public interface <b>AttributeList</b><br/></div><p/><div class="classdoc-class-comment-body"> Interface for an element's attribute specifications.
+<?xml version="1.0" encoding="null"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head><title>AttributeList</title><meta http-equiv="Content-Type" content="text/html; charset=null"/></head><body><table class="navbar div top"><tr><td><div><span class="navbar item enabled"><a href="../../..//index-noframes.html">Overview</a></span> <span class="navbar item enabled"><a href="package-summary.html">Package</a></span> <span class="navbar item enabled"><a href="tree.html">Tree</a></span> <a href="../../..//alphaindex.html">Index</a> <a href="../../..//deprecated.html">Deprecated</a> <a href="../../..//help.html">Help</a> <a href="../../..//about.html">About</a></div></td></tr></table><div><h3>org.xml.sax</h3><h1>Interface AttributeList</h1><hr/><div><div>public interface AttributeList</div><div>extends java.lang.Object</div></div><hr/><div> Interface for an element's attribute specifications.
 
- <blockquote><em>This module, both source code and documentation, is in the
+ <blockquote>
+ <em>This module, both source code and documentation, is in the
  Public Domain, and comes with <strong>NO WARRANTY</strong>.</em>
  See <a href="http://www.saxproject.org">http://www.saxproject.org</a>
  for further information.
- </blockquote><p/>This is the original SAX1 interface for reporting an element's
+ </blockquote>
+
+ <p/>This is the original SAX1 interface for reporting an element's
  attributes.  Unlike the new org.xml.sax.Attributes Attributes
  interface, it does not support Namespace-related information.
 
  <p/>When an attribute list is supplied as part of a
-<a href="../../../org/xml/sax/DocumentHandler.html#startElementstartElement">org.xml.sax.DocumentHandler.startElement startElement</a>
+org.xml.sax.DocumentHandler.startElement startElement
   event, the list will return valid results only during the
  scope of the event; once the event handler returns control
  to the parser, the attribute list is invalid.  To save a
@@ -37,7 +36,10 @@ org.xml.sax.helpers.AttributeListImpl AttributeListImpl
      String value = atts.getValue(i);
      [...]
    }
- }</pre><p/>(Note that the result of getLength() will be zero if there
+ }
+ </pre>
+
+ <p/>(Note that the result of getLength() will be zero if there
  are no attributes.)
 
  <p/>As an alternative, the application can request the value or
@@ -48,18 +50,18 @@ org.xml.sax.helpers.AttributeListImpl AttributeListImpl
    String identifier = atts.getValue("id");
    String label = atts.getValue("label");
    [...]
- }</pre>org.xml.sax.Attributes Attributes
+ }
+ </pre>
+org.xml.sax.Attributes Attributes
 
               interface, which includes Namespace support.
-</div><div class="classdoc-tag-section-header">Since:</div><dl class="classdoc-list"><dt>SAX 1.0</dt></dl><div class="classdoc-tag-section-header">Author:</div><dl class="classdoc-list"><dt>David Megginson</dt></dl><div class="classdoc-tag-section-header">See Also:</div><dl class="classdoc-list"><dt><code><a href="../../../org/xml/sax/DocumentHandler.html#startElementstartElement">org.xml.sax.DocumentHandler.startElement startElement
-</a></code></dt><dt><code>org.xml.sax.helpers.AttributeListImpl AttributeListImpl
-</code></dt></dl><h1 class="classdoc-header">Method Summary</h1><table class="classdoc-table" width="100%" cellspacing="0" border="1"><tr><td class="no-border-r" valign="top" align="right" width="1%"><p class="prototype-type"> int</p></td><td class="with-border" valign="top" align="left"><p class="prototype"><a href="#getLength()">getLength</a>()</p><blockquote class="classdoc-summary-comment"> Return the number of attributes in this list.</blockquote></td></tr><tr><td class="no-border-r" valign="top" align="right" width="1%"><p class="prototype-type"> String</p></td><td class="with-border" valign="top" align="left"><p class="prototype"><a href="#getName(int)">getName</a>(<span class="parameter">int&nbsp;i</span>)</p><blockquote class="classdoc-summary-comment"> Return the name of an attribute in this list (by position).</blockquote></td></tr><tr><td class="no-border-r" valign="top" align="right" width="1%"><p class="prototype-type"> String</p></td><td class="with-border" valign="top" align="left"><p class="prototype"><a href="#getType(int)">getType</a>(<span class="parameter">int&nbsp;i</span>)</p><blockquote class="classdoc-summary-comment"> Return the type of an attribute in the list (by position).</blockquote></td></tr><tr><td class="no-border-r" valign="top" align="right" width="1%"><p class="prototype-type"> String</p></td><td class="with-border" valign="top" align="left"><p class="prototype"><a href="#getType(String)">getType</a>(<span class="parameter">String&nbsp;name</span>)</p><blockquote class="classdoc-summary-comment"> Return the type of an attribute in the list (by name).</blockquote></td></tr><tr><td class="no-border-r" valign="top" align="right" width="1%"><p class="prototype-type"> String</p></td><td class="with-border" valign="top" align="left"><p class="prototype"><a href="#getValue(int)">getValue</a>(<span class="parameter">int&nbsp;i</span>)</p><blockquote class="classdoc-summary-comment"> Return the value of an attribute in the list (by position).</blockquote></td></tr><tr><td class="no-border-r" valign="top" align="right" width="1%"><p class="prototype-type"> String</p></td><td class="with-border" valign="top" align="left"><p class="prototype"><a href="#getValue(String)">getValue</a>(<span class="parameter">String&nbsp;name</span>)</p><blockquote class="classdoc-summary-comment"> Return the value of an attribute in the list (by name).</blockquote></td></tr></table><h1 class="classdoc-header">Method Details</h1><a name="getLength()"/><h3>getLength</h3><p class="prototype">public int <b>getLength</b>()</p><div class="classdoc-comment-body"> Return the number of attributes in this list.
+</div><div class="classdoc-tag-section-header">Version:</div><dl class="classdoc-list"><dt>2.0.1 (sax2r2)</dt></dl><dl class="tag list"><dt class="tag section header"><b>Author:</b></dt><dd class="tag item">David Megginson</dd></dl><dl class="tag list"><dt class="tag section header"><b>Since:</b></dt><dd>SAX 1.0</dt></dl><table class="class summary"><tr><td colspan="2"><h4>Method Summary</h4></td></tr><tr><td class="class summary left">public int</td><td class="class summary right"> <a href="#getLength()">getLength</a>()</td></tr><tr><td></td><td> Return the number of attributes in this list.</td></tr><tr><td class="class summary left">public String</td><td class="class summary right"> <a href="#getName(int)">getName</a>(int i)</td></tr><tr><td></td><td> Return the name of an attribute in this list (by position).</td></tr><tr><td class="class summary left">public String</td><td class="class summary right"> <a href="#getType(int)">getType</a>(int i)</td></tr><tr><td></td><td> Return the type of an attribute in the list (by position).</td></tr><tr><td class="class summary left">public String</td><td class="class summary right"> <a href="#getType(String)">getType</a>(String name)</td></tr><tr><td></td><td> Return the type of an attribute in the list (by name).</td></tr><tr><td class="class summary left">public String</td><td class="class summary right"> <a href="#getValue(int)">getValue</a>(int i)</td></tr><tr><td></td><td> Return the value of an attribute in the list (by position).</td></tr><tr><td class="class summary left">public String</td><td class="class summary right"> <a href="#getValue(String)">getValue</a>(String name)</td></tr><tr><td></td><td> Return the value of an attribute in the list (by name).</td></tr></table><h4>Method Details</h4><a name="getLength()"/><div><h3>getLength</h3><p>public int getLength()</p><div> Return the number of attributes in this list.
 
  <p/>The SAX parser may provide attributes in any
  arbitrary order, regardless of the order in which they were
  declared or specified.  The number of attributes may be
  zero.
-</div><p/><div class="classdoc-tag-section-header">Returns:</div><dl class="classdoc-list"><dt>The number of attributes in the list.</dt></dl><hr/><a name="getName(int)"/><h3>getName</h3><p class="prototype">public String <b>getName</b>(<span class="parameter">int&nbsp;i</span>)</p><div class="classdoc-comment-body"> Return the name of an attribute in this list (by position).
+</div></div><hr/><a name="getName(int)"/><div><h3>getName</h3><p>public String getName(int i)</p><div> Return the name of an attribute in this list (by position).
 
  <p/>The names must be unique: the SAX parser shall not include the
  same attribute twice.  Attributes without values (those declared
@@ -68,9 +70,7 @@ org.xml.sax.helpers.AttributeListImpl AttributeListImpl
 
  <p/>If the attribute name has a namespace prefix, the prefix
  will still be attached.
-</div><p/><div class="classdoc-tag-section-header">Parameters:</div><dl class="classdoc-list"><dt><span class="prototype-name">i</span> - The index of the attribute in the list (starting at 0).</dt></dl><div class="classdoc-tag-section-header">Returns:</div><dl class="classdoc-list"><dt>The name of the indexed attribute, or null
-if the index is out of range.</dt></dl><div class="classdoc-tag-section-header">See Also:</div><dl class="classdoc-list"><dt><code><a href="#getLength
-">getLength</a></code></dt></dl><hr/><a name="getType(int)"/><h3>getType</h3><p class="prototype">public String <b>getType</b>(<span class="parameter">int&nbsp;i</span>)</p><div class="classdoc-comment-body"> Return the type of an attribute in the list (by position).
+</div><div><h4>Parameters:</h4><div>i - The index of the attribute in the list (starting at 0).</div></div></div><hr/><a name="getType(int)"/><div><h3>getType</h3><p>public String getType(int i)</p><div> Return the type of an attribute in the list (by position).
 
  <p/>The attribute type is one of the strings "CDATA", "ID",
  "IDREF", "IDREFS", "NMTOKEN", "NMTOKENS", "ENTITY", "ENTITIES",
@@ -83,31 +83,23 @@ if the index is out of range.</dt></dl><div class="classdoc-tag-section-header">
 
  <p/>For an enumerated attribute that is not a notation, the
  parser will report the type as "NMTOKEN".
-</div><p/><div class="classdoc-tag-section-header">Parameters:</div><dl class="classdoc-list"><dt><span class="prototype-name">i</span> - The index of the attribute in the list (starting at 0).</dt></dl><div class="classdoc-tag-section-header">Returns:</div><dl class="classdoc-list"><dt>The attribute type as a string, or
-null if the index is out of range.</dt></dl><div class="classdoc-tag-section-header">See Also:</div><dl class="classdoc-list"><dt><code><a href="#getLength
-">getLength</a></code></dt><dt><code><a href="#getType(java.lang.String)">getType(java.lang.String)</a></code></dt></dl><hr/><a name="getType(String)"/><h3>getType</h3><p class="prototype">public String <b>getType</b>(<span class="parameter">String&nbsp;name</span>)</p><div class="classdoc-comment-body"> Return the type of an attribute in the list (by name).
+</div><div><h4>Parameters:</h4><div>i - The index of the attribute in the list (starting at 0).</div></div></div><hr/><a name="getType(String)"/><div><h3>getType</h3><p>public String getType(String name)</p><div> Return the type of an attribute in the list (by name).
 
  <p/>The return value is the same as the return value for
  getType(int).
 
  <p/>If the attribute name has a namespace prefix in the document,
  the application must include the prefix here.
-</div><p/><div class="classdoc-tag-section-header">Parameters:</div><dl class="classdoc-list"><dt><span class="prototype-name">name</span> - The name of the attribute.</dt></dl><div class="classdoc-tag-section-header">Returns:</div><dl class="classdoc-list"><dt>The attribute type as a string, or null if no
-such attribute exists.</dt></dl><div class="classdoc-tag-section-header">See Also:</div><dl class="classdoc-list"><dt><code><a href="#getType(int)">getType(int)</a></code></dt></dl><hr/><a name="getValue(int)"/><h3>getValue</h3><p class="prototype">public String <b>getValue</b>(<span class="parameter">int&nbsp;i</span>)</p><div class="classdoc-comment-body"> Return the value of an attribute in the list (by position).
+</div><div><h4>Parameters:</h4><div>name - The name of the attribute.</div></div></div><hr/><a name="getValue(int)"/><div><h3>getValue</h3><p>public String getValue(int i)</p><div> Return the value of an attribute in the list (by position).
 
  <p/>If the attribute value is a list of tokens (IDREFS,
  ENTITIES, or NMTOKENS), the tokens will be concatenated
  into a single string separated by whitespace.
-</div><p/><div class="classdoc-tag-section-header">Parameters:</div><dl class="classdoc-list"><dt><span class="prototype-name">i</span> - The index of the attribute in the list (starting at 0).</dt></dl><div class="classdoc-tag-section-header">Returns:</div><dl class="classdoc-list"><dt>The attribute value as a string, or
-null if the index is out of range.</dt></dl><div class="classdoc-tag-section-header">See Also:</div><dl class="classdoc-list"><dt><code><a href="#getLength
-">getLength</a></code></dt><dt><code><a href="#getValue(java.lang.String)">getValue(java.lang.String)</a></code></dt></dl><hr/><a name="getValue(String)"/><h3>getValue</h3><p class="prototype">public String <b>getValue</b>(<span class="parameter">String&nbsp;name</span>)</p><div class="classdoc-comment-body"> Return the value of an attribute in the list (by name).
+</div><div><h4>Parameters:</h4><div>i - The index of the attribute in the list (starting at 0).</div></div></div><hr/><a name="getValue(String)"/><div><h3>getValue</h3><p>public String getValue(String name)</p><div> Return the value of an attribute in the list (by name).
 
  <p/>The return value is the same as the return value for
  getValue(int).
 
  <p/>If the attribute name has a namespace prefix in the document,
  the application must include the prefix here.
-</div><p/><div class="classdoc-tag-section-header">Parameters:</div><dl class="classdoc-list"><dt><span class="prototype-name">name</span> - The index of the attribute in the list.</dt></dl><div class="classdoc-tag-section-header">Returns:</div><dl class="classdoc-list"><dt>The attribute value as a string, or null if
-no such attribute exists.</dt></dl><div class="classdoc-tag-section-header">See Also:</div><dl class="classdoc-list"><dt><code><a href="#getValue(int)">getValue(int)</a></code></dt></dl><hr class="footer"/><div class="footer">Generated on
-  October 6, 2004
-  by <a target="cptoolsinfo" href="http://www.gnu.org/software/cp-tools">GNU Classpath Tools</a> (Gjdoc XmlDoclet 0.6.1).</div></body></html>
+</div><div><h4>Parameters:</h4><div>name - the name of the attribute to return</div></div></div><p> </p><table class="navbar div bottom"><tr><td><div><span class="navbar item enabled"><a href="../../..//index-noframes.html">Overview</a></span> <span class="navbar item enabled"><a href="package-summary.html">Package</a></span> <span class="navbar item enabled"><a href="tree.html">Tree</a></span> <a href="../../..//alphaindex.html">Index</a> <a href="../../..//deprecated.html">Deprecated</a> <a href="../../..//help.html">Help</a> <a href="../../..//about.html">About</a></div></td></tr></table></body></html>

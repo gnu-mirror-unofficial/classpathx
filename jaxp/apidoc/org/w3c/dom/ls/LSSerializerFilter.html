@@ -1,14 +1,10 @@
-<html xmlns="http://www.w3.org/TR/REC-html40" xmlns:html="http://www.w3.org/TR/REC-html40" xmlns:gjdoc="http://www.gnu.org/software/cp-tools/gjdocxml"><head><link href="../../../../gjdochtml.css" type="text/css" rel="stylesheet"/><title>LSSerializerFilter</title></head><body onload="top.document.title=document.title;" class="classdoc"><div class="header"><span class="navi-button">&rArr;&nbsp;<a target="_top" href="../../../../index.html">Index&nbsp;(Frames)</a></span>&nbsp;|&nbsp;
-      <span class="navi-button">&rArr;&nbsp;<a target="_top" href="../../../../index_noframes.html">Index&nbsp;(No&nbsp;Frames)</a></span>&nbsp;|&nbsp;
-      <span class="navi-button">&rArr;&nbsp;<a href="package-summary.html">Package</a></span>&nbsp;|&nbsp;
-      <span class="navi-button">&rArr;&nbsp;<a href="package-tree.html">Package&nbsp;Tree</a></span>&nbsp;|&nbsp;
-      <span class="navi-button">&rArr;&nbsp;<a href="../../../../fulltree.html">Full Tree</a></span>&nbsp;
-    </div><div class="classdoc-head"><div class="classdoc-head-inner"><b class="classdoc-head-packagename">org.w3c.dom.ls</b><br/><h1 class="classdoc-head-classname">Interface LSSerializerFilter</h1></div></div><p/><b>All Superinterfaces:</b><br/><a href="../../../../org/w3c/dom/traversal/NodeFilter.html">NodeFilter</a><p/><hr/><div class="classdoc-prototype">public interface <b>LSSerializerFilter</b><br/>implements <a href="../../../../org/w3c/dom/traversal/NodeFilter.html">NodeFilter</a></div><p/><div class="classdoc-class-comment-body"><code>LSSerializerFilter</code>s provide applications the ability to 
+<?xml version="1.0" encoding="null"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head><title>LSSerializerFilter</title><meta http-equiv="Content-Type" content="text/html; charset=null"/></head><body><table class="navbar div top"><tr><td><div><span class="navbar item enabled"><a href="../../../..//index-noframes.html">Overview</a></span> <span class="navbar item enabled"><a href="package-summary.html">Package</a></span> <span class="navbar item enabled"><a href="tree.html">Tree</a></span> <a href="../../../..//alphaindex.html">Index</a> <a href="../../../..//deprecated.html">Deprecated</a> <a href="../../../..//help.html">Help</a> <a href="../../../..//about.html">About</a></div></td></tr></table><div><h3>org.w3c.dom.ls</h3><h1>Interface LSSerializerFilter</h1><hr/><div><div>public interface LSSerializerFilter</div><div>extends <a href="../../../..//org/w3c/dom/traversal/NodeFilter.html">NodeFilter</a></div><div>implements <a href="../../../..//org/w3c/dom/traversal/NodeFilter.html">NodeFilter</a></div></div><hr/><div>  <code>LSSerializerFilter</code>s provide applications the ability to 
  examine nodes as they are being serialized and decide what nodes should 
  be serialized or not. The <code>LSSerializerFilter</code> interface is 
  based on the <code>NodeFilter</code> interface defined in [<a href="http://www.w3.org/TR/2000/REC-DOM-Level-2-Traversal-Range-20001113">DOM Level 2 Traversal and      Range</a>]
  . 
- <p/><code>Document</code>, <code>DocumentType</code>, 
+ <p/> <code>Document</code>, <code>DocumentType</code>, 
  <code>DocumentFragment</code>, <code>Notation</code>, <code>Entity</code>
  , and children of <code>Attr</code> nodes are not passed to the filter. 
  The child nodes of an <code>EntityReference</code> node are only passed 
@@ -29,8 +25,8 @@
  document. 
  <p/>See also the <a href="http://www.w3.org/TR/2004/REC-DOM-Level-3-LS-20040407">Document Object Model (DOM) Level 3 Load
 and Save Specification</a>.
-</div><h1 class="classdoc-header">Method Summary</h1><table class="classdoc-table" width="100%" cellspacing="0" border="1"><tr><td class="no-border-r" valign="top" align="right" width="1%"><p class="prototype-type"> int</p></td><td class="with-border" valign="top" align="left"><p class="prototype"><a href="#getWhatToShow()">getWhatToShow</a>()</p><blockquote class="classdoc-summary-comment">  Tells the LSSerializer what types of nodes to show to the 
- filter.</blockquote></td></tr></table><h1 class="classdoc-header">Method Details</h1><a name="getWhatToShow()"/><h3>getWhatToShow</h3><p class="prototype">public int <b>getWhatToShow</b>()</p><div class="classdoc-comment-body">  Tells the <code>LSSerializer</code> what types of nodes to show to the 
+</div><table class="class summary"><tr><td colspan="2"><h4>Method Summary</h4></td></tr><tr><td class="class summary left">public int</td><td class="class summary right"> <a href="#getWhatToShow()">getWhatToShow</a>()</td></tr><tr><td></td><td>  Tells the <code>LSSerializer</code> what types of nodes to show to the 
+ filter.</td></tr></table><table class="class summary"><tr><td colspan="2"><h4>Methods inherited from org.w3c.dom.traversal.NodeFilter</h4></td></tr><tr><td><a href="../../../..//org/w3c/dom/traversal/NodeFilter.html#acceptNode(org.w3c.dom.Node)">acceptNode</a></td></tr></table><h4>Method Details</h4><a name="getWhatToShow()"/><div><h3>getWhatToShow</h3><p>public int getWhatToShow()</p><div>  Tells the <code>LSSerializer</code> what types of nodes to show to the 
  filter. If a node is not shown to the filter using this attribute, it 
  is automatically serialized. See <code>NodeFilter</code> for 
  definition of the constants. The constants <code>SHOW_DOCUMENT</code>
@@ -43,6 +39,4 @@ and Save Specification</a>.
  <code>Attr</code> nodes are shown and passed to the filter. 
  <br/> The constants used here are defined in [<a href="http://www.w3.org/TR/2000/REC-DOM-Level-2-Traversal-Range-20001113">DOM Level 2 Traversal and      Range</a>]
  . 
-</div><p/><hr class="footer"/><div class="footer">Generated on
-  October 6, 2004
-  by <a target="cptoolsinfo" href="http://www.gnu.org/software/cp-tools">GNU Classpath Tools</a> (Gjdoc XmlDoclet 0.6.1).</div></body></html>
+</div></div><p> </p><table class="navbar div bottom"><tr><td><div><span class="navbar item enabled"><a href="../../../..//index-noframes.html">Overview</a></span> <span class="navbar item enabled"><a href="package-summary.html">Package</a></span> <span class="navbar item enabled"><a href="tree.html">Tree</a></span> <a href="../../../..//alphaindex.html">Index</a> <a href="../../../..//deprecated.html">Deprecated</a> <a href="../../../..//help.html">Help</a> <a href="../../../..//about.html">About</a></div></td></tr></table></body></html>

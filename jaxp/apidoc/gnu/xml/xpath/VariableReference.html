@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="null"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head><title>VariableReference</title><meta http-equiv="Content-Type" content="text/html; charset=null"/></head><body><table class="navbar div top"><tr><td><div><span class="navbar item enabled"><a href="../../..//index-noframes.html">Overview</a></span> <span class="navbar item enabled"><a href="package-summary.html">Package</a></span> <span class="navbar item enabled"><a href="tree.html">Tree</a></span> <a href="../../..//alphaindex.html">Index</a> <a href="../../..//deprecated.html">Deprecated</a> <a href="../../..//help.html">Help</a> <a href="../../..//about.html">About</a></div></td></tr></table><div><h3>gnu.xml.xpath</h3><h1>Class VariableReference</h1><hr/><div><div>public class VariableReference</div><div>extends <a href="../../..//gnu/xml/xpath/Expr.html">Expr</a></div></div><hr/><div></div><table class="class summary"><tr><td colspan="2"><h4>Constructor Summary</h4></td></tr><tr><td class="class summary left">public </td><td class="class summary right"> <a href="#VariableReference(javax.xml.xpath.XPathVariableResolver,String)">VariableReference</a>(<a href="../../..//javax/xml/xpath/XPathVariableResolver.html">XPathVariableResolver</a> resolver, String name)</td></tr><tr><td></td><td></td></tr></table><table class="class summary"><tr><td colspan="2"><h4>Method Summary</h4></td></tr><tr><td class="class summary left">public <a href="../../..//gnu/xml/xpath/Expr.html">Expr</a></td><td class="class summary right"> <a href="#clone(Object)">clone</a>(Object context)</td></tr><tr><td></td><td></td></tr><tr><td class="class summary left">public Object</td><td class="class summary right"> <a href="#evaluate(org.w3c.dom.Node,int,int)">evaluate</a>(<a href="../../..//org/w3c/dom/Node.html">Node</a> context, int pos, int len)</td></tr><tr><td></td><td></td></tr><tr><td class="class summary left">public String</td><td class="class summary right"> <a href="#toString()">toString</a>()</td></tr><tr><td></td><td></td></tr></table><table class="class summary"><tr><td colspan="2"><h4>Methods inherited from gnu.xml.xpath.Expr</h4></td></tr><tr><td><a href="../../..//gnu/xml/xpath/Expr.html#_boolean(org.w3c.dom.Node,Object)">_boolean</a>, <a href="../../..//gnu/xml/xpath/Expr.html#_id(org.w3c.dom.Node,Object)">_id</a>, <a href="../../..//gnu/xml/xpath/Expr.html#_local_name(org.w3c.dom.Node,Collection)">_local_name</a>, <a href="../../..//gnu/xml/xpath/Expr.html#_name(org.w3c.dom.Node,Collection)">_name</a>, <a href="../../..//gnu/xml/xpath/Expr.html#_namespace_uri(org.w3c.dom.Node,Collection)">_namespace_uri</a>, <a href="../../..//gnu/xml/xpath/Expr.html#_number(org.w3c.dom.Node,Object)">_number</a>, <a href="../../..//gnu/xml/xpath/Expr.html#_string(org.w3c.dom.Node,Object)">_string</a>, <a href="../../..//gnu/xml/xpath/Expr.html#clone(Object)">clone</a>, <a href="../../..//gnu/xml/xpath/Expr.html#evaluate(Object,javax.xml.namespace.QName)">evaluate</a>, <a href="../../..//gnu/xml/xpath/Expr.html#evaluate(Object)">evaluate</a>, <a href="../../..//gnu/xml/xpath/Expr.html#evaluate(org.xml.sax.InputSource,javax.xml.namespace.QName)">evaluate</a>, <a href="../../..//gnu/xml/xpath/Expr.html#evaluate(org.xml.sax.InputSource)">evaluate</a>, <a href="../../..//gnu/xml/xpath/Expr.html#evaluate(org.w3c.dom.Node,int,int)">evaluate</a>, <a href="../../..//gnu/xml/xpath/Expr.html#stringValue(Collection)">stringValue</a>, <a href="../../..//gnu/xml/xpath/Expr.html#stringValue(org.w3c.dom.Node)">stringValue</a></td></tr></table><h4>Constructor Details</h4><a name="VariableReference(javax.xml.xpath.XPathVariableResolver,String)"/><div><h3>VariableReference</h3><p>public VariableReference(<a href="../../..//javax/xml/xpath/XPathVariableResolver.html">XPathVariableResolver</a> resolver, String name)</p><div></div><div><h4>Parameters:</h4><div>resolver</div><div>name</div></div></div><h4>Method Details</h4><a name="clone(Object)"/><div><h3>clone</h3><p>public <a href="../../..//gnu/xml/xpath/Expr.html">Expr</a> clone(Object context)</p><div></div><div><h4>Overrides:</h4><div>clone in interface <a href="../../..//gnu/xml/xpath/Expr.html">Expr</a></div></div><div><h4>Parameters:</h4><div>context</div></div></div><hr/><a name="evaluate(org.w3c.dom.Node,int,int)"/><div><h3>evaluate</h3><p>public Object evaluate(<a href="../../..//org/w3c/dom/Node.html">Node</a> context, int pos, int len)</p><div></div><div><h4>Overrides:</h4><div>evaluate in interface <a href="../../..//gnu/xml/xpath/Expr.html">Expr</a></div></div><div><h4>Parameters:</h4><div>context</div><div>pos</div><div>len</div></div></div><hr/><a name="toString()"/><div><h3>toString</h3><p>public String toString()</p><div></div></div><hr/><pre style="font-size: x-small;">
+ * VariableReference.java
+ * Copyright (C) 2004 The Free Software Foundation
+ * 
+ * This file is part of GNU JAXP, a library.
+ *
+ * GNU JAXP is free software; you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation; either version 2 of the License, or
+ * (at your option) any later version.
+ * 
+ * GNU JAXP is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program; if not, write to the Free Software
+ * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+ *
+ * Linking this library statically or dynamically with other modules is
+ * making a combined work based on this library.  Thus, the terms and
+ * conditions of the GNU General Public License cover the whole
+ * combination.
+ *
+ * As a special exception, the copyright holders of this library give you
+ * permission to link this library with independent modules to produce an
+ * executable, regardless of the license terms of these independent
+ * modules, and to copy and distribute the resulting executable under
+ * terms of your choice, provided that you also meet, for each linked
+ * independent module, the terms and conditions of the license of that
+ * module.  An independent module is a module which is not derived from
+ * or based on this library.  If you modify this library, you may extend
+ * this exception to your version of the library, but you are not
+ * obliged to do so.  If you do not wish to do so, delete this
+ * exception statement from your version. 
+ </pre><hr/><p> </p><table class="navbar div bottom"><tr><td><div><span class="navbar item enabled"><a href="../../..//index-noframes.html">Overview</a></span> <span class="navbar item enabled"><a href="package-summary.html">Package</a></span> <span class="navbar item enabled"><a href="tree.html">Tree</a></span> <a href="../../..//alphaindex.html">Index</a> <a href="../../..//deprecated.html">Deprecated</a> <a href="../../..//help.html">Help</a> <a href="../../..//about.html">About</a></div></td></tr></table></body></html>

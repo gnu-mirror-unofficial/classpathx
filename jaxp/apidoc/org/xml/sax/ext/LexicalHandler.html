@@ -1,15 +1,14 @@
-<html xmlns="http://www.w3.org/TR/REC-html40" xmlns:html="http://www.w3.org/TR/REC-html40" xmlns:gjdoc="http://www.gnu.org/software/cp-tools/gjdocxml"><head><link href="../../../../gjdochtml.css" type="text/css" rel="stylesheet"/><title>LexicalHandler</title></head><body onload="top.document.title=document.title;" class="classdoc"><div class="header"><span class="navi-button">&rArr;&nbsp;<a target="_top" href="../../../../index.html">Index&nbsp;(Frames)</a></span>&nbsp;|&nbsp;
-      <span class="navi-button">&rArr;&nbsp;<a target="_top" href="../../../../index_noframes.html">Index&nbsp;(No&nbsp;Frames)</a></span>&nbsp;|&nbsp;
-      <span class="navi-button">&rArr;&nbsp;<a href="package-summary.html">Package</a></span>&nbsp;|&nbsp;
-      <span class="navi-button">&rArr;&nbsp;<a href="package-tree.html">Package&nbsp;Tree</a></span>&nbsp;|&nbsp;
-      <span class="navi-button">&rArr;&nbsp;<a href="../../../../fulltree.html">Full Tree</a></span>&nbsp;
-    </div><div class="classdoc-head"><div class="classdoc-head-inner"><b class="classdoc-head-packagename">org.xml.sax.ext</b><br/><h1 class="classdoc-head-classname">Interface LexicalHandler</h1></div></div><p/><hr/><div class="classdoc-prototype">public interface <b>LexicalHandler</b><br/></div><p/><div class="classdoc-class-comment-body"> SAX2 extension handler for lexical events.
+<?xml version="1.0" encoding="null"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head><title>LexicalHandler</title><meta http-equiv="Content-Type" content="text/html; charset=null"/></head><body><table class="navbar div top"><tr><td><div><span class="navbar item enabled"><a href="../../../..//index-noframes.html">Overview</a></span> <span class="navbar item enabled"><a href="package-summary.html">Package</a></span> <span class="navbar item enabled"><a href="tree.html">Tree</a></span> <a href="../../../..//alphaindex.html">Index</a> <a href="../../../..//deprecated.html">Deprecated</a> <a href="../../../..//help.html">Help</a> <a href="../../../..//about.html">About</a></div></td></tr></table><div><h3>org.xml.sax.ext</h3><h1>Interface LexicalHandler</h1><hr/><div><div>public interface LexicalHandler</div><div>extends java.lang.Object</div></div><hr/><div> SAX2 extension handler for lexical events.
 
- <blockquote><em>This module, both source code and documentation, is in the
+ <blockquote>
+ <em>This module, both source code and documentation, is in the
  Public Domain, and comes with <strong>NO WARRANTY</strong>.</em>
  See <a href="http://www.saxproject.org">http://www.saxproject.org</a>
  for further information.
- </blockquote><p/>This is an optional extension handler for SAX2 to provide
+ </blockquote>
+
+ <p/>This is an optional extension handler for SAX2 to provide
  lexical information about an XML document, such as comments
  and CDATA section boundaries.
  XML readers are not required to recognize this handler, and it
@@ -21,38 +20,34 @@
  endDocument events.
 
  <p/>To set the LexicalHandler for an XML reader, use the
-<a href="../../../../org/xml/sax/XMLReader.html#setPropertysetProperty">org.xml.sax.XMLReader.setProperty setProperty</a> method
+org.xml.sax.XMLReader.setProperty setProperty method
   with the property name
  <code>http://xml.org/sax/properties/lexical-handler</code>
  and an object implementing this interface (or null) as the value.
  If the reader does not report lexical events, it will throw a
 org.xml.sax.SAXNotRecognizedException SAXNotRecognizedException
   when you attempt to register the handler.
-</div><div class="classdoc-tag-section-header">Since:</div><dl class="classdoc-list"><dt>SAX 2.0 (extensions 1.0)</dt></dl><div class="classdoc-tag-section-header">Author:</div><dl class="classdoc-list"><dt>David Megginson</dt></dl><h1 class="classdoc-header">Method Summary</h1><table class="classdoc-table" width="100%" cellspacing="0" border="1"><tr><td class="no-border-r" valign="top" align="right" width="1%"><p class="prototype-type"> void</p></td><td class="with-border" valign="top" align="left"><p class="prototype"><a href="#comment(char[],int,int)">comment</a>(<span class="parameter">char[]&nbsp;ch,</span> <span class="parameter">int&nbsp;start,</span> <span class="parameter">int&nbsp;length</span>)</p><blockquote class="classdoc-summary-comment"> Report an XML comment anywhere in the document.</blockquote></td></tr><tr><td class="no-border-r" valign="top" align="right" width="1%"><p class="prototype-type"> void</p></td><td class="with-border" valign="top" align="left"><p class="prototype"><a href="#endCDATA()">endCDATA</a>()</p><blockquote class="classdoc-summary-comment"> Report the end of a CDATA section.</blockquote></td></tr><tr><td class="no-border-r" valign="top" align="right" width="1%"><p class="prototype-type"> void</p></td><td class="with-border" valign="top" align="left"><p class="prototype"><a href="#endDTD()">endDTD</a>()</p><blockquote class="classdoc-summary-comment"> Report the end of DTD declarations.</blockquote></td></tr><tr><td class="no-border-r" valign="top" align="right" width="1%"><p class="prototype-type"> void</p></td><td class="with-border" valign="top" align="left"><p class="prototype"><a href="#endEntity(String)">endEntity</a>(<span class="parameter">String&nbsp;name</span>)</p><blockquote class="classdoc-summary-comment"> Report the end of an entity.</blockquote></td></tr><tr><td class="no-border-r" valign="top" align="right" width="1%"><p class="prototype-type"> void</p></td><td class="with-border" valign="top" align="left"><p class="prototype"><a href="#startCDATA()">startCDATA</a>()</p><blockquote class="classdoc-summary-comment"> Report the start of a CDATA section.</blockquote></td></tr><tr><td class="no-border-r" valign="top" align="right" width="1%"><p class="prototype-type"> void</p></td><td class="with-border" valign="top" align="left"><p class="prototype"><a href="#startDTD(String,String,String)">startDTD</a>(<span class="parameter">String&nbsp;name,</span> <span class="parameter">String&nbsp;publicId,</span> <span class="parameter">String&nbsp;systemId</span>)</p><blockquote class="classdoc-summary-comment"> Report the start of DTD declarations, if any.</blockquote></td></tr><tr><td class="no-border-r" valign="top" align="right" width="1%"><p class="prototype-type"> void</p></td><td class="with-border" valign="top" align="left"><p class="prototype"><a href="#startEntity(String)">startEntity</a>(<span class="parameter">String&nbsp;name</span>)</p><blockquote class="classdoc-summary-comment"> Report the beginning of some internal and external XML entities.</blockquote></td></tr></table><h1 class="classdoc-header">Method Details</h1><a name="comment(char[],int,int)"/><h3>comment</h3><p class="prototype">public void <b>comment</b>(<span class="parameter">char[]&nbsp;ch,</span> <span class="parameter">int&nbsp;start,</span> <span class="parameter">int&nbsp;length</span>)</p><div class="classdoc-comment-body"> Report an XML comment anywhere in the document.
+</div><div class="classdoc-tag-section-header">Version:</div><dl class="classdoc-list"><dt>2.0.1 (sax2r2)</dt></dl><dl class="tag list"><dt class="tag section header"><b>Author:</b></dt><dd class="tag item">David Megginson</dd></dl><dl class="tag list"><dt class="tag section header"><b>Since:</b></dt><dd>SAX 2.0 (extensions 1.0)</dt></dl><table class="class summary"><tr><td colspan="2"><h4>Method Summary</h4></td></tr><tr><td class="class summary left">public void</td><td class="class summary right"> <a href="#comment(ch[],int,int)">comment</a>(ch , int start, int length)</td></tr><tr><td></td><td> Report an XML comment anywhere in the document.</td></tr><tr><td class="class summary left">public void</td><td class="class summary right"> <a href="#endCDATA()">endCDATA</a>()</td></tr><tr><td></td><td> Report the end of a CDATA section.</td></tr><tr><td class="class summary left">public void</td><td class="class summary right"> <a href="#endDTD()">endDTD</a>()</td></tr><tr><td></td><td> Report the end of DTD declarations.</td></tr><tr><td class="class summary left">public void</td><td class="class summary right"> <a href="#endEntity(String)">endEntity</a>(String name)</td></tr><tr><td></td><td> Report the end of an entity.</td></tr><tr><td class="class summary left">public void</td><td class="class summary right"> <a href="#startCDATA()">startCDATA</a>()</td></tr><tr><td></td><td> Report the start of a CDATA section.</td></tr><tr><td class="class summary left">public void</td><td class="class summary right"> <a href="#startDTD(String,String,String)">startDTD</a>(String name, String publicId, String systemId)</td></tr><tr><td></td><td> Report the start of DTD declarations, if any.</td></tr><tr><td class="class summary left">public void</td><td class="class summary right"> <a href="#startEntity(String)">startEntity</a>(String name)</td></tr><tr><td></td><td> Report the beginning of some internal and external XML entities.</td></tr></table><h4>Method Details</h4><a name="comment(ch[],int,int)"/><div><h3>comment</h3><p>public void comment(ch , int start, int length)</p><div> Report an XML comment anywhere in the document.
 
  <p/>This callback will be used for comments inside or outside the
  document element, including comments in the external DTD
  subset (if read).  Comments in the DTD must be properly
  nested inside start/endDTD and start/endEntity events (if
  used).
-</div><p/><div class="classdoc-tag-section-header">Parameters:</div><dl class="classdoc-list"><dt><span class="prototype-name">ch</span> - An array holding the characters in the comment.</dt><dt><span class="prototype-name">start</span> - The starting position in the array.</dt><dt><span class="prototype-name">length</span> - The number of characters to use from the array.</dt></dl><div class="classdoc-tag-section-header">Throws:</div><dl class="classdoc-list"><dt><code><a href="../../../../org/xml/sax/SAXException.html">SAXException</a></code> - The application may raise an exception.</dt></dl><hr/><a name="endCDATA()"/><h3>endCDATA</h3><p class="prototype">public void <b>endCDATA</b>()</p><div class="classdoc-comment-body"> Report the end of a CDATA section.
-</div><p/><div class="classdoc-tag-section-header">Throws:</div><dl class="classdoc-list"><dt><code><a href="../../../../org/xml/sax/SAXException.html">SAXException</a></code> - The application may raise an exception.</dt></dl><div class="classdoc-tag-section-header">See Also:</div><dl class="classdoc-list"><dt><code><a href="#startCDATA
-">startCDATA</a></code></dt></dl><hr/><a name="endDTD()"/><h3>endDTD</h3><p class="prototype">public void <b>endDTD</b>()</p><div class="classdoc-comment-body"> Report the end of DTD declarations.
+</div><div><h4>Parameters:</h4><div></div><div>start - The starting position in the array.</div><div>length - The number of characters to use from the array.</div></div></div><hr/><a name="endCDATA()"/><div><h3>endCDATA</h3><p>public void endCDATA()</p><div> Report the end of a CDATA section.
+</div></div><hr/><a name="endDTD()"/><div><h3>endDTD</h3><p>public void endDTD()</p><div> Report the end of DTD declarations.
 
  <p/>This method is intended to report the end of the
  DOCTYPE declaration; if the document has no DOCTYPE declaration,
  this method will not be invoked.
-</div><p/><div class="classdoc-tag-section-header">Throws:</div><dl class="classdoc-list"><dt><code><a href="../../../../org/xml/sax/SAXException.html">SAXException</a></code> - The application may raise an exception.</dt></dl><div class="classdoc-tag-section-header">See Also:</div><dl class="classdoc-list"><dt><code><a href="#startDTD
-">startDTD</a></code></dt></dl><hr/><a name="endEntity(String)"/><h3>endEntity</h3><p class="prototype">public void <b>endEntity</b>(<span class="parameter">String&nbsp;name</span>)</p><div class="classdoc-comment-body"> Report the end of an entity.
-</div><p/><div class="classdoc-tag-section-header">Parameters:</div><dl class="classdoc-list"><dt><span class="prototype-name">name</span> - The name of the entity that is ending.</dt></dl><div class="classdoc-tag-section-header">Throws:</div><dl class="classdoc-list"><dt><code><a href="../../../../org/xml/sax/SAXException.html">SAXException</a></code> - The application may raise an exception.</dt></dl><div class="classdoc-tag-section-header">See Also:</div><dl class="classdoc-list"><dt><code><a href="#startEntity
-">startEntity</a></code></dt></dl><hr/><a name="startCDATA()"/><h3>startCDATA</h3><p class="prototype">public void <b>startCDATA</b>()</p><div class="classdoc-comment-body"> Report the start of a CDATA section.
+</div></div><hr/><a name="endEntity(String)"/><div><h3>endEntity</h3><p>public void endEntity(String name)</p><div> Report the end of an entity.
+</div><div><h4>Parameters:</h4><div>name - The name of the entity that is ending.</div></div></div><hr/><a name="startCDATA()"/><div><h3>startCDATA</h3><p>public void startCDATA()</p><div> Report the start of a CDATA section.
 
  <p/>The contents of the CDATA section will be reported through
- the regular <a href="../../../../org/xml/sax/ContentHandler.html#characterscharacters">org.xml.sax.ContentHandler.characters
- characters</a> event; this event is intended only to report
+ the regular org.xml.sax.ContentHandler.characters
+ characters event; this event is intended only to report
  the boundary.
-</div><p/><div class="classdoc-tag-section-header">Throws:</div><dl class="classdoc-list"><dt><code><a href="../../../../org/xml/sax/SAXException.html">SAXException</a></code> - The application may raise an exception.</dt></dl><div class="classdoc-tag-section-header">See Also:</div><dl class="classdoc-list"><dt><code><a href="#endCDATA
-">endCDATA</a></code></dt></dl><hr/><a name="startDTD(String,String,String)"/><h3>startDTD</h3><p class="prototype">public void <b>startDTD</b>(<span class="parameter">String&nbsp;name,</span> <span class="parameter">String&nbsp;publicId,</span> <span class="parameter">String&nbsp;systemId</span>)</p><div class="classdoc-comment-body"> Report the start of DTD declarations, if any.
+</div></div><hr/><a name="startDTD(String,String,String)"/><div><h3>startDTD</h3><p>public void startDTD(String name, String publicId, String systemId)</p><div> Report the start of DTD declarations, if any.
 
  <p/>This method is intended to report the beginning of the
  DOCTYPE declaration; if the document has no DOCTYPE declaration,
@@ -61,10 +56,10 @@ org.xml.sax.SAXNotRecognizedException SAXNotRecognizedException
  <p/>All declarations reported through 
 org.xml.sax.DTDHandler DTDHandler or
 org.xml.sax.ext.DeclHandler DeclHandler events must appear
-   between the startDTD and <a href="#endDTDendDTD">endDTD endDTD</a> events.
+   between the startDTD and endDTD endDTD events.
  Declarations are assumed to belong to the internal DTD subset
- unless they appear between <a href="#startEntitystartEntity">startEntity startEntity</a>
- and <a href="#endEntityendEntity">endEntity endEntity</a> events.  Comments and
+ unless they appear between startEntity startEntity
+ and endEntity endEntity events.  Comments and
  processing instructions from the DTD should also be reported
  between the startDTD and endDTD events, in their original 
  order of (logical) occurrence; they are not required to
@@ -74,14 +69,13 @@ org.xml.sax.ext.DeclHandler DeclHandler events must appear
  <p/>Note that the start/endDTD events will appear within
  the start/endDocument events from ContentHandler and
  before the first 
-<a href="../../../../org/xml/sax/ContentHandler.html#startElementstartElement">org.xml.sax.ContentHandler.startElement startElement</a>
+org.xml.sax.ContentHandler.startElement startElement
   event.
-</div><p/><div class="classdoc-tag-section-header">Parameters:</div><dl class="classdoc-list"><dt><span class="prototype-name">name</span> - The document type name.</dt><dt><span class="prototype-name">publicId</span> - The declared public identifier for the
-external DTD subset, or null if none was declared.</dt><dt><span class="prototype-name">systemId</span> - The declared system identifier for the
-external DTD subset, or null if none was declared.</dt></dl><div class="classdoc-tag-section-header">Throws:</div><dl class="classdoc-list"><dt><code><a href="../../../../org/xml/sax/SAXException.html">SAXException</a></code> - The application may raise an
-exception.</dt></dl><div class="classdoc-tag-section-header">See Also:</div><dl class="classdoc-list"><dt><code><a href="#endDTD
-">endDTD</a></code></dt><dt><code><a href="#startEntity
-">startEntity</a></code></dt></dl><hr/><a name="startEntity(String)"/><h3>startEntity</h3><p class="prototype">public void <b>startEntity</b>(<span class="parameter">String&nbsp;name</span>)</p><div class="classdoc-comment-body"> Report the beginning of some internal and external XML entities.
+</div><div><h4>Parameters:</h4><div>name - The document type name.</div><div>publicId - The declared public identifier for the
+external DTD subset, or null if none was declared.</div><div>systemId - The declared system identifier for the
+external DTD subset, or null if none was declared.
+(Note that this is not resolved against the document
+base URI.)</div></div></div><hr/><a name="startEntity(String)"/><div><h3>startEntity</h3><p>public void startEntity(String name)</p><div> Report the beginning of some internal and external XML entities.
 
  <p/>The reporting of parameter entities (including
  the external DTD subset) is optional, and SAX2 drivers that
@@ -100,23 +94,25 @@ org.xml.sax.ext.DeclHandler DeclHandler or
 org.xml.sax.DTDHandler DTDHandler be properly ordered.
   
  <p/>Note that skipped entities will be reported through the
-<a href="../../../../org/xml/sax/ContentHandler.html#skippedEntityskippedEntity">org.xml.sax.ContentHandler.skippedEntity skippedEntity</a>
+org.xml.sax.ContentHandler.skippedEntity skippedEntity
   event, which is part of the ContentHandler interface.
 
  <p/>Because of the streaming event model that SAX uses, some
  entity boundaries cannot be reported under any 
  circumstances:
 
- <ul><li>general entities within attribute values</li><li>parameter entities within declarations</li></ul><p/>These will be silently expanded, with no indication of where
+ <ul>
+ <li>general entities within attribute values</li>
+ <li>parameter entities within declarations</li>
+ </ul>
+
+ <p/>These will be silently expanded, with no indication of where
  the original entity boundaries were.
 
  <p/>Note also that the boundaries of character references (which
  are not really entities anyway) are not reported.
 
  <p/>All start/endEntity events must be properly nested.
-</div><p/><div class="classdoc-tag-section-header">Parameters:</div><dl class="classdoc-list"><dt><span class="prototype-name">name</span> - The name of the entity.</dt></dl><div class="classdoc-tag-section-header">Throws:</div><dl class="classdoc-list"><dt><code><a href="../../../../org/xml/sax/SAXException.html">SAXException</a></code> - The application may raise an exception.</dt></dl><div class="classdoc-tag-section-header">See Also:</div><dl class="classdoc-list"><dt><code><a href="#endEntity
-">endEntity</a></code></dt><dt><code><a href="../../../../org/xml/sax/ext/DeclHandler.html#internalEntityDecl">org.xml.sax.ext.DeclHandler.internalEntityDecl
-</a></code></dt><dt><code><a href="../../../../org/xml/sax/ext/DeclHandler.html#externalEntityDecl">org.xml.sax.ext.DeclHandler.externalEntityDecl 
-</a></code></dt></dl><hr class="footer"/><div class="footer">Generated on
-  October 6, 2004
-  by <a target="cptoolsinfo" href="http://www.gnu.org/software/cp-tools">GNU Classpath Tools</a> (Gjdoc XmlDoclet 0.6.1).</div></body></html>
+</div><div><h4>Parameters:</h4><div>name - The name of the entity.  If it is a parameter
+entity, the name will begin with '%', and if it is the
+external DTD subset, it will be "[dtd]".</div></div></div><p> </p><table class="navbar div bottom"><tr><td><div><span class="navbar item enabled"><a href="../../../..//index-noframes.html">Overview</a></span> <span class="navbar item enabled"><a href="package-summary.html">Package</a></span> <span class="navbar item enabled"><a href="tree.html">Tree</a></span> <a href="../../../..//alphaindex.html">Index</a> <a href="../../../..//deprecated.html">Deprecated</a> <a href="../../../..//help.html">Help</a> <a href="../../../..//about.html">About</a></div></td></tr></table></body></html>

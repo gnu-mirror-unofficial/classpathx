@@ -1,9 +1,5 @@
-<html xmlns="http://www.w3.org/TR/REC-html40" xmlns:html="http://www.w3.org/TR/REC-html40" xmlns:gjdoc="http://www.gnu.org/software/cp-tools/gjdocxml"><head><link href="../../../../gjdochtml.css" type="text/css" rel="stylesheet"/><title>LSOutput</title></head><body onload="top.document.title=document.title;" class="classdoc"><div class="header"><span class="navi-button">&rArr;&nbsp;<a target="_top" href="../../../../index.html">Index&nbsp;(Frames)</a></span>&nbsp;|&nbsp;
-      <span class="navi-button">&rArr;&nbsp;<a target="_top" href="../../../../index_noframes.html">Index&nbsp;(No&nbsp;Frames)</a></span>&nbsp;|&nbsp;
-      <span class="navi-button">&rArr;&nbsp;<a href="package-summary.html">Package</a></span>&nbsp;|&nbsp;
-      <span class="navi-button">&rArr;&nbsp;<a href="package-tree.html">Package&nbsp;Tree</a></span>&nbsp;|&nbsp;
-      <span class="navi-button">&rArr;&nbsp;<a href="../../../../fulltree.html">Full Tree</a></span>&nbsp;
-    </div><div class="classdoc-head"><div class="classdoc-head-inner"><b class="classdoc-head-packagename">org.w3c.dom.ls</b><br/><h1 class="classdoc-head-classname">Interface LSOutput</h1></div></div><p/><hr/><div class="classdoc-prototype">public interface <b>LSOutput</b><br/></div><p/><div class="classdoc-class-comment-body">  This interface represents an output destination for data. 
+<?xml version="1.0" encoding="null"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head><title>LSOutput</title><meta http-equiv="Content-Type" content="text/html; charset=null"/></head><body><table class="navbar div top"><tr><td><div><span class="navbar item enabled"><a href="../../../..//index-noframes.html">Overview</a></span> <span class="navbar item enabled"><a href="package-summary.html">Package</a></span> <span class="navbar item enabled"><a href="tree.html">Tree</a></span> <a href="../../../..//alphaindex.html">Index</a> <a href="../../../..//deprecated.html">Deprecated</a> <a href="../../../..//help.html">Help</a> <a href="../../../..//about.html">About</a></div></td></tr></table><div><h3>org.w3c.dom.ls</h3><h1>Interface LSOutput</h1><hr/><div><div>public interface LSOutput</div><div>extends java.lang.Object</div></div><hr/><div>  This interface represents an output destination for data. 
  <p/> This interface allows an application to encapsulate information about 
  an output destination in a single object, which may include a URI, a byte 
  stream (possibly with a specified encoding), a base URI, and/or a 
@@ -21,45 +17,52 @@
  the <code>LSOutput</code> in the following order to know which one to 
  output to, the first one that is not null and not an empty string will be 
  used: 
- <ol><li><code>LSOutput.characterStream</code></li><li><code>LSOutput.byteStream</code></li><li><code>LSOutput.systemId</code></li></ol><p/><code>LSOutput</code> objects belong to the application. The DOM 
+ <ol>
+ <li> <code>LSOutput.characterStream</code> 
+ </li>
+ <li> 
+ <code>LSOutput.byteStream</code> 
+ </li>
+ <li> <code>LSOutput.systemId</code> 
+ </li>
+ </ol> 
+ <p/> <code>LSOutput</code> objects belong to the application. The DOM 
  implementation will never modify them (though it may make copies and 
  modify the copies, if necessary). 
  <p/>See also the <a href="http://www.w3.org/TR/2004/REC-DOM-Level-3-LS-20040407">Document Object Model (DOM) Level 3 Load
 and Save Specification</a>.
-</div><h1 class="classdoc-header">Method Summary</h1><table class="classdoc-table" width="100%" cellspacing="0" border="1"><tr><td class="no-border-r" valign="top" align="right" width="1%"><p class="prototype-type"> java.io.OutputStream</p></td><td class="with-border" valign="top" align="left"><p class="prototype"><a href="#getByteStream()">getByteStream</a>()</p><blockquote class="classdoc-summary-comment">  An attribute of a language and binding dependent type that represents 
- a writable stream of bytes.</blockquote></td></tr><tr><td class="no-border-r" valign="top" align="right" width="1%"><p class="prototype-type"> java.io.Writer</p></td><td class="with-border" valign="top" align="left"><p class="prototype"><a href="#getCharacterStream()">getCharacterStream</a>()</p><blockquote class="classdoc-summary-comment">  An attribute of a language and binding dependent type that represents 
- a writable stream to which 16-bit units can be output.</blockquote></td></tr><tr><td class="no-border-r" valign="top" align="right" width="1%"><p class="prototype-type"> String</p></td><td class="with-border" valign="top" align="left"><p class="prototype"><a href="#getEncoding()">getEncoding</a>()</p><blockquote class="classdoc-summary-comment">  The character encoding to use for the output.</blockquote></td></tr><tr><td class="no-border-r" valign="top" align="right" width="1%"><p class="prototype-type"> String</p></td><td class="with-border" valign="top" align="left"><p class="prototype"><a href="#getSystemId()">getSystemId</a>()</p><blockquote class="classdoc-summary-comment">  The system identifier, a URI reference [IETF RFC 2396], for this 
- output destination.</blockquote></td></tr><tr><td class="no-border-r" valign="top" align="right" width="1%"><p class="prototype-type"> void</p></td><td class="with-border" valign="top" align="left"><p class="prototype"><a href="#setByteStream(java.io.OutputStream)">setByteStream</a>(<span class="parameter">java.io.OutputStream&nbsp;byteStream</span>)</p><blockquote class="classdoc-summary-comment">  An attribute of a language and binding dependent type that represents 
- a writable stream of bytes.</blockquote></td></tr><tr><td class="no-border-r" valign="top" align="right" width="1%"><p class="prototype-type"> void</p></td><td class="with-border" valign="top" align="left"><p class="prototype"><a href="#setCharacterStream(java.io.Writer)">setCharacterStream</a>(<span class="parameter">java.io.Writer&nbsp;characterStream</span>)</p><blockquote class="classdoc-summary-comment">  An attribute of a language and binding dependent type that represents 
- a writable stream to which 16-bit units can be output.</blockquote></td></tr><tr><td class="no-border-r" valign="top" align="right" width="1%"><p class="prototype-type"> void</p></td><td class="with-border" valign="top" align="left"><p class="prototype"><a href="#setEncoding(String)">setEncoding</a>(<span class="parameter">String&nbsp;encoding</span>)</p><blockquote class="classdoc-summary-comment">  The character encoding to use for the output.</blockquote></td></tr><tr><td class="no-border-r" valign="top" align="right" width="1%"><p class="prototype-type"> void</p></td><td class="with-border" valign="top" align="left"><p class="prototype"><a href="#setSystemId(String)">setSystemId</a>(<span class="parameter">String&nbsp;systemId</span>)</p><blockquote class="classdoc-summary-comment">  The system identifier, a URI reference [IETF RFC 2396], for this 
- output destination.</blockquote></td></tr></table><h1 class="classdoc-header">Method Details</h1><a name="getByteStream()"/><h3>getByteStream</h3><p class="prototype">public OutputStream <b>getByteStream</b>()</p><div class="classdoc-comment-body">  An attribute of a language and binding dependent type that represents 
+</div><table class="class summary"><tr><td colspan="2"><h4>Method Summary</h4></td></tr><tr><td class="class summary left">public java.io.OutputStream</td><td class="class summary right"> <a href="#getByteStream()">getByteStream</a>()</td></tr><tr><td></td><td>  An attribute of a language and binding dependent type that represents 
+ a writable stream of bytes.</td></tr><tr><td class="class summary left">public java.io.Writer</td><td class="class summary right"> <a href="#getCharacterStream()">getCharacterStream</a>()</td></tr><tr><td></td><td>  An attribute of a language and binding dependent type that represents 
+ a writable stream to which 16-bit units can be output.</td></tr><tr><td class="class summary left">public String</td><td class="class summary right"> <a href="#getEncoding()">getEncoding</a>()</td></tr><tr><td></td><td>  The character encoding to use for the output.</td></tr><tr><td class="class summary left">public String</td><td class="class summary right"> <a href="#getSystemId()">getSystemId</a>()</td></tr><tr><td></td><td>  The system identifier, a URI reference [<a href="http://www.ietf.org/rfc/rfc2396.txt">IETF RFC 2396</a>], for this 
+ output destination.</td></tr><tr><td class="class summary left">public void</td><td class="class summary right"> <a href="#setByteStream(java.io.OutputStream)">setByteStream</a>(java.io.OutputStream byteStream)</td></tr><tr><td></td><td>  An attribute of a language and binding dependent type that represents 
+ a writable stream of bytes.</td></tr><tr><td class="class summary left">public void</td><td class="class summary right"> <a href="#setCharacterStream(java.io.Writer)">setCharacterStream</a>(java.io.Writer characterStream)</td></tr><tr><td></td><td>  An attribute of a language and binding dependent type that represents 
+ a writable stream to which 16-bit units can be output.</td></tr><tr><td class="class summary left">public void</td><td class="class summary right"> <a href="#setEncoding(String)">setEncoding</a>(String encoding)</td></tr><tr><td></td><td>  The character encoding to use for the output.</td></tr><tr><td class="class summary left">public void</td><td class="class summary right"> <a href="#setSystemId(String)">setSystemId</a>(String systemId)</td></tr><tr><td></td><td>  The system identifier, a URI reference [<a href="http://www.ietf.org/rfc/rfc2396.txt">IETF RFC 2396</a>], for this 
+ output destination.</td></tr></table><h4>Method Details</h4><a name="getByteStream()"/><div><h3>getByteStream</h3><p>public java.io.OutputStream getByteStream()</p><div>  An attribute of a language and binding dependent type that represents 
  a writable stream of bytes. 
-</div><p/><hr/><a name="getCharacterStream()"/><h3>getCharacterStream</h3><p class="prototype">public Writer <b>getCharacterStream</b>()</p><div class="classdoc-comment-body">  An attribute of a language and binding dependent type that represents 
+</div></div><hr/><a name="getCharacterStream()"/><div><h3>getCharacterStream</h3><p>public java.io.Writer getCharacterStream()</p><div>  An attribute of a language and binding dependent type that represents 
  a writable stream to which 16-bit units can be output. 
-</div><p/><hr/><a name="getEncoding()"/><h3>getEncoding</h3><p class="prototype">public String <b>getEncoding</b>()</p><div class="classdoc-comment-body">  The character encoding to use for the output. The encoding must be a 
+</div></div><hr/><a name="getEncoding()"/><div><h3>getEncoding</h3><p>public String getEncoding()</p><div>  The character encoding to use for the output. The encoding must be a 
  string acceptable for an XML encoding declaration ([<a href="http://www.w3.org/TR/2004/REC-xml-20040204">XML 1.0</a>] section 
  4.3.3 "Character Encoding in Entities"), it is recommended that 
  character encodings registered (as charsets) with the Internet 
  Assigned Numbers Authority [<a href="ftp://ftp.isi.edu/in-notes/iana/assignments/character-sets">IANA-CHARSETS</a>]
   should be referred to using their registered names. 
-</div><p/><hr/><a name="getSystemId()"/><h3>getSystemId</h3><p class="prototype">public String <b>getSystemId</b>()</p><div class="classdoc-comment-body">  The system identifier, a URI reference [<a href="http://www.ietf.org/rfc/rfc2396.txt">IETF RFC 2396</a>], for this 
+</div></div><hr/><a name="getSystemId()"/><div><h3>getSystemId</h3><p>public String getSystemId()</p><div>  The system identifier, a URI reference [<a href="http://www.ietf.org/rfc/rfc2396.txt">IETF RFC 2396</a>], for this 
  output destination. 
  <br/> If the system ID is a relative URI reference (see section 5 in [<a href="http://www.ietf.org/rfc/rfc2396.txt">IETF RFC 2396</a>]), the 
  behavior is implementation dependent. 
-</div><p/><hr/><a name="setByteStream(java.io.OutputStream)"/><h3>setByteStream</h3><p class="prototype">public void <b>setByteStream</b>(<span class="parameter">java.io.OutputStream&nbsp;byteStream</span>)</p><div class="classdoc-comment-body">  An attribute of a language and binding dependent type that represents 
+</div></div><hr/><a name="setByteStream(java.io.OutputStream)"/><div><h3>setByteStream</h3><p>public void setByteStream(java.io.OutputStream byteStream)</p><div>  An attribute of a language and binding dependent type that represents 
  a writable stream of bytes. 
-</div><p/><div class="classdoc-tag-section-header">Parameters:</div><dl class="classdoc-list"><dt><span class="prototype-name">byteStream</span></dt></dl><hr/><a name="setCharacterStream(java.io.Writer)"/><h3>setCharacterStream</h3><p class="prototype">public void <b>setCharacterStream</b>(<span class="parameter">java.io.Writer&nbsp;characterStream</span>)</p><div class="classdoc-comment-body">  An attribute of a language and binding dependent type that represents 
+</div><div><h4>Parameters:</h4><div>byteStream</div></div></div><hr/><a name="setCharacterStream(java.io.Writer)"/><div><h3>setCharacterStream</h3><p>public void setCharacterStream(java.io.Writer characterStream)</p><div>  An attribute of a language and binding dependent type that represents 
  a writable stream to which 16-bit units can be output. 
-</div><p/><div class="classdoc-tag-section-header">Parameters:</div><dl class="classdoc-list"><dt><span class="prototype-name">characterStream</span></dt></dl><hr/><a name="setEncoding(String)"/><h3>setEncoding</h3><p class="prototype">public void <b>setEncoding</b>(<span class="parameter">String&nbsp;encoding</span>)</p><div class="classdoc-comment-body">  The character encoding to use for the output. The encoding must be a 
+</div><div><h4>Parameters:</h4><div>characterStream</div></div></div><hr/><a name="setEncoding(String)"/><div><h3>setEncoding</h3><p>public void setEncoding(String encoding)</p><div>  The character encoding to use for the output. The encoding must be a 
  string acceptable for an XML encoding declaration ([<a href="http://www.w3.org/TR/2004/REC-xml-20040204">XML 1.0</a>] section 
  4.3.3 "Character Encoding in Entities"), it is recommended that 
  character encodings registered (as charsets) with the Internet 
  Assigned Numbers Authority [<a href="ftp://ftp.isi.edu/in-notes/iana/assignments/character-sets">IANA-CHARSETS</a>]
   should be referred to using their registered names. 
-</div><p/><div class="classdoc-tag-section-header">Parameters:</div><dl class="classdoc-list"><dt><span class="prototype-name">encoding</span></dt></dl><hr/><a name="setSystemId(String)"/><h3>setSystemId</h3><p class="prototype">public void <b>setSystemId</b>(<span class="parameter">String&nbsp;systemId</span>)</p><div class="classdoc-comment-body">  The system identifier, a URI reference [<a href="http://www.ietf.org/rfc/rfc2396.txt">IETF RFC 2396</a>], for this 
+</div><div><h4>Parameters:</h4><div>encoding</div></div></div><hr/><a name="setSystemId(String)"/><div><h3>setSystemId</h3><p>public void setSystemId(String systemId)</p><div>  The system identifier, a URI reference [<a href="http://www.ietf.org/rfc/rfc2396.txt">IETF RFC 2396</a>], for this 
  output destination. 
  <br/> If the system ID is a relative URI reference (see section 5 in [<a href="http://www.ietf.org/rfc/rfc2396.txt">IETF RFC 2396</a>]), the 
  behavior is implementation dependent. 
-</div><p/><div class="classdoc-tag-section-header">Parameters:</div><dl class="classdoc-list"><dt><span class="prototype-name">systemId</span></dt></dl><hr class="footer"/><div class="footer">Generated on
-  October 6, 2004
-  by <a target="cptoolsinfo" href="http://www.gnu.org/software/cp-tools">GNU Classpath Tools</a> (Gjdoc XmlDoclet 0.6.1).</div></body></html>
+</div><div><h4>Parameters:</h4><div>systemId</div></div></div><p> </p><table class="navbar div bottom"><tr><td><div><span class="navbar item enabled"><a href="../../../..//index-noframes.html">Overview</a></span> <span class="navbar item enabled"><a href="package-summary.html">Package</a></span> <span class="navbar item enabled"><a href="tree.html">Tree</a></span> <a href="../../../..//alphaindex.html">Index</a> <a href="../../../..//deprecated.html">Deprecated</a> <a href="../../../..//help.html">Help</a> <a href="../../../..//about.html">About</a></div></td></tr></table></body></html>

@@ -1,26 +1,26 @@
-<html xmlns="http://www.w3.org/TR/REC-html40" xmlns:html="http://www.w3.org/TR/REC-html40" xmlns:gjdoc="http://www.gnu.org/software/cp-tools/gjdocxml"><head><link href="../../../../gjdochtml.css" type="text/css" rel="stylesheet"/><title>EntityResolver2</title></head><body onload="top.document.title=document.title;" class="classdoc"><div class="header"><span class="navi-button">&rArr;&nbsp;<a target="_top" href="../../../../index.html">Index&nbsp;(Frames)</a></span>&nbsp;|&nbsp;
-      <span class="navi-button">&rArr;&nbsp;<a target="_top" href="../../../../index_noframes.html">Index&nbsp;(No&nbsp;Frames)</a></span>&nbsp;|&nbsp;
-      <span class="navi-button">&rArr;&nbsp;<a href="package-summary.html">Package</a></span>&nbsp;|&nbsp;
-      <span class="navi-button">&rArr;&nbsp;<a href="package-tree.html">Package&nbsp;Tree</a></span>&nbsp;|&nbsp;
-      <span class="navi-button">&rArr;&nbsp;<a href="../../../../fulltree.html">Full Tree</a></span>&nbsp;
-    </div><div class="classdoc-head"><div class="classdoc-head-inner"><b class="classdoc-head-packagename">org.xml.sax.ext</b><br/><h1 class="classdoc-head-classname">Interface EntityResolver2</h1></div></div><p/><b>All Superinterfaces:</b><br/><a href="../../../../org/xml/sax/EntityResolver.html">EntityResolver</a><p/><hr/><div class="classdoc-prototype">public interface <b>EntityResolver2</b><br/>implements <a href="../../../../org/xml/sax/EntityResolver.html">EntityResolver</a></div><p/><div class="classdoc-class-comment-body"> Extended interface for mapping external entity references to input
+<?xml version="1.0" encoding="null"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head><title>EntityResolver2</title><meta http-equiv="Content-Type" content="text/html; charset=null"/></head><body><table class="navbar div top"><tr><td><div><span class="navbar item enabled"><a href="../../../..//index-noframes.html">Overview</a></span> <span class="navbar item enabled"><a href="package-summary.html">Package</a></span> <span class="navbar item enabled"><a href="tree.html">Tree</a></span> <a href="../../../..//alphaindex.html">Index</a> <a href="../../../..//deprecated.html">Deprecated</a> <a href="../../../..//help.html">Help</a> <a href="../../../..//about.html">About</a></div></td></tr></table><div><h3>org.xml.sax.ext</h3><h1>Interface EntityResolver2</h1><hr/><div><div>public interface EntityResolver2</div><div>extends <a href="../../../..//org/xml/sax/EntityResolver.html">EntityResolver</a></div><div>implements <a href="../../../..//org/xml/sax/EntityResolver.html">EntityResolver</a></div></div><hr/><div> Extended interface for mapping external entity references to input
  sources, or providing a missing external subset.  The
-<a href="../../../../org/xml/sax/XMLReader.html#setEntityResolverXMLReader.setEntityResolver()">XMLReader.setEntityResolver XMLReader.setEntityResolver()</a> method
+XMLReader.setEntityResolver XMLReader.setEntityResolver() method
   is used to provide implementations of this interface to parsers.
  When a parser uses the methods in this interface, the
-<a href="../../../../org/xml/sax/ext/EntityResolver2.html#resolveEntityEntityResolver2.resolveEntity()">EntityResolver2.resolveEntity EntityResolver2.resolveEntity()</a>
+EntityResolver2.resolveEntity EntityResolver2.resolveEntity()
   method (in this interface) is used <em>instead of</em> the older (SAX 1.0)
-<a href="../../../../org/xml/sax/EntityResolver.html#resolveEntityEntityResolver.resolveEntity()">EntityResolver.resolveEntity EntityResolver.resolveEntity()</a> method.
+EntityResolver.resolveEntity EntityResolver.resolveEntity() method.
  
- <blockquote><em>This module, both source code and documentation, is in the
- Public Domain, and comes with <strong>NO WARRANTY</strong>.</em></blockquote><p/>If a SAX application requires the customized handling which this
+ <blockquote>
+ <em>This module, both source code and documentation, is in the
+ Public Domain, and comes with <strong>NO WARRANTY</strong>.</em>
+ </blockquote>
+
+ <p/>If a SAX application requires the customized handling which this
  interface defines for external entities, it must ensure that it uses
  an XMLReader with the
  <em>http://xml.org/sax/features/use-entity-resolver2</em> feature flag
  set to <em>true</em> (which is its default value when the feature is
  recognized).  If that flag is unrecognized, or its value is false,
  or the resolver does not implement this interface, then only the
-<a href="../../../../org/xml/sax/EntityResolver.html">EntityResolver</a> method will be used.
+<a href="../../../..//org/xml/sax/EntityResolver.html">EntityResolver</a> method will be used.
   
 
  <p/>That supports three categories of application that modify entity
@@ -37,17 +37,15 @@
  EntityResolver2 implementation they provide  might throw an exception
  if the original SAX 1.0 style entity resolution method is invoked.
  
-</div><div class="classdoc-tag-section-header">Since:</div><dl class="classdoc-list"><dt>SAX 2.0 (extensions 1.1 alpha)</dt></dl><div class="classdoc-tag-section-header">Author:</div><dl class="classdoc-list"><dt>David Brownell</dt></dl><div class="classdoc-tag-section-header">See Also:</div><dl class="classdoc-list"><dt><code><a href="../../../../org/xml/sax/XMLReader.html#setEntityResolver">org.xml.sax.XMLReader.setEntityResolver
-
-</a></code></dt></dl><h1 class="classdoc-header">Method Summary</h1><table class="classdoc-table" width="100%" cellspacing="0" border="1"><tr><td class="no-border-r" valign="top" align="right" width="1%"><p class="prototype-type"> <a href="../../../../org/xml/sax/InputSource.html">InputSource</a></p></td><td class="with-border" valign="top" align="left"><p class="prototype"><a href="#getExternalSubset(String,String)">getExternalSubset</a>(<span class="parameter">String&nbsp;name,</span> <span class="parameter">String&nbsp;baseURI</span>)</p><blockquote class="classdoc-summary-comment"> Allows applications to provide an external subset for documents
- that don't explicitly define one.</blockquote></td></tr><tr><td class="no-border-r" valign="top" align="right" width="1%"><p class="prototype-type"> <a href="../../../../org/xml/sax/InputSource.html">InputSource</a></p></td><td class="with-border" valign="top" align="left"><p class="prototype"><a href="#resolveEntity(String,String,String,String)">resolveEntity</a>(<span class="parameter">String&nbsp;name,</span> <span class="parameter">String&nbsp;publicId,</span> <span class="parameter">String&nbsp;baseURI,</span> <span class="parameter">String&nbsp;systemId</span>)</p><blockquote class="classdoc-summary-comment"> Allows applications to map references to external entities into input
- sources, or tell the parser it should use conventional URI resolution.</blockquote></td></tr></table><h1 class="classdoc-header">Method Details</h1><a name="getExternalSubset(String,String)"/><h3>getExternalSubset</h3><p class="prototype">public InputSource <b>getExternalSubset</b>(<span class="parameter">String&nbsp;name,</span> <span class="parameter">String&nbsp;baseURI</span>)</p><div class="classdoc-comment-body"> Allows applications to provide an external subset for documents
+</div><div class="classdoc-tag-section-header">Version:</div><dl class="classdoc-list"><dt>TBD</dt></dl><dl class="tag list"><dt class="tag section header"><b>Author:</b></dt><dd class="tag item">David Brownell</dd></dl><dl class="tag list"><dt class="tag section header"><b>Since:</b></dt><dd>SAX 2.0 (extensions 1.1 alpha)</dt></dl><table class="class summary"><tr><td colspan="2"><h4>Method Summary</h4></td></tr><tr><td class="class summary left">public <a href="../../../..//org/xml/sax/InputSource.html">InputSource</a></td><td class="class summary right"> <a href="#getExternalSubset(String,String)">getExternalSubset</a>(String name, String baseURI)</td></tr><tr><td></td><td> Allows applications to provide an external subset for documents
+ that don't explicitly define one.</td></tr><tr><td class="class summary left">public <a href="../../../..//org/xml/sax/InputSource.html">InputSource</a></td><td class="class summary right"> <a href="#resolveEntity(String,String,String,String)">resolveEntity</a>(String name, String publicId, String baseURI, String systemId)</td></tr><tr><td></td><td> Allows applications to map references to external entities into input
+ sources, or tell the parser it should use conventional URI resolution.</td></tr></table><table class="class summary"><tr><td colspan="2"><h4>Methods inherited from org.xml.sax.EntityResolver</h4></td></tr><tr><td><a href="../../../..//org/xml/sax/EntityResolver.html#resolveEntity(String,String)">resolveEntity</a></td></tr></table><h4>Method Details</h4><a name="getExternalSubset(String,String)"/><div><h3>getExternalSubset</h3><p>public <a href="../../../..//org/xml/sax/InputSource.html">InputSource</a> getExternalSubset(String name, String baseURI)</p><div> Allows applications to provide an external subset for documents
  that don't explicitly define one.  Documents with DOCTYPE declarations
  that omit an external subset can thus augment the declarations
  available for validation, entity processing, and attribute processing
  (normalization, defaulting, and reporting types including ID).
  This augmentation is reported
- through the <a href="../../../../org/xml/sax/ext/LexicalHandler.html#startDTDstartDTD()">LexicalHandler.startDTD startDTD()</a> method as if
+ through the LexicalHandler.startDTD startDTD() method as if
  the document text had originally included the external subset;
  this callback is made before any internal subset data or errors
  are reported.
@@ -69,9 +67,12 @@
  endEntity ("[dtd]");
  endDTD ();
  ... then the rest of the document (as usual)
- startElement (..., "rootName", ...);</pre><p/>Note that the InputSource gets no further resolution.
+ startElement (..., "rootName", ...);
+ </pre>
+
+ <p/>Note that the InputSource gets no further resolution.
  Implementations of this method may wish to invoke
-<a href="#resolveEntityresolveEntity()">resolveEntity resolveEntity()</a> to gain benefits such as use
+resolveEntity resolveEntity() to gain benefits such as use
   of local caches of DTD entities.  Also, this method will never be
  used by a (non-validating) processor that is not including external
  parameter entities. 
@@ -89,16 +90,17 @@
  the input document.  By providing definitions for general entities,
  it can make a malformed document appear to be well formed.
  
-</div><p/><div class="classdoc-tag-section-header">Parameters:</div><dl class="classdoc-list"><dt><span class="prototype-name">name</span> - Identifies the document root element.</dt><dt><span class="prototype-name">baseURI</span> - The document's base URI, serving as an additional
-hint for selecting the external subset.</dt></dl><div class="classdoc-tag-section-header">Returns:</div><dl class="classdoc-list"><dt>An InputSource object describing the new external subset
-to be used by the parser, or null to indicate that no external
-subset is provided.</dt></dl><div class="classdoc-tag-section-header">Throws:</div><dl class="classdoc-list"><dt><code><a href="../../../../org/xml/sax/SAXException.html">SAXException</a></code> - Any SAX exception, possibly wrapping
-another exception.</dt><dt><code/> - Probably indicating a failure to create
-a new InputStream or Reader, or an illegal URL.</dt></dl><hr/><a name="resolveEntity(String,String,String,String)"/><h3>resolveEntity</h3><p class="prototype">public InputSource <b>resolveEntity</b>(<span class="parameter">String&nbsp;name,</span> <span class="parameter">String&nbsp;publicId,</span> <span class="parameter">String&nbsp;baseURI,</span> <span class="parameter">String&nbsp;systemId</span>)</p><div class="classdoc-comment-body"> Allows applications to map references to external entities into input
+</div><div><h4>Parameters:</h4><div>name - Identifies the document root element.  This name comes
+from a DOCTYPE declaration (where available) or from the actual
+root element.</div><div>baseURI - The document's base URI, serving as an additional
+hint for selecting the external subset.  This is always an absolute
+URI, unless it is null because the XMLReader was given an InputSource
+without one.</div></div><div><h4>Throws:</h4><div><a href="../../../..//org/xml/sax/SAXException.html">SAXException</a> - Any SAX exception, possibly wrapping
+another exception.</div></div></div><hr/><a name="resolveEntity(String,String,String,String)"/><div><h3>resolveEntity</h3><p>public <a href="../../../..//org/xml/sax/InputSource.html">InputSource</a> resolveEntity(String name, String publicId, String baseURI, String systemId)</p><div> Allows applications to map references to external entities into input
  sources, or tell the parser it should use conventional URI resolution.
  This method is only called for external entities which have been
  properly declared.
- This method provides more flexibility than the <a href="../../../../org/xml/sax/EntityResolver.html">EntityResolver</a>
+ This method provides more flexibility than the <a href="../../../..//org/xml/sax/EntityResolver.html">EntityResolver</a>
  interface, supporting implementations of more complex catalogue
  schemes such as the one defined by the <a href="http://www.oasis-open.org/committees/entity/spec-2001-08-06.html">OASIS XML Catalogs</a> specification.
 
@@ -106,23 +108,27 @@ a new InputStream or Reader, or an illegal URL.</dt></dl><hr/><a name="resolveEn
  to determine the input source to use for any external entity
  being included because of a reference in the XML text.
  That excludes the document entity, and any external entity returned
- by <a href="#getExternalSubsetgetExternalSubset()">getExternalSubset getExternalSubset()</a>.
+ by getExternalSubset getExternalSubset().
  When a (non-validating) processor is configured not to include
  a class of entities (parameter or general) through use of feature
  flags, this method is not invoked for such entities.  
 
  <p/>Note that the entity naming scheme used here is the same one
- used in the <a href="../../../../org/xml/sax/ext/LexicalHandler.html">LexicalHandler</a>, or in the <a href="../../../../org/xml/sax/ContentHandler.html#skippedEntityContentHandler.skippedEntity()">org.xml.sax.ContentHandler.skippedEntity ContentHandler.skippedEntity()</a>
+ used in the <a href="../../../..//org/xml/sax/ext/LexicalHandler.html">LexicalHandler</a>, or in the org.xml.sax.ContentHandler.skippedEntity
+ContentHandler.skippedEntity()
  method. 
-</div><p/><div class="classdoc-tag-section-header">Parameters:</div><dl class="classdoc-list"><dt><span class="prototype-name">name</span> - Identifies the external entity being resolved.</dt><dt><span class="prototype-name">publicId</span> - The public identifier of the external entity being
+</div><div><h4>Parameters:</h4><div>name - Identifies the external entity being resolved.
+Either "[dtd]" for the external subset, or a name starting
+with "%" to indicate a parameter entity, or else the name of
+a general entity.  This is never null when invoked by a SAX2
+parser.</div><div>publicId - The public identifier of the external entity being
 referenced (normalized as required by the XML specification), or
-null if none was supplied.</dt><dt><span class="prototype-name">baseURI</span> - The URI with respect to which relative systemIDs
-are interpreted.</dt><dt><span class="prototype-name">systemId</span> - The system identifier of the external entity
-being referenced; either a relative or absolute URI.</dt></dl><div class="classdoc-tag-section-header">Returns:</div><dl class="classdoc-list"><dt>An InputSource object describing the new input source to
-be used by the parser.  Returning null directs the parser to
-resolve the system ID against the base URI and open a connection
-to resulting URI.</dt></dl><div class="classdoc-tag-section-header">Throws:</div><dl class="classdoc-list"><dt><code><a href="../../../../org/xml/sax/SAXException.html">SAXException</a></code> - Any SAX exception, possibly wrapping
-another exception.</dt><dt><code/> - Probably indicating a failure to create
-a new InputStream or Reader, or an illegal URL.</dt></dl><hr class="footer"/><div class="footer">Generated on
-  October 6, 2004
-  by <a target="cptoolsinfo" href="http://www.gnu.org/software/cp-tools">GNU Classpath Tools</a> (Gjdoc XmlDoclet 0.6.1).</div></body></html>
+null if none was supplied.</div><div>baseURI - The URI with respect to which relative systemIDs
+are interpreted.  This is always an absolute URI, unless it is
+null (likely because the XMLReader was given an InputSource without
+one).  This URI is defined by the XML specification to be the one
+associated with the "&lt;" starting the relevant declaration.</div><div>systemId - The system identifier of the external entity
+being referenced; either a relative or absolute URI.
+This is never null when invoked by a SAX2 parser; only declared
+entities, and any external subset, are resolved by such parsers.</div></div><div><h4>Throws:</h4><div><a href="../../../..//org/xml/sax/SAXException.html">SAXException</a> - Any SAX exception, possibly wrapping
+another exception.</div></div></div><p> </p><table class="navbar div bottom"><tr><td><div><span class="navbar item enabled"><a href="../../../..//index-noframes.html">Overview</a></span> <span class="navbar item enabled"><a href="package-summary.html">Package</a></span> <span class="navbar item enabled"><a href="tree.html">Tree</a></span> <a href="../../../..//alphaindex.html">Index</a> <a href="../../../..//deprecated.html">Deprecated</a> <a href="../../../..//help.html">Help</a> <a href="../../../..//about.html">About</a></div></td></tr></table></body></html>

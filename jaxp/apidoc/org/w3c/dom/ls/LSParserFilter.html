@@ -1,9 +1,5 @@
-<html xmlns="http://www.w3.org/TR/REC-html40" xmlns:html="http://www.w3.org/TR/REC-html40" xmlns:gjdoc="http://www.gnu.org/software/cp-tools/gjdocxml"><head><link href="../../../../gjdochtml.css" type="text/css" rel="stylesheet"/><title>LSParserFilter</title></head><body onload="top.document.title=document.title;" class="classdoc"><div class="header"><span class="navi-button">&rArr;&nbsp;<a target="_top" href="../../../../index.html">Index&nbsp;(Frames)</a></span>&nbsp;|&nbsp;
-      <span class="navi-button">&rArr;&nbsp;<a target="_top" href="../../../../index_noframes.html">Index&nbsp;(No&nbsp;Frames)</a></span>&nbsp;|&nbsp;
-      <span class="navi-button">&rArr;&nbsp;<a href="package-summary.html">Package</a></span>&nbsp;|&nbsp;
-      <span class="navi-button">&rArr;&nbsp;<a href="package-tree.html">Package&nbsp;Tree</a></span>&nbsp;|&nbsp;
-      <span class="navi-button">&rArr;&nbsp;<a href="../../../../fulltree.html">Full Tree</a></span>&nbsp;
-    </div><div class="classdoc-head"><div class="classdoc-head-inner"><b class="classdoc-head-packagename">org.w3c.dom.ls</b><br/><h1 class="classdoc-head-classname">Interface LSParserFilter</h1></div></div><p/><hr/><div class="classdoc-prototype">public interface <b>LSParserFilter</b><br/></div><p/><div class="classdoc-class-comment-body"><code>LSParserFilter</code>s provide applications the ability to examine 
+<?xml version="1.0" encoding="null"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head><title>LSParserFilter</title><meta http-equiv="Content-Type" content="text/html; charset=null"/></head><body><table class="navbar div top"><tr><td><div><span class="navbar item enabled"><a href="../../../..//index-noframes.html">Overview</a></span> <span class="navbar item enabled"><a href="package-summary.html">Package</a></span> <span class="navbar item enabled"><a href="tree.html">Tree</a></span> <a href="../../../..//alphaindex.html">Index</a> <a href="../../../..//deprecated.html">Deprecated</a> <a href="../../../..//help.html">Help</a> <a href="../../../..//about.html">About</a></div></td></tr></table><div><h3>org.w3c.dom.ls</h3><h1>Interface LSParserFilter</h1><hr/><div><div>public interface LSParserFilter</div><div>extends java.lang.Object</div></div><hr/><div>  <code>LSParserFilter</code>s provide applications the ability to examine 
  nodes as they are being constructed while parsing. As each node is 
  examined, it may be modified or removed, or the entire parse may be 
  terminated early. 
@@ -31,16 +27,16 @@
  throwing exceptions from a filter is DOM implementation dependent. 
  <p/>See also the <a href="http://www.w3.org/TR/2004/REC-DOM-Level-3-LS-20040407">Document Object Model (DOM) Level 3 Load
 and Save Specification</a>.
-</div><h1 class="classdoc-header">Field Summary</h1><table class="classdoc-table" width="100%" cellspacing="0" border="1"><tr><td class="no-border-r" valign="top" align="right" width="1%"><p class="prototype-type">static short</p></td><td class="with-border" valign="top" align="left"><p class="prototype"><a href="#FILTER_ACCEPT">FILTER_ACCEPT</a></p><blockquote class="classdoc-summary-comment"> Accept the node.</blockquote></td></tr><tr><td class="no-border-r" valign="top" align="right" width="1%"><p class="prototype-type">static short</p></td><td class="with-border" valign="top" align="left"><p class="prototype"><a href="#FILTER_INTERRUPT">FILTER_INTERRUPT</a></p><blockquote class="classdoc-summary-comment">  Interrupt the normal processing of the document.</blockquote></td></tr><tr><td class="no-border-r" valign="top" align="right" width="1%"><p class="prototype-type">static short</p></td><td class="with-border" valign="top" align="left"><p class="prototype"><a href="#FILTER_REJECT">FILTER_REJECT</a></p><blockquote class="classdoc-summary-comment"> Reject the node and its children.</blockquote></td></tr><tr><td class="no-border-r" valign="top" align="right" width="1%"><p class="prototype-type">static short</p></td><td class="with-border" valign="top" align="left"><p class="prototype"><a href="#FILTER_SKIP">FILTER_SKIP</a></p><blockquote class="classdoc-summary-comment"> Skip this single node.</blockquote></td></tr></table><h1 class="classdoc-header">Method Summary</h1><table class="classdoc-table" width="100%" cellspacing="0" border="1"><tr><td class="no-border-r" valign="top" align="right" width="1%"><p class="prototype-type"> short</p></td><td class="with-border" valign="top" align="left"><p class="prototype"><a href="#acceptNode(org.w3c.dom.Node)">acceptNode</a>(<span class="parameter"><a href="../../../../org/w3c/dom/Node.html">Node</a>&nbsp;nodeArg</span>)</p><blockquote class="classdoc-summary-comment"> This method will be called by the parser at the completion of the 
- parsing of each node.</blockquote></td></tr><tr><td class="no-border-r" valign="top" align="right" width="1%"><p class="prototype-type"> int</p></td><td class="with-border" valign="top" align="left"><p class="prototype"><a href="#getWhatToShow()">getWhatToShow</a>()</p><blockquote class="classdoc-summary-comment">  Tells the LSParser what types of nodes to show to the 
- method LSParserFilter.acceptNode.</blockquote></td></tr><tr><td class="no-border-r" valign="top" align="right" width="1%"><p class="prototype-type"> short</p></td><td class="with-border" valign="top" align="left"><p class="prototype"><a href="#startElement(org.w3c.dom.Element)">startElement</a>(<span class="parameter"><a href="../../../../org/w3c/dom/Element.html">Element</a>&nbsp;elementArg</span>)</p><blockquote class="classdoc-summary-comment">  The parser will call this method after each Element start 
+</div><table class="class summary"><tr><td colspan="2"><h4>Field Summary</h4></td></tr><tr><td class="class summary left">public static final short</td><td class="class summary right"> <a href="#FILTER_ACCEPT">FILTER_ACCEPT</a></td></tr><tr><td></td><td> Accept the node.</td></tr><tr><td class="class summary left">public static final short</td><td class="class summary right"> <a href="#FILTER_INTERRUPT">FILTER_INTERRUPT</a></td></tr><tr><td></td><td>  Interrupt the normal processing of the document.</td></tr><tr><td class="class summary left">public static final short</td><td class="class summary right"> <a href="#FILTER_REJECT">FILTER_REJECT</a></td></tr><tr><td></td><td> Reject the node and its children.</td></tr><tr><td class="class summary left">public static final short</td><td class="class summary right"> <a href="#FILTER_SKIP">FILTER_SKIP</a></td></tr><tr><td></td><td> Skip this single node.</td></tr></table><table class="class summary"><tr><td colspan="2"><h4>Method Summary</h4></td></tr><tr><td class="class summary left">public short</td><td class="class summary right"> <a href="#acceptNode(org.w3c.dom.Node)">acceptNode</a>(<a href="../../../..//org/w3c/dom/Node.html">Node</a> nodeArg)</td></tr><tr><td></td><td> This method will be called by the parser at the completion of the 
+ parsing of each node.</td></tr><tr><td class="class summary left">public int</td><td class="class summary right"> <a href="#getWhatToShow()">getWhatToShow</a>()</td></tr><tr><td></td><td>  Tells the <code>LSParser</code> what types of nodes to show to the 
+ method <code>LSParserFilter.acceptNode</code>.</td></tr><tr><td class="class summary left">public short</td><td class="class summary right"> <a href="#startElement(org.w3c.dom.Element)">startElement</a>(<a href="../../../..//org/w3c/dom/Element.html">Element</a> elementArg)</td></tr><tr><td></td><td>  The parser will call this method after each <code>Element</code> start 
  tag has been scanned, but before the remainder of the 
- Element is processed.</blockquote></td></tr></table><h1 class="classdoc-header">Field Details</h1><a name="FILTER_ACCEPT"/><h3>FILTER_ACCEPT</h3><p class="prototype">public static final short <b>FILTER_ACCEPT</b></p><p/><div class="classdoc-comment-body"> Accept the node.
-</div><p/><hr/><a name="FILTER_INTERRUPT"/><h3>FILTER_INTERRUPT</h3><p class="prototype">public static final short <b>FILTER_INTERRUPT</b></p><p/><div class="classdoc-comment-body">  Interrupt the normal processing of the document. 
-</div><p/><hr/><a name="FILTER_REJECT"/><h3>FILTER_REJECT</h3><p class="prototype">public static final short <b>FILTER_REJECT</b></p><p/><div class="classdoc-comment-body"> Reject the node and its children.
-</div><p/><hr/><a name="FILTER_SKIP"/><h3>FILTER_SKIP</h3><p class="prototype">public static final short <b>FILTER_SKIP</b></p><p/><div class="classdoc-comment-body"> Skip this single node. The children of this node will still be 
+ <code>Element</code> is processed.</td></tr></table><h4>Field Details</h4><a name="FILTER_ACCEPT"/><div><h3>FILTER_ACCEPT</h3><p>public static final FILTER_ACCEPT</p><div> Accept the node.
+</div></div><hr/><a name="FILTER_INTERRUPT"/><div><h3>FILTER_INTERRUPT</h3><p>public static final FILTER_INTERRUPT</p><div>  Interrupt the normal processing of the document. 
+</div></div><hr/><a name="FILTER_REJECT"/><div><h3>FILTER_REJECT</h3><p>public static final FILTER_REJECT</p><div> Reject the node and its children.
+</div></div><hr/><a name="FILTER_SKIP"/><div><h3>FILTER_SKIP</h3><p>public static final FILTER_SKIP</p><div> Skip this single node. The children of this node will still be 
  considered. 
-</div><p/><h1 class="classdoc-header">Method Details</h1><a name="acceptNode(org.w3c.dom.Node)"/><h3>acceptNode</h3><p class="prototype">public short <b>acceptNode</b>(<span class="parameter"><a href="../../../../org/w3c/dom/Node.html">Node</a>&nbsp;nodeArg</span>)</p><div class="classdoc-comment-body"> This method will be called by the parser at the completion of the 
+</div></div><h4>Method Details</h4><a name="acceptNode(org.w3c.dom.Node)"/><div><h3>acceptNode</h3><p>public short acceptNode(<a href="../../../..//org/w3c/dom/Node.html">Node</a> nodeArg)</p><div> This method will be called by the parser at the completion of the 
  parsing of each node. The node and all of its descendants will exist 
  and be complete. The parent node will also exist, although it may be 
  incomplete, i.e. it may have additional children that have not yet 
@@ -55,19 +51,10 @@ and Save Specification</a>.
  are made on any document modifications made by the filter.
  <br/>If this new node is rejected, the parser might reuse the new node 
  and any of its descendants.
-</div><p/><div class="classdoc-tag-section-header">Parameters:</div><dl class="classdoc-list"><dt><span class="prototype-name">nodeArg</span> - The newly constructed element.</dt></dl><div class="classdoc-tag-section-header">Returns:</div><dl class="classdoc-list"><dt>FILTER_ACCEPT if this Node should 
-be included in the DOM document being built. 
-FILTER_REJECT if the Node and all of its 
-children should be rejected. 
-FILTER_SKIP if the 
-Node should be skipped and the Node 
-should be replaced by all the children of the Node. 
-FILTER_INTERRUPT if the filter wants to stop the 
-processing of the document. Interrupting the processing of the 
-document does no longer guarantee that the resulting DOM tree is 
-XML well-formed. The Node is accepted and will be the 
-last completely parsed node. 
-</dt></dl><hr/><a name="getWhatToShow()"/><h3>getWhatToShow</h3><p class="prototype">public int <b>getWhatToShow</b>()</p><div class="classdoc-comment-body">  Tells the <code>LSParser</code> what types of nodes to show to the 
+</div><div><h4>Parameters:</h4><div>nodeArg - The newly constructed element. At the time this method 
+is called, the element is complete - it has all of its children 
+(and their children, recursively) and attributes, and is attached 
+as a child to its parent.</div></div></div><hr/><a name="getWhatToShow()"/><div><h3>getWhatToShow</h3><p>public int getWhatToShow()</p><div>  Tells the <code>LSParser</code> what types of nodes to show to the 
  method <code>LSParserFilter.acceptNode</code>. If a node is not shown 
  to the filter using this attribute, it is automatically included in 
  the DOM document being built. See <code>NodeFilter</code> for 
@@ -78,7 +65,7 @@ last completely parsed node.
  will never be passed to <code>LSParserFilter.acceptNode</code>. 
  <br/> The constants used here are defined in [<a href="http://www.w3.org/TR/2000/REC-DOM-Level-2-Traversal-Range-20001113">DOM Level 2 Traversal and      Range</a>]
  . 
-</div><p/><hr/><a name="startElement(org.w3c.dom.Element)"/><h3>startElement</h3><p class="prototype">public short <b>startElement</b>(<span class="parameter"><a href="../../../../org/w3c/dom/Element.html">Element</a>&nbsp;elementArg</span>)</p><div class="classdoc-comment-body">  The parser will call this method after each <code>Element</code> start 
+</div></div><hr/><a name="startElement(org.w3c.dom.Element)"/><div><h3>startElement</h3><p>public short startElement(<a href="../../../..//org/w3c/dom/Element.html">Element</a> elementArg)</p><div>  The parser will call this method after each <code>Element</code> start 
  tag has been scanned, but before the remainder of the 
  <code>Element</code> is processed. The intent is to allow the 
  element, including any children, to be efficiently skipped. Note that 
@@ -95,18 +82,6 @@ last completely parsed node.
  the same one as is actually placed in the tree if the node is 
  accepted. And the actual node (node object identity) may be reused 
  during the process of reading in and filtering a document.
-</div><p/><div class="classdoc-tag-section-header">Parameters:</div><dl class="classdoc-list"><dt><span class="prototype-name">elementArg</span> - The newly encountered element.</dt></dl><div class="classdoc-tag-section-header">Returns:</div><dl class="classdoc-list"><dt>FILTER_ACCEPT if the Element should 
-be included in the DOM document being built. 
-FILTER_REJECT if the Element and all of 
-its children should be rejected. 
-FILTER_SKIP if the 
-Element should be skipped. All of its children are 
-inserted in place of the skipped Element node. 
-FILTER_INTERRUPT if the filter wants to stop the 
-processing of the document. Interrupting the processing of the 
-document does no longer guarantee that the resulting DOM tree is 
-XML well-formed. The Element is rejected. 
- Returning 
-any other values will result in unspecified behavior.</dt></dl><hr class="footer"/><div class="footer">Generated on
-  October 6, 2004
-  by <a target="cptoolsinfo" href="http://www.gnu.org/software/cp-tools">GNU Classpath Tools</a> (Gjdoc XmlDoclet 0.6.1).</div></body></html>
+</div><div><h4>Parameters:</h4><div>elementArg - The newly encountered element. At the time this 
+method is called, the element is incomplete - it will have its 
+attributes, but no children.</div></div></div><p> </p><table class="navbar div bottom"><tr><td><div><span class="navbar item enabled"><a href="../../../..//index-noframes.html">Overview</a></span> <span class="navbar item enabled"><a href="package-summary.html">Package</a></span> <span class="navbar item enabled"><a href="tree.html">Tree</a></span> <a href="../../../..//alphaindex.html">Index</a> <a href="../../../..//deprecated.html">Deprecated</a> <a href="../../../..//help.html">Help</a> <a href="../../../..//about.html">About</a></div></td></tr></table></body></html>

@@ -1,9 +1,5 @@
-<html xmlns="http://www.w3.org/TR/REC-html40" xmlns:html="http://www.w3.org/TR/REC-html40" xmlns:gjdoc="http://www.gnu.org/software/cp-tools/gjdocxml"><head><link href="../../../gjdochtml.css" type="text/css" rel="stylesheet"/><title>Document</title></head><body onload="top.document.title=document.title;" class="classdoc"><div class="header"><span class="navi-button">&rArr;&nbsp;<a target="_top" href="../../../index.html">Index&nbsp;(Frames)</a></span>&nbsp;|&nbsp;
-      <span class="navi-button">&rArr;&nbsp;<a target="_top" href="../../../index_noframes.html">Index&nbsp;(No&nbsp;Frames)</a></span>&nbsp;|&nbsp;
-      <span class="navi-button">&rArr;&nbsp;<a href="package-summary.html">Package</a></span>&nbsp;|&nbsp;
-      <span class="navi-button">&rArr;&nbsp;<a href="package-tree.html">Package&nbsp;Tree</a></span>&nbsp;|&nbsp;
-      <span class="navi-button">&rArr;&nbsp;<a href="../../../fulltree.html">Full Tree</a></span>&nbsp;
-    </div><div class="classdoc-head"><div class="classdoc-head-inner"><b class="classdoc-head-packagename">org.w3c.dom</b><br/><h1 class="classdoc-head-classname">Interface Document</h1></div></div><p/><b>All Superinterfaces:</b><br/><a href="../../../org/w3c/dom/Node.html">Node</a><p/><b>All Known Direct Subinterfaces:</b><br/><a href="../../../org/w3c/dom/html/HTMLDocument.html">HTMLDocument</a><hr/><div class="classdoc-prototype">public interface <b>Document</b><br/>implements <a href="../../../org/w3c/dom/Node.html">Node</a></div><p/><div class="classdoc-class-comment-body"> The <code>Document</code> interface represents the entire HTML or XML 
+<?xml version="1.0" encoding="null"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head><title>Document</title><meta http-equiv="Content-Type" content="text/html; charset=null"/></head><body><table class="navbar div top"><tr><td><div><span class="navbar item enabled"><a href="../../..//index-noframes.html">Overview</a></span> <span class="navbar item enabled"><a href="package-summary.html">Package</a></span> <span class="navbar item enabled"><a href="tree.html">Tree</a></span> <a href="../../..//alphaindex.html">Index</a> <a href="../../..//deprecated.html">Deprecated</a> <a href="../../..//help.html">Help</a> <a href="../../..//about.html">About</a></div></td></tr></table><div><h3>org.w3c.dom</h3><h1>Interface Document</h1><div><h4>Known Direct Subclasses:</h4><a href="../../..//org/w3c/dom/html2/HTMLDocument.html">HTMLDocument</a></h4><hr/><div><div>public interface Document</div><div>extends <a href="../../..//org/w3c/dom/Node.html">Node</a></div><div>implements <a href="../../..//org/w3c/dom/Node.html">Node</a></div></div><hr/><div> The <code>Document</code> interface represents the entire HTML or XML 
  document. Conceptually, it is the root of the document tree, and provides 
  the primary access to the document's data.
  <p/>Since elements, text nodes, comments, processing instructions, etc. 
@@ -13,25 +9,25 @@
  <code>ownerDocument</code> attribute which associates them with the 
  <code>Document</code> within whose context they were created.
  <p/>See also the <a href="http://www.w3.org/TR/2004/REC-DOM-Level-3-Core-20040407">Document Object Model (DOM) Level 3 Core Specification</a>.
-</div><h1 class="classdoc-header">Method Summary</h1><table class="classdoc-table" width="100%" cellspacing="0" border="1"><tr><td class="no-border-r" valign="top" align="right" width="1%"><p class="prototype-type"> <a href="../../../org/w3c/dom/Node.html">Node</a></p></td><td class="with-border" valign="top" align="left"><p class="prototype"><a href="#adoptNode(org.w3c.dom.Node)">adoptNode</a>(<span class="parameter"><a href="../../../org/w3c/dom/Node.html">Node</a>&nbsp;source</span>)</p><blockquote class="classdoc-summary-comment">  Attempts to adopt a node from another document to this document.</blockquote></td></tr><tr><td class="no-border-r" valign="top" align="right" width="1%"><p class="prototype-type"> <a href="../../../org/w3c/dom/Attr.html">Attr</a></p></td><td class="with-border" valign="top" align="left"><p class="prototype"><a href="#createAttribute(String)">createAttribute</a>(<span class="parameter">String&nbsp;name</span>)</p><blockquote class="classdoc-summary-comment"> Creates an Attr of the given name.</blockquote></td></tr><tr><td class="no-border-r" valign="top" align="right" width="1%"><p class="prototype-type"> <a href="../../../org/w3c/dom/Attr.html">Attr</a></p></td><td class="with-border" valign="top" align="left"><p class="prototype"><a href="#createAttributeNS(String,String)">createAttributeNS</a>(<span class="parameter">String&nbsp;namespaceURI,</span> <span class="parameter">String&nbsp;qualifiedName</span>)</p><blockquote class="classdoc-summary-comment"> Creates an attribute of the given qualified name and namespace URI.</blockquote></td></tr><tr><td class="no-border-r" valign="top" align="right" width="1%"><p class="prototype-type"> <a href="../../../org/w3c/dom/CDATASection.html">CDATASection</a></p></td><td class="with-border" valign="top" align="left"><p class="prototype"><a href="#createCDATASection(String)">createCDATASection</a>(<span class="parameter">String&nbsp;data</span>)</p><blockquote class="classdoc-summary-comment"> Creates a CDATASection node whose value is the specified 
- string.</blockquote></td></tr><tr><td class="no-border-r" valign="top" align="right" width="1%"><p class="prototype-type"> <a href="../../../org/w3c/dom/Comment.html">Comment</a></p></td><td class="with-border" valign="top" align="left"><p class="prototype"><a href="#createComment(String)">createComment</a>(<span class="parameter">String&nbsp;data</span>)</p><blockquote class="classdoc-summary-comment"> Creates a Comment node given the specified string.</blockquote></td></tr><tr><td class="no-border-r" valign="top" align="right" width="1%"><p class="prototype-type"> <a href="../../../org/w3c/dom/DocumentFragment.html">DocumentFragment</a></p></td><td class="with-border" valign="top" align="left"><p class="prototype"><a href="#createDocumentFragment()">createDocumentFragment</a>()</p><blockquote class="classdoc-summary-comment"> Creates an empty DocumentFragment object.</blockquote></td></tr><tr><td class="no-border-r" valign="top" align="right" width="1%"><p class="prototype-type"> <a href="../../../org/w3c/dom/Element.html">Element</a></p></td><td class="with-border" valign="top" align="left"><p class="prototype"><a href="#createElement(String)">createElement</a>(<span class="parameter">String&nbsp;tagName</span>)</p><blockquote class="classdoc-summary-comment"> Creates an element of the type specified.</blockquote></td></tr><tr><td class="no-border-r" valign="top" align="right" width="1%"><p class="prototype-type"> <a href="../../../org/w3c/dom/Element.html">Element</a></p></td><td class="with-border" valign="top" align="left"><p class="prototype"><a href="#createElementNS(String,String)">createElementNS</a>(<span class="parameter">String&nbsp;namespaceURI,</span> <span class="parameter">String&nbsp;qualifiedName</span>)</p><blockquote class="classdoc-summary-comment"> Creates an element of the given qualified name and namespace URI.</blockquote></td></tr><tr><td class="no-border-r" valign="top" align="right" width="1%"><p class="prototype-type"> <a href="../../../org/w3c/dom/EntityReference.html">EntityReference</a></p></td><td class="with-border" valign="top" align="left"><p class="prototype"><a href="#createEntityReference(String)">createEntityReference</a>(<span class="parameter">String&nbsp;name</span>)</p><blockquote class="classdoc-summary-comment"> Creates an EntityReference object.</blockquote></td></tr><tr><td class="no-border-r" valign="top" align="right" width="1%"><p class="prototype-type"> <a href="../../../org/w3c/dom/ProcessingInstruction.html">ProcessingInstruction</a></p></td><td class="with-border" valign="top" align="left"><p class="prototype"><a href="#createProcessingInstruction(String,String)">createProcessingInstruction</a>(<span class="parameter">String&nbsp;target,</span> <span class="parameter">String&nbsp;data</span>)</p><blockquote class="classdoc-summary-comment"> Creates a ProcessingInstruction node given the specified 
- name and data strings.</blockquote></td></tr><tr><td class="no-border-r" valign="top" align="right" width="1%"><p class="prototype-type"> <a href="../../../org/w3c/dom/Text.html">Text</a></p></td><td class="with-border" valign="top" align="left"><p class="prototype"><a href="#createTextNode(String)">createTextNode</a>(<span class="parameter">String&nbsp;data</span>)</p><blockquote class="classdoc-summary-comment"> Creates a Text node given the specified string.</blockquote></td></tr><tr><td class="no-border-r" valign="top" align="right" width="1%"><p class="prototype-type"> <a href="../../../org/w3c/dom/DocumentType.html">DocumentType</a></p></td><td class="with-border" valign="top" align="left"><p class="prototype"><a href="#getDoctype()">getDoctype</a>()</p><blockquote class="classdoc-summary-comment"> The Document Type Declaration (see DocumentType) 
- associated with this document.</blockquote></td></tr><tr><td class="no-border-r" valign="top" align="right" width="1%"><p class="prototype-type"> <a href="../../../org/w3c/dom/Element.html">Element</a></p></td><td class="with-border" valign="top" align="left"><p class="prototype"><a href="#getDocumentElement()">getDocumentElement</a>()</p><blockquote class="classdoc-summary-comment"> This is a convenience attribute that allows direct access to the child 
- node that is the document element of the document.</blockquote></td></tr><tr><td class="no-border-r" valign="top" align="right" width="1%"><p class="prototype-type"> String</p></td><td class="with-border" valign="top" align="left"><p class="prototype"><a href="#getDocumentURI()">getDocumentURI</a>()</p><blockquote class="classdoc-summary-comment">  The location of the document or null if undefined or if 
- the Document was created using 
- DOMImplementation.createDocument.</blockquote></td></tr><tr><td class="no-border-r" valign="top" align="right" width="1%"><p class="prototype-type"> <a href="../../../org/w3c/dom/DOMConfiguration.html">DOMConfiguration</a></p></td><td class="with-border" valign="top" align="left"><p class="prototype"><a href="#getDomConfig()">getDomConfig</a>()</p><blockquote class="classdoc-summary-comment">  The configuration used when Document.normalizeDocument() 
- is invoked.</blockquote></td></tr><tr><td class="no-border-r" valign="top" align="right" width="1%"><p class="prototype-type"> <a href="../../../org/w3c/dom/Element.html">Element</a></p></td><td class="with-border" valign="top" align="left"><p class="prototype"><a href="#getElementById(String)">getElementById</a>(<span class="parameter">String&nbsp;elementId</span>)</p><blockquote class="classdoc-summary-comment"> Returns the Element that has an ID attribute with the 
- given value.</blockquote></td></tr><tr><td class="no-border-r" valign="top" align="right" width="1%"><p class="prototype-type"> <a href="../../../org/w3c/dom/NodeList.html">NodeList</a></p></td><td class="with-border" valign="top" align="left"><p class="prototype"><a href="#getElementsByTagName(String)">getElementsByTagName</a>(<span class="parameter">String&nbsp;tagname</span>)</p><blockquote class="classdoc-summary-comment"> Returns a NodeList of all the Elements in 
+</div><table class="class summary"><tr><td colspan="2"><h4>Method Summary</h4></td></tr><tr><td class="class summary left">public <a href="../../..//org/w3c/dom/Node.html">Node</a></td><td class="class summary right"> <a href="#adoptNode(org.w3c.dom.Node)">adoptNode</a>(<a href="../../..//org/w3c/dom/Node.html">Node</a> source)</td></tr><tr><td></td><td>  Attempts to adopt a node from another document to this document.</td></tr><tr><td class="class summary left">public <a href="../../..//org/w3c/dom/Attr.html">Attr</a></td><td class="class summary right"> <a href="#createAttributeNS(String,String)">createAttributeNS</a>(String namespaceURI, String qualifiedName)</td></tr><tr><td></td><td> Creates an attribute of the given qualified name and namespace URI.</td></tr><tr><td class="class summary left">public <a href="../../..//org/w3c/dom/Attr.html">Attr</a></td><td class="class summary right"> <a href="#createAttribute(String)">createAttribute</a>(String name)</td></tr><tr><td></td><td> Creates an <code>Attr</code> of the given name.</td></tr><tr><td class="class summary left">public <a href="../../..//org/w3c/dom/CDATASection.html">CDATASection</a></td><td class="class summary right"> <a href="#createCDATASection(String)">createCDATASection</a>(String data)</td></tr><tr><td></td><td> Creates a <code>CDATASection</code> node whose value is the specified 
+ string.</td></tr><tr><td class="class summary left">public <a href="../../..//org/w3c/dom/Comment.html">Comment</a></td><td class="class summary right"> <a href="#createComment(String)">createComment</a>(String data)</td></tr><tr><td></td><td> Creates a <code>Comment</code> node given the specified string.</td></tr><tr><td class="class summary left">public <a href="../../..//org/w3c/dom/DocumentFragment.html">DocumentFragment</a></td><td class="class summary right"> <a href="#createDocumentFragment()">createDocumentFragment</a>()</td></tr><tr><td></td><td> Creates an empty <code>DocumentFragment</code> object.</td></tr><tr><td class="class summary left">public <a href="../../..//org/w3c/dom/Element.html">Element</a></td><td class="class summary right"> <a href="#createElementNS(String,String)">createElementNS</a>(String namespaceURI, String qualifiedName)</td></tr><tr><td></td><td> Creates an element of the given qualified name and namespace URI.</td></tr><tr><td class="class summary left">public <a href="../../..//org/w3c/dom/Element.html">Element</a></td><td class="class summary right"> <a href="#createElement(String)">createElement</a>(String tagName)</td></tr><tr><td></td><td> Creates an element of the type specified.</td></tr><tr><td class="class summary left">public <a href="../../..//org/w3c/dom/EntityReference.html">EntityReference</a></td><td class="class summary right"> <a href="#createEntityReference(String)">createEntityReference</a>(String name)</td></tr><tr><td></td><td> Creates an <code>EntityReference</code> object.</td></tr><tr><td class="class summary left">public <a href="../../..//org/w3c/dom/ProcessingInstruction.html">ProcessingInstruction</a></td><td class="class summary right"> <a href="#createProcessingInstruction(String,String)">createProcessingInstruction</a>(String target, String data)</td></tr><tr><td></td><td> Creates a <code>ProcessingInstruction</code> node given the specified 
+ name and data strings.</td></tr><tr><td class="class summary left">public <a href="../../..//org/w3c/dom/Text.html">Text</a></td><td class="class summary right"> <a href="#createTextNode(String)">createTextNode</a>(String data)</td></tr><tr><td></td><td> Creates a <code>Text</code> node given the specified string.</td></tr><tr><td class="class summary left">public <a href="../../..//org/w3c/dom/DocumentType.html">DocumentType</a></td><td class="class summary right"> <a href="#getDoctype()">getDoctype</a>()</td></tr><tr><td></td><td> The Document Type Declaration (see <code>DocumentType</code>) 
+ associated with this document.</td></tr><tr><td class="class summary left">public <a href="../../..//org/w3c/dom/Element.html">Element</a></td><td class="class summary right"> <a href="#getDocumentElement()">getDocumentElement</a>()</td></tr><tr><td></td><td> This is a convenience attribute that allows direct access to the child 
+ node that is the document element of the document.</td></tr><tr><td class="class summary left">public String</td><td class="class summary right"> <a href="#getDocumentURI()">getDocumentURI</a>()</td></tr><tr><td></td><td>  The location of the document or <code>null</code> if undefined or if 
+ the <code>Document</code> was created using 
+ <code>DOMImplementation.createDocument</code>.</td></tr><tr><td class="class summary left">public <a href="../../..//org/w3c/dom/DOMConfiguration.html">DOMConfiguration</a></td><td class="class summary right"> <a href="#getDomConfig()">getDomConfig</a>()</td></tr><tr><td></td><td>  The configuration used when <code>Document.normalizeDocument()</code> 
+ is invoked.</td></tr><tr><td class="class summary left">public <a href="../../..//org/w3c/dom/Element.html">Element</a></td><td class="class summary right"> <a href="#getElementById(String)">getElementById</a>(String elementId)</td></tr><tr><td></td><td> Returns the <code>Element</code> that has an ID attribute with the 
+ given value.</td></tr><tr><td class="class summary left">public <a href="../../..//org/w3c/dom/NodeList.html">NodeList</a></td><td class="class summary right"> <a href="#getElementsByTagNameNS(String,String)">getElementsByTagNameNS</a>(String namespaceURI, String localName)</td></tr><tr><td></td><td> Returns a <code>NodeList</code> of all the <code>Elements</code> with a 
+ given local name and namespace URI in document order.</td></tr><tr><td class="class summary left">public <a href="../../..//org/w3c/dom/NodeList.html">NodeList</a></td><td class="class summary right"> <a href="#getElementsByTagName(String)">getElementsByTagName</a>(String tagname)</td></tr><tr><td></td><td> Returns a <code>NodeList</code> of all the <code>Elements</code> in 
  document order with a given tag name and are contained in the 
- document.</blockquote></td></tr><tr><td class="no-border-r" valign="top" align="right" width="1%"><p class="prototype-type"> <a href="../../../org/w3c/dom/NodeList.html">NodeList</a></p></td><td class="with-border" valign="top" align="left"><p class="prototype"><a href="#getElementsByTagNameNS(String,String)">getElementsByTagNameNS</a>(<span class="parameter">String&nbsp;namespaceURI,</span> <span class="parameter">String&nbsp;localName</span>)</p><blockquote class="classdoc-summary-comment"> Returns a NodeList of all the Elements with a 
- given local name and namespace URI in document order.</blockquote></td></tr><tr><td class="no-border-r" valign="top" align="right" width="1%"><p class="prototype-type"> <a href="../../../org/w3c/dom/DOMImplementation.html">DOMImplementation</a></p></td><td class="with-border" valign="top" align="left"><p class="prototype"><a href="#getImplementation()">getImplementation</a>()</p><blockquote class="classdoc-summary-comment"> The DOMImplementation object that handles this document.</blockquote></td></tr><tr><td class="no-border-r" valign="top" align="right" width="1%"><p class="prototype-type"> String</p></td><td class="with-border" valign="top" align="left"><p class="prototype"><a href="#getInputEncoding()">getInputEncoding</a>()</p><blockquote class="classdoc-summary-comment"> An attribute specifying the encoding used for this document at the time 
- of the parsing.</blockquote></td></tr><tr><td class="no-border-r" valign="top" align="right" width="1%"><p class="prototype-type"> boolean</p></td><td class="with-border" valign="top" align="left"><p class="prototype"><a href="#getStrictErrorChecking()">getStrictErrorChecking</a>()</p><blockquote class="classdoc-summary-comment"> An attribute specifying whether error checking is enforced or not.</blockquote></td></tr><tr><td class="no-border-r" valign="top" align="right" width="1%"><p class="prototype-type"> String</p></td><td class="with-border" valign="top" align="left"><p class="prototype"><a href="#getXmlEncoding()">getXmlEncoding</a>()</p><blockquote class="classdoc-summary-comment"> An attribute specifying, as part of the XML declaration, the encoding of this document.</blockquote></td></tr><tr><td class="no-border-r" valign="top" align="right" width="1%"><p class="prototype-type"> boolean</p></td><td class="with-border" valign="top" align="left"><p class="prototype"><a href="#getXmlStandalone()">getXmlStandalone</a>()</p><blockquote class="classdoc-summary-comment"> An attribute specifying, as part of the XML declaration, whether this document is standalone.</blockquote></td></tr><tr><td class="no-border-r" valign="top" align="right" width="1%"><p class="prototype-type"> String</p></td><td class="with-border" valign="top" align="left"><p class="prototype"><a href="#getXmlVersion()">getXmlVersion</a>()</p><blockquote class="classdoc-summary-comment">  An attribute specifying, as part of the XML declaration, the version number of this document.</blockquote></td></tr><tr><td class="no-border-r" valign="top" align="right" width="1%"><p class="prototype-type"> <a href="../../../org/w3c/dom/Node.html">Node</a></p></td><td class="with-border" valign="top" align="left"><p class="prototype"><a href="#importNode(org.w3c.dom.Node,boolean)">importNode</a>(<span class="parameter"><a href="../../../org/w3c/dom/Node.html">Node</a>&nbsp;importedNode,</span> <span class="parameter">boolean&nbsp;deep</span>)</p><blockquote class="classdoc-summary-comment"> Imports a node from another document to this document, without altering 
+ document.</td></tr><tr><td class="class summary left">public <a href="../../..//org/w3c/dom/DOMImplementation.html">DOMImplementation</a></td><td class="class summary right"> <a href="#getImplementation()">getImplementation</a>()</td></tr><tr><td></td><td> The <code>DOMImplementation</code> object that handles this document.</td></tr><tr><td class="class summary left">public String</td><td class="class summary right"> <a href="#getInputEncoding()">getInputEncoding</a>()</td></tr><tr><td></td><td> An attribute specifying the encoding used for this document at the time 
+ of the parsing.</td></tr><tr><td class="class summary left">public boolean</td><td class="class summary right"> <a href="#getStrictErrorChecking()">getStrictErrorChecking</a>()</td></tr><tr><td></td><td> An attribute specifying whether error checking is enforced or not.</td></tr><tr><td class="class summary left">public String</td><td class="class summary right"> <a href="#getXmlEncoding()">getXmlEncoding</a>()</td></tr><tr><td></td><td> An attribute specifying, as part of the <a href="http://www.w3.org/TR/2004/REC-xml-20040204#NT-XMLDecl">XML declaration</a>, the encoding of this document.</td></tr><tr><td class="class summary left">public boolean</td><td class="class summary right"> <a href="#getXmlStandalone()">getXmlStandalone</a>()</td></tr><tr><td></td><td> An attribute specifying, as part of the <a href="http://www.w3.org/TR/2004/REC-xml-20040204#NT-XMLDecl">XML declaration</a>, whether this document is standalone.</td></tr><tr><td class="class summary left">public String</td><td class="class summary right"> <a href="#getXmlVersion()">getXmlVersion</a>()</td></tr><tr><td></td><td>  An attribute specifying, as part of the <a href="http://www.w3.org/TR/2004/REC-xml-20040204#NT-XMLDecl">XML declaration</a>, the version number of this document.</td></tr><tr><td class="class summary left">public <a href="../../..//org/w3c/dom/Node.html">Node</a></td><td class="class summary right"> <a href="#importNode(org.w3c.dom.Node,boolean)">importNode</a>(<a href="../../..//org/w3c/dom/Node.html">Node</a> importedNode, boolean deep)</td></tr><tr><td></td><td> Imports a node from another document to this document, without altering 
  or removing the source node from the original document; this method 
- creates a new copy of the source node.</blockquote></td></tr><tr><td class="no-border-r" valign="top" align="right" width="1%"><p class="prototype-type"> void</p></td><td class="with-border" valign="top" align="left"><p class="prototype"><a href="#normalizeDocument()">normalizeDocument</a>()</p><blockquote class="classdoc-summary-comment">  This method acts as if the document was going through a save and load 
- cycle, putting the document in a "normal" form.</blockquote></td></tr><tr><td class="no-border-r" valign="top" align="right" width="1%"><p class="prototype-type"> <a href="../../../org/w3c/dom/Node.html">Node</a></p></td><td class="with-border" valign="top" align="left"><p class="prototype"><a href="#renameNode(org.w3c.dom.Node,String,String)">renameNode</a>(<span class="parameter"><a href="../../../org/w3c/dom/Node.html">Node</a>&nbsp;n,</span> <span class="parameter">String&nbsp;namespaceURI,</span> <span class="parameter">String&nbsp;qualifiedName</span>)</p><blockquote class="classdoc-summary-comment"> Rename an existing node of type ELEMENT_NODE or 
- ATTRIBUTE_NODE.</blockquote></td></tr><tr><td class="no-border-r" valign="top" align="right" width="1%"><p class="prototype-type"> void</p></td><td class="with-border" valign="top" align="left"><p class="prototype"><a href="#setDocumentURI(String)">setDocumentURI</a>(<span class="parameter">String&nbsp;documentURI</span>)</p><blockquote class="classdoc-summary-comment">  The location of the document or null if undefined or if 
- the Document was created using 
- DOMImplementation.createDocument.</blockquote></td></tr><tr><td class="no-border-r" valign="top" align="right" width="1%"><p class="prototype-type"> void</p></td><td class="with-border" valign="top" align="left"><p class="prototype"><a href="#setStrictErrorChecking(boolean)">setStrictErrorChecking</a>(<span class="parameter">boolean&nbsp;strictErrorChecking</span>)</p><blockquote class="classdoc-summary-comment"> An attribute specifying whether error checking is enforced or not.</blockquote></td></tr><tr><td class="no-border-r" valign="top" align="right" width="1%"><p class="prototype-type"> void</p></td><td class="with-border" valign="top" align="left"><p class="prototype"><a href="#setXmlStandalone(boolean)">setXmlStandalone</a>(<span class="parameter">boolean&nbsp;xmlStandalone</span>)</p><blockquote class="classdoc-summary-comment"> An attribute specifying, as part of the XML declaration, whether this document is standalone.</blockquote></td></tr><tr><td class="no-border-r" valign="top" align="right" width="1%"><p class="prototype-type"> void</p></td><td class="with-border" valign="top" align="left"><p class="prototype"><a href="#setXmlVersion(String)">setXmlVersion</a>(<span class="parameter">String&nbsp;xmlVersion</span>)</p><blockquote class="classdoc-summary-comment">  An attribute specifying, as part of the XML declaration, the version number of this document.</blockquote></td></tr></table><h1 class="classdoc-header">Method Details</h1><a name="adoptNode(org.w3c.dom.Node)"/><h3>adoptNode</h3><p class="prototype">public Node <b>adoptNode</b>(<span class="parameter"><a href="../../../org/w3c/dom/Node.html">Node</a>&nbsp;source</span>)</p><div class="classdoc-comment-body">  Attempts to adopt a node from another document to this document. If 
+ creates a new copy of the source node.</td></tr><tr><td class="class summary left">public void</td><td class="class summary right"> <a href="#normalizeDocument()">normalizeDocument</a>()</td></tr><tr><td></td><td>  This method acts as if the document was going through a save and load 
+ cycle, putting the document in a "normal" form.</td></tr><tr><td class="class summary left">public <a href="../../..//org/w3c/dom/Node.html">Node</a></td><td class="class summary right"> <a href="#renameNode(org.w3c.dom.Node,String,String)">renameNode</a>(<a href="../../..//org/w3c/dom/Node.html">Node</a> n, String namespaceURI, String qualifiedName)</td></tr><tr><td></td><td> Rename an existing node of type <code>ELEMENT_NODE</code> or 
+ <code>ATTRIBUTE_NODE</code>.</td></tr><tr><td class="class summary left">public void</td><td class="class summary right"> <a href="#setDocumentURI(String)">setDocumentURI</a>(String documentURI)</td></tr><tr><td></td><td>  The location of the document or <code>null</code> if undefined or if 
+ the <code>Document</code> was created using 
+ <code>DOMImplementation.createDocument</code>.</td></tr><tr><td class="class summary left">public void</td><td class="class summary right"> <a href="#setStrictErrorChecking(boolean)">setStrictErrorChecking</a>(boolean strictErrorChecking)</td></tr><tr><td></td><td> An attribute specifying whether error checking is enforced or not.</td></tr><tr><td class="class summary left">public void</td><td class="class summary right"> <a href="#setXmlStandalone(boolean)">setXmlStandalone</a>(boolean xmlStandalone)</td></tr><tr><td></td><td> An attribute specifying, as part of the <a href="http://www.w3.org/TR/2004/REC-xml-20040204#NT-XMLDecl">XML declaration</a>, whether this document is standalone.</td></tr><tr><td class="class summary left">public void</td><td class="class summary right"> <a href="#setXmlVersion(String)">setXmlVersion</a>(String xmlVersion)</td></tr><tr><td></td><td>  An attribute specifying, as part of the <a href="http://www.w3.org/TR/2004/REC-xml-20040204#NT-XMLDecl">XML declaration</a>, the version number of this document.</td></tr></table><table class="class summary"><tr><td colspan="2"><h4>Methods inherited from org.w3c.dom.Node</h4></td></tr><tr><td><a href="../../..//org/w3c/dom/Node.html#appendChild(org.w3c.dom.Node)">appendChild</a>, <a href="../../..//org/w3c/dom/Node.html#cloneNode(boolean)">cloneNode</a>, <a href="../../..//org/w3c/dom/Node.html#compareDocumentPosition(org.w3c.dom.Node)">compareDocumentPosition</a>, <a href="../../..//org/w3c/dom/Node.html#getAttributes()">getAttributes</a>, <a href="../../..//org/w3c/dom/Node.html#getBaseURI()">getBaseURI</a>, <a href="../../..//org/w3c/dom/Node.html#getChildNodes()">getChildNodes</a>, <a href="../../..//org/w3c/dom/Node.html#getFeature(String,String)">getFeature</a>, <a href="../../..//org/w3c/dom/Node.html#getFirstChild()">getFirstChild</a>, <a href="../../..//org/w3c/dom/Node.html#getLastChild()">getLastChild</a>, <a href="../../..//org/w3c/dom/Node.html#getLocalName()">getLocalName</a>, <a href="../../..//org/w3c/dom/Node.html#getNamespaceURI()">getNamespaceURI</a>, <a href="../../..//org/w3c/dom/Node.html#getNextSibling()">getNextSibling</a>, <a href="../../..//org/w3c/dom/Node.html#getNodeName()">getNodeName</a>, <a href="../../..//org/w3c/dom/Node.html#getNodeType()">getNodeType</a>, <a href="../../..//org/w3c/dom/Node.html#getNodeValue()">getNodeValue</a>, <a href="../../..//org/w3c/dom/Node.html#getOwnerDocument()">getOwnerDocument</a>, <a href="../../..//org/w3c/dom/Node.html#getParentNode()">getParentNode</a>, <a href="../../..//org/w3c/dom/Node.html#getPrefix()">getPrefix</a>, <a href="../../..//org/w3c/dom/Node.html#getPreviousSibling()">getPreviousSibling</a>, <a href="../../..//org/w3c/dom/Node.html#getTextContent()">getTextContent</a>, <a href="../../..//org/w3c/dom/Node.html#getUserData(String)">getUserData</a>, <a href="../../..//org/w3c/dom/Node.html#hasAttributes()">hasAttributes</a>, <a href="../../..//org/w3c/dom/Node.html#hasChildNodes()">hasChildNodes</a>, <a href="../../..//org/w3c/dom/Node.html#insertBefore(org.w3c.dom.Node,org.w3c.dom.Node)">insertBefore</a>, <a href="../../..//org/w3c/dom/Node.html#isDefaultNamespace(String)">isDefaultNamespace</a>, <a href="../../..//org/w3c/dom/Node.html#isEqualNode(org.w3c.dom.Node)">isEqualNode</a>, <a href="../../..//org/w3c/dom/Node.html#isSameNode(org.w3c.dom.Node)">isSameNode</a>, <a href="../../..//org/w3c/dom/Node.html#isSupported(String,String)">isSupported</a>, <a href="../../..//org/w3c/dom/Node.html#lookupNamespaceURI(String)">lookupNamespaceURI</a>, <a href="../../..//org/w3c/dom/Node.html#lookupPrefix(String)">lookupPrefix</a>, <a href="../../..//org/w3c/dom/Node.html#normalize()">normalize</a>, <a href="../../..//org/w3c/dom/Node.html#removeChild(org.w3c.dom.Node)">removeChild</a>, <a href="../../..//org/w3c/dom/Node.html#replaceChild(org.w3c.dom.Node,org.w3c.dom.Node)">replaceChild</a>, <a href="../../..//org/w3c/dom/Node.html#setNodeValue(String)">setNodeValue</a>, <a href="../../..//org/w3c/dom/Node.html#setPrefix(String)">setPrefix</a>, <a href="../../..//org/w3c/dom/Node.html#setTextContent(String)">setTextContent</a>, <a href="../../..//org/w3c/dom/Node.html#setUserData(String,Object,org.w3c.dom.UserDataHandler)">setUserData</a></td></tr></table><h4>Method Details</h4><a name="adoptNode(org.w3c.dom.Node)"/><div><h3>adoptNode</h3><p>public <a href="../../..//org/w3c/dom/Node.html">Node</a> adoptNode(<a href="../../..//org/w3c/dom/Node.html">Node</a> source)</p><div>  Attempts to adopt a node from another document to this document. If 
  supported, it changes the <code>ownerDocument</code> of the source 
  node, its children, as well as the attached attribute nodes if there 
  are any. If the source node has a parent it is first removed from the 
@@ -44,60 +40,71 @@
  method still has the effect of removing the source node from the 
  child list of its parent, if any. The following list describes the 
  specifics for each type of node. 
- <dl><dt>ATTRIBUTE_NODE</dt><dd>The 
+ <dl>
+ <dt>ATTRIBUTE_NODE</dt>
+ <dd>The 
  <code>ownerElement</code> attribute is set to <code>null</code> and 
  the <code>specified</code> flag is set to <code>true</code> on the 
  adopted <code>Attr</code>. The descendants of the source 
- <code>Attr</code> are recursively adopted.</dd><dt>DOCUMENT_FRAGMENT_NODE</dt><dd>The 
- descendants of the source node are recursively adopted.</dd><dt>DOCUMENT_NODE</dt><dd><code>Document</code> nodes cannot be adopted.</dd><dt>DOCUMENT_TYPE_NODE</dt><dd><code>DocumentType</code> nodes cannot be adopted.</dd><dt>ELEMENT_NODE</dt><dd><em>Specified</em> attribute nodes of the source element are adopted. Default attributes 
+ <code>Attr</code> are recursively adopted.</dd>
+ <dt>DOCUMENT_FRAGMENT_NODE</dt>
+ <dd>The 
+ descendants of the source node are recursively adopted.</dd>
+ <dt>DOCUMENT_NODE</dt>
+ <dd>
+ <code>Document</code> nodes cannot be adopted.</dd>
+ <dt>DOCUMENT_TYPE_NODE</dt>
+ <dd>
+ <code>DocumentType</code> nodes cannot be adopted.</dd>
+ <dt>ELEMENT_NODE</dt>
+ <dd><em>Specified</em> attribute nodes of the source element are adopted. Default attributes 
  are discarded, though if the document being adopted into defines 
  default attributes for this element name, those are assigned. The 
- descendants of the source element are recursively adopted.</dd><dt>ENTITY_NODE</dt><dd><code>Entity</code> nodes cannot be adopted.</dd><dt>ENTITY_REFERENCE_NODE</dt><dd>Only 
+ descendants of the source element are recursively adopted.</dd>
+ <dt>ENTITY_NODE</dt>
+ <dd>
+ <code>Entity</code> nodes cannot be adopted.</dd>
+ <dt>ENTITY_REFERENCE_NODE</dt>
+ <dd>Only 
  the <code>EntityReference</code> node itself is adopted, the 
  descendants are discarded, since the source and destination documents 
  might have defined the entity differently. If the document being 
  imported into provides a definition for this entity name, its value 
- is assigned.</dd><dt>NOTATION_NODE</dt><dd><code>Notation</code> nodes cannot be 
- adopted.</dd><dt>PROCESSING_INSTRUCTION_NODE, TEXT_NODE, CDATA_SECTION_NODE, 
- COMMENT_NODE</dt><dd>These nodes can all be adopted. No specifics.</dd></dl><p/><b>Note:</b>  Since it does not create new nodes unlike the 
+ is assigned.</dd>
+ <dt>NOTATION_NODE</dt>
+ <dd><code>Notation</code> nodes cannot be 
+ adopted.</dd>
+ <dt>PROCESSING_INSTRUCTION_NODE, TEXT_NODE, CDATA_SECTION_NODE, 
+ COMMENT_NODE</dt>
+ <dd>These nodes can all be adopted. No specifics.</dd>
+ </dl> 
+ <p/><b>Note:</b>  Since it does not create new nodes unlike the 
  <code>Document.importNode()</code> method, this method does not raise 
  an <code>INVALID_CHARACTER_ERR</code> exception, and applications 
  should use the <code>Document.normalizeDocument()</code> method to 
  check if an imported name is not an XML name according to the XML 
  version in use. 
-</div><p/><div class="classdoc-tag-section-header">Since:</div><dl class="classdoc-list"><dt>DOM Level 3</dt></dl><div class="classdoc-tag-section-header">Parameters:</div><dl class="classdoc-list"><dt><span class="prototype-name">source</span> - The node to move into this document.</dt></dl><div class="classdoc-tag-section-header">Returns:</div><dl class="classdoc-list"><dt>The adopted node, or null if this operation 
-fails, such as when the source node comes from a different 
-implementation.</dt></dl><div class="classdoc-tag-section-header">Throws:</div><dl class="classdoc-list"><dt><code><a href="../../../org/w3c/dom/DOMException.html">DOMException</a></code> - NOT_SUPPORTED_ERR: Raised if the source node is of type 
-DOCUMENT, DOCUMENT_TYPE.</dt></dl><hr/><a name="createAttribute(String)"/><h3>createAttribute</h3><p class="prototype">public Attr <b>createAttribute</b>(<span class="parameter">String&nbsp;name</span>)</p><div class="classdoc-comment-body"> Creates an <code>Attr</code> of the given name. Note that the 
- <code>Attr</code> instance can then be set on an <code>Element</code> 
- using the <code>setAttributeNode</code> method. 
- <br/>To create an attribute with a qualified name and namespace URI, use 
- the <code>createAttributeNS</code> method.
-</div><p/><div class="classdoc-tag-section-header">Parameters:</div><dl class="classdoc-list"><dt><span class="prototype-name">name</span> - The name of the attribute.</dt></dl><div class="classdoc-tag-section-header">Returns:</div><dl class="classdoc-list"><dt>A new Attr object with the nodeName 
-attribute set to name, and localName, 
-prefix, and namespaceURI set to 
-null. The value of the attribute is the empty string.</dt></dl><div class="classdoc-tag-section-header">Throws:</div><dl class="classdoc-list"><dt><code><a href="../../../org/w3c/dom/DOMException.html">DOMException</a></code> - INVALID_CHARACTER_ERR: Raised if the specified name is not an XML 
-name according to the XML version in use specified in the 
-Document.xmlVersion attribute.</dt></dl><hr/><a name="createAttributeNS(String,String)"/><h3>createAttributeNS</h3><p class="prototype">public Attr <b>createAttributeNS</b>(<span class="parameter">String&nbsp;namespaceURI,</span> <span class="parameter">String&nbsp;qualifiedName</span>)</p><div class="classdoc-comment-body"> Creates an attribute of the given qualified name and namespace URI.
+</div><div><h4>Parameters:</h4><div>source - The node to move into this document.</div></div><dl class="tag list"><dt class="tag section header"><b>Since:</b></dt><dd>DOM Level 3</dt></dl></div><hr/><a name="createAttributeNS(String,String)"/><div><h3>createAttributeNS</h3><p>public <a href="../../..//org/w3c/dom/Attr.html">Attr</a> createAttributeNS(String namespaceURI, String qualifiedName)</p><div> Creates an attribute of the given qualified name and namespace URI.
  <br/>Per [<a href="http://www.w3.org/TR/1999/REC-xml-names-19990114/">XML Namespaces</a>]
  , applications must use the value <code>null</code> as the 
  <code>namespaceURI</code> parameter for methods if they wish to have 
  no namespace.
-</div><p/><div class="classdoc-tag-section-header">Since:</div><dl class="classdoc-list"><dt>DOM Level 2</dt></dl><div class="classdoc-tag-section-header">Parameters:</div><dl class="classdoc-list"><dt><span class="prototype-name">namespaceURI</span> - The namespace URI of the attribute to create.</dt><dt><span class="prototype-name">qualifiedName</span> - The qualified name of the attribute to 
-instantiate.</dt></dl><div class="classdoc-tag-section-header">Returns:</div><dl class="classdoc-list"><dt>A new Attr object with the following attributes:
-
-AttributeValueNode.nodeNamequalifiedNameNode.namespaceURInamespaceURINode.prefixprefix, extracted from 
-qualifiedName, or null if there is no 
-prefixNode.localNamelocal name, extracted from 
-qualifiedNameAttr.namequalifiedNameNode.nodeValuethe empty 
-string</dt></dl><div class="classdoc-tag-section-header">Throws:</div><dl class="classdoc-list"><dt><code><a href="../../../org/w3c/dom/DOMException.html">DOMException</a></code> - INVALID_CHARACTER_ERR: Raised if the specified 
-qualifiedName is not an XML name according to the XML 
-version in use specified in the Document.xmlVersion 
-attribute.</dt></dl><hr/><a name="createCDATASection(String)"/><h3>createCDATASection</h3><p class="prototype">public CDATASection <b>createCDATASection</b>(<span class="parameter">String&nbsp;data</span>)</p><div class="classdoc-comment-body"> Creates a <code>CDATASection</code> node whose value is the specified 
+</div><div><h4>Parameters:</h4><div>namespaceURI - The namespace URI of the attribute to create.</div><div>qualifiedName - The qualified name of the attribute to 
+instantiate.</div></div><dl class="tag list"><dt class="tag section header"><b>Since:</b></dt><dd>DOM Level 2</dt></dl></div><hr/><a name="createAttribute(String)"/><div><h3>createAttribute</h3><p>public <a href="../../..//org/w3c/dom/Attr.html">Attr</a> createAttribute(String name)</p><div> Creates an <code>Attr</code> of the given name. Note that the 
+ <code>Attr</code> instance can then be set on an <code>Element</code> 
+ using the <code>setAttributeNode</code> method. 
+ <br/>To create an attribute with a qualified name and namespace URI, use 
+ the <code>createAttributeNS</code> method.
+</div><div><h4>Parameters:</h4><div>name - The name of the attribute.</div></div></div><hr/><a name="createCDATASection(String)"/><div><h3>createCDATASection</h3><p>public <a href="../../..//org/w3c/dom/CDATASection.html">CDATASection</a> createCDATASection(String data)</p><div> Creates a <code>CDATASection</code> node whose value is the specified 
  string.
-</div><p/><div class="classdoc-tag-section-header">Parameters:</div><dl class="classdoc-list"><dt><span class="prototype-name">data</span> - The data for the CDATASection contents.</dt></dl><div class="classdoc-tag-section-header">Returns:</div><dl class="classdoc-list"><dt>The new CDATASection object.</dt></dl><div class="classdoc-tag-section-header">Throws:</div><dl class="classdoc-list"><dt><code><a href="../../../org/w3c/dom/DOMException.html">DOMException</a></code> - NOT_SUPPORTED_ERR: Raised if this document is an HTML document.</dt></dl><hr/><a name="createComment(String)"/><h3>createComment</h3><p class="prototype">public Comment <b>createComment</b>(<span class="parameter">String&nbsp;data</span>)</p><div class="classdoc-comment-body"> Creates a <code>Comment</code> node given the specified string.
-</div><p/><div class="classdoc-tag-section-header">Parameters:</div><dl class="classdoc-list"><dt><span class="prototype-name">data</span> - The data for the node.</dt></dl><div class="classdoc-tag-section-header">Returns:</div><dl class="classdoc-list"><dt>The new Comment object.</dt></dl><hr/><a name="createDocumentFragment()"/><h3>createDocumentFragment</h3><p class="prototype">public DocumentFragment <b>createDocumentFragment</b>()</p><div class="classdoc-comment-body"> Creates an empty <code>DocumentFragment</code> object.
-</div><p/><div class="classdoc-tag-section-header">Returns:</div><dl class="classdoc-list"><dt>A new DocumentFragment.</dt></dl><hr/><a name="createElement(String)"/><h3>createElement</h3><p class="prototype">public Element <b>createElement</b>(<span class="parameter">String&nbsp;tagName</span>)</p><div class="classdoc-comment-body"> Creates an element of the type specified. Note that the instance 
+</div><div><h4>Parameters:</h4><div>data - The data for the <code>CDATASection</code> contents.</div></div></div><hr/><a name="createComment(String)"/><div><h3>createComment</h3><p>public <a href="../../..//org/w3c/dom/Comment.html">Comment</a> createComment(String data)</p><div> Creates a <code>Comment</code> node given the specified string.
+</div><div><h4>Parameters:</h4><div>data - The data for the node.</div></div></div><hr/><a name="createDocumentFragment()"/><div><h3>createDocumentFragment</h3><p>public <a href="../../..//org/w3c/dom/DocumentFragment.html">DocumentFragment</a> createDocumentFragment()</p><div> Creates an empty <code>DocumentFragment</code> object.
+</div></div><hr/><a name="createElementNS(String,String)"/><div><h3>createElementNS</h3><p>public <a href="../../..//org/w3c/dom/Element.html">Element</a> createElementNS(String namespaceURI, String qualifiedName)</p><div> Creates an element of the given qualified name and namespace URI.
+ <br/>Per [<a href="http://www.w3.org/TR/1999/REC-xml-names-19990114/">XML Namespaces</a>]
+ , applications must use the value <code>null</code> as the 
+ namespaceURI parameter for methods if they wish to have no namespace.
+</div><div><h4>Parameters:</h4><div>namespaceURI - The namespace URI of the element to create.</div><div>qualifiedName - The qualified name of the element type to 
+instantiate.</div></div><dl class="tag list"><dt class="tag section header"><b>Since:</b></dt><dd>DOM Level 2</dt></dl></div><hr/><a name="createElement(String)"/><div><h3>createElement</h3><p>public <a href="../../..//org/w3c/dom/Element.html">Element</a> createElement(String tagName)</p><div> Creates an element of the type specified. Note that the instance 
  returned implements the <code>Element</code> interface, so attributes 
  can be specified directly on the returned object.
  <br/>In addition, if there are known attributes with default values, 
@@ -105,25 +112,11 @@ attribute.</dt></dl><hr/><a name="createCDATASection(String)"/><h3>createCDATASe
  and attached to the element.
  <br/>To create an element with a qualified name and namespace URI, use 
  the <code>createElementNS</code> method.
-</div><p/><div class="classdoc-tag-section-header">Parameters:</div><dl class="classdoc-list"><dt><span class="prototype-name">tagName</span> - The name of the element type to instantiate.</dt></dl><div class="classdoc-tag-section-header">Returns:</div><dl class="classdoc-list"><dt>A new Element object with the 
-nodeName attribute set to tagName, and 
-localName, prefix, and 
-namespaceURI set to null.</dt></dl><div class="classdoc-tag-section-header">Throws:</div><dl class="classdoc-list"><dt><code><a href="../../../org/w3c/dom/DOMException.html">DOMException</a></code> - INVALID_CHARACTER_ERR: Raised if the specified name is not an XML 
-name according to the XML version in use specified in the 
-Document.xmlVersion attribute.</dt></dl><hr/><a name="createElementNS(String,String)"/><h3>createElementNS</h3><p class="prototype">public Element <b>createElementNS</b>(<span class="parameter">String&nbsp;namespaceURI,</span> <span class="parameter">String&nbsp;qualifiedName</span>)</p><div class="classdoc-comment-body"> Creates an element of the given qualified name and namespace URI.
- <br/>Per [<a href="http://www.w3.org/TR/1999/REC-xml-names-19990114/">XML Namespaces</a>]
- , applications must use the value <code>null</code> as the 
- namespaceURI parameter for methods if they wish to have no namespace.
-</div><p/><div class="classdoc-tag-section-header">Since:</div><dl class="classdoc-list"><dt>DOM Level 2</dt></dl><div class="classdoc-tag-section-header">Parameters:</div><dl class="classdoc-list"><dt><span class="prototype-name">namespaceURI</span> - The namespace URI of the element to create.</dt><dt><span class="prototype-name">qualifiedName</span> - The qualified name of the element type to 
-instantiate.</dt></dl><div class="classdoc-tag-section-header">Returns:</div><dl class="classdoc-list"><dt>A new Element object with the following 
-attributes:
-AttributeValueNode.nodeNamequalifiedNameNode.namespaceURInamespaceURINode.prefixprefix, extracted 
-from qualifiedName, or null if there is 
-no prefixNode.localNamelocal name, extracted from 
-qualifiedNameElement.tagNamequalifiedName</dt></dl><div class="classdoc-tag-section-header">Throws:</div><dl class="classdoc-list"><dt><code><a href="../../../org/w3c/dom/DOMException.html">DOMException</a></code> - INVALID_CHARACTER_ERR: Raised if the specified 
-qualifiedName is not an XML name according to the XML 
-version in use specified in the Document.xmlVersion 
-attribute.</dt></dl><hr/><a name="createEntityReference(String)"/><h3>createEntityReference</h3><p class="prototype">public EntityReference <b>createEntityReference</b>(<span class="parameter">String&nbsp;name</span>)</p><div class="classdoc-comment-body"> Creates an <code>EntityReference</code> object. In addition, if the 
+</div><div><h4>Parameters:</h4><div>tagName - The name of the element type to instantiate. For XML, 
+this is case-sensitive, otherwise it depends on the 
+case-sensitivity of the markup language in use. In that case, the 
+name is mapped to the canonical form of that markup by the DOM 
+implementation.</div></div></div><hr/><a name="createEntityReference(String)"/><div><h3>createEntityReference</h3><p>public <a href="../../..//org/w3c/dom/EntityReference.html">EntityReference</a> createEntityReference(String name)</p><div> Creates an <code>EntityReference</code> object. In addition, if the 
  referenced entity is known, the child list of the 
  <code>EntityReference</code> node is made the same as that of the 
  corresponding <code>Entity</code> node.
@@ -133,20 +126,22 @@ attribute.</dt></dl><hr/><a name="createEntityReference(String)"/><h3>createEnti
  <code>namespaceURI</code> is <code>null</code>). The DOM Level 2 and 
  3 do not support any mechanism to resolve namespace prefixes in this 
  case.
-</div><p/><div class="classdoc-tag-section-header">Parameters:</div><dl class="classdoc-list"><dt><span class="prototype-name">name</span> - The name of the entity to reference.Unlike 
-Document.createElementNS or 
-Document.createAttributeNS, no namespace well-formed 
-checking is done on the entity name.</dt></dl><div class="classdoc-tag-section-header">Returns:</div><dl class="classdoc-list"><dt>The new EntityReference object.</dt></dl><div class="classdoc-tag-section-header">Throws:</div><dl class="classdoc-list"><dt><code><a href="../../../org/w3c/dom/DOMException.html">DOMException</a></code> - INVALID_CHARACTER_ERR: Raised if the specified name is not an XML 
-name according to the XML version in use specified in the 
-Document.xmlVersion attribute.</dt></dl><hr/><a name="createProcessingInstruction(String,String)"/><h3>createProcessingInstruction</h3><p class="prototype">public ProcessingInstruction <b>createProcessingInstruction</b>(<span class="parameter">String&nbsp;target,</span> <span class="parameter">String&nbsp;data</span>)</p><div class="classdoc-comment-body"> Creates a <code>ProcessingInstruction</code> node given the specified 
+</div><div><h4>Parameters:</h4><div>name - The name of the entity to reference.Unlike 
+<code>Document.createElementNS</code> or 
+<code>Document.createAttributeNS</code>, no namespace well-formed 
+checking is done on the entity name. Applications should invoke 
+<code>Document.normalizeDocument()</code> with the parameter "
+namespaces" set to <code>true</code> in order to ensure that the 
+entity name is namespace well-formed.</div></div></div><hr/><a name="createProcessingInstruction(String,String)"/><div><h3>createProcessingInstruction</h3><p>public <a href="../../..//org/w3c/dom/ProcessingInstruction.html">ProcessingInstruction</a> createProcessingInstruction(String target, String data)</p><div> Creates a <code>ProcessingInstruction</code> node given the specified 
  name and data strings.
-</div><p/><div class="classdoc-tag-section-header">Parameters:</div><dl class="classdoc-list"><dt><span class="prototype-name">target</span> - The target part of the processing instruction.Unlike 
-Document.createElementNS or 
-Document.createAttributeNS, no namespace well-formed 
-checking is done on the target name.</dt><dt><span class="prototype-name">data</span> - The data for the node.</dt></dl><div class="classdoc-tag-section-header">Returns:</div><dl class="classdoc-list"><dt>The new ProcessingInstruction object.</dt></dl><div class="classdoc-tag-section-header">Throws:</div><dl class="classdoc-list"><dt><code><a href="../../../org/w3c/dom/DOMException.html">DOMException</a></code> - INVALID_CHARACTER_ERR: Raised if the specified target is not an XML 
-name according to the XML version in use specified in the 
-Document.xmlVersion attribute.</dt></dl><hr/><a name="createTextNode(String)"/><h3>createTextNode</h3><p class="prototype">public Text <b>createTextNode</b>(<span class="parameter">String&nbsp;data</span>)</p><div class="classdoc-comment-body"> Creates a <code>Text</code> node given the specified string.
-</div><p/><div class="classdoc-tag-section-header">Parameters:</div><dl class="classdoc-list"><dt><span class="prototype-name">data</span> - The data for the node.</dt></dl><div class="classdoc-tag-section-header">Returns:</div><dl class="classdoc-list"><dt>The new Text object.</dt></dl><hr/><a name="getDoctype()"/><h3>getDoctype</h3><p class="prototype">public DocumentType <b>getDoctype</b>()</p><div class="classdoc-comment-body"> The Document Type Declaration (see <code>DocumentType</code>) 
+</div><div><h4>Parameters:</h4><div>target - The target part of the processing instruction.Unlike 
+<code>Document.createElementNS</code> or 
+<code>Document.createAttributeNS</code>, no namespace well-formed 
+checking is done on the target name. Applications should invoke 
+<code>Document.normalizeDocument()</code> with the parameter "
+namespaces" set to <code>true</code> in order to ensure that the 
+target name is namespace well-formed.</div><div>data - The data for the node.</div></div></div><hr/><a name="createTextNode(String)"/><div><h3>createTextNode</h3><p>public <a href="../../..//org/w3c/dom/Text.html">Text</a> createTextNode(String data)</p><div> Creates a <code>Text</code> node given the specified string.
+</div><div><h4>Parameters:</h4><div>data - The data for the node.</div></div></div><hr/><a name="getDoctype()"/><div><h3>getDoctype</h3><p>public <a href="../../..//org/w3c/dom/DocumentType.html">DocumentType</a> getDoctype()</p><div> The Document Type Declaration (see <code>DocumentType</code>) 
  associated with this document. For XML documents without a document 
  type declaration this returns <code>null</code>. For HTML documents, 
  a <code>DocumentType</code> object may be returned, independently of 
@@ -163,9 +158,9 @@ Document.xmlVersion attribute.</dt></dl><hr/><a name="createTextNode(String)"/><
  , based on the <code>DocumentType</code> specified at creation time, 
  changing it afterwards is very unlikely to result in a change of the 
  features supported.
-</div><p/><hr/><a name="getDocumentElement()"/><h3>getDocumentElement</h3><p class="prototype">public Element <b>getDocumentElement</b>()</p><div class="classdoc-comment-body"> This is a convenience attribute that allows direct access to the child 
+</div><div class="classdoc-tag-section-header">Version:</div><dl class="classdoc-list"><dt>DOM Level 3</dt></dl></div><hr/><a name="getDocumentElement()"/><div><h3>getDocumentElement</h3><p>public <a href="../../..//org/w3c/dom/Element.html">Element</a> getDocumentElement()</p><div> This is a convenience attribute that allows direct access to the child 
  node that is the document element of the document.
-</div><p/><hr/><a name="getDocumentURI()"/><h3>getDocumentURI</h3><p class="prototype">public String <b>getDocumentURI</b>()</p><div class="classdoc-comment-body">  The location of the document or <code>null</code> if undefined or if 
+</div></div><hr/><a name="getDocumentURI()"/><div><h3>getDocumentURI</h3><p>public String getDocumentURI()</p><div>  The location of the document or <code>null</code> if undefined or if 
  the <code>Document</code> was created using 
  <code>DOMImplementation.createDocument</code>. No lexical checking is 
  performed when setting this attribute; this could result in a 
@@ -175,9 +170,9 @@ Document.xmlVersion attribute.</dt></dl><hr/><a name="createTextNode(String)"/><
  "HTML" [<a href="http://www.w3.org/TR/2003/REC-DOM-Level-2-HTML-20030109">DOM Level 2 HTML</a>]
  , the href attribute of the HTML BASE element takes precedence over 
  this attribute when computing <code>Node.baseURI</code>. 
-</div><p/><div class="classdoc-tag-section-header">Since:</div><dl class="classdoc-list"><dt>DOM Level 3</dt></dl><hr/><a name="getDomConfig()"/><h3>getDomConfig</h3><p class="prototype">public DOMConfiguration <b>getDomConfig</b>()</p><div class="classdoc-comment-body">  The configuration used when <code>Document.normalizeDocument()</code> 
+</div><dl class="tag list"><dt class="tag section header"><b>Since:</b></dt><dd>DOM Level 3</dt></dl></div><hr/><a name="getDomConfig()"/><div><h3>getDomConfig</h3><p>public <a href="../../..//org/w3c/dom/DOMConfiguration.html">DOMConfiguration</a> getDomConfig()</p><div>  The configuration used when <code>Document.normalizeDocument()</code> 
  is invoked. 
-</div><p/><div class="classdoc-tag-section-header">Since:</div><dl class="classdoc-list"><dt>DOM Level 3</dt></dl><hr/><a name="getElementById(String)"/><h3>getElementById</h3><p class="prototype">public Element <b>getElementById</b>(<span class="parameter">String&nbsp;elementId</span>)</p><div class="classdoc-comment-body"> Returns the <code>Element</code> that has an ID attribute with the 
+</div><dl class="tag list"><dt class="tag section header"><b>Since:</b></dt><dd>DOM Level 3</dt></dl></div><hr/><a name="getElementById(String)"/><div><h3>getElementById</h3><p>public <a href="../../..//org/w3c/dom/Element.html">Element</a> getElementById(String elementId)</p><div> Returns the <code>Element</code> that has an ID attribute with the 
  given value. If no such element exists, this returns <code>null</code>
  . If more than one element has an ID attribute with that value, what 
  is returned is undefined. 
@@ -185,36 +180,39 @@ Document.xmlVersion attribute.</dt></dl><hr/><a name="createTextNode(String)"/><
  <code>Attr.isId</code> to determine if an attribute is of type ID. 
  <p/><b>Note:</b> Attributes with the name "ID" or "id" are not of type 
  ID unless so defined.
-</div><p/><div class="classdoc-tag-section-header">Since:</div><dl class="classdoc-list"><dt>DOM Level 2</dt></dl><div class="classdoc-tag-section-header">Parameters:</div><dl class="classdoc-list"><dt><span class="prototype-name">elementId</span> - The unique id value for an element.</dt></dl><div class="classdoc-tag-section-header">Returns:</div><dl class="classdoc-list"><dt>The matching element or null if there is none.</dt></dl><hr/><a name="getElementsByTagName(String)"/><h3>getElementsByTagName</h3><p class="prototype">public NodeList <b>getElementsByTagName</b>(<span class="parameter">String&nbsp;tagname</span>)</p><div class="classdoc-comment-body"> Returns a <code>NodeList</code> of all the <code>Elements</code> in 
+</div><div><h4>Parameters:</h4><div>elementId - The unique <code>id</code> value for an element.</div></div><dl class="tag list"><dt class="tag section header"><b>Since:</b></dt><dd>DOM Level 2</dt></dl></div><hr/><a name="getElementsByTagNameNS(String,String)"/><div><h3>getElementsByTagNameNS</h3><p>public <a href="../../..//org/w3c/dom/NodeList.html">NodeList</a> getElementsByTagNameNS(String namespaceURI, String localName)</p><div> Returns a <code>NodeList</code> of all the <code>Elements</code> with a 
+ given local name and namespace URI in document order.
+</div><div><h4>Parameters:</h4><div>namespaceURI - The namespace URI of the elements to match on. The 
+special value <code>"*"</code> matches all namespaces.</div><div>localName - The local name of the elements to match on. The 
+special value "*" matches all local names.</div></div><dl class="tag list"><dt class="tag section header"><b>Since:</b></dt><dd>DOM Level 2</dt></dl></div><hr/><a name="getElementsByTagName(String)"/><div><h3>getElementsByTagName</h3><p>public <a href="../../..//org/w3c/dom/NodeList.html">NodeList</a> getElementsByTagName(String tagname)</p><div> Returns a <code>NodeList</code> of all the <code>Elements</code> in 
  document order with a given tag name and are contained in the 
  document.
-</div><p/><div class="classdoc-tag-section-header">Parameters:</div><dl class="classdoc-list"><dt><span class="prototype-name">tagname</span> - The name of the tag to match on.</dt></dl><div class="classdoc-tag-section-header">Returns:</div><dl class="classdoc-list"><dt>A new NodeList object containing all the matched 
-Elements.</dt></dl><hr/><a name="getElementsByTagNameNS(String,String)"/><h3>getElementsByTagNameNS</h3><p class="prototype">public NodeList <b>getElementsByTagNameNS</b>(<span class="parameter">String&nbsp;namespaceURI,</span> <span class="parameter">String&nbsp;localName</span>)</p><div class="classdoc-comment-body"> Returns a <code>NodeList</code> of all the <code>Elements</code> with a 
- given local name and namespace URI in document order.
-</div><p/><div class="classdoc-tag-section-header">Since:</div><dl class="classdoc-list"><dt>DOM Level 2</dt></dl><div class="classdoc-tag-section-header">Parameters:</div><dl class="classdoc-list"><dt><span class="prototype-name">namespaceURI</span> - The namespace URI of the elements to match on.</dt><dt><span class="prototype-name">localName</span> - The local name of the elements to match on.</dt></dl><div class="classdoc-tag-section-header">Returns:</div><dl class="classdoc-list"><dt>A new NodeList object containing all the matched 
-Elements.</dt></dl><hr/><a name="getImplementation()"/><h3>getImplementation</h3><p class="prototype">public DOMImplementation <b>getImplementation</b>()</p><div class="classdoc-comment-body"> The <code>DOMImplementation</code> object that handles this document. A 
+</div><div><h4>Parameters:</h4><div>tagname - The name of the tag to match on. The special value "*" 
+matches all tags. For XML, the <code>tagname</code> parameter is 
+case-sensitive, otherwise it depends on the case-sensitivity of the 
+markup language in use.</div></div></div><hr/><a name="getImplementation()"/><div><h3>getImplementation</h3><p>public <a href="../../..//org/w3c/dom/DOMImplementation.html">DOMImplementation</a> getImplementation()</p><div> The <code>DOMImplementation</code> object that handles this document. A 
  DOM application may use objects from multiple implementations.
-</div><p/><hr/><a name="getInputEncoding()"/><h3>getInputEncoding</h3><p class="prototype">public String <b>getInputEncoding</b>()</p><div class="classdoc-comment-body"> An attribute specifying the encoding used for this document at the time 
+</div></div><hr/><a name="getInputEncoding()"/><div><h3>getInputEncoding</h3><p>public String getInputEncoding()</p><div> An attribute specifying the encoding used for this document at the time 
  of the parsing. This is <code>null</code> when it is not known, such 
  as when the <code>Document</code> was created in memory.
-</div><p/><div class="classdoc-tag-section-header">Since:</div><dl class="classdoc-list"><dt>DOM Level 3</dt></dl><hr/><a name="getStrictErrorChecking()"/><h3>getStrictErrorChecking</h3><p class="prototype">public boolean <b>getStrictErrorChecking</b>()</p><div class="classdoc-comment-body"> An attribute specifying whether error checking is enforced or not. When 
+</div><dl class="tag list"><dt class="tag section header"><b>Since:</b></dt><dd>DOM Level 3</dt></dl></div><hr/><a name="getStrictErrorChecking()"/><div><h3>getStrictErrorChecking</h3><p>public boolean getStrictErrorChecking()</p><div> An attribute specifying whether error checking is enforced or not. When 
  set to <code>false</code>, the implementation is free to not test 
  every possible error case normally defined on DOM operations, and not 
  raise any <code>DOMException</code> on DOM operations or report 
  errors while using <code>Document.normalizeDocument()</code>. In case 
  of error, the behavior is undefined. This attribute is 
  <code>true</code> by default.
-</div><p/><div class="classdoc-tag-section-header">Since:</div><dl class="classdoc-list"><dt>DOM Level 3</dt></dl><hr/><a name="getXmlEncoding()"/><h3>getXmlEncoding</h3><p class="prototype">public String <b>getXmlEncoding</b>()</p><div class="classdoc-comment-body"> An attribute specifying, as part of the <a href="http://www.w3.org/TR/2004/REC-xml-20040204#NT-XMLDecl">XML declaration</a>, the encoding of this document. This is <code>null</code> when 
+</div><dl class="tag list"><dt class="tag section header"><b>Since:</b></dt><dd>DOM Level 3</dt></dl></div><hr/><a name="getXmlEncoding()"/><div><h3>getXmlEncoding</h3><p>public String getXmlEncoding()</p><div> An attribute specifying, as part of the <a href="http://www.w3.org/TR/2004/REC-xml-20040204#NT-XMLDecl">XML declaration</a>, the encoding of this document. This is <code>null</code> when 
  unspecified or when it is not known, such as when the 
  <code>Document</code> was created in memory.
-</div><p/><div class="classdoc-tag-section-header">Since:</div><dl class="classdoc-list"><dt>DOM Level 3</dt></dl><hr/><a name="getXmlStandalone()"/><h3>getXmlStandalone</h3><p class="prototype">public boolean <b>getXmlStandalone</b>()</p><div class="classdoc-comment-body"> An attribute specifying, as part of the <a href="http://www.w3.org/TR/2004/REC-xml-20040204#NT-XMLDecl">XML declaration</a>, whether this document is standalone. This is <code>false</code> when 
+</div><dl class="tag list"><dt class="tag section header"><b>Since:</b></dt><dd>DOM Level 3</dt></dl></div><hr/><a name="getXmlStandalone()"/><div><h3>getXmlStandalone</h3><p>public boolean getXmlStandalone()</p><div> An attribute specifying, as part of the <a href="http://www.w3.org/TR/2004/REC-xml-20040204#NT-XMLDecl">XML declaration</a>, whether this document is standalone. This is <code>false</code> when 
  unspecified.
  <p/><b>Note:</b>  No verification is done on the value when setting 
  this attribute. Applications should use 
  <code>Document.normalizeDocument()</code> with the "validate" 
  parameter to verify if the value matches the <a href="http://www.w3.org/TR/2004/REC-xml-20040204#sec-rmd">validity 
  constraint for standalone document declaration</a> as defined in [<a href="http://www.w3.org/TR/2004/REC-xml-20040204">XML 1.0</a>]. 
-</div><p/><div class="classdoc-tag-section-header">Since:</div><dl class="classdoc-list"><dt>DOM Level 3</dt></dl><hr/><a name="getXmlVersion()"/><h3>getXmlVersion</h3><p class="prototype">public String <b>getXmlVersion</b>()</p><div class="classdoc-comment-body">  An attribute specifying, as part of the <a href="http://www.w3.org/TR/2004/REC-xml-20040204#NT-XMLDecl">XML declaration</a>, the version number of this document. If there is no declaration and if 
+</div><dl class="tag list"><dt class="tag section header"><b>Since:</b></dt><dd>DOM Level 3</dt></dl></div><hr/><a name="getXmlVersion()"/><div><h3>getXmlVersion</h3><p>public String getXmlVersion()</p><div>  An attribute specifying, as part of the <a href="http://www.w3.org/TR/2004/REC-xml-20040204#NT-XMLDecl">XML declaration</a>, the version number of this document. If there is no declaration and if 
  this document supports the "XML" feature, the value is 
  <code>"1.0"</code>. If this document does not support the "XML" 
  feature, the value is always <code>null</code>. Changing this 
@@ -235,7 +233,7 @@ Elements.</dt></dl><hr/><a name="getImplementation()"/><h3>getImplementation</h3
   objects supporting a version of the "XMLVersion" feature must not 
  raise a <code>NOT_SUPPORTED_ERR</code> exception for the same version 
  number when using <code>Document.xmlVersion</code>. 
-</div><p/><div class="classdoc-tag-section-header">Since:</div><dl class="classdoc-list"><dt>DOM Level 3</dt></dl><hr/><a name="importNode(org.w3c.dom.Node,boolean)"/><h3>importNode</h3><p class="prototype">public Node <b>importNode</b>(<span class="parameter"><a href="../../../org/w3c/dom/Node.html">Node</a>&nbsp;importedNode,</span> <span class="parameter">boolean&nbsp;deep</span>)</p><div class="classdoc-comment-body"> Imports a node from another document to this document, without altering 
+</div><dl class="tag list"><dt class="tag section header"><b>Since:</b></dt><dd>DOM Level 3</dt></dl></div><hr/><a name="importNode(org.w3c.dom.Node,boolean)"/><div><h3>importNode</h3><p>public <a href="../../..//org/w3c/dom/Node.html">Node</a> importNode(<a href="../../..//org/w3c/dom/Node.html">Node</a> importedNode, boolean deep)</p><div> Imports a node from another document to this document, without altering 
  or removing the source node from the original document; this method 
  creates a new copy of the source node. The returned node has no 
  parent; (<code>parentNode</code> is <code>null</code>).
@@ -255,29 +253,41 @@ Elements.</dt></dl><hr/><a name="getImplementation()"/><h3>getImplementation</h3
  another, recognizing that the two documents may have different DTDs 
  in the XML case. The following list describes the specifics for each 
  type of node. 
- <dl><dt>ATTRIBUTE_NODE</dt><dd>The <code>ownerElement</code> attribute 
+ <dl>
+ <dt>ATTRIBUTE_NODE</dt>
+ <dd>The <code>ownerElement</code> attribute 
  is set to <code>null</code> and the <code>specified</code> flag is 
  set to <code>true</code> on the generated <code>Attr</code>. The 
  descendants of the source <code>Attr</code> are recursively imported 
  and the resulting nodes reassembled to form the corresponding subtree.
  Note that the <code>deep</code> parameter has no effect on 
  <code>Attr</code> nodes; they always carry their children with them 
- when imported.</dd><dt>DOCUMENT_FRAGMENT_NODE</dt><dd>If the <code>deep</code> option 
+ when imported.</dd>
+ <dt>DOCUMENT_FRAGMENT_NODE</dt>
+ <dd>If the <code>deep</code> option 
  was set to <code>true</code>, the descendants of the source 
  <code>DocumentFragment</code> are recursively imported and the 
  resulting nodes reassembled under the imported 
  <code>DocumentFragment</code> to form the corresponding subtree. 
  Otherwise, this simply generates an empty 
- <code>DocumentFragment</code>.</dd><dt>DOCUMENT_NODE</dt><dd><code>Document</code> 
- nodes cannot be imported.</dd><dt>DOCUMENT_TYPE_NODE</dt><dd><code>DocumentType</code> 
- nodes cannot be imported.</dd><dt>ELEMENT_NODE</dt><dd><em>Specified</em> attribute nodes of the source element are imported, and the generated 
+ <code>DocumentFragment</code>.</dd>
+ <dt>DOCUMENT_NODE</dt>
+ <dd><code>Document</code> 
+ nodes cannot be imported.</dd>
+ <dt>DOCUMENT_TYPE_NODE</dt>
+ <dd><code>DocumentType</code> 
+ nodes cannot be imported.</dd>
+ <dt>ELEMENT_NODE</dt>
+ <dd><em>Specified</em> attribute nodes of the source element are imported, and the generated 
  <code>Attr</code> nodes are attached to the generated 
  <code>Element</code>. Default attributes are <em>not</em> copied, though if the document being imported into defines default 
  attributes for this element name, those are assigned. If the 
- <code>importNode</code><code>deep</code> parameter was set to 
+ <code>importNode</code> <code>deep</code> parameter was set to 
  <code>true</code>, the descendants of the source element are 
  recursively imported and the resulting nodes reassembled to form the 
- corresponding subtree.</dd><dt>ENTITY_NODE</dt><dd><code>Entity</code> nodes can be 
+ corresponding subtree.</dd>
+ <dt>ENTITY_NODE</dt>
+ <dd><code>Entity</code> nodes can be 
  imported, however in the current release of the DOM the 
  <code>DocumentType</code> is readonly. Ability to add these imported 
  nodes to a <code>DocumentType</code> will be considered for addition 
@@ -285,30 +295,42 @@ Elements.</dt></dl><hr/><a name="getImplementation()"/><h3>getImplementation</h3
  <code>systemId</code>, and <code>notationName</code> attributes are 
  copied. If a <code>deep</code> import is requested, the descendants 
  of the the source <code>Entity</code> are recursively imported and 
- the resulting nodes reassembled to form the corresponding subtree.</dd><dt>
- ENTITY_REFERENCE_NODE</dt><dd>Only the <code>EntityReference</code> itself is 
+ the resulting nodes reassembled to form the corresponding subtree.</dd>
+ <dt>
+ ENTITY_REFERENCE_NODE</dt>
+ <dd>Only the <code>EntityReference</code> itself is 
  copied, even if a <code>deep</code> import is requested, since the 
  source and destination documents might have defined the entity 
  differently. If the document being imported into provides a 
- definition for this entity name, its value is assigned.</dd><dt>NOTATION_NODE</dt><dd><code>Notation</code> nodes can be imported, however in the current 
+ definition for this entity name, its value is assigned.</dd>
+ <dt>NOTATION_NODE</dt>
+ <dd>
+ <code>Notation</code> nodes can be imported, however in the current 
  release of the DOM the <code>DocumentType</code> is readonly. Ability 
  to add these imported nodes to a <code>DocumentType</code> will be 
  considered for addition to a future release of the DOM.On import, the 
  <code>publicId</code> and <code>systemId</code> attributes are copied.
  Note that the <code>deep</code> parameter has no effect on this type 
- of nodes since they cannot have any children.</dd><dt>
- PROCESSING_INSTRUCTION_NODE</dt><dd>The imported node copies its 
+ of nodes since they cannot have any children.</dd>
+ <dt>
+ PROCESSING_INSTRUCTION_NODE</dt>
+ <dd>The imported node copies its 
  <code>target</code> and <code>data</code> values from those of the 
  source node.Note that the <code>deep</code> parameter has no effect 
- on this type of nodes since they cannot have any children.</dd><dt>TEXT_NODE, 
- CDATA_SECTION_NODE, COMMENT_NODE</dt><dd>These three types of nodes inheriting 
+ on this type of nodes since they cannot have any children.</dd>
+ <dt>TEXT_NODE, 
+ CDATA_SECTION_NODE, COMMENT_NODE</dt>
+ <dd>These three types of nodes inheriting 
  from <code>CharacterData</code> copy their <code>data</code> and 
  <code>length</code> attributes from those of the source node.Note 
  that the <code>deep</code> parameter has no effect on these types of 
- nodes since they cannot have any children.</dd></dl></div><p/><div class="classdoc-tag-section-header">Since:</div><dl class="classdoc-list"><dt>DOM Level 2</dt></dl><div class="classdoc-tag-section-header">Parameters:</div><dl class="classdoc-list"><dt><span class="prototype-name">importedNode</span> - The node to import.</dt><dt><span class="prototype-name">deep</span> - If true, recursively import the subtree under 
-the specified node; if false, import only the node 
-itself, as explained above.</dt></dl><div class="classdoc-tag-section-header">Returns:</div><dl class="classdoc-list"><dt>The imported node that belongs to this Document.</dt></dl><div class="classdoc-tag-section-header">Throws:</div><dl class="classdoc-list"><dt><code><a href="../../../org/w3c/dom/DOMException.html">DOMException</a></code> - NOT_SUPPORTED_ERR: Raised if the type of node being imported is not 
-supported.</dt></dl><hr/><a name="normalizeDocument()"/><h3>normalizeDocument</h3><p class="prototype">public void <b>normalizeDocument</b>()</p><div class="classdoc-comment-body">  This method acts as if the document was going through a save and load 
+ nodes since they cannot have any children.</dd>
+ </dl> 
+</div><div><h4>Parameters:</h4><div>importedNode - The node to import.</div><div>deep - If <code>true</code>, recursively import the subtree under 
+the specified node; if <code>false</code>, import only the node 
+itself, as explained above. This has no effect on nodes that cannot 
+have any children, and on <code>Attr</code>, and 
+<code>EntityReference</code> nodes.</div></div><dl class="tag list"><dt class="tag section header"><b>Since:</b></dt><dd>DOM Level 2</dt></dl></div><hr/><a name="normalizeDocument()"/><div><h3>normalizeDocument</h3><p>public void normalizeDocument()</p><div>  This method acts as if the document was going through a save and load 
  cycle, putting the document in a "normal" form. As a consequence, 
  this method updates the replacement tree of 
  <code>EntityReference</code> nodes and normalizes <code>Text</code> 
@@ -324,7 +346,9 @@ supported.</dt></dl><hr/><a name="normalizeDocument()"/><h3>normalizeDocument</h
  the information defined // in the XML Information Set (Java example) 
  DOMConfiguration docConfig = myDocument.getDomConfig(); 
  docConfig.setParameter("infoset", Boolean.TRUE); 
- myDocument.normalizeDocument();</pre><br/>Mutation events, when supported, are generated to reflect the 
+ myDocument.normalizeDocument();</pre>
+ 
+ <br/>Mutation events, when supported, are generated to reflect the 
  changes occurring on the document.
  <br/> If errors occur during the invocation of this method, such as an 
  attempt to update a read-only node or a <code>Node.nodeName</code> 
@@ -335,7 +359,7 @@ supported.</dt></dl><hr/><a name="normalizeDocument()"/><h3>normalizeDocument</h
  " parameter. Note this method might also report fatal errors (
  <code>DOMError.SEVERITY_FATAL_ERROR</code>) if an implementation 
  cannot recover from an error. 
-</div><p/><div class="classdoc-tag-section-header">Since:</div><dl class="classdoc-list"><dt>DOM Level 3</dt></dl><hr/><a name="renameNode(org.w3c.dom.Node,String,String)"/><h3>renameNode</h3><p class="prototype">public Node <b>renameNode</b>(<span class="parameter"><a href="../../../org/w3c/dom/Node.html">Node</a>&nbsp;n,</span> <span class="parameter">String&nbsp;namespaceURI,</span> <span class="parameter">String&nbsp;qualifiedName</span>)</p><div class="classdoc-comment-body"> Rename an existing node of type <code>ELEMENT_NODE</code> or 
+</div><dl class="tag list"><dt class="tag section header"><b>Since:</b></dt><dd>DOM Level 3</dt></dl></div><hr/><a name="renameNode(org.w3c.dom.Node,String,String)"/><div><h3>renameNode</h3><p>public <a href="../../..//org/w3c/dom/Node.html">Node</a> renameNode(<a href="../../..//org/w3c/dom/Node.html">Node</a> n, String namespaceURI, String qualifiedName)</p><div> Rename an existing node of type <code>ELEMENT_NODE</code> or 
  <code>ATTRIBUTE_NODE</code>.
  <br/>When possible this simply changes the name of the given node, 
  otherwise this creates a new node with the specified name and 
@@ -362,8 +386,10 @@ supported.</dt></dl><hr/><a name="normalizeDocument()"/><h3>normalizeDocument</h
  by modifying the existing node or creating a new one as described 
  above, it is put back.
  <br/>In addition,
- <ul><li> a user data event <code>NODE_RENAMED</code> is fired, 
- </li><li> 
+ <ul>
+ <li> a user data event <code>NODE_RENAMED</code> is fired, 
+ </li>
+ <li> 
  when the implementation supports the feature "MutationNameEvents", 
  each mutation operation involved in this method fires the appropriate 
  event, and in the end the event {
@@ -371,11 +397,9 @@ supported.</dt></dl><hr/><a name="normalizeDocument()"/><h3>normalizeDocument</h
  <code>DOMElementNameChanged</code>} or {
  <code>http://www.w3.org/2001/xml-events</code>, 
  <code>DOMAttributeNameChanged</code>} is fired. 
- </li></ul></div><p/><div class="classdoc-tag-section-header">Since:</div><dl class="classdoc-list"><dt>DOM Level 3</dt></dl><div class="classdoc-tag-section-header">Parameters:</div><dl class="classdoc-list"><dt><span class="prototype-name">n</span> - The node to rename.</dt><dt><span class="prototype-name">namespaceURI</span> - The new namespace URI.</dt><dt><span class="prototype-name">qualifiedName</span> - The new qualified name.</dt></dl><div class="classdoc-tag-section-header">Returns:</div><dl class="classdoc-list"><dt>The renamed node. This is either the specified node or the new 
-node that was created to replace the specified node.</dt></dl><div class="classdoc-tag-section-header">Throws:</div><dl class="classdoc-list"><dt><code><a href="../../../org/w3c/dom/DOMException.html">DOMException</a></code> - NOT_SUPPORTED_ERR: Raised when the type of the specified node is 
-neither ELEMENT_NODE nor ATTRIBUTE_NODE, 
-or if the implementation does not support the renaming of the 
-document element.</dt></dl><hr/><a name="setDocumentURI(String)"/><h3>setDocumentURI</h3><p class="prototype">public void <b>setDocumentURI</b>(<span class="parameter">String&nbsp;documentURI</span>)</p><div class="classdoc-comment-body">  The location of the document or <code>null</code> if undefined or if 
+ </li>
+ </ul>
+</div><div><h4>Parameters:</h4><div>n - The node to rename.</div><div>namespaceURI - The new namespace URI.</div><div>qualifiedName - The new qualified name.</div></div><dl class="tag list"><dt class="tag section header"><b>Since:</b></dt><dd>DOM Level 3</dt></dl></div><hr/><a name="setDocumentURI(String)"/><div><h3>setDocumentURI</h3><p>public void setDocumentURI(String documentURI)</p><div>  The location of the document or <code>null</code> if undefined or if 
  the <code>Document</code> was created using 
  <code>DOMImplementation.createDocument</code>. No lexical checking is 
  performed when setting this attribute; this could result in a 
@@ -385,22 +409,21 @@ document element.</dt></dl><hr/><a name="setDocumentURI(String)"/><h3>setDocumen
  "HTML" [<a href="http://www.w3.org/TR/2003/REC-DOM-Level-2-HTML-20030109">DOM Level 2 HTML</a>]
  , the href attribute of the HTML BASE element takes precedence over 
  this attribute when computing <code>Node.baseURI</code>. 
-</div><p/><div class="classdoc-tag-section-header">Since:</div><dl class="classdoc-list"><dt>DOM Level 3</dt></dl><div class="classdoc-tag-section-header">Parameters:</div><dl class="classdoc-list"><dt><span class="prototype-name">documentURI</span></dt></dl><hr/><a name="setStrictErrorChecking(boolean)"/><h3>setStrictErrorChecking</h3><p class="prototype">public void <b>setStrictErrorChecking</b>(<span class="parameter">boolean&nbsp;strictErrorChecking</span>)</p><div class="classdoc-comment-body"> An attribute specifying whether error checking is enforced or not. When 
+</div><div><h4>Parameters:</h4><div>documentURI</div></div><dl class="tag list"><dt class="tag section header"><b>Since:</b></dt><dd>DOM Level 3</dt></dl></div><hr/><a name="setStrictErrorChecking(boolean)"/><div><h3>setStrictErrorChecking</h3><p>public void setStrictErrorChecking(boolean strictErrorChecking)</p><div> An attribute specifying whether error checking is enforced or not. When 
  set to <code>false</code>, the implementation is free to not test 
  every possible error case normally defined on DOM operations, and not 
  raise any <code>DOMException</code> on DOM operations or report 
  errors while using <code>Document.normalizeDocument()</code>. In case 
  of error, the behavior is undefined. This attribute is 
  <code>true</code> by default.
-</div><p/><div class="classdoc-tag-section-header">Since:</div><dl class="classdoc-list"><dt>DOM Level 3</dt></dl><div class="classdoc-tag-section-header">Parameters:</div><dl class="classdoc-list"><dt><span class="prototype-name">strictErrorChecking</span></dt></dl><hr/><a name="setXmlStandalone(boolean)"/><h3>setXmlStandalone</h3><p class="prototype">public void <b>setXmlStandalone</b>(<span class="parameter">boolean&nbsp;xmlStandalone</span>)</p><div class="classdoc-comment-body"> An attribute specifying, as part of the <a href="http://www.w3.org/TR/2004/REC-xml-20040204#NT-XMLDecl">XML declaration</a>, whether this document is standalone. This is <code>false</code> when 
+</div><div><h4>Parameters:</h4><div>strictErrorChecking</div></div><dl class="tag list"><dt class="tag section header"><b>Since:</b></dt><dd>DOM Level 3</dt></dl></div><hr/><a name="setXmlStandalone(boolean)"/><div><h3>setXmlStandalone</h3><p>public void setXmlStandalone(boolean xmlStandalone)</p><div> An attribute specifying, as part of the <a href="http://www.w3.org/TR/2004/REC-xml-20040204#NT-XMLDecl">XML declaration</a>, whether this document is standalone. This is <code>false</code> when 
  unspecified.
  <p/><b>Note:</b>  No verification is done on the value when setting 
  this attribute. Applications should use 
  <code>Document.normalizeDocument()</code> with the "validate" 
  parameter to verify if the value matches the <a href="http://www.w3.org/TR/2004/REC-xml-20040204#sec-rmd">validity 
  constraint for standalone document declaration</a> as defined in [<a href="http://www.w3.org/TR/2004/REC-xml-20040204">XML 1.0</a>]. 
-</div><p/><div class="classdoc-tag-section-header">Since:</div><dl class="classdoc-list"><dt>DOM Level 3</dt></dl><div class="classdoc-tag-section-header">Parameters:</div><dl class="classdoc-list"><dt><span class="prototype-name">xmlStandalone</span></dt></dl><div class="classdoc-tag-section-header">Throws:</div><dl class="classdoc-list"><dt><code><a href="../../../org/w3c/dom/DOMException.html">DOMException</a></code> - NOT_SUPPORTED_ERR: Raised if this document does not support the 
-"XML" feature.</dt></dl><hr/><a name="setXmlVersion(String)"/><h3>setXmlVersion</h3><p class="prototype">public void <b>setXmlVersion</b>(<span class="parameter">String&nbsp;xmlVersion</span>)</p><div class="classdoc-comment-body">  An attribute specifying, as part of the <a href="http://www.w3.org/TR/2004/REC-xml-20040204#NT-XMLDecl">XML declaration</a>, the version number of this document. If there is no declaration and if 
+</div><div><h4>Parameters:</h4><div>xmlStandalone</div></div><dl class="tag list"><dt class="tag section header"><b>Since:</b></dt><dd>DOM Level 3</dt></dl></div><hr/><a name="setXmlVersion(String)"/><div><h3>setXmlVersion</h3><p>public void setXmlVersion(String xmlVersion)</p><div>  An attribute specifying, as part of the <a href="http://www.w3.org/TR/2004/REC-xml-20040204#NT-XMLDecl">XML declaration</a>, the version number of this document. If there is no declaration and if 
  this document supports the "XML" feature, the value is 
  <code>"1.0"</code>. If this document does not support the "XML" 
  feature, the value is always <code>null</code>. Changing this 
@@ -421,8 +444,4 @@ document element.</dt></dl><hr/><a name="setDocumentURI(String)"/><h3>setDocumen
   objects supporting a version of the "XMLVersion" feature must not 
  raise a <code>NOT_SUPPORTED_ERR</code> exception for the same version 
  number when using <code>Document.xmlVersion</code>. 
-</div><p/><div class="classdoc-tag-section-header">Since:</div><dl class="classdoc-list"><dt>DOM Level 3</dt></dl><div class="classdoc-tag-section-header">Parameters:</div><dl class="classdoc-list"><dt><span class="prototype-name">xmlVersion</span></dt></dl><div class="classdoc-tag-section-header">Throws:</div><dl class="classdoc-list"><dt><code><a href="../../../org/w3c/dom/DOMException.html">DOMException</a></code> - NOT_SUPPORTED_ERR: Raised if the version is set to a value that is 
-not supported by this Document or if this document 
-does not support the "XML" feature.</dt></dl><hr class="footer"/><div class="footer">Generated on
-  October 6, 2004
-  by <a target="cptoolsinfo" href="http://www.gnu.org/software/cp-tools">GNU Classpath Tools</a> (Gjdoc XmlDoclet 0.6.1).</div></body></html>
+</div><div><h4>Parameters:</h4><div>xmlVersion</div></div><dl class="tag list"><dt class="tag section header"><b>Since:</b></dt><dd>DOM Level 3</dt></dl></div><p> </p><table class="navbar div bottom"><tr><td><div><span class="navbar item enabled"><a href="../../..//index-noframes.html">Overview</a></span> <span class="navbar item enabled"><a href="package-summary.html">Package</a></span> <span class="navbar item enabled"><a href="tree.html">Tree</a></span> <a href="../../..//alphaindex.html">Index</a> <a href="../../..//deprecated.html">Deprecated</a> <a href="../../..//help.html">Help</a> <a href="../../..//about.html">About</a></div></td></tr></table></body></html>

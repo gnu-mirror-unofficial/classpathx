@@ -1,20 +1,21 @@
-<html xmlns="http://www.w3.org/TR/REC-html40" xmlns:html="http://www.w3.org/TR/REC-html40" xmlns:gjdoc="http://www.gnu.org/software/cp-tools/gjdocxml"><head><link href="../../../../gjdochtml.css" type="text/css" rel="stylesheet"/><title>Locator2</title></head><body onload="top.document.title=document.title;" class="classdoc"><div class="header"><span class="navi-button">&rArr;&nbsp;<a target="_top" href="../../../../index.html">Index&nbsp;(Frames)</a></span>&nbsp;|&nbsp;
-      <span class="navi-button">&rArr;&nbsp;<a target="_top" href="../../../../index_noframes.html">Index&nbsp;(No&nbsp;Frames)</a></span>&nbsp;|&nbsp;
-      <span class="navi-button">&rArr;&nbsp;<a href="package-summary.html">Package</a></span>&nbsp;|&nbsp;
-      <span class="navi-button">&rArr;&nbsp;<a href="package-tree.html">Package&nbsp;Tree</a></span>&nbsp;|&nbsp;
-      <span class="navi-button">&rArr;&nbsp;<a href="../../../../fulltree.html">Full Tree</a></span>&nbsp;
-    </div><div class="classdoc-head"><div class="classdoc-head-inner"><b class="classdoc-head-packagename">org.xml.sax.ext</b><br/><h1 class="classdoc-head-classname">Interface Locator2</h1></div></div><p/><b>All Superinterfaces:</b><br/><a href="../../../../org/xml/sax/Locator.html">Locator</a><p/><hr/><div class="classdoc-prototype">public interface <b>Locator2</b><br/>implements <a href="../../../../org/xml/sax/Locator.html">Locator</a></div><p/><div class="classdoc-class-comment-body"> SAX2 extension to augment the entity information provided 
- though a <a href="../../../../org/xml/sax/Locator.html">Locator</a>.
+<?xml version="1.0" encoding="null"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head><title>Locator2</title><meta http-equiv="Content-Type" content="text/html; charset=null"/></head><body><table class="navbar div top"><tr><td><div><span class="navbar item enabled"><a href="../../../..//index-noframes.html">Overview</a></span> <span class="navbar item enabled"><a href="package-summary.html">Package</a></span> <span class="navbar item enabled"><a href="tree.html">Tree</a></span> <a href="../../../..//alphaindex.html">Index</a> <a href="../../../..//deprecated.html">Deprecated</a> <a href="../../../..//help.html">Help</a> <a href="../../../..//about.html">About</a></div></td></tr></table><div><h3>org.xml.sax.ext</h3><h1>Interface Locator2</h1><hr/><div><div>public interface Locator2</div><div>extends <a href="../../../..//org/xml/sax/Locator.html">Locator</a></div><div>implements <a href="../../../..//org/xml/sax/Locator.html">Locator</a></div></div><hr/><div> SAX2 extension to augment the entity information provided 
+ though a <a href="../../../..//org/xml/sax/Locator.html">Locator</a>.
  If an implementation supports this extension, the Locator
- provided in <a href="../../../../org/xml/sax/ContentHandler.html#setDocumentLocatorContentHandler.setDocumentLocator()">org.xml.sax.ContentHandler.setDocumentLocator ContentHandler.setDocumentLocator()</a> will implement this
+ provided in org.xml.sax.ContentHandler.setDocumentLocator
+ ContentHandler.setDocumentLocator()  will implement this
  interface, and the
  <em>http://xml.org/sax/features/use-locator2</em> feature
  flag will have the value <em>true</em>.
 
- <blockquote><em>This module, both source code and documentation, is in the
- Public Domain, and comes with <strong>NO WARRANTY</strong>.</em></blockquote><p/> XMLReader implementations are not required to support this
+ <blockquote>
+ <em>This module, both source code and documentation, is in the
+ Public Domain, and comes with <strong>NO WARRANTY</strong>.</em>
+ </blockquote>
+
+ <p/> XMLReader implementations are not required to support this
  information, and it is not part of core-only SAX2 distributions.
-</div><div class="classdoc-tag-section-header">Since:</div><dl class="classdoc-list"><dt>SAX 2.0 (extensions 1.1 alpha)</dt></dl><div class="classdoc-tag-section-header">Author:</div><dl class="classdoc-list"><dt>David Brownell</dt></dl><h1 class="classdoc-header">Method Summary</h1><table class="classdoc-table" width="100%" cellspacing="0" border="1"><tr><td class="no-border-r" valign="top" align="right" width="1%"><p class="prototype-type"> String</p></td><td class="with-border" valign="top" align="left"><p class="prototype"><a href="#getEncoding()">getEncoding</a>()</p><blockquote class="classdoc-summary-comment"> Returns the name of the character encoding for the entity.</blockquote></td></tr><tr><td class="no-border-r" valign="top" align="right" width="1%"><p class="prototype-type"> String</p></td><td class="with-border" valign="top" align="left"><p class="prototype"><a href="#getXMLVersion()">getXMLVersion</a>()</p><blockquote class="classdoc-summary-comment"> Returns the version of XML used for the entity.</blockquote></td></tr></table><h1 class="classdoc-header">Method Details</h1><a name="getEncoding()"/><h3>getEncoding</h3><p class="prototype">public String <b>getEncoding</b>()</p><div class="classdoc-comment-body"> Returns the name of the character encoding for the entity.
+</div><div class="classdoc-tag-section-header">Version:</div><dl class="classdoc-list"><dt>TBS</dt></dl><dl class="tag list"><dt class="tag section header"><b>Author:</b></dt><dd class="tag item">David Brownell</dd></dl><dl class="tag list"><dt class="tag section header"><b>Since:</b></dt><dd>SAX 2.0 (extensions 1.1 alpha)</dt></dl><table class="class summary"><tr><td colspan="2"><h4>Method Summary</h4></td></tr><tr><td class="class summary left">public String</td><td class="class summary right"> <a href="#getEncoding()">getEncoding</a>()</td></tr><tr><td></td><td> Returns the name of the character encoding for the entity.</td></tr><tr><td class="class summary left">public String</td><td class="class summary right"> <a href="#getXMLVersion()">getXMLVersion</a>()</td></tr><tr><td></td><td> Returns the version of XML used for the entity.</td></tr></table><table class="class summary"><tr><td colspan="2"><h4>Methods inherited from org.xml.sax.Locator</h4></td></tr><tr><td><a href="../../../..//org/xml/sax/Locator.html#getColumnNumber()">getColumnNumber</a>, <a href="../../../..//org/xml/sax/Locator.html#getLineNumber()">getLineNumber</a>, <a href="../../../..//org/xml/sax/Locator.html#getPublicId()">getPublicId</a>, <a href="../../../..//org/xml/sax/Locator.html#getSystemId()">getSystemId</a></td></tr></table><h4>Method Details</h4><a name="getEncoding()"/><div><h3>getEncoding</h3><p>public String getEncoding()</p><div> Returns the name of the character encoding for the entity.
  If the encoding was declared externally (for example, in a MIME
  Content-Type header), that will be the name returned.  Else if there
  was an <em>&lt;?xml&nbsp;...encoding='...'?&gt;</em> declaration at
@@ -34,17 +35,8 @@
 
  <p/> Encoding names may be those used by the underlying JVM,
  and comparisons should be case-insensitive.
-</div><p/><div class="classdoc-tag-section-header">Returns:</div><dl class="classdoc-list"><dt>Name of the character encoding being used to interpret
-the entity's text, or null if this was not provided for a
-character stream passed through an InputSource.</dt></dl><hr/><a name="getXMLVersion()"/><h3>getXMLVersion</h3><p class="prototype">public String <b>getXMLVersion</b>()</p><div class="classdoc-comment-body"> Returns the version of XML used for the entity.  This will
+</div></div><hr/><a name="getXMLVersion()"/><div><h3>getXMLVersion</h3><p>public String getXMLVersion()</p><div> Returns the version of XML used for the entity.  This will
  normally be the identifier from the current entity's
  <em>&lt;?xml&nbsp;version='...'&nbsp;...?&gt;</em> declaration,
  or be defaulted by the parser.
-
- <p/> At this writing, only one version ("1.0") is defined, but it
- seems likely that a new version will be defined which has slightly
- different rules about which characters are legal in XML names.
-</div><p/><div class="classdoc-tag-section-header">Returns:</div><dl class="classdoc-list"><dt>Identifier for the XML version being used to interpret
-the entity's text.</dt></dl><hr class="footer"/><div class="footer">Generated on
-  October 6, 2004
-  by <a target="cptoolsinfo" href="http://www.gnu.org/software/cp-tools">GNU Classpath Tools</a> (Gjdoc XmlDoclet 0.6.1).</div></body></html>
+</div></div><p> </p><table class="navbar div bottom"><tr><td><div><span class="navbar item enabled"><a href="../../../..//index-noframes.html">Overview</a></span> <span class="navbar item enabled"><a href="package-summary.html">Package</a></span> <span class="navbar item enabled"><a href="tree.html">Tree</a></span> <a href="../../../..//alphaindex.html">Index</a> <a href="../../../..//deprecated.html">Deprecated</a> <a href="../../../..//help.html">Help</a> <a href="../../../..//about.html">About</a></div></td></tr></table></body></html>

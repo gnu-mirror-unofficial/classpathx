@@ -1,21 +1,15 @@
-<html xmlns="http://www.w3.org/TR/REC-html40" xmlns:html="http://www.w3.org/TR/REC-html40" xmlns:gjdoc="http://www.gnu.org/software/cp-tools/gjdocxml"><head><link href="../../../gjdochtml.css" type="text/css" rel="stylesheet"/><title>SAXParseException</title></head><body onload="top.document.title=document.title;" class="classdoc"><div class="header"><span class="navi-button">&rArr;&nbsp;<a target="_top" href="../../../index.html">Index&nbsp;(Frames)</a></span>&nbsp;|&nbsp;
-      <span class="navi-button">&rArr;&nbsp;<a target="_top" href="../../../index_noframes.html">Index&nbsp;(No&nbsp;Frames)</a></span>&nbsp;|&nbsp;
-      <span class="navi-button">&rArr;&nbsp;<a href="package-summary.html">Package</a></span>&nbsp;|&nbsp;
-      <span class="navi-button">&rArr;&nbsp;<a href="package-tree.html">Package&nbsp;Tree</a></span>&nbsp;|&nbsp;
-      <span class="navi-button">&rArr;&nbsp;<a href="../../../fulltree.html">Full Tree</a></span>&nbsp;
-    </div><div class="classdoc-head"><div class="classdoc-head-inner"><b class="classdoc-head-packagename">org.xml.sax</b><br/><h1 class="classdoc-head-classname">Class SAXParseException</h1></div></div><pre class="inheritance-tree">Exception
-|
-+--<a href="../../../org/xml/sax/SAXException.html">org.xml.sax.SAXException</a>
-   |
-   +--org.xml.sax.SAXParseException
-</pre><p/><hr/><div class="classdoc-prototype">public class <b>SAXParseException</b><br/>extends <a href="../../../org/xml/sax/SAXException.html">SAXException</a><br/></div><p/><div class="classdoc-class-comment-body"> Encapsulate an XML parse error or warning.
+<?xml version="1.0" encoding="null"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head><title>SAXParseException</title><meta http-equiv="Content-Type" content="text/html; charset=null"/></head><body><table class="navbar div top"><tr><td><div><span class="navbar item enabled"><a href="../../..//index-noframes.html">Overview</a></span> <span class="navbar item enabled"><a href="package-summary.html">Package</a></span> <span class="navbar item enabled"><a href="tree.html">Tree</a></span> <a href="../../..//alphaindex.html">Index</a> <a href="../../..//deprecated.html">Deprecated</a> <a href="../../..//help.html">Help</a> <a href="../../..//about.html">About</a></div></td></tr></table><div><h3>org.xml.sax</h3><h1>Class SAXParseException</h1><hr/><div><div>public class SAXParseException</div><div>extends <a href="../../..//org/xml/sax/SAXException.html">SAXException</a></div></div><hr/><div> Encapsulate an XML parse error or warning.
 
- <blockquote><em>This module, both source code and documentation, is in the
+ <blockquote>
+ <em>This module, both source code and documentation, is in the
  Public Domain, and comes with <strong>NO WARRANTY</strong>.</em>
  See <a href="http://www.saxproject.org">http://www.saxproject.org</a>
  for further information.
- </blockquote><p/>This exception may include information for locating the error
- in the original XML document, as if it came from a <a href="../../../org/xml/sax/Locator.html">Locator</a>
+ </blockquote>
+
+ <p/>This exception may include information for locating the error
+ in the original XML document, as if it came from a <a href="../../..//org/xml/sax/Locator.html">Locator</a>
  object.  Note that although the application
  will receive a SAXParseException as the argument to the handlers
  in the org.xml.sax.ErrorHandler ErrorHandler interface, 
@@ -25,71 +19,56 @@
 
  <p/>Since this exception is a subclass of org.xml.sax.SAXException 
  SAXException, it inherits the ability to wrap another exception.
-</div><div class="classdoc-tag-section-header">Since:</div><dl class="classdoc-list"><dt>SAX 1.0</dt></dl><div class="classdoc-tag-section-header">Author:</div><dl class="classdoc-list"><dt>David Megginson</dt></dl><div class="classdoc-tag-section-header">See Also:</div><dl class="classdoc-list"><dt><code><a href="../../../org/xml/sax/SAXException.html">org.xml.sax.SAXException
-</a></code></dt><dt><code><a href="../../../org/xml/sax/Locator.html">org.xml.sax.Locator
-</a></code></dt><dt><code><a href="../../../org/xml/sax/ErrorHandler.html">org.xml.sax.ErrorHandler
-</a></code></dt></dl><h1 class="classdoc-header">Constructor Summary</h1><table class="classdoc-table" width="100%" cellspacing="0" border="1"><tr><td class="with-border" valign="top" align="left"><p class="prototype"><a href="#SAXParseException(String,org.xml.sax.Locator)">SAXParseException</a>(<span class="parameter">String&nbsp;message,</span> <span class="parameter"><a href="../../../org/xml/sax/Locator.html">Locator</a>&nbsp;locator</span>)</p><blockquote class="classdoc-summary-comment"> Create a new SAXParseException from a message and a Locator.</blockquote></td></tr><tr><td class="with-border" valign="top" align="left"><p class="prototype"><a href="#SAXParseException(String,org.xml.sax.Locator,Exception)">SAXParseException</a>(<span class="parameter">String&nbsp;message,</span> <span class="parameter"><a href="../../../org/xml/sax/Locator.html">Locator</a>&nbsp;locator,</span> <span class="parameter">Exception&nbsp;e</span>)</p><blockquote class="classdoc-summary-comment"> Wrap an existing exception in a SAXParseException.</blockquote></td></tr><tr><td class="with-border" valign="top" align="left"><p class="prototype"><a href="#SAXParseException(String,String,String,int,int)">SAXParseException</a>(<span class="parameter">String&nbsp;message,</span> <span class="parameter">String&nbsp;publicId,</span> <span class="parameter">String&nbsp;systemId,</span> <span class="parameter">int&nbsp;lineNumber,</span> <span class="parameter">int&nbsp;columnNumber</span>)</p><blockquote class="classdoc-summary-comment"> Create a new SAXParseException.</blockquote></td></tr><tr><td class="with-border" valign="top" align="left"><p class="prototype"><a href="#SAXParseException(String,String,String,int,int,Exception)">SAXParseException</a>(<span class="parameter">String&nbsp;message,</span> <span class="parameter">String&nbsp;publicId,</span> <span class="parameter">String&nbsp;systemId,</span> <span class="parameter">int&nbsp;lineNumber,</span> <span class="parameter">int&nbsp;columnNumber,</span> <span class="parameter">Exception&nbsp;e</span>)</p><blockquote class="classdoc-summary-comment"> Create a new SAXParseException with an embedded exception.</blockquote></td></tr></table><h1 class="classdoc-header">Method Summary</h1><table class="classdoc-table" width="100%" cellspacing="0" border="1"><tr><td class="no-border-r" valign="top" align="right" width="1%"><p class="prototype-type"> int</p></td><td class="with-border" valign="top" align="left"><p class="prototype"><a href="#getColumnNumber()">getColumnNumber</a>()</p><blockquote class="classdoc-summary-comment"> The column number of the end of the text where the exception occurred.</blockquote></td></tr><tr><td class="no-border-r" valign="top" align="right" width="1%"><p class="prototype-type"> int</p></td><td class="with-border" valign="top" align="left"><p class="prototype"><a href="#getLineNumber()">getLineNumber</a>()</p><blockquote class="classdoc-summary-comment"> The line number of the end of the text where the exception occurred.</blockquote></td></tr><tr><td class="no-border-r" valign="top" align="right" width="1%"><p class="prototype-type"> String</p></td><td class="with-border" valign="top" align="left"><p class="prototype"><a href="#getPublicId()">getPublicId</a>()</p><blockquote class="classdoc-summary-comment"> Get the public identifier of the entity where the exception occurred.</blockquote></td></tr><tr><td class="no-border-r" valign="top" align="right" width="1%"><p class="prototype-type"> String</p></td><td class="with-border" valign="top" align="left"><p class="prototype"><a href="#getSystemId()">getSystemId</a>()</p><blockquote class="classdoc-summary-comment"> Get the system identifier of the entity where the exception occurred.</blockquote></td></tr></table><h1 class="classdoc-header">Constructor Details</h1><a name="SAXParseException(String,org.xml.sax.Locator,Exception)"/><h3>SAXParseException</h3><p class="prototype">public  <b>SAXParseException</b>(<span class="parameter">String&nbsp;message,</span> <span class="parameter"><a href="../../../org/xml/sax/Locator.html">Locator</a>&nbsp;locator,</span> <span class="parameter">Exception&nbsp;e</span>)</p><div class="classdoc-comment-body"> Wrap an existing exception in a SAXParseException.
+</div><div class="classdoc-tag-section-header">Version:</div><dl class="classdoc-list"><dt>2.0.1 (sax2r2)</dt></dl><dl class="tag list"><dt class="tag section header"><b>Author:</b></dt><dd class="tag item">David Megginson</dd></dl><dl class="tag list"><dt class="tag section header"><b>Since:</b></dt><dd>SAX 1.0</dt></dl><table class="class summary"><tr><td colspan="2"><h4>Constructor Summary</h4></td></tr><tr><td class="class summary left">public </td><td class="class summary right"> <a href="#SAXParseException(String,org.xml.sax.Locator)">SAXParseException</a>(String message, <a href="../../..//org/xml/sax/Locator.html">Locator</a> locator)</td></tr><tr><td></td><td> Create a new SAXParseException from a message and a Locator.</td></tr><tr><td class="class summary left">public </td><td class="class summary right"> <a href="#SAXParseException(String,org.xml.sax.Locator,Exception)">SAXParseException</a>(String message, <a href="../../..//org/xml/sax/Locator.html">Locator</a> locator, Exception e)</td></tr><tr><td></td><td> Wrap an existing exception in a SAXParseException.</td></tr><tr><td class="class summary left">public </td><td class="class summary right"> <a href="#SAXParseException(String,String,String,int,int)">SAXParseException</a>(String message, String publicId, String systemId, int lineNumber, int columnNumber)</td></tr><tr><td></td><td> Create a new SAXParseException.</td></tr><tr><td class="class summary left">public </td><td class="class summary right"> <a href="#SAXParseException(String,String,String,int,int,Exception)">SAXParseException</a>(String message, String publicId, String systemId, int lineNumber, int columnNumber, Exception e)</td></tr><tr><td></td><td> Create a new SAXParseException with an embedded exception.</td></tr></table><table class="class summary"><tr><td colspan="2"><h4>Method Summary</h4></td></tr><tr><td class="class summary left">public int</td><td class="class summary right"> <a href="#getColumnNumber()">getColumnNumber</a>()</td></tr><tr><td></td><td> The column number of the end of the text where the exception occurred.</td></tr><tr><td class="class summary left">public int</td><td class="class summary right"> <a href="#getLineNumber()">getLineNumber</a>()</td></tr><tr><td></td><td> The line number of the end of the text where the exception occurred.</td></tr><tr><td class="class summary left">public String</td><td class="class summary right"> <a href="#getPublicId()">getPublicId</a>()</td></tr><tr><td></td><td> Get the public identifier of the entity where the exception occurred.</td></tr><tr><td class="class summary left">public String</td><td class="class summary right"> <a href="#getSystemId()">getSystemId</a>()</td></tr><tr><td></td><td> Get the system identifier of the entity where the exception occurred.</td></tr></table><table class="class summary"><tr><td colspan="2"><h4>Methods inherited from org.xml.sax.SAXException</h4></td></tr><tr><td><a href="../../..//org/xml/sax/SAXException.html#getException()">getException</a>, <a href="../../..//org/xml/sax/SAXException.html#getMessage()">getMessage</a>, <a href="../../..//org/xml/sax/SAXException.html#toString()">toString</a></td></tr></table><h4>Constructor Details</h4><a name="SAXParseException(String,org.xml.sax.Locator)"/><div><h3>SAXParseException</h3><p>public SAXParseException(String message, <a href="../../..//org/xml/sax/Locator.html">Locator</a> locator)</p><div> Create a new SAXParseException from a message and a Locator.
+
+ <p/>This constructor is especially useful when an application is
+ creating its own exception from within a org.xml.sax.ContentHandler
+ ContentHandler callback.
+</div><div><h4>Parameters:</h4><div>message - The error or warning message.</div><div>locator - The locator object for the error or warning (may be
+null).</div></div></div><hr/><a name="SAXParseException(String,org.xml.sax.Locator,Exception)"/><div><h3>SAXParseException</h3><p>public SAXParseException(String message, <a href="../../..//org/xml/sax/Locator.html">Locator</a> locator, Exception e)</p><div> Wrap an existing exception in a SAXParseException.
 
  <p/>This constructor is especially useful when an application is
  creating its own exception from within a org.xml.sax.ContentHandler
  ContentHandler callback, and needs to wrap an existing exception that is not a
  subclass of org.xml.sax.SAXException SAXException.
-</div><p/><div class="classdoc-tag-section-header">Parameters:</div><dl class="classdoc-list"><dt><span class="prototype-name">message</span> - The error or warning message, or null to
-use the message from the embedded exception.</dt><dt><span class="prototype-name">locator</span> - The locator object for the error or warning (may be
-null).</dt><dt><span class="prototype-name">e</span> - Any exception.</dt></dl><div class="classdoc-tag-section-header">See Also:</div><dl class="classdoc-list"><dt><code><a href="../../../org/xml/sax/Locator.html">org.xml.sax.Locator
-</a></code></dt></dl><hr/><a name="SAXParseException(String,org.xml.sax.Locator)"/><h3>SAXParseException</h3><p class="prototype">public  <b>SAXParseException</b>(<span class="parameter">String&nbsp;message,</span> <span class="parameter"><a href="../../../org/xml/sax/Locator.html">Locator</a>&nbsp;locator</span>)</p><div class="classdoc-comment-body"> Create a new SAXParseException from a message and a Locator.
+</div><div><h4>Parameters:</h4><div>message - The error or warning message, or null to
+use the message from the embedded exception.</div><div>locator - The locator object for the error or warning (may be
+null).</div><div>e - Any exception.</div></div></div><hr/><a name="SAXParseException(String,String,String,int,int)"/><div><h3>SAXParseException</h3><p>public SAXParseException(String message, String publicId, String systemId, int lineNumber, int columnNumber)</p><div> Create a new SAXParseException.
 
- <p/>This constructor is especially useful when an application is
- creating its own exception from within a org.xml.sax.ContentHandler
- ContentHandler callback.
-</div><p/><div class="classdoc-tag-section-header">Parameters:</div><dl class="classdoc-list"><dt><span class="prototype-name">message</span> - The error or warning message.</dt><dt><span class="prototype-name">locator</span> - The locator object for the error or warning (may be
-null).</dt></dl><div class="classdoc-tag-section-header">See Also:</div><dl class="classdoc-list"><dt><code><a href="../../../org/xml/sax/Locator.html">org.xml.sax.Locator
-</a></code></dt></dl><hr/><a name="SAXParseException(String,String,String,int,int,Exception)"/><h3>SAXParseException</h3><p class="prototype">public  <b>SAXParseException</b>(<span class="parameter">String&nbsp;message,</span> <span class="parameter">String&nbsp;publicId,</span> <span class="parameter">String&nbsp;systemId,</span> <span class="parameter">int&nbsp;lineNumber,</span> <span class="parameter">int&nbsp;columnNumber,</span> <span class="parameter">Exception&nbsp;e</span>)</p><div class="classdoc-comment-body"> Create a new SAXParseException with an embedded exception.
+ <p/>This constructor is most useful for parser writers.
+
+ <p/>All parameters except the message are as if
+ they were provided by a <a href="../../..//org/xml/sax/Locator.html">Locator</a>.  For example, if the
+ system identifier is a URL (including relative filename), the
+ caller must resolve it fully before creating the exception.
+</div><div><h4>Parameters:</h4><div>message - The error or warning message.</div><div>publicId - The public identifier of the entity that generated
+the error or warning.</div><div>systemId - The system identifier of the entity that generated
+the error or warning.</div><div>lineNumber - The line number of the end of the text that
+caused the error or warning.</div><div>columnNumber - The column number of the end of the text that
+cause the error or warning.</div></div></div><hr/><a name="SAXParseException(String,String,String,int,int,Exception)"/><div><h3>SAXParseException</h3><p>public SAXParseException(String message, String publicId, String systemId, int lineNumber, int columnNumber, Exception e)</p><div> Create a new SAXParseException with an embedded exception.
 
  <p/>This constructor is most useful for parser writers who
  need to wrap an exception that is not a subclass of
 org.xml.sax.SAXException SAXException.
  
  <p/>All parameters except the message and exception are as if
- they were provided by a <a href="../../../org/xml/sax/Locator.html">Locator</a>.  For example, if the
+ they were provided by a <a href="../../..//org/xml/sax/Locator.html">Locator</a>.  For example, if the
  system identifier is a URL (including relative filename), the
  caller must resolve it fully before creating the exception.
-</div><p/><div class="classdoc-tag-section-header">Parameters:</div><dl class="classdoc-list"><dt><span class="prototype-name">message</span> - The error or warning message, or null to use
-the message from the embedded exception.</dt><dt><span class="prototype-name">publicId</span> - The public identifer of the entity that generated
-the error or warning.</dt><dt><span class="prototype-name">systemId</span> - The system identifer of the entity that generated
-the error or warning.</dt><dt><span class="prototype-name">lineNumber</span> - The line number of the end of the text that
-caused the error or warning.</dt><dt><span class="prototype-name">columnNumber</span> - The column number of the end of the text that
-cause the error or warning.</dt><dt><span class="prototype-name">e</span> - Another exception to embed in this one.</dt></dl><hr/><a name="SAXParseException(String,String,String,int,int)"/><h3>SAXParseException</h3><p class="prototype">public  <b>SAXParseException</b>(<span class="parameter">String&nbsp;message,</span> <span class="parameter">String&nbsp;publicId,</span> <span class="parameter">String&nbsp;systemId,</span> <span class="parameter">int&nbsp;lineNumber,</span> <span class="parameter">int&nbsp;columnNumber</span>)</p><div class="classdoc-comment-body"> Create a new SAXParseException.
-
- <p/>This constructor is most useful for parser writers.
-
- <p/>All parameters except the message are as if
- they were provided by a <a href="../../../org/xml/sax/Locator.html">Locator</a>.  For example, if the
- system identifier is a URL (including relative filename), the
- caller must resolve it fully before creating the exception.
-</div><p/><div class="classdoc-tag-section-header">Parameters:</div><dl class="classdoc-list"><dt><span class="prototype-name">message</span> - The error or warning message.</dt><dt><span class="prototype-name">publicId</span> - The public identifer of the entity that generated
-the error or warning.</dt><dt><span class="prototype-name">systemId</span> - The system identifer of the entity that generated
-the error or warning.</dt><dt><span class="prototype-name">lineNumber</span> - The line number of the end of the text that
-caused the error or warning.</dt><dt><span class="prototype-name">columnNumber</span> - The column number of the end of the text that
-cause the error or warning.</dt></dl><h1 class="classdoc-header">Method Details</h1><a name="getColumnNumber()"/><h3>getColumnNumber</h3><p class="prototype">public int <b>getColumnNumber</b>()</p><div class="classdoc-comment-body"> The column number of the end of the text where the exception occurred.
+</div><div><h4>Parameters:</h4><div>message - The error or warning message, or null to use
+the message from the embedded exception.</div><div>publicId - The public identifier of the entity that generated
+the error or warning.</div><div>systemId - The system identifier of the entity that generated
+the error or warning.</div><div>lineNumber - The line number of the end of the text that
+caused the error or warning.</div><div>columnNumber - The column number of the end of the text that
+cause the error or warning.</div><div>e - Another exception to embed in this one.</div></div></div><h4>Method Details</h4><a name="getColumnNumber()"/><div><h3>getColumnNumber</h3><p>public int getColumnNumber()</p><div> The column number of the end of the text where the exception occurred.
 
  <p/>The first column in a line is position 1.
-</div><p/><div class="classdoc-tag-section-header">Returns:</div><dl class="classdoc-list"><dt>An integer representing the column number, or -1
-if none is available.</dt></dl><div class="classdoc-tag-section-header">See Also:</div><dl class="classdoc-list"><dt><code><a href="../../../org/xml/sax/Locator.html#getColumnNumber">org.xml.sax.Locator.getColumnNumber
-</a></code></dt></dl><hr/><a name="getLineNumber()"/><h3>getLineNumber</h3><p class="prototype">public int <b>getLineNumber</b>()</p><div class="classdoc-comment-body"> The line number of the end of the text where the exception occurred.
+</div></div><hr/><a name="getLineNumber()"/><div><h3>getLineNumber</h3><p>public int getLineNumber()</p><div> The line number of the end of the text where the exception occurred.
 
  <p/>The first line is line 1.
-</div><p/><div class="classdoc-tag-section-header">Returns:</div><dl class="classdoc-list"><dt>An integer representing the line number, or -1
-if none is available.</dt></dl><div class="classdoc-tag-section-header">See Also:</div><dl class="classdoc-list"><dt><code><a href="../../../org/xml/sax/Locator.html#getLineNumber">org.xml.sax.Locator.getLineNumber
-</a></code></dt></dl><hr/><a name="getPublicId()"/><h3>getPublicId</h3><p class="prototype">public String <b>getPublicId</b>()</p><div class="classdoc-comment-body"> Get the public identifier of the entity where the exception occurred.
-</div><p/><div class="classdoc-tag-section-header">Returns:</div><dl class="classdoc-list"><dt>A string containing the public identifier, or null
-if none is available.</dt></dl><div class="classdoc-tag-section-header">See Also:</div><dl class="classdoc-list"><dt><code><a href="../../../org/xml/sax/Locator.html#getPublicId">org.xml.sax.Locator.getPublicId
-</a></code></dt></dl><hr/><a name="getSystemId()"/><h3>getSystemId</h3><p class="prototype">public String <b>getSystemId</b>()</p><div class="classdoc-comment-body"> Get the system identifier of the entity where the exception occurred.
+</div></div><hr/><a name="getPublicId()"/><div><h3>getPublicId</h3><p>public String getPublicId()</p><div> Get the public identifier of the entity where the exception occurred.
+</div></div><hr/><a name="getSystemId()"/><div><h3>getSystemId</h3><p>public String getSystemId()</p><div> Get the system identifier of the entity where the exception occurred.
 
  <p/>If the system identifier is a URL, it will have been resolved
  fully.
-</div><p/><div class="classdoc-tag-section-header">Returns:</div><dl class="classdoc-list"><dt>A string containing the system identifier, or null
-if none is available.</dt></dl><div class="classdoc-tag-section-header">See Also:</div><dl class="classdoc-list"><dt><code><a href="../../../org/xml/sax/Locator.html#getSystemId">org.xml.sax.Locator.getSystemId
-</a></code></dt></dl><hr class="footer"/><div class="footer">Generated on
-  October 6, 2004
-  by <a target="cptoolsinfo" href="http://www.gnu.org/software/cp-tools">GNU Classpath Tools</a> (Gjdoc XmlDoclet 0.6.1).</div></body></html>
+</div></div><p> </p><table class="navbar div bottom"><tr><td><div><span class="navbar item enabled"><a href="../../..//index-noframes.html">Overview</a></span> <span class="navbar item enabled"><a href="package-summary.html">Package</a></span> <span class="navbar item enabled"><a href="tree.html">Tree</a></span> <a href="../../..//alphaindex.html">Index</a> <a href="../../..//deprecated.html">Deprecated</a> <a href="../../..//help.html">Help</a> <a href="../../..//about.html">About</a></div></td></tr></table></body></html>

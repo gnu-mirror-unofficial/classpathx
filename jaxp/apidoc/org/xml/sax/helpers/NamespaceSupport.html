@@ -1,23 +1,19 @@
-<html xmlns="http://www.w3.org/TR/REC-html40" xmlns:html="http://www.w3.org/TR/REC-html40" xmlns:gjdoc="http://www.gnu.org/software/cp-tools/gjdocxml"><head><link href="../../../../gjdochtml.css" type="text/css" rel="stylesheet"/><title>NamespaceSupport</title></head><body onload="top.document.title=document.title;" class="classdoc"><div class="header"><span class="navi-button">&rArr;&nbsp;<a target="_top" href="../../../../index.html">Index&nbsp;(Frames)</a></span>&nbsp;|&nbsp;
-      <span class="navi-button">&rArr;&nbsp;<a target="_top" href="../../../../index_noframes.html">Index&nbsp;(No&nbsp;Frames)</a></span>&nbsp;|&nbsp;
-      <span class="navi-button">&rArr;&nbsp;<a href="package-summary.html">Package</a></span>&nbsp;|&nbsp;
-      <span class="navi-button">&rArr;&nbsp;<a href="package-tree.html">Package&nbsp;Tree</a></span>&nbsp;|&nbsp;
-      <span class="navi-button">&rArr;&nbsp;<a href="../../../../fulltree.html">Full Tree</a></span>&nbsp;
-    </div><div class="classdoc-head"><div class="classdoc-head-inner"><b class="classdoc-head-packagename">org.xml.sax.helpers</b><br/><h1 class="classdoc-head-classname">Class NamespaceSupport</h1></div></div><pre class="inheritance-tree">java.lang.Object
-|
-+--org.xml.sax.helpers.NamespaceSupport
-</pre><p/><hr/><div class="classdoc-prototype">public class <b>NamespaceSupport</b><br/>extends java.lang.Object<br/></div><p/><div class="classdoc-class-comment-body"> Encapsulate Namespace logic for use by applications using SAX,
+<?xml version="1.0" encoding="null"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head><title>NamespaceSupport</title><meta http-equiv="Content-Type" content="text/html; charset=null"/></head><body><table class="navbar div top"><tr><td><div><span class="navbar item enabled"><a href="../../../..//index-noframes.html">Overview</a></span> <span class="navbar item enabled"><a href="package-summary.html">Package</a></span> <span class="navbar item enabled"><a href="tree.html">Tree</a></span> <a href="../../../..//alphaindex.html">Index</a> <a href="../../../..//deprecated.html">Deprecated</a> <a href="../../../..//help.html">Help</a> <a href="../../../..//about.html">About</a></div></td></tr></table><div><h3>org.xml.sax.helpers</h3><h1>Class NamespaceSupport</h1><hr/><div><div>public class NamespaceSupport</div><div>extends java.lang.Object</div></div><hr/><div> Encapsulate Namespace logic for use by applications using SAX,
  or internally by SAX drivers.
 
- <blockquote><em>This module, both source code and documentation, is in the
+ <blockquote>
+ <em>This module, both source code and documentation, is in the
  Public Domain, and comes with <strong>NO WARRANTY</strong>.</em>
  See <a href="http://www.saxproject.org">http://www.saxproject.org</a>
  for further information.
- </blockquote><p/>This class encapsulates the logic of Namespace processing:
- it tracks the declarations currently in force for each context
- and automatically processes qualified XML 1.0 names into their
- Namespace parts; it can also be used in reverse for generating
- XML 1.0 from Namespaces.
+ </blockquote>
+
+ <p/>This class encapsulates the logic of Namespace processing: it
+ tracks the declarations currently in force for each context and
+ automatically processes qualified XML names into their Namespace
+ parts; it can also be used in reverse for generating XML qnames
+ from Namespaces.
 
  <p/>Namespace support objects are reusable, but the reset method
  must be invoked between each session.
@@ -42,7 +38,10 @@
  System.out.println("Local name: " + parts[1]);
  System.out.println("Raw name: " + parts[2]);
 
- support.popContext();</pre><p/>Note that this class is optimized for the use case where most
+ support.popContext();
+ </pre>
+
+ <p/>Note that this class is optimized for the use case where most
  elements do not contain Namespace declarations: if the same
  prefix/URI mapping is repeated for each context (for example), this
  class will be somewhat less efficient.
@@ -51,19 +50,35 @@
  implement namespace handling, they are not required to do so.
  Applications must track namespace information themselves if they
  want to use namespace information.
-</div><div class="classdoc-tag-section-header">Since:</div><dl class="classdoc-list"><dt>SAX 2.0</dt></dl><div class="classdoc-tag-section-header">Author:</div><dl class="classdoc-list"><dt>David Megginson</dt></dl><h1 class="classdoc-header">Field Summary</h1><table class="classdoc-table" width="100%" cellspacing="0" border="1"><tr><td class="no-border-r" valign="top" align="right" width="1%"><p class="prototype-type">static String</p></td><td class="with-border" valign="top" align="left"><p class="prototype"><a href="#XMLNS">XMLNS</a></p><blockquote class="classdoc-summary-comment"> The XML Namespace URI as a constant.</blockquote></td></tr></table><h1 class="classdoc-header">Constructor Summary</h1><table class="classdoc-table" width="100%" cellspacing="0" border="1"><tr><td class="with-border" valign="top" align="left"><p class="prototype"><a href="#NamespaceSupport()">NamespaceSupport</a>()</p><blockquote class="classdoc-summary-comment"> Create a new Namespace support object.</blockquote></td></tr></table><h1 class="classdoc-header">Method Summary</h1><table class="classdoc-table" width="100%" cellspacing="0" border="1"><tr><td class="no-border-r" valign="top" align="right" width="1%"><p class="prototype-type"> boolean</p></td><td class="with-border" valign="top" align="left"><p class="prototype"><a href="#declarePrefix(String,String)">declarePrefix</a>(<span class="parameter">String&nbsp;prefix,</span> <span class="parameter">String&nbsp;uri</span>)</p><blockquote class="classdoc-summary-comment"> Declare a Namespace prefix.</blockquote></td></tr><tr><td class="no-border-r" valign="top" align="right" width="1%"><p class="prototype-type"> Enumeration</p></td><td class="with-border" valign="top" align="left"><p class="prototype"><a href="#getDeclaredPrefixes()">getDeclaredPrefixes</a>()</p><blockquote class="classdoc-summary-comment"> Return an enumeration of all prefixes declared in this context.</blockquote></td></tr><tr><td class="no-border-r" valign="top" align="right" width="1%"><p class="prototype-type"> String</p></td><td class="with-border" valign="top" align="left"><p class="prototype"><a href="#getPrefix(String)">getPrefix</a>(<span class="parameter">String&nbsp;uri</span>)</p><blockquote class="classdoc-summary-comment"> Return one of the prefixes mapped to a Namespace URI.</blockquote></td></tr><tr><td class="no-border-r" valign="top" align="right" width="1%"><p class="prototype-type"> Enumeration</p></td><td class="with-border" valign="top" align="left"><p class="prototype"><a href="#getPrefixes()">getPrefixes</a>()</p><blockquote class="classdoc-summary-comment"> Return an enumeration of all prefixes currently declared.</blockquote></td></tr><tr><td class="no-border-r" valign="top" align="right" width="1%"><p class="prototype-type"> Enumeration</p></td><td class="with-border" valign="top" align="left"><p class="prototype"><a href="#getPrefixes(String)">getPrefixes</a>(<span class="parameter">String&nbsp;uri</span>)</p><blockquote class="classdoc-summary-comment"> Return an enumeration of all prefixes currently declared for a URI.</blockquote></td></tr><tr><td class="no-border-r" valign="top" align="right" width="1%"><p class="prototype-type"> String</p></td><td class="with-border" valign="top" align="left"><p class="prototype"><a href="#getURI(String)">getURI</a>(<span class="parameter">String&nbsp;prefix</span>)</p><blockquote class="classdoc-summary-comment"> Look up a prefix and get the currently-mapped Namespace URI.</blockquote></td></tr><tr><td class="no-border-r" valign="top" align="right" width="1%"><p class="prototype-type"> void</p></td><td class="with-border" valign="top" align="left"><p class="prototype"><a href="#popContext()">popContext</a>()</p><blockquote class="classdoc-summary-comment"> Revert to the previous Namespace context.</blockquote></td></tr><tr><td class="no-border-r" valign="top" align="right" width="1%"><p class="prototype-type"> String[]</p></td><td class="with-border" valign="top" align="left"><p class="prototype"><a href="#processName(String,String[],boolean)">processName</a>(<span class="parameter">String&nbsp;qName,</span> <span class="parameter">String[]&nbsp;parts,</span> <span class="parameter">boolean&nbsp;isAttribute</span>)</p><blockquote class="classdoc-summary-comment"> Process a raw XML 1.0 name, after all declarations in the current
- context have been handled by #declarePrefix declarePrefix().</blockquote></td></tr><tr><td class="no-border-r" valign="top" align="right" width="1%"><p class="prototype-type"> void</p></td><td class="with-border" valign="top" align="left"><p class="prototype"><a href="#pushContext()">pushContext</a>()</p><blockquote class="classdoc-summary-comment"> Start a new Namespace context.</blockquote></td></tr><tr><td class="no-border-r" valign="top" align="right" width="1%"><p class="prototype-type"> void</p></td><td class="with-border" valign="top" align="left"><p class="prototype"><a href="#reset()">reset</a>()</p><blockquote class="classdoc-summary-comment"> Reset this Namespace support object for reuse.</blockquote></td></tr></table><h1 class="classdoc-header">Field Details</h1><a name="XMLNS"/><h3>XMLNS</h3><p class="prototype">public static final String <b>XMLNS</b></p><p/><div class="classdoc-comment-body"> The XML Namespace URI as a constant.
+</div><div class="classdoc-tag-section-header">Version:</div><dl class="classdoc-list"><dt>2.0.1 (sax2r2)</dt></dl><dl class="tag list"><dt class="tag section header"><b>Author:</b></dt><dd class="tag item">David Megginson</dd></dl><dl class="tag list"><dt class="tag section header"><b>Since:</b></dt><dd>SAX 2.0</dt></dl><table class="class summary"><tr><td colspan="2"><h4>Field Summary</h4></td></tr><tr><td class="class summary left">public static final String</td><td class="class summary right"> <a href="#NSDECL">NSDECL</a></td></tr><tr><td></td><td> The namespace declaration URI as a constant.</td></tr><tr><td class="class summary left">public static final String</td><td class="class summary right"> <a href="#XMLNS">XMLNS</a></td></tr><tr><td></td><td> The XML Namespace URI as a constant.</td></tr></table><table class="class summary"><tr><td colspan="2"><h4>Constructor Summary</h4></td></tr><tr><td class="class summary left">public </td><td class="class summary right"> <a href="#NamespaceSupport()">NamespaceSupport</a>()</td></tr><tr><td></td><td> Create a new Namespace support object.</td></tr></table><table class="class summary"><tr><td colspan="2"><h4>Method Summary</h4></td></tr><tr><td class="class summary left">public boolean</td><td class="class summary right"> <a href="#declarePrefix(String,String)">declarePrefix</a>(String prefix, String uri)</td></tr><tr><td></td><td> Declare a Namespace prefix.</td></tr><tr><td class="class summary left">public Enumeration</td><td class="class summary right"> <a href="#getDeclaredPrefixes()">getDeclaredPrefixes</a>()</td></tr><tr><td></td><td> Return an enumeration of all prefixes declared in this context.</td></tr><tr><td class="class summary left">public Enumeration</td><td class="class summary right"> <a href="#getPrefixes()">getPrefixes</a>()</td></tr><tr><td></td><td> Return an enumeration of all prefixes whose declarations are
+ active in the current context.</td></tr><tr><td class="class summary left">public Enumeration</td><td class="class summary right"> <a href="#getPrefixes(String)">getPrefixes</a>(String uri)</td></tr><tr><td></td><td> Return an enumeration of all prefixes for a given URI whose
+ declarations are active in the current context.</td></tr><tr><td class="class summary left">public String</td><td class="class summary right"> <a href="#getPrefix(String)">getPrefix</a>(String uri)</td></tr><tr><td></td><td> Return one of the prefixes mapped to a Namespace URI.</td></tr><tr><td class="class summary left">public String</td><td class="class summary right"> <a href="#getURI(String)">getURI</a>(String prefix)</td></tr><tr><td></td><td> Look up a prefix and get the currently-mapped Namespace URI.</td></tr><tr><td class="class summary left">public boolean</td><td class="class summary right"> <a href="#isNamespaceDeclUris()">isNamespaceDeclUris</a>()</td></tr><tr><td></td><td> Returns true if namespace declaration attributes are placed into
+ a namespace.</td></tr><tr><td class="class summary left">public void</td><td class="class summary right"> <a href="#popContext()">popContext</a>()</td></tr><tr><td></td><td> Revert to the previous Namespace context.</td></tr><tr><td class="class summary left">public String</td><td class="class summary right"> <a href="#processName(String,parts[],boolean)">processName</a>(String qName, parts , boolean isAttribute)</td></tr><tr><td></td><td> Process a raw XML qualified name, after all declarations in the
+ current context have been handled by declarePrefix
+ declarePrefix().</td></tr><tr><td class="class summary left">public void</td><td class="class summary right"> <a href="#pushContext()">pushContext</a>()</td></tr><tr><td></td><td> Start a new Namespace context.</td></tr><tr><td class="class summary left">public void</td><td class="class summary right"> <a href="#reset()">reset</a>()</td></tr><tr><td></td><td> Reset this Namespace support object for reuse.</td></tr><tr><td class="class summary left">public void</td><td class="class summary right"> <a href="#setNamespaceDeclUris(boolean)">setNamespaceDeclUris</a>(boolean value)</td></tr><tr><td></td><td> Controls whether namespace declaration attributes are placed
+ into the NSDECL NSDECL namespace
+ by processName processName().</td></tr></table><h4>Field Details</h4><a name="NSDECL"/><div><h3>NSDECL</h3><p>public static final NSDECL</p><div> The namespace declaration URI as a constant.
+ The value is <code>http://www.w3.org/xmlns/2000/</code>, as defined
+ in a backwards-incompatible erratum to the "Namespaces in XML"
+ recommendation.  Because that erratum postdated SAX2, SAX2 defaults 
+ to the original recommendation, and does not normally use this URI.
+ 
+
+ <p/>This is the Namespace URI that is optionally applied to
+ <em>xmlns</em> and <em>xmlns:*</em> attributes, which are used to
+ declare namespaces.  
+</div><dl class="tag list"><dt class="tag section header"><b>Since:</b></dt><dd>SAX 2.1alpha</dt></dl></div><hr/><a name="XMLNS"/><div><h3>XMLNS</h3><p>public static final XMLNS</p><div> The XML Namespace URI as a constant.
  The value is <code>http://www.w3.org/XML/1998/namespace</code>
- as defined in the XML Namespaces specification.
+ as defined in the "Namespaces in XML" * recommendation.
 
  <p/>This is the Namespace URI that is automatically mapped
  to the "xml" prefix.
-</div><p/><h1 class="classdoc-header">Constructor Details</h1><a name="NamespaceSupport()"/><h3>NamespaceSupport</h3><p class="prototype">public  <b>NamespaceSupport</b>()</p><div class="classdoc-comment-body"> Create a new Namespace support object.
-</div><p/><h1 class="classdoc-header">Method Details</h1><a name="declarePrefix(String,String)"/><h3>declarePrefix</h3><p class="prototype">public boolean <b>declarePrefix</b>(<span class="parameter">String&nbsp;prefix,</span> <span class="parameter">String&nbsp;uri</span>)</p><div class="classdoc-comment-body"> Declare a Namespace prefix.  All prefixes must be declared
+</div></div><h4>Constructor Details</h4><a name="NamespaceSupport()"/><div><h3>NamespaceSupport</h3><p>public NamespaceSupport()</p><div> Create a new Namespace support object.
+</div></div><h4>Method Details</h4><a name="declarePrefix(String,String)"/><div><h3>declarePrefix</h3><p>public boolean declarePrefix(String prefix, String uri)</p><div> Declare a Namespace prefix.  All prefixes must be declared
  before they are referenced.  For example, a SAX driver (parser)
  would scan an element's attributes
  in two passes:  first for namespace declarations,
- then a second pass using <a href="#processNameprocessName()">processName processName()</a> to
+ then a second pass using processName processName() to
  interpret prefixes against (potentially redefined) prefixes.
 
  <p/>This method declares a prefix in the current Namespace
@@ -81,69 +96,56 @@
  <p/>Note that there is an asymmetry in this library:  .getPrefix getPrefix will not return the "" prefix,
  even if you have declared a default element namespace.
  To check for a default namespace,
- you have to look it up explicitly using <a href="#getURIgetURI">getURI getURI</a>.
+ you have to look it up explicitly using getURI getURI.
  This asymmetry exists to make it easier to look up prefixes
  for attribute names, where the default prefix is not allowed.
-</div><p/><div class="classdoc-tag-section-header">Parameters:</div><dl class="classdoc-list"><dt><span class="prototype-name">prefix</span> - The prefix to declare, or the empty string to
-indicate the default element namespace.</dt><dt><span class="prototype-name">uri</span> - The Namespace URI to associate with the prefix.</dt></dl><div class="classdoc-tag-section-header">Returns:</div><dl class="classdoc-list"><dt>true if the prefix was legal, false otherwise</dt></dl><div class="classdoc-tag-section-header">Throws:</div><dl class="classdoc-list"><dt><code/> - when a prefix is declared
-after looking up a name in the context, or after pushing
-another context on top of it.</dt></dl><div class="classdoc-tag-section-header">See Also:</div><dl class="classdoc-list"><dt><code><a href="#processName
-">processName</a></code></dt><dt><code><a href="#getURI
-">getURI</a></code></dt><dt><code><a href="#getPrefix
-">getPrefix</a></code></dt></dl><hr/><a name="getDeclaredPrefixes()"/><h3>getDeclaredPrefixes</h3><p class="prototype">public Enumeration <b>getDeclaredPrefixes</b>()</p><div class="classdoc-comment-body"> Return an enumeration of all prefixes declared in this context.
+</div><div><h4>Parameters:</h4><div>prefix - The prefix to declare, or the empty string to
+indicate the default element namespace.  This may never have
+the value "xml" or "xmlns".</div><div>uri - The Namespace URI to associate with the prefix.</div></div></div><hr/><a name="getDeclaredPrefixes()"/><div><h3>getDeclaredPrefixes</h3><p>public Enumeration getDeclaredPrefixes()</p><div> Return an enumeration of all prefixes declared in this context.
 
  <p/>The empty (default) prefix will be included in this 
  enumeration; note that this behaviour differs from that of
-<a href="#getPrefix">getPrefix</a> and <a href="#getPrefixes">getPrefixes</a>.
-</div><p/><div class="classdoc-tag-section-header">Returns:</div><dl class="classdoc-list"><dt>An enumeration of all prefixes declared in this
-context.</dt></dl><div class="classdoc-tag-section-header">See Also:</div><dl class="classdoc-list"><dt><code><a href="#getPrefixes
-">getPrefixes</a></code></dt><dt><code><a href="#getURI
-">getURI</a></code></dt></dl><hr/><a name="getPrefix(String)"/><h3>getPrefix</h3><p class="prototype">public String <b>getPrefix</b>(<span class="parameter">String&nbsp;uri</span>)</p><div class="classdoc-comment-body"> Return one of the prefixes mapped to a Namespace URI.
-
- <p/>If more than one prefix is currently mapped to the same
- URI, this method will make an arbitrary selection; if you
- want all of the prefixes, use the <a href="#getPrefixes">getPrefixes</a>
- method instead.
-
- <p/><strong>Note:</strong> this will never return the empty (default) prefix;
- to check for a default prefix, use the <a href="#getURIgetURI">getURI getURI</a>
- method with an argument of "".
-</div><p/><div class="classdoc-tag-section-header">Parameters:</div><dl class="classdoc-list"><dt><span class="prototype-name">uri</span> - The Namespace URI.</dt></dl><div class="classdoc-tag-section-header">Returns:</div><dl class="classdoc-list"><dt>One of the prefixes currently mapped to the URI supplied,
-or null if none is mapped or if the URI is assigned to
-the default Namespace.</dt></dl><div class="classdoc-tag-section-header">See Also:</div><dl class="classdoc-list"><dt><code><a href="#getPrefixes(java.lang.String)">getPrefixes(java.lang.String)</a></code></dt><dt><code><a href="#getURI
-">getURI</a></code></dt></dl><hr/><a name="getPrefixes()"/><h3>getPrefixes</h3><p class="prototype">public Enumeration <b>getPrefixes</b>()</p><div class="classdoc-comment-body"> Return an enumeration of all prefixes currently declared.
+getPrefix and getPrefixes.
+</div></div><hr/><a name="getPrefixes()"/><div><h3>getPrefixes</h3><p>public Enumeration getPrefixes()</p><div> Return an enumeration of all prefixes whose declarations are
+ active in the current context.
+ This includes declarations from parent contexts that have
+ not been overridden.
 
  <p/><strong>Note:</strong> if there is a default prefix, it will not be
  returned in this enumeration; check for the default prefix
- using the <a href="#getURIgetURI">getURI getURI</a> with an argument of "".
-</div><p/><div class="classdoc-tag-section-header">Returns:</div><dl class="classdoc-list"><dt>An enumeration of all prefixes declared in the
-current context except for the empty (default)
-prefix.</dt></dl><div class="classdoc-tag-section-header">See Also:</div><dl class="classdoc-list"><dt><code><a href="#getDeclaredPrefixes
-">getDeclaredPrefixes</a></code></dt><dt><code><a href="#getURI
-">getURI</a></code></dt></dl><hr/><a name="getPrefixes(String)"/><h3>getPrefixes</h3><p class="prototype">public Enumeration <b>getPrefixes</b>(<span class="parameter">String&nbsp;uri</span>)</p><div class="classdoc-comment-body"> Return an enumeration of all prefixes currently declared for a URI.
+ using the getURI getURI with an argument of "".
+</div></div><hr/><a name="getPrefixes(String)"/><div><h3>getPrefixes</h3><p>public Enumeration getPrefixes(String uri)</p><div> Return an enumeration of all prefixes for a given URI whose
+ declarations are active in the current context.
+ This includes declarations from parent contexts that have
+ not been overridden.
 
  <p/>This method returns prefixes mapped to a specific Namespace
  URI.  The xml: prefix will be included.  If you want only one
  prefix that's mapped to the Namespace URI, and you don't care 
- which one you get, use the <a href="#getPrefixgetPrefix">getPrefix getPrefix</a>
+ which one you get, use the getPrefix getPrefix
   method instead.
 
  <p/><strong>Note:</strong> the empty (default) prefix is <em>never</em> included
  in this enumeration; to check for the presence of a default
- Namespace, use the <a href="#getURIgetURI">getURI getURI</a> method with an
+ Namespace, use the getURI getURI method with an
  argument of "".
-</div><p/><div class="classdoc-tag-section-header">Parameters:</div><dl class="classdoc-list"><dt><span class="prototype-name">uri</span> - The Namespace URI.</dt></dl><div class="classdoc-tag-section-header">Returns:</div><dl class="classdoc-list"><dt>An enumeration of all prefixes declared in the
-current context.</dt></dl><div class="classdoc-tag-section-header">See Also:</div><dl class="classdoc-list"><dt><code><a href="#getPrefix
-">getPrefix</a></code></dt><dt><code><a href="#getDeclaredPrefixes
-">getDeclaredPrefixes</a></code></dt><dt><code><a href="#getURI
-">getURI</a></code></dt></dl><hr/><a name="getURI(String)"/><h3>getURI</h3><p class="prototype">public String <b>getURI</b>(<span class="parameter">String&nbsp;prefix</span>)</p><div class="classdoc-comment-body"> Look up a prefix and get the currently-mapped Namespace URI.
+</div><div><h4>Parameters:</h4><div>uri - The Namespace URI.</div></div></div><hr/><a name="getPrefix(String)"/><div><h3>getPrefix</h3><p>public String getPrefix(String uri)</p><div> Return one of the prefixes mapped to a Namespace URI.
+
+ <p/>If more than one prefix is currently mapped to the same
+ URI, this method will make an arbitrary selection; if you
+ want all of the prefixes, use the getPrefixes
+ method instead.
+
+ <p/><strong>Note:</strong> this will never return the empty (default) prefix;
+ to check for a default prefix, use the getURI getURI
+ method with an argument of "".
+</div><div><h4>Parameters:</h4><div>uri - the namespace URI</div></div></div><hr/><a name="getURI(String)"/><div><h3>getURI</h3><p>public String getURI(String prefix)</p><div> Look up a prefix and get the currently-mapped Namespace URI.
 
  <p/>This method looks up the prefix in the current context.
  Use the empty string ("") for the default Namespace.
-</div><p/><div class="classdoc-tag-section-header">Parameters:</div><dl class="classdoc-list"><dt><span class="prototype-name">prefix</span> - The prefix to look up.</dt></dl><div class="classdoc-tag-section-header">Returns:</div><dl class="classdoc-list"><dt>The associated Namespace URI, or null if the prefix
-is undeclared in this context.</dt></dl><div class="classdoc-tag-section-header">See Also:</div><dl class="classdoc-list"><dt><code><a href="#getPrefix
-">getPrefix</a></code></dt><dt><code><a href="#getPrefixes
-">getPrefixes</a></code></dt></dl><hr/><a name="popContext()"/><h3>popContext</h3><p class="prototype">public void <b>popContext</b>()</p><div class="classdoc-comment-body"> Revert to the previous Namespace context.
+</div><div><h4>Parameters:</h4><div>prefix - The prefix to look up.</div></div></div><hr/><a name="isNamespaceDeclUris()"/><div><h3>isNamespaceDeclUris</h3><p>public boolean isNamespaceDeclUris()</p><div> Returns true if namespace declaration attributes are placed into
+ a namespace.  This behavior is not the default.
+</div><dl class="tag list"><dt class="tag section header"><b>Since:</b></dt><dd>SAX 2.1alpha</dt></dl></div><hr/><a name="popContext()"/><div><h3>popContext</h3><p>public void popContext()</p><div> Revert to the previous Namespace context.
 
  <p/>Normally, you should pop the context at the end of each
  XML element.  After popping the context, all Namespace prefix
@@ -152,31 +154,35 @@ is undeclared in this context.</dt></dl><div class="classdoc-tag-section-header"
  <p/>You must not attempt to declare additional Namespace
  prefixes after popping a context, unless you push another
  context first.
-</div><p/><div class="classdoc-tag-section-header">See Also:</div><dl class="classdoc-list"><dt><code><a href="#pushContext
-">pushContext</a></code></dt></dl><hr/><a name="processName(String,String[],boolean)"/><h3>processName</h3><p class="prototype">public String[] <b>processName</b>(<span class="parameter">String&nbsp;qName,</span> <span class="parameter">String[]&nbsp;parts,</span> <span class="parameter">boolean&nbsp;isAttribute</span>)</p><div class="classdoc-comment-body"> Process a raw XML 1.0 name, after all declarations in the current
- context have been handled by <a href="#declarePrefixdeclarePrefix()">declarePrefix declarePrefix()</a>.
+</div></div><hr/><a name="processName(String,parts[],boolean)"/><div><h3>processName</h3><p>public String processName(String qName, parts , boolean isAttribute)</p><div> Process a raw XML qualified name, after all declarations in the
+ current context have been handled by declarePrefix
+ declarePrefix().
 
- <p/>This method processes a raw XML 1.0 name in the current
- context by removing the prefix and looking it up among the
- prefixes currently declared.  The return value will be the
+ <p/>This method processes a raw XML qualified name in the
+ current context by removing the prefix and looking it up among
+ the prefixes currently declared.  The return value will be the
  array supplied by the caller, filled in as follows:
 
- <dl><dt>parts[0]</dt><dd>The Namespace URI, or an empty string if none is
-  in use.</dd><dt>parts[1]</dt><dd>The local name (without prefix).</dd><dt>parts[2]</dt><dd>The original raw name.</dd></dl><p/>All of the strings in the array will be internalized.  If
+ <dl>
+ <dt>parts[0]</dt>
+ <dd>The Namespace URI, or an empty string if none is
+  in use.</dd>
+ <dt>parts[1]</dt>
+ <dd>The local name (without prefix).</dd>
+ <dt>parts[2]</dt>
+ <dd>The original raw name.</dd>
+ </dl>
+
+ <p/>All of the strings in the array will be internalized.  If
  the raw name has a prefix that has not been declared, then
  the return value will be null.
 
  <p/>Note that attribute names are processed differently than
- element names: an unprefixed element name will received the
+ element names: an unprefixed element name will receive the
  default Namespace (if any), while an unprefixed attribute name
  will not.
-</div><p/><div class="classdoc-tag-section-header">Parameters:</div><dl class="classdoc-list"><dt><span class="prototype-name">qName</span> - The raw XML 1.0 name to be processed.</dt><dt><span class="prototype-name">parts</span> - An array supplied by the caller, capable of
-holding at least three members.</dt><dt><span class="prototype-name">isAttribute</span> - A flag indicating whether this is an
-attribute name (true) or an element name (false).</dt></dl><div class="classdoc-tag-section-header">Returns:</div><dl class="classdoc-list"><dt>The supplied array holding three internalized strings 
-representing the Namespace URI (or empty string), the
-local name, and the raw XML 1.0 name; or null if there
-is an undeclared prefix.</dt></dl><div class="classdoc-tag-section-header">See Also:</div><dl class="classdoc-list"><dt><code><a href="#declarePrefix
-">declarePrefix</a></code></dt><dt><code>java.lang.String.intern </code></dt></dl><hr/><a name="pushContext()"/><h3>pushContext</h3><p class="prototype">public void <b>pushContext</b>()</p><div class="classdoc-comment-body"> Start a new Namespace context.
+</div><div><h4>Parameters:</h4><div>qName - The XML qualified name to be processed.</div><div></div><div>isAttribute - A flag indicating whether this is an
+attribute name (true) or an element name (false).</div></div></div><hr/><a name="pushContext()"/><div><h3>pushContext</h3><p>public void pushContext()</p><div> Start a new Namespace context.
  The new context will automatically inherit
  the declarations of its parent context, but it will also keep
  track of which declarations were made within this context.
@@ -207,12 +213,15 @@ is an undeclared prefix.</dt></dl><div class="classdoc-tag-section-header">See A
  <p/>The Namespace support object always starts with a base context
  already in force: in this context, only the "xml" prefix is
  declared.
-</div><p/><div class="classdoc-tag-section-header">See Also:</div><dl class="classdoc-list"><dt><code><a href="../../../../org/xml/sax/ContentHandler.html">org.xml.sax.ContentHandler
-</a></code></dt><dt><code><a href="#popContext
-">popContext</a></code></dt></dl><hr/><a name="reset()"/><h3>reset</h3><p class="prototype">public void <b>reset</b>()</p><div class="classdoc-comment-body"> Reset this Namespace support object for reuse.
+</div></div><hr/><a name="reset()"/><div><h3>reset</h3><p>public void reset()</p><div> Reset this Namespace support object for reuse.
 
  <p/>It is necessary to invoke this method before reusing the
- Namespace support object for a new session.
-</div><p/><hr class="footer"/><div class="footer">Generated on
-  October 6, 2004
-  by <a target="cptoolsinfo" href="http://www.gnu.org/software/cp-tools">GNU Classpath Tools</a> (Gjdoc XmlDoclet 0.6.1).</div></body></html>
+ Namespace support object for a new session.  If namespace
+ declaration URIs are to be supported, that flag must also
+ be set to a non-default value.
+ 
+</div></div><hr/><a name="setNamespaceDeclUris(boolean)"/><div><h3>setNamespaceDeclUris</h3><p>public void setNamespaceDeclUris(boolean value)</p><div> Controls whether namespace declaration attributes are placed
+ into the NSDECL NSDECL namespace
+ by processName processName().  This may only be
+ changed before any contexts have been pushed.
+</div><div><h4>Parameters:</h4><div>value</div></div><dl class="tag list"><dt class="tag section header"><b>Since:</b></dt><dd>SAX 2.1alpha</dt></dl></div><p> </p><table class="navbar div bottom"><tr><td><div><span class="navbar item enabled"><a href="../../../..//index-noframes.html">Overview</a></span> <span class="navbar item enabled"><a href="package-summary.html">Package</a></span> <span class="navbar item enabled"><a href="tree.html">Tree</a></span> <a href="../../../..//alphaindex.html">Index</a> <a href="../../../..//deprecated.html">Deprecated</a> <a href="../../../..//help.html">Help</a> <a href="../../../..//about.html">About</a></div></td></tr></table></body></html>

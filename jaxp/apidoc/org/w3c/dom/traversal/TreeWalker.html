@@ -1,9 +1,5 @@
-<html xmlns="http://www.w3.org/TR/REC-html40" xmlns:html="http://www.w3.org/TR/REC-html40" xmlns:gjdoc="http://www.gnu.org/software/cp-tools/gjdocxml"><head><link href="../../../../gjdochtml.css" type="text/css" rel="stylesheet"/><title>TreeWalker</title></head><body onload="top.document.title=document.title;" class="classdoc"><div class="header"><span class="navi-button">&rArr;&nbsp;<a target="_top" href="../../../../index.html">Index&nbsp;(Frames)</a></span>&nbsp;|&nbsp;
-      <span class="navi-button">&rArr;&nbsp;<a target="_top" href="../../../../index_noframes.html">Index&nbsp;(No&nbsp;Frames)</a></span>&nbsp;|&nbsp;
-      <span class="navi-button">&rArr;&nbsp;<a href="package-summary.html">Package</a></span>&nbsp;|&nbsp;
-      <span class="navi-button">&rArr;&nbsp;<a href="package-tree.html">Package&nbsp;Tree</a></span>&nbsp;|&nbsp;
-      <span class="navi-button">&rArr;&nbsp;<a href="../../../../fulltree.html">Full Tree</a></span>&nbsp;
-    </div><div class="classdoc-head"><div class="classdoc-head-inner"><b class="classdoc-head-packagename">org.w3c.dom.traversal</b><br/><h1 class="classdoc-head-classname">Interface TreeWalker</h1></div></div><p/><hr/><div class="classdoc-prototype">public interface <b>TreeWalker</b><br/></div><p/><div class="classdoc-class-comment-body"><code>TreeWalker</code> objects are used to navigate a document tree or 
+<?xml version="1.0" encoding="null"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head><title>TreeWalker</title><meta http-equiv="Content-Type" content="text/html; charset=null"/></head><body><table class="navbar div top"><tr><td><div><span class="navbar item enabled"><a href="../../../..//index-noframes.html">Overview</a></span> <span class="navbar item enabled"><a href="package-summary.html">Package</a></span> <span class="navbar item enabled"><a href="tree.html">Tree</a></span> <a href="../../../..//alphaindex.html">Index</a> <a href="../../../..//deprecated.html">Deprecated</a> <a href="../../../..//help.html">Help</a> <a href="../../../..//about.html">About</a></div></td></tr></table><div><h3>org.w3c.dom.traversal</h3><h1>Interface TreeWalker</h1><hr/><div><div>public interface TreeWalker</div><div>extends java.lang.Object</div></div><hr/><div> <code>TreeWalker</code> objects are used to navigate a document tree or 
  subtree using the view of the document defined by their 
  <code>whatToShow</code> flags and filter (if any). Any function which 
  performs navigation using a <code>TreeWalker</code> will automatically 
@@ -18,23 +14,22 @@
  nodes will be siblings and appear as direct children of the root node, no 
  matter how deeply nested the structure of the original document.
  <p/>See also the <a href="http://www.w3.org/TR/2000/REC-DOM-Level-2-Traversal-Range-20001113">Document Object Model (DOM) Level 2 Traversal and Range Specification</a>.
-</div><div class="classdoc-tag-section-header">Since:</div><dl class="classdoc-list"><dt>DOM Level 2</dt></dl><h1 class="classdoc-header">Method Summary</h1><table class="classdoc-table" width="100%" cellspacing="0" border="1"><tr><td class="no-border-r" valign="top" align="right" width="1%"><p class="prototype-type"> <a href="../../../../org/w3c/dom/Node.html">Node</a></p></td><td class="with-border" valign="top" align="left"><p class="prototype"><a href="#firstChild()">firstChild</a>()</p><blockquote class="classdoc-summary-comment"> Moves the TreeWalker to the first visible child of the 
- current node, and returns the new node.</blockquote></td></tr><tr><td class="no-border-r" valign="top" align="right" width="1%"><p class="prototype-type"> <a href="../../../../org/w3c/dom/Node.html">Node</a></p></td><td class="with-border" valign="top" align="left"><p class="prototype"><a href="#getCurrentNode()">getCurrentNode</a>()</p><blockquote class="classdoc-summary-comment"> The node at which the TreeWalker is currently positioned.</blockquote></td></tr><tr><td class="no-border-r" valign="top" align="right" width="1%"><p class="prototype-type"> boolean</p></td><td class="with-border" valign="top" align="left"><p class="prototype"><a href="#getExpandEntityReferences()">getExpandEntityReferences</a>()</p><blockquote class="classdoc-summary-comment"> The value of this flag determines whether the children of entity 
- reference nodes are visible to the TreeWalker.</blockquote></td></tr><tr><td class="no-border-r" valign="top" align="right" width="1%"><p class="prototype-type"> <a href="../../../../org/w3c/dom/traversal/NodeFilter.html">NodeFilter</a></p></td><td class="with-border" valign="top" align="left"><p class="prototype"><a href="#getFilter()">getFilter</a>()</p><blockquote class="classdoc-summary-comment"> The filter used to screen nodes.</blockquote></td></tr><tr><td class="no-border-r" valign="top" align="right" width="1%"><p class="prototype-type"> <a href="../../../../org/w3c/dom/Node.html">Node</a></p></td><td class="with-border" valign="top" align="left"><p class="prototype"><a href="#getRoot()">getRoot</a>()</p><blockquote class="classdoc-summary-comment"> The root node of the TreeWalker, as specified 
- when it was created.</blockquote></td></tr><tr><td class="no-border-r" valign="top" align="right" width="1%"><p class="prototype-type"> int</p></td><td class="with-border" valign="top" align="left"><p class="prototype"><a href="#getWhatToShow()">getWhatToShow</a>()</p><blockquote class="classdoc-summary-comment"> This attribute determines which node types are presented via the 
- TreeWalker.</blockquote></td></tr><tr><td class="no-border-r" valign="top" align="right" width="1%"><p class="prototype-type"> <a href="../../../../org/w3c/dom/Node.html">Node</a></p></td><td class="with-border" valign="top" align="left"><p class="prototype"><a href="#lastChild()">lastChild</a>()</p><blockquote class="classdoc-summary-comment"> Moves the TreeWalker to the last visible child of the 
- current node, and returns the new node.</blockquote></td></tr><tr><td class="no-border-r" valign="top" align="right" width="1%"><p class="prototype-type"> <a href="../../../../org/w3c/dom/Node.html">Node</a></p></td><td class="with-border" valign="top" align="left"><p class="prototype"><a href="#nextNode()">nextNode</a>()</p><blockquote class="classdoc-summary-comment"> Moves the TreeWalker to the next visible node in document 
- order relative to the current node, and returns the new node.</blockquote></td></tr><tr><td class="no-border-r" valign="top" align="right" width="1%"><p class="prototype-type"> <a href="../../../../org/w3c/dom/Node.html">Node</a></p></td><td class="with-border" valign="top" align="left"><p class="prototype"><a href="#nextSibling()">nextSibling</a>()</p><blockquote class="classdoc-summary-comment"> Moves the TreeWalker to the next sibling of the current 
- node, and returns the new node.</blockquote></td></tr><tr><td class="no-border-r" valign="top" align="right" width="1%"><p class="prototype-type"> <a href="../../../../org/w3c/dom/Node.html">Node</a></p></td><td class="with-border" valign="top" align="left"><p class="prototype"><a href="#parentNode()">parentNode</a>()</p><blockquote class="classdoc-summary-comment"> Moves to and returns the closest visible ancestor node of the current 
- node.</blockquote></td></tr><tr><td class="no-border-r" valign="top" align="right" width="1%"><p class="prototype-type"> <a href="../../../../org/w3c/dom/Node.html">Node</a></p></td><td class="with-border" valign="top" align="left"><p class="prototype"><a href="#previousNode()">previousNode</a>()</p><blockquote class="classdoc-summary-comment"> Moves the TreeWalker to the previous visible node in 
+</div><dl class="tag list"><dt class="tag section header"><b>Since:</b></dt><dd>DOM Level 2</dt></dl><table class="class summary"><tr><td colspan="2"><h4>Method Summary</h4></td></tr><tr><td class="class summary left">public <a href="../../../..//org/w3c/dom/Node.html">Node</a></td><td class="class summary right"> <a href="#firstChild()">firstChild</a>()</td></tr><tr><td></td><td> Moves the <code>TreeWalker</code> to the first visible child of the 
+ current node, and returns the new node.</td></tr><tr><td class="class summary left">public <a href="../../../..//org/w3c/dom/Node.html">Node</a></td><td class="class summary right"> <a href="#getCurrentNode()">getCurrentNode</a>()</td></tr><tr><td></td><td> The node at which the <code>TreeWalker</code> is currently positioned.</td></tr><tr><td class="class summary left">public boolean</td><td class="class summary right"> <a href="#getExpandEntityReferences()">getExpandEntityReferences</a>()</td></tr><tr><td></td><td> The value of this flag determines whether the children of entity 
+ reference nodes are visible to the <code>TreeWalker</code>.</td></tr><tr><td class="class summary left">public <a href="../../../..//org/w3c/dom/traversal/NodeFilter.html">NodeFilter</a></td><td class="class summary right"> <a href="#getFilter()">getFilter</a>()</td></tr><tr><td></td><td> The filter used to screen nodes.</td></tr><tr><td class="class summary left">public <a href="../../../..//org/w3c/dom/Node.html">Node</a></td><td class="class summary right"> <a href="#getRoot()">getRoot</a>()</td></tr><tr><td></td><td> The <code>root</code> node of the <code>TreeWalker</code>, as specified 
+ when it was created.</td></tr><tr><td class="class summary left">public int</td><td class="class summary right"> <a href="#getWhatToShow()">getWhatToShow</a>()</td></tr><tr><td></td><td> This attribute determines which node types are presented via the 
+ <code>TreeWalker</code>.</td></tr><tr><td class="class summary left">public <a href="../../../..//org/w3c/dom/Node.html">Node</a></td><td class="class summary right"> <a href="#lastChild()">lastChild</a>()</td></tr><tr><td></td><td> Moves the <code>TreeWalker</code> to the last visible child of the 
+ current node, and returns the new node.</td></tr><tr><td class="class summary left">public <a href="../../../..//org/w3c/dom/Node.html">Node</a></td><td class="class summary right"> <a href="#nextNode()">nextNode</a>()</td></tr><tr><td></td><td> Moves the <code>TreeWalker</code> to the next visible node in document 
+ order relative to the current node, and returns the new node.</td></tr><tr><td class="class summary left">public <a href="../../../..//org/w3c/dom/Node.html">Node</a></td><td class="class summary right"> <a href="#nextSibling()">nextSibling</a>()</td></tr><tr><td></td><td> Moves the <code>TreeWalker</code> to the next sibling of the current 
+ node, and returns the new node.</td></tr><tr><td class="class summary left">public <a href="../../../..//org/w3c/dom/Node.html">Node</a></td><td class="class summary right"> <a href="#parentNode()">parentNode</a>()</td></tr><tr><td></td><td> Moves to and returns the closest visible ancestor node of the current 
+ node.</td></tr><tr><td class="class summary left">public <a href="../../../..//org/w3c/dom/Node.html">Node</a></td><td class="class summary right"> <a href="#previousNode()">previousNode</a>()</td></tr><tr><td></td><td> Moves the <code>TreeWalker</code> to the previous visible node in 
  document order relative to the current node, and returns the new 
- node.</blockquote></td></tr><tr><td class="no-border-r" valign="top" align="right" width="1%"><p class="prototype-type"> <a href="../../../../org/w3c/dom/Node.html">Node</a></p></td><td class="with-border" valign="top" align="left"><p class="prototype"><a href="#previousSibling()">previousSibling</a>()</p><blockquote class="classdoc-summary-comment"> Moves the TreeWalker to the previous sibling of the 
- current node, and returns the new node.</blockquote></td></tr><tr><td class="no-border-r" valign="top" align="right" width="1%"><p class="prototype-type"> void</p></td><td class="with-border" valign="top" align="left"><p class="prototype"><a href="#setCurrentNode(org.w3c.dom.Node)">setCurrentNode</a>(<span class="parameter"><a href="../../../../org/w3c/dom/Node.html">Node</a>&nbsp;currentNode</span>)</p><blockquote class="classdoc-summary-comment"> The node at which the TreeWalker is currently positioned.</blockquote></td></tr></table><h1 class="classdoc-header">Method Details</h1><a name="firstChild()"/><h3>firstChild</h3><p class="prototype">public Node <b>firstChild</b>()</p><div class="classdoc-comment-body"> Moves the <code>TreeWalker</code> to the first visible child of the 
+ node.</td></tr><tr><td class="class summary left">public <a href="../../../..//org/w3c/dom/Node.html">Node</a></td><td class="class summary right"> <a href="#previousSibling()">previousSibling</a>()</td></tr><tr><td></td><td> Moves the <code>TreeWalker</code> to the previous sibling of the 
+ current node, and returns the new node.</td></tr><tr><td class="class summary left">public void</td><td class="class summary right"> <a href="#setCurrentNode(org.w3c.dom.Node)">setCurrentNode</a>(<a href="../../../..//org/w3c/dom/Node.html">Node</a> currentNode)</td></tr><tr><td></td><td> The node at which the <code>TreeWalker</code> is currently positioned.</td></tr></table><h4>Method Details</h4><a name="firstChild()"/><div><h3>firstChild</h3><p>public <a href="../../../..//org/w3c/dom/Node.html">Node</a> firstChild()</p><div> Moves the <code>TreeWalker</code> to the first visible child of the 
  current node, and returns the new node. If the current node has no 
  visible children, returns <code>null</code>, and retains the current 
  node.
-</div><p/><div class="classdoc-tag-section-header">Returns:</div><dl class="classdoc-list"><dt>The new node, or null if the current node has no 
-visible children  in the TreeWalker's logical view.</dt></dl><hr/><a name="getCurrentNode()"/><h3>getCurrentNode</h3><p class="prototype">public Node <b>getCurrentNode</b>()</p><div class="classdoc-comment-body"> The node at which the <code>TreeWalker</code> is currently positioned.
+</div></div><hr/><a name="getCurrentNode()"/><div><h3>getCurrentNode</h3><p>public <a href="../../../..//org/w3c/dom/Node.html">Node</a> getCurrentNode()</p><div> The node at which the <code>TreeWalker</code> is currently positioned.
  <br/>Alterations to the DOM tree may cause the current node to no longer 
  be accepted by the <code>TreeWalker</code>'s associated filter. 
  <code>currentNode</code> may also be explicitly set to any node, 
@@ -44,8 +39,7 @@ visible children  in the TreeWalker's logical view.</dt></dl><hr/><a name="getCu
  <code>currentNode</code> even if it is not part of the current view, 
  by applying the filters in the requested direction; if no traversal 
  is possible, <code>currentNode</code> is not changed. 
-</div><p/><div class="classdoc-tag-section-header">Throws:</div><dl class="classdoc-list"><dt><code><a href="../../../../org/w3c/dom/DOMException.html">DOMException</a></code> - NOT_SUPPORTED_ERR: Raised if an attempt is made to set 
-currentNode to null.</dt></dl><hr/><a name="getExpandEntityReferences()"/><h3>getExpandEntityReferences</h3><p class="prototype">public boolean <b>getExpandEntityReferences</b>()</p><div class="classdoc-comment-body"> The value of this flag determines whether the children of entity 
+</div></div><hr/><a name="getExpandEntityReferences()"/><div><h3>getExpandEntityReferences</h3><p>public boolean getExpandEntityReferences()</p><div> The value of this flag determines whether the children of entity 
  reference nodes are visible to the <code>TreeWalker</code>. If false, 
  these children  and their descendants will be rejected. Note that 
  this rejection takes precedence over <code>whatToShow</code> and the 
@@ -58,49 +52,43 @@ currentNode to null.</dt></dl><hr/><a name="getExpandEntityReferences()"/><h3>ge
  entity reference nodes but no entity expansion, use the 
  <code>whatToShow</code> flags to show the entity reference node and 
  set <code>expandEntityReferences</code> to false.
-</div><p/><hr/><a name="getFilter()"/><h3>getFilter</h3><p class="prototype">public NodeFilter <b>getFilter</b>()</p><div class="classdoc-comment-body"> The filter used to screen nodes.
-</div><p/><hr/><a name="getRoot()"/><h3>getRoot</h3><p class="prototype">public Node <b>getRoot</b>()</p><div class="classdoc-comment-body"> The <code>root</code> node of the <code>TreeWalker</code>, as specified 
+</div></div><hr/><a name="getFilter()"/><div><h3>getFilter</h3><p>public <a href="../../../..//org/w3c/dom/traversal/NodeFilter.html">NodeFilter</a> getFilter()</p><div> The filter used to screen nodes.
+</div></div><hr/><a name="getRoot()"/><div><h3>getRoot</h3><p>public <a href="../../../..//org/w3c/dom/Node.html">Node</a> getRoot()</p><div> The <code>root</code> node of the <code>TreeWalker</code>, as specified 
  when it was created.
-</div><p/><hr/><a name="getWhatToShow()"/><h3>getWhatToShow</h3><p class="prototype">public int <b>getWhatToShow</b>()</p><div class="classdoc-comment-body"> This attribute determines which node types are presented via the 
+</div></div><hr/><a name="getWhatToShow()"/><div><h3>getWhatToShow</h3><p>public int getWhatToShow()</p><div> This attribute determines which node types are presented via the 
  <code>TreeWalker</code>. The available set of constants is defined in 
  the <code>NodeFilter</code> interface.  Nodes not accepted by 
  <code>whatToShow</code> will be skipped, but their children may still 
  be considered. Note that this skip takes precedence over the filter, 
  if any. 
-</div><p/><hr/><a name="lastChild()"/><h3>lastChild</h3><p class="prototype">public Node <b>lastChild</b>()</p><div class="classdoc-comment-body"> Moves the <code>TreeWalker</code> to the last visible child of the 
+</div></div><hr/><a name="lastChild()"/><div><h3>lastChild</h3><p>public <a href="../../../..//org/w3c/dom/Node.html">Node</a> lastChild()</p><div> Moves the <code>TreeWalker</code> to the last visible child of the 
  current node, and returns the new node. If the current node has no 
  visible children, returns <code>null</code>, and retains the current 
  node.
-</div><p/><div class="classdoc-tag-section-header">Returns:</div><dl class="classdoc-list"><dt>The new node, or null if the current node has no 
-children  in the TreeWalker's logical view.</dt></dl><hr/><a name="nextNode()"/><h3>nextNode</h3><p class="prototype">public Node <b>nextNode</b>()</p><div class="classdoc-comment-body"> Moves the <code>TreeWalker</code> to the next visible node in document 
+</div></div><hr/><a name="nextNode()"/><div><h3>nextNode</h3><p>public <a href="../../../..//org/w3c/dom/Node.html">Node</a> nextNode()</p><div> Moves the <code>TreeWalker</code> to the next visible node in document 
  order relative to the current node, and returns the new node. If the 
  current node has no next node, or if the search for nextNode attempts 
  to step upward from the <code>TreeWalker</code>'s <code>root</code> 
  node, returns <code>null</code>, and retains the current node.
-</div><p/><div class="classdoc-tag-section-header">Returns:</div><dl class="classdoc-list"><dt>The new node, or null if the current node has no 
-next node  in the TreeWalker's logical view.</dt></dl><hr/><a name="nextSibling()"/><h3>nextSibling</h3><p class="prototype">public Node <b>nextSibling</b>()</p><div class="classdoc-comment-body"> Moves the <code>TreeWalker</code> to the next sibling of the current 
+</div></div><hr/><a name="nextSibling()"/><div><h3>nextSibling</h3><p>public <a href="../../../..//org/w3c/dom/Node.html">Node</a> nextSibling()</p><div> Moves the <code>TreeWalker</code> to the next sibling of the current 
  node, and returns the new node. If the current node has no visible 
  next sibling, returns <code>null</code>, and retains the current node.
-</div><p/><div class="classdoc-tag-section-header">Returns:</div><dl class="classdoc-list"><dt>The new node, or null if the current node has no 
-next sibling.  in the TreeWalker's logical view.</dt></dl><hr/><a name="parentNode()"/><h3>parentNode</h3><p class="prototype">public Node <b>parentNode</b>()</p><div class="classdoc-comment-body"> Moves to and returns the closest visible ancestor node of the current 
+</div></div><hr/><a name="parentNode()"/><div><h3>parentNode</h3><p>public <a href="../../../..//org/w3c/dom/Node.html">Node</a> parentNode()</p><div> Moves to and returns the closest visible ancestor node of the current 
  node. If the search for <code>parentNode</code> attempts to step 
  upward from the <code>TreeWalker</code>'s <code>root</code> node, or 
  if it fails to find a visible ancestor node, this method retains the 
  current position and returns <code>null</code>.
-</div><p/><div class="classdoc-tag-section-header">Returns:</div><dl class="classdoc-list"><dt>The new parent node, or null if the current node 
-has no parent  in the TreeWalker's logical view.</dt></dl><hr/><a name="previousNode()"/><h3>previousNode</h3><p class="prototype">public Node <b>previousNode</b>()</p><div class="classdoc-comment-body"> Moves the <code>TreeWalker</code> to the previous visible node in 
+</div></div><hr/><a name="previousNode()"/><div><h3>previousNode</h3><p>public <a href="../../../..//org/w3c/dom/Node.html">Node</a> previousNode()</p><div> Moves the <code>TreeWalker</code> to the previous visible node in 
  document order relative to the current node, and returns the new 
  node. If the current node has no previous node,  or if the search for 
  <code>previousNode</code> attempts to step upward from the 
  <code>TreeWalker</code>'s <code>root</code> node,  returns 
  <code>null</code>, and retains the current node. 
-</div><p/><div class="classdoc-tag-section-header">Returns:</div><dl class="classdoc-list"><dt>The new node, or null if the current node has no 
-previous node  in the TreeWalker's logical view.</dt></dl><hr/><a name="previousSibling()"/><h3>previousSibling</h3><p class="prototype">public Node <b>previousSibling</b>()</p><div class="classdoc-comment-body"> Moves the <code>TreeWalker</code> to the previous sibling of the 
+</div></div><hr/><a name="previousSibling()"/><div><h3>previousSibling</h3><p>public <a href="../../../..//org/w3c/dom/Node.html">Node</a> previousSibling()</p><div> Moves the <code>TreeWalker</code> to the previous sibling of the 
  current node, and returns the new node. If the current node has no 
  visible previous sibling, returns <code>null</code>, and retains the 
  current node.
-</div><p/><div class="classdoc-tag-section-header">Returns:</div><dl class="classdoc-list"><dt>The new node, or null if the current node has no 
-previous sibling.  in the TreeWalker's logical view.</dt></dl><hr/><a name="setCurrentNode(org.w3c.dom.Node)"/><h3>setCurrentNode</h3><p class="prototype">public void <b>setCurrentNode</b>(<span class="parameter"><a href="../../../../org/w3c/dom/Node.html">Node</a>&nbsp;currentNode</span>)</p><div class="classdoc-comment-body"> The node at which the <code>TreeWalker</code> is currently positioned.
+</div></div><hr/><a name="setCurrentNode(org.w3c.dom.Node)"/><div><h3>setCurrentNode</h3><p>public void setCurrentNode(<a href="../../../..//org/w3c/dom/Node.html">Node</a> currentNode)</p><div> The node at which the <code>TreeWalker</code> is currently positioned.
  <br/>Alterations to the DOM tree may cause the current node to no longer 
  be accepted by the <code>TreeWalker</code>'s associated filter. 
  <code>currentNode</code> may also be explicitly set to any node, 
@@ -110,7 +98,4 @@ previous sibling.  in the TreeWalker's logical view.</dt></dl><hr/><a name="setC
  <code>currentNode</code> even if it is not part of the current view, 
  by applying the filters in the requested direction; if no traversal 
  is possible, <code>currentNode</code> is not changed. 
-</div><p/><div class="classdoc-tag-section-header">Parameters:</div><dl class="classdoc-list"><dt><span class="prototype-name">currentNode</span></dt></dl><div class="classdoc-tag-section-header">Throws:</div><dl class="classdoc-list"><dt><code><a href="../../../../org/w3c/dom/DOMException.html">DOMException</a></code> - NOT_SUPPORTED_ERR: Raised if an attempt is made to set 
-currentNode to null.</dt></dl><hr class="footer"/><div class="footer">Generated on
-  October 6, 2004
-  by <a target="cptoolsinfo" href="http://www.gnu.org/software/cp-tools">GNU Classpath Tools</a> (Gjdoc XmlDoclet 0.6.1).</div></body></html>
+</div><div><h4>Parameters:</h4><div>currentNode</div></div></div><p> </p><table class="navbar div bottom"><tr><td><div><span class="navbar item enabled"><a href="../../../..//index-noframes.html">Overview</a></span> <span class="navbar item enabled"><a href="package-summary.html">Package</a></span> <span class="navbar item enabled"><a href="tree.html">Tree</a></span> <a href="../../../..//alphaindex.html">Index</a> <a href="../../../..//deprecated.html">Deprecated</a> <a href="../../../..//help.html">Help</a> <a href="../../../..//about.html">About</a></div></td></tr></table></body></html>

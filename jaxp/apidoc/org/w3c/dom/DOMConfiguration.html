@@ -1,9 +1,5 @@
-<html xmlns="http://www.w3.org/TR/REC-html40" xmlns:html="http://www.w3.org/TR/REC-html40" xmlns:gjdoc="http://www.gnu.org/software/cp-tools/gjdocxml"><head><link href="../../../gjdochtml.css" type="text/css" rel="stylesheet"/><title>DOMConfiguration</title></head><body onload="top.document.title=document.title;" class="classdoc"><div class="header"><span class="navi-button">&rArr;&nbsp;<a target="_top" href="../../../index.html">Index&nbsp;(Frames)</a></span>&nbsp;|&nbsp;
-      <span class="navi-button">&rArr;&nbsp;<a target="_top" href="../../../index_noframes.html">Index&nbsp;(No&nbsp;Frames)</a></span>&nbsp;|&nbsp;
-      <span class="navi-button">&rArr;&nbsp;<a href="package-summary.html">Package</a></span>&nbsp;|&nbsp;
-      <span class="navi-button">&rArr;&nbsp;<a href="package-tree.html">Package&nbsp;Tree</a></span>&nbsp;|&nbsp;
-      <span class="navi-button">&rArr;&nbsp;<a href="../../../fulltree.html">Full Tree</a></span>&nbsp;
-    </div><div class="classdoc-head"><div class="classdoc-head-inner"><b class="classdoc-head-packagename">org.w3c.dom</b><br/><h1 class="classdoc-head-classname">Interface DOMConfiguration</h1></div></div><p/><hr/><div class="classdoc-prototype">public interface <b>DOMConfiguration</b><br/></div><p/><div class="classdoc-class-comment-body">  The <code>DOMConfiguration</code> interface represents the configuration 
+<?xml version="1.0" encoding="null"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head><title>DOMConfiguration</title><meta http-equiv="Content-Type" content="text/html; charset=null"/></head><body><table class="navbar div top"><tr><td><div><span class="navbar item enabled"><a href="../../..//index-noframes.html">Overview</a></span> <span class="navbar item enabled"><a href="package-summary.html">Package</a></span> <span class="navbar item enabled"><a href="tree.html">Tree</a></span> <a href="../../..//alphaindex.html">Index</a> <a href="../../..//deprecated.html">Deprecated</a> <a href="../../..//help.html">Help</a> <a href="../../..//about.html">About</a></div></td></tr></table><div><h3>org.w3c.dom</h3><h1>Interface DOMConfiguration</h1><hr/><div><div>public interface DOMConfiguration</div><div>extends java.lang.Object</div></div><hr/><div>  The <code>DOMConfiguration</code> interface represents the configuration 
  of a document and maintains a table of recognized parameters. Using the 
  configuration, it is possible to change 
  <code>Document.normalizeDocument()</code> behavior, such as replacing the 
@@ -26,7 +22,13 @@
  <p/><b>Note:</b>  Parameters are similar to features and properties used in 
  SAX2 [<a href="http://www.saxproject.org/">SAX</a>]. 
  <p/> The following list of parameters defined in the DOM: 
- <dl><dt><code>"canonical-form"</code></dt><dd><dl/></dd><dt><code>true</code></dt><dd>[<em>optional</em>] Canonicalize the document according to the rules specified in [<a href="http://www.w3.org/TR/2001/REC-xml-c14n-20010315">Canonical XML</a>], 
+ <dl>
+ <dt>
+ <code>"canonical-form"</code></dt>
+ <dd>
+ <dl>
+ </dl></dd><dt><code>true</code></dt>
+ <dd>[<em>optional</em>] Canonicalize the document according to the rules specified in [<a href="http://www.w3.org/TR/2001/REC-xml-c14n-20010315">Canonical XML</a>], 
  such as removing the <code>DocumentType</code> node (if any) from the 
  tree, or removing superfluous namespace declarations from each element. 
  Note that this is limited to what can be represented in the DOM; in 
@@ -38,13 +40,50 @@
  normalize-characters", "cdata-sections". Parameters set to 
  <code>true</code>: "namespaces", "namespace-declarations", "well-formed", 
  "element-content-whitespace". Other parameters are not changed unless 
- explicitly specified in the description of the parameters.</dd><dt><code>false</code></dt><dd>[<em>required</em>] (<em>default</em>)Do not canonicalize the document.</dd></dl><dt><code>"cdata-sections"</code></dt><dd><dl><dt><code>true</code></dt><dd>[<em>required</em>] (<em>default</em>)Keep <code>CDATASection</code> nodes in the document.</dd><dt><code>false</code></dt><dd>[<em>required</em>]Transform <code>CDATASection</code> nodes in the document into 
+ explicitly specified in the description of the parameters.</dd>
+ <dt>
+ <code>false</code></dt>
+ <dd>[<em>required</em>] (<em>default</em>)Do not canonicalize the document.</dd>
+ </dl>
+ <dt><code>"cdata-sections"</code></dt>
+ <dd>
+ <dl>
+ <dt>
+ <code>true</code></dt>
+ <dd>[<em>required</em>] (<em>default</em>)Keep <code>CDATASection</code> nodes in the document.</dd>
+ <dt><code>false</code></dt>
+ <dd>[<em>required</em>]Transform <code>CDATASection</code> nodes in the document into 
  <code>Text</code> nodes. The new <code>Text</code> node is then combined 
- with any adjacent <code>Text</code> node.</dd></dl></dd><dt><code>"check-character-normalization"</code></dt><dd><dl><dt><code>true</code></dt><dd>[<em>optional</em>] Check if the characters in the document are <a href="http://www.w3.org/TR/2004/REC-xml11-20040204/#dt-fullnorm">fully 
+ with any adjacent <code>Text</code> node.</dd>
+ </dl></dd>
+ <dt>
+ <code>"check-character-normalization"</code></dt>
+ <dd>
+ <dl>
+ <dt><code>true</code></dt>
+ <dd>[<em>optional</em>] Check if the characters in the document are <a href="http://www.w3.org/TR/2004/REC-xml11-20040204/#dt-fullnorm">fully 
  normalized</a>, as defined in appendix B of [<a href="http://www.w3.org/TR/2004/REC-xml11-20040204/">XML 1.1</a>]. When a 
  sequence of characters is encountered that fails normalization checking, 
  an error with the <code>DOMError.type</code> equals to 
- "check-character-normalization-failure" is issued. </dd><dt><code>false</code></dt><dd>[<em>required</em>] (<em>default</em>)Do not check if characters are normalized.</dd></dl></dd><dt><code>"comments"</code></dt><dd><dl><dt><code>true</code></dt><dd>[<em>required</em>] (<em>default</em>)Keep <code>Comment</code> nodes in the document.</dd><dt><code>false</code></dt><dd>[<em>required</em>]Discard <code>Comment</code> nodes in the document.</dd></dl></dd><dt><code>"datatype-normalization"</code></dt><dd><dl><dt><code>true</code></dt><dd>[<em>optional</em>] Expose schema normalized values in the tree, such as <a href="http://www.w3.org/TR/2001/REC-xmlschema-1-20010502/#key-nv">XML 
+ "check-character-normalization-failure" is issued. </dd>
+ <dt><code>false</code></dt>
+ <dd>[<em>required</em>] (<em>default</em>)Do not check if characters are normalized.</dd>
+ </dl></dd>
+ <dt><code>"comments"</code></dt>
+ <dd>
+ <dl>
+ <dt>
+ <code>true</code></dt>
+ <dd>[<em>required</em>] (<em>default</em>)Keep <code>Comment</code> nodes in the document.</dd>
+ <dt><code>false</code></dt>
+ <dd>[<em>required</em>]Discard <code>Comment</code> nodes in the document.</dd>
+ </dl></dd>
+ <dt>
+ <code>"datatype-normalization"</code></dt>
+ <dd>
+ <dl>
+ <dt><code>true</code></dt>
+ <dd>[<em>optional</em>] Expose schema normalized values in the tree, such as <a href="http://www.w3.org/TR/2001/REC-xmlschema-1-20010502/#key-nv">XML 
  Schema normalized values</a> in the case of XML Schema. Since this parameter requires to have schema 
  information, the "validate" parameter will also be set to 
  <code>true</code>. Having this parameter activated when "validate" is 
@@ -52,14 +91,41 @@
  <p/><b>Note:</b>  Since the document contains the result of the XML 1.0 
  processing, this parameter does not apply to attribute value 
  normalization as defined in section 3.3.3 of [<a href="http://www.w3.org/TR/2004/REC-xml-20040204">XML 1.0</a>] and is only 
- meant for schema languages other than Document Type Definition (DTD). </dd><dt><code>false</code></dt><dd>[<em>required</em>] (<em>default</em>) Do not perform schema normalization on the tree. </dd></dl></dd><dt><code>"element-content-whitespace"</code></dt><dd><dl><dt><code>true</code></dt><dd>[<em>required</em>] (<em>default</em>)Keep all whitespaces in the document.</dd><dt><code>false</code></dt><dd>[<em>optional</em>] Discard all <code>Text</code> nodes that contain whitespaces in element 
+ meant for schema languages other than Document Type Definition (DTD). </dd>
+ <dt>
+ <code>false</code></dt>
+ <dd>[<em>required</em>] (<em>default</em>) Do not perform schema normalization on the tree. </dd>
+ </dl></dd>
+ <dt>
+ <code>"element-content-whitespace"</code></dt>
+ <dd>
+ <dl>
+ <dt><code>true</code></dt>
+ <dd>[<em>required</em>] (<em>default</em>)Keep all whitespaces in the document.</dd>
+ <dt><code>false</code></dt>
+ <dd>[<em>optional</em>] Discard all <code>Text</code> nodes that contain whitespaces in element 
  content, as described in <a href="http://www.w3.org/TR/2004/REC-xml-infoset-20040204#infoitem.character">
  [element content whitespace]</a>. The implementation is expected to use the attribute 
  <code>Text.isElementContentWhitespace</code> to determine if a 
- <code>Text</code> node should be discarded or not.</dd></dl></dd><dt><code>"entities"</code></dt><dd><dl><dt><code>true</code></dt><dd>[<em>required</em>] (<em>default</em>)Keep <code>EntityReference</code> nodes in the document.</dd><dt><code>false</code></dt><dd>[<em>required</em>] Remove all <code>EntityReference</code> nodes from the document, 
+ <code>Text</code> node should be discarded or not.</dd>
+ </dl></dd>
+ <dt><code>"entities"</code></dt>
+ <dd>
+ <dl>
+ <dt>
+ <code>true</code></dt>
+ <dd>[<em>required</em>] (<em>default</em>)Keep <code>EntityReference</code> nodes in the document.</dd>
+ <dt>
+ <code>false</code></dt>
+ <dd>[<em>required</em>] Remove all <code>EntityReference</code> nodes from the document, 
  putting the entity expansions directly in their place. <code>Text</code> 
  nodes are normalized, as defined in <code>Node.normalize</code>. Only <a href="http://www.w3.org/TR/2004/REC-xml-infoset-20040204/#infoitem.rse">
- unexpanded entity references</a> are kept in the document. </dd></dl><p/><b>Note:</b>  This parameter does not affect <code>Entity</code> nodes. </dd><dt><code>"error-handler"</code></dt><dd>[<em>required</em>] Contains a <code>DOMErrorHandler</code> object. If an error is 
+ unexpanded entity references</a> are kept in the document. </dd>
+ </dl>
+ <p/><b>Note:</b>  This parameter does not affect <code>Entity</code> nodes. </dd>
+ <dt>
+ <code>"error-handler"</code></dt>
+ <dd>[<em>required</em>] Contains a <code>DOMErrorHandler</code> object. If an error is 
  encountered in the document, the implementation will call back the 
  <code>DOMErrorHandler</code> registered using this parameter. The 
  implementation may provide a default <code>DOMErrorHandler</code> object. 
@@ -68,7 +134,13 @@
  determine the node where the error occurs, 
  <code>DOMError.relatedData</code> will contain the <code>Document</code> 
  node. Mutations to the document from within an error handler will result 
- in implementation dependent behavior. </dd><dt><code>"infoset"</code></dt><dd><dl><dt><code>true</code></dt><dd>[<em>required</em>]Keep in the document the information defined in the XML Information Set [<a href="http://www.w3.org/TR/2004/REC-xml-infoset-20040204/">XML Information Set</a>]
+ in implementation dependent behavior. </dd>
+ <dt><code>"infoset"</code></dt>
+ <dd>
+ <dl>
+ <dt>
+ <code>true</code></dt>
+ <dd>[<em>required</em>]Keep in the document the information defined in the XML Information Set [<a href="http://www.w3.org/TR/2004/REC-xml-infoset-20040204/">XML Information Set</a>]
  .This forces the following parameters to <code>false</code>: "
  validate-if-schema", "entities", "datatype-normalization", "cdata-sections
  ".This forces the following parameters to <code>true</code>: "
@@ -77,17 +149,48 @@
  explicitly specified in the description of the parameters. Note that 
  querying this parameter with <code>getParameter</code> returns 
  <code>true</code> only if the individual parameters specified above are 
- appropriately set.</dd><dt><code>false</code></dt><dd>Setting <code>infoset</code> to 
- <code>false</code> has no effect.</dd></dl></dd><dt><code>"namespaces"</code></dt><dd><dl><dt><code>true</code></dt><dd>[<em>required</em>] (<em>default</em>) Perform the namespace processing as defined in . </dd><dt><code>false</code></dt><dd>[<em>optional</em>] Do not perform the namespace processing. </dd></dl></dd><dt><code>"namespace-declarations"</code></dt><dd> This parameter has no effect if the 
+ appropriately set.</dd>
+ <dt><code>false</code></dt>
+ <dd>Setting <code>infoset</code> to 
+ <code>false</code> has no effect.</dd>
+ </dl></dd>
+ <dt><code>"namespaces"</code></dt>
+ <dd>
+ <dl>
+ <dt>
+ <code>true</code></dt>
+ <dd>[<em>required</em>] (<em>default</em>) Perform the namespace processing as defined in . </dd>
+ <dt><code>false</code></dt>
+ <dd>[<em>optional</em>] Do not perform the namespace processing. </dd>
+ </dl></dd>
+ <dt>
+ <code>"namespace-declarations"</code></dt>
+ <dd> This parameter has no effect if the 
  parameter "namespaces" is set to <code>false</code>. 
- <dl><dt><code>true</code></dt><dd>[<em>required</em>] (<em>default</em>) Include namespace declaration attributes, specified or defaulted from 
+ <dl>
+ <dt><code>true</code></dt>
+ <dd>[<em>required</em>] (<em>default</em>) Include namespace declaration attributes, specified or defaulted from 
  the schema, in the document. See also the sections "Declaring Namespaces" 
  in [<a href="http://www.w3.org/TR/1999/REC-xml-names-19990114/">XML Namespaces</a>]
   and [<a href="http://www.w3.org/TR/2004/REC-xml-names11-20040204/">XML Namespaces 1.1</a>]
- .</dd><dt><code>false</code></dt><dd>[<em>required</em>]Discard all namespace declaration attributes. The namespace prefixes (
+ .</dd>
+ <dt><code>false</code></dt>
+ <dd>[<em>required</em>]Discard all namespace declaration attributes. The namespace prefixes (
  <code>Node.prefix</code>) are retained even if this parameter is set to 
- <code>false</code>.</dd></dl></dd><dt><code>"normalize-characters"</code></dt><dd><dl><dt><code>true</code></dt><dd>[<em>optional</em>] <a href="http://www.w3.org/TR/2004/REC-xml11-20040204/#dt-fullnorm">Fully 
- normalized</a> the characters in the document as defined in appendix B of [<a href="http://www.w3.org/TR/2004/REC-xml11-20040204/">XML 1.1</a>]. </dd><dt><code>false</code></dt><dd>[<em>required</em>] (<em>default</em>)Do not perform character normalization.</dd></dl></dd><dt><code>"schema-location"</code></dt><dd>[<em>optional</em>] Represent a <code>DOMString</code> object containing a list of URIs, 
+ <code>false</code>.</dd>
+ </dl></dd>
+ <dt><code>"normalize-characters"</code></dt>
+ <dd>
+ <dl>
+ <dt><code>true</code></dt>
+ <dd>[<em>optional</em>] <a href="http://www.w3.org/TR/2004/REC-xml11-20040204/#dt-fullnorm">Fully 
+ normalized</a> the characters in the document as defined in appendix B of [<a href="http://www.w3.org/TR/2004/REC-xml11-20040204/">XML 1.1</a>]. </dd>
+ <dt>
+ <code>false</code></dt>
+ <dd>[<em>required</em>] (<em>default</em>)Do not perform character normalization.</dd>
+ </dl></dd>
+ <dt><code>"schema-location"</code></dt>
+ <dd>[<em>optional</em>] Represent a <code>DOMString</code> object containing a list of URIs, 
  separated by whitespaces (characters matching the <a href="http://www.w3.org/TR/2004/REC-xml-20040204#NT-S">nonterminal 
  production S</a> defined in section 2.3 [<a href="http://www.w3.org/TR/2004/REC-xml-20040204">XML 1.0</a>]), that 
  represents the schemas against which validation should occur, i.e. the 
@@ -107,7 +210,10 @@
  <p/><b>Note:</b>  The <code>"schema-location"</code> parameter is ignored 
  unless the "schema-type" parameter value is set. It is strongly 
  recommended that <code>Document.documentURI</code> will be set so that an 
- implementation can successfully resolve any external entities referenced. </dd><dt><code>"schema-type"</code></dt><dd>[<em>optional</em>] Represent a <code>DOMString</code> object containing an absolute URI 
+ implementation can successfully resolve any external entities referenced. </dd>
+ <dt>
+ <code>"schema-type"</code></dt>
+ <dd>[<em>optional</em>] Represent a <code>DOMString</code> object containing an absolute URI 
  and representing the type of the schema language used to validate a 
  document against. Note that no lexical checking is done on the absolute 
  URI.  If this parameter is not set, a default value may be provided by 
@@ -120,65 +226,112 @@
  applications must use the value 
  <code>"http://www.w3.org/TR/REC-xml"</code>. Other schema languages are 
  outside the scope of the W3C and therefore should recommend an absolute 
- URI in order to use this method. </dd><dt><code>"split-cdata-sections"</code></dt><dd><dl><dt><code>true</code></dt><dd>[<em>required</em>] (<em>default</em>)Split CDATA sections containing the CDATA section termination marker 
+ URI in order to use this method. </dd>
+ <dt><code>"split-cdata-sections"</code></dt>
+ <dd>
+ <dl>
+ <dt>
+ <code>true</code></dt>
+ <dd>[<em>required</em>] (<em>default</em>)Split CDATA sections containing the CDATA section termination marker 
  ']]&gt;'. When a CDATA section is split a warning is issued with a 
  <code>DOMError.type</code> equals to 
  <code>"cdata-sections-splitted"</code> and 
  <code>DOMError.relatedData</code> equals to the first 
- <code>CDATASection</code> node in document order resulting from the split.</dd><dt><code>false</code></dt><dd>[<em>required</em>]Signal an error if a <code>CDATASection</code> contains an 
- unrepresentable character.</dd></dl></dd><dt><code>"validate"</code></dt><dd><dl><dt><code>true</code></dt><dd>[<em>optional</em>] Require the validation against a schema (i.e. XML schema, DTD, any 
+ <code>CDATASection</code> node in document order resulting from the split.</dd>
+ <dt>
+ <code>false</code></dt>
+ <dd>[<em>required</em>]Signal an error if a <code>CDATASection</code> contains an 
+ unrepresentable character.</dd>
+ </dl></dd>
+ <dt><code>"validate"</code></dt>
+ <dd>
+ <dl>
+ <dt><code>true</code></dt>
+ <dd>[<em>optional</em>] Require the validation against a schema (i.e. XML schema, DTD, any 
  other type or representation of schema) of the document as it is being 
  normalized as defined by [<a href="http://www.w3.org/TR/2004/REC-xml-20040204">XML 1.0</a>]. If 
  validation errors are found, or no schema was found, the error handler is 
  notified. Schema-normalized values will not be exposed according to the 
  schema in used unless the parameter "datatype-normalization" is 
  <code>true</code>.  This parameter will reevaluate: 
- <ul><li> Attribute nodes with 
+ <ul>
+ <li> Attribute nodes with 
  <code>Attr.specified</code> equals to <code>false</code>, as specified in 
  the description of the <code>Attr</code> interface; 
- </li><li> The value of the 
+ </li>
+ <li> The value of the 
  attribute <code>Text.isElementContentWhitespace</code> for all 
  <code>Text</code> nodes; 
- </li><li> The value of the attribute 
+ </li>
+ <li> The value of the attribute 
  <code>Attr.isId</code> for all <code>Attr</code> nodes; 
- </li><li> The attributes 
+ </li>
+ <li> The attributes 
  <code>Element.schemaTypeInfo</code> and <code>Attr.schemaTypeInfo</code>. 
- </li></ul><p/><b>Note:</b>  "validate-if-schema" and "validate" are mutually 
+ </li>
+ </ul>
+ <p/><b>Note:</b>  "validate-if-schema" and "validate" are mutually 
  exclusive, setting one of them to <code>true</code> will set the other 
  one to <code>false</code>. Applications should also consider setting the 
  parameter "well-formed" to <code>true</code>, which is the default for 
- that option, when validating the document. </dd><dt><code>false</code></dt><dd>[<em>required</em>] (<em>default</em>) Do not accomplish schema processing, including the internal subset 
+ that option, when validating the document. </dd>
+ <dt><code>false</code></dt>
+ <dd>[<em>required</em>] (<em>default</em>) Do not accomplish schema processing, including the internal subset 
  processing. Default attribute values information are kept. Note that 
  validation might still happen if "validate-if-schema" is <code>true</code>
- . </dd></dl></dd><dt><code>"validate-if-schema"</code></dt><dd><dl><dt><code>true</code></dt><dd>[<em>optional</em>]Enable validation only if a declaration for the document element can be 
+ . </dd>
+ </dl></dd>
+ <dt><code>"validate-if-schema"</code></dt>
+ <dd>
+ <dl>
+ <dt><code>true</code></dt>
+ <dd>[<em>optional</em>]Enable validation only if a declaration for the document element can be 
  found in a schema (independently of where it is found, i.e. XML schema, 
  DTD, or any other type or representation of schema). If validation is 
  enabled, this parameter has the same behavior as the parameter "validate" 
  set to <code>true</code>. 
  <p/><b>Note:</b>  "validate-if-schema" and "validate" are mutually 
  exclusive, setting one of them to <code>true</code> will set the other 
- one to <code>false</code>. </dd><dt><code>false</code></dt><dd>[<em>required</em>] (<em>default</em>) No schema processing should be performed if the document has a schema, 
+ one to <code>false</code>. </dd>
+ <dt><code>false</code></dt>
+ <dd>[<em>required</em>] (<em>default</em>) No schema processing should be performed if the document has a schema, 
  including internal subset processing. Default attribute values 
  information are kept. Note that validation must still happen if "validate
- " is <code>true</code>. </dd></dl></dd><dt><code>"well-formed"</code></dt><dd><dl><dt><code>true</code></dt><dd>[<em>required</em>] (<em>default</em>) Check if all nodes are XML well formed according to the XML version in 
+ " is <code>true</code>. </dd>
+ </dl></dd>
+ <dt><code>"well-formed"</code></dt>
+ <dd>
+ <dl>
+ <dt><code>true</code></dt>
+ <dd>[<em>required</em>] (<em>default</em>) Check if all nodes are XML well formed according to the XML version in 
  use in <code>Document.xmlVersion</code>: 
- <ul><li> check if the attribute 
+ <ul>
+ <li> check if the attribute 
  <code>Node.nodeName</code> contains invalid characters according to its 
  node type and generate a <code>DOMError</code> of type 
  <code>"wf-invalid-character-in-node-name"</code>, with a 
  <code>DOMError.SEVERITY_ERROR</code> severity, if necessary; 
- </li><li> check if 
+ </li>
+ <li> check if 
  the text content inside <code>Attr</code>, <code>Element</code>, 
  <code>Comment</code>, <code>Text</code>, <code>CDATASection</code> nodes 
  for invalid characters and generate a <code>DOMError</code> of type 
  <code>"wf-invalid-character"</code>, with a 
  <code>DOMError.SEVERITY_ERROR</code> severity, if necessary; 
- </li><li> check if 
+ </li>
+ <li> check if 
  the data inside <code>ProcessingInstruction</code> nodes for invalid 
  characters and generate a <code>DOMError</code> of type 
  <code>"wf-invalid-character"</code>, with a 
  <code>DOMError.SEVERITY_ERROR</code> severity, if necessary; 
- </li></ul></dd><dt><code>false</code></dt><dd>[<em>optional</em>] Do not check for XML well-formedness. </dd></dl></dd><p/> The resolution of the system identifiers associated with entities is 
+ </li>
+ </ul></dd>
+ <dt>
+ <code>false</code></dt>
+ <dd>[<em>optional</em>] Do not check for XML well-formedness. </dd>
+ </dl></dd>
+ 
+ <p/> The resolution of the system identifiers associated with entities is 
  done using <code>Document.documentURI</code>. However, when the feature 
  "LS" defined in [<a href="http://www.w3.org/TR/2004/REC-DOM-Level-3-LS-20040407">DOM Level 3 Load and Save</a>]
   is supported by the DOM implementation, the parameter 
@@ -187,21 +340,19 @@
  set, <code>Document.normalizeDocument()</code> will invoke the resource 
  resolver instead of using <code>Document.documentURI</code>. 
  <p/>See also the <a href="http://www.w3.org/TR/2004/REC-DOM-Level-3-Core-20040407">Document Object Model (DOM) Level 3 Core Specification</a>.
-</div><div class="classdoc-tag-section-header">Since:</div><dl class="classdoc-list"><dt>DOM Level 3</dt></dl><h1 class="classdoc-header">Method Summary</h1><table class="classdoc-table" width="100%" cellspacing="0" border="1"><tr><td class="no-border-r" valign="top" align="right" width="1%"><p class="prototype-type"> boolean</p></td><td class="with-border" valign="top" align="left"><p class="prototype"><a href="#canSetParameter(String,Object)">canSetParameter</a>(<span class="parameter">String&nbsp;name,</span> <span class="parameter">Object&nbsp;value</span>)</p><blockquote class="classdoc-summary-comment"> Check if setting a parameter to a specific value is supported.</blockquote></td></tr><tr><td class="no-border-r" valign="top" align="right" width="1%"><p class="prototype-type"> Object</p></td><td class="with-border" valign="top" align="left"><p class="prototype"><a href="#getParameter(String)">getParameter</a>(<span class="parameter">String&nbsp;name</span>)</p><blockquote class="classdoc-summary-comment">  Return the value of a parameter if known.</blockquote></td></tr><tr><td class="no-border-r" valign="top" align="right" width="1%"><p class="prototype-type"> <a href="../../../org/w3c/dom/DOMStringList.html">DOMStringList</a></p></td><td class="with-border" valign="top" align="left"><p class="prototype"><a href="#getParameterNames()">getParameterNames</a>()</p><blockquote class="classdoc-summary-comment">  The list of the parameters supported by this 
- DOMConfiguration object and for which at least one value 
- can be set by the application.</blockquote></td></tr><tr><td class="no-border-r" valign="top" align="right" width="1%"><p class="prototype-type"> void</p></td><td class="with-border" valign="top" align="left"><p class="prototype"><a href="#setParameter(String,Object)">setParameter</a>(<span class="parameter">String&nbsp;name,</span> <span class="parameter">Object&nbsp;value</span>)</p><blockquote class="classdoc-summary-comment"> Set the value of a parameter.</blockquote></td></tr></table><h1 class="classdoc-header">Method Details</h1><a name="canSetParameter(String,Object)"/><h3>canSetParameter</h3><p class="prototype">public boolean <b>canSetParameter</b>(<span class="parameter">String&nbsp;name,</span> <span class="parameter">Object&nbsp;value</span>)</p><div class="classdoc-comment-body"> Check if setting a parameter to a specific value is supported.
-</div><p/><div class="classdoc-tag-section-header">Parameters:</div><dl class="classdoc-list"><dt><span class="prototype-name">name</span> - The name of the parameter to check.</dt><dt><span class="prototype-name">value</span> - An object.</dt></dl><div class="classdoc-tag-section-header">Returns:</div><dl class="classdoc-list"><dt>true if the parameter could be successfully set 
-to the specified value, or false if the parameter is 
-not recognized or the requested value is not supported. This does 
-not change the current value of the parameter itself.</dt></dl><hr/><a name="getParameter(String)"/><h3>getParameter</h3><p class="prototype">public Object <b>getParameter</b>(<span class="parameter">String&nbsp;name</span>)</p><div class="classdoc-comment-body">  Return the value of a parameter if known. 
-</div><p/><div class="classdoc-tag-section-header">Parameters:</div><dl class="classdoc-list"><dt><span class="prototype-name">name</span> - The name of the parameter.</dt></dl><div class="classdoc-tag-section-header">Returns:</div><dl class="classdoc-list"><dt>The current object associated with the specified parameter or 
-null if no object has been associated or if the 
-parameter is not supported.</dt></dl><div class="classdoc-tag-section-header">Throws:</div><dl class="classdoc-list"><dt><code><a href="../../../org/w3c/dom/DOMException.html">DOMException</a></code> - NOT_FOUND_ERR: Raised when the parameter name is not recognized.</dt></dl><hr/><a name="getParameterNames()"/><h3>getParameterNames</h3><p class="prototype">public DOMStringList <b>getParameterNames</b>()</p><div class="classdoc-comment-body">  The list of the parameters supported by this 
+</div><dl class="tag list"><dt class="tag section header"><b>Since:</b></dt><dd>DOM Level 3</dt></dl><table class="class summary"><tr><td colspan="2"><h4>Method Summary</h4></td></tr><tr><td class="class summary left">public boolean</td><td class="class summary right"> <a href="#canSetParameter(String,Object)">canSetParameter</a>(String name, Object value)</td></tr><tr><td></td><td> Check if setting a parameter to a specific value is supported.</td></tr><tr><td class="class summary left">public <a href="../../..//org/w3c/dom/DOMStringList.html">DOMStringList</a></td><td class="class summary right"> <a href="#getParameterNames()">getParameterNames</a>()</td></tr><tr><td></td><td>  The list of the parameters supported by this 
+ <code>DOMConfiguration</code> object and for which at least one value 
+ can be set by the application.</td></tr><tr><td class="class summary left">public Object</td><td class="class summary right"> <a href="#getParameter(String)">getParameter</a>(String name)</td></tr><tr><td></td><td>  Return the value of a parameter if known.</td></tr><tr><td class="class summary left">public void</td><td class="class summary right"> <a href="#setParameter(String,Object)">setParameter</a>(String name, Object value)</td></tr><tr><td></td><td> Set the value of a parameter.</td></tr></table><h4>Method Details</h4><a name="canSetParameter(String,Object)"/><div><h3>canSetParameter</h3><p>public boolean canSetParameter(String name, Object value)</p><div> Check if setting a parameter to a specific value is supported.
+</div><div><h4>Parameters:</h4><div>name - The name of the parameter to check.</div><div>value - An object. if <code>null</code>, the returned value is 
+<code>true</code>.</div></div></div><hr/><a name="getParameterNames()"/><div><h3>getParameterNames</h3><p>public <a href="../../..//org/w3c/dom/DOMStringList.html">DOMStringList</a> getParameterNames()</p><div>  The list of the parameters supported by this 
  <code>DOMConfiguration</code> object and for which at least one value 
  can be set by the application. Note that this list can also contain 
  parameter names defined outside this specification. 
-</div><p/><hr/><a name="setParameter(String,Object)"/><h3>setParameter</h3><p class="prototype">public void <b>setParameter</b>(<span class="parameter">String&nbsp;name,</span> <span class="parameter">Object&nbsp;value</span>)</p><div class="classdoc-comment-body"> Set the value of a parameter.
-</div><p/><div class="classdoc-tag-section-header">Parameters:</div><dl class="classdoc-list"><dt><span class="prototype-name">name</span> - The name of the parameter to set.</dt><dt><span class="prototype-name">value</span> - The new value or null if the user wishes to 
-unset the parameter.</dt></dl><div class="classdoc-tag-section-header">Throws:</div><dl class="classdoc-list"><dt><code><a href="../../../org/w3c/dom/DOMException.html">DOMException</a></code> - NOT_FOUND_ERR: Raised when the parameter name is not recognized.</dt></dl><hr class="footer"/><div class="footer">Generated on
-  October 6, 2004
-  by <a target="cptoolsinfo" href="http://www.gnu.org/software/cp-tools">GNU Classpath Tools</a> (Gjdoc XmlDoclet 0.6.1).</div></body></html>
+</div></div><hr/><a name="getParameter(String)"/><div><h3>getParameter</h3><p>public Object getParameter(String name)</p><div>  Return the value of a parameter if known. 
+</div><div><h4>Parameters:</h4><div>name - The name of the parameter.</div></div></div><hr/><a name="setParameter(String,Object)"/><div><h3>setParameter</h3><p>public void setParameter(String name, Object value)</p><div> Set the value of a parameter.
+</div><div><h4>Parameters:</h4><div>name - The name of the parameter to set.</div><div>value - The new value or <code>null</code> if the user wishes to 
+unset the parameter. While the type of the value parameter is 
+defined as <code>DOMUserData</code>, the object type must match the 
+type defined by the definition of the parameter. For example, if 
+the parameter is "error-handler", the value must be of type 
+<code>DOMErrorHandler</code>.</div></div></div><p> </p><table class="navbar div bottom"><tr><td><div><span class="navbar item enabled"><a href="../../..//index-noframes.html">Overview</a></span> <span class="navbar item enabled"><a href="package-summary.html">Package</a></span> <span class="navbar item enabled"><a href="tree.html">Tree</a></span> <a href="../../..//alphaindex.html">Index</a> <a href="../../..//deprecated.html">Deprecated</a> <a href="../../..//help.html">Help</a> <a href="../../..//about.html">About</a></div></td></tr></table></body></html>

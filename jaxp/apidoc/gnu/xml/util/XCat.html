@@ -1,12 +1,5 @@
-<html xmlns="http://www.w3.org/TR/REC-html40" xmlns:html="http://www.w3.org/TR/REC-html40" xmlns:gjdoc="http://www.gnu.org/software/cp-tools/gjdocxml"><head><link href="../../../gjdochtml.css" type="text/css" rel="stylesheet"/><title>XCat</title></head><body onload="top.document.title=document.title;" class="classdoc"><div class="header"><span class="navi-button">&rArr;&nbsp;<a target="_top" href="../../../index.html">Index&nbsp;(Frames)</a></span>&nbsp;|&nbsp;
-      <span class="navi-button">&rArr;&nbsp;<a target="_top" href="../../../index_noframes.html">Index&nbsp;(No&nbsp;Frames)</a></span>&nbsp;|&nbsp;
-      <span class="navi-button">&rArr;&nbsp;<a href="package-summary.html">Package</a></span>&nbsp;|&nbsp;
-      <span class="navi-button">&rArr;&nbsp;<a href="package-tree.html">Package&nbsp;Tree</a></span>&nbsp;|&nbsp;
-      <span class="navi-button">&rArr;&nbsp;<a href="../../../fulltree.html">Full Tree</a></span>&nbsp;
-    </div><div class="classdoc-head"><div class="classdoc-head-inner"><b class="classdoc-head-packagename">gnu.xml.util</b><br/><h1 class="classdoc-head-classname">Class XCat</h1></div></div><pre class="inheritance-tree">java.lang.Object
-|
-+--gnu.xml.util.XCat
-</pre><p/><b>All Implemented Interfaces:</b><br/><a href="../../../org/xml/sax/ext/EntityResolver2.html">EntityResolver2</a><p/><hr/><div class="classdoc-prototype">public class <b>XCat</b><br/>extends java.lang.Object<br/>implements <a href="../../../org/xml/sax/ext/EntityResolver2.html">EntityResolver2</a></div><p/><div class="classdoc-class-comment-body"> Packages <a href="http://www.oasis-open.org/committees/entity/spec-2001-08-06.html">OASIS XML Catalogs</a>,
+<?xml version="1.0" encoding="null"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head><title>XCat</title><meta http-equiv="Content-Type" content="text/html; charset=null"/></head><body><table class="navbar div top"><tr><td><div><span class="navbar item enabled"><a href="../../..//index-noframes.html">Overview</a></span> <span class="navbar item enabled"><a href="package-summary.html">Package</a></span> <span class="navbar item enabled"><a href="tree.html">Tree</a></span> <a href="../../..//alphaindex.html">Index</a> <a href="../../..//deprecated.html">Deprecated</a> <a href="../../..//help.html">Help</a> <a href="../../..//about.html">About</a></div></td></tr></table><div><h3>gnu.xml.util</h3><h1>Class XCat</h1><hr/><div><div>public class XCat</div><div>extends java.lang.Object</div><div>implements <a href="../../..//org/xml/sax/ext/EntityResolver2.html">EntityResolver2</a></div></div><hr/><div> Packages <a href="http://www.oasis-open.org/committees/entity/spec-2001-08-06.html">OASIS XML Catalogs</a>,
  primarily for entity resolution by parsers.
  That specification defines an XML syntax for mappings between
  identifiers declared in DTDs (particularly PUBLIC identifiers) and
@@ -24,7 +17,9 @@
 	catalog.disableLoading ();
 	parser1.setEntityResolver (catalog);
 	parser2.setEntityResolver (catalog);
-	...</pre><p/>A second mode is to arrange that your application uses instances of
+	...</pre>
+
+ <p/>A second mode is to arrange that your application uses instances of
  this class as its entity resolver, and automatically loads catalogs
  referenced by <em>&lt;?oasis-xml-catalog...?&gt;</em> processing
  instructions found before the DTD in documents it parses.
@@ -32,55 +27,54 @@
 
  <p/> A third mode applies catalogs in contexts other than entity
  resolution for parsers.
- The <a href="#resolveURIresolveURI()">resolveURI resolveURI()</a> method supports resolving URIs
+ The resolveURI resolveURI() method supports resolving URIs
  stored in XML application data, rather than inside DTDs.
  Catalogs would be loaded as shown above, and the catalog could
  be used concurrently for parser entity resolution and for
  application URI resolution.
  
 
- <center><hr width="70%"/></center><p/>Errors in catalogs implicitly loaded (during resolution) are ignored
+ <center><hr width="70%"/></center>
+
+ <p/>Errors in catalogs implicitly loaded (during resolution) are ignored
  beyond being reported through any <em>ErrorHandler</em> assigned using
-<a href="#setErrorHandlersetErrorHandler()">setErrorHandler setErrorHandler()</a>.  SAX exceptions
+setErrorHandler setErrorHandler().  SAX exceptions
   thrown from such a handler won't abort resolution, although throwing a
  <em>RuntimeException</em> or <em>Error</em> will normally abort both
  resolution and parsing.  Useful diagnostic information is available to
  any <em>ErrorHandler</em> used to report problems, or from any exception
- thrown from an explicit <a href="#loadCatalogloadCatalog()">loadCatalog loadCatalog()</a> invocation.
+ thrown from an explicit loadCatalog loadCatalog() invocation.
  Applications can use that information as troubleshooting aids.
 
  <p/>While this class requires <em>SAX2 Extensions 1.1</em> classes in
  its class path, basic functionality does not require using a SAX2
  parser that supports the extended entity resolution functionality.
  See the original SAX1
-<a href="#resolveEntity(java.lang.String,java.lang.String)">resolveEntity(java.lang.String,java.lang.String) resolveEntity()</a>
+resolveEntity(java.lang.String,java.lang.String) resolveEntity()
   method for a list of restrictions which apply when it is used with
  older SAX parsers.
-</div><div class="classdoc-tag-section-header">Author:</div><dl class="classdoc-list"><dt>David Brownell</dt></dl><div class="classdoc-tag-section-header">See Also:</div><dl class="classdoc-list"><dt><code><a href="../../../org/xml/sax/ext/EntityResolver2.html">EntityResolver2
-
-</a></code></dt></dl><h1 class="classdoc-header">Constructor Summary</h1><table class="classdoc-table" width="100%" cellspacing="0" border="1"><tr><td class="with-border" valign="top" align="left"><p class="prototype"><a href="#XCat()">XCat</a>()</p><blockquote class="classdoc-summary-comment"> Initializes without preloading a catalog.</blockquote></td></tr><tr><td class="with-border" valign="top" align="left"><p class="prototype"><a href="#XCat(String)">XCat</a>(<span class="parameter">String&nbsp;uri</span>)</p><blockquote class="classdoc-summary-comment"> Initializes, and preloads a catalog using the default SAX parser.</blockquote></td></tr></table><h1 class="classdoc-header">Method Summary</h1><table class="classdoc-table" width="100%" cellspacing="0" border="1"><tr><td class="no-border-r" valign="top" align="right" width="1%"><p class="prototype-type">synchronized  void</p></td><td class="with-border" valign="top" align="left"><p class="prototype"><a href="#disableLoading()">disableLoading</a>()</p><blockquote class="classdoc-summary-comment"> Records that catalog loading is no longer permitted.</blockquote></td></tr><tr><td class="no-border-r" valign="top" align="right" width="1%"><p class="prototype-type"> <a href="../../../org/xml/sax/ErrorHandler.html">ErrorHandler</a></p></td><td class="with-border" valign="top" align="left"><p class="prototype"><a href="#getErrorHandler()">getErrorHandler</a>()</p><blockquote class="classdoc-summary-comment"> Returns the error handler used to report catalog errors.</blockquote></td></tr><tr><td class="no-border-r" valign="top" align="right" width="1%"><p class="prototype-type"> <a href="../../../org/xml/sax/InputSource.html">InputSource</a></p></td><td class="with-border" valign="top" align="left"><p class="prototype"><a href="#getExternalSubset(String,String)">getExternalSubset</a>(<span class="parameter">String&nbsp;name,</span> <span class="parameter">String&nbsp;baseURI</span>)</p><blockquote class="classdoc-summary-comment"> "New Style" parser callback to add an external subset.</blockquote></td></tr><tr><td class="no-border-r" valign="top" align="right" width="1%"><p class="prototype-type"> String</p></td><td class="with-border" valign="top" align="left"><p class="prototype"><a href="#getParserClass()">getParserClass</a>()</p><blockquote class="classdoc-summary-comment"> Returns the name of the SAX2 parser class used to parse catalogs.</blockquote></td></tr><tr><td class="no-border-r" valign="top" align="right" width="1%"><p class="prototype-type"> boolean</p></td><td class="with-border" valign="top" align="left"><p class="prototype"><a href="#isUnified()">isUnified</a>()</p><blockquote class="classdoc-summary-comment"> Returns true (the default) if all methods resolve
- a given URI in the same way.</blockquote></td></tr><tr><td class="no-border-r" valign="top" align="right" width="1%"><p class="prototype-type"> boolean</p></td><td class="with-border" valign="top" align="left"><p class="prototype"><a href="#isUsingPublic()">isUsingPublic</a>()</p><blockquote class="classdoc-summary-comment"> Returns true (the default) if a catalog's public identifier
- mappings will be used.</blockquote></td></tr><tr><td class="no-border-r" valign="top" align="right" width="1%"><p class="prototype-type">synchronized  void</p></td><td class="with-border" valign="top" align="left"><p class="prototype"><a href="#loadCatalog(String)">loadCatalog</a>(<span class="parameter">String&nbsp;uri</span>)</p><blockquote class="classdoc-summary-comment"> Loads an OASIS XML Catalog.</blockquote></td></tr><tr><td class="no-border-r" valign="top" align="right" width="1%"><p class="prototype-type"> <a href="../../../org/xml/sax/InputSource.html">InputSource</a></p></td><td class="with-border" valign="top" align="left"><p class="prototype"><a href="#resolveEntity(String,String,String,String)">resolveEntity</a>(<span class="parameter">String&nbsp;name,</span> <span class="parameter">String&nbsp;publicId,</span> <span class="parameter">String&nbsp;baseURI,</span> <span class="parameter">String&nbsp;systemId</span>)</p><blockquote class="classdoc-summary-comment"> "New Style" external entity resolution for parsers.</blockquote></td></tr><tr><td class="no-border-r" valign="top" align="right" width="1%"><p class="prototype-type"> <a href="../../../org/xml/sax/InputSource.html">InputSource</a></p></td><td class="with-border" valign="top" align="left"><p class="prototype"><a href="#resolveEntity(String,String)">resolveEntity</a>(<span class="parameter">String&nbsp;publicId,</span> <span class="parameter">String&nbsp;systemId</span>)</p><blockquote class="classdoc-summary-comment"> "Old Style" external entity resolution for parsers.</blockquote></td></tr><tr><td class="no-border-r" valign="top" align="right" width="1%"><p class="prototype-type"> <a href="../../../org/xml/sax/InputSource.html">InputSource</a></p></td><td class="with-border" valign="top" align="left"><p class="prototype"><a href="#resolveURI(String,String)">resolveURI</a>(<span class="parameter">String&nbsp;baseURI,</span> <span class="parameter">String&nbsp;uri</span>)</p><blockquote class="classdoc-summary-comment"> Resolves a URI reference that's not defined to the DTD.</blockquote></td></tr><tr><td class="no-border-r" valign="top" align="right" width="1%"><p class="prototype-type"> void</p></td><td class="with-border" valign="top" align="left"><p class="prototype"><a href="#setErrorHandler(org.xml.sax.ErrorHandler)">setErrorHandler</a>(<span class="parameter"><a href="../../../org/xml/sax/ErrorHandler.html">ErrorHandler</a>&nbsp;handler</span>)</p><blockquote class="classdoc-summary-comment"> Assigns the error handler used to report catalog errors.</blockquote></td></tr><tr><td class="no-border-r" valign="top" align="right" width="1%"><p class="prototype-type"> void</p></td><td class="with-border" valign="top" align="left"><p class="prototype"><a href="#setParserClass(String)">setParserClass</a>(<span class="parameter">String&nbsp;parser</span>)</p><blockquote class="classdoc-summary-comment"> Names the SAX2 parser class used to parse catalogs.</blockquote></td></tr><tr><td class="no-border-r" valign="top" align="right" width="1%"><p class="prototype-type"> void</p></td><td class="with-border" valign="top" align="left"><p class="prototype"><a href="#setUnified(boolean)">setUnified</a>(<span class="parameter">boolean&nbsp;value</span>)</p><blockquote class="classdoc-summary-comment"> Assigns the value of the flag returned by #isUnified.</blockquote></td></tr><tr><td class="no-border-r" valign="top" align="right" width="1%"><p class="prototype-type"> void</p></td><td class="with-border" valign="top" align="left"><p class="prototype"><a href="#setUsingPublic(boolean)">setUsingPublic</a>(<span class="parameter">boolean&nbsp;value</span>)</p><blockquote class="classdoc-summary-comment"> Specifies which catalog search mode is used.</blockquote></td></tr></table><h1 class="classdoc-header">Constructor Details</h1><a name="XCat()"/><h3>XCat</h3><p class="prototype">public  <b>XCat</b>()</p><div class="classdoc-comment-body"> Initializes without preloading a catalog.
+</div><dl class="tag list"><dt class="tag section header"><b>Author:</b></dt><dd class="tag item">David Brownell</dd></dl><table class="class summary"><tr><td colspan="2"><h4>Constructor Summary</h4></td></tr><tr><td class="class summary left">public </td><td class="class summary right"> <a href="#XCat()">XCat</a>()</td></tr><tr><td></td><td> Initializes without preloading a catalog.</td></tr><tr><td class="class summary left">public </td><td class="class summary right"> <a href="#XCat(String)">XCat</a>(String uri)</td></tr><tr><td></td><td> Initializes, and preloads a catalog using the default SAX parser.</td></tr></table><table class="class summary"><tr><td colspan="2"><h4>Method Summary</h4></td></tr><tr><td class="class summary left">public void</td><td class="class summary right"> <a href="#disableLoading()">disableLoading</a>()</td></tr><tr><td></td><td> Records that catalog loading is no longer permitted.</td></tr><tr><td class="class summary left">public <a href="../../..//org/xml/sax/ErrorHandler.html">ErrorHandler</a></td><td class="class summary right"> <a href="#getErrorHandler()">getErrorHandler</a>()</td></tr><tr><td></td><td> Returns the error handler used to report catalog errors.</td></tr><tr><td class="class summary left">public <a href="../../..//org/xml/sax/InputSource.html">InputSource</a></td><td class="class summary right"> <a href="#getExternalSubset(String,String)">getExternalSubset</a>(String name, String baseURI)</td></tr><tr><td></td><td> "New Style" parser callback to add an external subset.</td></tr><tr><td class="class summary left">public String</td><td class="class summary right"> <a href="#getParserClass()">getParserClass</a>()</td></tr><tr><td></td><td> Returns the name of the SAX2 parser class used to parse catalogs.</td></tr><tr><td class="class summary left">public boolean</td><td class="class summary right"> <a href="#isUnified()">isUnified</a>()</td></tr><tr><td></td><td> Returns true (the default) if all methods resolve
+ a given URI in the same way.</td></tr><tr><td class="class summary left">public boolean</td><td class="class summary right"> <a href="#isUsingPublic()">isUsingPublic</a>()</td></tr><tr><td></td><td> Returns true (the default) if a catalog's public identifier
+ mappings will be used.</td></tr><tr><td class="class summary left">public void</td><td class="class summary right"> <a href="#loadCatalog(String)">loadCatalog</a>(String uri)</td></tr><tr><td></td><td> Loads an OASIS XML Catalog.</td></tr><tr><td class="class summary left">public <a href="../../..//org/xml/sax/InputSource.html">InputSource</a></td><td class="class summary right"> <a href="#resolveEntity(String,String,String,String)">resolveEntity</a>(String name, String publicId, String baseURI, String systemId)</td></tr><tr><td></td><td> "New Style" external entity resolution for parsers.</td></tr><tr><td class="class summary left">public final <a href="../../..//org/xml/sax/InputSource.html">InputSource</a></td><td class="class summary right"> <a href="#resolveEntity(String,String)">resolveEntity</a>(String publicId, String systemId)</td></tr><tr><td></td><td> "Old Style" external entity resolution for parsers.</td></tr><tr><td class="class summary left">public <a href="../../..//org/xml/sax/InputSource.html">InputSource</a></td><td class="class summary right"> <a href="#resolveURI(String,String)">resolveURI</a>(String baseURI, String uri)</td></tr><tr><td></td><td> Resolves a URI reference that's not defined to the DTD.</td></tr><tr><td class="class summary left">public void</td><td class="class summary right"> <a href="#setErrorHandler(org.xml.sax.ErrorHandler)">setErrorHandler</a>(<a href="../../..//org/xml/sax/ErrorHandler.html">ErrorHandler</a> handler)</td></tr><tr><td></td><td> Assigns the error handler used to report catalog errors.</td></tr><tr><td class="class summary left">public void</td><td class="class summary right"> <a href="#setParserClass(String)">setParserClass</a>(String parser)</td></tr><tr><td></td><td> Names the SAX2 parser class used to parse catalogs.</td></tr><tr><td class="class summary left">public void</td><td class="class summary right"> <a href="#setUnified(boolean)">setUnified</a>(boolean value)</td></tr><tr><td></td><td> Assigns the value of the flag returned by isUnified.</td></tr><tr><td class="class summary left">public void</td><td class="class summary right"> <a href="#setUsingPublic(boolean)">setUsingPublic</a>(boolean value)</td></tr><tr><td></td><td> Specifies which catalog search mode is used.</td></tr></table><h4>Constructor Details</h4><a name="XCat()"/><div><h3>XCat</h3><p>public XCat()</p><div> Initializes without preloading a catalog.
  This API is convenient when you may want to arrange that catalogs
  are automatically loaded when explicitly referenced in documents,
  using the <em>oasis-xml-catalog</em> processing instruction.
  In such cases you won't usually be able to preload catalogs.
-</div><p/><hr/><a name="XCat(String)"/><h3>XCat</h3><p class="prototype">public  <b>XCat</b>(<span class="parameter">String&nbsp;uri</span>)</p><div class="classdoc-comment-body"> Initializes, and preloads a catalog using the default SAX parser.
+</div></div><hr/><a name="XCat(String)"/><div><h3>XCat</h3><p>public XCat(String uri)</p><div> Initializes, and preloads a catalog using the default SAX parser.
  This API is convenient when you operate with one or more standard
  catalogs.
 
- <p/> This just delegates to <a href="#loadCatalogloadCatalog()">loadCatalog loadCatalog()</a>;
+ <p/> This just delegates to loadCatalog loadCatalog();
  see it for exception information.
-</div><p/><div class="classdoc-tag-section-header">Parameters:</div><dl class="classdoc-list"><dt><span class="prototype-name">uri</span> - absolute URI for the catalog file.</dt></dl><h1 class="classdoc-header">Method Details</h1><a name="disableLoading()"/><h3>disableLoading</h3><p class="prototype">public synchronized void <b>disableLoading</b>()</p><div class="classdoc-comment-body"> Records that catalog loading is no longer permitted.
+</div><div><h4>Parameters:</h4><div>uri - absolute URI for the catalog file.</div></div><div><h4>Throws:</h4><div><a href="../../..//org/xml/sax/SAXException.html">SAXException</a></div><div>IOException</div></div></div><h4>Method Details</h4><a name="disableLoading()"/><div><h3>disableLoading</h3><p>public void disableLoading()</p><div> Records that catalog loading is no longer permitted.
  Loading is automatically disabled when lookups are performed,
  and should be manually disabled when <em>startDTD()</em> (or
  any other DTD declaration callback) is invoked, or at the latest
  when the document root element is seen.
-</div><p/><hr/><a name="getErrorHandler()"/><h3>getErrorHandler</h3><p class="prototype">public ErrorHandler <b>getErrorHandler</b>()</p><div class="classdoc-comment-body"> Returns the error handler used to report catalog errors.
+</div></div><hr/><a name="getErrorHandler()"/><div><h3>getErrorHandler</h3><p>public <a href="../../..//org/xml/sax/ErrorHandler.html">ErrorHandler</a> getErrorHandler()</p><div> Returns the error handler used to report catalog errors.
  Null is returned if the parser's default error handling
  will be used.
-</div><p/><div class="classdoc-tag-section-header">See Also:</div><dl class="classdoc-list"><dt><code><a href="#setErrorHandler
-">setErrorHandler</a></code></dt></dl><hr/><a name="getExternalSubset(String,String)"/><h3>getExternalSubset</h3><p class="prototype">public InputSource <b>getExternalSubset</b>(<span class="parameter">String&nbsp;name,</span> <span class="parameter">String&nbsp;baseURI</span>)</p><div class="classdoc-comment-body"> "New Style" parser callback to add an external subset.
+</div></div><hr/><a name="getExternalSubset(String,String)"/><div><h3>getExternalSubset</h3><p>public <a href="../../..//org/xml/sax/InputSource.html">InputSource</a> getExternalSubset(String name, String baseURI)</p><div> "New Style" parser callback to add an external subset.
  For documents that don't include an external subset, this may
  return one according to <em>doctype</em> catalog entries.
  (This functionality is not a core part of the OASIS XML Catalog
@@ -88,22 +82,19 @@
  If no such entry is defined, this returns null to indicate that
  this document will not be modified to include such a subset.
  Calls to this method prevent explicit loading of additional catalogs
- using <a href="#loadCatalogloadCatalog()">loadCatalog loadCatalog()</a>.
+ using loadCatalog loadCatalog().
 
  <p/><em>Warning:</em> That catalog functionality can be dangerous.
  It can provide definitions of general entities, and thereby mask
  certain well formedess errors.
-</div><p/><div class="classdoc-tag-section-header">Parameters:</div><dl class="classdoc-list"><dt><span class="prototype-name">name</span> - Name of the document element, either as declared in
-a DOCTYPE declaration or as observed in the text.</dt><dt><span class="prototype-name">baseURI</span> - Document's base URI (absolute).</dt></dl><div class="classdoc-tag-section-header">Returns:</div><dl class="classdoc-list"><dt>Input source for accessing the external subset, or null
-if no mapping was found.  The input source may have opened
-the stream, and will have a fully resolved URI.</dt></dl><hr/><a name="getParserClass()"/><h3>getParserClass</h3><p class="prototype">public String <b>getParserClass</b>()</p><div class="classdoc-comment-body"> Returns the name of the SAX2 parser class used to parse catalogs.
+</div><div><h4>Specified by:</h4><div>getExternalSubset in interface <a href="../../..//org/xml/sax/ext/EntityResolver2.html">EntityResolver2</a></div></div><div><h4>Parameters:</h4><div>name - Name of the document element, either as declared in
+a DOCTYPE declaration or as observed in the text.</div><div>baseURI - Document's base URI (absolute).</div></div><div><h4>Throws:</h4><div><a href="../../..//org/xml/sax/SAXException.html">SAXException</a></div><div>IOException</div></div></div><hr/><a name="getParserClass()"/><div><h3>getParserClass</h3><p>public String getParserClass()</p><div> Returns the name of the SAX2 parser class used to parse catalogs.
  Null is returned if the system default is used.
-</div><p/><div class="classdoc-tag-section-header">See Also:</div><dl class="classdoc-list"><dt><code><a href="#setParserClass
-">setParserClass</a></code></dt></dl><hr/><a name="isUnified()"/><h3>isUnified</h3><p class="prototype">public boolean <b>isUnified</b>()</p><div class="classdoc-comment-body"> Returns true (the default) if all methods resolve
+</div></div><hr/><a name="isUnified()"/><div><h3>isUnified</h3><p>public boolean isUnified()</p><div> Returns true (the default) if all methods resolve
  a given URI in the same way.
  Returns false if calls resolving URIs as entities (such as
-<a href="#resolveEntityresolveEntity()">resolveEntity resolveEntity()</a>) use different catalog entries
-  than those resolving them as URIs (<a href="#resolveURIresolveURI()">resolveURI resolveURI()</a>),
+resolveEntity resolveEntity()) use different catalog entries
+  than those resolving them as URIs (resolveURI resolveURI()),
  which will generally produce different results.
 
  <p/>The OASIS XML Catalog specification defines two related schemes
@@ -117,8 +108,7 @@ the stream, and will have a fully resolved URI.</dt></dl><hr/><a name="getParser
  since it prevents surprises where one URI gets mapped to different
  contents depending on whether the reference happens to have come
  from a DTD (or not).
-</div><p/><div class="classdoc-tag-section-header">See Also:</div><dl class="classdoc-list"><dt><code><a href="#setUnified
-">setUnified</a></code></dt></dl><hr/><a name="isUsingPublic()"/><h3>isUsingPublic</h3><p class="prototype">public boolean <b>isUsingPublic</b>()</p><div class="classdoc-comment-body"> Returns true (the default) if a catalog's public identifier
+</div></div><hr/><a name="isUsingPublic()"/><div><h3>isUsingPublic</h3><p>public boolean isUsingPublic()</p><div> Returns true (the default) if a catalog's public identifier
  mappings will be used.
  When false is returned, such mappings are ignored except when
  system IDs are discarded, such as for
@@ -127,8 +117,7 @@ the stream, and will have a fully resolved URI.</dt></dl><hr/><a name="getParser
  URI scheme.  Using it in system identifiers may not work well
  with many SAX parsers unless the <em>resolve-dtd-uris</em>
  feature flag is set to false.)
-</div><p/><div class="classdoc-tag-section-header">See Also:</div><dl class="classdoc-list"><dt><code><a href="#setUsingPublic
-">setUsingPublic</a></code></dt></dl><hr/><a name="loadCatalog(String)"/><h3>loadCatalog</h3><p class="prototype">public synchronized void <b>loadCatalog</b>(<span class="parameter">String&nbsp;uri</span>)</p><div class="classdoc-comment-body"> Loads an OASIS XML Catalog.
+</div></div><hr/><a name="loadCatalog(String)"/><div><h3>loadCatalog</h3><p>public void loadCatalog(String uri)</p><div> Loads an OASIS XML Catalog.
  It is appended to the list of currently active catalogs, or
  reloaded if a catalog with the same URI was already loaded.
  Callers have control over what parser is used, how catalog parsing
@@ -143,31 +132,24 @@ the stream, and will have a fully resolved URI.</dt></dl><hr/><a name="getParser
  <p/>Note that catalogs referenced by this one will not be loaded
  at this time.  Catalogs referenced through <em>nextCatalog</em>
  or <em>delegate*</em> elements are normally loaded only if needed. 
-</div><p/><div class="classdoc-tag-section-header">Parameters:</div><dl class="classdoc-list"><dt><span class="prototype-name">uri</span> - absolute URI for the catalog file.</dt></dl><div class="classdoc-tag-section-header">Throws:</div><dl class="classdoc-list"><dt><code/> - As thrown by the parser, typically to
-indicate problems reading data from that URI.</dt><dt><code><a href="../../../org/xml/sax/SAXException.html">SAXException</a></code> - As thrown by the parser, typically to
-indicate problems parsing data from that URI.</dt><dt><code/> - When attempting to load a
-catalog after loading has been #disableLoading disabled,
-such as after any entity or URI lookup has been performed.</dt></dl><div class="classdoc-tag-section-header">See Also:</div><dl class="classdoc-list"><dt><code><a href="#setErrorHandler
-">setErrorHandler</a></code></dt><dt><code><a href="#setParserClass
-">setParserClass</a></code></dt><dt><code><a href="#setUnified
-
-">setUnified</a></code></dt></dl><hr/><a name="resolveEntity(String,String,String,String)"/><h3>resolveEntity</h3><p class="prototype">public InputSource <b>resolveEntity</b>(<span class="parameter">String&nbsp;name,</span> <span class="parameter">String&nbsp;publicId,</span> <span class="parameter">String&nbsp;baseURI,</span> <span class="parameter">String&nbsp;systemId</span>)</p><div class="classdoc-comment-body"> "New Style" external entity resolution for parsers.
+</div><div><h4>Parameters:</h4><div>uri - absolute URI for the catalog file.</div></div><div><h4>Throws:</h4><div><a href="../../..//org/xml/sax/SAXException.html">SAXException</a> - As thrown by the parser, typically to
+indicate problems parsing data from that URI.  It may also
+be thrown if the parser doesn't support necessary handlers.</div><div>IOException</div></div></div><hr/><a name="resolveEntity(String,String,String,String)"/><div><h3>resolveEntity</h3><p>public <a href="../../..//org/xml/sax/InputSource.html">InputSource</a> resolveEntity(String name, String publicId, String baseURI, String systemId)</p><div> "New Style" external entity resolution for parsers.
  Calls to this method prevent explicit loading of additional catalogs
- using <a href="#loadCatalogloadCatalog()">loadCatalog loadCatalog()</a>.
+ using loadCatalog loadCatalog().
 
  <p/>This supports the full core catalog functionality for locating
  (and relocating) parsed entities that have been declared in a
  document's DTD.
-</div><p/><div class="classdoc-tag-section-header">Parameters:</div><dl class="classdoc-list"><dt><span class="prototype-name">name</span> - Entity name, such as "dudley", "%nell", or "[dtd]".</dt><dt><span class="prototype-name">publicId</span> - Either a normalized public ID, or null.</dt><dt><span class="prototype-name">baseURI</span> - Absolute base URI associated with systemId.</dt><dt><span class="prototype-name">systemId</span> - URI found in entity declaration (may be
-relative to baseURI).</dt></dl><div class="classdoc-tag-section-header">Returns:</div><dl class="classdoc-list"><dt>Input source for accessing the external entity, or null
-if no mapping was found.  The input source may have opened
-the stream, and will have a fully resolved URI.</dt></dl><div class="classdoc-tag-section-header">See Also:</div><dl class="classdoc-list"><dt><code><a href="#getExternalSubset
-">getExternalSubset</a></code></dt></dl><hr/><a name="resolveEntity(String,String)"/><h3>resolveEntity</h3><p class="prototype">public final InputSource <b>resolveEntity</b>(<span class="parameter">String&nbsp;publicId,</span> <span class="parameter">String&nbsp;systemId</span>)</p><div class="classdoc-comment-body"> "Old Style" external entity resolution for parsers.
+</div><div><h4>Specified by:</h4><div>resolveEntity in interface <a href="../../..//org/xml/sax/ext/EntityResolver2.html">EntityResolver2</a></div></div><div><h4>Parameters:</h4><div>name - Entity name, such as "dudley", "%nell", or "[dtd]".</div><div>publicId - Either a normalized public ID, or null.</div><div>baseURI - Absolute base URI associated with systemId.</div><div>systemId - URI found in entity declaration (may be
+relative to baseURI).</div></div><div><h4>Throws:</h4><div><a href="../../..//org/xml/sax/SAXException.html">SAXException</a></div><div>IOException</div></div></div><hr/><a name="resolveEntity(String,String)"/><div><h3>resolveEntity</h3><p>public final <a href="../../..//org/xml/sax/InputSource.html">InputSource</a> resolveEntity(String publicId, String systemId)</p><div> "Old Style" external entity resolution for parsers.
  This API provides only core functionality.
  Calls to this method prevent explicit loading of additional catalogs
- using <a href="#loadCatalogloadCatalog()">loadCatalog loadCatalog()</a>.
+ using loadCatalog loadCatalog().
 
- <p/>The functional limitations of this interface include:<ul><li>Since system IDs will be absolutized before the resolver
+ <p/>The functional limitations of this interface include:<ul>
+
+	<li>Since system IDs will be absolutized before the resolver
 	sees them, matching against relative URIs won't work.
 	This may affect <em>system</em>, <em>rewriteSystem</em>,
 	and <em>delegateSystem</em> catalog entries.
@@ -180,26 +162,24 @@ the stream, and will have a fully resolved URI.</dt></dl><div class="classdoc-ta
 
 	</li><li>Because missing external subsets can't be provided, the
 	<em>doctype</em> catalog entries will be ignored.
-	(The </li></ul><a href="#getExternalSubsetgetExternalSubset()">getExternalSubset getExternalSubset()</a> method is
+	(The getExternalSubset getExternalSubset() method is
 	a "New Style" resolution option.)
 
-	
+	</li></ul>
 
  <p/>Applications can tell whether this limited functionality will be
- used: if the feature flag associated with the <a href="../../../org/xml/sax/ext/EntityResolver2.html">EntityResolver2</a>
+ used: if the feature flag associated with the <a href="../../..//org/xml/sax/ext/EntityResolver2.html">EntityResolver2</a>
  interface is not <em>true</em>, the limitations apply.  Applications
  can't usually know whether a given document and catalog will trigger
  those limitations.  The issue can only be bypassed by operational
  procedures such as not using catalogs or documents which involve
  those features.
-</div><p/><div class="classdoc-tag-section-header">Parameters:</div><dl class="classdoc-list"><dt><span class="prototype-name">publicId</span> - Either a normalized public ID, or null</dt><dt><span class="prototype-name">systemId</span> - Always an absolute URI.</dt></dl><div class="classdoc-tag-section-header">Returns:</div><dl class="classdoc-list"><dt>Input source for accessing the external entity, or null
-if no mapping was found.  The input source may have opened
-the stream, and will have a fully resolved URI.</dt></dl><hr/><a name="resolveURI(String,String)"/><h3>resolveURI</h3><p class="prototype">public InputSource <b>resolveURI</b>(<span class="parameter">String&nbsp;baseURI,</span> <span class="parameter">String&nbsp;uri</span>)</p><div class="classdoc-comment-body"> Resolves a URI reference that's not defined to the DTD.
+</div><div><h4>Specified by:</h4><div>resolveEntity in interface <a href="../../..//org/xml/sax/EntityResolver.html">EntityResolver</a></div></div><div><h4>Parameters:</h4><div>publicId - Either a normalized public ID, or null</div><div>systemId - Always an absolute URI.</div></div><div><h4>Throws:</h4><div><a href="../../..//org/xml/sax/SAXException.html">SAXException</a></div><div>IOException</div></div></div><hr/><a name="resolveURI(String,String)"/><div><h3>resolveURI</h3><p>public <a href="../../..//org/xml/sax/InputSource.html">InputSource</a> resolveURI(String baseURI, String uri)</p><div> Resolves a URI reference that's not defined to the DTD.
  This is intended for use with URIs found in document text, such as
  <em>xml-stylesheet</em> processing instructions and in attribute
  values, where they are not recognized as URIs by XML parsers.
  Calls to this method prevent explicit loading of additional catalogs
- using <a href="#loadCatalogloadCatalog()">loadCatalog loadCatalog()</a>.
+ using loadCatalog loadCatalog().
 
  <p/>This functionality is supported by the OASIS XML Catalog
  specification, but will never be invoked by an XML parser.
@@ -209,42 +189,33 @@ the stream, and will have a fully resolved URI.</dt></dl><hr/><a name="resolveUR
  identical, to minimize potential confusion.
 
  <p/>This method could be useful when implementing the
-<a href="../../../javax/xml/transform/URIResolver.html">javax.xml.transform.URIResolver</a> interface, wrapping the
-  input source in a <a href="../../../javax/xml/transform/sax/SAXSource.html">javax.xml.transform.sax.SAXSource</a>.
-</div><p/><div class="classdoc-tag-section-header">Parameters:</div><dl class="classdoc-list"><dt><span class="prototype-name">baseURI</span> - The relevant base URI as specified by the XML Base
-specification.</dt><dt><span class="prototype-name">uri</span> - Either an absolute URI, or one relative to baseURI</dt></dl><div class="classdoc-tag-section-header">Returns:</div><dl class="classdoc-list"><dt>Input source for accessing the mapped URI, or null
-if no mapping was found.  The input source may have opened
-the stream, and will have a fully resolved URI.</dt></dl><div class="classdoc-tag-section-header">See Also:</div><dl class="classdoc-list"><dt><code><a href="#isUnified
-">isUnified</a></code></dt><dt><code><a href="#setUnified
-
-">setUnified</a></code></dt></dl><hr/><a name="setErrorHandler(org.xml.sax.ErrorHandler)"/><h3>setErrorHandler</h3><p class="prototype">public void <b>setErrorHandler</b>(<span class="parameter"><a href="../../../org/xml/sax/ErrorHandler.html">ErrorHandler</a>&nbsp;handler</span>)</p><div class="classdoc-comment-body"> Assigns the error handler used to report catalog errors.
+<a href="../../..//javax/xml/transform/URIResolver.html">javax.xml.transform.URIResolver</a> interface, wrapping the
+  input source in a <a href="../../..//javax/xml/transform/sax/SAXSource.html">javax.xml.transform.sax.SAXSource</a>.
+</div><div><h4>Parameters:</h4><div>baseURI - The relevant base URI as specified by the XML Base
+specification.  This recognizes <em>xml:base</em> attributes
+as overriding the actual (physical) base URI.</div><div>uri - Either an absolute URI, or one relative to baseURI</div></div><div><h4>Throws:</h4><div><a href="../../..//org/xml/sax/SAXException.html">SAXException</a></div><div>IOException</div></div></div><hr/><a name="setErrorHandler(org.xml.sax.ErrorHandler)"/><div><h3>setErrorHandler</h3><p>public void setErrorHandler(<a href="../../..//org/xml/sax/ErrorHandler.html">ErrorHandler</a> handler)</p><div> Assigns the error handler used to report catalog errors.
  These errors may come either from the SAX2 parser or
  from the catalog parsing code driven by the parser. 
 
  <p/> If you're sharing the resolver between parsers, don't
  change this once lookups have begun.
-</div><p/><div class="classdoc-tag-section-header">Parameters:</div><dl class="classdoc-list"><dt><span class="prototype-name">handler</span> - The error handler, or null saying to use the default
-(no diagnostics, and only fatal errors terminate loading).</dt></dl><div class="classdoc-tag-section-header">See Also:</div><dl class="classdoc-list"><dt><code><a href="#getErrorHandler
-
-">getErrorHandler</a></code></dt></dl><hr/><a name="setParserClass(String)"/><h3>setParserClass</h3><p class="prototype">public void <b>setParserClass</b>(<span class="parameter">String&nbsp;parser</span>)</p><div class="classdoc-comment-body"> Names the SAX2 parser class used to parse catalogs.
+</div><div><h4>Parameters:</h4><div>handler</div></div></div><hr/><a name="setParserClass(String)"/><div><h3>setParserClass</h3><p>public void setParserClass(String parser)</p><div> Names the SAX2 parser class used to parse catalogs.
 
  <p/> If you're sharing the resolver between parsers, don't change
  this once lookups have begun.
 
  <p/> Note that in order to properly support the <em>xml:base</em>
  attribute and relative URI resolution, the SAX parser used to parse
- the catalog must provide a <a href="../../../org/xml/sax/Locator.html">Locator</a> and support the optional
+ the catalog must provide a <a href="../../..//org/xml/sax/Locator.html">Locator</a> and support the optional
  declaration and lexical handlers.
-</div><p/><div class="classdoc-tag-section-header">Parameters:</div><dl class="classdoc-list"><dt><span class="prototype-name">parser</span> - The parser class name, or null saying to use the
-system default SAX2 parser.</dt></dl><div class="classdoc-tag-section-header">See Also:</div><dl class="classdoc-list"><dt><code><a href="#getParserClass
-
-">getParserClass</a></code></dt></dl><hr/><a name="setUnified(boolean)"/><h3>setUnified</h3><p class="prototype">public void <b>setUnified</b>(<span class="parameter">boolean&nbsp;value</span>)</p><div class="classdoc-comment-body"> Assigns the value of the flag returned by <a href="#isUnified">isUnified</a>.
+</div><div><h4>Parameters:</h4><div>parser - The parser class name, or null saying to use the
+system default SAX2 parser.</div></div></div><hr/><a name="setUnified(boolean)"/><div><h3>setUnified</h3><p>public void setUnified(boolean value)</p><div> Assigns the value of the flag returned by isUnified.
  Set it to false to be strictly conformant with the OASIS XML Catalog
  specification.  Set it to true to make all mappings for a given URI
  give the same result, regardless of the reason for the mapping.
 
  <p/>Don't change this once you've loaded the first catalog.
-</div><p/><div class="classdoc-tag-section-header">Parameters:</div><dl class="classdoc-list"><dt><span class="prototype-name">value</span> - new flag setting</dt></dl><hr/><a name="setUsingPublic(boolean)"/><h3>setUsingPublic</h3><p class="prototype">public void <b>setUsingPublic</b>(<span class="parameter">boolean&nbsp;value</span>)</p><div class="classdoc-comment-body"> Specifies which catalog search mode is used.
+</div><div><h4>Parameters:</h4><div>value - new flag setting</div></div></div><hr/><a name="setUsingPublic(boolean)"/><div><h3>setUsingPublic</h3><p>public void setUsingPublic(boolean value)</p><div> Specifies which catalog search mode is used.
  By default, public identifier mappings are able to override system
  identifiers when both are available.
  Applications may choose to ignore public
@@ -254,10 +225,6 @@ system default SAX2 parser.</dt></dl><div class="classdoc-tag-section-header">Se
 
  <p/> If you're sharing the resolver between parsers, don't
  change this once lookups have begun.
-</div><p/><div class="classdoc-tag-section-header">Parameters:</div><dl class="classdoc-list"><dt><span class="prototype-name">value</span> - true to always use public identifier mappings,
-false to only use them for system ids using the urn:publicid:
-URI scheme.</dt></dl><div class="classdoc-tag-section-header">See Also:</div><dl class="classdoc-list"><dt><code><a href="#isUsingPublic
-
-">isUsingPublic</a></code></dt></dl><hr class="footer"/><div class="footer">Generated on
-  October 6, 2004
-  by <a target="cptoolsinfo" href="http://www.gnu.org/software/cp-tools">GNU Classpath Tools</a> (Gjdoc XmlDoclet 0.6.1).</div></body></html>
+</div><div><h4>Parameters:</h4><div>value - true to always use public identifier mappings,
+false to only use them for system ids using the <em>urn:publicid:</em>
+URI scheme.</div></div></div><p> </p><table class="navbar div bottom"><tr><td><div><span class="navbar item enabled"><a href="../../..//index-noframes.html">Overview</a></span> <span class="navbar item enabled"><a href="package-summary.html">Package</a></span> <span class="navbar item enabled"><a href="tree.html">Tree</a></span> <a href="../../..//alphaindex.html">Index</a> <a href="../../..//deprecated.html">Deprecated</a> <a href="../../..//help.html">Help</a> <a href="../../..//about.html">About</a></div></td></tr></table></body></html>

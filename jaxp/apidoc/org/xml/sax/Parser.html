@@ -1,15 +1,14 @@
-<html xmlns="http://www.w3.org/TR/REC-html40" xmlns:html="http://www.w3.org/TR/REC-html40" xmlns:gjdoc="http://www.gnu.org/software/cp-tools/gjdocxml"><head><link href="../../../gjdochtml.css" type="text/css" rel="stylesheet"/><title>Parser</title></head><body onload="top.document.title=document.title;" class="classdoc"><div class="header"><span class="navi-button">&rArr;&nbsp;<a target="_top" href="../../../index.html">Index&nbsp;(Frames)</a></span>&nbsp;|&nbsp;
-      <span class="navi-button">&rArr;&nbsp;<a target="_top" href="../../../index_noframes.html">Index&nbsp;(No&nbsp;Frames)</a></span>&nbsp;|&nbsp;
-      <span class="navi-button">&rArr;&nbsp;<a href="package-summary.html">Package</a></span>&nbsp;|&nbsp;
-      <span class="navi-button">&rArr;&nbsp;<a href="package-tree.html">Package&nbsp;Tree</a></span>&nbsp;|&nbsp;
-      <span class="navi-button">&rArr;&nbsp;<a href="../../../fulltree.html">Full Tree</a></span>&nbsp;
-    </div><div class="classdoc-head"><div class="classdoc-head-inner"><b class="classdoc-head-packagename">org.xml.sax</b><br/><h1 class="classdoc-head-classname">Interface Parser</h1></div></div><p/><hr/><div class="classdoc-prototype">public interface <b>Parser</b><br/></div><p/><div class="classdoc-class-comment-body"> Basic interface for SAX (Simple API for XML) parsers.
+<?xml version="1.0" encoding="null"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head><title>Parser</title><meta http-equiv="Content-Type" content="text/html; charset=null"/></head><body><table class="navbar div top"><tr><td><div><span class="navbar item enabled"><a href="../../..//index-noframes.html">Overview</a></span> <span class="navbar item enabled"><a href="package-summary.html">Package</a></span> <span class="navbar item enabled"><a href="tree.html">Tree</a></span> <a href="../../..//alphaindex.html">Index</a> <a href="../../..//deprecated.html">Deprecated</a> <a href="../../..//help.html">Help</a> <a href="../../..//about.html">About</a></div></td></tr></table><div><h3>org.xml.sax</h3><h1>Interface Parser</h1><hr/><div><div>public interface Parser</div><div>extends java.lang.Object</div></div><hr/><div> Basic interface for SAX (Simple API for XML) parsers.
 
- <blockquote><em>This module, both source code and documentation, is in the
+ <blockquote>
+ <em>This module, both source code and documentation, is in the
  Public Domain, and comes with <strong>NO WARRANTY</strong>.</em>
  See <a href="http://www.saxproject.org">http://www.saxproject.org</a>
  for further information.
- </blockquote><p/>This was the main event supplier interface for SAX1; it has
+ </blockquote>
+
+ <p/>This was the main event supplier interface for SAX1; it has
  been replaced in SAX2 by org.xml.sax.XMLReader XMLReader,
  which includes Namespace support and sophisticated configurability
  and extensibility.
@@ -28,13 +27,7 @@
 org.xml.sax.XMLReader XMLReader
 
               interface, which includes Namespace support.
-</div><div class="classdoc-tag-section-header">Since:</div><dl class="classdoc-list"><dt>SAX 1.0</dt></dl><div class="classdoc-tag-section-header">Author:</div><dl class="classdoc-list"><dt>David Megginson</dt></dl><div class="classdoc-tag-section-header">See Also:</div><dl class="classdoc-list"><dt><code><a href="../../../org/xml/sax/EntityResolver.html">org.xml.sax.EntityResolver
-</a></code></dt><dt><code><a href="../../../org/xml/sax/DTDHandler.html">org.xml.sax.DTDHandler
-</a></code></dt><dt><code><a href="../../../org/xml/sax/DocumentHandler.html">org.xml.sax.DocumentHandler
-</a></code></dt><dt><code><a href="../../../org/xml/sax/ErrorHandler.html">org.xml.sax.ErrorHandler
-</a></code></dt><dt><code><a href="../../../org/xml/sax/HandlerBase.html">org.xml.sax.HandlerBase
-</a></code></dt><dt><code><a href="../../../org/xml/sax/InputSource.html">org.xml.sax.InputSource
-</a></code></dt></dl><h1 class="classdoc-header">Method Summary</h1><table class="classdoc-table" width="100%" cellspacing="0" border="1"><tr><td class="no-border-r" valign="top" align="right" width="1%"><p class="prototype-type"> void</p></td><td class="with-border" valign="top" align="left"><p class="prototype"><a href="#parse(org.xml.sax.InputSource)">parse</a>(<span class="parameter"><a href="../../../org/xml/sax/InputSource.html">InputSource</a>&nbsp;source</span>)</p><blockquote class="classdoc-summary-comment"> Parse an XML document.</blockquote></td></tr><tr><td class="no-border-r" valign="top" align="right" width="1%"><p class="prototype-type"> void</p></td><td class="with-border" valign="top" align="left"><p class="prototype"><a href="#parse(String)">parse</a>(<span class="parameter">String&nbsp;systemId</span>)</p><blockquote class="classdoc-summary-comment"> Parse an XML document from a system identifier (URI).</blockquote></td></tr><tr><td class="no-border-r" valign="top" align="right" width="1%"><p class="prototype-type"> void</p></td><td class="with-border" valign="top" align="left"><p class="prototype"><a href="#setDocumentHandler(org.xml.sax.DocumentHandler)">setDocumentHandler</a>(<span class="parameter"><a href="../../../org/xml/sax/DocumentHandler.html">DocumentHandler</a>&nbsp;handler</span>)</p><blockquote class="classdoc-summary-comment"> Allow an application to register a document event handler.</blockquote></td></tr><tr><td class="no-border-r" valign="top" align="right" width="1%"><p class="prototype-type"> void</p></td><td class="with-border" valign="top" align="left"><p class="prototype"><a href="#setDTDHandler(org.xml.sax.DTDHandler)">setDTDHandler</a>(<span class="parameter"><a href="../../../org/xml/sax/DTDHandler.html">DTDHandler</a>&nbsp;handler</span>)</p><blockquote class="classdoc-summary-comment"> Allow an application to register a DTD event handler.</blockquote></td></tr><tr><td class="no-border-r" valign="top" align="right" width="1%"><p class="prototype-type"> void</p></td><td class="with-border" valign="top" align="left"><p class="prototype"><a href="#setEntityResolver(org.xml.sax.EntityResolver)">setEntityResolver</a>(<span class="parameter"><a href="../../../org/xml/sax/EntityResolver.html">EntityResolver</a>&nbsp;resolver</span>)</p><blockquote class="classdoc-summary-comment"> Allow an application to register a custom entity resolver.</blockquote></td></tr><tr><td class="no-border-r" valign="top" align="right" width="1%"><p class="prototype-type"> void</p></td><td class="with-border" valign="top" align="left"><p class="prototype"><a href="#setErrorHandler(org.xml.sax.ErrorHandler)">setErrorHandler</a>(<span class="parameter"><a href="../../../org/xml/sax/ErrorHandler.html">ErrorHandler</a>&nbsp;handler</span>)</p><blockquote class="classdoc-summary-comment"> Allow an application to register an error event handler.</blockquote></td></tr><tr><td class="no-border-r" valign="top" align="right" width="1%"><p class="prototype-type"> void</p></td><td class="with-border" valign="top" align="left"><p class="prototype"><a href="#setLocale(Locale)">setLocale</a>(<span class="parameter">Locale&nbsp;locale</span>)</p><blockquote class="classdoc-summary-comment"> Allow an application to request a locale for errors and warnings.</blockquote></td></tr></table><h1 class="classdoc-header">Method Details</h1><a name="parse(org.xml.sax.InputSource)"/><h3>parse</h3><p class="prototype">public void <b>parse</b>(<span class="parameter"><a href="../../../org/xml/sax/InputSource.html">InputSource</a>&nbsp;source</span>)</p><div class="classdoc-comment-body"> Parse an XML document.
+</div><div class="classdoc-tag-section-header">Version:</div><dl class="classdoc-list"><dt>2.0.1 (sax2r2)</dt></dl><dl class="tag list"><dt class="tag section header"><b>Author:</b></dt><dd class="tag item">David Megginson</dd></dl><dl class="tag list"><dt class="tag section header"><b>Since:</b></dt><dd>SAX 1.0</dt></dl><table class="class summary"><tr><td colspan="2"><h4>Method Summary</h4></td></tr><tr><td class="class summary left">public void</td><td class="class summary right"> <a href="#parse(org.xml.sax.InputSource)">parse</a>(<a href="../../..//org/xml/sax/InputSource.html">InputSource</a> source)</td></tr><tr><td></td><td> Parse an XML document.</td></tr><tr><td class="class summary left">public void</td><td class="class summary right"> <a href="#parse(String)">parse</a>(String systemId)</td></tr><tr><td></td><td> Parse an XML document from a system identifier (URI).</td></tr><tr><td class="class summary left">public void</td><td class="class summary right"> <a href="#setDTDHandler(org.xml.sax.DTDHandler)">setDTDHandler</a>(<a href="../../..//org/xml/sax/DTDHandler.html">DTDHandler</a> handler)</td></tr><tr><td></td><td> Allow an application to register a DTD event handler.</td></tr><tr><td class="class summary left">public void</td><td class="class summary right"> <a href="#setDocumentHandler(org.xml.sax.DocumentHandler)">setDocumentHandler</a>(<a href="../../..//org/xml/sax/DocumentHandler.html">DocumentHandler</a> handler)</td></tr><tr><td></td><td> Allow an application to register a document event handler.</td></tr><tr><td class="class summary left">public void</td><td class="class summary right"> <a href="#setEntityResolver(org.xml.sax.EntityResolver)">setEntityResolver</a>(<a href="../../..//org/xml/sax/EntityResolver.html">EntityResolver</a> resolver)</td></tr><tr><td></td><td> Allow an application to register a custom entity resolver.</td></tr><tr><td class="class summary left">public void</td><td class="class summary right"> <a href="#setErrorHandler(org.xml.sax.ErrorHandler)">setErrorHandler</a>(<a href="../../..//org/xml/sax/ErrorHandler.html">ErrorHandler</a> handler)</td></tr><tr><td></td><td> Allow an application to register an error event handler.</td></tr><tr><td class="class summary left">public void</td><td class="class summary right"> <a href="#setLocale(Locale)">setLocale</a>(Locale locale)</td></tr><tr><td></td><td> Allow an application to request a locale for errors and warnings.</td></tr></table><h4>Method Details</h4><a name="parse(org.xml.sax.InputSource)"/><div><h3>parse</h3><p>public void parse(<a href="../../..//org/xml/sax/InputSource.html">InputSource</a> source)</p><div> Parse an XML document.
 
  <p/>The application can use this method to instruct the SAX parser
  to begin parsing an XML document from any valid input
@@ -45,40 +38,22 @@ org.xml.sax.XMLReader XMLReader
  additional XML document).  Once a parse is complete, an
  application may reuse the same Parser object, possibly with a
  different input source.
-</div><p/><div class="classdoc-tag-section-header">Parameters:</div><dl class="classdoc-list"><dt><span class="prototype-name">source</span> - The input source for the top-level of the
-XML document.</dt></dl><div class="classdoc-tag-section-header">Throws:</div><dl class="classdoc-list"><dt><code><a href="../../../org/xml/sax/SAXException.html">SAXException</a></code> - Any SAX exception, possibly
-wrapping another exception.</dt><dt><code/> - An IO exception from the parser,
-possibly from a byte stream or character stream
-supplied by the application.</dt></dl><div class="classdoc-tag-section-header">See Also:</div><dl class="classdoc-list"><dt><code><a href="../../../org/xml/sax/InputSource.html">org.xml.sax.InputSource
-</a></code></dt><dt><code><a href="#parse(java.lang.String)">parse(java.lang.String)</a></code></dt><dt><code><a href="#setEntityResolver
-">setEntityResolver</a></code></dt><dt><code><a href="#setDTDHandler
-">setDTDHandler</a></code></dt><dt><code><a href="#setDocumentHandler
-">setDocumentHandler</a></code></dt><dt><code><a href="#setErrorHandler
-">setErrorHandler</a></code></dt></dl><hr/><a name="parse(String)"/><h3>parse</h3><p class="prototype">public void <b>parse</b>(<span class="parameter">String&nbsp;systemId</span>)</p><div class="classdoc-comment-body"> Parse an XML document from a system identifier (URI).
+</div><div><h4>Parameters:</h4><div>source - The input source for the top-level of the
+XML document.</div></div><div><h4>Throws:</h4><div><a href="../../..//org/xml/sax/SAXException.html">SAXException</a> - Any SAX exception, possibly
+wrapping another exception.</div></div></div><hr/><a name="parse(String)"/><div><h3>parse</h3><p>public void parse(String systemId)</p><div> Parse an XML document from a system identifier (URI).
 
  <p/>This method is a shortcut for the common case of reading a
  document from a system identifier.  It is the exact
  equivalent of the following:
 
  <pre>
- parse(new InputSource(systemId));</pre><p/>If the system identifier is a URL, it must be fully resolved
+ parse(new InputSource(systemId));
+ </pre>
+
+ <p/>If the system identifier is a URL, it must be fully resolved
  by the application before it is passed to the parser.
-</div><p/><div class="classdoc-tag-section-header">Parameters:</div><dl class="classdoc-list"><dt><span class="prototype-name">systemId</span> - The system identifier (URI).</dt></dl><div class="classdoc-tag-section-header">Throws:</div><dl class="classdoc-list"><dt><code><a href="../../../org/xml/sax/SAXException.html">SAXException</a></code> - Any SAX exception, possibly
-wrapping another exception.</dt><dt><code/> - An IO exception from the parser,
-possibly from a byte stream or character stream
-supplied by the application.</dt></dl><div class="classdoc-tag-section-header">See Also:</div><dl class="classdoc-list"><dt><code><a href="#parse(org.xml.sax.InputSource)">parse(org.xml.sax.InputSource)</a></code></dt></dl><hr/><a name="setDocumentHandler(org.xml.sax.DocumentHandler)"/><h3>setDocumentHandler</h3><p class="prototype">public void <b>setDocumentHandler</b>(<span class="parameter"><a href="../../../org/xml/sax/DocumentHandler.html">DocumentHandler</a>&nbsp;handler</span>)</p><div class="classdoc-comment-body"> Allow an application to register a document event handler.
-
- <p/>If the application does not register a document handler, all
- document events reported by the SAX parser will be silently
- ignored (this is the default behaviour implemented by
- HandlerBase).
-
- <p/>Applications may register a new or different handler in the
- middle of a parse, and the SAX parser must begin using the new
- handler immediately.
-</div><p/><div class="classdoc-tag-section-header">Parameters:</div><dl class="classdoc-list"><dt><span class="prototype-name">handler</span> - The document handler.</dt></dl><div class="classdoc-tag-section-header">See Also:</div><dl class="classdoc-list"><dt><code><a href="../../../org/xml/sax/DocumentHandler.html">DocumentHandler
-</a></code></dt><dt><code><a href="../../../org/xml/sax/HandlerBase.html">HandlerBase
-</a></code></dt></dl><hr/><a name="setDTDHandler(org.xml.sax.DTDHandler)"/><h3>setDTDHandler</h3><p class="prototype">public void <b>setDTDHandler</b>(<span class="parameter"><a href="../../../org/xml/sax/DTDHandler.html">DTDHandler</a>&nbsp;handler</span>)</p><div class="classdoc-comment-body"> Allow an application to register a DTD event handler.
+</div><div><h4>Parameters:</h4><div>systemId - The system identifier (URI).</div></div><div><h4>Throws:</h4><div><a href="../../..//org/xml/sax/SAXException.html">SAXException</a> - Any SAX exception, possibly
+wrapping another exception.</div></div></div><hr/><a name="setDTDHandler(org.xml.sax.DTDHandler)"/><div><h3>setDTDHandler</h3><p>public void setDTDHandler(<a href="../../..//org/xml/sax/DTDHandler.html">DTDHandler</a> handler)</p><div> Allow an application to register a DTD event handler.
 
  <p/>If the application does not register a DTD handler, all DTD
  events reported by the SAX parser will be silently
@@ -88,9 +63,17 @@ supplied by the application.</dt></dl><div class="classdoc-tag-section-header">S
  <p/>Applications may register a new or different
  handler in the middle of a parse, and the SAX parser must
  begin using the new handler immediately.
-</div><p/><div class="classdoc-tag-section-header">Parameters:</div><dl class="classdoc-list"><dt><span class="prototype-name">handler</span> - The DTD handler.</dt></dl><div class="classdoc-tag-section-header">See Also:</div><dl class="classdoc-list"><dt><code><a href="../../../org/xml/sax/DTDHandler.html">DTDHandler
-</a></code></dt><dt><code><a href="../../../org/xml/sax/HandlerBase.html">HandlerBase
-</a></code></dt></dl><hr/><a name="setEntityResolver(org.xml.sax.EntityResolver)"/><h3>setEntityResolver</h3><p class="prototype">public void <b>setEntityResolver</b>(<span class="parameter"><a href="../../../org/xml/sax/EntityResolver.html">EntityResolver</a>&nbsp;resolver</span>)</p><div class="classdoc-comment-body"> Allow an application to register a custom entity resolver.
+</div><div><h4>Parameters:</h4><div>handler - The DTD handler.</div></div></div><hr/><a name="setDocumentHandler(org.xml.sax.DocumentHandler)"/><div><h3>setDocumentHandler</h3><p>public void setDocumentHandler(<a href="../../..//org/xml/sax/DocumentHandler.html">DocumentHandler</a> handler)</p><div> Allow an application to register a document event handler.
+
+ <p/>If the application does not register a document handler, all
+ document events reported by the SAX parser will be silently
+ ignored (this is the default behaviour implemented by
+ HandlerBase).
+
+ <p/>Applications may register a new or different handler in the
+ middle of a parse, and the SAX parser must begin using the new
+ handler immediately.
+</div><div><h4>Parameters:</h4><div>handler - The document handler.</div></div></div><hr/><a name="setEntityResolver(org.xml.sax.EntityResolver)"/><div><h3>setEntityResolver</h3><p>public void setEntityResolver(<a href="../../..//org/xml/sax/EntityResolver.html">EntityResolver</a> resolver)</p><div> Allow an application to register a custom entity resolver.
 
  <p/>If the application does not register an entity resolver, the
  SAX parser will resolve system identifiers and open connections
@@ -100,9 +83,7 @@ supplied by the application.</dt></dl><div class="classdoc-tag-section-header">S
  <p/>Applications may register a new or different entity resolver
  in the middle of a parse, and the SAX parser must begin using
  the new resolver immediately.
-</div><p/><div class="classdoc-tag-section-header">Parameters:</div><dl class="classdoc-list"><dt><span class="prototype-name">resolver</span> - The object for resolving entities.</dt></dl><div class="classdoc-tag-section-header">See Also:</div><dl class="classdoc-list"><dt><code><a href="../../../org/xml/sax/EntityResolver.html">EntityResolver
-</a></code></dt><dt><code><a href="../../../org/xml/sax/HandlerBase.html">HandlerBase
-</a></code></dt></dl><hr/><a name="setErrorHandler(org.xml.sax.ErrorHandler)"/><h3>setErrorHandler</h3><p class="prototype">public void <b>setErrorHandler</b>(<span class="parameter"><a href="../../../org/xml/sax/ErrorHandler.html">ErrorHandler</a>&nbsp;handler</span>)</p><div class="classdoc-comment-body"> Allow an application to register an error event handler.
+</div><div><h4>Parameters:</h4><div>resolver - The object for resolving entities.</div></div></div><hr/><a name="setErrorHandler(org.xml.sax.ErrorHandler)"/><div><h3>setErrorHandler</h3><p>public void setErrorHandler(<a href="../../..//org/xml/sax/ErrorHandler.html">ErrorHandler</a> handler)</p><div> Allow an application to register an error event handler.
 
  <p/>If the application does not register an error event handler,
  all error events reported by the SAX parser will be silently
@@ -112,19 +93,10 @@ supplied by the application.</dt></dl><div class="classdoc-tag-section-header">S
  <p/>Applications may register a new or different handler in the
  middle of a parse, and the SAX parser must begin using the new
  handler immediately.
-</div><p/><div class="classdoc-tag-section-header">Parameters:</div><dl class="classdoc-list"><dt><span class="prototype-name">handler</span> - The error handler.</dt></dl><div class="classdoc-tag-section-header">See Also:</div><dl class="classdoc-list"><dt><code><a href="../../../org/xml/sax/ErrorHandler.html">ErrorHandler
-</a></code></dt><dt><code><a href="../../../org/xml/sax/SAXException.html">SAXException
-</a></code></dt><dt><code><a href="../../../org/xml/sax/HandlerBase.html">HandlerBase
-</a></code></dt></dl><hr/><a name="setLocale(Locale)"/><h3>setLocale</h3><p class="prototype">public void <b>setLocale</b>(<span class="parameter">Locale&nbsp;locale</span>)</p><div class="classdoc-comment-body"> Allow an application to request a locale for errors and warnings.
+</div><div><h4>Parameters:</h4><div>handler - The error handler.</div></div></div><hr/><a name="setLocale(Locale)"/><div><h3>setLocale</h3><p>public void setLocale(Locale locale)</p><div> Allow an application to request a locale for errors and warnings.
 
  <p/>SAX parsers are not required to provide localisation for errors
  and warnings; if they cannot support the requested locale,
  however, they must throw a SAX exception.  Applications may
  not request a locale change in the middle of a parse.
-</div><p/><div class="classdoc-tag-section-header">Parameters:</div><dl class="classdoc-list"><dt><span class="prototype-name">locale</span> - A Java Locale object.</dt></dl><div class="classdoc-tag-section-header">Throws:</div><dl class="classdoc-list"><dt><code><a href="../../../org/xml/sax/SAXException.html">SAXException</a></code> - Throws an exception
-(using the previous or default locale) if the 
-requested locale is not supported.</dt></dl><div class="classdoc-tag-section-header">See Also:</div><dl class="classdoc-list"><dt><code><a href="../../../org/xml/sax/SAXException.html">org.xml.sax.SAXException
-</a></code></dt><dt><code><a href="../../../org/xml/sax/SAXParseException.html">org.xml.sax.SAXParseException
-</a></code></dt></dl><hr class="footer"/><div class="footer">Generated on
-  October 6, 2004
-  by <a target="cptoolsinfo" href="http://www.gnu.org/software/cp-tools">GNU Classpath Tools</a> (Gjdoc XmlDoclet 0.6.1).</div></body></html>
+</div><div><h4>Parameters:</h4><div>locale - A Java Locale object.</div></div></div><p> </p><table class="navbar div bottom"><tr><td><div><span class="navbar item enabled"><a href="../../..//index-noframes.html">Overview</a></span> <span class="navbar item enabled"><a href="package-summary.html">Package</a></span> <span class="navbar item enabled"><a href="tree.html">Tree</a></span> <a href="../../..//alphaindex.html">Index</a> <a href="../../..//deprecated.html">Deprecated</a> <a href="../../..//help.html">Help</a> <a href="../../..//about.html">About</a></div></td></tr></table></body></html>

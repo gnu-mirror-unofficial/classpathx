@@ -1,18 +1,14 @@
-<html xmlns="http://www.w3.org/TR/REC-html40" xmlns:html="http://www.w3.org/TR/REC-html40" xmlns:gjdoc="http://www.gnu.org/software/cp-tools/gjdocxml"><head><link href="../../../../gjdochtml.css" type="text/css" rel="stylesheet"/><title>ParserFactory</title></head><body onload="top.document.title=document.title;" class="classdoc"><div class="header"><span class="navi-button">&rArr;&nbsp;<a target="_top" href="../../../../index.html">Index&nbsp;(Frames)</a></span>&nbsp;|&nbsp;
-      <span class="navi-button">&rArr;&nbsp;<a target="_top" href="../../../../index_noframes.html">Index&nbsp;(No&nbsp;Frames)</a></span>&nbsp;|&nbsp;
-      <span class="navi-button">&rArr;&nbsp;<a href="package-summary.html">Package</a></span>&nbsp;|&nbsp;
-      <span class="navi-button">&rArr;&nbsp;<a href="package-tree.html">Package&nbsp;Tree</a></span>&nbsp;|&nbsp;
-      <span class="navi-button">&rArr;&nbsp;<a href="../../../../fulltree.html">Full Tree</a></span>&nbsp;
-    </div><div class="classdoc-head"><div class="classdoc-head-inner"><b class="classdoc-head-packagename">org.xml.sax.helpers</b><br/><h1 class="classdoc-head-classname">Class ParserFactory</h1></div></div><pre class="inheritance-tree">java.lang.Object
-|
-+--org.xml.sax.helpers.ParserFactory
-</pre><p/><hr/><div class="classdoc-prototype">public class <b>ParserFactory</b><br/>extends java.lang.Object<br/></div><p/><div class="classdoc-class-comment-body"> Java-specific class for dynamically loading SAX parsers.
+<?xml version="1.0" encoding="null"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head><title>ParserFactory</title><meta http-equiv="Content-Type" content="text/html; charset=null"/></head><body><table class="navbar div top"><tr><td><div><span class="navbar item enabled"><a href="../../../..//index-noframes.html">Overview</a></span> <span class="navbar item enabled"><a href="package-summary.html">Package</a></span> <span class="navbar item enabled"><a href="tree.html">Tree</a></span> <a href="../../../..//alphaindex.html">Index</a> <a href="../../../..//deprecated.html">Deprecated</a> <a href="../../../..//help.html">Help</a> <a href="../../../..//about.html">About</a></div></td></tr></table><div><h3>org.xml.sax.helpers</h3><h1>Class ParserFactory</h1><hr/><div><div>public class ParserFactory</div><div>extends java.lang.Object</div></div><hr/><div> Java-specific class for dynamically loading SAX parsers.
 
- <blockquote><em>This module, both source code and documentation, is in the
+ <blockquote>
+ <em>This module, both source code and documentation, is in the
  Public Domain, and comes with <strong>NO WARRANTY</strong>.</em>
  See <a href="http://www.saxproject.org">http://www.saxproject.org</a>
  for further information.
- </blockquote><p/><strong>Note:</strong> This class is designed to work with the now-deprecated
+ </blockquote>
+
+ <p/><strong>Note:</strong> This class is designed to work with the now-deprecated
  SAX1 org.xml.sax.Parser Parser class.  SAX2 applications should use
 org.xml.sax.helpers.XMLReaderFactory XMLReaderFactory instead.
  
@@ -29,30 +25,13 @@ org.xml.sax.helpers.XMLReaderFactory XMLReaderFactory instead.
 org.xml.sax.Parser Parser
 
               interface.
-</div><div class="classdoc-tag-section-header">Since:</div><dl class="classdoc-list"><dt>SAX 1.0</dt></dl><div class="classdoc-tag-section-header">Author:</div><dl class="classdoc-list"><dt>David Megginson</dt></dl><h1 class="classdoc-header">Method Summary</h1><table class="classdoc-table" width="100%" cellspacing="0" border="1"><tr><td class="no-border-r" valign="top" align="right" width="1%"><p class="prototype-type">static  <a href="../../../../org/xml/sax/Parser.html">Parser</a></p></td><td class="with-border" valign="top" align="left"><p class="prototype"><a href="#makeParser()">makeParser</a>()</p><blockquote class="classdoc-summary-comment"> Create a new SAX parser using the `org.xml.sax.parser' system property.</blockquote></td></tr><tr><td class="no-border-r" valign="top" align="right" width="1%"><p class="prototype-type">static  <a href="../../../../org/xml/sax/Parser.html">Parser</a></p></td><td class="with-border" valign="top" align="left"><p class="prototype"><a href="#makeParser(String)">makeParser</a>(<span class="parameter">String&nbsp;className</span>)</p><blockquote class="classdoc-summary-comment"> Create a new SAX parser object using the class name provided.</blockquote></td></tr></table><h1 class="classdoc-header">Method Details</h1><a name="makeParser()"/><h3>makeParser</h3><p class="prototype">public static Parser <b>makeParser</b>()</p><div class="classdoc-comment-body"> Create a new SAX parser using the `org.xml.sax.parser' system property.
+</div><div class="classdoc-tag-section-header">Version:</div><dl class="classdoc-list"><dt>2.0.1 (sax2r2)</dt></dl><dl class="tag list"><dt class="tag section header"><b>Author:</b></dt><dd class="tag item">David Megginson</dd></dl><dl class="tag list"><dt class="tag section header"><b>Since:</b></dt><dd>SAX 1.0</dt></dl><table class="class summary"><tr><td colspan="2"><h4>Method Summary</h4></td></tr><tr><td class="class summary left">public static <a href="../../../..//org/xml/sax/Parser.html">Parser</a></td><td class="class summary right"> <a href="#makeParser()">makeParser</a>()</td></tr><tr><td></td><td> Create a new SAX parser using the `org.xml.sax.parser' system property.</td></tr><tr><td class="class summary left">public static <a href="../../../..//org/xml/sax/Parser.html">Parser</a></td><td class="class summary right"> <a href="#makeParser(String)">makeParser</a>(String className)</td></tr><tr><td></td><td> Create a new SAX parser object using the class name provided.</td></tr></table><h4>Method Details</h4><a name="makeParser()"/><div><h3>makeParser</h3><p>public static <a href="../../../..//org/xml/sax/Parser.html">Parser</a> makeParser()</p><div> Create a new SAX parser using the `org.xml.sax.parser' system property.
 
  <p/>The named class must exist and must implement the
 org.xml.sax.Parser Parser interface.
-</div><p/><div class="classdoc-tag-section-header">Throws:</div><dl class="classdoc-list"><dt><code/> - There is no value
-for the `org.xml.sax.parser' system property.</dt><dt><code/> - The SAX parser
-class was not found (check your CLASSPATH).</dt><dt><code/> - The SAX parser class was
-found, but you do not have permission to load
-it.</dt><dt><code/> - The SAX parser class was
-found but could not be instantiated.</dt><dt><code/> - The SAX parser class
-was found and instantiated, but does not implement
-org.xml.sax.Parser.</dt></dl><div class="classdoc-tag-section-header">See Also:</div><dl class="classdoc-list"><dt><code><a href="#makeParser(java.lang.String)">makeParser(java.lang.String)</a></code></dt><dt><code><a href="../../../../org/xml/sax/Parser.html">org.xml.sax.Parser
-</a></code></dt></dl><hr/><a name="makeParser(String)"/><h3>makeParser</h3><p class="prototype">public static Parser <b>makeParser</b>(<span class="parameter">String&nbsp;className</span>)</p><div class="classdoc-comment-body"> Create a new SAX parser object using the class name provided.
+</div><div><h4>Throws:</h4><div>ClassNotFoundException</div><div>IllegalAccessException</div><div>InstantiationException</div><div>NullPointerException</div><div>ClassCastException</div></div></div><hr/><a name="makeParser(String)"/><div><h3>makeParser</h3><p>public static <a href="../../../..//org/xml/sax/Parser.html">Parser</a> makeParser(String className)</p><div> Create a new SAX parser object using the class name provided.
 
  <p/>The named class must exist and must implement the
 org.xml.sax.Parser Parser interface.
-</div><p/><div class="classdoc-tag-section-header">Parameters:</div><dl class="classdoc-list"><dt><span class="prototype-name">className</span> - A string containing the name of the
-SAX parser class.</dt></dl><div class="classdoc-tag-section-header">Throws:</div><dl class="classdoc-list"><dt><code/> - The SAX parser
-class was not found (check your CLASSPATH).</dt><dt><code/> - The SAX parser class was
-found, but you do not have permission to load
-it.</dt><dt><code/> - The SAX parser class was
-found but could not be instantiated.</dt><dt><code/> - The SAX parser class
-was found and instantiated, but does not implement
-org.xml.sax.Parser.</dt></dl><div class="classdoc-tag-section-header">See Also:</div><dl class="classdoc-list"><dt><code><a href="#makeParser()">makeParser()</a></code></dt><dt><code><a href="../../../../org/xml/sax/Parser.html">org.xml.sax.Parser
-</a></code></dt></dl><hr class="footer"/><div class="footer">Generated on
-  October 6, 2004
-  by <a target="cptoolsinfo" href="http://www.gnu.org/software/cp-tools">GNU Classpath Tools</a> (Gjdoc XmlDoclet 0.6.1).</div></body></html>
+</div><div><h4>Parameters:</h4><div>className - A string containing the name of the
+SAX parser class.</div></div><div><h4>Throws:</h4><div>ClassNotFoundException</div><div>IllegalAccessException</div><div>InstantiationException</div><div>ClassCastException</div></div></div><p> </p><table class="navbar div bottom"><tr><td><div><span class="navbar item enabled"><a href="../../../..//index-noframes.html">Overview</a></span> <span class="navbar item enabled"><a href="package-summary.html">Package</a></span> <span class="navbar item enabled"><a href="tree.html">Tree</a></span> <a href="../../../..//alphaindex.html">Index</a> <a href="../../../..//deprecated.html">Deprecated</a> <a href="../../../..//help.html">Help</a> <a href="../../../..//about.html">About</a></div></td></tr></table></body></html>

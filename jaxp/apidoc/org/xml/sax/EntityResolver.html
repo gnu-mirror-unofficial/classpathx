@@ -1,18 +1,17 @@
-<html xmlns="http://www.w3.org/TR/REC-html40" xmlns:html="http://www.w3.org/TR/REC-html40" xmlns:gjdoc="http://www.gnu.org/software/cp-tools/gjdocxml"><head><link href="../../../gjdochtml.css" type="text/css" rel="stylesheet"/><title>EntityResolver</title></head><body onload="top.document.title=document.title;" class="classdoc"><div class="header"><span class="navi-button">&rArr;&nbsp;<a target="_top" href="../../../index.html">Index&nbsp;(Frames)</a></span>&nbsp;|&nbsp;
-      <span class="navi-button">&rArr;&nbsp;<a target="_top" href="../../../index_noframes.html">Index&nbsp;(No&nbsp;Frames)</a></span>&nbsp;|&nbsp;
-      <span class="navi-button">&rArr;&nbsp;<a href="package-summary.html">Package</a></span>&nbsp;|&nbsp;
-      <span class="navi-button">&rArr;&nbsp;<a href="package-tree.html">Package&nbsp;Tree</a></span>&nbsp;|&nbsp;
-      <span class="navi-button">&rArr;&nbsp;<a href="../../../fulltree.html">Full Tree</a></span>&nbsp;
-    </div><div class="classdoc-head"><div class="classdoc-head-inner"><b class="classdoc-head-packagename">org.xml.sax</b><br/><h1 class="classdoc-head-classname">Interface EntityResolver</h1></div></div><p/><b>All Known Direct Subinterfaces:</b><br/><a href="../../../org/xml/sax/ext/EntityResolver2.html">EntityResolver2</a><hr/><div class="classdoc-prototype">public interface <b>EntityResolver</b><br/></div><p/><div class="classdoc-class-comment-body"> Basic interface for resolving entities.
+<?xml version="1.0" encoding="null"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head><title>EntityResolver</title><meta http-equiv="Content-Type" content="text/html; charset=null"/></head><body><table class="navbar div top"><tr><td><div><span class="navbar item enabled"><a href="../../..//index-noframes.html">Overview</a></span> <span class="navbar item enabled"><a href="package-summary.html">Package</a></span> <span class="navbar item enabled"><a href="tree.html">Tree</a></span> <a href="../../..//alphaindex.html">Index</a> <a href="../../..//deprecated.html">Deprecated</a> <a href="../../..//help.html">Help</a> <a href="../../..//about.html">About</a></div></td></tr></table><div><h3>org.xml.sax</h3><h1>Interface EntityResolver</h1><div><h4>Known Direct Subclasses:</h4><a href="../../..//org/xml/sax/ext/EntityResolver2.html">EntityResolver2</a></h4><hr/><div><div>public interface EntityResolver</div><div>extends java.lang.Object</div></div><hr/><div> Basic interface for resolving entities.
 
- <blockquote><em>This module, both source code and documentation, is in the
+ <blockquote>
+ <em>This module, both source code and documentation, is in the
  Public Domain, and comes with <strong>NO WARRANTY</strong>.</em>
  See <a href="http://www.saxproject.org">http://www.saxproject.org</a>
  for further information.
- </blockquote><p/>If a SAX application needs to implement customized handling
+ </blockquote>
+
+ <p/>If a SAX application needs to implement customized handling
  for external entities, it must implement this interface and
  register an instance with the SAX driver using the
-<a href="../../../org/xml/sax/XMLReader.html#setEntityResolversetEntityResolver">org.xml.sax.XMLReader.setEntityResolver setEntityResolver</a>
+org.xml.sax.XMLReader.setEntityResolver setEntityResolver
   method.
 
  <p/>The XML reader will then allow the application to intercept any
@@ -44,12 +43,13 @@
        return null;
      }
    }
- }</pre><p/>The application can also use this interface to redirect system
+ }
+ </pre>
+
+ <p/>The application can also use this interface to redirect system
  identifiers to local URIs or to look up replacements in a catalog
  (possibly by using the public identifier).
-</div><div class="classdoc-tag-section-header">Since:</div><dl class="classdoc-list"><dt>SAX 1.0</dt></dl><div class="classdoc-tag-section-header">Author:</div><dl class="classdoc-list"><dt>David Megginson</dt></dl><div class="classdoc-tag-section-header">See Also:</div><dl class="classdoc-list"><dt><code><a href="../../../org/xml/sax/XMLReader.html#setEntityResolver">org.xml.sax.XMLReader.setEntityResolver
-</a></code></dt><dt><code><a href="../../../org/xml/sax/InputSource.html">org.xml.sax.InputSource
-</a></code></dt></dl><h1 class="classdoc-header">Method Summary</h1><table class="classdoc-table" width="100%" cellspacing="0" border="1"><tr><td class="no-border-r" valign="top" align="right" width="1%"><p class="prototype-type"> <a href="../../../org/xml/sax/InputSource.html">InputSource</a></p></td><td class="with-border" valign="top" align="left"><p class="prototype"><a href="#resolveEntity(String,String)">resolveEntity</a>(<span class="parameter">String&nbsp;publicId,</span> <span class="parameter">String&nbsp;systemId</span>)</p><blockquote class="classdoc-summary-comment"> Allow the application to resolve external entities.</blockquote></td></tr></table><h1 class="classdoc-header">Method Details</h1><a name="resolveEntity(String,String)"/><h3>resolveEntity</h3><p class="prototype">public InputSource <b>resolveEntity</b>(<span class="parameter">String&nbsp;publicId,</span> <span class="parameter">String&nbsp;systemId</span>)</p><div class="classdoc-comment-body"> Allow the application to resolve external entities.
+</div><div class="classdoc-tag-section-header">Version:</div><dl class="classdoc-list"><dt>2.0.1 (sax2r2)</dt></dl><dl class="tag list"><dt class="tag section header"><b>Author:</b></dt><dd class="tag item">David Megginson</dd></dl><dl class="tag list"><dt class="tag section header"><b>Since:</b></dt><dd>SAX 1.0</dt></dl><table class="class summary"><tr><td colspan="2"><h4>Method Summary</h4></td></tr><tr><td class="class summary left">public <a href="../../..//org/xml/sax/InputSource.html">InputSource</a></td><td class="class summary right"> <a href="#resolveEntity(String,String)">resolveEntity</a>(String publicId, String systemId)</td></tr><tr><td></td><td> Allow the application to resolve external entities.</td></tr></table><h4>Method Details</h4><a name="resolveEntity(String,String)"/><div><h3>resolveEntity</h3><p>public <a href="../../..//org/xml/sax/InputSource.html">InputSource</a> resolveEntity(String publicId, String systemId)</p><div> Allow the application to resolve external entities.
 
  <p/>The parser will call this method before opening any external
  entity except the top-level document entity.  Such entities include
@@ -74,14 +74,7 @@
 
  <p/>If the system identifier is a URL, the SAX parser must
  resolve it fully before reporting it to the application.
-</div><p/><div class="classdoc-tag-section-header">Parameters:</div><dl class="classdoc-list"><dt><span class="prototype-name">publicId</span> - The public identifier of the external entity
-being referenced, or null if none was supplied.</dt><dt><span class="prototype-name">systemId</span> - The system identifier of the external entity
-being referenced.</dt></dl><div class="classdoc-tag-section-header">Returns:</div><dl class="classdoc-list"><dt>An InputSource object describing the new input source,
-or null to request that the parser open a regular
-URI connection to the system identifier.</dt></dl><div class="classdoc-tag-section-header">Throws:</div><dl class="classdoc-list"><dt><code><a href="../../../org/xml/sax/SAXException.html">SAXException</a></code> - Any SAX exception, possibly
-wrapping another exception.</dt><dt><code/> - A Java-specific IO exception,
-possibly the result of creating a new InputStream
-or Reader for the InputSource.</dt></dl><div class="classdoc-tag-section-header">See Also:</div><dl class="classdoc-list"><dt><code><a href="../../../org/xml/sax/InputSource.html">org.xml.sax.InputSource
-</a></code></dt></dl><hr class="footer"/><div class="footer">Generated on
-  October 6, 2004
-  by <a target="cptoolsinfo" href="http://www.gnu.org/software/cp-tools">GNU Classpath Tools</a> (Gjdoc XmlDoclet 0.6.1).</div></body></html>
+</div><div><h4>Parameters:</h4><div>publicId - The public identifier of the external entity
+being referenced, or null if none was supplied.</div><div>systemId - The system identifier of the external entity
+being referenced.</div></div><div><h4>Throws:</h4><div><a href="../../..//org/xml/sax/SAXException.html">SAXException</a> - Any SAX exception, possibly
+wrapping another exception.</div></div></div><p> </p><table class="navbar div bottom"><tr><td><div><span class="navbar item enabled"><a href="../../..//index-noframes.html">Overview</a></span> <span class="navbar item enabled"><a href="package-summary.html">Package</a></span> <span class="navbar item enabled"><a href="tree.html">Tree</a></span> <a href="../../..//alphaindex.html">Index</a> <a href="../../..//deprecated.html">Deprecated</a> <a href="../../..//help.html">Help</a> <a href="../../..//about.html">About</a></div></td></tr></table></body></html>

@@ -1,19 +1,18 @@
-<html xmlns="http://www.w3.org/TR/REC-html40" xmlns:html="http://www.w3.org/TR/REC-html40" xmlns:gjdoc="http://www.gnu.org/software/cp-tools/gjdocxml"><head><link href="../../../gjdochtml.css" type="text/css" rel="stylesheet"/><title>Locator</title></head><body onload="top.document.title=document.title;" class="classdoc"><div class="header"><span class="navi-button">&rArr;&nbsp;<a target="_top" href="../../../index.html">Index&nbsp;(Frames)</a></span>&nbsp;|&nbsp;
-      <span class="navi-button">&rArr;&nbsp;<a target="_top" href="../../../index_noframes.html">Index&nbsp;(No&nbsp;Frames)</a></span>&nbsp;|&nbsp;
-      <span class="navi-button">&rArr;&nbsp;<a href="package-summary.html">Package</a></span>&nbsp;|&nbsp;
-      <span class="navi-button">&rArr;&nbsp;<a href="package-tree.html">Package&nbsp;Tree</a></span>&nbsp;|&nbsp;
-      <span class="navi-button">&rArr;&nbsp;<a href="../../../fulltree.html">Full Tree</a></span>&nbsp;
-    </div><div class="classdoc-head"><div class="classdoc-head-inner"><b class="classdoc-head-packagename">org.xml.sax</b><br/><h1 class="classdoc-head-classname">Interface Locator</h1></div></div><p/><b>All Known Direct Subinterfaces:</b><br/><a href="../../../org/xml/sax/ext/Locator2.html">Locator2</a><hr/><div class="classdoc-prototype">public interface <b>Locator</b><br/></div><p/><div class="classdoc-class-comment-body"> Interface for associating a SAX event with a document location.
+<?xml version="1.0" encoding="null"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head><title>Locator</title><meta http-equiv="Content-Type" content="text/html; charset=null"/></head><body><table class="navbar div top"><tr><td><div><span class="navbar item enabled"><a href="../../..//index-noframes.html">Overview</a></span> <span class="navbar item enabled"><a href="package-summary.html">Package</a></span> <span class="navbar item enabled"><a href="tree.html">Tree</a></span> <a href="../../..//alphaindex.html">Index</a> <a href="../../..//deprecated.html">Deprecated</a> <a href="../../..//help.html">Help</a> <a href="../../..//about.html">About</a></div></td></tr></table><div><h3>org.xml.sax</h3><h1>Interface Locator</h1><div><h4>Known Direct Subclasses:</h4><a href="../../..//org/xml/sax/ext/Locator2.html">Locator2</a></h4><hr/><div><div>public interface Locator</div><div>extends java.lang.Object</div></div><hr/><div> Interface for associating a SAX event with a document location.
 
- <blockquote><em>This module, both source code and documentation, is in the
+ <blockquote>
+ <em>This module, both source code and documentation, is in the
  Public Domain, and comes with <strong>NO WARRANTY</strong>.</em>
  See <a href="http://www.saxproject.org">http://www.saxproject.org</a>
  for further information.
- </blockquote><p/>If a SAX parser provides location information to the SAX
+ </blockquote>
+
+ <p/>If a SAX parser provides location information to the SAX
  application, it does so by implementing this interface and then
  passing an instance to the application using the content
- handler's <a href="../../../org/xml/sax/ContentHandler.html#setDocumentLocatorsetDocumentLocator">org.xml.sax.ContentHandler.setDocumentLocator
- setDocumentLocator</a> method.  The application can use the
+ handler's org.xml.sax.ContentHandler.setDocumentLocator
+ setDocumentLocator method.  The application can use the
  object to obtain the location of any other SAX event
  in the XML source document.
 
@@ -26,11 +25,10 @@
  very strongly encouraged to do so.  If the parser supplies a
  locator, it must do so before reporting any other document events.
  If no locator has been set by the time the application receives
- the <a href="../../../org/xml/sax/ContentHandler.html#startDocumentstartDocument">org.xml.sax.ContentHandler.startDocument startDocument</a>
+ the org.xml.sax.ContentHandler.startDocument startDocument
  event, the application should assume that a locator is not 
  available.
-</div><div class="classdoc-tag-section-header">Since:</div><dl class="classdoc-list"><dt>SAX 1.0</dt></dl><div class="classdoc-tag-section-header">Author:</div><dl class="classdoc-list"><dt>David Megginson</dt></dl><div class="classdoc-tag-section-header">See Also:</div><dl class="classdoc-list"><dt><code><a href="../../../org/xml/sax/ContentHandler.html#setDocumentLocator">org.xml.sax.ContentHandler.setDocumentLocator 
-</a></code></dt></dl><h1 class="classdoc-header">Method Summary</h1><table class="classdoc-table" width="100%" cellspacing="0" border="1"><tr><td class="no-border-r" valign="top" align="right" width="1%"><p class="prototype-type"> int</p></td><td class="with-border" valign="top" align="left"><p class="prototype"><a href="#getColumnNumber()">getColumnNumber</a>()</p><blockquote class="classdoc-summary-comment"> Return the column number where the current document event ends.</blockquote></td></tr><tr><td class="no-border-r" valign="top" align="right" width="1%"><p class="prototype-type"> int</p></td><td class="with-border" valign="top" align="left"><p class="prototype"><a href="#getLineNumber()">getLineNumber</a>()</p><blockquote class="classdoc-summary-comment"> Return the line number where the current document event ends.</blockquote></td></tr><tr><td class="no-border-r" valign="top" align="right" width="1%"><p class="prototype-type"> String</p></td><td class="with-border" valign="top" align="left"><p class="prototype"><a href="#getPublicId()">getPublicId</a>()</p><blockquote class="classdoc-summary-comment"> Return the public identifier for the current document event.</blockquote></td></tr><tr><td class="no-border-r" valign="top" align="right" width="1%"><p class="prototype-type"> String</p></td><td class="with-border" valign="top" align="left"><p class="prototype"><a href="#getSystemId()">getSystemId</a>()</p><blockquote class="classdoc-summary-comment"> Return the system identifier for the current document event.</blockquote></td></tr></table><h1 class="classdoc-header">Method Details</h1><a name="getColumnNumber()"/><h3>getColumnNumber</h3><p class="prototype">public int <b>getColumnNumber</b>()</p><div class="classdoc-comment-body"> Return the column number where the current document event ends.
+</div><div class="classdoc-tag-section-header">Version:</div><dl class="classdoc-list"><dt>2.0.1 (sax2r2)</dt></dl><dl class="tag list"><dt class="tag section header"><b>Author:</b></dt><dd class="tag item">David Megginson</dd></dl><dl class="tag list"><dt class="tag section header"><b>Since:</b></dt><dd>SAX 1.0</dt></dl><table class="class summary"><tr><td colspan="2"><h4>Method Summary</h4></td></tr><tr><td class="class summary left">public int</td><td class="class summary right"> <a href="#getColumnNumber()">getColumnNumber</a>()</td></tr><tr><td></td><td> Return the column number where the current document event ends.</td></tr><tr><td class="class summary left">public int</td><td class="class summary right"> <a href="#getLineNumber()">getLineNumber</a>()</td></tr><tr><td></td><td> Return the line number where the current document event ends.</td></tr><tr><td class="class summary left">public String</td><td class="class summary right"> <a href="#getPublicId()">getPublicId</a>()</td></tr><tr><td></td><td> Return the public identifier for the current document event.</td></tr><tr><td class="class summary left">public String</td><td class="class summary right"> <a href="#getSystemId()">getSystemId</a>()</td></tr><tr><td></td><td> Return the system identifier for the current document event.</td></tr></table><h4>Method Details</h4><a name="getColumnNumber()"/><div><h3>getColumnNumber</h3><p>public int getColumnNumber()</p><div> Return the column number where the current document event ends.
  This is one-based number of Java <code>char</code> values since
  the last line end.
 
@@ -49,8 +47,7 @@
  <p/>If possible, the SAX driver should provide the line position 
  of the first character after the text associated with the document 
  event.  The first column in each line is column 1.
-</div><p/><div class="classdoc-tag-section-header">Returns:</div><dl class="classdoc-list"><dt>The column number, or -1 if none is available.</dt></dl><div class="classdoc-tag-section-header">See Also:</div><dl class="classdoc-list"><dt><code><a href="#getLineNumber
-">getLineNumber</a></code></dt></dl><hr/><a name="getLineNumber()"/><h3>getLineNumber</h3><p class="prototype">public int <b>getLineNumber</b>()</p><div class="classdoc-comment-body"> Return the line number where the current document event ends.
+</div></div><hr/><a name="getLineNumber()"/><div><h3>getLineNumber</h3><p>public int getLineNumber()</p><div> Return the line number where the current document event ends.
  Lines are delimited by line ends, which are defined in
  the XML specification.
 
@@ -69,15 +66,12 @@
  <p/>If possible, the SAX driver should provide the line position 
  of the first character after the text associated with the document 
  event.  The first line is line 1.
-</div><p/><div class="classdoc-tag-section-header">Returns:</div><dl class="classdoc-list"><dt>The line number, or -1 if none is available.</dt></dl><div class="classdoc-tag-section-header">See Also:</div><dl class="classdoc-list"><dt><code><a href="#getColumnNumber
-">getColumnNumber</a></code></dt></dl><hr/><a name="getPublicId()"/><h3>getPublicId</h3><p class="prototype">public String <b>getPublicId</b>()</p><div class="classdoc-comment-body"> Return the public identifier for the current document event.
+</div></div><hr/><a name="getPublicId()"/><div><h3>getPublicId</h3><p>public String getPublicId()</p><div> Return the public identifier for the current document event.
 
  <p/>The return value is the public identifier of the document
  entity or of the external parsed entity in which the markup
  triggering the event appears.
-</div><p/><div class="classdoc-tag-section-header">Returns:</div><dl class="classdoc-list"><dt>A string containing the public identifier, or
-null if none is available.</dt></dl><div class="classdoc-tag-section-header">See Also:</div><dl class="classdoc-list"><dt><code><a href="#getSystemId
-">getSystemId</a></code></dt></dl><hr/><a name="getSystemId()"/><h3>getSystemId</h3><p class="prototype">public String <b>getSystemId</b>()</p><div class="classdoc-comment-body"> Return the system identifier for the current document event.
+</div></div><hr/><a name="getSystemId()"/><div><h3>getSystemId</h3><p>public String getSystemId()</p><div> Return the system identifier for the current document event.
 
  <p/>The return value is the system identifier of the document
  entity or of the external parsed entity in which the markup
@@ -87,8 +81,4 @@ null if none is available.</dt></dl><div class="classdoc-tag-section-header">See
  fully before passing it to the application.  For example, a file
  name must always be provided as a <em>file:...</em> URL, and other
  kinds of relative URI are also resolved against their bases.
-</div><p/><div class="classdoc-tag-section-header">Returns:</div><dl class="classdoc-list"><dt>A string containing the system identifier, or null
-if none is available.</dt></dl><div class="classdoc-tag-section-header">See Also:</div><dl class="classdoc-list"><dt><code><a href="#getPublicId
-">getPublicId</a></code></dt></dl><hr class="footer"/><div class="footer">Generated on
-  October 6, 2004
-  by <a target="cptoolsinfo" href="http://www.gnu.org/software/cp-tools">GNU Classpath Tools</a> (Gjdoc XmlDoclet 0.6.1).</div></body></html>
+</div></div><p> </p><table class="navbar div bottom"><tr><td><div><span class="navbar item enabled"><a href="../../..//index-noframes.html">Overview</a></span> <span class="navbar item enabled"><a href="package-summary.html">Package</a></span> <span class="navbar item enabled"><a href="tree.html">Tree</a></span> <a href="../../..//alphaindex.html">Index</a> <a href="../../..//deprecated.html">Deprecated</a> <a href="../../..//help.html">Help</a> <a href="../../..//about.html">About</a></div></td></tr></table></body></html>

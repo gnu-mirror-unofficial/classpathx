@@ -1,35 +1,37 @@
-<html xmlns="http://www.w3.org/TR/REC-html40" xmlns:html="http://www.w3.org/TR/REC-html40" xmlns:gjdoc="http://www.gnu.org/software/cp-tools/gjdocxml"><head><link href="../../../gjdochtml.css" type="text/css" rel="stylesheet"/><title>ErrorHandler</title></head><body onload="top.document.title=document.title;" class="classdoc"><div class="header"><span class="navi-button">&rArr;&nbsp;<a target="_top" href="../../../index.html">Index&nbsp;(Frames)</a></span>&nbsp;|&nbsp;
-      <span class="navi-button">&rArr;&nbsp;<a target="_top" href="../../../index_noframes.html">Index&nbsp;(No&nbsp;Frames)</a></span>&nbsp;|&nbsp;
-      <span class="navi-button">&rArr;&nbsp;<a href="package-summary.html">Package</a></span>&nbsp;|&nbsp;
-      <span class="navi-button">&rArr;&nbsp;<a href="package-tree.html">Package&nbsp;Tree</a></span>&nbsp;|&nbsp;
-      <span class="navi-button">&rArr;&nbsp;<a href="../../../fulltree.html">Full Tree</a></span>&nbsp;
-    </div><div class="classdoc-head"><div class="classdoc-head-inner"><b class="classdoc-head-packagename">org.xml.sax</b><br/><h1 class="classdoc-head-classname">Interface ErrorHandler</h1></div></div><p/><hr/><div class="classdoc-prototype">public interface <b>ErrorHandler</b><br/></div><p/><div class="classdoc-class-comment-body"> Basic interface for SAX error handlers.
+<?xml version="1.0" encoding="null"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head><title>ErrorHandler</title><meta http-equiv="Content-Type" content="text/html; charset=null"/></head><body><table class="navbar div top"><tr><td><div><span class="navbar item enabled"><a href="../../..//index-noframes.html">Overview</a></span> <span class="navbar item enabled"><a href="package-summary.html">Package</a></span> <span class="navbar item enabled"><a href="tree.html">Tree</a></span> <a href="../../..//alphaindex.html">Index</a> <a href="../../..//deprecated.html">Deprecated</a> <a href="../../..//help.html">Help</a> <a href="../../..//about.html">About</a></div></td></tr></table><div><h3>org.xml.sax</h3><h1>Interface ErrorHandler</h1><hr/><div><div>public interface ErrorHandler</div><div>extends java.lang.Object</div></div><hr/><div> Basic interface for SAX error handlers.
 
- <blockquote><em>This module, both source code and documentation, is in the
+ <blockquote>
+ <em>This module, both source code and documentation, is in the
  Public Domain, and comes with <strong>NO WARRANTY</strong>.</em>
  See <a href="http://www.saxproject.org">http://www.saxproject.org</a>
  for further information.
- </blockquote><p/>If a SAX application needs to implement customized error
+ </blockquote>
+
+ <p/>If a SAX application needs to implement customized error
  handling, it must implement this interface and then register an
  instance with the XML reader using the
-<a href="../../../org/xml/sax/XMLReader.html#setErrorHandlersetErrorHandler">org.xml.sax.XMLReader.setErrorHandler setErrorHandler</a>
+org.xml.sax.XMLReader.setErrorHandler setErrorHandler
   method.  The parser will then report all errors and warnings
  through this interface.
 
  <p/><strong>WARNING:</strong> If an application does <em>not</em>
- register an ErrorHandler, XML parsing errors will go unreported
- and bizarre behaviour may result.
+ register an ErrorHandler, XML parsing errors will go unreported,
+ except that <em>SAXParseException</em>s will be thrown for fatal errors.
+ In order to detect validity errors, an ErrorHandler that does something
+ with error error() calls must be registered.
 
  <p/>For XML processing errors, a SAX driver must use this interface 
- instead of throwing an exception: it is up to the application 
+ in preference to throwing an exception: it is up to the application 
  to decide whether to throw an exception for different types of 
  errors and warnings.  Note, however, that there is no requirement that 
- the parser continue to provide useful information after a call to 
-<a href="#fatalErrorfatalError">fatalError fatalError</a> (in other words, a SAX driver class 
-  could catch an exception and report a fatalError).
-</div><div class="classdoc-tag-section-header">Since:</div><dl class="classdoc-list"><dt>SAX 1.0</dt></dl><div class="classdoc-tag-section-header">Author:</div><dl class="classdoc-list"><dt>David Megginson</dt></dl><div class="classdoc-tag-section-header">See Also:</div><dl class="classdoc-list"><dt><code><a href="../../../org/xml/sax/XMLReader.html#setErrorHandler">org.xml.sax.XMLReader.setErrorHandler
-</a></code></dt><dt><code><a href="../../../org/xml/sax/SAXParseException.html">org.xml.sax.SAXParseException 
-</a></code></dt></dl><h1 class="classdoc-header">Method Summary</h1><table class="classdoc-table" width="100%" cellspacing="0" border="1"><tr><td class="no-border-r" valign="top" align="right" width="1%"><p class="prototype-type"> void</p></td><td class="with-border" valign="top" align="left"><p class="prototype"><a href="#error(org.xml.sax.SAXParseException)">error</a>(<span class="parameter"><a href="../../../org/xml/sax/SAXParseException.html">SAXParseException</a>&nbsp;exception</span>)</p><blockquote class="classdoc-summary-comment"> Receive notification of a recoverable error.</blockquote></td></tr><tr><td class="no-border-r" valign="top" align="right" width="1%"><p class="prototype-type"> void</p></td><td class="with-border" valign="top" align="left"><p class="prototype"><a href="#fatalError(org.xml.sax.SAXParseException)">fatalError</a>(<span class="parameter"><a href="../../../org/xml/sax/SAXParseException.html">SAXParseException</a>&nbsp;exception</span>)</p><blockquote class="classdoc-summary-comment"> Receive notification of a non-recoverable error.</blockquote></td></tr><tr><td class="no-border-r" valign="top" align="right" width="1%"><p class="prototype-type"> void</p></td><td class="with-border" valign="top" align="left"><p class="prototype"><a href="#warning(org.xml.sax.SAXParseException)">warning</a>(<span class="parameter"><a href="../../../org/xml/sax/SAXParseException.html">SAXParseException</a>&nbsp;exception</span>)</p><blockquote class="classdoc-summary-comment"> Receive notification of a warning.</blockquote></td></tr></table><h1 class="classdoc-header">Method Details</h1><a name="error(org.xml.sax.SAXParseException)"/><h3>error</h3><p class="prototype">public void <b>error</b>(<span class="parameter"><a href="../../../org/xml/sax/SAXParseException.html">SAXParseException</a>&nbsp;exception</span>)</p><div class="classdoc-comment-body"> Receive notification of a recoverable error.
+ the parser continue to report additional errors after a call to 
+fatalError fatalError.  In other words, a SAX driver class 
+  may throw an exception after reporting any fatalError.
+ Also parsers may throw appropriate exceptions for non-XML errors.
+ For example, XMLReader.parse XMLReader.parse() would throw
+ an IOException for errors accessing entities or the document.
+</div><div class="classdoc-tag-section-header">Version:</div><dl class="classdoc-list"><dt>2.0.1+ (sax2r3pre1)</dt></dl><dl class="tag list"><dt class="tag section header"><b>Author:</b></dt><dd class="tag item">David Megginson</dd></dl><dl class="tag list"><dt class="tag section header"><b>Since:</b></dt><dd>SAX 1.0</dt></dl><table class="class summary"><tr><td colspan="2"><h4>Method Summary</h4></td></tr><tr><td class="class summary left">public void</td><td class="class summary right"> <a href="#error(org.xml.sax.SAXParseException)">error</a>(<a href="../../..//org/xml/sax/SAXParseException.html">SAXParseException</a> exception)</td></tr><tr><td></td><td> Receive notification of a recoverable error.</td></tr><tr><td class="class summary left">public void</td><td class="class summary right"> <a href="#fatalError(org.xml.sax.SAXParseException)">fatalError</a>(<a href="../../..//org/xml/sax/SAXParseException.html">SAXParseException</a> exception)</td></tr><tr><td></td><td> Receive notification of a non-recoverable error.</td></tr><tr><td class="class summary left">public void</td><td class="class summary right"> <a href="#warning(org.xml.sax.SAXParseException)">warning</a>(<a href="../../..//org/xml/sax/SAXParseException.html">SAXParseException</a> exception)</td></tr><tr><td></td><td> Receive notification of a warning.</td></tr></table><h4>Method Details</h4><a name="error(org.xml.sax.SAXParseException)"/><div><h3>error</h3><p>public void error(<a href="../../..//org/xml/sax/SAXParseException.html">SAXParseException</a> exception)</p><div> Receive notification of a recoverable error.
 
  <p/>This corresponds to the definition of "error" in section 1.2
  of the W3C XML 1.0 Recommendation.  For example, a validating
@@ -37,19 +39,24 @@
  validity constraint.  The default behaviour is to take no
  action.
 
- <p/>The SAX parser must continue to provide normal parsing events
- after invoking this method: it should still be possible for the
- application to process the document through to the end.  If the
- application cannot do so, then the parser should report a fatal
- error even if the XML 1.0 recommendation does not require it to
- do so.
+ <p/>The SAX parser must continue to provide normal parsing
+ events after invoking this method: it should still be possible
+ for the application to process the document through to the end.
+ If the application cannot do so, then the parser should report
+ a fatal error even if the XML recommendation does not require
+ it to do so.
 
  <p/>Filters may use this method to report other, non-XML errors
  as well.
-</div><p/><div class="classdoc-tag-section-header">Parameters:</div><dl class="classdoc-list"><dt><span class="prototype-name">exception</span> - The error information encapsulated in a
-SAX parse exception.</dt></dl><div class="classdoc-tag-section-header">Throws:</div><dl class="classdoc-list"><dt><code><a href="../../../org/xml/sax/SAXException.html">SAXException</a></code> - Any SAX exception, possibly
-wrapping another exception.</dt></dl><div class="classdoc-tag-section-header">See Also:</div><dl class="classdoc-list"><dt><code><a href="../../../org/xml/sax/SAXParseException.html">org.xml.sax.SAXParseException 
-</a></code></dt></dl><hr/><a name="fatalError(org.xml.sax.SAXParseException)"/><h3>fatalError</h3><p class="prototype">public void <b>fatalError</b>(<span class="parameter"><a href="../../../org/xml/sax/SAXParseException.html">SAXParseException</a>&nbsp;exception</span>)</p><div class="classdoc-comment-body"> Receive notification of a non-recoverable error.
+</div><div><h4>Parameters:</h4><div>exception - The error information encapsulated in a
+SAX parse exception.</div></div></div><hr/><a name="fatalError(org.xml.sax.SAXParseException)"/><div><h3>fatalError</h3><p>public void fatalError(<a href="../../..//org/xml/sax/SAXParseException.html">SAXParseException</a> exception)</p><div> Receive notification of a non-recoverable error.
+
+ <p/><strong>There is an apparent contradiction between the
+ documentation for this method and the documentation for  org.xml.sax.ContentHandler.endDocument.  Until this ambiguity
+ is resolved in a future major release, clients should make no
+ assumptions about whether endDocument() will or will not be
+ invoked when the parser has reported a fatalError() or thrown
+ an exception.</strong>
 
  <p/>This corresponds to the definition of "fatal error" in
  section 1.2 of the W3C XML 1.0 Recommendation.  For example, a
@@ -58,17 +65,16 @@ wrapping another exception.</dt></dl><div class="classdoc-tag-section-header">Se
 
  <p/>The application must assume that the document is unusable
  after the parser has invoked this method, and should continue
- (if at all) only for the sake of collecting addition error
+ (if at all) only for the sake of collecting additional error
  messages: in fact, SAX parsers are free to stop reporting any
  other events once this method has been invoked.
-</div><p/><div class="classdoc-tag-section-header">Parameters:</div><dl class="classdoc-list"><dt><span class="prototype-name">exception</span> - The error information encapsulated in a
-SAX parse exception.</dt></dl><div class="classdoc-tag-section-header">Throws:</div><dl class="classdoc-list"><dt><code><a href="../../../org/xml/sax/SAXException.html">SAXException</a></code> - Any SAX exception, possibly
-wrapping another exception.</dt></dl><div class="classdoc-tag-section-header">See Also:</div><dl class="classdoc-list"><dt><code><a href="../../../org/xml/sax/SAXParseException.html">org.xml.sax.SAXParseException
-</a></code></dt></dl><hr/><a name="warning(org.xml.sax.SAXParseException)"/><h3>warning</h3><p class="prototype">public void <b>warning</b>(<span class="parameter"><a href="../../../org/xml/sax/SAXParseException.html">SAXParseException</a>&nbsp;exception</span>)</p><div class="classdoc-comment-body"> Receive notification of a warning.
+</div><div><h4>Parameters:</h4><div>exception - The error information encapsulated in a
+SAX parse exception.</div></div></div><hr/><a name="warning(org.xml.sax.SAXParseException)"/><div><h3>warning</h3><p>public void warning(<a href="../../..//org/xml/sax/SAXParseException.html">SAXParseException</a> exception)</p><div> Receive notification of a warning.
 
  <p/>SAX parsers will use this method to report conditions that
- are not errors or fatal errors as defined by the XML 1.0
- recommendation.  The default behaviour is to take no action.
+ are not errors or fatal errors as defined by the XML
+ recommendation.  The default behaviour is to take no
+ action.
 
  <p/>The SAX parser must continue to provide normal parsing events
  after invoking this method: it should still be possible for the
@@ -76,9 +82,5 @@ wrapping another exception.</dt></dl><div class="classdoc-tag-section-header">Se
 
  <p/>Filters may use this method to report other, non-XML warnings
  as well.
-</div><p/><div class="classdoc-tag-section-header">Parameters:</div><dl class="classdoc-list"><dt><span class="prototype-name">exception</span> - The warning information encapsulated in a
-SAX parse exception.</dt></dl><div class="classdoc-tag-section-header">Throws:</div><dl class="classdoc-list"><dt><code><a href="../../../org/xml/sax/SAXException.html">SAXException</a></code> - Any SAX exception, possibly
-wrapping another exception.</dt></dl><div class="classdoc-tag-section-header">See Also:</div><dl class="classdoc-list"><dt><code><a href="../../../org/xml/sax/SAXParseException.html">org.xml.sax.SAXParseException 
-</a></code></dt></dl><hr class="footer"/><div class="footer">Generated on
-  October 6, 2004
-  by <a target="cptoolsinfo" href="http://www.gnu.org/software/cp-tools">GNU Classpath Tools</a> (Gjdoc XmlDoclet 0.6.1).</div></body></html>
+</div><div><h4>Parameters:</h4><div>exception - The warning information encapsulated in a
+SAX parse exception.</div></div></div><p> </p><table class="navbar div bottom"><tr><td><div><span class="navbar item enabled"><a href="../../..//index-noframes.html">Overview</a></span> <span class="navbar item enabled"><a href="package-summary.html">Package</a></span> <span class="navbar item enabled"><a href="tree.html">Tree</a></span> <a href="../../..//alphaindex.html">Index</a> <a href="../../..//deprecated.html">Deprecated</a> <a href="../../..//help.html">Help</a> <a href="../../..//about.html">About</a></div></td></tr></table></body></html>
