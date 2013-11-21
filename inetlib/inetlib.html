@@ -1,0 +1,66 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "xhtml11.dtd">
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<meta http-equiv='Content-Type' content='text/html; charset=UTF-8'/>
+<TITLE>GNU inetlib</TITLE>
+<link rel='stylesheet' href='../main.css' type='text/css'/>
+<link rel='made' href='mailto:dog@gnu.org'/>
+</head>
+<body>
+
+<div class='logo'>
+<img src='../classpathx-logo.jpg' ALT=' [ gnu -classpath ext:ens:ions ] '/>
+</div>
+
+<h1>GNU <tt>inetlib</tt></h1>
+
+<p>
+<tt>inetlib</tt> is a collection of Internet client libraries that facilitate
+the development of client-side Java network programming. It implements the
+parsing and construction of responses and requests for a number of common
+Internet protocols.
+</p>
+
+<p>
+Each Internet protocol is assigned to its own package. If a protocol describes
+resources that can be retrieved via a URL, a standard Java URLStreamHandler
+is also provided for that protocol. However, the intent of this library is
+to be able to provide all the bells, whistles, optimizations, additional
+features and other goodness by addressing the protocol at the lowest feasible
+level rather than at a level of abstraction that takes a lot of this control
+away from the developer.
+</p>
+
+<p>
+The following protocols are supported:
+
+<dl>
+<dt>HTTP/1.1</dt><dd>RFC <a href='http://tools.ietf.org/html/rfc2616'>2616</a></dd>
+<dt>FTP</dt><dd>RFC <a href='http://www.ietf.org/rfc/rfc959.txt'>959</a></dd>
+<dt>SMTP</dt><dd>RFC <a href='http://tools.ietf.org/html/rfc2821'>2821</a></dd>
+<dt>IMAP4rev1</dt><dd>RFCs <a href='http://tools.ietf.org/html/rfc3501'>3501</a>, <a href='http://tools.ietf.org/html/rfc4315'>4315 (UIDPLUS extension)</a>, <a href='http://tools.ietf.org/html/rfc2087'>2087 (QUOTA extension)</a>, <a href='http://tools.ietf.org/html/rfc4314'>4314 (ACL extension)</a></dd>
+<dt>POP3</dt><dd>RFC <a href='http://tools.ietf.org/html/rfc1939'>1939</a></dd>
+<dt>NNTP</dt><dd>RFCs <a href='http://tools.ietf.org/html/rfc977'>977</a>, <a href='http://tools.ietf.org/html/rfc2980'>2980 (Common Extensions)</a></dd>
+<dt>LDAP</dt><dd>RFC <a href='http://tools.ietf.org/html/rfc4511'>4511</a></dd>
+</dl>
+
+and also some protocols of mainly historical value like <a href='http://tools.ietf.org/html/rfc1436'>Gopher</a> and comsat.
+</p>
+
+<h2>Documentation</h2>
+
+<p>
+The full API documentation is available <a href='javadoc/'>here</a>.
+</p>
+
+<h2>History and community</h2>
+
+<p>
+<tt>inetlib</tt> was developed by Chris Burdess from 2002, and the copyright
+is held by the Free Software Foundation. It forms part of the
+<a href='..'>GNU classpathx project</a>. To get involved, please sign up at
+<a href='https://savannah.gnu.org/projects/classpathx/'>the Savannah page</a>.
+</p>
+
+</body>
+</html>
