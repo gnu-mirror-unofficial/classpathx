@@ -1,16 +1,379 @@
-<?xml version="1.0" encoding="MacRoman"?>
-<!DOCTYPE html PUBLIC "-//gnu.org///DTD XHTML 1.1 plus Target 1.0//EN" "../../resources/xhtml11-target10.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head><title>MessagingException</title><script src="../../resources/gjdoc.js" type="text/javascript"><!-- this comment required for konqueror 3.2.2 --></script><meta http-equiv="Content-Type" content="text/html; charset=MacRoman"/><meta name="generator" content="GNU Gjdoc Standard Doclet"/><meta name="keywords" content="javax.mail.MessagingException class"/><meta name="keywords" content="getNextException()"/><meta name="keywords" content="setNextException()"/><meta name="keywords" content="getMessage()"/><meta name="keywords" content="printStackTrace()"/><link rel="stylesheet" type="text/css" href="../../resources/gjdochtml-clean-layout.css" title="GNU Clean"/><link rel="stylesheet" type="text/css" href="../../resources/gjdochtml-clean-color1.css" title="GNU Clean"/></head><body class="content class" onload="if(parent.contentPageLoaded)parent.contentPageLoaded(document.title)"><table class="navbar div top"><tr><td class="navbar div top"><div class="navbar div top"><span class="navbar item enabled"><a href="../../overview-summary.html">Overview</a></span> <span class="navbar item enabled"><a href="package-summary.html">Package</a></span> <span class="navbar item enabled"><a href="tree.html">Tree</a></span> <span class="navbar item enabled"><a href="../../alphaindex.html">Index</a></span> <span class="navbar item enabled"><a href="../../deprecated.html">Deprecated</a></span> <span class="navbar item enabled"><a href="../../about.html">About</a></span></div></td></tr><tr><td class="navi"><a href="../../javax/mail/MessageRemovedException.html">Prev Class</a> | <a href="../../javax/mail/MethodNotSupportedException.html">Next Class</a></td><td class="navi"><a href="../../index.html" title="Show in a frameset" target="_top">Frames</a> | <a href="MessagingException.html" title="Show without frames" target="_top">No Frames</a> </td></tr><tr><td class="navi">Summary: Nested | Field | <a href="#summary-methods">Method</a> | <a href="#summary-constructors">Constr</a></td><td class="navi">Detail: Nested | Field | <a href="#detail-methods">Method</a> | <a href="#detail-constructors">Constr</a></td></tr></table><div class="class title outer"><h3 class="class title-package">javax.mail</h3><h1 class="class title-class">Class MessagingException</h1></div><div class="class inheritance-tree"><ul class="inheritance 0"><li class="inheritance 0"><code>Exception</code></li><li><ul class="inheritance 1"><li class="inheritance 1"><code>javax.mail.MessagingException</code></li><li></li></ul></li></ul></div><dl class="class subclasses"><dt class="class subclasses header"><b>Known Direct Subclasses:</b></dt><dd class="class subclasses header"><a href="../../javax/mail/AuthenticationFailedException.html" title="Class in javax.mail">AuthenticationFailedException</a>, <a href="../../javax/mail/FolderClosedException.html" title="Class in javax.mail">FolderClosedException</a>, <a href="../../javax/mail/FolderNotFoundException.html" title="Class in javax.mail">FolderNotFoundException</a>, <a href="../../javax/mail/IllegalWriteException.html" title="Class in javax.mail">IllegalWriteException</a>, <a href="../../javax/mail/MessageRemovedException.html" title="Class in javax.mail">MessageRemovedException</a>, <a href="../../javax/mail/MethodNotSupportedException.html" title="Class in javax.mail">MethodNotSupportedException</a>, <a href="../../javax/mail/NoSuchProviderException.html" title="Class in javax.mail">NoSuchProviderException</a>, <a href="../../javax/mail/internet/ParseException.html" title="Class in javax.mail.internet">ParseException</a>, <a href="../../javax/mail/ReadOnlyFolderException.html" title="Class in javax.mail">ReadOnlyFolderException</a>, <a href="../../javax/mail/search/SearchException.html" title="Class in javax.mail.search">SearchException</a>, <a href="../../javax/mail/SendFailedException.html" title="Class in javax.mail">SendFailedException</a>, <a href="../../javax/mail/StoreClosedException.html" title="Class in javax.mail">StoreClosedException</a></dd></b></dt></dl><hr/><div class="class synopsis outer"><div class="class synopsis declaration"><code>public class <b class="class synopsis name">MessagingException</b></code></div><div class="class synopsis superclass"><code>extends Exception</code></div></div><hr/><div class="class description"> A general messaging exception.
-</div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><a name="summary-constructors" id="summary-constructors"/><dl class="table container"><dd><table class="class summary" border="1" width="100%"><tr class="table header"><td colspan="2"><h2 class="table header">Constructor Summary</h2></td></tr><tr><td class="right"><dl class="list"><dt class="synopsis"><code><a href="#MessagingException()">MessagingException</a>()</code></dt><dd class="description"> Constructs a messaging exception with no detail message.</dd></dl></td></tr><tr><td class="right"><dl class="list"><dt class="synopsis"><code><a href="#MessagingException(String)">MessagingException</a>(String&nbsp;message)</code></dt><dd class="description"> Constructs a messaging exception with the specified detail message.</dd></dl></td></tr><tr><td class="right"><dl class="list"><dt class="synopsis"><code><a href="#MessagingException(String,Exception)">MessagingException</a>(String&nbsp;message, Exception&nbsp;exception)</code></dt><dd class="description"> Constructs a messaging exception with the specified exception and detail
- message.</dd></dl></td></tr></table></dd></dl><a name="summary-methods" id="summary-methods"/><dl class="table container"><dd><table class="class summary" border="1" width="100%"><tr class="table header"><td colspan="2"><h2 class="table header">Method Summary</h2></td></tr><tr><td class="left" valign="top"><code class="synopsis"> String</code></td><td class="right"><dl class="list"><dt class="synopsis"><code><a href="#getMessage()">getMessage</a>()</code></dt><dd class="description"> Returns the message, including the message from any nested exception.</dd></dl></td></tr><tr><td class="left" valign="top"><code class="synopsis"> Exception</code></td><td class="right"><dl class="list"><dt class="synopsis"><code><a href="#getNextException()">getNextException</a>()</code></dt><dd class="description"> Returns the next exception chained to this one.</dd></dl></td></tr><tr><td class="left" valign="top"><code class="synopsis"> void</code></td><td class="right"><dl class="list"><dt class="synopsis"><code><a href="#printStackTrace(PrintStream)">printStackTrace</a>(PrintStream&nbsp;out)</code></dt></dl></td></tr><tr><td class="left" valign="top"><code class="synopsis"> void</code></td><td class="right"><dl class="list"><dt class="synopsis"><code><a href="#printStackTrace(PrintWriter)">printStackTrace</a>(PrintWriter&nbsp;out)</code></dt></dl></td></tr><tr><td class="left" valign="top"><code class="synopsis"> boolean</code></td><td class="right"><dl class="list"><dt class="synopsis"><code><a href="#setNextException(Exception)">setNextException</a>(Exception&nbsp;exception)</code></dt><dd class="description"> Adds an exception to the end of the chain.</dd></dl></td></tr></table></dd></dl><a name="detail-constructors" id="detail-constructors"/><h2 class="section header">Constructor Details</h2><div class="section"><a name="MessagingException()" id="MessagingException()"/><div class="member detail outer"><h3 class="member detail name">MessagingException</h3><pre class="member detail synopsis">public MessagingException()</pre><blockquote class="member detail name"><div class="member detail description"> Constructs a messaging exception with no detail message.
-</div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div></blockquote></div><hr/><a name="MessagingException(String)" id="MessagingException(String)"/><div class="member detail outer"><h3 class="member detail name">MessagingException</h3><pre class="member detail synopsis">public MessagingException(String message)</pre><blockquote class="member detail name"><div class="member detail description"> Constructs a messaging exception with the specified detail message.
-</div><div class="parameter"><dl><dt class="header"><b>Parameters:</b></dt><dd class="item"><code class="name">message</code><span class="separator"> - </span><span class="description">the detail message</span></dd></dl></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div></blockquote></div><hr/><a name="MessagingException(String,Exception)" id="MessagingException(String,Exception)"/><div class="member detail outer"><h3 class="member detail name">MessagingException</h3><pre class="member detail synopsis">public MessagingException(String message,
-                          Exception exception)</pre><blockquote class="member detail name"><div class="member detail description"> Constructs a messaging exception with the specified exception and detail
- message.
-</div><div class="parameter"><dl><dt class="header"><b>Parameters:</b></dt><dd class="item"><code class="name">message</code><span class="separator"> - </span><span class="description">the detail message</span></dd><dd class="item"><code class="name">exception</code><span class="separator"> - </span><span class="description">the embedded exception</span></dd></dl></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div></blockquote></div></div><a name="detail-methods" id="detail-methods"/><h2 class="section header">Method Details</h2><div class="section"><a name="getMessage()" id="getMessage()"/><div class="member detail outer"><h3 class="member detail name">getMessage</h3><pre class="member detail synopsis">public String getMessage()</pre><blockquote class="member detail name"><div class="member detail description"> Returns the message, including the message from any nested exception.
-</div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div></blockquote></div><hr/><a name="getNextException()" id="getNextException()"/><div class="member detail outer"><h3 class="member detail name">getNextException</h3><pre class="member detail synopsis">public Exception getNextException()</pre><blockquote class="member detail name"><div class="member detail description"> Returns the next exception chained to this one.
- If the next exception is a messaging exception, the chain may extend 
- further.
-</div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div></blockquote></div><hr/><a name="printStackTrace(PrintStream)" id="printStackTrace(PrintStream)"/><div class="member detail outer"><h3 class="member detail name">printStackTrace</h3><pre class="member detail synopsis">public void printStackTrace(PrintStream out)</pre><blockquote class="member detail name"><div class="member detail description"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div></blockquote></div><hr/><a name="printStackTrace(PrintWriter)" id="printStackTrace(PrintWriter)"/><div class="member detail outer"><h3 class="member detail name">printStackTrace</h3><pre class="member detail synopsis">public void printStackTrace(PrintWriter out)</pre><blockquote class="member detail name"><div class="member detail description"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div></blockquote></div><hr/><a name="setNextException(Exception)" id="setNextException(Exception)"/><div class="member detail outer"><h3 class="member detail name">setNextException</h3><pre class="member detail synopsis">public boolean setNextException(Exception exception)</pre><blockquote class="member detail name"><div class="member detail description"> Adds an exception to the end of the chain.
- If the end is not a messaging exception, this exception cannot be added 
- to the end.
-</div><div class="parameter"><dl><dt class="header"><b>Parameters:</b></dt><dd class="item"><code class="name">exception</code><span class="separator"> - </span><span class="description">the new end of the exception chain</span></dd></dl></div><div class="member detail return list"><dl><dt class="member detail return header"><b>Returns:</b></dt><dd class="member detail return item">true if this exception was added, false otherwise.</dd></dl></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div></blockquote></div></div><p class="navbar bottom spacer"> </p><table class="navbar div bottom"><tr><td><div class="navbar div top"><span class="navbar item enabled"><a href="../../overview-summary.html">Overview</a></span> <span class="navbar item enabled"><a href="package-summary.html">Package</a></span> <span class="navbar item enabled"><a href="tree.html">Tree</a></span> <span class="navbar item enabled"><a href="../../alphaindex.html">Index</a></span> <span class="navbar item enabled"><a href="../../deprecated.html">Deprecated</a></span> <span class="navbar item enabled"><a href="../../about.html">About</a></span></div></td></tr></table></body></html>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!-- NewPage -->
+<html lang="en">
+<head>
+<!-- Generated by javadoc (version 1.7.0_25) on Fri Nov 22 19:03:11 GMT 2013 -->
+<title>MessagingException (GNU JavaMail API documentation)</title>
+<meta name="date" content="2013-11-22">
+<link rel="stylesheet" type="text/css" href="../../stylesheet.css" title="Style">
+</head>
+<body>
+<script type="text/javascript"><!--
+    if (location.href.indexOf('is-external=true') == -1) {
+        parent.document.title="MessagingException (GNU JavaMail API documentation)";
+    }
+//-->
+</script>
+<noscript>
+<div>JavaScript is disabled on your browser.</div>
+</noscript>
+<!-- ========= START OF TOP NAVBAR ======= -->
+<div class="topNav"><a name="navbar_top">
+<!--   -->
+</a><a href="#skip-navbar_top" title="Skip navigation links"></a><a name="navbar_top_firstrow">
+<!--   -->
+</a>
+<ul class="navList" title="Navigation">
+<li><a href="../../overview-summary.html">Overview</a></li>
+<li><a href="package-summary.html">Package</a></li>
+<li class="navBarCell1Rev">Class</li>
+<li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../deprecated-list.html">Deprecated</a></li>
+<li><a href="../../index-all.html">Index</a></li>
+<li><a href="../../help-doc.html">Help</a></li>
+</ul>
+</div>
+<div class="subNav">
+<ul class="navList">
+<li><a href="../../javax/mail/MessageRemovedException.html" title="class in javax.mail"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../javax/mail/MethodNotSupportedException.html" title="class in javax.mail"><span class="strong">Next Class</span></a></li>
+</ul>
+<ul class="navList">
+<li><a href="../../index.html?javax/mail/MessagingException.html" target="_top">Frames</a></li>
+<li><a href="MessagingException.html" target="_top">No Frames</a></li>
+</ul>
+<ul class="navList" id="allclasses_navbar_top">
+<li><a href="../../allclasses-noframe.html">All Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_top");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+</div>
+<div>
+<ul class="subNavList">
+<li>Summary:&nbsp;</li>
+<li>Nested&nbsp;|&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method_summary">Method</a></li>
+</ul>
+<ul class="subNavList">
+<li>Detail:&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method_detail">Method</a></li>
+</ul>
+</div>
+<a name="skip-navbar_top">
+<!--   -->
+</a></div>
+<!-- ========= END OF TOP NAVBAR ========= -->
+<!-- ======== START OF CLASS DATA ======== -->
+<div class="header">
+<div class="subTitle">javax.mail</div>
+<h2 title="Class MessagingException" class="title">Class MessagingException</h2>
+</div>
+<div class="contentContainer">
+<ul class="inheritance">
+<li>java.lang.Object</li>
+<li>
+<ul class="inheritance">
+<li>java.lang.Throwable</li>
+<li>
+<ul class="inheritance">
+<li>java.lang.Exception</li>
+<li>
+<ul class="inheritance">
+<li>javax.mail.MessagingException</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<div class="description">
+<ul class="blockList">
+<li class="blockList">
+<dl>
+<dt>All Implemented Interfaces:</dt>
+<dd>java.io.Serializable</dd>
+</dl>
+<dl>
+<dt>Direct Known Subclasses:</dt>
+<dd><a href="../../javax/mail/AuthenticationFailedException.html" title="class in javax.mail">AuthenticationFailedException</a>, <a href="../../javax/mail/FolderClosedException.html" title="class in javax.mail">FolderClosedException</a>, <a href="../../javax/mail/FolderNotFoundException.html" title="class in javax.mail">FolderNotFoundException</a>, <a href="../../javax/mail/IllegalWriteException.html" title="class in javax.mail">IllegalWriteException</a>, <a href="../../javax/mail/MessageRemovedException.html" title="class in javax.mail">MessageRemovedException</a>, <a href="../../javax/mail/MethodNotSupportedException.html" title="class in javax.mail">MethodNotSupportedException</a>, <a href="../../javax/mail/NoSuchProviderException.html" title="class in javax.mail">NoSuchProviderException</a>, <a href="../../javax/mail/internet/ParseException.html" title="class in javax.mail.internet">ParseException</a>, <a href="../../javax/mail/ReadOnlyFolderException.html" title="class in javax.mail">ReadOnlyFolderException</a>, <a href="../../javax/mail/search/SearchException.html" title="class in javax.mail.search">SearchException</a>, <a href="../../javax/mail/SendFailedException.html" title="class in javax.mail">SendFailedException</a>, <a href="../../javax/mail/StoreClosedException.html" title="class in javax.mail">StoreClosedException</a></dd>
+</dl>
+<hr>
+<br>
+<pre>public class <span class="strong">MessagingException</span>
+extends java.lang.Exception</pre>
+<div class="block">A general messaging exception.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../serialized-form.html#javax.mail.MessagingException">Serialized Form</a></dd></dl>
+</li>
+</ul>
+</div>
+<div class="summary">
+<ul class="blockList">
+<li class="blockList">
+<!-- ======== CONSTRUCTOR SUMMARY ======== -->
+<ul class="blockList">
+<li class="blockList"><a name="constructor_summary">
+<!--   -->
+</a>
+<h3>Constructor Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Constructor Summary table, listing constructors, and an explanation">
+<caption><span>Constructors</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colOne" scope="col">Constructor and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colOne"><code><strong><a href="../../javax/mail/MessagingException.html#MessagingException()">MessagingException</a></strong>()</code>
+<div class="block">Constructs a messaging exception with no detail message.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colOne"><code><strong><a href="../../javax/mail/MessagingException.html#MessagingException(java.lang.String)">MessagingException</a></strong>(java.lang.String&nbsp;message)</code>
+<div class="block">Constructs a messaging exception with the specified detail message.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colOne"><code><strong><a href="../../javax/mail/MessagingException.html#MessagingException(java.lang.String, java.lang.Exception)">MessagingException</a></strong>(java.lang.String&nbsp;message,
+                  java.lang.Exception&nbsp;exception)</code>
+<div class="block">Constructs a messaging exception with the specified exception and detail
+ message.</div>
+</td>
+</tr>
+</table>
+</li>
+</ul>
+<!-- ========== METHOD SUMMARY =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="method_summary">
+<!--   -->
+</a>
+<h3>Method Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Method Summary table, listing methods, and an explanation">
+<caption><span>Methods</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>java.lang.Throwable</code></td>
+<td class="colLast"><code><strong><a href="../../javax/mail/MessagingException.html#getCause()">getCause</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>java.lang.Exception</code></td>
+<td class="colLast"><code><strong><a href="../../javax/mail/MessagingException.html#getNextException()">getNextException</a></strong>()</code>
+<div class="block">Returns the next exception chained to this one.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><code><strong><a href="../../javax/mail/MessagingException.html#setNextException(java.lang.Exception)">setNextException</a></strong>(java.lang.Exception&nbsp;exception)</code>
+<div class="block">Adds an exception to the end of the chain.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>java.lang.String</code></td>
+<td class="colLast"><code><strong><a href="../../javax/mail/MessagingException.html#toString()">toString</a></strong>()</code>&nbsp;</td>
+</tr>
+</table>
+<ul class="blockList">
+<li class="blockList"><a name="methods_inherited_from_class_java.lang.Throwable">
+<!--   -->
+</a>
+<h3>Methods inherited from class&nbsp;java.lang.Throwable</h3>
+<code>addSuppressed, fillInStackTrace, getLocalizedMessage, getMessage, getStackTrace, getSuppressed, initCause, printStackTrace, printStackTrace, printStackTrace, setStackTrace</code></li>
+</ul>
+<ul class="blockList">
+<li class="blockList"><a name="methods_inherited_from_class_java.lang.Object">
+<!--   -->
+</a>
+<h3>Methods inherited from class&nbsp;java.lang.Object</h3>
+<code>clone, equals, finalize, getClass, hashCode, notify, notifyAll, wait, wait, wait</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="details">
+<ul class="blockList">
+<li class="blockList">
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+<ul class="blockList">
+<li class="blockList"><a name="constructor_detail">
+<!--   -->
+</a>
+<h3>Constructor Detail</h3>
+<a name="MessagingException()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>MessagingException</h4>
+<pre>public&nbsp;MessagingException()</pre>
+<div class="block">Constructs a messaging exception with no detail message.</div>
+</li>
+</ul>
+<a name="MessagingException(java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>MessagingException</h4>
+<pre>public&nbsp;MessagingException(java.lang.String&nbsp;message)</pre>
+<div class="block">Constructs a messaging exception with the specified detail message.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>message</code> - the detail message</dd></dl>
+</li>
+</ul>
+<a name="MessagingException(java.lang.String, java.lang.Exception)">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>MessagingException</h4>
+<pre>public&nbsp;MessagingException(java.lang.String&nbsp;message,
+                  java.lang.Exception&nbsp;exception)</pre>
+<div class="block">Constructs a messaging exception with the specified exception and detail
+ message.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>message</code> - the detail message</dd><dd><code>exception</code> - the embedded exception</dd></dl>
+</li>
+</ul>
+</li>
+</ul>
+<!-- ============ METHOD DETAIL ========== -->
+<ul class="blockList">
+<li class="blockList"><a name="method_detail">
+<!--   -->
+</a>
+<h3>Method Detail</h3>
+<a name="getNextException()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getNextException</h4>
+<pre>public&nbsp;java.lang.Exception&nbsp;getNextException()</pre>
+<div class="block">Returns the next exception chained to this one.
+ If the next exception is a messaging exception, the chain may extend
+ further.</div>
+</li>
+</ul>
+<a name="getCause()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getCause</h4>
+<pre>public&nbsp;java.lang.Throwable&nbsp;getCause()</pre>
+<dl>
+<dt><strong>Overrides:</strong></dt>
+<dd><code>getCause</code>&nbsp;in class&nbsp;<code>java.lang.Throwable</code></dd>
+</dl>
+</li>
+</ul>
+<a name="setNextException(java.lang.Exception)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setNextException</h4>
+<pre>public&nbsp;boolean&nbsp;setNextException(java.lang.Exception&nbsp;exception)</pre>
+<div class="block">Adds an exception to the end of the chain.
+ If the end is not a messaging exception, this exception cannot be added
+ to the end.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>exception</code> - the new end of the exception chain</dd>
+<dt><span class="strong">Returns:</span></dt><dd>true if this exception was added, false otherwise.</dd></dl>
+</li>
+</ul>
+<a name="toString()">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>toString</h4>
+<pre>public&nbsp;java.lang.String&nbsp;toString()</pre>
+<dl>
+<dt><strong>Overrides:</strong></dt>
+<dd><code>toString</code>&nbsp;in class&nbsp;<code>java.lang.Throwable</code></dd>
+</dl>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<!-- ========= END OF CLASS DATA ========= -->
+<!-- ======= START OF BOTTOM NAVBAR ====== -->
+<div class="bottomNav"><a name="navbar_bottom">
+<!--   -->
+</a><a href="#skip-navbar_bottom" title="Skip navigation links"></a><a name="navbar_bottom_firstrow">
+<!--   -->
+</a>
+<ul class="navList" title="Navigation">
+<li><a href="../../overview-summary.html">Overview</a></li>
+<li><a href="package-summary.html">Package</a></li>
+<li class="navBarCell1Rev">Class</li>
+<li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../deprecated-list.html">Deprecated</a></li>
+<li><a href="../../index-all.html">Index</a></li>
+<li><a href="../../help-doc.html">Help</a></li>
+</ul>
+</div>
+<div class="subNav">
+<ul class="navList">
+<li><a href="../../javax/mail/MessageRemovedException.html" title="class in javax.mail"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../javax/mail/MethodNotSupportedException.html" title="class in javax.mail"><span class="strong">Next Class</span></a></li>
+</ul>
+<ul class="navList">
+<li><a href="../../index.html?javax/mail/MessagingException.html" target="_top">Frames</a></li>
+<li><a href="MessagingException.html" target="_top">No Frames</a></li>
+</ul>
+<ul class="navList" id="allclasses_navbar_bottom">
+<li><a href="../../allclasses-noframe.html">All Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_bottom");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+</div>
+<div>
+<ul class="subNavList">
+<li>Summary:&nbsp;</li>
+<li>Nested&nbsp;|&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method_summary">Method</a></li>
+</ul>
+<ul class="subNavList">
+<li>Detail:&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method_detail">Method</a></li>
+</ul>
+</div>
+<a name="skip-navbar_bottom">
+<!--   -->
+</a></div>
+<!-- ======== END OF BOTTOM NAVBAR ======= -->
+</body>
+</html>

@@ -1,24 +1,389 @@
-<?xml version="1.0" encoding="MacRoman"?>
-<!DOCTYPE html PUBLIC "-//gnu.org///DTD XHTML 1.1 plus Target 1.0//EN" "../../../resources/xhtml11-target10.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head><title>HeaderTokenizer.Token</title><script src="../../../resources/gjdoc.js" type="text/javascript"><!-- this comment required for konqueror 3.2.2 --></script><meta http-equiv="Content-Type" content="text/html; charset=MacRoman"/><meta name="generator" content="GNU Gjdoc Standard Doclet"/><meta name="keywords" content="javax.mail.internet.HeaderTokenizer.Token class"/><meta name="keywords" content="ATOM"/><meta name="keywords" content="QUOTEDSTRING"/><meta name="keywords" content="COMMENT"/><meta name="keywords" content="EOF"/><meta name="keywords" content="getType()"/><meta name="keywords" content="getValue()"/><link rel="stylesheet" type="text/css" href="../../../resources/gjdochtml-clean-layout.css" title="GNU Clean"/><link rel="stylesheet" type="text/css" href="../../../resources/gjdochtml-clean-color1.css" title="GNU Clean"/></head><body class="content class" onload="if(parent.contentPageLoaded)parent.contentPageLoaded(document.title)"><table class="navbar div top"><tr><td class="navbar div top"><div class="navbar div top"><span class="navbar item enabled"><a href="../../../overview-summary.html">Overview</a></span> <span class="navbar item enabled"><a href="package-summary.html">Package</a></span> <span class="navbar item enabled"><a href="tree.html">Tree</a></span> <span class="navbar item enabled"><a href="../../../alphaindex.html">Index</a></span> <span class="navbar item enabled"><a href="../../../deprecated.html">Deprecated</a></span> <span class="navbar item enabled"><a href="../../../about.html">About</a></span></div></td></tr><tr><td class="navi"><a href="../../../javax/mail/internet/HeaderTokenizer.html">Prev Class</a> | <a href="../../../javax/mail/internet/InternetAddress.html">Next Class</a></td><td class="navi"><a href="../../../index.html" title="Show in a frameset" target="_top">Frames</a> | <a href="HeaderTokenizer.Token.html" title="Show without frames" target="_top">No Frames</a> </td></tr><tr><td class="navi">Summary: Nested | <a href="#summary-fields">Field</a> | <a href="#summary-methods">Method</a> | <a href="#summary-constructors">Constr</a></td><td class="navi">Detail: Nested | <a href="#detail-fields">Field</a> | <a href="#detail-methods">Method</a> | <a href="#detail-constructors">Constr</a></td></tr></table><div class="class title outer"><h3 class="class title-package">javax.mail.internet</h3><h1 class="class title-class">Class HeaderTokenizer.Token</h1></div><div class="class inheritance-tree"><ul class="inheritance 0"><li class="inheritance 0"><code>java.lang.Object</code></li><li><ul class="inheritance 1"><li class="inheritance 1"><code>javax.mail.internet.HeaderTokenizer.Token</code></li><li></li></ul></li></ul></div><dl class="class enclosing"><dt class="class enclosing header"><b>Enclosing Class:</b></dt><dd class="class enclosing item"><a href="../../../javax/mail/internet/HeaderTokenizer.html" title="Class in javax.mail.internet">HeaderTokenizer</a></dd></dl><hr/><div class="class synopsis outer"><div class="class synopsis declaration"><code>public static class <b class="class synopsis name">HeaderTokenizer.Token</b></code></div><div class="class synopsis superclass"><code>extends java.lang.Object</code></div></div><hr/><div class="class description"> A token returned by the lexer. These tokens are specified in RFC 822
- and MIME.
-</div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><a name="summary-fields" id="summary-fields"/><dl class="table container"><dd><table class="class summary" border="1" width="100%"><tr class="table header"><td colspan="2"><h2 class="table header">Field Summary</h2></td></tr><tr><td class="left" valign="top"><code class="synopsis">static int</code></td><td class="right"><dl class="list"><dt class="synopsis"><code><a href="#ATOM">ATOM</a></code></dt><dd class="description"> An ATOM.</dd></dl></td></tr><tr><td class="left" valign="top"><code class="synopsis">static int</code></td><td class="right"><dl class="list"><dt class="synopsis"><code><a href="#COMMENT">COMMENT</a></code></dt><dd class="description"> A comment.</dd></dl></td></tr><tr><td class="left" valign="top"><code class="synopsis">static int</code></td><td class="right"><dl class="list"><dt class="synopsis"><code><a href="#EOF">EOF</a></code></dt><dd class="description"> The end of the input.</dd></dl></td></tr><tr><td class="left" valign="top"><code class="synopsis">static int</code></td><td class="right"><dl class="list"><dt class="synopsis"><code><a href="#QUOTEDSTRING">QUOTEDSTRING</a></code></dt><dd class="description"> A quoted-string.</dd></dl></td></tr></table></dd></dl><a name="summary-constructors" id="summary-constructors"/><dl class="table container"><dd><table class="class summary" border="1" width="100%"><tr class="table header"><td colspan="2"><h2 class="table header">Constructor Summary</h2></td></tr><tr><td class="right"><dl class="list"><dt class="synopsis"><code><a href="#Token(int,String)">Token</a>(int&nbsp;type, String&nbsp;value)</code></dt><dd class="description"> Constructor.</dd></dl></td></tr></table></dd></dl><a name="summary-methods" id="summary-methods"/><dl class="table container"><dd><table class="class summary" border="1" width="100%"><tr class="table header"><td colspan="2"><h2 class="table header">Method Summary</h2></td></tr><tr><td class="left" valign="top"><code class="synopsis"> int</code></td><td class="right"><dl class="list"><dt class="synopsis"><code><a href="#getType()">getType</a>()</code></dt><dd class="description"> Returns the token type.</dd></dl></td></tr><tr><td class="left" valign="top"><code class="synopsis"> String</code></td><td class="right"><dl class="list"><dt class="synopsis"><code><a href="#getValue()">getValue</a>()</code></dt><dd class="description"> Returns the value of the token.</dd></dl></td></tr></table></dd></dl><a name="detail-fields" id="detail-fields"/><h2 class="section header">Field Details</h2><div class="section"><a name="ATOM" id="ATOM"/><div class="member detail outer"><h3 class="member detail name">ATOM</h3><pre class="member detail synopsis">public static final int ATOM</pre><blockquote class="member detail name"><div class="member detail description"> An ATOM.
-</div><div class="member detail thrown list"><dl><dt class="member detail thrown header"><b>Field Value:</b></dt><dd class="member detail thrown item">-1</dd></dl></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div></blockquote></div><hr/><a name="COMMENT" id="COMMENT"/><div class="member detail outer"><h3 class="member detail name">COMMENT</h3><pre class="member detail synopsis">public static final int COMMENT</pre><blockquote class="member detail name"><div class="member detail description"> A comment.
- The value of this token is the comment string without the comment 
- start and end symbols.
-</div><div class="member detail thrown list"><dl><dt class="member detail thrown header"><b>Field Value:</b></dt><dd class="member detail thrown item">-3</dd></dl></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div></blockquote></div><hr/><a name="EOF" id="EOF"/><div class="member detail outer"><h3 class="member detail name">EOF</h3><pre class="member detail synopsis">public static final int EOF</pre><blockquote class="member detail name"><div class="member detail description"> The end of the input.
-</div><div class="member detail thrown list"><dl><dt class="member detail thrown header"><b>Field Value:</b></dt><dd class="member detail thrown item">-4</dd></dl></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div></blockquote></div><hr/><a name="QUOTEDSTRING" id="QUOTEDSTRING"/><div class="member detail outer"><h3 class="member detail name">QUOTEDSTRING</h3><pre class="member detail synopsis">public static final int QUOTEDSTRING</pre><blockquote class="member detail name"><div class="member detail description"> A quoted-string.
- The value of this token is the string without the quotes.
-</div><div class="member detail thrown list"><dl><dt class="member detail thrown header"><b>Field Value:</b></dt><dd class="member detail thrown item">-2</dd></dl></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div></blockquote></div></div><a name="detail-constructors" id="detail-constructors"/><h2 class="section header">Constructor Details</h2><div class="section"><a name="Token(int,String)" id="Token(int,String)"/><div class="member detail outer"><h3 class="member detail name">Token</h3><pre class="member detail synopsis">public Token(int type,
-             String value)</pre><blockquote class="member detail name"><div class="member detail description"> Constructor.
-</div><div class="parameter"><dl><dt class="header"><b>Parameters:</b></dt><dd class="item"><code class="name">type</code><span class="separator"> - </span><span class="description">the token type</span></dd><dd class="item"><code class="name">value</code><span class="separator"> - </span><span class="description">the token value</span></dd></dl></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div></blockquote></div></div><a name="detail-methods" id="detail-methods"/><h2 class="section header">Method Details</h2><div class="section"><a name="getType()" id="getType()"/><div class="member detail outer"><h3 class="member detail name">getType</h3><pre class="member detail synopsis">public int getType()</pre><blockquote class="member detail name"><div class="member detail description"> Returns the token type.
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!-- NewPage -->
+<html lang="en">
+<head>
+<!-- Generated by javadoc (version 1.7.0_25) on Fri Nov 22 19:03:11 GMT 2013 -->
+<title>HeaderTokenizer.Token (GNU JavaMail API documentation)</title>
+<meta name="date" content="2013-11-22">
+<link rel="stylesheet" type="text/css" href="../../../stylesheet.css" title="Style">
+</head>
+<body>
+<script type="text/javascript"><!--
+    if (location.href.indexOf('is-external=true') == -1) {
+        parent.document.title="HeaderTokenizer.Token (GNU JavaMail API documentation)";
+    }
+//-->
+</script>
+<noscript>
+<div>JavaScript is disabled on your browser.</div>
+</noscript>
+<!-- ========= START OF TOP NAVBAR ======= -->
+<div class="topNav"><a name="navbar_top">
+<!--   -->
+</a><a href="#skip-navbar_top" title="Skip navigation links"></a><a name="navbar_top_firstrow">
+<!--   -->
+</a>
+<ul class="navList" title="Navigation">
+<li><a href="../../../overview-summary.html">Overview</a></li>
+<li><a href="package-summary.html">Package</a></li>
+<li class="navBarCell1Rev">Class</li>
+<li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../deprecated-list.html">Deprecated</a></li>
+<li><a href="../../../index-all.html">Index</a></li>
+<li><a href="../../../help-doc.html">Help</a></li>
+</ul>
+</div>
+<div class="subNav">
+<ul class="navList">
+<li><a href="../../../javax/mail/internet/HeaderTokenizer.html" title="class in javax.mail.internet"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../../javax/mail/internet/InternetAddress.html" title="class in javax.mail.internet"><span class="strong">Next Class</span></a></li>
+</ul>
+<ul class="navList">
+<li><a href="../../../index.html?javax/mail/internet/HeaderTokenizer.Token.html" target="_top">Frames</a></li>
+<li><a href="HeaderTokenizer.Token.html" target="_top">No Frames</a></li>
+</ul>
+<ul class="navList" id="allclasses_navbar_top">
+<li><a href="../../../allclasses-noframe.html">All Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_top");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+</div>
+<div>
+<ul class="subNavList">
+<li>Summary:&nbsp;</li>
+<li>Nested&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
+<li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method_summary">Method</a></li>
+</ul>
+<ul class="subNavList">
+<li>Detail:&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
+<li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method_detail">Method</a></li>
+</ul>
+</div>
+<a name="skip-navbar_top">
+<!--   -->
+</a></div>
+<!-- ========= END OF TOP NAVBAR ========= -->
+<!-- ======== START OF CLASS DATA ======== -->
+<div class="header">
+<div class="subTitle">javax.mail.internet</div>
+<h2 title="Class HeaderTokenizer.Token" class="title">Class HeaderTokenizer.Token</h2>
+</div>
+<div class="contentContainer">
+<ul class="inheritance">
+<li>java.lang.Object</li>
+<li>
+<ul class="inheritance">
+<li>javax.mail.internet.HeaderTokenizer.Token</li>
+</ul>
+</li>
+</ul>
+<div class="description">
+<ul class="blockList">
+<li class="blockList">
+<dl>
+<dt>Enclosing class:</dt>
+<dd><a href="../../../javax/mail/internet/HeaderTokenizer.html" title="class in javax.mail.internet">HeaderTokenizer</a></dd>
+</dl>
+<hr>
+<br>
+<pre>public static class <span class="strong">HeaderTokenizer.Token</span>
+extends java.lang.Object</pre>
+<div class="block">A token returned by the lexer. These tokens are specified in RFC 822
+ and MIME.</div>
+</li>
+</ul>
+</div>
+<div class="summary">
+<ul class="blockList">
+<li class="blockList">
+<!-- =========== FIELD SUMMARY =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_summary">
+<!--   -->
+</a>
+<h3>Field Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Field Summary table, listing fields, and an explanation">
+<caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><strong><a href="../../../javax/mail/internet/HeaderTokenizer.Token.html#ATOM">ATOM</a></strong></code>
+<div class="block">An ATOM.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><strong><a href="../../../javax/mail/internet/HeaderTokenizer.Token.html#COMMENT">COMMENT</a></strong></code>
+<div class="block">A comment.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><strong><a href="../../../javax/mail/internet/HeaderTokenizer.Token.html#EOF">EOF</a></strong></code>
+<div class="block">The end of the input.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><strong><a href="../../../javax/mail/internet/HeaderTokenizer.Token.html#QUOTEDSTRING">QUOTEDSTRING</a></strong></code>
+<div class="block">A quoted-string.</div>
+</td>
+</tr>
+</table>
+</li>
+</ul>
+<!-- ======== CONSTRUCTOR SUMMARY ======== -->
+<ul class="blockList">
+<li class="blockList"><a name="constructor_summary">
+<!--   -->
+</a>
+<h3>Constructor Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Constructor Summary table, listing constructors, and an explanation">
+<caption><span>Constructors</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colOne" scope="col">Constructor and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colOne"><code><strong><a href="../../../javax/mail/internet/HeaderTokenizer.Token.html#HeaderTokenizer.Token(int, java.lang.String)">HeaderTokenizer.Token</a></strong>(int&nbsp;type,
+                     java.lang.String&nbsp;value)</code>
+<div class="block">Constructor.</div>
+</td>
+</tr>
+</table>
+</li>
+</ul>
+<!-- ========== METHOD SUMMARY =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="method_summary">
+<!--   -->
+</a>
+<h3>Method Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Method Summary table, listing methods, and an explanation">
+<caption><span>Methods</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>int</code></td>
+<td class="colLast"><code><strong><a href="../../../javax/mail/internet/HeaderTokenizer.Token.html#getType()">getType</a></strong>()</code>
+<div class="block">Returns the token type.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>java.lang.String</code></td>
+<td class="colLast"><code><strong><a href="../../../javax/mail/internet/HeaderTokenizer.Token.html#getValue()">getValue</a></strong>()</code>
+<div class="block">Returns the value of the token.</div>
+</td>
+</tr>
+</table>
+<ul class="blockList">
+<li class="blockList"><a name="methods_inherited_from_class_java.lang.Object">
+<!--   -->
+</a>
+<h3>Methods inherited from class&nbsp;java.lang.Object</h3>
+<code>clone, equals, finalize, getClass, hashCode, notify, notifyAll, toString, wait, wait, wait</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="details">
+<ul class="blockList">
+<li class="blockList">
+<!-- ============ FIELD DETAIL =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_detail">
+<!--   -->
+</a>
+<h3>Field Detail</h3>
+<a name="ATOM">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ATOM</h4>
+<pre>public static final&nbsp;int ATOM</pre>
+<div class="block">An ATOM.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../constant-values.html#javax.mail.internet.HeaderTokenizer.Token.ATOM">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="QUOTEDSTRING">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>QUOTEDSTRING</h4>
+<pre>public static final&nbsp;int QUOTEDSTRING</pre>
+<div class="block">A quoted-string.
+ The value of this token is the string without the quotes.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../constant-values.html#javax.mail.internet.HeaderTokenizer.Token.QUOTEDSTRING">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="COMMENT">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>COMMENT</h4>
+<pre>public static final&nbsp;int COMMENT</pre>
+<div class="block">A comment.
+ The value of this token is the comment string without the comment
+ start and end symbols.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../constant-values.html#javax.mail.internet.HeaderTokenizer.Token.COMMENT">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="EOF">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>EOF</h4>
+<pre>public static final&nbsp;int EOF</pre>
+<div class="block">The end of the input.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../constant-values.html#javax.mail.internet.HeaderTokenizer.Token.EOF">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+</li>
+</ul>
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+<ul class="blockList">
+<li class="blockList"><a name="constructor_detail">
+<!--   -->
+</a>
+<h3>Constructor Detail</h3>
+<a name="HeaderTokenizer.Token(int, java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>HeaderTokenizer.Token</h4>
+<pre>public&nbsp;HeaderTokenizer.Token(int&nbsp;type,
+                     java.lang.String&nbsp;value)</pre>
+<div class="block">Constructor.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>type</code> - the token type</dd><dd><code>value</code> - the token value</dd></dl>
+</li>
+</ul>
+</li>
+</ul>
+<!-- ============ METHOD DETAIL ========== -->
+<ul class="blockList">
+<li class="blockList"><a name="method_detail">
+<!--   -->
+</a>
+<h3>Method Detail</h3>
+<a name="getType()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getType</h4>
+<pre>public&nbsp;int&nbsp;getType()</pre>
+<div class="block">Returns the token type.
  If the token is a delimiter or a control character,
  the type is the integer value of that character.
  Otherwise, its value is one of the following:
- <ul><li>ATOM: a sequence of ASCII characters delimited by either 
+ <ul>
+ <li>ATOM: a sequence of ASCII characters delimited by either
  SPACE, CTL, '(', '"' or the specified SPECIALS
- </li><li>QUOTEDSTRING: a sequence of ASCII characters within quotes
- </li><li>COMMENT: a sequence of ASCII characters within '(' and ')'
- </li><li>EOF: the end of the header
- </li></ul>
-</div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div></blockquote></div><hr/><a name="getValue()" id="getValue()"/><div class="member detail outer"><h3 class="member detail name">getValue</h3><pre class="member detail synopsis">public String getValue()</pre><blockquote class="member detail name"><div class="member detail description"> Returns the value of the token.
-</div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div></blockquote></div></div><p class="navbar bottom spacer"> </p><table class="navbar div bottom"><tr><td><div class="navbar div top"><span class="navbar item enabled"><a href="../../../overview-summary.html">Overview</a></span> <span class="navbar item enabled"><a href="package-summary.html">Package</a></span> <span class="navbar item enabled"><a href="tree.html">Tree</a></span> <span class="navbar item enabled"><a href="../../../alphaindex.html">Index</a></span> <span class="navbar item enabled"><a href="../../../deprecated.html">Deprecated</a></span> <span class="navbar item enabled"><a href="../../../about.html">About</a></span></div></td></tr></table></body></html>
+ <li>QUOTEDSTRING: a sequence of ASCII characters within quotes
+ <li>COMMENT: a sequence of ASCII characters within '(' and ')'
+ <li>EOF: the end of the header
+ </ul></div>
+</li>
+</ul>
+<a name="getValue()">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>getValue</h4>
+<pre>public&nbsp;java.lang.String&nbsp;getValue()</pre>
+<div class="block">Returns the value of the token.</div>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<!-- ========= END OF CLASS DATA ========= -->
+<!-- ======= START OF BOTTOM NAVBAR ====== -->
+<div class="bottomNav"><a name="navbar_bottom">
+<!--   -->
+</a><a href="#skip-navbar_bottom" title="Skip navigation links"></a><a name="navbar_bottom_firstrow">
+<!--   -->
+</a>
+<ul class="navList" title="Navigation">
+<li><a href="../../../overview-summary.html">Overview</a></li>
+<li><a href="package-summary.html">Package</a></li>
+<li class="navBarCell1Rev">Class</li>
+<li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../deprecated-list.html">Deprecated</a></li>
+<li><a href="../../../index-all.html">Index</a></li>
+<li><a href="../../../help-doc.html">Help</a></li>
+</ul>
+</div>
+<div class="subNav">
+<ul class="navList">
+<li><a href="../../../javax/mail/internet/HeaderTokenizer.html" title="class in javax.mail.internet"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../../javax/mail/internet/InternetAddress.html" title="class in javax.mail.internet"><span class="strong">Next Class</span></a></li>
+</ul>
+<ul class="navList">
+<li><a href="../../../index.html?javax/mail/internet/HeaderTokenizer.Token.html" target="_top">Frames</a></li>
+<li><a href="HeaderTokenizer.Token.html" target="_top">No Frames</a></li>
+</ul>
+<ul class="navList" id="allclasses_navbar_bottom">
+<li><a href="../../../allclasses-noframe.html">All Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_bottom");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+</div>
+<div>
+<ul class="subNavList">
+<li>Summary:&nbsp;</li>
+<li>Nested&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
+<li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method_summary">Method</a></li>
+</ul>
+<ul class="subNavList">
+<li>Detail:&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
+<li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method_detail">Method</a></li>
+</ul>
+</div>
+<a name="skip-navbar_bottom">
+<!--   -->
+</a></div>
+<!-- ======== END OF BOTTOM NAVBAR ======= -->
+</body>
+</html>

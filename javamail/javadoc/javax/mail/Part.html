@@ -1,109 +1,850 @@
-<?xml version="1.0" encoding="MacRoman"?>
-<!DOCTYPE html PUBLIC "-//gnu.org///DTD XHTML 1.1 plus Target 1.0//EN" "../../resources/xhtml11-target10.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head><title>Part</title><script src="../../resources/gjdoc.js" type="text/javascript"><!-- this comment required for konqueror 3.2.2 --></script><meta http-equiv="Content-Type" content="text/html; charset=MacRoman"/><meta name="generator" content="GNU Gjdoc Standard Doclet"/><meta name="keywords" content="javax.mail.Part class"/><meta name="keywords" content="ATTACHMENT"/><meta name="keywords" content="INLINE"/><meta name="keywords" content="getSize()"/><meta name="keywords" content="getLineCount()"/><meta name="keywords" content="getContentType()"/><meta name="keywords" content="isMimeType()"/><meta name="keywords" content="getDisposition()"/><meta name="keywords" content="setDisposition()"/><meta name="keywords" content="getDescription()"/><meta name="keywords" content="setDescription()"/><meta name="keywords" content="getFileName()"/><meta name="keywords" content="setFileName()"/><meta name="keywords" content="getInputStream()"/><meta name="keywords" content="getDataHandler()"/><meta name="keywords" content="getContent()"/><meta name="keywords" content="setDataHandler()"/><meta name="keywords" content="setContent()"/><meta name="keywords" content="setText()"/><meta name="keywords" content="writeTo()"/><meta name="keywords" content="getHeader()"/><meta name="keywords" content="setHeader()"/><meta name="keywords" content="addHeader()"/><meta name="keywords" content="removeHeader()"/><meta name="keywords" content="getAllHeaders()"/><meta name="keywords" content="getMatchingHeaders()"/><meta name="keywords" content="getNonMatchingHeaders()"/><link rel="stylesheet" type="text/css" href="../../resources/gjdochtml-clean-layout.css" title="GNU Clean"/><link rel="stylesheet" type="text/css" href="../../resources/gjdochtml-clean-color1.css" title="GNU Clean"/></head><body class="content class" onload="if(parent.contentPageLoaded)parent.contentPageLoaded(document.title)"><table class="navbar div top"><tr><td class="navbar div top"><div class="navbar div top"><span class="navbar item enabled"><a href="../../overview-summary.html">Overview</a></span> <span class="navbar item enabled"><a href="package-summary.html">Package</a></span> <span class="navbar item enabled"><a href="tree.html">Tree</a></span> <span class="navbar item enabled"><a href="../../alphaindex.html">Index</a></span> <span class="navbar item enabled"><a href="../../deprecated.html">Deprecated</a></span> <span class="navbar item enabled"><a href="../../about.html">About</a></span></div></td></tr><tr><td class="navi"><a href="../../javax/mail/NoSuchProviderException.html">Prev Class</a> | <a href="../../javax/mail/PasswordAuthentication.html">Next Class</a></td><td class="navi"><a href="../../index.html" title="Show in a frameset" target="_top">Frames</a> | <a href="Part.html" title="Show without frames" target="_top">No Frames</a> </td></tr><tr><td class="navi">Summary: Nested | <a href="#summary-fields">Field</a> | <a href="#summary-methods">Method</a> | Constr</td><td class="navi">Detail: Nested | <a href="#detail-fields">Field</a> | <a href="#detail-methods">Method</a> | Constr</td></tr></table><div class="class title outer"><h3 class="class title-package">javax.mail</h3><h1 class="class title-class">Interface Part</h1></div><dl class="class knownimplementing"><dt class="header"><b>Known Subinterfaces:</b></dt><dd class="item"><a href="../../javax/mail/internet/MimePart.html" title="Interface in javax.mail.internet">MimePart</a></dd></dl><dl class="class knownimplementing"><dt class="header"><b>Known Implementing Classes:</b></dt><dd class="item"><a href="../../javax/mail/BodyPart.html" title="Class in javax.mail">BodyPart</a>, <a href="../../gnu/mail/providers/imap/IMAPBodyPart.html" title="Class in gnu.mail.providers.imap">IMAPBodyPart</a>, <a href="../../gnu/mail/providers/imap/IMAPMessage.html" title="Class in gnu.mail.providers.imap">IMAPMessage</a>, <a href="../../gnu/mail/providers/maildir/MaildirMessage.html" title="Class in gnu.mail.providers.maildir">MaildirMessage</a>, <a href="../../gnu/mail/providers/mbox/MboxMessage.html" title="Class in gnu.mail.providers.mbox">MboxMessage</a>, <a href="../../javax/mail/Message.html" title="Class in javax.mail">Message</a>, <a href="../../javax/mail/internet/MimeBodyPart.html" title="Class in javax.mail.internet">MimeBodyPart</a>, <a href="../../javax/mail/internet/MimeMessage.html" title="Class in javax.mail.internet">MimeMessage</a>, <a href="../../gnu/mail/providers/nntp/NNTPMessage.html" title="Class in gnu.mail.providers.nntp">NNTPMessage</a>, <a href="../../gnu/mail/providers/pop3/POP3Message.html" title="Class in gnu.mail.providers.pop3">POP3Message</a></dd></dl><hr/><div class="class synopsis outer"><div class="class synopsis declaration"><code>public interface <b class="class synopsis name">Part</b></code></div></div><hr/><div class="class description"> A part consists of a set of attributes and a content. Some of the
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!-- NewPage -->
+<html lang="en">
+<head>
+<!-- Generated by javadoc (version 1.7.0_25) on Fri Nov 22 19:03:11 GMT 2013 -->
+<title>Part (GNU JavaMail API documentation)</title>
+<meta name="date" content="2013-11-22">
+<link rel="stylesheet" type="text/css" href="../../stylesheet.css" title="Style">
+</head>
+<body>
+<script type="text/javascript"><!--
+    if (location.href.indexOf('is-external=true') == -1) {
+        parent.document.title="Part (GNU JavaMail API documentation)";
+    }
+//-->
+</script>
+<noscript>
+<div>JavaScript is disabled on your browser.</div>
+</noscript>
+<!-- ========= START OF TOP NAVBAR ======= -->
+<div class="topNav"><a name="navbar_top">
+<!--   -->
+</a><a href="#skip-navbar_top" title="Skip navigation links"></a><a name="navbar_top_firstrow">
+<!--   -->
+</a>
+<ul class="navList" title="Navigation">
+<li><a href="../../overview-summary.html">Overview</a></li>
+<li><a href="package-summary.html">Package</a></li>
+<li class="navBarCell1Rev">Class</li>
+<li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../deprecated-list.html">Deprecated</a></li>
+<li><a href="../../index-all.html">Index</a></li>
+<li><a href="../../help-doc.html">Help</a></li>
+</ul>
+</div>
+<div class="subNav">
+<ul class="navList">
+<li><a href="../../javax/mail/NoSuchProviderException.html" title="class in javax.mail"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../javax/mail/PasswordAuthentication.html" title="class in javax.mail"><span class="strong">Next Class</span></a></li>
+</ul>
+<ul class="navList">
+<li><a href="../../index.html?javax/mail/Part.html" target="_top">Frames</a></li>
+<li><a href="Part.html" target="_top">No Frames</a></li>
+</ul>
+<ul class="navList" id="allclasses_navbar_top">
+<li><a href="../../allclasses-noframe.html">All Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_top");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+</div>
+<div>
+<ul class="subNavList">
+<li>Summary:&nbsp;</li>
+<li>Nested&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
+<li>Constr&nbsp;|&nbsp;</li>
+<li><a href="#method_summary">Method</a></li>
+</ul>
+<ul class="subNavList">
+<li>Detail:&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
+<li>Constr&nbsp;|&nbsp;</li>
+<li><a href="#method_detail">Method</a></li>
+</ul>
+</div>
+<a name="skip-navbar_top">
+<!--   -->
+</a></div>
+<!-- ========= END OF TOP NAVBAR ========= -->
+<!-- ======== START OF CLASS DATA ======== -->
+<div class="header">
+<div class="subTitle">javax.mail</div>
+<h2 title="Interface Part" class="title">Interface Part</h2>
+</div>
+<div class="contentContainer">
+<div class="description">
+<ul class="blockList">
+<li class="blockList">
+<dl>
+<dt>All Known Subinterfaces:</dt>
+<dd><a href="../../javax/mail/internet/MimePart.html" title="interface in javax.mail.internet">MimePart</a></dd>
+</dl>
+<dl>
+<dt>All Known Implementing Classes:</dt>
+<dd><a href="../../javax/mail/BodyPart.html" title="class in javax.mail">BodyPart</a>, <a href="../../gnu/mail/providers/imap/IMAPMessage.html" title="class in gnu.mail.providers.imap">IMAPMessage</a>, <a href="../../gnu/mail/providers/maildir/MaildirMessage.html" title="class in gnu.mail.providers.maildir">MaildirMessage</a>, <a href="../../gnu/mail/providers/mbox/MboxMessage.html" title="class in gnu.mail.providers.mbox">MboxMessage</a>, <a href="../../javax/mail/Message.html" title="class in javax.mail">Message</a>, <a href="../../javax/mail/internet/MimeBodyPart.html" title="class in javax.mail.internet">MimeBodyPart</a>, <a href="../../javax/mail/internet/MimeMessage.html" title="class in javax.mail.internet">MimeMessage</a>, <a href="../../gnu/mail/providers/nntp/NNTPMessage.html" title="class in gnu.mail.providers.nntp">NNTPMessage</a>, <a href="../../gnu/mail/providers/pop3/POP3Message.html" title="class in gnu.mail.providers.pop3">POP3Message</a>, gnu.mail.providers.ReadOnlyMessage</dd>
+</dl>
+<hr>
+<br>
+<pre>public interface <span class="strong">Part</span></pre>
+<div class="block">A part consists of a set of attributes and a content. Some of the
  attributes provide metadata describing the content and its encoding,
  others may describe how to process the part.
  The Part interface is the common base interface for Messages and BodyParts.
- <p/>
+ <p>
  The content of a part is available in various forms:
- <ul><li>As a data handler, using the <code>getDataHandler</code> method.
- </li><li>As an input stream, using the <code>getInputStream</code> method.
- </li><li>As a Java object, using the <code>getContent</code> method.
- </li></ul>
+ <ul>
+ <li>As a data handler, using the <code>getDataHandler</code> method.
+ <li>As an input stream, using the <code>getInputStream</code> method.
+ <li>As a Java object, using the <code>getContent</code> method.
+ </ul>
  The <code>writeTo</code> method can be used to write the part to a
- byte stream in mail-safe form suitable for transmission. 
- <p/>
- In MIME terms, Part models an Entity (RFC 2045, Section 2.4).
-</div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><a name="summary-fields" id="summary-fields"/><dl class="table container"><dd><table class="class summary" border="1" width="100%"><tr class="table header"><td colspan="2"><h2 class="table header">Field Summary</h2></td></tr><tr><td class="left" valign="top"><code class="synopsis">static String</code></td><td class="right"><dl class="list"><dt class="synopsis"><code><a href="#ATTACHMENT">ATTACHMENT</a></code></dt><dd class="description"> This part should be presented as an attachment.</dd></dl></td></tr><tr><td class="left" valign="top"><code class="synopsis">static String</code></td><td class="right"><dl class="list"><dt class="synopsis"><code><a href="#INLINE">INLINE</a></code></dt><dd class="description"> This part should be presented inline.</dd></dl></td></tr></table></dd></dl><a name="summary-methods" id="summary-methods"/><dl class="table container"><dd><table class="class summary" border="1" width="100%"><tr class="table header"><td colspan="2"><h2 class="table header">Method Summary</h2></td></tr><tr><td class="left" valign="top"><code class="synopsis"> void</code></td><td class="right"><dl class="list"><dt class="synopsis"><code><a href="#addHeader(String,String)">addHeader</a>(String&nbsp;name, String&nbsp;value)</code></dt><dd class="description"> Adds the specified value to the existing values for this header name.</dd></dl></td></tr><tr><td class="left" valign="top"><code class="synopsis"> Enumeration</code></td><td class="right"><dl class="list"><dt class="synopsis"><code><a href="#getAllHeaders()">getAllHeaders</a>()</code></dt><dd class="description"> Returns all the headers from this part.</dd></dl></td></tr><tr><td class="left" valign="top"><code class="synopsis"> Object</code></td><td class="right"><dl class="list"><dt class="synopsis"><code><a href="#getContent()">getContent</a>()</code></dt><dd class="description"> Returns the content of this part as a Java object.</dd></dl></td></tr><tr><td class="left" valign="top"><code class="synopsis"> String</code></td><td class="right"><dl class="list"><dt class="synopsis"><code><a href="#getContentType()">getContentType</a>()</code></dt><dd class="description"> Returns the content-type of the content of this part, or
- <code>null</code> if the content-type could not be determined.</dd></dl></td></tr><tr><td class="left" valign="top"><code class="synopsis"> DataHandler</code></td><td class="right"><dl class="list"><dt class="synopsis"><code><a href="#getDataHandler()">getDataHandler</a>()</code></dt><dd class="description"> Returns a data handler for the content of this part.</dd></dl></td></tr><tr><td class="left" valign="top"><code class="synopsis"> String</code></td><td class="right"><dl class="list"><dt class="synopsis"><code><a href="#getDescription()">getDescription</a>()</code></dt><dd class="description"> Returns the description of this part.</dd></dl></td></tr><tr><td class="left" valign="top"><code class="synopsis"> String</code></td><td class="right"><dl class="list"><dt class="synopsis"><code><a href="#getDisposition()">getDisposition</a>()</code></dt><dd class="description"> Returns the disposition of this part.</dd></dl></td></tr><tr><td class="left" valign="top"><code class="synopsis"> String</code></td><td class="right"><dl class="list"><dt class="synopsis"><code><a href="#getFileName()">getFileName</a>()</code></dt><dd class="description"> Returns the filename associated with this part, if available.</dd></dl></td></tr><tr><td class="left" valign="top"><code class="synopsis"> String[]</code></td><td class="right"><dl class="list"><dt class="synopsis"><code><a href="#getHeader(String)">getHeader</a>(String&nbsp;name)</code></dt><dd class="description"> Returns all the values for the specified header name, or
- <code>null</code> if no such headers are available.</dd></dl></td></tr><tr><td class="left" valign="top"><code class="synopsis"> InputStream</code></td><td class="right"><dl class="list"><dt class="synopsis"><code><a href="#getInputStream()">getInputStream</a>()</code></dt><dd class="description"> Returns an input stream for reading the content of this part.</dd></dl></td></tr><tr><td class="left" valign="top"><code class="synopsis"> int</code></td><td class="right"><dl class="list"><dt class="synopsis"><code><a href="#getLineCount()">getLineCount</a>()</code></dt><dd class="description"> Returns the number of lines in the content of this part, or -1 if the
- number cannot be determined.</dd></dl></td></tr><tr><td class="left" valign="top"><code class="synopsis"> Enumeration</code></td><td class="right"><dl class="list"><dt class="synopsis"><code><a href="#getMatchingHeaders(String[])">getMatchingHeaders</a>(String[]&nbsp;names)</code></dt><dd class="description"> Returns the matching headers from this part.</dd></dl></td></tr><tr><td class="left" valign="top"><code class="synopsis"> Enumeration</code></td><td class="right"><dl class="list"><dt class="synopsis"><code><a href="#getNonMatchingHeaders(String[])">getNonMatchingHeaders</a>(String[]&nbsp;names)</code></dt><dd class="description"> Returns the non-matching headers from this part.</dd></dl></td></tr><tr><td class="left" valign="top"><code class="synopsis"> int</code></td><td class="right"><dl class="list"><dt class="synopsis"><code><a href="#getSize()">getSize</a>()</code></dt><dd class="description"> Returns the size of the content of this part in bytes, or -1 if the
- size cannot be determined.</dd></dl></td></tr><tr><td class="left" valign="top"><code class="synopsis"> boolean</code></td><td class="right"><dl class="list"><dt class="synopsis"><code><a href="#isMimeType(String)">isMimeType</a>(String&nbsp;mimeType)</code></dt><dd class="description"> Is this part of the specified MIME type?
- This method compares only the primary type and subtype.</dd></dl></td></tr><tr><td class="left" valign="top"><code class="synopsis"> void</code></td><td class="right"><dl class="list"><dt class="synopsis"><code><a href="#removeHeader(String)">removeHeader</a>(String&nbsp;name)</code></dt><dd class="description"> Removes all headers of the specified name.</dd></dl></td></tr><tr><td class="left" valign="top"><code class="synopsis"> void</code></td><td class="right"><dl class="list"><dt class="synopsis"><code><a href="#setContent(Object,String)">setContent</a>(Object&nbsp;obj, String&nbsp;type)</code></dt><dd class="description"> Sets the content of this part using the specified object.</dd></dl></td></tr><tr><td class="left" valign="top"><code class="synopsis"> void</code></td><td class="right"><dl class="list"><dt class="synopsis"><code><a href="#setContent(javax.mail.Multipart)">setContent</a>(<a href="../../javax/mail/Multipart.html" title="Class in javax.mail">Multipart</a>&nbsp;mp)</code></dt><dd class="description"> Sets the multipart content of this part.</dd></dl></td></tr><tr><td class="left" valign="top"><code class="synopsis"> void</code></td><td class="right"><dl class="list"><dt class="synopsis"><code><a href="#setDataHandler(DataHandler)">setDataHandler</a>(DataHandler&nbsp;dh)</code></dt><dd class="description"> Sets the content of this part using the specified data handler.</dd></dl></td></tr><tr><td class="left" valign="top"><code class="synopsis"> void</code></td><td class="right"><dl class="list"><dt class="synopsis"><code><a href="#setDescription(String)">setDescription</a>(String&nbsp;description)</code></dt><dd class="description"> Sets the description of this part.</dd></dl></td></tr><tr><td class="left" valign="top"><code class="synopsis"> void</code></td><td class="right"><dl class="list"><dt class="synopsis"><code><a href="#setDisposition(String)">setDisposition</a>(String&nbsp;disposition)</code></dt><dd class="description"> Sets the disposition of this part.</dd></dl></td></tr><tr><td class="left" valign="top"><code class="synopsis"> void</code></td><td class="right"><dl class="list"><dt class="synopsis"><code><a href="#setFileName(String)">setFileName</a>(String&nbsp;filename)</code></dt><dd class="description"> Sets the filename associated with this part.</dd></dl></td></tr><tr><td class="left" valign="top"><code class="synopsis"> void</code></td><td class="right"><dl class="list"><dt class="synopsis"><code><a href="#setHeader(String,String)">setHeader</a>(String&nbsp;name, String&nbsp;value)</code></dt><dd class="description"> Sets the value for the specified header name.</dd></dl></td></tr><tr><td class="left" valign="top"><code class="synopsis"> void</code></td><td class="right"><dl class="list"><dt class="synopsis"><code><a href="#setText(String)">setText</a>(String&nbsp;text)</code></dt><dd class="description"> Sets the textual content of this part, using a MIME type of
- <code>text/plain</code>.</dd></dl></td></tr><tr><td class="left" valign="top"><code class="synopsis"> void</code></td><td class="right"><dl class="list"><dt class="synopsis"><code><a href="#writeTo(OutputStream)">writeTo</a>(OutputStream&nbsp;os)</code></dt><dd class="description"> Writes this part to the specified byte stream.</dd></dl></td></tr></table></dd></dl><a name="detail-fields" id="detail-fields"/><h2 class="section header">Field Details</h2><div class="section"><a name="ATTACHMENT" id="ATTACHMENT"/><div class="member detail outer"><h3 class="member detail name">ATTACHMENT</h3><pre class="member detail synopsis">public static final String ATTACHMENT</pre><blockquote class="member detail name"><div class="member detail description"> This part should be presented as an attachment.
-</div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div></blockquote></div><hr/><a name="INLINE" id="INLINE"/><div class="member detail outer"><h3 class="member detail name">INLINE</h3><pre class="member detail synopsis">public static final String INLINE</pre><blockquote class="member detail name"><div class="member detail description"> This part should be presented inline.
-</div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div></blockquote></div></div><a name="detail-methods" id="detail-methods"/><h2 class="section header">Method Details</h2><div class="section"><a name="addHeader(String,String)" id="addHeader(String,String)"/><div class="member detail outer"><h3 class="member detail name">addHeader</h3><pre class="member detail synopsis">public void addHeader(String name,
-                      String value)
-            throws <a href="../../javax/mail/MessagingException.html" title="Class in javax.mail">MessagingException</a></pre><blockquote class="member detail name"><div class="member detail description"> Adds the specified value to the existing values for this header name.
-</div><div class="parameter"><dl><dt class="header"><b>Parameters:</b></dt><dd class="item"><code class="name">name</code><span class="separator"> - </span><span class="description">the header name</span></dd><dd class="item"><code class="name">value</code><span class="separator"> - </span><span class="description">the value to add</span></dd></dl></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div></blockquote></div><hr/><a name="getAllHeaders()" id="getAllHeaders()"/><div class="member detail outer"><h3 class="member detail name">getAllHeaders</h3><pre class="member detail synopsis">public Enumeration getAllHeaders()
-            throws <a href="../../javax/mail/MessagingException.html" title="Class in javax.mail">MessagingException</a></pre><blockquote class="member detail name"><div class="member detail description"> Returns all the headers from this part.
-</div><div class="member detail return list"><dl><dt class="member detail return header"><b>Returns:</b></dt><dd class="member detail return item">an enumeration of Header</dd></dl></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div></blockquote></div><hr/><a name="getContent()" id="getContent()"/><div class="member detail outer"><h3 class="member detail name">getContent</h3><pre class="member detail synopsis">public Object getContent()
-            throws IOException,
-                   <a href="../../javax/mail/MessagingException.html" title="Class in javax.mail">MessagingException</a></pre><blockquote class="member detail name"><div class="member detail description"> Returns the content of this part as a Java object.
- The type of the returned object is of course dependent on the content 
- itself. For instance, the object returned for "text/plain" content 
- is usually a String object. The object returned for a "multipart"
- content is always a Multipart subclass. For content-types that are 
- unknown to the data handler system, an input stream is returned.
-</div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div></blockquote></div><hr/><a name="getContentType()" id="getContentType()"/><div class="member detail outer"><h3 class="member detail name">getContentType</h3><pre class="member detail synopsis">public String getContentType()
-            throws <a href="../../javax/mail/MessagingException.html" title="Class in javax.mail">MessagingException</a></pre><blockquote class="member detail name"><div class="member detail description"> Returns the content-type of the content of this part, or
- <code>null</code> if the content-type could not be determined.
- <p/>
- The MIME typing system is used to name content-types.
-</div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div></blockquote></div><hr/><a name="getDataHandler()" id="getDataHandler()"/><div class="member detail outer"><h3 class="member detail name">getDataHandler</h3><pre class="member detail synopsis">public DataHandler getDataHandler()
-            throws <a href="../../javax/mail/MessagingException.html" title="Class in javax.mail">MessagingException</a></pre><blockquote class="member detail name"><div class="member detail description"> Returns a data handler for the content of this part. 
-</div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div></blockquote></div><hr/><a name="getDescription()" id="getDescription()"/><div class="member detail outer"><h3 class="member detail name">getDescription</h3><pre class="member detail synopsis">public String getDescription()
-            throws <a href="../../javax/mail/MessagingException.html" title="Class in javax.mail">MessagingException</a></pre><blockquote class="member detail name"><div class="member detail description"> Returns the description of this part.
-</div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div></blockquote></div><hr/><a name="getDisposition()" id="getDisposition()"/><div class="member detail outer"><h3 class="member detail name">getDisposition</h3><pre class="member detail synopsis">public String getDisposition()
-            throws <a href="../../javax/mail/MessagingException.html" title="Class in javax.mail">MessagingException</a></pre><blockquote class="member detail name"><div class="member detail description"> Returns the disposition of this part.
- The disposition describes how the part should be presented to the user
- (see RFC 2183).
- Return values are not case sensitive.
-</div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div></blockquote></div><hr/><a name="getFileName()" id="getFileName()"/><div class="member detail outer"><h3 class="member detail name">getFileName</h3><pre class="member detail synopsis">public String getFileName()
-            throws <a href="../../javax/mail/MessagingException.html" title="Class in javax.mail">MessagingException</a></pre><blockquote class="member detail name"><div class="member detail description"> Returns the filename associated with this part, if available.
-</div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div></blockquote></div><hr/><a name="getHeader(String)" id="getHeader(String)"/><div class="member detail outer"><h3 class="member detail name">getHeader</h3><pre class="member detail synopsis">public String[] getHeader(String name)
-            throws <a href="../../javax/mail/MessagingException.html" title="Class in javax.mail">MessagingException</a></pre><blockquote class="member detail name"><div class="member detail description"> Returns all the values for the specified header name, or
- <code>null</code> if no such headers are available.
-</div><div class="parameter"><dl><dt class="header"><b>Parameters:</b></dt><dd class="item"><code class="name">name</code><span class="separator"> - </span><span class="description">the header name</span></dd></dl></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div></blockquote></div><hr/><a name="getInputStream()" id="getInputStream()"/><div class="member detail outer"><h3 class="member detail name">getInputStream</h3><pre class="member detail synopsis">public InputStream getInputStream()
-            throws IOException,
-                   <a href="../../javax/mail/MessagingException.html" title="Class in javax.mail">MessagingException</a></pre><blockquote class="member detail name"><div class="member detail description"> Returns an input stream for reading the content of this part.
- Any mail-specific transfer encodings will be decoded by the
- implementation.
-</div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div></blockquote></div><hr/><a name="getLineCount()" id="getLineCount()"/><div class="member detail outer"><h3 class="member detail name">getLineCount</h3><pre class="member detail synopsis">public int getLineCount()
-            throws <a href="../../javax/mail/MessagingException.html" title="Class in javax.mail">MessagingException</a></pre><blockquote class="member detail name"><div class="member detail description"> Returns the number of lines in the content of this part, or -1 if the
- number cannot be determined. 
- Note that this number may not be an exact measure.
-</div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div></blockquote></div><hr/><a name="getMatchingHeaders(String[])" id="getMatchingHeaders(String[])"/><div class="member detail outer"><h3 class="member detail name">getMatchingHeaders</h3><pre class="member detail synopsis">public Enumeration getMatchingHeaders(String[] names)
-            throws <a href="../../javax/mail/MessagingException.html" title="Class in javax.mail">MessagingException</a></pre><blockquote class="member detail name"><div class="member detail description"> Returns the matching headers from this part.
-</div><div class="parameter"><dl><dt class="header"><b>Parameters:</b></dt><dd class="item"><code class="name">names</code><span class="separator"> - </span><span class="description">the header names to match</span></dd></dl></div><div class="member detail return list"><dl><dt class="member detail return header"><b>Returns:</b></dt><dd class="member detail return item">an enumeration of Header</dd></dl></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div></blockquote></div><hr/><a name="getNonMatchingHeaders(String[])" id="getNonMatchingHeaders(String[])"/><div class="member detail outer"><h3 class="member detail name">getNonMatchingHeaders</h3><pre class="member detail synopsis">public Enumeration getNonMatchingHeaders(String[] names)
-            throws <a href="../../javax/mail/MessagingException.html" title="Class in javax.mail">MessagingException</a></pre><blockquote class="member detail name"><div class="member detail description"> Returns the non-matching headers from this part.
-</div><div class="parameter"><dl><dt class="header"><b>Parameters:</b></dt><dd class="item"><code class="name">names</code><span class="separator"> - </span><span class="description">the header names to ignore</span></dd></dl></div><div class="member detail return list"><dl><dt class="member detail return header"><b>Returns:</b></dt><dd class="member detail return item">an enumeration of Header</dd></dl></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div></blockquote></div><hr/><a name="getSize()" id="getSize()"/><div class="member detail outer"><h3 class="member detail name">getSize</h3><pre class="member detail synopsis">public int getSize()
-            throws <a href="../../javax/mail/MessagingException.html" title="Class in javax.mail">MessagingException</a></pre><blockquote class="member detail name"><div class="member detail description"> Returns the size of the content of this part in bytes, or -1 if the
+ byte stream in mail-safe form suitable for transmission.
+ <p>
+ In MIME terms, Part models an Entity (RFC 2045, Section 2.4).</div>
+</li>
+</ul>
+</div>
+<div class="summary">
+<ul class="blockList">
+<li class="blockList">
+<!-- =========== FIELD SUMMARY =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_summary">
+<!--   -->
+</a>
+<h3>Field Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Field Summary table, listing fields, and an explanation">
+<caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static java.lang.String</code></td>
+<td class="colLast"><code><strong><a href="../../javax/mail/Part.html#ATTACHMENT">ATTACHMENT</a></strong></code>
+<div class="block">This part should be presented as an attachment.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static java.lang.String</code></td>
+<td class="colLast"><code><strong><a href="../../javax/mail/Part.html#INLINE">INLINE</a></strong></code>
+<div class="block">This part should be presented inline.</div>
+</td>
+</tr>
+</table>
+</li>
+</ul>
+<!-- ========== METHOD SUMMARY =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="method_summary">
+<!--   -->
+</a>
+<h3>Method Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Method Summary table, listing methods, and an explanation">
+<caption><span>Methods</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../javax/mail/Part.html#addHeader(java.lang.String, java.lang.String)">addHeader</a></strong>(java.lang.String&nbsp;name,
+         java.lang.String&nbsp;value)</code>
+<div class="block">Adds the specified value to the existing values for this header name.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>java.util.Enumeration</code></td>
+<td class="colLast"><code><strong><a href="../../javax/mail/Part.html#getAllHeaders()">getAllHeaders</a></strong>()</code>
+<div class="block">Returns all the headers from this part.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>java.lang.Object</code></td>
+<td class="colLast"><code><strong><a href="../../javax/mail/Part.html#getContent()">getContent</a></strong>()</code>
+<div class="block">Returns the content of this part as a Java object.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>java.lang.String</code></td>
+<td class="colLast"><code><strong><a href="../../javax/mail/Part.html#getContentType()">getContentType</a></strong>()</code>
+<div class="block">Returns the content-type of the content of this part, or
+ <code>null</code> if the content-type could not be determined.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>javax.activation.DataHandler</code></td>
+<td class="colLast"><code><strong><a href="../../javax/mail/Part.html#getDataHandler()">getDataHandler</a></strong>()</code>
+<div class="block">Returns a data handler for the content of this part.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>java.lang.String</code></td>
+<td class="colLast"><code><strong><a href="../../javax/mail/Part.html#getDescription()">getDescription</a></strong>()</code>
+<div class="block">Returns the description of this part.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>java.lang.String</code></td>
+<td class="colLast"><code><strong><a href="../../javax/mail/Part.html#getDisposition()">getDisposition</a></strong>()</code>
+<div class="block">Returns the disposition of this part.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>java.lang.String</code></td>
+<td class="colLast"><code><strong><a href="../../javax/mail/Part.html#getFileName()">getFileName</a></strong>()</code>
+<div class="block">Returns the filename associated with this part, if available.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>java.lang.String[]</code></td>
+<td class="colLast"><code><strong><a href="../../javax/mail/Part.html#getHeader(java.lang.String)">getHeader</a></strong>(java.lang.String&nbsp;name)</code>
+<div class="block">Returns all the values for the specified header name, or
+ <code>null</code> if no such headers are available.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>java.io.InputStream</code></td>
+<td class="colLast"><code><strong><a href="../../javax/mail/Part.html#getInputStream()">getInputStream</a></strong>()</code>
+<div class="block">Returns an input stream for reading the content of this part.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>int</code></td>
+<td class="colLast"><code><strong><a href="../../javax/mail/Part.html#getLineCount()">getLineCount</a></strong>()</code>
+<div class="block">Returns the number of lines in the content of this part, or -1 if the
+ number cannot be determined.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>java.util.Enumeration</code></td>
+<td class="colLast"><code><strong><a href="../../javax/mail/Part.html#getMatchingHeaders(java.lang.String[])">getMatchingHeaders</a></strong>(java.lang.String[]&nbsp;names)</code>
+<div class="block">Returns the matching headers from this part.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>java.util.Enumeration</code></td>
+<td class="colLast"><code><strong><a href="../../javax/mail/Part.html#getNonMatchingHeaders(java.lang.String[])">getNonMatchingHeaders</a></strong>(java.lang.String[]&nbsp;names)</code>
+<div class="block">Returns the non-matching headers from this part.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>int</code></td>
+<td class="colLast"><code><strong><a href="../../javax/mail/Part.html#getSize()">getSize</a></strong>()</code>
+<div class="block">Returns the size of the content of this part in bytes, or -1 if the
+ size cannot be determined.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><code><strong><a href="../../javax/mail/Part.html#isMimeType(java.lang.String)">isMimeType</a></strong>(java.lang.String&nbsp;mimeType)</code>
+<div class="block">Is this part of the specified MIME type?
+ This method compares only the primary type and subtype.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../javax/mail/Part.html#removeHeader(java.lang.String)">removeHeader</a></strong>(java.lang.String&nbsp;name)</code>
+<div class="block">Removes all headers of the specified name.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../javax/mail/Part.html#setContent(javax.mail.Multipart)">setContent</a></strong>(<a href="../../javax/mail/Multipart.html" title="class in javax.mail">Multipart</a>&nbsp;mp)</code>
+<div class="block">Sets the multipart content of this part.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../javax/mail/Part.html#setContent(java.lang.Object, java.lang.String)">setContent</a></strong>(java.lang.Object&nbsp;obj,
+          java.lang.String&nbsp;type)</code>
+<div class="block">Sets the content of this part using the specified object.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../javax/mail/Part.html#setDataHandler(javax.activation.DataHandler)">setDataHandler</a></strong>(javax.activation.DataHandler&nbsp;dh)</code>
+<div class="block">Sets the content of this part using the specified data handler.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../javax/mail/Part.html#setDescription(java.lang.String)">setDescription</a></strong>(java.lang.String&nbsp;description)</code>
+<div class="block">Sets the description of this part.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../javax/mail/Part.html#setDisposition(java.lang.String)">setDisposition</a></strong>(java.lang.String&nbsp;disposition)</code>
+<div class="block">Sets the disposition of this part.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../javax/mail/Part.html#setFileName(java.lang.String)">setFileName</a></strong>(java.lang.String&nbsp;filename)</code>
+<div class="block">Sets the filename associated with this part.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../javax/mail/Part.html#setHeader(java.lang.String, java.lang.String)">setHeader</a></strong>(java.lang.String&nbsp;name,
+         java.lang.String&nbsp;value)</code>
+<div class="block">Sets the value for the specified header name.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../javax/mail/Part.html#setText(java.lang.String)">setText</a></strong>(java.lang.String&nbsp;text)</code>
+<div class="block">Sets the textual content of this part, using a MIME type of
+ <code>text/plain</code>.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../javax/mail/Part.html#writeTo(java.io.OutputStream)">writeTo</a></strong>(java.io.OutputStream&nbsp;os)</code>
+<div class="block">Writes this part to the specified byte stream.</div>
+</td>
+</tr>
+</table>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="details">
+<ul class="blockList">
+<li class="blockList">
+<!-- ============ FIELD DETAIL =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_detail">
+<!--   -->
+</a>
+<h3>Field Detail</h3>
+<a name="ATTACHMENT">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ATTACHMENT</h4>
+<pre>static final&nbsp;java.lang.String ATTACHMENT</pre>
+<div class="block">This part should be presented as an attachment.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../constant-values.html#javax.mail.Part.ATTACHMENT">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="INLINE">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>INLINE</h4>
+<pre>static final&nbsp;java.lang.String INLINE</pre>
+<div class="block">This part should be presented inline.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../constant-values.html#javax.mail.Part.INLINE">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+</li>
+</ul>
+<!-- ============ METHOD DETAIL ========== -->
+<ul class="blockList">
+<li class="blockList"><a name="method_detail">
+<!--   -->
+</a>
+<h3>Method Detail</h3>
+<a name="getSize()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getSize</h4>
+<pre>int&nbsp;getSize()
+            throws <a href="../../javax/mail/MessagingException.html" title="class in javax.mail">MessagingException</a></pre>
+<div class="block">Returns the size of the content of this part in bytes, or -1 if the
  size cannot be determined.
- <p/>
+ <p>
  Note that the size may not be an exact measure of the content size,
- but will be suitable for display in a user interface to give the 
- user an idea of the size of this part.
-</div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div></blockquote></div><hr/><a name="isMimeType(String)" id="isMimeType(String)"/><div class="member detail outer"><h3 class="member detail name">isMimeType</h3><pre class="member detail synopsis">public boolean isMimeType(String mimeType)
-            throws <a href="../../javax/mail/MessagingException.html" title="Class in javax.mail">MessagingException</a></pre><blockquote class="member detail name"><div class="member detail description"> Is this part of the specified MIME type?
+ but will be suitable for display in a user interface to give the
+ user an idea of the size of this part.</div>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="../../javax/mail/MessagingException.html" title="class in javax.mail">MessagingException</a></code></dd></dl>
+</li>
+</ul>
+<a name="getLineCount()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getLineCount</h4>
+<pre>int&nbsp;getLineCount()
+                 throws <a href="../../javax/mail/MessagingException.html" title="class in javax.mail">MessagingException</a></pre>
+<div class="block">Returns the number of lines in the content of this part, or -1 if the
+ number cannot be determined.
+ Note that this number may not be an exact measure.</div>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="../../javax/mail/MessagingException.html" title="class in javax.mail">MessagingException</a></code></dd></dl>
+</li>
+</ul>
+<a name="getContentType()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getContentType</h4>
+<pre>java.lang.String&nbsp;getContentType()
+                                throws <a href="../../javax/mail/MessagingException.html" title="class in javax.mail">MessagingException</a></pre>
+<div class="block">Returns the content-type of the content of this part, or
+ <code>null</code> if the content-type could not be determined.
+ <p>
+ The MIME typing system is used to name content-types.</div>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="../../javax/mail/MessagingException.html" title="class in javax.mail">MessagingException</a></code></dd></dl>
+</li>
+</ul>
+<a name="isMimeType(java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>isMimeType</h4>
+<pre>boolean&nbsp;isMimeType(java.lang.String&nbsp;mimeType)
+                   throws <a href="../../javax/mail/MessagingException.html" title="class in javax.mail">MessagingException</a></pre>
+<div class="block">Is this part of the specified MIME type?
  This method compares only the primary type and subtype.
  The parameters of the content types are ignored.
- <p/>
- If the subtype of <code>mimeType</code> is the special character '*', 
- then the subtype is ignored during the comparison.
-</div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div></blockquote></div><hr/><a name="removeHeader(String)" id="removeHeader(String)"/><div class="member detail outer"><h3 class="member detail name">removeHeader</h3><pre class="member detail synopsis">public void removeHeader(String name)
-            throws <a href="../../javax/mail/MessagingException.html" title="Class in javax.mail">MessagingException</a></pre><blockquote class="member detail name"><div class="member detail description"> Removes all headers of the specified name.
-</div><div class="parameter"><dl><dt class="header"><b>Parameters:</b></dt><dd class="item"><code class="name">name</code><span class="separator"> - </span><span class="description">the header name</span></dd></dl></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div></blockquote></div><hr/><a name="setContent(Object,String)" id="setContent(Object,String)"/><div class="member detail outer"><h3 class="member detail name">setContent</h3><pre class="member detail synopsis">public void setContent(Object obj,
-                       String type)
-            throws <a href="../../javax/mail/MessagingException.html" title="Class in javax.mail">MessagingException</a></pre><blockquote class="member detail name"><div class="member detail description"> Sets the content of this part using the specified object. The type of
- the supplied argument must be known to the data handler system.
-</div><div class="parameter"><dl><dt class="header"><b>Parameters:</b></dt><dd class="item"><code class="name">obj</code><span class="separator"> - </span><span class="description">a Java object</span></dd><dd class="item"><code class="name">type</code><span class="separator"> - </span><span class="description">the MIME content-type of this object</span></dd></dl></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div></blockquote></div><hr/><a name="setContent(javax.mail.Multipart)" id="setContent(javax.mail.Multipart)"/><div class="member detail outer"><h3 class="member detail name">setContent</h3><pre class="member detail synopsis">public void setContent(<a href="../../javax/mail/Multipart.html" title="Class in javax.mail">Multipart</a> mp)
-            throws <a href="../../javax/mail/MessagingException.html" title="Class in javax.mail">MessagingException</a></pre><blockquote class="member detail name"><div class="member detail description"> Sets the multipart content of this part.
-</div><div class="parameter"><dl><dt class="header"><b>Parameters:</b></dt><dd class="item"><code class="name">mp</code><span class="separator"> - </span><span class="description">the multipart content</span></dd></dl></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div></blockquote></div><hr/><a name="setDataHandler(DataHandler)" id="setDataHandler(DataHandler)"/><div class="member detail outer"><h3 class="member detail name">setDataHandler</h3><pre class="member detail synopsis">public void setDataHandler(DataHandler dh)
-            throws <a href="../../javax/mail/MessagingException.html" title="Class in javax.mail">MessagingException</a></pre><blockquote class="member detail name"><div class="member detail description"> Sets the content of this part using the specified data handler.
-</div><div class="parameter"><dl><dt class="header"><b>Parameters:</b></dt><dd class="item"><code class="name">dh</code><span class="separator"> - </span><span class="description">the data handler for the content</span></dd></dl></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div></blockquote></div><hr/><a name="setDescription(String)" id="setDescription(String)"/><div class="member detail outer"><h3 class="member detail name">setDescription</h3><pre class="member detail synopsis">public void setDescription(String description)
-            throws <a href="../../javax/mail/MessagingException.html" title="Class in javax.mail">MessagingException</a></pre><blockquote class="member detail name"><div class="member detail description"> Sets the description of this part.
-</div><div class="parameter"><dl><dt class="header"><b>Parameters:</b></dt><dd class="item"><code class="name">description</code><span class="separator"> - </span><span class="description">the description of this part</span></dd></dl></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div></blockquote></div><hr/><a name="setDisposition(String)" id="setDisposition(String)"/><div class="member detail outer"><h3 class="member detail name">setDisposition</h3><pre class="member detail synopsis">public void setDisposition(String disposition)
-            throws <a href="../../javax/mail/MessagingException.html" title="Class in javax.mail">MessagingException</a></pre><blockquote class="member detail name"><div class="member detail description"> Sets the disposition of this part.
-</div><div class="parameter"><dl><dt class="header"><b>Parameters:</b></dt><dd class="item"><code class="name">disposition</code><span class="separator"> - </span><span class="description">the disposition of this part</span></dd></dl></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div></blockquote></div><hr/><a name="setFileName(String)" id="setFileName(String)"/><div class="member detail outer"><h3 class="member detail name">setFileName</h3><pre class="member detail synopsis">public void setFileName(String filename)
-            throws <a href="../../javax/mail/MessagingException.html" title="Class in javax.mail">MessagingException</a></pre><blockquote class="member detail name"><div class="member detail description"> Sets the filename associated with this part.
-</div><div class="parameter"><dl><dt class="header"><b>Parameters:</b></dt><dd class="item"><code class="name">filename</code><span class="separator"> - </span><span class="description">the filename to associate with this part</span></dd></dl></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div></blockquote></div><hr/><a name="setHeader(String,String)" id="setHeader(String,String)"/><div class="member detail outer"><h3 class="member detail name">setHeader</h3><pre class="member detail synopsis">public void setHeader(String name,
-                      String value)
-            throws <a href="../../javax/mail/MessagingException.html" title="Class in javax.mail">MessagingException</a></pre><blockquote class="member detail name"><div class="member detail description"> Sets the value for the specified header name.
-</div><div class="parameter"><dl><dt class="header"><b>Parameters:</b></dt><dd class="item"><code class="name">name</code><span class="separator"> - </span><span class="description">the header name</span></dd><dd class="item"><code class="name">value</code><span class="separator"> - </span><span class="description">the new value</span></dd></dl></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div></blockquote></div><hr/><a name="setText(String)" id="setText(String)"/><div class="member detail outer"><h3 class="member detail name">setText</h3><pre class="member detail synopsis">public void setText(String text)
-            throws <a href="../../javax/mail/MessagingException.html" title="Class in javax.mail">MessagingException</a></pre><blockquote class="member detail name"><div class="member detail description"> Sets the textual content of this part, using a MIME type of
- <code>text/plain</code>.
-</div><div class="parameter"><dl><dt class="header"><b>Parameters:</b></dt><dd class="item"><code class="name">text</code><span class="separator"> - </span><span class="description">the textual content</span></dd></dl></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div></blockquote></div><hr/><a name="writeTo(OutputStream)" id="writeTo(OutputStream)"/><div class="member detail outer"><h3 class="member detail name">writeTo</h3><pre class="member detail synopsis">public void writeTo(OutputStream os)
-            throws IOException,
-                   <a href="../../javax/mail/MessagingException.html" title="Class in javax.mail">MessagingException</a></pre><blockquote class="member detail name"><div class="member detail description"> Writes this part to the specified byte stream.
-</div><div class="member detail thrown list"><dl><dt class="member detail thrown header"><b>Throws:</b></dt><dd class="member detail thrown item"><code class="name"><a href="../../javax/mail/MessagingException.html" title="Class in javax.mail">MessagingException</a></code><span class="separator"> - </span><span class="description">if an error occurs fetching the data 
-to be written</span></dd></dl></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div></blockquote></div></div><p class="navbar bottom spacer"> </p><table class="navbar div bottom"><tr><td><div class="navbar div top"><span class="navbar item enabled"><a href="../../overview-summary.html">Overview</a></span> <span class="navbar item enabled"><a href="package-summary.html">Package</a></span> <span class="navbar item enabled"><a href="tree.html">Tree</a></span> <span class="navbar item enabled"><a href="../../alphaindex.html">Index</a></span> <span class="navbar item enabled"><a href="../../deprecated.html">Deprecated</a></span> <span class="navbar item enabled"><a href="../../about.html">About</a></span></div></td></tr></table></body></html>
+ <p>
+ If the subtype of <code>mimeType</code> is the special character '*',
+ then the subtype is ignored during the comparison.</div>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="../../javax/mail/MessagingException.html" title="class in javax.mail">MessagingException</a></code></dd></dl>
+</li>
+</ul>
+<a name="getDisposition()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getDisposition</h4>
+<pre>java.lang.String&nbsp;getDisposition()
+                                throws <a href="../../javax/mail/MessagingException.html" title="class in javax.mail">MessagingException</a></pre>
+<div class="block">Returns the disposition of this part.
+ The disposition describes how the part should be presented to the user
+ (see RFC 2183).
+ Return values are not case sensitive.</div>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="../../javax/mail/MessagingException.html" title="class in javax.mail">MessagingException</a></code></dd></dl>
+</li>
+</ul>
+<a name="setDisposition(java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setDisposition</h4>
+<pre>void&nbsp;setDisposition(java.lang.String&nbsp;disposition)
+                    throws <a href="../../javax/mail/MessagingException.html" title="class in javax.mail">MessagingException</a></pre>
+<div class="block">Sets the disposition of this part.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>disposition</code> - the disposition of this part</dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="../../javax/mail/IllegalWriteException.html" title="class in javax.mail">IllegalWriteException</a></code> - if the underlying implementation
+ does not support modification of this header</dd>
+<dd><code>java.lang.IllegalStateException</code> - if this part is obtained from
+ a READ_ONLY folder</dd>
+<dd><code><a href="../../javax/mail/MessagingException.html" title="class in javax.mail">MessagingException</a></code></dd></dl>
+</li>
+</ul>
+<a name="getDescription()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getDescription</h4>
+<pre>java.lang.String&nbsp;getDescription()
+                                throws <a href="../../javax/mail/MessagingException.html" title="class in javax.mail">MessagingException</a></pre>
+<div class="block">Returns the description of this part.</div>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="../../javax/mail/MessagingException.html" title="class in javax.mail">MessagingException</a></code></dd></dl>
+</li>
+</ul>
+<a name="setDescription(java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setDescription</h4>
+<pre>void&nbsp;setDescription(java.lang.String&nbsp;description)
+                    throws <a href="../../javax/mail/MessagingException.html" title="class in javax.mail">MessagingException</a></pre>
+<div class="block">Sets the description of this part.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>description</code> - the description of this part</dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="../../javax/mail/IllegalWriteException.html" title="class in javax.mail">IllegalWriteException</a></code> - if the underlying implementation
+ does not support modification of this header</dd>
+<dd><code>java.lang.IllegalStateException</code> - if this Part is obtained from
+ a READ_ONLY folder</dd>
+<dd><code><a href="../../javax/mail/MessagingException.html" title="class in javax.mail">MessagingException</a></code></dd></dl>
+</li>
+</ul>
+<a name="getFileName()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getFileName</h4>
+<pre>java.lang.String&nbsp;getFileName()
+                             throws <a href="../../javax/mail/MessagingException.html" title="class in javax.mail">MessagingException</a></pre>
+<div class="block">Returns the filename associated with this part, if available.</div>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="../../javax/mail/MessagingException.html" title="class in javax.mail">MessagingException</a></code></dd></dl>
+</li>
+</ul>
+<a name="setFileName(java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setFileName</h4>
+<pre>void&nbsp;setFileName(java.lang.String&nbsp;filename)
+                 throws <a href="../../javax/mail/MessagingException.html" title="class in javax.mail">MessagingException</a></pre>
+<div class="block">Sets the filename associated with this part.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>filename</code> - the filename to associate with this part</dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="../../javax/mail/IllegalWriteException.html" title="class in javax.mail">IllegalWriteException</a></code> - if the underlying implementation
+ does not support modification of this header</dd>
+<dd><code>java.lang.IllegalStateException</code> - if this Part is obtained from
+ a READ_ONLY folder</dd>
+<dd><code><a href="../../javax/mail/MessagingException.html" title="class in javax.mail">MessagingException</a></code></dd></dl>
+</li>
+</ul>
+<a name="getInputStream()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getInputStream</h4>
+<pre>java.io.InputStream&nbsp;getInputStream()
+                                   throws java.io.IOException,
+                                          <a href="../../javax/mail/MessagingException.html" title="class in javax.mail">MessagingException</a></pre>
+<div class="block">Returns an input stream for reading the content of this part.
+ Any mail-specific transfer encodings will be decoded by the
+ implementation.</div>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code>java.io.IOException</code> - when a data handler error occurs</dd>
+<dd><code><a href="../../javax/mail/MessagingException.html" title="class in javax.mail">MessagingException</a></code></dd></dl>
+</li>
+</ul>
+<a name="getDataHandler()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getDataHandler</h4>
+<pre>javax.activation.DataHandler&nbsp;getDataHandler()
+                                            throws <a href="../../javax/mail/MessagingException.html" title="class in javax.mail">MessagingException</a></pre>
+<div class="block">Returns a data handler for the content of this part.</div>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="../../javax/mail/MessagingException.html" title="class in javax.mail">MessagingException</a></code></dd></dl>
+</li>
+</ul>
+<a name="getContent()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getContent</h4>
+<pre>java.lang.Object&nbsp;getContent()
+                            throws java.io.IOException,
+                                   <a href="../../javax/mail/MessagingException.html" title="class in javax.mail">MessagingException</a></pre>
+<div class="block">Returns the content of this part as a Java object.
+ The type of the returned object is of course dependent on the content
+ itself. For instance, the object returned for "text/plain" content
+ is usually a String object. The object returned for a "multipart"
+ content is always a Multipart subclass. For content-types that are
+ unknown to the data handler system, an input stream is returned.</div>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code>java.io.IOException</code> - when a data handler error occurs</dd>
+<dd><code><a href="../../javax/mail/MessagingException.html" title="class in javax.mail">MessagingException</a></code></dd></dl>
+</li>
+</ul>
+<a name="setDataHandler(javax.activation.DataHandler)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setDataHandler</h4>
+<pre>void&nbsp;setDataHandler(javax.activation.DataHandler&nbsp;dh)
+                    throws <a href="../../javax/mail/MessagingException.html" title="class in javax.mail">MessagingException</a></pre>
+<div class="block">Sets the content of this part using the specified data handler.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>dh</code> - the data handler for the content</dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="../../javax/mail/IllegalWriteException.html" title="class in javax.mail">IllegalWriteException</a></code> - if the underlying implementation
+ does not support modification</dd>
+<dd><code>java.lang.IllegalStateException</code> - if this part is obtained from
+ a READ_ONLY folder</dd>
+<dd><code><a href="../../javax/mail/MessagingException.html" title="class in javax.mail">MessagingException</a></code></dd></dl>
+</li>
+</ul>
+<a name="setContent(java.lang.Object, java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setContent</h4>
+<pre>void&nbsp;setContent(java.lang.Object&nbsp;obj,
+              java.lang.String&nbsp;type)
+                throws <a href="../../javax/mail/MessagingException.html" title="class in javax.mail">MessagingException</a></pre>
+<div class="block">Sets the content of this part using the specified object. The type of
+ the supplied argument must be known to the data handler system.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>obj</code> - a Java object</dd><dd><code>type</code> - the MIME content-type of this object</dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="../../javax/mail/IllegalWriteException.html" title="class in javax.mail">IllegalWriteException</a></code> - if the underlying implementation
+ does not support modification</dd>
+<dd><code>java.lang.IllegalStateException</code> - if this part is obtained from
+ a READ_ONLY folder</dd>
+<dd><code><a href="../../javax/mail/MessagingException.html" title="class in javax.mail">MessagingException</a></code></dd></dl>
+</li>
+</ul>
+<a name="setText(java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setText</h4>
+<pre>void&nbsp;setText(java.lang.String&nbsp;text)
+             throws <a href="../../javax/mail/MessagingException.html" title="class in javax.mail">MessagingException</a></pre>
+<div class="block">Sets the textual content of this part, using a MIME type of
+ <code>text/plain</code>.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>text</code> - the textual content</dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="../../javax/mail/IllegalWriteException.html" title="class in javax.mail">IllegalWriteException</a></code> - if the underlying implementation
+ does not support modification</dd>
+<dd><code>java.lang.IllegalStateException</code> - if this part is obtained from
+ a READ_ONLY folder</dd>
+<dd><code><a href="../../javax/mail/MessagingException.html" title="class in javax.mail">MessagingException</a></code></dd></dl>
+</li>
+</ul>
+<a name="setContent(javax.mail.Multipart)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setContent</h4>
+<pre>void&nbsp;setContent(<a href="../../javax/mail/Multipart.html" title="class in javax.mail">Multipart</a>&nbsp;mp)
+                throws <a href="../../javax/mail/MessagingException.html" title="class in javax.mail">MessagingException</a></pre>
+<div class="block">Sets the multipart content of this part.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>mp</code> - the multipart content</dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="../../javax/mail/IllegalWriteException.html" title="class in javax.mail">IllegalWriteException</a></code> - if the underlying implementation
+ does not support modification</dd>
+<dd><code>java.lang.IllegalStateException</code> - if this part is obtained from
+ a READ_ONLY folder</dd>
+<dd><code><a href="../../javax/mail/MessagingException.html" title="class in javax.mail">MessagingException</a></code></dd></dl>
+</li>
+</ul>
+<a name="writeTo(java.io.OutputStream)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>writeTo</h4>
+<pre>void&nbsp;writeTo(java.io.OutputStream&nbsp;os)
+             throws java.io.IOException,
+                    <a href="../../javax/mail/MessagingException.html" title="class in javax.mail">MessagingException</a></pre>
+<div class="block">Writes this part to the specified byte stream.</div>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code>java.io.IOException</code> - if an error occurs writing to the stream
+ or if an error occurs in the data handler system.</dd>
+<dd><code><a href="../../javax/mail/MessagingException.html" title="class in javax.mail">MessagingException</a></code> - if an error occurs fetching the data
+ to be written</dd></dl>
+</li>
+</ul>
+<a name="getHeader(java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getHeader</h4>
+<pre>java.lang.String[]&nbsp;getHeader(java.lang.String&nbsp;name)
+                             throws <a href="../../javax/mail/MessagingException.html" title="class in javax.mail">MessagingException</a></pre>
+<div class="block">Returns all the values for the specified header name, or
+ <code>null</code> if no such headers are available.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>name</code> - the header name</dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="../../javax/mail/MessagingException.html" title="class in javax.mail">MessagingException</a></code></dd></dl>
+</li>
+</ul>
+<a name="setHeader(java.lang.String, java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setHeader</h4>
+<pre>void&nbsp;setHeader(java.lang.String&nbsp;name,
+             java.lang.String&nbsp;value)
+               throws <a href="../../javax/mail/MessagingException.html" title="class in javax.mail">MessagingException</a></pre>
+<div class="block">Sets the value for the specified header name.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>name</code> - the header name</dd><dd><code>value</code> - the new value</dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="../../javax/mail/IllegalWriteException.html" title="class in javax.mail">IllegalWriteException</a></code> - if the underlying implementation
+ does not support modification of this header</dd>
+<dd><code>java.lang.IllegalStateException</code> - if this part is obtained from
+ a READ_ONLY folder</dd>
+<dd><code><a href="../../javax/mail/MessagingException.html" title="class in javax.mail">MessagingException</a></code></dd></dl>
+</li>
+</ul>
+<a name="addHeader(java.lang.String, java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>addHeader</h4>
+<pre>void&nbsp;addHeader(java.lang.String&nbsp;name,
+             java.lang.String&nbsp;value)
+               throws <a href="../../javax/mail/MessagingException.html" title="class in javax.mail">MessagingException</a></pre>
+<div class="block">Adds the specified value to the existing values for this header name.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>name</code> - the header name</dd><dd><code>value</code> - the value to add</dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="../../javax/mail/IllegalWriteException.html" title="class in javax.mail">IllegalWriteException</a></code> - if the underlying implementation
+ does not support modification of this header</dd>
+<dd><code>java.lang.IllegalStateException</code> - if this part is obtained from
+ a READ_ONLY folder</dd>
+<dd><code><a href="../../javax/mail/MessagingException.html" title="class in javax.mail">MessagingException</a></code></dd></dl>
+</li>
+</ul>
+<a name="removeHeader(java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>removeHeader</h4>
+<pre>void&nbsp;removeHeader(java.lang.String&nbsp;name)
+                  throws <a href="../../javax/mail/MessagingException.html" title="class in javax.mail">MessagingException</a></pre>
+<div class="block">Removes all headers of the specified name.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>name</code> - the header name</dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="../../javax/mail/IllegalWriteException.html" title="class in javax.mail">IllegalWriteException</a></code> - if the underlying implementation
+ does not support modification of this header</dd>
+<dd><code>java.lang.IllegalStateException</code> - if this part is obtained from
+ a READ_ONLY folder</dd>
+<dd><code><a href="../../javax/mail/MessagingException.html" title="class in javax.mail">MessagingException</a></code></dd></dl>
+</li>
+</ul>
+<a name="getAllHeaders()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getAllHeaders</h4>
+<pre>java.util.Enumeration&nbsp;getAllHeaders()
+                                    throws <a href="../../javax/mail/MessagingException.html" title="class in javax.mail">MessagingException</a></pre>
+<div class="block">Returns all the headers from this part.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>an enumeration of Header</dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="../../javax/mail/MessagingException.html" title="class in javax.mail">MessagingException</a></code></dd></dl>
+</li>
+</ul>
+<a name="getMatchingHeaders(java.lang.String[])">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getMatchingHeaders</h4>
+<pre>java.util.Enumeration&nbsp;getMatchingHeaders(java.lang.String[]&nbsp;names)
+                                         throws <a href="../../javax/mail/MessagingException.html" title="class in javax.mail">MessagingException</a></pre>
+<div class="block">Returns the matching headers from this part.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>names</code> - the header names to match</dd>
+<dt><span class="strong">Returns:</span></dt><dd>an enumeration of Header</dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="../../javax/mail/MessagingException.html" title="class in javax.mail">MessagingException</a></code></dd></dl>
+</li>
+</ul>
+<a name="getNonMatchingHeaders(java.lang.String[])">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>getNonMatchingHeaders</h4>
+<pre>java.util.Enumeration&nbsp;getNonMatchingHeaders(java.lang.String[]&nbsp;names)
+                                            throws <a href="../../javax/mail/MessagingException.html" title="class in javax.mail">MessagingException</a></pre>
+<div class="block">Returns the non-matching headers from this part.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>names</code> - the header names to ignore</dd>
+<dt><span class="strong">Returns:</span></dt><dd>an enumeration of Header</dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="../../javax/mail/MessagingException.html" title="class in javax.mail">MessagingException</a></code></dd></dl>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<!-- ========= END OF CLASS DATA ========= -->
+<!-- ======= START OF BOTTOM NAVBAR ====== -->
+<div class="bottomNav"><a name="navbar_bottom">
+<!--   -->
+</a><a href="#skip-navbar_bottom" title="Skip navigation links"></a><a name="navbar_bottom_firstrow">
+<!--   -->
+</a>
+<ul class="navList" title="Navigation">
+<li><a href="../../overview-summary.html">Overview</a></li>
+<li><a href="package-summary.html">Package</a></li>
+<li class="navBarCell1Rev">Class</li>
+<li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../deprecated-list.html">Deprecated</a></li>
+<li><a href="../../index-all.html">Index</a></li>
+<li><a href="../../help-doc.html">Help</a></li>
+</ul>
+</div>
+<div class="subNav">
+<ul class="navList">
+<li><a href="../../javax/mail/NoSuchProviderException.html" title="class in javax.mail"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../javax/mail/PasswordAuthentication.html" title="class in javax.mail"><span class="strong">Next Class</span></a></li>
+</ul>
+<ul class="navList">
+<li><a href="../../index.html?javax/mail/Part.html" target="_top">Frames</a></li>
+<li><a href="Part.html" target="_top">No Frames</a></li>
+</ul>
+<ul class="navList" id="allclasses_navbar_bottom">
+<li><a href="../../allclasses-noframe.html">All Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_bottom");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+</div>
+<div>
+<ul class="subNavList">
+<li>Summary:&nbsp;</li>
+<li>Nested&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
+<li>Constr&nbsp;|&nbsp;</li>
+<li><a href="#method_summary">Method</a></li>
+</ul>
+<ul class="subNavList">
+<li>Detail:&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
+<li>Constr&nbsp;|&nbsp;</li>
+<li><a href="#method_detail">Method</a></li>
+</ul>
+</div>
+<a name="skip-navbar_bottom">
+<!--   -->
+</a></div>
+<!-- ======== END OF BOTTOM NAVBAR ======= -->
+</body>
+</html>

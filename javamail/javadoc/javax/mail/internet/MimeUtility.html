@@ -1,83 +1,631 @@
-<?xml version="1.0" encoding="MacRoman"?>
-<!DOCTYPE html PUBLIC "-//gnu.org///DTD XHTML 1.1 plus Target 1.0//EN" "../../../resources/xhtml11-target10.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head><title>MimeUtility</title><script src="../../../resources/gjdoc.js" type="text/javascript"><!-- this comment required for konqueror 3.2.2 --></script><meta http-equiv="Content-Type" content="text/html; charset=MacRoman"/><meta name="generator" content="GNU Gjdoc Standard Doclet"/><meta name="keywords" content="javax.mail.internet.MimeUtility class"/><meta name="keywords" content="ALL"/><meta name="keywords" content="getEncoding()"/><meta name="keywords" content="decode()"/><meta name="keywords" content="encode()"/><meta name="keywords" content="encodeText()"/><meta name="keywords" content="decodeText()"/><meta name="keywords" content="encodeWord()"/><meta name="keywords" content="decodeWord()"/><meta name="keywords" content="quote()"/><meta name="keywords" content="javaCharset()"/><meta name="keywords" content="mimeCharset()"/><meta name="keywords" content="getDefaultJavaCharset()"/><meta name="keywords" content="fold()"/><meta name="keywords" content="unfold()"/><link rel="stylesheet" type="text/css" href="../../../resources/gjdochtml-clean-layout.css" title="GNU Clean"/><link rel="stylesheet" type="text/css" href="../../../resources/gjdochtml-clean-color1.css" title="GNU Clean"/></head><body class="content class" onload="if(parent.contentPageLoaded)parent.contentPageLoaded(document.title)"><table class="navbar div top"><tr><td class="navbar div top"><div class="navbar div top"><span class="navbar item enabled"><a href="../../../overview-summary.html">Overview</a></span> <span class="navbar item enabled"><a href="package-summary.html">Package</a></span> <span class="navbar item enabled"><a href="tree.html">Tree</a></span> <span class="navbar item enabled"><a href="../../../alphaindex.html">Index</a></span> <span class="navbar item enabled"><a href="../../../deprecated.html">Deprecated</a></span> <span class="navbar item enabled"><a href="../../../about.html">About</a></span></div></td></tr><tr><td class="navi"><a href="../../../javax/mail/internet/MimePartDataSource.html">Prev Class</a> | <a href="../../../javax/mail/internet/NewsAddress.html">Next Class</a></td><td class="navi"><a href="../../../index.html" title="Show in a frameset" target="_top">Frames</a> | <a href="MimeUtility.html" title="Show without frames" target="_top">No Frames</a> </td></tr><tr><td class="navi">Summary: Nested | <a href="#summary-fields">Field</a> | <a href="#summary-methods">Method</a> | Constr</td><td class="navi">Detail: Nested | <a href="#detail-fields">Field</a> | <a href="#detail-methods">Method</a> | Constr</td></tr></table><div class="class title outer"><h3 class="class title-package">javax.mail.internet</h3><h1 class="class title-class">Class MimeUtility</h1></div><div class="class inheritance-tree"><ul class="inheritance 0"><li class="inheritance 0"><code>java.lang.Object</code></li><li><ul class="inheritance 1"><li class="inheritance 1"><code>javax.mail.internet.MimeUtility</code></li><li></li></ul></li></ul></div><hr/><div class="class synopsis outer"><div class="class synopsis declaration"><code>public class <b class="class synopsis name">MimeUtility</b></code></div><div class="class synopsis superclass"><code>extends java.lang.Object</code></div></div><hr/><div class="class description"> This is a utility class providing micellaneous MIME-related functionality.
-</div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><a name="summary-fields" id="summary-fields"/><dl class="table container"><dd><table class="class summary" border="1" width="100%"><tr class="table header"><td colspan="2"><h2 class="table header">Field Summary</h2></td></tr><tr><td class="left" valign="top"><code class="synopsis">static int</code></td><td class="right"><dl class="list"><dt class="synopsis"><code><a href="#ALL">ALL</a></code></dt></dl></td></tr></table></dd></dl><a name="summary-methods" id="summary-methods"/><dl class="table container"><dd><table class="class summary" border="1" width="100%"><tr class="table header"><td colspan="2"><h2 class="table header">Method Summary</h2></td></tr><tr><td class="left" valign="top"><code class="synopsis">static InputStream</code></td><td class="right"><dl class="list"><dt class="synopsis"><code><a href="#decode(InputStream,String)">decode</a>(InputStream&nbsp;is, String&nbsp;encoding)</code></dt><dd class="description"> Decodes the given input stream.</dd></dl></td></tr><tr><td class="left" valign="top"><code class="synopsis">static String</code></td><td class="right"><dl class="list"><dt class="synopsis"><code><a href="#decodeText(String)">decodeText</a>(String&nbsp;etext)</code></dt><dd class="description"> Decodes headers that are defined as '*text' in RFC 822.</dd></dl></td></tr><tr><td class="left" valign="top"><code class="synopsis">static String</code></td><td class="right"><dl class="list"><dt class="synopsis"><code><a href="#decodeWord(String)">decodeWord</a>(String&nbsp;text)</code></dt><dd class="description"> Decodes the specified string using the RFC 2047 rules for parsing an
- "encoded-word".</dd></dl></td></tr><tr><td class="left" valign="top"><code class="synopsis">static OutputStream</code></td><td class="right"><dl class="list"><dt class="synopsis"><code><a href="#encode(OutputStream,String)">encode</a>(OutputStream&nbsp;os, String&nbsp;encoding)</code></dt><dd class="description"> Encodes the given output stream.</dd></dl></td></tr><tr><td class="left" valign="top"><code class="synopsis">static OutputStream</code></td><td class="right"><dl class="list"><dt class="synopsis"><code><a href="#encode(OutputStream,String,String)">encode</a>(OutputStream&nbsp;os, String&nbsp;encoding, String&nbsp;filename)</code></dt><dd class="description"> Encodes the given output stream.</dd></dl></td></tr><tr><td class="left" valign="top"><code class="synopsis">static String</code></td><td class="right"><dl class="list"><dt class="synopsis"><code><a href="#encodeText(String)">encodeText</a>(String&nbsp;text)</code></dt><dd class="description"> Encodes an RFC 822 "text" token into mail-safe form according to
- RFC 2047.</dd></dl></td></tr><tr><td class="left" valign="top"><code class="synopsis">static String</code></td><td class="right"><dl class="list"><dt class="synopsis"><code><a href="#encodeText(String,String,String)">encodeText</a>(String&nbsp;text, String&nbsp;charset, String&nbsp;encoding)</code></dt><dd class="description"> Encodes an RFC 822 "text" token into mail-safe form according to
- RFC 2047.</dd></dl></td></tr><tr><td class="left" valign="top"><code class="synopsis">static String</code></td><td class="right"><dl class="list"><dt class="synopsis"><code><a href="#encodeWord(String)">encodeWord</a>(String&nbsp;text)</code></dt><dd class="description"> Encodes an RFC 822 "word" token into mail-safe form according to
- RFC 2047.</dd></dl></td></tr><tr><td class="left" valign="top"><code class="synopsis">static String</code></td><td class="right"><dl class="list"><dt class="synopsis"><code><a href="#encodeWord(String,String,String)">encodeWord</a>(String&nbsp;text, String&nbsp;charset, String&nbsp;encoding)</code></dt><dd class="description"> Encodes an RFC 822 "word" token into mail-safe form according to
- RFC 2047.</dd></dl></td></tr><tr><td class="left" valign="top"><code class="synopsis">static String</code></td><td class="right"><dl class="list"><dt class="synopsis"><code><a href="#fold(int,String)">fold</a>(int&nbsp;used, String&nbsp;s)</code></dt><dd class="description"> Folds the specified string such that each line is no longer than 76
- characters, whitespace permitting.</dd></dl></td></tr><tr><td class="left" valign="top"><code class="synopsis">static String</code></td><td class="right"><dl class="list"><dt class="synopsis"><code><a href="#getDefaultJavaCharset()">getDefaultJavaCharset</a>()</code></dt><dd class="description"> Returns the default Java charset.</dd></dl></td></tr><tr><td class="left" valign="top"><code class="synopsis">static String</code></td><td class="right"><dl class="list"><dt class="synopsis"><code><a href="#getEncoding(DataHandler)">getEncoding</a>(DataHandler&nbsp;dh)</code></dt><dd class="description"> Returns the Content-Transfer-Encoding that needs to be applied to the
- given content in order to make it mail safe.</dd></dl></td></tr><tr><td class="left" valign="top"><code class="synopsis">static String</code></td><td class="right"><dl class="list"><dt class="synopsis"><code><a href="#getEncoding(DataSource)">getEncoding</a>(DataSource&nbsp;ds)</code></dt><dd class="description"> Returns the Content-Transfer-Encoding that should be applied to the input
- stream of this data source, to make it mail safe.</dd></dl></td></tr><tr><td class="left" valign="top"><code class="synopsis">static String</code></td><td class="right"><dl class="list"><dt class="synopsis"><code><a href="#javaCharset(String)">javaCharset</a>(String&nbsp;charset)</code></dt><dd class="description"> Converts a MIME charset name into a Java charset name.</dd></dl></td></tr><tr><td class="left" valign="top"><code class="synopsis">static String</code></td><td class="right"><dl class="list"><dt class="synopsis"><code><a href="#mimeCharset(String)">mimeCharset</a>(String&nbsp;charset)</code></dt><dd class="description"> Converts a Java charset name into a MIME charset name.</dd></dl></td></tr><tr><td class="left" valign="top"><code class="synopsis">static String</code></td><td class="right"><dl class="list"><dt class="synopsis"><code><a href="#quote(String,String)">quote</a>(String&nbsp;text, String&nbsp;specials)</code></dt><dd class="description"> Quotes the specified word, if it contains any characters from the
- given "specials" list.</dd></dl></td></tr><tr><td class="left" valign="top"><code class="synopsis">static String</code></td><td class="right"><dl class="list"><dt class="synopsis"><code><a href="#unfold(String)">unfold</a>(String&nbsp;s)</code></dt><dd class="description"> Unfolds a folded header.</dd></dl></td></tr></table></dd></dl><a name="detail-fields" id="detail-fields"/><h2 class="section header">Field Details</h2><div class="section"><a name="ALL" id="ALL"/><div class="member detail outer"><h3 class="member detail name">ALL</h3><pre class="member detail synopsis">public static final int ALL</pre><blockquote class="member detail name"><div class="member detail description"></div><div class="member detail thrown list"><dl><dt class="member detail thrown header"><b>Field Value:</b></dt><dd class="member detail thrown item">-1</dd></dl></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div></blockquote></div></div><a name="detail-methods" id="detail-methods"/><h2 class="section header">Method Details</h2><div class="section"><a name="decode(InputStream,String)" id="decode(InputStream,String)"/><div class="member detail outer"><h3 class="member detail name">decode</h3><pre class="member detail synopsis">public static InputStream decode(InputStream is,
-                                 String encoding)
-            throws <a href="../../../javax/mail/MessagingException.html" title="Class in javax.mail">MessagingException</a></pre><blockquote class="member detail name"><div class="member detail description"> Decodes the given input stream.
- All the encodings defined in RFC 2045 are supported here, including
- "base64", "quoted-printable", "7bit", "8bit", and "binary".
- "uuencode" is also supported.
-</div><div class="parameter"><dl><dt class="header"><b>Parameters:</b></dt><dd class="item"><code class="name">is</code><span class="separator"> - </span><span class="description">the input stream</span></dd><dd class="item"><code class="name">encoding</code><span class="separator"> - </span><span class="description">the encoding</span></dd></dl></div><div class="member detail return list"><dl><dt class="member detail return header"><b>Returns:</b></dt><dd class="member detail return item">the decoded input stream</dd></dl></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div></blockquote></div><hr/><a name="decodeText(String)" id="decodeText(String)"/><div class="member detail outer"><h3 class="member detail name">decodeText</h3><pre class="member detail synopsis">public static String decodeText(String etext)
-            throws UnsupportedEncodingException</pre><blockquote class="member detail name"><div class="member detail description"> Decodes headers that are defined as '*text' in RFC 822.
-</div><div class="parameter"><dl><dt class="header"><b>Parameters:</b></dt><dd class="item"><code class="name">etext</code><span class="separator"> - </span><span class="description">the possibly encoded value</span></dd></dl></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div></blockquote></div><hr/><a name="decodeWord(String)" id="decodeWord(String)"/><div class="member detail outer"><h3 class="member detail name">decodeWord</h3><pre class="member detail synopsis">public static String decodeWord(String text)
-            throws <a href="../../../javax/mail/internet/ParseException.html" title="Class in javax.mail.internet">ParseException</a>,
-                   UnsupportedEncodingException</pre><blockquote class="member detail name"><div class="member detail description"> Decodes the specified string using the RFC 2047 rules for parsing an
- "encoded-word".
-</div><div class="parameter"><dl><dt class="header"><b>Parameters:</b></dt></dl></div><div class="member detail thrown list"><dl><dt class="member detail thrown header"><b>Throws:</b></dt><dd class="member detail thrown item"><code class="name"><a href="../../../javax/mail/internet/ParseException.html" title="Class in javax.mail.internet">ParseException</a></code><span class="separator"> - </span><span class="description">if the string is not an encoded-word</span></dd></dl></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div></blockquote></div><hr/><a name="encode(OutputStream,String)" id="encode(OutputStream,String)"/><div class="member detail outer"><h3 class="member detail name">encode</h3><pre class="member detail synopsis">public static OutputStream encode(OutputStream os,
-                                  String encoding)
-            throws <a href="../../../javax/mail/MessagingException.html" title="Class in javax.mail">MessagingException</a></pre><blockquote class="member detail name"><div class="member detail description"> Encodes the given output stream.
- All the encodings defined in RFC 2045 are supported here, including
- "base64", "quoted-printable", "7bit", "8bit" and "binary".
- "uuencode" is also supported.
-</div><div class="parameter"><dl><dt class="header"><b>Parameters:</b></dt><dd class="item"><code class="name">os</code><span class="separator"> - </span><span class="description">the output stream</span></dd><dd class="item"><code class="name">encoding</code><span class="separator"> - </span><span class="description">the encoding</span></dd></dl></div><div class="member detail return list"><dl><dt class="member detail return header"><b>Returns:</b></dt><dd class="member detail return item">an output stream that applies the specified encoding</dd></dl></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div></blockquote></div><hr/><a name="encode(OutputStream,String,String)" id="encode(OutputStream,String,String)"/><div class="member detail outer"><h3 class="member detail name">encode</h3><pre class="member detail synopsis">public static OutputStream encode(OutputStream os,
-                                  String encoding,
-                                  String filename)
-            throws <a href="../../../javax/mail/MessagingException.html" title="Class in javax.mail">MessagingException</a></pre><blockquote class="member detail name"><div class="member detail description"> Encodes the given output stream.
- All the encodings defined in RFC 2045 are supported here, including
- "base64", "quoted-printable", "7bit", "8bit" and "binary".
- "uuencode" is also supported.
-</div><div class="parameter"><dl><dt class="header"><b>Parameters:</b></dt><dd class="item"><code class="name">os</code><span class="separator"> - </span><span class="description">the output stream</span></dd><dd class="item"><code class="name">encoding</code><span class="separator"> - </span><span class="description">the encoding</span></dd><dd class="item"><code class="name">filename</code><span class="separator"> - </span><span class="description">the name for the file being encoded (this is only used
-with the uuencode encoding)</span></dd></dl></div><div class="member detail return list"><dl><dt class="member detail return header"><b>Returns:</b></dt><dd class="member detail return item">an output stream that applies the specified encoding</dd></dl></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div></blockquote></div><hr/><a name="encodeText(String)" id="encodeText(String)"/><div class="member detail outer"><h3 class="member detail name">encodeText</h3><pre class="member detail synopsis">public static String encodeText(String text)
-            throws UnsupportedEncodingException</pre><blockquote class="member detail name"><div class="member detail description"> Encodes an RFC 822 "text" token into mail-safe form according to
- RFC 2047.
-</div><div class="parameter"><dl><dt class="header"><b>Parameters:</b></dt><dd class="item"><code class="name">text</code><span class="separator"> - </span><span class="description">the Unicode string</span></dd></dl></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div></blockquote></div><hr/><a name="encodeText(String,String,String)" id="encodeText(String,String,String)"/><div class="member detail outer"><h3 class="member detail name">encodeText</h3><pre class="member detail synopsis">public static String encodeText(String text,
-                                String charset,
-                                String encoding)
-            throws UnsupportedEncodingException</pre><blockquote class="member detail name"><div class="member detail description"> Encodes an RFC 822 "text" token into mail-safe form according to
- RFC 2047.
-</div><div class="parameter"><dl><dt class="header"><b>Parameters:</b></dt><dd class="item"><code class="name">text</code><span class="separator"> - </span><span class="description">the Unicode string</span></dd><dd class="item"><code class="name">charset</code><span class="separator"> - </span><span class="description">the charset, or null to use the platform default charset</span></dd><dd class="item"><code class="name">encoding</code><span class="separator"> - </span><span class="description">the encoding to be used ("B" or "Q")</span></dd></dl></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div></blockquote></div><hr/><a name="encodeWord(String)" id="encodeWord(String)"/><div class="member detail outer"><h3 class="member detail name">encodeWord</h3><pre class="member detail synopsis">public static String encodeWord(String text)
-            throws UnsupportedEncodingException</pre><blockquote class="member detail name"><div class="member detail description"> Encodes an RFC 822 "word" token into mail-safe form according to
- RFC 2047.
-</div><div class="parameter"><dl><dt class="header"><b>Parameters:</b></dt><dd class="item"><code class="name">text</code><span class="separator"> - </span><span class="description">the Unicode string</span></dd></dl></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div></blockquote></div><hr/><a name="encodeWord(String,String,String)" id="encodeWord(String,String,String)"/><div class="member detail outer"><h3 class="member detail name">encodeWord</h3><pre class="member detail synopsis">public static String encodeWord(String text,
-                                String charset,
-                                String encoding)
-            throws UnsupportedEncodingException</pre><blockquote class="member detail name"><div class="member detail description"> Encodes an RFC 822 "word" token into mail-safe form according to
- RFC 2047.
-</div><div class="parameter"><dl><dt class="header"><b>Parameters:</b></dt><dd class="item"><code class="name">text</code><span class="separator"> - </span><span class="description">the Unicode string</span></dd><dd class="item"><code class="name">charset</code><span class="separator"> - </span><span class="description">the charset, or null to use the platform default charset</span></dd><dd class="item"><code class="name">encoding</code><span class="separator"> - </span><span class="description">the encoding to be used ("B" or "Q")</span></dd></dl></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div></blockquote></div><hr/><a name="fold(int,String)" id="fold(int,String)"/><div class="member detail outer"><h3 class="member detail name">fold</h3><pre class="member detail synopsis">public static String fold(int used,
-                          String s)</pre><blockquote class="member detail name"><div class="member detail description"> Folds the specified string such that each line is no longer than 76
- characters, whitespace permitting.
-</div><div class="parameter"><dl><dt class="header"><b>Parameters:</b></dt><dd class="item"><code class="name">used</code><span class="separator"> - </span><span class="description">the number of characters used in the line already</span></dd><dd class="item"><code class="name">s</code><span class="separator"> - </span><span class="description">the string to fold</span></dd></dl></div><div class="taglet"><dl class="tag list"><dt class="tag section header"><b>Since:</b></dt><dd>JavaMail 1.4</dd></dl></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div></blockquote></div><hr/><a name="getDefaultJavaCharset()" id="getDefaultJavaCharset()"/><div class="member detail outer"><h3 class="member detail name">getDefaultJavaCharset</h3><pre class="member detail synopsis">public static String getDefaultJavaCharset()</pre><blockquote class="member detail name"><div class="member detail description"> Returns the default Java charset.
-</div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div></blockquote></div><hr/><a name="getEncoding(DataHandler)" id="getEncoding(DataHandler)"/><div class="member detail outer"><h3 class="member detail name">getEncoding</h3><pre class="member detail synopsis">public static String getEncoding(DataHandler dh)</pre><blockquote class="member detail name"><div class="member detail description"> Returns the Content-Transfer-Encoding that needs to be applied to the
- given content in order to make it mail safe.
- This is the same as the <code>getEncoding(DataSource)</code> method
- except that instead of reading the data from an input stream it uses
- the <code>writeTo</code> method to examine the data, which can be more
- efficient.
-</div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div></blockquote></div><hr/><a name="getEncoding(DataSource)" id="getEncoding(DataSource)"/><div class="member detail outer"><h3 class="member detail name">getEncoding</h3><pre class="member detail synopsis">public static String getEncoding(DataSource ds)</pre><blockquote class="member detail name"><div class="member detail description"> Returns the Content-Transfer-Encoding that should be applied to the input
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!-- NewPage -->
+<html lang="en">
+<head>
+<!-- Generated by javadoc (version 1.7.0_25) on Fri Nov 22 19:03:11 GMT 2013 -->
+<title>MimeUtility (GNU JavaMail API documentation)</title>
+<meta name="date" content="2013-11-22">
+<link rel="stylesheet" type="text/css" href="../../../stylesheet.css" title="Style">
+</head>
+<body>
+<script type="text/javascript"><!--
+    if (location.href.indexOf('is-external=true') == -1) {
+        parent.document.title="MimeUtility (GNU JavaMail API documentation)";
+    }
+//-->
+</script>
+<noscript>
+<div>JavaScript is disabled on your browser.</div>
+</noscript>
+<!-- ========= START OF TOP NAVBAR ======= -->
+<div class="topNav"><a name="navbar_top">
+<!--   -->
+</a><a href="#skip-navbar_top" title="Skip navigation links"></a><a name="navbar_top_firstrow">
+<!--   -->
+</a>
+<ul class="navList" title="Navigation">
+<li><a href="../../../overview-summary.html">Overview</a></li>
+<li><a href="package-summary.html">Package</a></li>
+<li class="navBarCell1Rev">Class</li>
+<li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../deprecated-list.html">Deprecated</a></li>
+<li><a href="../../../index-all.html">Index</a></li>
+<li><a href="../../../help-doc.html">Help</a></li>
+</ul>
+</div>
+<div class="subNav">
+<ul class="navList">
+<li><a href="../../../javax/mail/internet/MimePartDataSource.html" title="class in javax.mail.internet"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../../javax/mail/internet/NewsAddress.html" title="class in javax.mail.internet"><span class="strong">Next Class</span></a></li>
+</ul>
+<ul class="navList">
+<li><a href="../../../index.html?javax/mail/internet/MimeUtility.html" target="_top">Frames</a></li>
+<li><a href="MimeUtility.html" target="_top">No Frames</a></li>
+</ul>
+<ul class="navList" id="allclasses_navbar_top">
+<li><a href="../../../allclasses-noframe.html">All Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_top");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+</div>
+<div>
+<ul class="subNavList">
+<li>Summary:&nbsp;</li>
+<li>Nested&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
+<li>Constr&nbsp;|&nbsp;</li>
+<li><a href="#method_summary">Method</a></li>
+</ul>
+<ul class="subNavList">
+<li>Detail:&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
+<li>Constr&nbsp;|&nbsp;</li>
+<li><a href="#method_detail">Method</a></li>
+</ul>
+</div>
+<a name="skip-navbar_top">
+<!--   -->
+</a></div>
+<!-- ========= END OF TOP NAVBAR ========= -->
+<!-- ======== START OF CLASS DATA ======== -->
+<div class="header">
+<div class="subTitle">javax.mail.internet</div>
+<h2 title="Class MimeUtility" class="title">Class MimeUtility</h2>
+</div>
+<div class="contentContainer">
+<ul class="inheritance">
+<li>java.lang.Object</li>
+<li>
+<ul class="inheritance">
+<li>javax.mail.internet.MimeUtility</li>
+</ul>
+</li>
+</ul>
+<div class="description">
+<ul class="blockList">
+<li class="blockList">
+<hr>
+<br>
+<pre>public class <span class="strong">MimeUtility</span>
+extends java.lang.Object</pre>
+<div class="block">This is a utility class providing micellaneous MIME-related functionality.</div>
+</li>
+</ul>
+</div>
+<div class="summary">
+<ul class="blockList">
+<li class="blockList">
+<!-- =========== FIELD SUMMARY =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_summary">
+<!--   -->
+</a>
+<h3>Field Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Field Summary table, listing fields, and an explanation">
+<caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><strong><a href="../../../javax/mail/internet/MimeUtility.html#ALL">ALL</a></strong></code>&nbsp;</td>
+</tr>
+</table>
+</li>
+</ul>
+<!-- ========== METHOD SUMMARY =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="method_summary">
+<!--   -->
+</a>
+<h3>Method Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Method Summary table, listing methods, and an explanation">
+<caption><span>Methods</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static java.io.InputStream</code></td>
+<td class="colLast"><code><strong><a href="../../../javax/mail/internet/MimeUtility.html#decode(java.io.InputStream, java.lang.String)">decode</a></strong>(java.io.InputStream&nbsp;is,
+      java.lang.String&nbsp;encoding)</code>
+<div class="block">Decodes the given input stream.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static java.lang.String</code></td>
+<td class="colLast"><code><strong><a href="../../../javax/mail/internet/MimeUtility.html#decodeText(java.lang.String)">decodeText</a></strong>(java.lang.String&nbsp;etext)</code>
+<div class="block">Decodes headers that are defined as '*text' in RFC 822.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static java.lang.String</code></td>
+<td class="colLast"><code><strong><a href="../../../javax/mail/internet/MimeUtility.html#decodeWord(java.lang.String)">decodeWord</a></strong>(java.lang.String&nbsp;text)</code>
+<div class="block">Decodes the specified string using the RFC 2047 rules for parsing an
+ "encoded-word".</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static java.io.OutputStream</code></td>
+<td class="colLast"><code><strong><a href="../../../javax/mail/internet/MimeUtility.html#encode(java.io.OutputStream, java.lang.String)">encode</a></strong>(java.io.OutputStream&nbsp;os,
+      java.lang.String&nbsp;encoding)</code>
+<div class="block">Encodes the given output stream.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static java.io.OutputStream</code></td>
+<td class="colLast"><code><strong><a href="../../../javax/mail/internet/MimeUtility.html#encode(java.io.OutputStream, java.lang.String, java.lang.String)">encode</a></strong>(java.io.OutputStream&nbsp;os,
+      java.lang.String&nbsp;encoding,
+      java.lang.String&nbsp;filename)</code>
+<div class="block">Encodes the given output stream.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static java.lang.String</code></td>
+<td class="colLast"><code><strong><a href="../../../javax/mail/internet/MimeUtility.html#encodeText(java.lang.String)">encodeText</a></strong>(java.lang.String&nbsp;text)</code>
+<div class="block">Encodes an RFC 822 "text" token into mail-safe form according to
+ RFC 2047.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static java.lang.String</code></td>
+<td class="colLast"><code><strong><a href="../../../javax/mail/internet/MimeUtility.html#encodeText(java.lang.String, java.lang.String, java.lang.String)">encodeText</a></strong>(java.lang.String&nbsp;text,
+          java.lang.String&nbsp;charset,
+          java.lang.String&nbsp;encoding)</code>
+<div class="block">Encodes an RFC 822 "text" token into mail-safe form according to
+ RFC 2047.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static java.lang.String</code></td>
+<td class="colLast"><code><strong><a href="../../../javax/mail/internet/MimeUtility.html#encodeWord(java.lang.String)">encodeWord</a></strong>(java.lang.String&nbsp;text)</code>
+<div class="block">Encodes an RFC 822 "word" token into mail-safe form according to
+ RFC 2047.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static java.lang.String</code></td>
+<td class="colLast"><code><strong><a href="../../../javax/mail/internet/MimeUtility.html#encodeWord(java.lang.String, java.lang.String, java.lang.String)">encodeWord</a></strong>(java.lang.String&nbsp;text,
+          java.lang.String&nbsp;charset,
+          java.lang.String&nbsp;encoding)</code>
+<div class="block">Encodes an RFC 822 "word" token into mail-safe form according to
+ RFC 2047.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static java.lang.String</code></td>
+<td class="colLast"><code><strong><a href="../../../javax/mail/internet/MimeUtility.html#fold(int, java.lang.String)">fold</a></strong>(int&nbsp;used,
+    java.lang.String&nbsp;s)</code>
+<div class="block">Folds the specified string such that each line is no longer than 76
+ characters, whitespace permitting.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static java.lang.String</code></td>
+<td class="colLast"><code><strong><a href="../../../javax/mail/internet/MimeUtility.html#getDefaultJavaCharset()">getDefaultJavaCharset</a></strong>()</code>
+<div class="block">Returns the default Java charset.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static java.lang.String</code></td>
+<td class="colLast"><code><strong><a href="../../../javax/mail/internet/MimeUtility.html#getEncoding(javax.activation.DataHandler)">getEncoding</a></strong>(javax.activation.DataHandler&nbsp;dh)</code>
+<div class="block">Returns the Content-Transfer-Encoding that needs to be applied to the
+ given content in order to make it mail safe.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static java.lang.String</code></td>
+<td class="colLast"><code><strong><a href="../../../javax/mail/internet/MimeUtility.html#getEncoding(javax.activation.DataSource)">getEncoding</a></strong>(javax.activation.DataSource&nbsp;ds)</code>
+<div class="block">Returns the Content-Transfer-Encoding that should be applied to the input
+ stream of this data source, to make it mail safe.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static java.lang.String</code></td>
+<td class="colLast"><code><strong><a href="../../../javax/mail/internet/MimeUtility.html#javaCharset(java.lang.String)">javaCharset</a></strong>(java.lang.String&nbsp;charset)</code>
+<div class="block">Converts a MIME charset name into a Java charset name.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static java.lang.String</code></td>
+<td class="colLast"><code><strong><a href="../../../javax/mail/internet/MimeUtility.html#mimeCharset(java.lang.String)">mimeCharset</a></strong>(java.lang.String&nbsp;charset)</code>
+<div class="block">Converts a Java charset name into a MIME charset name.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static java.lang.String</code></td>
+<td class="colLast"><code><strong><a href="../../../javax/mail/internet/MimeUtility.html#quote(java.lang.String, java.lang.String)">quote</a></strong>(java.lang.String&nbsp;text,
+     java.lang.String&nbsp;specials)</code>
+<div class="block">Quotes the specified word, if it contains any characters from the
+ given "specials" list.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static java.lang.String</code></td>
+<td class="colLast"><code><strong><a href="../../../javax/mail/internet/MimeUtility.html#unfold(java.lang.String)">unfold</a></strong>(java.lang.String&nbsp;s)</code>
+<div class="block">Unfolds a folded header.</div>
+</td>
+</tr>
+</table>
+<ul class="blockList">
+<li class="blockList"><a name="methods_inherited_from_class_java.lang.Object">
+<!--   -->
+</a>
+<h3>Methods inherited from class&nbsp;java.lang.Object</h3>
+<code>clone, equals, finalize, getClass, hashCode, notify, notifyAll, toString, wait, wait, wait</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="details">
+<ul class="blockList">
+<li class="blockList">
+<!-- ============ FIELD DETAIL =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_detail">
+<!--   -->
+</a>
+<h3>Field Detail</h3>
+<a name="ALL">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>ALL</h4>
+<pre>public static final&nbsp;int ALL</pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../constant-values.html#javax.mail.internet.MimeUtility.ALL">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+</li>
+</ul>
+<!-- ============ METHOD DETAIL ========== -->
+<ul class="blockList">
+<li class="blockList"><a name="method_detail">
+<!--   -->
+</a>
+<h3>Method Detail</h3>
+<a name="getEncoding(javax.activation.DataSource)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getEncoding</h4>
+<pre>public static&nbsp;java.lang.String&nbsp;getEncoding(javax.activation.DataSource&nbsp;ds)</pre>
+<div class="block">Returns the Content-Transfer-Encoding that should be applied to the input
  stream of this data source, to make it mail safe.
- <ul><li>If the primary type of this datasource is "text" and if all the bytes
+ <ul>
+ <li>If the primary type of this datasource is "text" and if all the bytes
  in its input stream are US-ASCII, then the encoding is "7bit". If more
  than half of the bytes are non-US-ASCII, then the encoding is "base64".
  If less than half of the bytes are non-US-ASCII, then the encoding is
  "quoted-printable".
- </li><li>If the primary type of this datasource is not "text", then if all the
+ <li>If the primary type of this datasource is not "text", then if all the
  bytes of its input stream are US-ASCII, the encoding is "7bit". If
- there is even one non-US-ASCII character, the encoding is "base64".
-</li></ul></div><div class="parameter"><dl><dt class="header"><b>Parameters:</b></dt><dd class="item"><code class="name">ds</code><span class="separator"> - </span><span class="description">the data source</span></dd></dl></div><div class="member detail return list"><dl><dt class="member detail return header"><b>Returns:</b></dt><dd class="member detail return item">"7bit", "quoted-printable" or "base64"</dd></dl></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div></blockquote></div><hr/><a name="javaCharset(String)" id="javaCharset(String)"/><div class="member detail outer"><h3 class="member detail name">javaCharset</h3><pre class="member detail synopsis">public static String javaCharset(String charset)</pre><blockquote class="member detail name"><div class="member detail description"> Converts a MIME charset name into a Java charset name.
-</div><div class="parameter"><dl><dt class="header"><b>Parameters:</b></dt><dd class="item"><code class="name">charset</code><span class="separator"> - </span><span class="description">the MIME charset name</span></dd></dl></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div></blockquote></div><hr/><a name="mimeCharset(String)" id="mimeCharset(String)"/><div class="member detail outer"><h3 class="member detail name">mimeCharset</h3><pre class="member detail synopsis">public static String mimeCharset(String charset)</pre><blockquote class="member detail name"><div class="member detail description"> Converts a Java charset name into a MIME charset name.
-</div><div class="parameter"><dl><dt class="header"><b>Parameters:</b></dt><dd class="item"><code class="name">charset</code><span class="separator"> - </span><span class="description">the Java charset name</span></dd></dl></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div></blockquote></div><hr/><a name="quote(String,String)" id="quote(String,String)"/><div class="member detail outer"><h3 class="member detail name">quote</h3><pre class="member detail synopsis">public static String quote(String text,
-                           String specials)</pre><blockquote class="member detail name"><div class="member detail description"> Quotes the specified word, if it contains any characters from the
+ there is even one non-US-ASCII character, the encoding is "base64".</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>ds</code> - the data source</dd>
+<dt><span class="strong">Returns:</span></dt><dd>"7bit", "quoted-printable" or "base64"</dd></dl>
+</li>
+</ul>
+<a name="getEncoding(javax.activation.DataHandler)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getEncoding</h4>
+<pre>public static&nbsp;java.lang.String&nbsp;getEncoding(javax.activation.DataHandler&nbsp;dh)</pre>
+<div class="block">Returns the Content-Transfer-Encoding that needs to be applied to the
+ given content in order to make it mail safe.
+ This is the same as the <code>getEncoding(DataSource)</code> method
+ except that instead of reading the data from an input stream it uses
+ the <code>writeTo</code> method to examine the data, which can be more
+ efficient.</div>
+</li>
+</ul>
+<a name="decode(java.io.InputStream, java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>decode</h4>
+<pre>public static&nbsp;java.io.InputStream&nbsp;decode(java.io.InputStream&nbsp;is,
+                         java.lang.String&nbsp;encoding)
+                                  throws <a href="../../../javax/mail/MessagingException.html" title="class in javax.mail">MessagingException</a></pre>
+<div class="block">Decodes the given input stream.
+ All the encodings defined in RFC 2045 are supported here, including
+ "base64", "quoted-printable", "7bit", "8bit", and "binary".
+ "uuencode" is also supported.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>is</code> - the input stream</dd><dd><code>encoding</code> - the encoding</dd>
+<dt><span class="strong">Returns:</span></dt><dd>the decoded input stream</dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="../../../javax/mail/MessagingException.html" title="class in javax.mail">MessagingException</a></code></dd></dl>
+</li>
+</ul>
+<a name="encode(java.io.OutputStream, java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>encode</h4>
+<pre>public static&nbsp;java.io.OutputStream&nbsp;encode(java.io.OutputStream&nbsp;os,
+                          java.lang.String&nbsp;encoding)
+                                   throws <a href="../../../javax/mail/MessagingException.html" title="class in javax.mail">MessagingException</a></pre>
+<div class="block">Encodes the given output stream.
+ All the encodings defined in RFC 2045 are supported here, including
+ "base64", "quoted-printable", "7bit", "8bit" and "binary".
+ "uuencode" is also supported.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>os</code> - the output stream</dd><dd><code>encoding</code> - the encoding</dd>
+<dt><span class="strong">Returns:</span></dt><dd>an output stream that applies the specified encoding</dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="../../../javax/mail/MessagingException.html" title="class in javax.mail">MessagingException</a></code></dd></dl>
+</li>
+</ul>
+<a name="encode(java.io.OutputStream, java.lang.String, java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>encode</h4>
+<pre>public static&nbsp;java.io.OutputStream&nbsp;encode(java.io.OutputStream&nbsp;os,
+                          java.lang.String&nbsp;encoding,
+                          java.lang.String&nbsp;filename)
+                                   throws <a href="../../../javax/mail/MessagingException.html" title="class in javax.mail">MessagingException</a></pre>
+<div class="block">Encodes the given output stream.
+ All the encodings defined in RFC 2045 are supported here, including
+ "base64", "quoted-printable", "7bit", "8bit" and "binary".
+ "uuencode" is also supported.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>os</code> - the output stream</dd><dd><code>encoding</code> - the encoding</dd><dd><code>filename</code> - the name for the file being encoded (this is only used
+ with the uuencode encoding)</dd>
+<dt><span class="strong">Returns:</span></dt><dd>an output stream that applies the specified encoding</dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="../../../javax/mail/MessagingException.html" title="class in javax.mail">MessagingException</a></code></dd></dl>
+</li>
+</ul>
+<a name="encodeText(java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>encodeText</h4>
+<pre>public static&nbsp;java.lang.String&nbsp;encodeText(java.lang.String&nbsp;text)
+                                   throws java.io.UnsupportedEncodingException</pre>
+<div class="block">Encodes an RFC 822 "text" token into mail-safe form according to
+ RFC 2047.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>text</code> - the Unicode string</dd><dd><code>UnsupportedEncodingException</code> - if the encoding fails</dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code>java.io.UnsupportedEncodingException</code></dd></dl>
+</li>
+</ul>
+<a name="encodeText(java.lang.String, java.lang.String, java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>encodeText</h4>
+<pre>public static&nbsp;java.lang.String&nbsp;encodeText(java.lang.String&nbsp;text,
+                          java.lang.String&nbsp;charset,
+                          java.lang.String&nbsp;encoding)
+                                   throws java.io.UnsupportedEncodingException</pre>
+<div class="block">Encodes an RFC 822 "text" token into mail-safe form according to
+ RFC 2047.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>text</code> - the Unicode string</dd><dd><code>charset</code> - the charset, or null to use the platform default charset</dd><dd><code>encoding</code> - the encoding to be used ("B" or "Q")</dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code>java.io.UnsupportedEncodingException</code></dd></dl>
+</li>
+</ul>
+<a name="decodeText(java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>decodeText</h4>
+<pre>public static&nbsp;java.lang.String&nbsp;decodeText(java.lang.String&nbsp;etext)
+                                   throws java.io.UnsupportedEncodingException</pre>
+<div class="block">Decodes headers that are defined as '*text' in RFC 822.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>etext</code> - the possibly encoded value</dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code>java.io.UnsupportedEncodingException</code> - if the charset conversion failed</dd></dl>
+</li>
+</ul>
+<a name="encodeWord(java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>encodeWord</h4>
+<pre>public static&nbsp;java.lang.String&nbsp;encodeWord(java.lang.String&nbsp;text)
+                                   throws java.io.UnsupportedEncodingException</pre>
+<div class="block">Encodes an RFC 822 "word" token into mail-safe form according to
+ RFC 2047.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>text</code> - the Unicode string</dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code>java.io.UnsupportedEncodingException</code> - if the encoding fails</dd></dl>
+</li>
+</ul>
+<a name="encodeWord(java.lang.String, java.lang.String, java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>encodeWord</h4>
+<pre>public static&nbsp;java.lang.String&nbsp;encodeWord(java.lang.String&nbsp;text,
+                          java.lang.String&nbsp;charset,
+                          java.lang.String&nbsp;encoding)
+                                   throws java.io.UnsupportedEncodingException</pre>
+<div class="block">Encodes an RFC 822 "word" token into mail-safe form according to
+ RFC 2047.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>text</code> - the Unicode string</dd><dd><code>charset</code> - the charset, or null to use the platform default charset</dd><dd><code>encoding</code> - the encoding to be used ("B" or "Q")</dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code>java.io.UnsupportedEncodingException</code> - if the encoding fails</dd></dl>
+</li>
+</ul>
+<a name="decodeWord(java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>decodeWord</h4>
+<pre>public static&nbsp;java.lang.String&nbsp;decodeWord(java.lang.String&nbsp;text)
+                                   throws <a href="../../../javax/mail/internet/ParseException.html" title="class in javax.mail.internet">ParseException</a>,
+                                          java.io.UnsupportedEncodingException</pre>
+<div class="block">Decodes the specified string using the RFC 2047 rules for parsing an
+ "encoded-word".</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>eword</code> - the possibly encoded value</dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="../../../javax/mail/internet/ParseException.html" title="class in javax.mail.internet">ParseException</a></code> - if the string is not an encoded-word</dd>
+<dd><code>java.io.UnsupportedEncodingException</code> - if the decoding failed</dd></dl>
+</li>
+</ul>
+<a name="quote(java.lang.String, java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>quote</h4>
+<pre>public static&nbsp;java.lang.String&nbsp;quote(java.lang.String&nbsp;text,
+                     java.lang.String&nbsp;specials)</pre>
+<div class="block">Quotes the specified word, if it contains any characters from the
  given "specials" list.
- <p/>
- The HeaderTokenizer class defines two "specials" lists, 
- MIME and RFC 822.
-</div><div class="parameter"><dl><dt class="header"><b>Parameters:</b></dt><dd class="item"><code class="name">specials</code><span class="separator"> - </span><span class="description">the set of special characters</span></dd></dl></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div></blockquote></div><hr/><a name="unfold(String)" id="unfold(String)"/><div class="member detail outer"><h3 class="member detail name">unfold</h3><pre class="member detail synopsis">public static String unfold(String s)</pre><blockquote class="member detail name"><div class="member detail description"> Unfolds a folded header.
-</div><div class="parameter"><dl><dt class="header"><b>Parameters:</b></dt><dd class="item"><code class="name">s</code><span class="separator"> - </span><span class="description">the header to unfold</span></dd></dl></div><div class="taglet"><dl class="tag list"><dt class="tag section header"><b>Since:</b></dt><dd>JavaMail 1.4</dd></dl></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div></blockquote></div></div><p class="navbar bottom spacer"> </p><table class="navbar div bottom"><tr><td><div class="navbar div top"><span class="navbar item enabled"><a href="../../../overview-summary.html">Overview</a></span> <span class="navbar item enabled"><a href="package-summary.html">Package</a></span> <span class="navbar item enabled"><a href="tree.html">Tree</a></span> <span class="navbar item enabled"><a href="../../../alphaindex.html">Index</a></span> <span class="navbar item enabled"><a href="../../../deprecated.html">Deprecated</a></span> <span class="navbar item enabled"><a href="../../../about.html">About</a></span></div></td></tr></table></body></html>
+ <p>
+ The HeaderTokenizer class defines two "specials" lists,
+ MIME and RFC 822.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>word</code> - the word to be quoted</dd><dd><code>specials</code> - the set of special characters</dd></dl>
+</li>
+</ul>
+<a name="javaCharset(java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>javaCharset</h4>
+<pre>public static&nbsp;java.lang.String&nbsp;javaCharset(java.lang.String&nbsp;charset)</pre>
+<div class="block">Converts a MIME charset name into a Java charset name.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>charset</code> - the MIME charset name</dd></dl>
+</li>
+</ul>
+<a name="mimeCharset(java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>mimeCharset</h4>
+<pre>public static&nbsp;java.lang.String&nbsp;mimeCharset(java.lang.String&nbsp;charset)</pre>
+<div class="block">Converts a Java charset name into a MIME charset name.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>charset</code> - the Java charset name</dd></dl>
+</li>
+</ul>
+<a name="getDefaultJavaCharset()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getDefaultJavaCharset</h4>
+<pre>public static&nbsp;java.lang.String&nbsp;getDefaultJavaCharset()</pre>
+<div class="block">Returns the default Java charset.</div>
+</li>
+</ul>
+<a name="fold(int, java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>fold</h4>
+<pre>public static&nbsp;java.lang.String&nbsp;fold(int&nbsp;used,
+                    java.lang.String&nbsp;s)</pre>
+<div class="block">Folds the specified string such that each line is no longer than 76
+ characters, whitespace permitting.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>used</code> - the number of characters used in the line already</dd><dd><code>s</code> - the string to fold</dd><dt><span class="strong">Since:</span></dt>
+  <dd>JavaMail 1.4</dd></dl>
+</li>
+</ul>
+<a name="unfold(java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>unfold</h4>
+<pre>public static&nbsp;java.lang.String&nbsp;unfold(java.lang.String&nbsp;s)</pre>
+<div class="block">Unfolds a folded header.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>s</code> - the header to unfold</dd><dt><span class="strong">Since:</span></dt>
+  <dd>JavaMail 1.4</dd></dl>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<!-- ========= END OF CLASS DATA ========= -->
+<!-- ======= START OF BOTTOM NAVBAR ====== -->
+<div class="bottomNav"><a name="navbar_bottom">
+<!--   -->
+</a><a href="#skip-navbar_bottom" title="Skip navigation links"></a><a name="navbar_bottom_firstrow">
+<!--   -->
+</a>
+<ul class="navList" title="Navigation">
+<li><a href="../../../overview-summary.html">Overview</a></li>
+<li><a href="package-summary.html">Package</a></li>
+<li class="navBarCell1Rev">Class</li>
+<li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../deprecated-list.html">Deprecated</a></li>
+<li><a href="../../../index-all.html">Index</a></li>
+<li><a href="../../../help-doc.html">Help</a></li>
+</ul>
+</div>
+<div class="subNav">
+<ul class="navList">
+<li><a href="../../../javax/mail/internet/MimePartDataSource.html" title="class in javax.mail.internet"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../../javax/mail/internet/NewsAddress.html" title="class in javax.mail.internet"><span class="strong">Next Class</span></a></li>
+</ul>
+<ul class="navList">
+<li><a href="../../../index.html?javax/mail/internet/MimeUtility.html" target="_top">Frames</a></li>
+<li><a href="MimeUtility.html" target="_top">No Frames</a></li>
+</ul>
+<ul class="navList" id="allclasses_navbar_bottom">
+<li><a href="../../../allclasses-noframe.html">All Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_bottom");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+</div>
+<div>
+<ul class="subNavList">
+<li>Summary:&nbsp;</li>
+<li>Nested&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
+<li>Constr&nbsp;|&nbsp;</li>
+<li><a href="#method_summary">Method</a></li>
+</ul>
+<ul class="subNavList">
+<li>Detail:&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
+<li>Constr&nbsp;|&nbsp;</li>
+<li><a href="#method_detail">Method</a></li>
+</ul>
+</div>
+<a name="skip-navbar_bottom">
+<!--   -->
+</a></div>
+<!-- ======== END OF BOTTOM NAVBAR ======= -->
+</body>
+</html>

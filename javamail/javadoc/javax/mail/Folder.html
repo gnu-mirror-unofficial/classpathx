@@ -1,252 +1,1602 @@
-<?xml version="1.0" encoding="MacRoman"?>
-<!DOCTYPE html PUBLIC "-//gnu.org///DTD XHTML 1.1 plus Target 1.0//EN" "../../resources/xhtml11-target10.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head><title>Folder</title><script src="../../resources/gjdoc.js" type="text/javascript"><!-- this comment required for konqueror 3.2.2 --></script><meta http-equiv="Content-Type" content="text/html; charset=MacRoman"/><meta name="generator" content="GNU Gjdoc Standard Doclet"/><meta name="keywords" content="javax.mail.Folder class"/><meta name="keywords" content="HOLDS_MESSAGES"/><meta name="keywords" content="HOLDS_FOLDERS"/><meta name="keywords" content="READ_ONLY"/><meta name="keywords" content="READ_WRITE"/><meta name="keywords" content="store"/><meta name="keywords" content="mode"/><meta name="keywords" content="getName()"/><meta name="keywords" content="getFullName()"/><meta name="keywords" content="getURLName()"/><meta name="keywords" content="getStore()"/><meta name="keywords" content="getParent()"/><meta name="keywords" content="exists()"/><meta name="keywords" content="list()"/><meta name="keywords" content="listSubscribed()"/><meta name="keywords" content="getSeparator()"/><meta name="keywords" content="getType()"/><meta name="keywords" content="create()"/><meta name="keywords" content="isSubscribed()"/><meta name="keywords" content="setSubscribed()"/><meta name="keywords" content="hasNewMessages()"/><meta name="keywords" content="getFolder()"/><meta name="keywords" content="delete()"/><meta name="keywords" content="renameTo()"/><meta name="keywords" content="open()"/><meta name="keywords" content="close()"/><meta name="keywords" content="isOpen()"/><meta name="keywords" content="getMode()"/><meta name="keywords" content="getPermanentFlags()"/><meta name="keywords" content="getMessageCount()"/><meta name="keywords" content="getNewMessageCount()"/><meta name="keywords" content="getUnreadMessageCount()"/><meta name="keywords" content="getDeletedMessageCount()"/><meta name="keywords" content="getMessage()"/><meta name="keywords" content="getMessages()"/><meta name="keywords" content="appendMessages()"/><meta name="keywords" content="fetch()"/><meta name="keywords" content="setFlags()"/><meta name="keywords" content="copyMessages()"/><meta name="keywords" content="expunge()"/><meta name="keywords" content="search()"/><meta name="keywords" content="addConnectionListener()"/><meta name="keywords" content="removeConnectionListener()"/><meta name="keywords" content="notifyConnectionListeners()"/><meta name="keywords" content="addFolderListener()"/><meta name="keywords" content="removeFolderListener()"/><meta name="keywords" content="notifyFolderListeners()"/><meta name="keywords" content="notifyFolderRenamedListeners()"/><meta name="keywords" content="addMessageCountListener()"/><meta name="keywords" content="removeMessageCountListener()"/><meta name="keywords" content="notifyMessageAddedListeners()"/><meta name="keywords" content="notifyMessageRemovedListeners()"/><meta name="keywords" content="addMessageChangedListener()"/><meta name="keywords" content="removeMessageChangedListener()"/><meta name="keywords" content="notifyMessageChangedListeners()"/><meta name="keywords" content="toString()"/><link rel="stylesheet" type="text/css" href="../../resources/gjdochtml-clean-layout.css" title="GNU Clean"/><link rel="stylesheet" type="text/css" href="../../resources/gjdochtml-clean-color1.css" title="GNU Clean"/></head><body class="content class" onload="if(parent.contentPageLoaded)parent.contentPageLoaded(document.title)"><table class="navbar div top"><tr><td class="navbar div top"><div class="navbar div top"><span class="navbar item enabled"><a href="../../overview-summary.html">Overview</a></span> <span class="navbar item enabled"><a href="package-summary.html">Package</a></span> <span class="navbar item enabled"><a href="tree.html">Tree</a></span> <span class="navbar item enabled"><a href="../../alphaindex.html">Index</a></span> <span class="navbar item enabled"><a href="../../deprecated.html">Deprecated</a></span> <span class="navbar item enabled"><a href="../../about.html">About</a></span></div></td></tr><tr><td class="navi"><a href="../../javax/mail/Flags.Flag.html">Prev Class</a> | <a href="../../javax/mail/FolderClosedException.html">Next Class</a></td><td class="navi"><a href="../../index.html" title="Show in a frameset" target="_top">Frames</a> | <a href="Folder.html" title="Show without frames" target="_top">No Frames</a> </td></tr><tr><td class="navi">Summary: Nested | <a href="#summary-fields">Field</a> | <a href="#summary-methods">Method</a> | <a href="#summary-constructors">Constr</a></td><td class="navi">Detail: Nested | <a href="#detail-fields">Field</a> | <a href="#detail-methods">Method</a> | <a href="#detail-constructors">Constr</a></td></tr></table><div class="class title outer"><h3 class="class title-package">javax.mail</h3><h1 class="class title-class">Class Folder</h1></div><div class="class inheritance-tree"><ul class="inheritance 0"><li class="inheritance 0"><code>java.lang.Object</code></li><li><ul class="inheritance 1"><li class="inheritance 1"><code>javax.mail.Folder</code></li><li></li></ul></li></ul></div><dl class="class subclasses"><dt class="class subclasses header"><b>Known Direct Subclasses:</b></dt><dd class="class subclasses header"><a href="../../gnu/mail/providers/imap/IMAPFolder.html" title="Class in gnu.mail.providers.imap">IMAPFolder</a>, <a href="../../gnu/mail/providers/maildir/MaildirFolder.html" title="Class in gnu.mail.providers.maildir">MaildirFolder</a>, <a href="../../gnu/mail/providers/mbox/MboxFolder.html" title="Class in gnu.mail.providers.mbox">MboxFolder</a>, <a href="../../gnu/mail/providers/nntp/NNTPFolder.html" title="Class in gnu.mail.providers.nntp">NNTPFolder</a>, <a href="../../gnu/mail/providers/nntp/NNTPRootFolder.html" title="Class in gnu.mail.providers.nntp">NNTPRootFolder</a>, <a href="../../gnu/mail/providers/pop3/POP3Folder.html" title="Class in gnu.mail.providers.pop3">POP3Folder</a></dd></b></dt></dl><hr/><div class="class synopsis outer"><div class="class synopsis declaration"><code>public abstract class <b class="class synopsis name">Folder</b></code></div><div class="class synopsis superclass"><code>extends java.lang.Object</code></div></div><hr/><div class="class description"> A folder is a hierarchical messaging container in a store.
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!-- NewPage -->
+<html lang="en">
+<head>
+<!-- Generated by javadoc (version 1.7.0_25) on Fri Nov 22 19:03:10 GMT 2013 -->
+<title>Folder (GNU JavaMail API documentation)</title>
+<meta name="date" content="2013-11-22">
+<link rel="stylesheet" type="text/css" href="../../stylesheet.css" title="Style">
+</head>
+<body>
+<script type="text/javascript"><!--
+    if (location.href.indexOf('is-external=true') == -1) {
+        parent.document.title="Folder (GNU JavaMail API documentation)";
+    }
+//-->
+</script>
+<noscript>
+<div>JavaScript is disabled on your browser.</div>
+</noscript>
+<!-- ========= START OF TOP NAVBAR ======= -->
+<div class="topNav"><a name="navbar_top">
+<!--   -->
+</a><a href="#skip-navbar_top" title="Skip navigation links"></a><a name="navbar_top_firstrow">
+<!--   -->
+</a>
+<ul class="navList" title="Navigation">
+<li><a href="../../overview-summary.html">Overview</a></li>
+<li><a href="package-summary.html">Package</a></li>
+<li class="navBarCell1Rev">Class</li>
+<li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../deprecated-list.html">Deprecated</a></li>
+<li><a href="../../index-all.html">Index</a></li>
+<li><a href="../../help-doc.html">Help</a></li>
+</ul>
+</div>
+<div class="subNav">
+<ul class="navList">
+<li><a href="../../javax/mail/Flags.Flag.html" title="class in javax.mail"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../javax/mail/FolderClosedException.html" title="class in javax.mail"><span class="strong">Next Class</span></a></li>
+</ul>
+<ul class="navList">
+<li><a href="../../index.html?javax/mail/Folder.html" target="_top">Frames</a></li>
+<li><a href="Folder.html" target="_top">No Frames</a></li>
+</ul>
+<ul class="navList" id="allclasses_navbar_top">
+<li><a href="../../allclasses-noframe.html">All Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_top");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+</div>
+<div>
+<ul class="subNavList">
+<li>Summary:&nbsp;</li>
+<li>Nested&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
+<li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method_summary">Method</a></li>
+</ul>
+<ul class="subNavList">
+<li>Detail:&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
+<li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method_detail">Method</a></li>
+</ul>
+</div>
+<a name="skip-navbar_top">
+<!--   -->
+</a></div>
+<!-- ========= END OF TOP NAVBAR ========= -->
+<!-- ======== START OF CLASS DATA ======== -->
+<div class="header">
+<div class="subTitle">javax.mail</div>
+<h2 title="Class Folder" class="title">Class Folder</h2>
+</div>
+<div class="contentContainer">
+<ul class="inheritance">
+<li>java.lang.Object</li>
+<li>
+<ul class="inheritance">
+<li>javax.mail.Folder</li>
+</ul>
+</li>
+</ul>
+<div class="description">
+<ul class="blockList">
+<li class="blockList">
+<dl>
+<dt>Direct Known Subclasses:</dt>
+<dd><a href="../../gnu/mail/providers/imap/IMAPFolder.html" title="class in gnu.mail.providers.imap">IMAPFolder</a>, <a href="../../gnu/mail/providers/maildir/MaildirFolder.html" title="class in gnu.mail.providers.maildir">MaildirFolder</a>, <a href="../../gnu/mail/providers/mbox/MboxFolder.html" title="class in gnu.mail.providers.mbox">MboxFolder</a>, <a href="../../gnu/mail/providers/nntp/NNTPFolder.html" title="class in gnu.mail.providers.nntp">NNTPFolder</a>, <a href="../../gnu/mail/providers/nntp/NNTPRootFolder.html" title="class in gnu.mail.providers.nntp">NNTPRootFolder</a>, <a href="../../gnu/mail/providers/pop3/POP3Folder.html" title="class in gnu.mail.providers.pop3">POP3Folder</a></dd>
+</dl>
+<hr>
+<br>
+<pre>public abstract class <span class="strong">Folder</span>
+extends java.lang.Object</pre>
+<div class="block">A folder is a hierarchical messaging container in a store.
  Folders may contain Messages, other Folders or both, depending on the
  implementation.
- <p/>
+ <p>
  Folder names are implementation dependent; the hierarchy components in a
  folder's full name are separated by the folder's ancestors' hierarchy
  delimiter characters.
- <p/>
+ <p>
  The special (case-insensitive) folder name INBOX is reserved to mean the
- primary folder for the authenticated user in the store. Not all stores 
+ primary folder for the authenticated user in the store. Not all stores
  support INBOX folders, and not all users will have an INBOX folder.
- <p/>
+ <p>
  Unless documented otherwise, a folder must be opened in order to invoke
- a method on it.
-</div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><a name="summary-fields" id="summary-fields"/><dl class="table container"><dd><table class="class summary" border="1" width="100%"><tr class="table header"><td colspan="2"><h2 class="table header">Field Summary</h2></td></tr><tr><td class="left" valign="top"><code class="synopsis">static int</code></td><td class="right"><dl class="list"><dt class="synopsis"><code><a href="#HOLDS_FOLDERS">HOLDS_FOLDERS</a></code></dt><dd class="description"> This folder can contain other folders.</dd></dl></td></tr><tr><td class="left" valign="top"><code class="synopsis">static int</code></td><td class="right"><dl class="list"><dt class="synopsis"><code><a href="#HOLDS_MESSAGES">HOLDS_MESSAGES</a></code></dt><dd class="description"> This folder can contain messages.</dd></dl></td></tr><tr><td class="left" valign="top"><code class="synopsis">static int</code></td><td class="right"><dl class="list"><dt class="synopsis"><code><a href="#READ_ONLY">READ_ONLY</a></code></dt><dd class="description"> This folder is read only.</dd></dl></td></tr><tr><td class="left" valign="top"><code class="synopsis">static int</code></td><td class="right"><dl class="list"><dt class="synopsis"><code><a href="#READ_WRITE">READ_WRITE</a></code></dt><dd class="description"> This folder can be modified.</dd></dl></td></tr><tr><td class="left" valign="top"><code class="synopsis">protected  int</code></td><td class="right"><dl class="list"><dt class="synopsis"><code><a href="#mode">mode</a></code></dt><dd class="description"> The folder mode: Folder.READ_ONLY, Folder.READ_WRITE, or -1 if not known.</dd></dl></td></tr><tr><td class="left" valign="top"><code class="synopsis">protected  <a href="../../javax/mail/Store.html" title="Class in javax.mail">Store</a></code></td><td class="right"><dl class="list"><dt class="synopsis"><code><a href="#store">store</a></code></dt><dd class="description"> The parent store.</dd></dl></td></tr></table></dd></dl><a name="summary-constructors" id="summary-constructors"/><dl class="table container"><dd><table class="class summary" border="1" width="100%"><tr class="table header"><td colspan="2"><h2 class="table header">Constructor Summary</h2></td></tr><tr><td class="right"><dl class="list"><dt class="synopsis"><code><a href="#Folder(javax.mail.Store)">Folder</a>(<a href="../../javax/mail/Store.html" title="Class in javax.mail">Store</a>&nbsp;store)</code></dt><dd class="description"> Constructor.</dd></dl></td></tr></table></dd></dl><a name="summary-methods" id="summary-methods"/><dl class="table container"><dd><table class="class summary" border="1" width="100%"><tr class="table header"><td colspan="2"><h2 class="table header">Method Summary</h2></td></tr><tr><td class="left" valign="top"><code class="synopsis"> void</code></td><td class="right"><dl class="list"><dt class="synopsis"><code><a href="#addConnectionListener(javax.mail.event.ConnectionListener)">addConnectionListener</a>(<a href="../../javax/mail/event/ConnectionListener.html" title="Interface in javax.mail.event">ConnectionListener</a>&nbsp;l)</code></dt><dd class="description"> Add a listener for connection events on this folder.</dd></dl></td></tr><tr><td class="left" valign="top"><code class="synopsis"> void</code></td><td class="right"><dl class="list"><dt class="synopsis"><code><a href="#addFolderListener(javax.mail.event.FolderListener)">addFolderListener</a>(<a href="../../javax/mail/event/FolderListener.html" title="Interface in javax.mail.event">FolderListener</a>&nbsp;l)</code></dt><dd class="description"> Add a listener for folder events on this folder.</dd></dl></td></tr><tr><td class="left" valign="top"><code class="synopsis"> void</code></td><td class="right"><dl class="list"><dt class="synopsis"><code><a href="#addMessageChangedListener(javax.mail.event.MessageChangedListener)">addMessageChangedListener</a>(<a href="../../javax/mail/event/MessageChangedListener.html" title="Interface in javax.mail.event">MessageChangedListener</a>&nbsp;l)</code></dt><dd class="description"> Add a listener for message changed events on this folder.</dd></dl></td></tr><tr><td class="left" valign="top"><code class="synopsis"> void</code></td><td class="right"><dl class="list"><dt class="synopsis"><code><a href="#addMessageCountListener(javax.mail.event.MessageCountListener)">addMessageCountListener</a>(<a href="../../javax/mail/event/MessageCountListener.html" title="Interface in javax.mail.event">MessageCountListener</a>&nbsp;l)</code></dt><dd class="description"> Add a listener for message count events on this folder.</dd></dl></td></tr><tr><td class="left" valign="top"><code class="synopsis">abstract void</code></td><td class="right"><dl class="list"><dt class="synopsis"><code><a href="#appendMessages(javax.mail.Message[])">appendMessages</a>(<a href="../../javax/mail/Message.html" title="Class in javax.mail">Message</a>[]&nbsp;msgs)</code></dt><dd class="description"> Appends the specified messages to this folder.</dd></dl></td></tr><tr><td class="left" valign="top"><code class="synopsis">abstract void</code></td><td class="right"><dl class="list"><dt class="synopsis"><code><a href="#close(boolean)">close</a>(boolean&nbsp;expunge)</code></dt><dd class="description"> Closes this folder.</dd></dl></td></tr><tr><td class="left" valign="top"><code class="synopsis"> void</code></td><td class="right"><dl class="list"><dt class="synopsis"><code><a href="#copyMessages(javax.mail.Message[],javax.mail.Folder)">copyMessages</a>(<a href="../../javax/mail/Message.html" title="Class in javax.mail">Message</a>[]&nbsp;msgs, <a href="../../javax/mail/Folder.html" title="Class in javax.mail">Folder</a>&nbsp;folder)</code></dt><dd class="description"> Copies the specified messages into another folder.</dd></dl></td></tr><tr><td class="left" valign="top"><code class="synopsis">abstract boolean</code></td><td class="right"><dl class="list"><dt class="synopsis"><code><a href="#create(int)">create</a>(int&nbsp;type)</code></dt><dd class="description"> Create this folder in the store.</dd></dl></td></tr><tr><td class="left" valign="top"><code class="synopsis">abstract boolean</code></td><td class="right"><dl class="list"><dt class="synopsis"><code><a href="#delete(boolean)">delete</a>(boolean&nbsp;recurse)</code></dt><dd class="description"> Deletes this folder.</dd></dl></td></tr><tr><td class="left" valign="top"><code class="synopsis">abstract boolean</code></td><td class="right"><dl class="list"><dt class="synopsis"><code><a href="#exists()">exists</a>()</code></dt><dd class="description"> Indicates whether this folder exists in the Store.</dd></dl></td></tr><tr><td class="left" valign="top"><code class="synopsis">abstract <a href="../../javax/mail/Message.html" title="Class in javax.mail">Message</a>[]</code></td><td class="right"><dl class="list"><dt class="synopsis"><code><a href="#expunge()">expunge</a>()</code></dt><dd class="description"> Expunges (permanently removing) all the messages marked DELETED.</dd></dl></td></tr><tr><td class="left" valign="top"><code class="synopsis"> void</code></td><td class="right"><dl class="list"><dt class="synopsis"><code><a href="#fetch(javax.mail.Message[],javax.mail.FetchProfile)">fetch</a>(<a href="../../javax/mail/Message.html" title="Class in javax.mail">Message</a>[]&nbsp;msgs, <a href="../../javax/mail/FetchProfile.html" title="Class in javax.mail">FetchProfile</a>&nbsp;fp)</code></dt><dd class="description"> Fetches the items specified in the given fetch profile for the specified
- messages.</dd></dl></td></tr><tr><td class="left" valign="top"><code class="synopsis"> int</code></td><td class="right"><dl class="list"><dt class="synopsis"><code><a href="#getDeletedMessageCount()">getDeletedMessageCount</a>()</code></dt><dd class="description"> Returns the number of deleted messages in this folder.</dd></dl></td></tr><tr><td class="left" valign="top"><code class="synopsis">abstract <a href="../../javax/mail/Folder.html" title="Class in javax.mail">Folder</a></code></td><td class="right"><dl class="list"><dt class="synopsis"><code><a href="#getFolder(String)">getFolder</a>(String&nbsp;name)</code></dt><dd class="description"> Return a folder corresponding to the given name.</dd></dl></td></tr><tr><td class="left" valign="top"><code class="synopsis">abstract String</code></td><td class="right"><dl class="list"><dt class="synopsis"><code><a href="#getFullName()">getFullName</a>()</code></dt><dd class="description"> Returns the full name of this folder.</dd></dl></td></tr><tr><td class="left" valign="top"><code class="synopsis">abstract <a href="../../javax/mail/Message.html" title="Class in javax.mail">Message</a></code></td><td class="right"><dl class="list"><dt class="synopsis"><code><a href="#getMessage(int)">getMessage</a>(int&nbsp;msgnum)</code></dt><dd class="description"> Returns the message with the given number.</dd></dl></td></tr><tr><td class="left" valign="top"><code class="synopsis">abstract int</code></td><td class="right"><dl class="list"><dt class="synopsis"><code><a href="#getMessageCount()">getMessageCount</a>()</code></dt><dd class="description"> Returns the number of messages in this folder.</dd></dl></td></tr><tr><td class="left" valign="top"><code class="synopsis"> <a href="../../javax/mail/Message.html" title="Class in javax.mail">Message</a>[]</code></td><td class="right"><dl class="list"><dt class="synopsis"><code><a href="#getMessages()">getMessages</a>()</code></dt><dd class="description"> Returns all messages in this folder.</dd></dl></td></tr><tr><td class="left" valign="top"><code class="synopsis"> <a href="../../javax/mail/Message.html" title="Class in javax.mail">Message</a>[]</code></td><td class="right"><dl class="list"><dt class="synopsis"><code><a href="#getMessages(int,int)">getMessages</a>(int&nbsp;start, int&nbsp;end)</code></dt><dd class="description"> Returns the messages in the given range (inclusive).</dd></dl></td></tr><tr><td class="left" valign="top"><code class="synopsis"> <a href="../../javax/mail/Message.html" title="Class in javax.mail">Message</a>[]</code></td><td class="right"><dl class="list"><dt class="synopsis"><code><a href="#getMessages(msgnums[])">getMessages</a>(msgnums[]&nbsp;)</code></dt><dd class="description"> Returns the messages for the specified message numbers.</dd></dl></td></tr><tr><td class="left" valign="top"><code class="synopsis"> int</code></td><td class="right"><dl class="list"><dt class="synopsis"><code><a href="#getMode()">getMode</a>()</code></dt><dd class="description"> Return the mode this folder is open in.</dd></dl></td></tr><tr><td class="left" valign="top"><code class="synopsis">abstract String</code></td><td class="right"><dl class="list"><dt class="synopsis"><code><a href="#getName()">getName</a>()</code></dt><dd class="description"> Returns the name of this folder.</dd></dl></td></tr><tr><td class="left" valign="top"><code class="synopsis"> int</code></td><td class="right"><dl class="list"><dt class="synopsis"><code><a href="#getNewMessageCount()">getNewMessageCount</a>()</code></dt><dd class="description"> Returns the number of new messages in this folder.</dd></dl></td></tr><tr><td class="left" valign="top"><code class="synopsis">abstract <a href="../../javax/mail/Folder.html" title="Class in javax.mail">Folder</a></code></td><td class="right"><dl class="list"><dt class="synopsis"><code><a href="#getParent()">getParent</a>()</code></dt><dd class="description"> Returns the parent folder of this folder, or <code>null</code>
- if this folder is the root of a folder hierarchy.</dd></dl></td></tr><tr><td class="left" valign="top"><code class="synopsis">abstract <a href="../../javax/mail/Flags.html" title="Class in javax.mail">Flags</a></code></td><td class="right"><dl class="list"><dt class="synopsis"><code><a href="#getPermanentFlags()">getPermanentFlags</a>()</code></dt><dd class="description"> Returns the permanent flags supported by this folder.</dd></dl></td></tr><tr><td class="left" valign="top"><code class="synopsis">abstract char</code></td><td class="right"><dl class="list"><dt class="synopsis"><code><a href="#getSeparator()">getSeparator</a>()</code></dt><dd class="description"> Return the hierarchy delimiter character for this folder.</dd></dl></td></tr><tr><td class="left" valign="top"><code class="synopsis"> <a href="../../javax/mail/Store.html" title="Class in javax.mail">Store</a></code></td><td class="right"><dl class="list"><dt class="synopsis"><code><a href="#getStore()">getStore</a>()</code></dt><dd class="description"> Returns the parent store.</dd></dl></td></tr><tr><td class="left" valign="top"><code class="synopsis">abstract int</code></td><td class="right"><dl class="list"><dt class="synopsis"><code><a href="#getType()">getType</a>()</code></dt><dd class="description"> Returns the type of this Folder, i.e.</dd></dl></td></tr><tr><td class="left" valign="top"><code class="synopsis"> <a href="../../javax/mail/URLName.html" title="Class in javax.mail">URLName</a></code></td><td class="right"><dl class="list"><dt class="synopsis"><code><a href="#getURLName()">getURLName</a>()</code></dt><dd class="description"> Return a URLName that can be used as a handle to access this folder.</dd></dl></td></tr><tr><td class="left" valign="top"><code class="synopsis"> int</code></td><td class="right"><dl class="list"><dt class="synopsis"><code><a href="#getUnreadMessageCount()">getUnreadMessageCount</a>()</code></dt><dd class="description"> Returns the number of unread messages in this folder.</dd></dl></td></tr><tr><td class="left" valign="top"><code class="synopsis">abstract boolean</code></td><td class="right"><dl class="list"><dt class="synopsis"><code><a href="#hasNewMessages()">hasNewMessages</a>()</code></dt><dd class="description"> Indicates whether this folder has new messages.</dd></dl></td></tr><tr><td class="left" valign="top"><code class="synopsis">abstract boolean</code></td><td class="right"><dl class="list"><dt class="synopsis"><code><a href="#isOpen()">isOpen</a>()</code></dt><dd class="description"> Indicates whether this folder is open.</dd></dl></td></tr><tr><td class="left" valign="top"><code class="synopsis"> boolean</code></td><td class="right"><dl class="list"><dt class="synopsis"><code><a href="#isSubscribed()">isSubscribed</a>()</code></dt><dd class="description"> Indicates whether this folder is subscribed.</dd></dl></td></tr><tr><td class="left" valign="top"><code class="synopsis"> <a href="../../javax/mail/Folder.html" title="Class in javax.mail">Folder</a>[]</code></td><td class="right"><dl class="list"><dt class="synopsis"><code><a href="#list()">list</a>()</code></dt><dd class="description"> Returns the list of subfolders of this folder.</dd></dl></td></tr><tr><td class="left" valign="top"><code class="synopsis">abstract <a href="../../javax/mail/Folder.html" title="Class in javax.mail">Folder</a>[]</code></td><td class="right"><dl class="list"><dt class="synopsis"><code><a href="#list(String)">list</a>(String&nbsp;pattern)</code></dt><dd class="description"> Returns a list of subfolders matching the specified pattern.</dd></dl></td></tr><tr><td class="left" valign="top"><code class="synopsis"> <a href="../../javax/mail/Folder.html" title="Class in javax.mail">Folder</a>[]</code></td><td class="right"><dl class="list"><dt class="synopsis"><code><a href="#listSubscribed()">listSubscribed</a>()</code></dt><dd class="description"> Returns the list of subscribed subfolders of this folder.</dd></dl></td></tr><tr><td class="left" valign="top"><code class="synopsis"> <a href="../../javax/mail/Folder.html" title="Class in javax.mail">Folder</a>[]</code></td><td class="right"><dl class="list"><dt class="synopsis"><code><a href="#listSubscribed(String)">listSubscribed</a>(String&nbsp;pattern)</code></dt><dd class="description"> Returns a list of subscribed subfolders matching the specified pattern.</dd></dl></td></tr><tr><td class="left" valign="top"><code class="synopsis">protected  void</code></td><td class="right"><dl class="list"><dt class="synopsis"><code><a href="#notifyConnectionListeners(int)">notifyConnectionListeners</a>(int&nbsp;type)</code></dt><dd class="description"> Notify all connection listeners.</dd></dl></td></tr><tr><td class="left" valign="top"><code class="synopsis">protected  void</code></td><td class="right"><dl class="list"><dt class="synopsis"><code><a href="#notifyFolderListeners(int)">notifyFolderListeners</a>(int&nbsp;type)</code></dt><dd class="description"> Notify all folder listeners registered on this Folder <em>and</em>
- this folder's store.</dd></dl></td></tr><tr><td class="left" valign="top"><code class="synopsis">protected  void</code></td><td class="right"><dl class="list"><dt class="synopsis"><code><a href="#notifyFolderRenamedListeners(javax.mail.Folder)">notifyFolderRenamedListeners</a>(<a href="../../javax/mail/Folder.html" title="Class in javax.mail">Folder</a>&nbsp;folder)</code></dt><dd class="description"> Notify all folder listeners registered on this folder <em>and</em>
- this folder's store about the renaming of this folder.</dd></dl></td></tr><tr><td class="left" valign="top"><code class="synopsis">protected  void</code></td><td class="right"><dl class="list"><dt class="synopsis"><code><a href="#notifyMessageAddedListeners(javax.mail.Message[])">notifyMessageAddedListeners</a>(<a href="../../javax/mail/Message.html" title="Class in javax.mail">Message</a>[]&nbsp;msgs)</code></dt><dd class="description"> Notify all message count listeners about the addition of messages
- into this folder.</dd></dl></td></tr><tr><td class="left" valign="top"><code class="synopsis">protected  void</code></td><td class="right"><dl class="list"><dt class="synopsis"><code><a href="#notifyMessageChangedListeners(int,javax.mail.Message)">notifyMessageChangedListeners</a>(int&nbsp;type, <a href="../../javax/mail/Message.html" title="Class in javax.mail">Message</a>&nbsp;msg)</code></dt><dd class="description"> Notify all message changed event listeners.</dd></dl></td></tr><tr><td class="left" valign="top"><code class="synopsis">protected  void</code></td><td class="right"><dl class="list"><dt class="synopsis"><code><a href="#notifyMessageRemovedListeners(boolean,javax.mail.Message[])">notifyMessageRemovedListeners</a>(boolean&nbsp;removed, <a href="../../javax/mail/Message.html" title="Class in javax.mail">Message</a>[]&nbsp;msgs)</code></dt><dd class="description"> Notify all message count listeners about the removal of messages from
- this folder.</dd></dl></td></tr><tr><td class="left" valign="top"><code class="synopsis">abstract void</code></td><td class="right"><dl class="list"><dt class="synopsis"><code><a href="#open(int)">open</a>(int&nbsp;mode)</code></dt><dd class="description"> Opens this folder.</dd></dl></td></tr><tr><td class="left" valign="top"><code class="synopsis"> void</code></td><td class="right"><dl class="list"><dt class="synopsis"><code><a href="#removeConnectionListener(javax.mail.event.ConnectionListener)">removeConnectionListener</a>(<a href="../../javax/mail/event/ConnectionListener.html" title="Interface in javax.mail.event">ConnectionListener</a>&nbsp;l)</code></dt><dd class="description"> Remove a connection event listener.</dd></dl></td></tr><tr><td class="left" valign="top"><code class="synopsis"> void</code></td><td class="right"><dl class="list"><dt class="synopsis"><code><a href="#removeFolderListener(javax.mail.event.FolderListener)">removeFolderListener</a>(<a href="../../javax/mail/event/FolderListener.html" title="Interface in javax.mail.event">FolderListener</a>&nbsp;l)</code></dt><dd class="description"> Remove a folder event listener.</dd></dl></td></tr><tr><td class="left" valign="top"><code class="synopsis"> void</code></td><td class="right"><dl class="list"><dt class="synopsis"><code><a href="#removeMessageChangedListener(javax.mail.event.MessageChangedListener)">removeMessageChangedListener</a>(<a href="../../javax/mail/event/MessageChangedListener.html" title="Interface in javax.mail.event">MessageChangedListener</a>&nbsp;l)</code></dt><dd class="description"> Remove a message changed event listener.</dd></dl></td></tr><tr><td class="left" valign="top"><code class="synopsis"> void</code></td><td class="right"><dl class="list"><dt class="synopsis"><code><a href="#removeMessageCountListener(javax.mail.event.MessageCountListener)">removeMessageCountListener</a>(<a href="../../javax/mail/event/MessageCountListener.html" title="Interface in javax.mail.event">MessageCountListener</a>&nbsp;l)</code></dt><dd class="description"> Remove a message count event listener.</dd></dl></td></tr><tr><td class="left" valign="top"><code class="synopsis">abstract boolean</code></td><td class="right"><dl class="list"><dt class="synopsis"><code><a href="#renameTo(javax.mail.Folder)">renameTo</a>(<a href="../../javax/mail/Folder.html" title="Class in javax.mail">Folder</a>&nbsp;folder)</code></dt><dd class="description"> Renames this folder.</dd></dl></td></tr><tr><td class="left" valign="top"><code class="synopsis"> <a href="../../javax/mail/Message.html" title="Class in javax.mail">Message</a>[]</code></td><td class="right"><dl class="list"><dt class="synopsis"><code><a href="#search(javax.mail.search.SearchTerm)">search</a>(<a href="../../javax/mail/search/SearchTerm.html" title="Class in javax.mail.search">SearchTerm</a>&nbsp;term)</code></dt><dd class="description"> Searches this folder for messages matching the specified search term.</dd></dl></td></tr><tr><td class="left" valign="top"><code class="synopsis"> <a href="../../javax/mail/Message.html" title="Class in javax.mail">Message</a>[]</code></td><td class="right"><dl class="list"><dt class="synopsis"><code><a href="#search(javax.mail.search.SearchTerm,javax.mail.Message[])">search</a>(<a href="../../javax/mail/search/SearchTerm.html" title="Class in javax.mail.search">SearchTerm</a>&nbsp;term, <a href="../../javax/mail/Message.html" title="Class in javax.mail">Message</a>[]&nbsp;msgs)</code></dt><dd class="description"> Searches the given messages for those matching the specified search
- term.</dd></dl></td></tr><tr><td class="left" valign="top"><code class="synopsis"> void</code></td><td class="right"><dl class="list"><dt class="synopsis"><code><a href="#setFlags(int,int,javax.mail.Flags,boolean)">setFlags</a>(int&nbsp;start, int&nbsp;end, <a href="../../javax/mail/Flags.html" title="Class in javax.mail">Flags</a>&nbsp;flag, boolean&nbsp;value)</code></dt><dd class="description"> Set the specified flags on the given range of messages (inclusive).</dd></dl></td></tr><tr><td class="left" valign="top"><code class="synopsis"> void</code></td><td class="right"><dl class="list"><dt class="synopsis"><code><a href="#setFlags(int[],javax.mail.Flags,boolean)">setFlags</a>(int[]&nbsp;msgnums, <a href="../../javax/mail/Flags.html" title="Class in javax.mail">Flags</a>&nbsp;flag, boolean&nbsp;value)</code></dt><dd class="description"> Sets the specified flags on each of the specified messages.</dd></dl></td></tr><tr><td class="left" valign="top"><code class="synopsis"> void</code></td><td class="right"><dl class="list"><dt class="synopsis"><code><a href="#setFlags(javax.mail.Message[],javax.mail.Flags,boolean)">setFlags</a>(<a href="../../javax/mail/Message.html" title="Class in javax.mail">Message</a>[]&nbsp;msgs, <a href="../../javax/mail/Flags.html" title="Class in javax.mail">Flags</a>&nbsp;flag, boolean&nbsp;value)</code></dt><dd class="description"> Sets the specified flags on each specified message.</dd></dl></td></tr><tr><td class="left" valign="top"><code class="synopsis"> void</code></td><td class="right"><dl class="list"><dt class="synopsis"><code><a href="#setSubscribed(boolean)">setSubscribed</a>(boolean&nbsp;flag)</code></dt><dd class="description"> Subscribe to or unsubscribe from this folder.</dd></dl></td></tr><tr><td class="left" valign="top"><code class="synopsis"> String</code></td><td class="right"><dl class="list"><dt class="synopsis"><code><a href="#toString()">toString</a>()</code></dt><dd class="description"> Returns the value of Folder.getFullName(), or, if that is null,
- returns the default toString().</dd></dl></td></tr></table></dd></dl><a name="detail-fields" id="detail-fields"/><h2 class="section header">Field Details</h2><div class="section"><a name="HOLDS_FOLDERS" id="HOLDS_FOLDERS"/><div class="member detail outer"><h3 class="member detail name">HOLDS_FOLDERS</h3><pre class="member detail synopsis">public static final int HOLDS_FOLDERS</pre><blockquote class="member detail name"><div class="member detail description"> This folder can contain other folders.
-</div><div class="member detail thrown list"><dl><dt class="member detail thrown header"><b>Field Value:</b></dt><dd class="member detail thrown item">2</dd></dl></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div></blockquote></div><hr/><a name="HOLDS_MESSAGES" id="HOLDS_MESSAGES"/><div class="member detail outer"><h3 class="member detail name">HOLDS_MESSAGES</h3><pre class="member detail synopsis">public static final int HOLDS_MESSAGES</pre><blockquote class="member detail name"><div class="member detail description"> This folder can contain messages.
-</div><div class="member detail thrown list"><dl><dt class="member detail thrown header"><b>Field Value:</b></dt><dd class="member detail thrown item">1</dd></dl></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div></blockquote></div><hr/><a name="READ_ONLY" id="READ_ONLY"/><div class="member detail outer"><h3 class="member detail name">READ_ONLY</h3><pre class="member detail synopsis">public static final int READ_ONLY</pre><blockquote class="member detail name"><div class="member detail description"> This folder is read only.
-</div><div class="member detail thrown list"><dl><dt class="member detail thrown header"><b>Field Value:</b></dt><dd class="member detail thrown item">1</dd></dl></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div></blockquote></div><hr/><a name="READ_WRITE" id="READ_WRITE"/><div class="member detail outer"><h3 class="member detail name">READ_WRITE</h3><pre class="member detail synopsis">public static final int READ_WRITE</pre><blockquote class="member detail name"><div class="member detail description"> This folder can be modified.
-</div><div class="member detail thrown list"><dl><dt class="member detail thrown header"><b>Field Value:</b></dt><dd class="member detail thrown item">2</dd></dl></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div></blockquote></div><hr/><a name="mode" id="mode"/><div class="member detail outer"><h3 class="member detail name">mode</h3><pre class="member detail synopsis">protected int mode</pre><blockquote class="member detail name"><div class="member detail description"> The folder mode: Folder.READ_ONLY, Folder.READ_WRITE, or -1 if not known.
-</div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div></blockquote></div><hr/><a name="store" id="store"/><div class="member detail outer"><h3 class="member detail name">store</h3><pre class="member detail synopsis">protected <a href="../../javax/mail/Store.html" title="Class in javax.mail">Store</a> store</pre><blockquote class="member detail name"><div class="member detail description"> The parent store.
-</div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div></blockquote></div></div><a name="detail-constructors" id="detail-constructors"/><h2 class="section header">Constructor Details</h2><div class="section"><a name="Folder(javax.mail.Store)" id="Folder(javax.mail.Store)"/><div class="member detail outer"><h3 class="member detail name">Folder</h3><pre class="member detail synopsis">protected Folder(<a href="../../javax/mail/Store.html" title="Class in javax.mail">Store</a> store)</pre><blockquote class="member detail name"><div class="member detail description"> Constructor.
-</div><div class="parameter"><dl><dt class="header"><b>Parameters:</b></dt><dd class="item"><code class="name">store</code><span class="separator"> - </span><span class="description">the parent store</span></dd></dl></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div></blockquote></div></div><a name="detail-methods" id="detail-methods"/><h2 class="section header">Method Details</h2><div class="section"><a name="addConnectionListener(javax.mail.event.ConnectionListener)" id="addConnectionListener(javax.mail.event.ConnectionListener)"/><div class="member detail outer"><h3 class="member detail name">addConnectionListener</h3><pre class="member detail synopsis">public void addConnectionListener(<a href="../../javax/mail/event/ConnectionListener.html" title="Interface in javax.mail.event">ConnectionListener</a> l)</pre><blockquote class="member detail name"><div class="member detail description"> Add a listener for connection events on this folder.
-</div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div></blockquote></div><hr/><a name="addFolderListener(javax.mail.event.FolderListener)" id="addFolderListener(javax.mail.event.FolderListener)"/><div class="member detail outer"><h3 class="member detail name">addFolderListener</h3><pre class="member detail synopsis">public void addFolderListener(<a href="../../javax/mail/event/FolderListener.html" title="Interface in javax.mail.event">FolderListener</a> l)</pre><blockquote class="member detail name"><div class="member detail description"> Add a listener for folder events on this folder.
-</div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div></blockquote></div><hr/><a name="addMessageChangedListener(javax.mail.event.MessageChangedListener)" id="addMessageChangedListener(javax.mail.event.MessageChangedListener)"/><div class="member detail outer"><h3 class="member detail name">addMessageChangedListener</h3><pre class="member detail synopsis">public void addMessageChangedListener(<a href="../../javax/mail/event/MessageChangedListener.html" title="Interface in javax.mail.event">MessageChangedListener</a> l)</pre><blockquote class="member detail name"><div class="member detail description"> Add a listener for message changed events on this folder.
-</div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div></blockquote></div><hr/><a name="addMessageCountListener(javax.mail.event.MessageCountListener)" id="addMessageCountListener(javax.mail.event.MessageCountListener)"/><div class="member detail outer"><h3 class="member detail name">addMessageCountListener</h3><pre class="member detail synopsis">public void addMessageCountListener(<a href="../../javax/mail/event/MessageCountListener.html" title="Interface in javax.mail.event">MessageCountListener</a> l)</pre><blockquote class="member detail name"><div class="member detail description"> Add a listener for message count events on this folder.
-</div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div></blockquote></div><hr/><a name="appendMessages(javax.mail.Message[])" id="appendMessages(javax.mail.Message[])"/><div class="member detail outer"><h3 class="member detail name">appendMessages</h3><pre class="member detail synopsis">public abstract void appendMessages(<a href="../../javax/mail/Message.html" title="Class in javax.mail">Message</a>[] msgs)
-            throws <a href="../../javax/mail/MessagingException.html" title="Class in javax.mail">MessagingException</a></pre><blockquote class="member detail name"><div class="member detail description"> Appends the specified messages to this folder.
- <p/>
- This method can be invoked on a closed folder.
-</div><div class="parameter"><dl><dt class="header"><b>Parameters:</b></dt><dd class="item"><code class="name">msgs</code><span class="separator"> - </span><span class="description">array of messages to be appended</span></dd></dl></div><div class="member detail thrown list"><dl><dt class="member detail thrown header"><b>Throws:</b></dt><dd class="member detail thrown item"><code class="name"><a href="../../javax/mail/MessagingException.html" title="Class in javax.mail">MessagingException</a></code><span class="separator"> - </span><span class="description">if the append operation failed</span></dd></dl></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div></blockquote></div><hr/><a name="close(boolean)" id="close(boolean)"/><div class="member detail outer"><h3 class="member detail name">close</h3><pre class="member detail synopsis">public abstract void close(boolean expunge)
-            throws <a href="../../javax/mail/MessagingException.html" title="Class in javax.mail">MessagingException</a></pre><blockquote class="member detail name"><div class="member detail description"> Closes this folder.
- This method can only be invoked on an open folder.
-</div><div class="parameter"><dl><dt class="header"><b>Parameters:</b></dt><dd class="item"><code class="name">expunge</code><span class="separator"> - </span><span class="description">if true, expunge all deleted messages</span></dd></dl></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div></blockquote></div><hr/><a name="copyMessages(javax.mail.Message[],javax.mail.Folder)" id="copyMessages(javax.mail.Message[],javax.mail.Folder)"/><div class="member detail outer"><h3 class="member detail name">copyMessages</h3><pre class="member detail synopsis">public void copyMessages(<a href="../../javax/mail/Message.html" title="Class in javax.mail">Message</a>[] msgs,
-                         <a href="../../javax/mail/Folder.html" title="Class in javax.mail">Folder</a> folder)
-            throws <a href="../../javax/mail/MessagingException.html" title="Class in javax.mail">MessagingException</a></pre><blockquote class="member detail name"><div class="member detail description"> Copies the specified messages into another folder.
- <p/>
- The destination folder does not have to be open.
-</div><div class="parameter"><dl><dt class="header"><b>Parameters:</b></dt><dd class="item"><code class="name">msgs</code><span class="separator"> - </span><span class="description">the messages</span></dd><dd class="item"><code class="name">folder</code><span class="separator"> - </span><span class="description">the folder to copy the messages to</span></dd></dl></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div></blockquote></div><hr/><a name="create(int)" id="create(int)"/><div class="member detail outer"><h3 class="member detail name">create</h3><pre class="member detail synopsis">public abstract boolean create(int type)
-            throws <a href="../../javax/mail/MessagingException.html" title="Class in javax.mail">MessagingException</a></pre><blockquote class="member detail name"><div class="member detail description"> Create this folder in the store.
- When this folder is created, any folders in its path 
- that do not exist are also created.
- <p/>
- If the creation is successful, a CREATED FolderEvent is delivered 
- to any FolderListeners registered on this Folder and this Store.
-</div><div class="parameter"><dl><dt class="header"><b>Parameters:</b></dt><dd class="item"><code class="name">type</code><span class="separator"> - </span><span class="description">the desired type of the folder</span></dd></dl></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div></blockquote></div><hr/><a name="delete(boolean)" id="delete(boolean)"/><div class="member detail outer"><h3 class="member detail name">delete</h3><pre class="member detail synopsis">public abstract boolean delete(boolean recurse)
-            throws <a href="../../javax/mail/MessagingException.html" title="Class in javax.mail">MessagingException</a></pre><blockquote class="member detail name"><div class="member detail description"> Deletes this folder.
- This method can only be invoked on a closed folder.
-</div><div class="parameter"><dl><dt class="header"><b>Parameters:</b></dt><dd class="item"><code class="name">recurse</code><span class="separator"> - </span><span class="description">delete any subfolders</span></dd></dl></div><div class="member detail return list"><dl><dt class="member detail return header"><b>Returns:</b></dt><dd class="member detail return item">true if the folder is deleted successfully, false otherwise</dd></dl></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div></blockquote></div><hr/><a name="exists()" id="exists()"/><div class="member detail outer"><h3 class="member detail name">exists</h3><pre class="member detail synopsis">public abstract boolean exists()
-            throws <a href="../../javax/mail/MessagingException.html" title="Class in javax.mail">MessagingException</a></pre><blockquote class="member detail name"><div class="member detail description"> Indicates whether this folder exists in the Store.
- <p/>
- This method can be invoked on a closed folder.
-</div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div></blockquote></div><hr/><a name="expunge()" id="expunge()"/><div class="member detail outer"><h3 class="member detail name">expunge</h3><pre class="member detail synopsis">public abstract <a href="../../javax/mail/Message.html" title="Class in javax.mail">Message</a>[] expunge()
-            throws <a href="../../javax/mail/MessagingException.html" title="Class in javax.mail">MessagingException</a></pre><blockquote class="member detail name"><div class="member detail description"> Expunges (permanently removing) all the messages marked DELETED.
- Returns an array containing the expunged messages.
- <p/>
- Expunge causes the renumbering of any messages with numbers higher than
- the message number of the lowest-numbered expunged message.
- <p/>
- After a message has been expunged, only the <code>isExpunged</code> and 
- <code>getMessageNumber</code> methods are still valid on the 
- corresponding Message object; other methods may throw 
- <code>MessageRemovedException</code>.
-</div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div></blockquote></div><hr/><a name="fetch(javax.mail.Message[],javax.mail.FetchProfile)" id="fetch(javax.mail.Message[],javax.mail.FetchProfile)"/><div class="member detail outer"><h3 class="member detail name">fetch</h3><pre class="member detail synopsis">public void fetch(<a href="../../javax/mail/Message.html" title="Class in javax.mail">Message</a>[] msgs,
-                  <a href="../../javax/mail/FetchProfile.html" title="Class in javax.mail">FetchProfile</a> fp)
-            throws <a href="../../javax/mail/MessagingException.html" title="Class in javax.mail">MessagingException</a></pre><blockquote class="member detail name"><div class="member detail description"> Fetches the items specified in the given fetch profile for the specified
- messages.
-</div><div class="parameter"><dl><dt class="header"><b>Parameters:</b></dt><dd class="item"><code class="name">msgs</code><span class="separator"> - </span><span class="description">the messages to fetch the items for</span></dd><dd class="item"><code class="name">fp</code><span class="separator"> - </span><span class="description">the fetch profile</span></dd></dl></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div></blockquote></div><hr/><a name="getDeletedMessageCount()" id="getDeletedMessageCount()"/><div class="member detail outer"><h3 class="member detail name">getDeletedMessageCount</h3><pre class="member detail synopsis">public int getDeletedMessageCount()
-            throws <a href="../../javax/mail/MessagingException.html" title="Class in javax.mail">MessagingException</a></pre><blockquote class="member detail name"><div class="member detail description"> Returns the number of deleted messages in this folder.
- <p/>
- This method can be invoked on a closed folder; however,
- note that for some stores, getting the message count can be an
- expensive operation involving actually opening the folder.
- In such cases, a provider can choose to return -1 here when the folder
- is closed.
-</div><div class="taglet"><dl class="tag list"><dt class="tag section header"><b>Since:</b></dt><dd>JavaMail 1.3</dd></dl></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div></blockquote></div><hr/><a name="getFolder(String)" id="getFolder(String)"/><div class="member detail outer"><h3 class="member detail name">getFolder</h3><pre class="member detail synopsis">public abstract <a href="../../javax/mail/Folder.html" title="Class in javax.mail">Folder</a> getFolder(String name)
-            throws <a href="../../javax/mail/MessagingException.html" title="Class in javax.mail">MessagingException</a></pre><blockquote class="member detail name"><div class="member detail description"> Return a folder corresponding to the given name.
- Note that the folder does not have to exist in the store.
- <p/>
- In some stores, <code>name</code> can be an absolute path if it starts 
- with the hierarchy delimiter. Otherwise, it is interpreted relative to 
- this folder.
- <p/>
- This method can be invoked on a closed folder.
-</div><div class="parameter"><dl><dt class="header"><b>Parameters:</b></dt><dd class="item"><code class="name">name</code><span class="separator"> - </span><span class="description">the name of the folder</span></dd></dl></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div></blockquote></div><hr/><a name="getFullName()" id="getFullName()"/><div class="member detail outer"><h3 class="member detail name">getFullName</h3><pre class="member detail synopsis">public abstract String getFullName()</pre><blockquote class="member detail name"><div class="member detail description"> Returns the full name of this folder.
+ a method on it.</div>
+</li>
+</ul>
+</div>
+<div class="summary">
+<ul class="blockList">
+<li class="blockList">
+<!-- =========== FIELD SUMMARY =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_summary">
+<!--   -->
+</a>
+<h3>Field Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Field Summary table, listing fields, and an explanation">
+<caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><strong><a href="../../javax/mail/Folder.html#HOLDS_FOLDERS">HOLDS_FOLDERS</a></strong></code>
+<div class="block">This folder can contain other folders.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><strong><a href="../../javax/mail/Folder.html#HOLDS_MESSAGES">HOLDS_MESSAGES</a></strong></code>
+<div class="block">This folder can contain messages.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>protected int</code></td>
+<td class="colLast"><code><strong><a href="../../javax/mail/Folder.html#mode">mode</a></strong></code>
+<div class="block">The folder mode: Folder.READ_ONLY, Folder.READ_WRITE, or -1 if not known.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><strong><a href="../../javax/mail/Folder.html#READ_ONLY">READ_ONLY</a></strong></code>
+<div class="block">This folder is read only.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><strong><a href="../../javax/mail/Folder.html#READ_WRITE">READ_WRITE</a></strong></code>
+<div class="block">This folder can be modified.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>protected <a href="../../javax/mail/Store.html" title="class in javax.mail">Store</a></code></td>
+<td class="colLast"><code><strong><a href="../../javax/mail/Folder.html#store">store</a></strong></code>
+<div class="block">The parent store.</div>
+</td>
+</tr>
+</table>
+</li>
+</ul>
+<!-- ======== CONSTRUCTOR SUMMARY ======== -->
+<ul class="blockList">
+<li class="blockList"><a name="constructor_summary">
+<!--   -->
+</a>
+<h3>Constructor Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Constructor Summary table, listing constructors, and an explanation">
+<caption><span>Constructors</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier</th>
+<th class="colLast" scope="col">Constructor and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>protected </code></td>
+<td class="colLast"><code><strong><a href="../../javax/mail/Folder.html#Folder(javax.mail.Store)">Folder</a></strong>(<a href="../../javax/mail/Store.html" title="class in javax.mail">Store</a>&nbsp;store)</code>
+<div class="block">Constructor.</div>
+</td>
+</tr>
+</table>
+</li>
+</ul>
+<!-- ========== METHOD SUMMARY =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="method_summary">
+<!--   -->
+</a>
+<h3>Method Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Method Summary table, listing methods, and an explanation">
+<caption><span>Methods</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../javax/mail/Folder.html#addConnectionListener(javax.mail.event.ConnectionListener)">addConnectionListener</a></strong>(<a href="../../javax/mail/event/ConnectionListener.html" title="interface in javax.mail.event">ConnectionListener</a>&nbsp;l)</code>
+<div class="block">Add a listener for connection events on this folder.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../javax/mail/Folder.html#addFolderListener(javax.mail.event.FolderListener)">addFolderListener</a></strong>(<a href="../../javax/mail/event/FolderListener.html" title="interface in javax.mail.event">FolderListener</a>&nbsp;l)</code>
+<div class="block">Add a listener for folder events on this folder.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../javax/mail/Folder.html#addMessageChangedListener(javax.mail.event.MessageChangedListener)">addMessageChangedListener</a></strong>(<a href="../../javax/mail/event/MessageChangedListener.html" title="interface in javax.mail.event">MessageChangedListener</a>&nbsp;l)</code>
+<div class="block">Add a listener for message changed events on this folder.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../javax/mail/Folder.html#addMessageCountListener(javax.mail.event.MessageCountListener)">addMessageCountListener</a></strong>(<a href="../../javax/mail/event/MessageCountListener.html" title="interface in javax.mail.event">MessageCountListener</a>&nbsp;l)</code>
+<div class="block">Add a listener for message count events on this folder.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>abstract void</code></td>
+<td class="colLast"><code><strong><a href="../../javax/mail/Folder.html#appendMessages(javax.mail.Message[])">appendMessages</a></strong>(<a href="../../javax/mail/Message.html" title="class in javax.mail">Message</a>[]&nbsp;msgs)</code>
+<div class="block">Appends the specified messages to this folder.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>abstract void</code></td>
+<td class="colLast"><code><strong><a href="../../javax/mail/Folder.html#close(boolean)">close</a></strong>(boolean&nbsp;expunge)</code>
+<div class="block">Closes this folder.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../javax/mail/Folder.html#copyMessages(javax.mail.Message[], javax.mail.Folder)">copyMessages</a></strong>(<a href="../../javax/mail/Message.html" title="class in javax.mail">Message</a>[]&nbsp;msgs,
+            <a href="../../javax/mail/Folder.html" title="class in javax.mail">Folder</a>&nbsp;folder)</code>
+<div class="block">Copies the specified messages into another folder.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>abstract boolean</code></td>
+<td class="colLast"><code><strong><a href="../../javax/mail/Folder.html#create(int)">create</a></strong>(int&nbsp;type)</code>
+<div class="block">Create this folder in the store.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>abstract boolean</code></td>
+<td class="colLast"><code><strong><a href="../../javax/mail/Folder.html#delete(boolean)">delete</a></strong>(boolean&nbsp;recurse)</code>
+<div class="block">Deletes this folder.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>abstract boolean</code></td>
+<td class="colLast"><code><strong><a href="../../javax/mail/Folder.html#exists()">exists</a></strong>()</code>
+<div class="block">Indicates whether this folder exists in the Store.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>abstract <a href="../../javax/mail/Message.html" title="class in javax.mail">Message</a>[]</code></td>
+<td class="colLast"><code><strong><a href="../../javax/mail/Folder.html#expunge()">expunge</a></strong>()</code>
+<div class="block">Expunges (permanently removing) all the messages marked DELETED.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../javax/mail/Folder.html#fetch(javax.mail.Message[], javax.mail.FetchProfile)">fetch</a></strong>(<a href="../../javax/mail/Message.html" title="class in javax.mail">Message</a>[]&nbsp;msgs,
+     <a href="../../javax/mail/FetchProfile.html" title="class in javax.mail">FetchProfile</a>&nbsp;fp)</code>
+<div class="block">Fetches the items specified in the given fetch profile for the specified
+ messages.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>int</code></td>
+<td class="colLast"><code><strong><a href="../../javax/mail/Folder.html#getDeletedMessageCount()">getDeletedMessageCount</a></strong>()</code>
+<div class="block">Returns the number of deleted messages in this folder.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>abstract <a href="../../javax/mail/Folder.html" title="class in javax.mail">Folder</a></code></td>
+<td class="colLast"><code><strong><a href="../../javax/mail/Folder.html#getFolder(java.lang.String)">getFolder</a></strong>(java.lang.String&nbsp;name)</code>
+<div class="block">Return a folder corresponding to the given name.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>abstract java.lang.String</code></td>
+<td class="colLast"><code><strong><a href="../../javax/mail/Folder.html#getFullName()">getFullName</a></strong>()</code>
+<div class="block">Returns the full name of this folder.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>abstract <a href="../../javax/mail/Message.html" title="class in javax.mail">Message</a></code></td>
+<td class="colLast"><code><strong><a href="../../javax/mail/Folder.html#getMessage(int)">getMessage</a></strong>(int&nbsp;msgnum)</code>
+<div class="block">Returns the message with the given number.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>abstract int</code></td>
+<td class="colLast"><code><strong><a href="../../javax/mail/Folder.html#getMessageCount()">getMessageCount</a></strong>()</code>
+<div class="block">Returns the number of messages in this folder.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../javax/mail/Message.html" title="class in javax.mail">Message</a>[]</code></td>
+<td class="colLast"><code><strong><a href="../../javax/mail/Folder.html#getMessages()">getMessages</a></strong>()</code>
+<div class="block">Returns all messages in this folder.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../javax/mail/Message.html" title="class in javax.mail">Message</a>[]</code></td>
+<td class="colLast"><code><strong><a href="../../javax/mail/Folder.html#getMessages(int[])">getMessages</a></strong>(int[]&nbsp;msgnums)</code>
+<div class="block">Returns the messages for the specified message numbers.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../javax/mail/Message.html" title="class in javax.mail">Message</a>[]</code></td>
+<td class="colLast"><code><strong><a href="../../javax/mail/Folder.html#getMessages(int, int)">getMessages</a></strong>(int&nbsp;start,
+           int&nbsp;end)</code>
+<div class="block">Returns the messages in the given range (inclusive).</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>int</code></td>
+<td class="colLast"><code><strong><a href="../../javax/mail/Folder.html#getMode()">getMode</a></strong>()</code>
+<div class="block">Return the mode this folder is open in.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>abstract java.lang.String</code></td>
+<td class="colLast"><code><strong><a href="../../javax/mail/Folder.html#getName()">getName</a></strong>()</code>
+<div class="block">Returns the name of this folder.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>int</code></td>
+<td class="colLast"><code><strong><a href="../../javax/mail/Folder.html#getNewMessageCount()">getNewMessageCount</a></strong>()</code>
+<div class="block">Returns the number of new messages in this folder.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>abstract <a href="../../javax/mail/Folder.html" title="class in javax.mail">Folder</a></code></td>
+<td class="colLast"><code><strong><a href="../../javax/mail/Folder.html#getParent()">getParent</a></strong>()</code>
+<div class="block">Returns the parent folder of this folder, or <code>null</code>
+ if this folder is the root of a folder hierarchy.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>abstract <a href="../../javax/mail/Flags.html" title="class in javax.mail">Flags</a></code></td>
+<td class="colLast"><code><strong><a href="../../javax/mail/Folder.html#getPermanentFlags()">getPermanentFlags</a></strong>()</code>
+<div class="block">Returns the permanent flags supported by this folder.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>abstract char</code></td>
+<td class="colLast"><code><strong><a href="../../javax/mail/Folder.html#getSeparator()">getSeparator</a></strong>()</code>
+<div class="block">Return the hierarchy delimiter character for this folder.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../javax/mail/Store.html" title="class in javax.mail">Store</a></code></td>
+<td class="colLast"><code><strong><a href="../../javax/mail/Folder.html#getStore()">getStore</a></strong>()</code>
+<div class="block">Returns the parent store.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>abstract int</code></td>
+<td class="colLast"><code><strong><a href="../../javax/mail/Folder.html#getType()">getType</a></strong>()</code>
+<div class="block">Returns the type of this Folder, i.e.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>int</code></td>
+<td class="colLast"><code><strong><a href="../../javax/mail/Folder.html#getUnreadMessageCount()">getUnreadMessageCount</a></strong>()</code>
+<div class="block">Returns the number of unread messages in this folder.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../javax/mail/URLName.html" title="class in javax.mail">URLName</a></code></td>
+<td class="colLast"><code><strong><a href="../../javax/mail/Folder.html#getURLName()">getURLName</a></strong>()</code>
+<div class="block">Return a URLName that can be used as a handle to access this folder.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>abstract boolean</code></td>
+<td class="colLast"><code><strong><a href="../../javax/mail/Folder.html#hasNewMessages()">hasNewMessages</a></strong>()</code>
+<div class="block">Indicates whether this folder has new messages.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>abstract boolean</code></td>
+<td class="colLast"><code><strong><a href="../../javax/mail/Folder.html#isOpen()">isOpen</a></strong>()</code>
+<div class="block">Indicates whether this folder is open.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><code><strong><a href="../../javax/mail/Folder.html#isSubscribed()">isSubscribed</a></strong>()</code>
+<div class="block">Indicates whether this folder is subscribed.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../javax/mail/Folder.html" title="class in javax.mail">Folder</a>[]</code></td>
+<td class="colLast"><code><strong><a href="../../javax/mail/Folder.html#list()">list</a></strong>()</code>
+<div class="block">Returns the list of subfolders of this folder.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>abstract <a href="../../javax/mail/Folder.html" title="class in javax.mail">Folder</a>[]</code></td>
+<td class="colLast"><code><strong><a href="../../javax/mail/Folder.html#list(java.lang.String)">list</a></strong>(java.lang.String&nbsp;pattern)</code>
+<div class="block">Returns a list of subfolders matching the specified pattern.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../javax/mail/Folder.html" title="class in javax.mail">Folder</a>[]</code></td>
+<td class="colLast"><code><strong><a href="../../javax/mail/Folder.html#listSubscribed()">listSubscribed</a></strong>()</code>
+<div class="block">Returns the list of subscribed subfolders of this folder.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../javax/mail/Folder.html" title="class in javax.mail">Folder</a>[]</code></td>
+<td class="colLast"><code><strong><a href="../../javax/mail/Folder.html#listSubscribed(java.lang.String)">listSubscribed</a></strong>(java.lang.String&nbsp;pattern)</code>
+<div class="block">Returns a list of subscribed subfolders matching the specified pattern.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>protected void</code></td>
+<td class="colLast"><code><strong><a href="../../javax/mail/Folder.html#notifyConnectionListeners(int)">notifyConnectionListeners</a></strong>(int&nbsp;type)</code>
+<div class="block">Notify all connection listeners.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>protected void</code></td>
+<td class="colLast"><code><strong><a href="../../javax/mail/Folder.html#notifyFolderListeners(int)">notifyFolderListeners</a></strong>(int&nbsp;type)</code>
+<div class="block">Notify all folder listeners registered on this Folder <em>and</em>
+ this folder's store.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>protected void</code></td>
+<td class="colLast"><code><strong><a href="../../javax/mail/Folder.html#notifyFolderRenamedListeners(javax.mail.Folder)">notifyFolderRenamedListeners</a></strong>(<a href="../../javax/mail/Folder.html" title="class in javax.mail">Folder</a>&nbsp;folder)</code>
+<div class="block">Notify all folder listeners registered on this folder <em>and</em>
+ this folder's store about the renaming of this folder.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>protected void</code></td>
+<td class="colLast"><code><strong><a href="../../javax/mail/Folder.html#notifyMessageAddedListeners(javax.mail.Message[])">notifyMessageAddedListeners</a></strong>(<a href="../../javax/mail/Message.html" title="class in javax.mail">Message</a>[]&nbsp;msgs)</code>
+<div class="block">Notify all message count listeners about the addition of messages
+ into this folder.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>protected void</code></td>
+<td class="colLast"><code><strong><a href="../../javax/mail/Folder.html#notifyMessageChangedListeners(int, javax.mail.Message)">notifyMessageChangedListeners</a></strong>(int&nbsp;type,
+                             <a href="../../javax/mail/Message.html" title="class in javax.mail">Message</a>&nbsp;msg)</code>
+<div class="block">Notify all message changed event listeners.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>protected void</code></td>
+<td class="colLast"><code><strong><a href="../../javax/mail/Folder.html#notifyMessageRemovedListeners(boolean, javax.mail.Message[])">notifyMessageRemovedListeners</a></strong>(boolean&nbsp;removed,
+                             <a href="../../javax/mail/Message.html" title="class in javax.mail">Message</a>[]&nbsp;msgs)</code>
+<div class="block">Notify all message count listeners about the removal of messages from
+ this folder.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>abstract void</code></td>
+<td class="colLast"><code><strong><a href="../../javax/mail/Folder.html#open(int)">open</a></strong>(int&nbsp;mode)</code>
+<div class="block">Opens this folder.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../javax/mail/Folder.html#removeConnectionListener(javax.mail.event.ConnectionListener)">removeConnectionListener</a></strong>(<a href="../../javax/mail/event/ConnectionListener.html" title="interface in javax.mail.event">ConnectionListener</a>&nbsp;l)</code>
+<div class="block">Remove a connection event listener.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../javax/mail/Folder.html#removeFolderListener(javax.mail.event.FolderListener)">removeFolderListener</a></strong>(<a href="../../javax/mail/event/FolderListener.html" title="interface in javax.mail.event">FolderListener</a>&nbsp;l)</code>
+<div class="block">Remove a folder event listener.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../javax/mail/Folder.html#removeMessageChangedListener(javax.mail.event.MessageChangedListener)">removeMessageChangedListener</a></strong>(<a href="../../javax/mail/event/MessageChangedListener.html" title="interface in javax.mail.event">MessageChangedListener</a>&nbsp;l)</code>
+<div class="block">Remove a message changed event listener.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../javax/mail/Folder.html#removeMessageCountListener(javax.mail.event.MessageCountListener)">removeMessageCountListener</a></strong>(<a href="../../javax/mail/event/MessageCountListener.html" title="interface in javax.mail.event">MessageCountListener</a>&nbsp;l)</code>
+<div class="block">Remove a message count event listener.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>abstract boolean</code></td>
+<td class="colLast"><code><strong><a href="../../javax/mail/Folder.html#renameTo(javax.mail.Folder)">renameTo</a></strong>(<a href="../../javax/mail/Folder.html" title="class in javax.mail">Folder</a>&nbsp;folder)</code>
+<div class="block">Renames this folder.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../javax/mail/Message.html" title="class in javax.mail">Message</a>[]</code></td>
+<td class="colLast"><code><strong><a href="../../javax/mail/Folder.html#search(javax.mail.search.SearchTerm)">search</a></strong>(<a href="../../javax/mail/search/SearchTerm.html" title="class in javax.mail.search">SearchTerm</a>&nbsp;term)</code>
+<div class="block">Searches this folder for messages matching the specified search term.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../javax/mail/Message.html" title="class in javax.mail">Message</a>[]</code></td>
+<td class="colLast"><code><strong><a href="../../javax/mail/Folder.html#search(javax.mail.search.SearchTerm, javax.mail.Message[])">search</a></strong>(<a href="../../javax/mail/search/SearchTerm.html" title="class in javax.mail.search">SearchTerm</a>&nbsp;term,
+      <a href="../../javax/mail/Message.html" title="class in javax.mail">Message</a>[]&nbsp;msgs)</code>
+<div class="block">Searches the given messages for those matching the specified search
+ term.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../javax/mail/Folder.html#setFlags(int[], javax.mail.Flags, boolean)">setFlags</a></strong>(int[]&nbsp;msgnums,
+        <a href="../../javax/mail/Flags.html" title="class in javax.mail">Flags</a>&nbsp;flag,
+        boolean&nbsp;value)</code>
+<div class="block">Sets the specified flags on each of the specified messages.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../javax/mail/Folder.html#setFlags(int, int, javax.mail.Flags, boolean)">setFlags</a></strong>(int&nbsp;start,
+        int&nbsp;end,
+        <a href="../../javax/mail/Flags.html" title="class in javax.mail">Flags</a>&nbsp;flag,
+        boolean&nbsp;value)</code>
+<div class="block">Set the specified flags on the given range of messages (inclusive).</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../javax/mail/Folder.html#setFlags(javax.mail.Message[], javax.mail.Flags, boolean)">setFlags</a></strong>(<a href="../../javax/mail/Message.html" title="class in javax.mail">Message</a>[]&nbsp;msgs,
+        <a href="../../javax/mail/Flags.html" title="class in javax.mail">Flags</a>&nbsp;flag,
+        boolean&nbsp;value)</code>
+<div class="block">Sets the specified flags on each specified message.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../javax/mail/Folder.html#setSubscribed(boolean)">setSubscribed</a></strong>(boolean&nbsp;flag)</code>
+<div class="block">Subscribe to or unsubscribe from this folder.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>java.lang.String</code></td>
+<td class="colLast"><code><strong><a href="../../javax/mail/Folder.html#toString()">toString</a></strong>()</code>
+<div class="block">Returns the value of Folder.getFullName(), or, if that is null,
+ returns the default toString().</div>
+</td>
+</tr>
+</table>
+<ul class="blockList">
+<li class="blockList"><a name="methods_inherited_from_class_java.lang.Object">
+<!--   -->
+</a>
+<h3>Methods inherited from class&nbsp;java.lang.Object</h3>
+<code>clone, equals, finalize, getClass, hashCode, notify, notifyAll, wait, wait, wait</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="details">
+<ul class="blockList">
+<li class="blockList">
+<!-- ============ FIELD DETAIL =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_detail">
+<!--   -->
+</a>
+<h3>Field Detail</h3>
+<a name="HOLDS_MESSAGES">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>HOLDS_MESSAGES</h4>
+<pre>public static final&nbsp;int HOLDS_MESSAGES</pre>
+<div class="block">This folder can contain messages.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../constant-values.html#javax.mail.Folder.HOLDS_MESSAGES">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="HOLDS_FOLDERS">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>HOLDS_FOLDERS</h4>
+<pre>public static final&nbsp;int HOLDS_FOLDERS</pre>
+<div class="block">This folder can contain other folders.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../constant-values.html#javax.mail.Folder.HOLDS_FOLDERS">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="READ_ONLY">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>READ_ONLY</h4>
+<pre>public static final&nbsp;int READ_ONLY</pre>
+<div class="block">This folder is read only.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../constant-values.html#javax.mail.Folder.READ_ONLY">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="READ_WRITE">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>READ_WRITE</h4>
+<pre>public static final&nbsp;int READ_WRITE</pre>
+<div class="block">This folder can be modified.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../constant-values.html#javax.mail.Folder.READ_WRITE">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="store">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>store</h4>
+<pre>protected&nbsp;<a href="../../javax/mail/Store.html" title="class in javax.mail">Store</a> store</pre>
+<div class="block">The parent store.</div>
+</li>
+</ul>
+<a name="mode">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>mode</h4>
+<pre>protected&nbsp;int mode</pre>
+<div class="block">The folder mode: Folder.READ_ONLY, Folder.READ_WRITE, or -1 if not known.</div>
+</li>
+</ul>
+</li>
+</ul>
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+<ul class="blockList">
+<li class="blockList"><a name="constructor_detail">
+<!--   -->
+</a>
+<h3>Constructor Detail</h3>
+<a name="Folder(javax.mail.Store)">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>Folder</h4>
+<pre>protected&nbsp;Folder(<a href="../../javax/mail/Store.html" title="class in javax.mail">Store</a>&nbsp;store)</pre>
+<div class="block">Constructor.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>store</code> - the parent store</dd></dl>
+</li>
+</ul>
+</li>
+</ul>
+<!-- ============ METHOD DETAIL ========== -->
+<ul class="blockList">
+<li class="blockList"><a name="method_detail">
+<!--   -->
+</a>
+<h3>Method Detail</h3>
+<a name="getName()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getName</h4>
+<pre>public abstract&nbsp;java.lang.String&nbsp;getName()</pre>
+<div class="block">Returns the name of this folder.
+ <p>
+ This method can be invoked on a closed folder.</div>
+</li>
+</ul>
+<a name="getFullName()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getFullName</h4>
+<pre>public abstract&nbsp;java.lang.String&nbsp;getFullName()</pre>
+<div class="block">Returns the full name of this folder.
  If the folder resides under the root hierarchy of its store,
  the returned name is relative to the root.
  Otherwise an absolute name, starting with the hierarchy delimiter,
  is returned.
- <p/>
- This method can be invoked on a closed folder.
-</div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div></blockquote></div><hr/><a name="getMessage(int)" id="getMessage(int)"/><div class="member detail outer"><h3 class="member detail name">getMessage</h3><pre class="member detail synopsis">public abstract <a href="../../javax/mail/Message.html" title="Class in javax.mail">Message</a> getMessage(int msgnum)
-            throws <a href="../../javax/mail/MessagingException.html" title="Class in javax.mail">MessagingException</a></pre><blockquote class="member detail name"><div class="member detail description"> Returns the message with the given number.
- The message number is the relative position of a message in its
- folder, starting at 1.
- <p/>
- Note that message numbers can change within a session if the folder is 
- expunged, therefore the use of message numbers as references to
- messages is inadvisable.
-</div><div class="parameter"><dl><dt class="header"><b>Parameters:</b></dt><dd class="item"><code class="name">msgnum</code><span class="separator"> - </span><span class="description">the message number</span></dd></dl></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div></blockquote></div><hr/><a name="getMessageCount()" id="getMessageCount()"/><div class="member detail outer"><h3 class="member detail name">getMessageCount</h3><pre class="member detail synopsis">public abstract int getMessageCount()
-            throws <a href="../../javax/mail/MessagingException.html" title="Class in javax.mail">MessagingException</a></pre><blockquote class="member detail name"><div class="member detail description"> Returns the number of messages in this folder.
- <p/>
- This method can be invoked on a closed folder; however,
- note that for some stores, getting the message count can be an
- expensive operation involving actually opening the folder.
- In such cases, a provider can choose to return -1 here when the folder
- is closed.
-</div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div></blockquote></div><hr/><a name="getMessages()" id="getMessages()"/><div class="member detail outer"><h3 class="member detail name">getMessages</h3><pre class="member detail synopsis">public <a href="../../javax/mail/Message.html" title="Class in javax.mail">Message</a>[] getMessages()
-            throws <a href="../../javax/mail/MessagingException.html" title="Class in javax.mail">MessagingException</a></pre><blockquote class="member detail name"><div class="member detail description"> Returns all messages in this folder.
-</div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div></blockquote></div><hr/><a name="getMessages(int,int)" id="getMessages(int,int)"/><div class="member detail outer"><h3 class="member detail name">getMessages</h3><pre class="member detail synopsis">public <a href="../../javax/mail/Message.html" title="Class in javax.mail">Message</a>[] getMessages(int start,
-                             int end)
-            throws <a href="../../javax/mail/MessagingException.html" title="Class in javax.mail">MessagingException</a></pre><blockquote class="member detail name"><div class="member detail description"> Returns the messages in the given range (inclusive).
-</div><div class="parameter"><dl><dt class="header"><b>Parameters:</b></dt><dd class="item"><code class="name">start</code><span class="separator"> - </span><span class="description">the number of the first message</span></dd><dd class="item"><code class="name">end</code><span class="separator"> - </span><span class="description">the number of the last message</span></dd></dl></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div></blockquote></div><hr/><a name="getMessages(msgnums[])" id="getMessages(msgnums[])"/><div class="member detail outer"><h3 class="member detail name">getMessages</h3><pre class="member detail synopsis">public <a href="../../javax/mail/Message.html" title="Class in javax.mail">Message</a>[] getMessages(msgnums[] )
-            throws <a href="../../javax/mail/MessagingException.html" title="Class in javax.mail">MessagingException</a></pre><blockquote class="member detail name"><div class="member detail description"> Returns the messages for the specified message numbers.
-</div><div class="parameter"><dl><dt class="header"><b>Parameters:</b></dt></dl></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div></blockquote></div><hr/><a name="getMode()" id="getMode()"/><div class="member detail outer"><h3 class="member detail name">getMode</h3><pre class="member detail synopsis">public int getMode()</pre><blockquote class="member detail name"><div class="member detail description"> Return the mode this folder is open in.
- Returns <code>Folder.READ_ONLY</code>, <code>Folder.READ_WRITE</code>,
- or <code>-1</code> if the open mode is not known.
-</div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div></blockquote></div><hr/><a name="getName()" id="getName()"/><div class="member detail outer"><h3 class="member detail name">getName</h3><pre class="member detail synopsis">public abstract String getName()</pre><blockquote class="member detail name"><div class="member detail description"> Returns the name of this folder.
- <p/>
- This method can be invoked on a closed folder.
-</div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div></blockquote></div><hr/><a name="getNewMessageCount()" id="getNewMessageCount()"/><div class="member detail outer"><h3 class="member detail name">getNewMessageCount</h3><pre class="member detail synopsis">public int getNewMessageCount()
-            throws <a href="../../javax/mail/MessagingException.html" title="Class in javax.mail">MessagingException</a></pre><blockquote class="member detail name"><div class="member detail description"> Returns the number of new messages in this folder.
- <p/>
- This method can be invoked on a closed folder; however,
- note that for some stores, getting the message count can be an
- expensive operation involving actually opening the folder.
- In such cases, a provider can choose to return -1 here when the folder
- is closed.
-</div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div></blockquote></div><hr/><a name="getParent()" id="getParent()"/><div class="member detail outer"><h3 class="member detail name">getParent</h3><pre class="member detail synopsis">public abstract <a href="../../javax/mail/Folder.html" title="Class in javax.mail">Folder</a> getParent()
-            throws <a href="../../javax/mail/MessagingException.html" title="Class in javax.mail">MessagingException</a></pre><blockquote class="member detail name"><div class="member detail description"> Returns the parent folder of this folder, or <code>null</code>
- if this folder is the root of a folder hierarchy.
- <p/>
- This method can be invoked on a closed folder.
-</div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div></blockquote></div><hr/><a name="getPermanentFlags()" id="getPermanentFlags()"/><div class="member detail outer"><h3 class="member detail name">getPermanentFlags</h3><pre class="member detail synopsis">public abstract <a href="../../javax/mail/Flags.html" title="Class in javax.mail">Flags</a> getPermanentFlags()</pre><blockquote class="member detail name"><div class="member detail description"> Returns the permanent flags supported by this folder.
-</div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div></blockquote></div><hr/><a name="getSeparator()" id="getSeparator()"/><div class="member detail outer"><h3 class="member detail name">getSeparator</h3><pre class="member detail synopsis">public abstract char getSeparator()
-            throws <a href="../../javax/mail/MessagingException.html" title="Class in javax.mail">MessagingException</a></pre><blockquote class="member detail name"><div class="member detail description"> Return the hierarchy delimiter character for this folder.
- This separates the full name of this folder from the names of
- subfolders.
- <p/>
- This method can be invoked on a closed folder.
-</div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div></blockquote></div><hr/><a name="getStore()" id="getStore()"/><div class="member detail outer"><h3 class="member detail name">getStore</h3><pre class="member detail synopsis">public <a href="../../javax/mail/Store.html" title="Class in javax.mail">Store</a> getStore()</pre><blockquote class="member detail name"><div class="member detail description"> Returns the parent store.
- This method can be invoked on a closed folder.
-</div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div></blockquote></div><hr/><a name="getType()" id="getType()"/><div class="member detail outer"><h3 class="member detail name">getType</h3><pre class="member detail synopsis">public abstract int getType()
-            throws <a href="../../javax/mail/MessagingException.html" title="Class in javax.mail">MessagingException</a></pre><blockquote class="member detail name"><div class="member detail description"> Returns the type of this Folder, i.e. whether this folder can hold
- messages or subfolders or both.
- The returned value is an integer bitfield with the appropriate bits set.
- <p/>
- This method can be invoked on a closed folder.
-</div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div></blockquote></div><hr/><a name="getURLName()" id="getURLName()"/><div class="member detail outer"><h3 class="member detail name">getURLName</h3><pre class="member detail synopsis">public <a href="../../javax/mail/URLName.html" title="Class in javax.mail">URLName</a> getURLName()
-            throws <a href="../../javax/mail/MessagingException.html" title="Class in javax.mail">MessagingException</a></pre><blockquote class="member detail name"><div class="member detail description"> Return a URLName that can be used as a handle to access this folder.
+ <p>
+ This method can be invoked on a closed folder.</div>
+</li>
+</ul>
+<a name="getURLName()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getURLName</h4>
+<pre>public&nbsp;<a href="../../javax/mail/URLName.html" title="class in javax.mail">URLName</a>&nbsp;getURLName()
+                   throws <a href="../../javax/mail/MessagingException.html" title="class in javax.mail">MessagingException</a></pre>
+<div class="block">Return a URLName that can be used as a handle to access this folder.
  This will not include the password used to authenticate to the store.
- <p/>
- This method can be invoked on a closed folder.
-</div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div></blockquote></div><hr/><a name="getUnreadMessageCount()" id="getUnreadMessageCount()"/><div class="member detail outer"><h3 class="member detail name">getUnreadMessageCount</h3><pre class="member detail synopsis">public int getUnreadMessageCount()
-            throws <a href="../../javax/mail/MessagingException.html" title="Class in javax.mail">MessagingException</a></pre><blockquote class="member detail name"><div class="member detail description"> Returns the number of unread messages in this folder.
- <p/>
- This method can be invoked on a closed folder; however,
- note that for some stores, getting the message count can be an
- expensive operation involving actually opening the folder.
- In such cases, a provider can choose to return -1 here when the folder
- is closed.
-</div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div></blockquote></div><hr/><a name="hasNewMessages()" id="hasNewMessages()"/><div class="member detail outer"><h3 class="member detail name">hasNewMessages</h3><pre class="member detail synopsis">public abstract boolean hasNewMessages()
-            throws <a href="../../javax/mail/MessagingException.html" title="Class in javax.mail">MessagingException</a></pre><blockquote class="member detail name"><div class="member detail description"> Indicates whether this folder has new messages.
- <p/>
- This method can be invoked on a closed folder that can contain
- messages.
-</div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div></blockquote></div><hr/><a name="isOpen()" id="isOpen()"/><div class="member detail outer"><h3 class="member detail name">isOpen</h3><pre class="member detail synopsis">public abstract boolean isOpen()</pre><blockquote class="member detail name"><div class="member detail description"> Indicates whether this folder is open.
-</div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div></blockquote></div><hr/><a name="isSubscribed()" id="isSubscribed()"/><div class="member detail outer"><h3 class="member detail name">isSubscribed</h3><pre class="member detail synopsis">public boolean isSubscribed()</pre><blockquote class="member detail name"><div class="member detail description"> Indicates whether this folder is subscribed.
- <p/>
- This method can be invoked on a closed folder.
-</div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div></blockquote></div><hr/><a name="list()" id="list()"/><div class="member detail outer"><h3 class="member detail name">list</h3><pre class="member detail synopsis">public <a href="../../javax/mail/Folder.html" title="Class in javax.mail">Folder</a>[] list()
-            throws <a href="../../javax/mail/MessagingException.html" title="Class in javax.mail">MessagingException</a></pre><blockquote class="member detail name"><div class="member detail description"> Returns the list of subfolders of this folder.
- <p/>
- This method can be invoked on a closed folder.
-</div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div></blockquote></div><hr/><a name="list(String)" id="list(String)"/><div class="member detail outer"><h3 class="member detail name">list</h3><pre class="member detail synopsis">public abstract <a href="../../javax/mail/Folder.html" title="Class in javax.mail">Folder</a>[] list(String pattern)
-            throws <a href="../../javax/mail/MessagingException.html" title="Class in javax.mail">MessagingException</a></pre><blockquote class="member detail name"><div class="member detail description"> Returns a list of subfolders matching the specified pattern.
+ <p>
+ This method can be invoked on a closed folder.</div>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="../../javax/mail/MessagingException.html" title="class in javax.mail">MessagingException</a></code></dd></dl>
+</li>
+</ul>
+<a name="getStore()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getStore</h4>
+<pre>public&nbsp;<a href="../../javax/mail/Store.html" title="class in javax.mail">Store</a>&nbsp;getStore()</pre>
+<div class="block">Returns the parent store.
+ This method can be invoked on a closed folder.</div>
+</li>
+</ul>
+<a name="getParent()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getParent</h4>
+<pre>public abstract&nbsp;<a href="../../javax/mail/Folder.html" title="class in javax.mail">Folder</a>&nbsp;getParent()
+                          throws <a href="../../javax/mail/MessagingException.html" title="class in javax.mail">MessagingException</a></pre>
+<div class="block">Returns the parent folder of this folder, or <code>null</code>
+ if this folder is the root of a folder hierarchy.
+ <p>
+ This method can be invoked on a closed folder.</div>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="../../javax/mail/MessagingException.html" title="class in javax.mail">MessagingException</a></code></dd></dl>
+</li>
+</ul>
+<a name="exists()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>exists</h4>
+<pre>public abstract&nbsp;boolean&nbsp;exists()
+                        throws <a href="../../javax/mail/MessagingException.html" title="class in javax.mail">MessagingException</a></pre>
+<div class="block">Indicates whether this folder exists in the Store.
+ <p>
+ This method can be invoked on a closed folder.</div>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="../../javax/mail/MessagingException.html" title="class in javax.mail">MessagingException</a></code></dd></dl>
+</li>
+</ul>
+<a name="list(java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>list</h4>
+<pre>public abstract&nbsp;<a href="../../javax/mail/Folder.html" title="class in javax.mail">Folder</a>[]&nbsp;list(java.lang.String&nbsp;pattern)
+                       throws <a href="../../javax/mail/MessagingException.html" title="class in javax.mail">MessagingException</a></pre>
+<div class="block">Returns a list of subfolders matching the specified pattern.
  Patterns may contain the wildcard characters "%",
  which matches any character except hierarchy delimiters, and "*",
  which matches any character.
- <p/>
- This method can be invoked on a closed folder.
-</div><div class="parameter"><dl><dt class="header"><b>Parameters:</b></dt><dd class="item"><code class="name">pattern</code><span class="separator"> - </span><span class="description">the match pattern</span></dd></dl></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div></blockquote></div><hr/><a name="listSubscribed()" id="listSubscribed()"/><div class="member detail outer"><h3 class="member detail name">listSubscribed</h3><pre class="member detail synopsis">public <a href="../../javax/mail/Folder.html" title="Class in javax.mail">Folder</a>[] listSubscribed()
-            throws <a href="../../javax/mail/MessagingException.html" title="Class in javax.mail">MessagingException</a></pre><blockquote class="member detail name"><div class="member detail description"> Returns the list of subscribed subfolders of this folder.
- <p/>
- This method can be invoked on a closed folder.
-</div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div></blockquote></div><hr/><a name="listSubscribed(String)" id="listSubscribed(String)"/><div class="member detail outer"><h3 class="member detail name">listSubscribed</h3><pre class="member detail synopsis">public <a href="../../javax/mail/Folder.html" title="Class in javax.mail">Folder</a>[] listSubscribed(String pattern)
-            throws <a href="../../javax/mail/MessagingException.html" title="Class in javax.mail">MessagingException</a></pre><blockquote class="member detail name"><div class="member detail description"> Returns a list of subscribed subfolders matching the specified pattern. 
+ <p>
+ This method can be invoked on a closed folder.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>pattern</code> - the match pattern</dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="../../javax/mail/MessagingException.html" title="class in javax.mail">MessagingException</a></code></dd></dl>
+</li>
+</ul>
+<a name="listSubscribed(java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>listSubscribed</h4>
+<pre>public&nbsp;<a href="../../javax/mail/Folder.html" title="class in javax.mail">Folder</a>[]&nbsp;listSubscribed(java.lang.String&nbsp;pattern)
+                        throws <a href="../../javax/mail/MessagingException.html" title="class in javax.mail">MessagingException</a></pre>
+<div class="block">Returns a list of subscribed subfolders matching the specified pattern.
  If the folder does not support subscription, returns the same as the
  <code>list</code> method.
  The pattern can contain wildcards.
- <p/>
- This method can be invoked on a closed folder.
-</div><div class="parameter"><dl><dt class="header"><b>Parameters:</b></dt><dd class="item"><code class="name">pattern</code><span class="separator"> - </span><span class="description">the match pattern</span></dd></dl></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div></blockquote></div><hr/><a name="notifyConnectionListeners(int)" id="notifyConnectionListeners(int)"/><div class="member detail outer"><h3 class="member detail name">notifyConnectionListeners</h3><pre class="member detail synopsis">protected void notifyConnectionListeners(int type)</pre><blockquote class="member detail name"><div class="member detail description"> Notify all connection listeners.
-</div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div></blockquote></div><hr/><a name="notifyFolderListeners(int)" id="notifyFolderListeners(int)"/><div class="member detail outer"><h3 class="member detail name">notifyFolderListeners</h3><pre class="member detail synopsis">protected void notifyFolderListeners(int type)</pre><blockquote class="member detail name"><div class="member detail description"> Notify all folder listeners registered on this Folder <em>and</em>
- this folder's store.
-</div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div></blockquote></div><hr/><a name="notifyFolderRenamedListeners(javax.mail.Folder)" id="notifyFolderRenamedListeners(javax.mail.Folder)"/><div class="member detail outer"><h3 class="member detail name">notifyFolderRenamedListeners</h3><pre class="member detail synopsis">protected void notifyFolderRenamedListeners(<a href="../../javax/mail/Folder.html" title="Class in javax.mail">Folder</a> folder)</pre><blockquote class="member detail name"><div class="member detail description"> Notify all folder listeners registered on this folder <em>and</em>
- this folder's store about the renaming of this folder.
-</div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div></blockquote></div><hr/><a name="notifyMessageAddedListeners(javax.mail.Message[])" id="notifyMessageAddedListeners(javax.mail.Message[])"/><div class="member detail outer"><h3 class="member detail name">notifyMessageAddedListeners</h3><pre class="member detail synopsis">protected void notifyMessageAddedListeners(<a href="../../javax/mail/Message.html" title="Class in javax.mail">Message</a>[] msgs)</pre><blockquote class="member detail name"><div class="member detail description"> Notify all message count listeners about the addition of messages
- into this folder.
-</div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div></blockquote></div><hr/><a name="notifyMessageChangedListeners(int,javax.mail.Message)" id="notifyMessageChangedListeners(int,javax.mail.Message)"/><div class="member detail outer"><h3 class="member detail name">notifyMessageChangedListeners</h3><pre class="member detail synopsis">protected void notifyMessageChangedListeners(int type,
-                                             <a href="../../javax/mail/Message.html" title="Class in javax.mail">Message</a> msg)</pre><blockquote class="member detail name"><div class="member detail description"> Notify all message changed event listeners.
-</div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div></blockquote></div><hr/><a name="notifyMessageRemovedListeners(boolean,javax.mail.Message[])" id="notifyMessageRemovedListeners(boolean,javax.mail.Message[])"/><div class="member detail outer"><h3 class="member detail name">notifyMessageRemovedListeners</h3><pre class="member detail synopsis">protected void notifyMessageRemovedListeners(boolean removed,
-                                             <a href="../../javax/mail/Message.html" title="Class in javax.mail">Message</a>[] msgs)</pre><blockquote class="member detail name"><div class="member detail description"> Notify all message count listeners about the removal of messages from
- this folder.
-</div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div></blockquote></div><hr/><a name="open(int)" id="open(int)"/><div class="member detail outer"><h3 class="member detail name">open</h3><pre class="member detail synopsis">public abstract void open(int mode)
-            throws <a href="../../javax/mail/MessagingException.html" title="Class in javax.mail">MessagingException</a></pre><blockquote class="member detail name"><div class="member detail description"> Opens this folder.
- This method can only be invoked on a closed folder that can contain
- messages.
-</div><div class="parameter"><dl><dt class="header"><b>Parameters:</b></dt><dd class="item"><code class="name">mode</code><span class="separator"> - </span><span class="description">open the Folder READ_ONLY or READ_WRITE</span></dd></dl></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div></blockquote></div><hr/><a name="removeConnectionListener(javax.mail.event.ConnectionListener)" id="removeConnectionListener(javax.mail.event.ConnectionListener)"/><div class="member detail outer"><h3 class="member detail name">removeConnectionListener</h3><pre class="member detail synopsis">public void removeConnectionListener(<a href="../../javax/mail/event/ConnectionListener.html" title="Interface in javax.mail.event">ConnectionListener</a> l)</pre><blockquote class="member detail name"><div class="member detail description"> Remove a connection event listener.
-</div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div></blockquote></div><hr/><a name="removeFolderListener(javax.mail.event.FolderListener)" id="removeFolderListener(javax.mail.event.FolderListener)"/><div class="member detail outer"><h3 class="member detail name">removeFolderListener</h3><pre class="member detail synopsis">public void removeFolderListener(<a href="../../javax/mail/event/FolderListener.html" title="Interface in javax.mail.event">FolderListener</a> l)</pre><blockquote class="member detail name"><div class="member detail description"> Remove a folder event listener.
-</div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div></blockquote></div><hr/><a name="removeMessageChangedListener(javax.mail.event.MessageChangedListener)" id="removeMessageChangedListener(javax.mail.event.MessageChangedListener)"/><div class="member detail outer"><h3 class="member detail name">removeMessageChangedListener</h3><pre class="member detail synopsis">public void removeMessageChangedListener(<a href="../../javax/mail/event/MessageChangedListener.html" title="Interface in javax.mail.event">MessageChangedListener</a> l)</pre><blockquote class="member detail name"><div class="member detail description"> Remove a message changed event listener.
-</div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div></blockquote></div><hr/><a name="removeMessageCountListener(javax.mail.event.MessageCountListener)" id="removeMessageCountListener(javax.mail.event.MessageCountListener)"/><div class="member detail outer"><h3 class="member detail name">removeMessageCountListener</h3><pre class="member detail synopsis">public void removeMessageCountListener(<a href="../../javax/mail/event/MessageCountListener.html" title="Interface in javax.mail.event">MessageCountListener</a> l)</pre><blockquote class="member detail name"><div class="member detail description"> Remove a message count event listener.
-</div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div></blockquote></div><hr/><a name="renameTo(javax.mail.Folder)" id="renameTo(javax.mail.Folder)"/><div class="member detail outer"><h3 class="member detail name">renameTo</h3><pre class="member detail synopsis">public abstract boolean renameTo(<a href="../../javax/mail/Folder.html" title="Class in javax.mail">Folder</a> folder)
-            throws <a href="../../javax/mail/MessagingException.html" title="Class in javax.mail">MessagingException</a></pre><blockquote class="member detail name"><div class="member detail description"> Renames this folder.
- This method can only be invoked on a closed folder.
-</div><div class="parameter"><dl><dt class="header"><b>Parameters:</b></dt><dd class="item"><code class="name">folder</code><span class="separator"> - </span><span class="description">a folder representing the new name for this folder</span></dd></dl></div><div class="member detail return list"><dl><dt class="member detail return header"><b>Returns:</b></dt><dd class="member detail return item">true if the folder is renamed successfully, false otherwise</dd></dl></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div></blockquote></div><hr/><a name="search(javax.mail.search.SearchTerm)" id="search(javax.mail.search.SearchTerm)"/><div class="member detail outer"><h3 class="member detail name">search</h3><pre class="member detail synopsis">public <a href="../../javax/mail/Message.html" title="Class in javax.mail">Message</a>[] search(<a href="../../javax/mail/search/SearchTerm.html" title="Class in javax.mail.search">SearchTerm</a> term)
-            throws <a href="../../javax/mail/MessagingException.html" title="Class in javax.mail">MessagingException</a></pre><blockquote class="member detail name"><div class="member detail description"> Searches this folder for messages matching the specified search term.
- Returns the matching messages.
-</div><div class="parameter"><dl><dt class="header"><b>Parameters:</b></dt><dd class="item"><code class="name">term</code><span class="separator"> - </span><span class="description">the search term</span></dd></dl></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div></blockquote></div><hr/><a name="search(javax.mail.search.SearchTerm,javax.mail.Message[])" id="search(javax.mail.search.SearchTerm,javax.mail.Message[])"/><div class="member detail outer"><h3 class="member detail name">search</h3><pre class="member detail synopsis">public <a href="../../javax/mail/Message.html" title="Class in javax.mail">Message</a>[] search(<a href="../../javax/mail/search/SearchTerm.html" title="Class in javax.mail.search">SearchTerm</a> term,
-                        <a href="../../javax/mail/Message.html" title="Class in javax.mail">Message</a>[] msgs)
-            throws <a href="../../javax/mail/MessagingException.html" title="Class in javax.mail">MessagingException</a></pre><blockquote class="member detail name"><div class="member detail description"> Searches the given messages for those matching the specified search
- term.
- Returns the matching messages.
-</div><div class="parameter"><dl><dt class="header"><b>Parameters:</b></dt><dd class="item"><code class="name">term</code><span class="separator"> - </span><span class="description">the search term</span></dd><dd class="item"><code class="name">msgs</code><span class="separator"> - </span><span class="description">the messages to be searched</span></dd></dl></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div></blockquote></div><hr/><a name="setFlags(int,int,javax.mail.Flags,boolean)" id="setFlags(int,int,javax.mail.Flags,boolean)"/><div class="member detail outer"><h3 class="member detail name">setFlags</h3><pre class="member detail synopsis">public void setFlags(int start,
-                     int end,
-                     <a href="../../javax/mail/Flags.html" title="Class in javax.mail">Flags</a> flag,
-                     boolean value)
-            throws <a href="../../javax/mail/MessagingException.html" title="Class in javax.mail">MessagingException</a></pre><blockquote class="member detail name"><div class="member detail description"> Set the specified flags on the given range of messages (inclusive).
-</div><div class="parameter"><dl><dt class="header"><b>Parameters:</b></dt><dd class="item"><code class="name">start</code><span class="separator"> - </span><span class="description">the number of the first message</span></dd><dd class="item"><code class="name">end</code><span class="separator"> - </span><span class="description">the number of the last message</span></dd><dd class="item"><code class="name">flag</code><span class="separator"> - </span><span class="description">the flags to be set</span></dd><dd class="item"><code class="name">value</code><span class="separator"> - </span><span class="description">set the flags to this value</span></dd></dl></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div></blockquote></div><hr/><a name="setFlags(int[],javax.mail.Flags,boolean)" id="setFlags(int[],javax.mail.Flags,boolean)"/><div class="member detail outer"><h3 class="member detail name">setFlags</h3><pre class="member detail synopsis">public void setFlags(int[] msgnums,
-                     <a href="../../javax/mail/Flags.html" title="Class in javax.mail">Flags</a> flag,
-                     boolean value)
-            throws <a href="../../javax/mail/MessagingException.html" title="Class in javax.mail">MessagingException</a></pre><blockquote class="member detail name"><div class="member detail description"> Sets the specified flags on each of the specified messages.
-</div><div class="parameter"><dl><dt class="header"><b>Parameters:</b></dt><dd class="item"><code class="name">msgnums</code><span class="separator"> - </span><span class="description">the message numbers</span></dd><dd class="item"><code class="name">flag</code><span class="separator"> - </span><span class="description">the flags to be set</span></dd><dd class="item"><code class="name">value</code><span class="separator"> - </span><span class="description">set the flags to this value</span></dd></dl></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div></blockquote></div><hr/><a name="setFlags(javax.mail.Message[],javax.mail.Flags,boolean)" id="setFlags(javax.mail.Message[],javax.mail.Flags,boolean)"/><div class="member detail outer"><h3 class="member detail name">setFlags</h3><pre class="member detail synopsis">public void setFlags(<a href="../../javax/mail/Message.html" title="Class in javax.mail">Message</a>[] msgs,
-                     <a href="../../javax/mail/Flags.html" title="Class in javax.mail">Flags</a> flag,
-                     boolean value)
-            throws <a href="../../javax/mail/MessagingException.html" title="Class in javax.mail">MessagingException</a></pre><blockquote class="member detail name"><div class="member detail description"> Sets the specified flags on each specified message.
-</div><div class="parameter"><dl><dt class="header"><b>Parameters:</b></dt><dd class="item"><code class="name">flag</code><span class="separator"> - </span><span class="description">the flags to be set</span></dd><dd class="item"><code class="name">value</code><span class="separator"> - </span><span class="description">set the flags to this value</span></dd></dl></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div></blockquote></div><hr/><a name="setSubscribed(boolean)" id="setSubscribed(boolean)"/><div class="member detail outer"><h3 class="member detail name">setSubscribed</h3><pre class="member detail synopsis">public void setSubscribed(boolean flag)
-            throws <a href="../../javax/mail/MessagingException.html" title="Class in javax.mail">MessagingException</a></pre><blockquote class="member detail name"><div class="member detail description"> Subscribe to or unsubscribe from this folder.
+ <p>
+ This method can be invoked on a closed folder.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>pattern</code> - the match pattern</dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="../../javax/mail/MessagingException.html" title="class in javax.mail">MessagingException</a></code></dd></dl>
+</li>
+</ul>
+<a name="list()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>list</h4>
+<pre>public&nbsp;<a href="../../javax/mail/Folder.html" title="class in javax.mail">Folder</a>[]&nbsp;list()
+              throws <a href="../../javax/mail/MessagingException.html" title="class in javax.mail">MessagingException</a></pre>
+<div class="block">Returns the list of subfolders of this folder.
+ <p>
+ This method can be invoked on a closed folder.</div>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="../../javax/mail/MessagingException.html" title="class in javax.mail">MessagingException</a></code></dd></dl>
+</li>
+</ul>
+<a name="listSubscribed()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>listSubscribed</h4>
+<pre>public&nbsp;<a href="../../javax/mail/Folder.html" title="class in javax.mail">Folder</a>[]&nbsp;listSubscribed()
+                        throws <a href="../../javax/mail/MessagingException.html" title="class in javax.mail">MessagingException</a></pre>
+<div class="block">Returns the list of subscribed subfolders of this folder.
+ <p>
+ This method can be invoked on a closed folder.</div>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="../../javax/mail/MessagingException.html" title="class in javax.mail">MessagingException</a></code></dd></dl>
+</li>
+</ul>
+<a name="getSeparator()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getSeparator</h4>
+<pre>public abstract&nbsp;char&nbsp;getSeparator()
+                           throws <a href="../../javax/mail/MessagingException.html" title="class in javax.mail">MessagingException</a></pre>
+<div class="block">Return the hierarchy delimiter character for this folder.
+ This separates the full name of this folder from the names of
+ subfolders.
+ <p>
+ This method can be invoked on a closed folder.</div>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="../../javax/mail/MessagingException.html" title="class in javax.mail">MessagingException</a></code></dd></dl>
+</li>
+</ul>
+<a name="getType()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getType</h4>
+<pre>public abstract&nbsp;int&nbsp;getType()
+                     throws <a href="../../javax/mail/MessagingException.html" title="class in javax.mail">MessagingException</a></pre>
+<div class="block">Returns the type of this Folder, i.e. whether this folder can hold
+ messages or subfolders or both.
+ The returned value is an integer bitfield with the appropriate bits set.
+ <p>
+ This method can be invoked on a closed folder.</div>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="../../javax/mail/MessagingException.html" title="class in javax.mail">MessagingException</a></code></dd></dl>
+</li>
+</ul>
+<a name="create(int)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>create</h4>
+<pre>public abstract&nbsp;boolean&nbsp;create(int&nbsp;type)
+                        throws <a href="../../javax/mail/MessagingException.html" title="class in javax.mail">MessagingException</a></pre>
+<div class="block">Create this folder in the store.
+ When this folder is created, any folders in its path
+ that do not exist are also created.
+ <p>
+ If the creation is successful, a CREATED FolderEvent is delivered
+ to any FolderListeners registered on this Folder and this Store.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>type</code> - the desired type of the folder</dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="../../javax/mail/MessagingException.html" title="class in javax.mail">MessagingException</a></code></dd></dl>
+</li>
+</ul>
+<a name="isSubscribed()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>isSubscribed</h4>
+<pre>public&nbsp;boolean&nbsp;isSubscribed()</pre>
+<div class="block">Indicates whether this folder is subscribed.
+ <p>
+ This method can be invoked on a closed folder.</div>
+</li>
+</ul>
+<a name="setSubscribed(boolean)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setSubscribed</h4>
+<pre>public&nbsp;void&nbsp;setSubscribed(boolean&nbsp;flag)
+                   throws <a href="../../javax/mail/MessagingException.html" title="class in javax.mail">MessagingException</a></pre>
+<div class="block">Subscribe to or unsubscribe from this folder.
  Not all Stores support subscription.
- <p/>
- This method can be invoked on a closed folder.
-</div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div></blockquote></div><hr/><a name="toString()" id="toString()"/><div class="member detail outer"><h3 class="member detail name">toString</h3><pre class="member detail synopsis">public String toString()</pre><blockquote class="member detail name"><div class="member detail description"> Returns the value of Folder.getFullName(), or, if that is null,
- returns the default toString().
-</div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div></blockquote></div></div><p class="navbar bottom spacer"> </p><table class="navbar div bottom"><tr><td><div class="navbar div top"><span class="navbar item enabled"><a href="../../overview-summary.html">Overview</a></span> <span class="navbar item enabled"><a href="package-summary.html">Package</a></span> <span class="navbar item enabled"><a href="tree.html">Tree</a></span> <span class="navbar item enabled"><a href="../../alphaindex.html">Index</a></span> <span class="navbar item enabled"><a href="../../deprecated.html">Deprecated</a></span> <span class="navbar item enabled"><a href="../../about.html">About</a></span></div></td></tr></table></body></html>
+ <p>
+ This method can be invoked on a closed folder.</div>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="../../javax/mail/MessagingException.html" title="class in javax.mail">MessagingException</a></code></dd></dl>
+</li>
+</ul>
+<a name="hasNewMessages()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>hasNewMessages</h4>
+<pre>public abstract&nbsp;boolean&nbsp;hasNewMessages()
+                                throws <a href="../../javax/mail/MessagingException.html" title="class in javax.mail">MessagingException</a></pre>
+<div class="block">Indicates whether this folder has new messages.
+ <p>
+ This method can be invoked on a closed folder that can contain
+ messages.</div>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="../../javax/mail/MessagingException.html" title="class in javax.mail">MessagingException</a></code></dd></dl>
+</li>
+</ul>
+<a name="getFolder(java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getFolder</h4>
+<pre>public abstract&nbsp;<a href="../../javax/mail/Folder.html" title="class in javax.mail">Folder</a>&nbsp;getFolder(java.lang.String&nbsp;name)
+                          throws <a href="../../javax/mail/MessagingException.html" title="class in javax.mail">MessagingException</a></pre>
+<div class="block">Return a folder corresponding to the given name.
+ Note that the folder does not have to exist in the store.
+ <p>
+ In some stores, <code>name</code> can be an absolute path if it starts
+ with the hierarchy delimiter. Otherwise, it is interpreted relative to
+ this folder.
+ <p>
+ This method can be invoked on a closed folder.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>name</code> - the name of the folder</dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="../../javax/mail/MessagingException.html" title="class in javax.mail">MessagingException</a></code></dd></dl>
+</li>
+</ul>
+<a name="delete(boolean)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>delete</h4>
+<pre>public abstract&nbsp;boolean&nbsp;delete(boolean&nbsp;recurse)
+                        throws <a href="../../javax/mail/MessagingException.html" title="class in javax.mail">MessagingException</a></pre>
+<div class="block">Deletes this folder.
+ This method can only be invoked on a closed folder.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>recurse</code> - delete any subfolders</dd>
+<dt><span class="strong">Returns:</span></dt><dd>true if the folder is deleted successfully, false otherwise</dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="../../javax/mail/FolderNotFoundException.html" title="class in javax.mail">FolderNotFoundException</a></code> - if this folder does not exist</dd>
+<dd><code>java.lang.IllegalStateException</code> - if this folder is not closed</dd>
+<dd><code><a href="../../javax/mail/MessagingException.html" title="class in javax.mail">MessagingException</a></code></dd></dl>
+</li>
+</ul>
+<a name="renameTo(javax.mail.Folder)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>renameTo</h4>
+<pre>public abstract&nbsp;boolean&nbsp;renameTo(<a href="../../javax/mail/Folder.html" title="class in javax.mail">Folder</a>&nbsp;folder)
+                          throws <a href="../../javax/mail/MessagingException.html" title="class in javax.mail">MessagingException</a></pre>
+<div class="block">Renames this folder.
+ This method can only be invoked on a closed folder.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>folder</code> - a folder representing the new name for this folder</dd>
+<dt><span class="strong">Returns:</span></dt><dd>true if the folder is renamed successfully, false otherwise</dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="../../javax/mail/FolderNotFoundException.html" title="class in javax.mail">FolderNotFoundException</a></code> - if this folder does not exist</dd>
+<dd><code>java.lang.IllegalStateException</code> - if this folder is not closed</dd>
+<dd><code><a href="../../javax/mail/MessagingException.html" title="class in javax.mail">MessagingException</a></code></dd></dl>
+</li>
+</ul>
+<a name="open(int)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>open</h4>
+<pre>public abstract&nbsp;void&nbsp;open(int&nbsp;mode)
+                   throws <a href="../../javax/mail/MessagingException.html" title="class in javax.mail">MessagingException</a></pre>
+<div class="block">Opens this folder.
+ This method can only be invoked on a closed folder that can contain
+ messages.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>mode</code> - open the Folder READ_ONLY or READ_WRITE</dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="../../javax/mail/FolderNotFoundException.html" title="class in javax.mail">FolderNotFoundException</a></code> - if this folder does not exist</dd>
+<dd><code>java.lang.IllegalStateException</code> - if this folder is not closed</dd>
+<dd><code><a href="../../javax/mail/MessagingException.html" title="class in javax.mail">MessagingException</a></code></dd></dl>
+</li>
+</ul>
+<a name="close(boolean)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>close</h4>
+<pre>public abstract&nbsp;void&nbsp;close(boolean&nbsp;expunge)
+                    throws <a href="../../javax/mail/MessagingException.html" title="class in javax.mail">MessagingException</a></pre>
+<div class="block">Closes this folder.
+ This method can only be invoked on an open folder.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>expunge</code> - if true, expunge all deleted messages</dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="../../javax/mail/MessagingException.html" title="class in javax.mail">MessagingException</a></code></dd></dl>
+</li>
+</ul>
+<a name="isOpen()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>isOpen</h4>
+<pre>public abstract&nbsp;boolean&nbsp;isOpen()</pre>
+<div class="block">Indicates whether this folder is open.</div>
+</li>
+</ul>
+<a name="getMode()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getMode</h4>
+<pre>public&nbsp;int&nbsp;getMode()</pre>
+<div class="block">Return the mode this folder is open in.
+ Returns <code>Folder.READ_ONLY</code>, <code>Folder.READ_WRITE</code>,
+ or <code>-1</code> if the open mode is not known.</div>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code>java.lang.IllegalStateException</code> - if this folder is not open</dd></dl>
+</li>
+</ul>
+<a name="getPermanentFlags()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getPermanentFlags</h4>
+<pre>public abstract&nbsp;<a href="../../javax/mail/Flags.html" title="class in javax.mail">Flags</a>&nbsp;getPermanentFlags()</pre>
+<div class="block">Returns the permanent flags supported by this folder.</div>
+</li>
+</ul>
+<a name="getMessageCount()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getMessageCount</h4>
+<pre>public abstract&nbsp;int&nbsp;getMessageCount()
+                             throws <a href="../../javax/mail/MessagingException.html" title="class in javax.mail">MessagingException</a></pre>
+<div class="block">Returns the number of messages in this folder.
+ <p>
+ This method can be invoked on a closed folder; however,
+ note that for some stores, getting the message count can be an
+ expensive operation involving actually opening the folder.
+ In such cases, a provider can choose to return -1 here when the folder
+ is closed.</div>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="../../javax/mail/MessagingException.html" title="class in javax.mail">MessagingException</a></code></dd></dl>
+</li>
+</ul>
+<a name="getNewMessageCount()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getNewMessageCount</h4>
+<pre>public&nbsp;int&nbsp;getNewMessageCount()
+                       throws <a href="../../javax/mail/MessagingException.html" title="class in javax.mail">MessagingException</a></pre>
+<div class="block">Returns the number of new messages in this folder.
+ <p>
+ This method can be invoked on a closed folder; however,
+ note that for some stores, getting the message count can be an
+ expensive operation involving actually opening the folder.
+ In such cases, a provider can choose to return -1 here when the folder
+ is closed.</div>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="../../javax/mail/MessagingException.html" title="class in javax.mail">MessagingException</a></code></dd></dl>
+</li>
+</ul>
+<a name="getUnreadMessageCount()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getUnreadMessageCount</h4>
+<pre>public&nbsp;int&nbsp;getUnreadMessageCount()
+                          throws <a href="../../javax/mail/MessagingException.html" title="class in javax.mail">MessagingException</a></pre>
+<div class="block">Returns the number of unread messages in this folder.
+ <p>
+ This method can be invoked on a closed folder; however,
+ note that for some stores, getting the message count can be an
+ expensive operation involving actually opening the folder.
+ In such cases, a provider can choose to return -1 here when the folder
+ is closed.</div>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="../../javax/mail/MessagingException.html" title="class in javax.mail">MessagingException</a></code></dd></dl>
+</li>
+</ul>
+<a name="getDeletedMessageCount()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getDeletedMessageCount</h4>
+<pre>public&nbsp;int&nbsp;getDeletedMessageCount()
+                           throws <a href="../../javax/mail/MessagingException.html" title="class in javax.mail">MessagingException</a></pre>
+<div class="block">Returns the number of deleted messages in this folder.
+ <p>
+ This method can be invoked on a closed folder; however,
+ note that for some stores, getting the message count can be an
+ expensive operation involving actually opening the folder.
+ In such cases, a provider can choose to return -1 here when the folder
+ is closed.</div>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="../../javax/mail/FolderNotFoundException.html" title="class in javax.mail">FolderNotFoundException</a></code> - if this folder does not exist</dd>
+<dd><code><a href="../../javax/mail/MessagingException.html" title="class in javax.mail">MessagingException</a></code></dd><dt><span class="strong">Since:</span></dt>
+  <dd>JavaMail 1.3</dd></dl>
+</li>
+</ul>
+<a name="getMessage(int)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getMessage</h4>
+<pre>public abstract&nbsp;<a href="../../javax/mail/Message.html" title="class in javax.mail">Message</a>&nbsp;getMessage(int&nbsp;msgnum)
+                            throws <a href="../../javax/mail/MessagingException.html" title="class in javax.mail">MessagingException</a></pre>
+<div class="block">Returns the message with the given number.
+ The message number is the relative position of a message in its
+ folder, starting at 1.
+ <p>
+ Note that message numbers can change within a session if the folder is
+ expunged, therefore the use of message numbers as references to
+ messages is inadvisable.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>msgnum</code> - the message number</dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="../../javax/mail/FolderNotFoundException.html" title="class in javax.mail">FolderNotFoundException</a></code> - if this folder does not exist</dd>
+<dd><code>java.lang.IllegalStateException</code> - if this folder is closed</dd>
+<dd><code>java.lang.IndexOutOfBoundsException</code> - if the message number is out of
+ range</dd>
+<dd><code><a href="../../javax/mail/MessagingException.html" title="class in javax.mail">MessagingException</a></code></dd></dl>
+</li>
+</ul>
+<a name="getMessages(int, int)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getMessages</h4>
+<pre>public&nbsp;<a href="../../javax/mail/Message.html" title="class in javax.mail">Message</a>[]&nbsp;getMessages(int&nbsp;start,
+                    int&nbsp;end)
+                      throws <a href="../../javax/mail/MessagingException.html" title="class in javax.mail">MessagingException</a></pre>
+<div class="block">Returns the messages in the given range (inclusive).</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>start</code> - the number of the first message</dd><dd><code>end</code> - the number of the last message</dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="../../javax/mail/FolderNotFoundException.html" title="class in javax.mail">FolderNotFoundException</a></code> - if this folder does not exist</dd>
+<dd><code>java.lang.IllegalStateException</code> - if this folder is closed</dd>
+<dd><code>java.lang.IndexOutOfBoundsException</code> - if the start or end message
+ numbers are out of range.</dd>
+<dd><code><a href="../../javax/mail/MessagingException.html" title="class in javax.mail">MessagingException</a></code></dd></dl>
+</li>
+</ul>
+<a name="getMessages(int[])">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getMessages</h4>
+<pre>public&nbsp;<a href="../../javax/mail/Message.html" title="class in javax.mail">Message</a>[]&nbsp;getMessages(int[]&nbsp;msgnums)
+                      throws <a href="../../javax/mail/MessagingException.html" title="class in javax.mail">MessagingException</a></pre>
+<div class="block">Returns the messages for the specified message numbers.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>msgnums</code> - the array of message numbers</dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="../../javax/mail/FolderNotFoundException.html" title="class in javax.mail">FolderNotFoundException</a></code> - if this folder does not exist</dd>
+<dd><code>java.lang.IllegalStateException</code> - if this folder is closed</dd>
+<dd><code>java.lang.IndexOutOfBoundsException</code> - if any message number in the
+ given array is out of range</dd>
+<dd><code><a href="../../javax/mail/MessagingException.html" title="class in javax.mail">MessagingException</a></code></dd></dl>
+</li>
+</ul>
+<a name="getMessages()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getMessages</h4>
+<pre>public&nbsp;<a href="../../javax/mail/Message.html" title="class in javax.mail">Message</a>[]&nbsp;getMessages()
+                      throws <a href="../../javax/mail/MessagingException.html" title="class in javax.mail">MessagingException</a></pre>
+<div class="block">Returns all messages in this folder.</div>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="../../javax/mail/FolderNotFoundException.html" title="class in javax.mail">FolderNotFoundException</a></code> - if this folder does not exist</dd>
+<dd><code>java.lang.IllegalStateException</code> - if this folder is closed</dd>
+<dd><code><a href="../../javax/mail/MessagingException.html" title="class in javax.mail">MessagingException</a></code></dd></dl>
+</li>
+</ul>
+<a name="appendMessages(javax.mail.Message[])">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>appendMessages</h4>
+<pre>public abstract&nbsp;void&nbsp;appendMessages(<a href="../../javax/mail/Message.html" title="class in javax.mail">Message</a>[]&nbsp;msgs)
+                             throws <a href="../../javax/mail/MessagingException.html" title="class in javax.mail">MessagingException</a></pre>
+<div class="block">Appends the specified messages to this folder.
+ <p>
+ This method can be invoked on a closed folder.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>msgs</code> - array of messages to be appended</dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="../../javax/mail/FolderNotFoundException.html" title="class in javax.mail">FolderNotFoundException</a></code> - if this folder does not exist</dd>
+<dd><code><a href="../../javax/mail/MessagingException.html" title="class in javax.mail">MessagingException</a></code> - if the append operation failed</dd></dl>
+</li>
+</ul>
+<a name="fetch(javax.mail.Message[], javax.mail.FetchProfile)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>fetch</h4>
+<pre>public&nbsp;void&nbsp;fetch(<a href="../../javax/mail/Message.html" title="class in javax.mail">Message</a>[]&nbsp;msgs,
+         <a href="../../javax/mail/FetchProfile.html" title="class in javax.mail">FetchProfile</a>&nbsp;fp)
+           throws <a href="../../javax/mail/MessagingException.html" title="class in javax.mail">MessagingException</a></pre>
+<div class="block">Fetches the items specified in the given fetch profile for the specified
+ messages.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>msgs</code> - the messages to fetch the items for</dd><dd><code>fp</code> - the fetch profile</dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="../../javax/mail/MessagingException.html" title="class in javax.mail">MessagingException</a></code></dd></dl>
+</li>
+</ul>
+<a name="setFlags(javax.mail.Message[], javax.mail.Flags, boolean)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setFlags</h4>
+<pre>public&nbsp;void&nbsp;setFlags(<a href="../../javax/mail/Message.html" title="class in javax.mail">Message</a>[]&nbsp;msgs,
+            <a href="../../javax/mail/Flags.html" title="class in javax.mail">Flags</a>&nbsp;flag,
+            boolean&nbsp;value)
+              throws <a href="../../javax/mail/MessagingException.html" title="class in javax.mail">MessagingException</a></pre>
+<div class="block">Sets the specified flags on each specified message.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>msgnums</code> - the messages</dd><dd><code>flag</code> - the flags to be set</dd><dd><code>value</code> - set the flags to this value</dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code>java.lang.IllegalStateException</code> - if this folder is closed or READ_ONLY</dd>
+<dd><code><a href="../../javax/mail/MessagingException.html" title="class in javax.mail">MessagingException</a></code></dd></dl>
+</li>
+</ul>
+<a name="setFlags(int, int, javax.mail.Flags, boolean)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setFlags</h4>
+<pre>public&nbsp;void&nbsp;setFlags(int&nbsp;start,
+            int&nbsp;end,
+            <a href="../../javax/mail/Flags.html" title="class in javax.mail">Flags</a>&nbsp;flag,
+            boolean&nbsp;value)
+              throws <a href="../../javax/mail/MessagingException.html" title="class in javax.mail">MessagingException</a></pre>
+<div class="block">Set the specified flags on the given range of messages (inclusive).</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>start</code> - the number of the first message</dd><dd><code>end</code> - the number of the last message</dd><dd><code>flag</code> - the flags to be set</dd><dd><code>value</code> - set the flags to this value</dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code>java.lang.IllegalStateException</code> - if this folder is closed or READ_ONLY</dd>
+<dd><code>java.lang.IndexOutOfBoundsException</code> - if the start or end message
+ numbers are out of range</dd>
+<dd><code><a href="../../javax/mail/MessagingException.html" title="class in javax.mail">MessagingException</a></code></dd></dl>
+</li>
+</ul>
+<a name="setFlags(int[], javax.mail.Flags, boolean)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setFlags</h4>
+<pre>public&nbsp;void&nbsp;setFlags(int[]&nbsp;msgnums,
+            <a href="../../javax/mail/Flags.html" title="class in javax.mail">Flags</a>&nbsp;flag,
+            boolean&nbsp;value)
+              throws <a href="../../javax/mail/MessagingException.html" title="class in javax.mail">MessagingException</a></pre>
+<div class="block">Sets the specified flags on each of the specified messages.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>msgnums</code> - the message numbers</dd><dd><code>flag</code> - the flags to be set</dd><dd><code>value</code> - set the flags to this value</dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code>java.lang.IllegalStateException</code> - if this folder is closed or READ_ONLY</dd>
+<dd><code>java.lang.IndexOutOfBoundsException</code> - if any message number in the
+ given array is out of range</dd>
+<dd><code><a href="../../javax/mail/MessagingException.html" title="class in javax.mail">MessagingException</a></code></dd></dl>
+</li>
+</ul>
+<a name="copyMessages(javax.mail.Message[], javax.mail.Folder)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>copyMessages</h4>
+<pre>public&nbsp;void&nbsp;copyMessages(<a href="../../javax/mail/Message.html" title="class in javax.mail">Message</a>[]&nbsp;msgs,
+                <a href="../../javax/mail/Folder.html" title="class in javax.mail">Folder</a>&nbsp;folder)
+                  throws <a href="../../javax/mail/MessagingException.html" title="class in javax.mail">MessagingException</a></pre>
+<div class="block">Copies the specified messages into another folder.
+ <p>
+ The destination folder does not have to be open.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>msgs</code> - the messages</dd><dd><code>folder</code> - the folder to copy the messages to</dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="../../javax/mail/MessagingException.html" title="class in javax.mail">MessagingException</a></code></dd></dl>
+</li>
+</ul>
+<a name="expunge()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>expunge</h4>
+<pre>public abstract&nbsp;<a href="../../javax/mail/Message.html" title="class in javax.mail">Message</a>[]&nbsp;expunge()
+                           throws <a href="../../javax/mail/MessagingException.html" title="class in javax.mail">MessagingException</a></pre>
+<div class="block">Expunges (permanently removing) all the messages marked DELETED.
+ Returns an array containing the expunged messages.
+ <p>
+ Expunge causes the renumbering of any messages with numbers higher than
+ the message number of the lowest-numbered expunged message.
+ <p>
+ After a message has been expunged, only the <code>isExpunged</code> and
+ <code>getMessageNumber</code> methods are still valid on the
+ corresponding Message object; other methods may throw
+ <code>MessageRemovedException</code>.</div>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="../../javax/mail/FolderNotFoundException.html" title="class in javax.mail">FolderNotFoundException</a></code> - if this folder does not exist</dd>
+<dd><code>java.lang.IllegalStateException</code> - if this folder is closed</dd>
+<dd><code><a href="../../javax/mail/MessagingException.html" title="class in javax.mail">MessagingException</a></code></dd></dl>
+</li>
+</ul>
+<a name="search(javax.mail.search.SearchTerm)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>search</h4>
+<pre>public&nbsp;<a href="../../javax/mail/Message.html" title="class in javax.mail">Message</a>[]&nbsp;search(<a href="../../javax/mail/search/SearchTerm.html" title="class in javax.mail.search">SearchTerm</a>&nbsp;term)
+                 throws <a href="../../javax/mail/MessagingException.html" title="class in javax.mail">MessagingException</a></pre>
+<div class="block">Searches this folder for messages matching the specified search term.
+ Returns the matching messages.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>term</code> - the search term</dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code>SearchException</code> - if there was a problem with the search</dd>
+<dd><code><a href="../../javax/mail/FolderNotFoundException.html" title="class in javax.mail">FolderNotFoundException</a></code> - if this folder does not exist</dd>
+<dd><code>java.lang.IllegalStateException</code> - if this folder is closed</dd>
+<dd><code><a href="../../javax/mail/MessagingException.html" title="class in javax.mail">MessagingException</a></code></dd></dl>
+</li>
+</ul>
+<a name="search(javax.mail.search.SearchTerm, javax.mail.Message[])">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>search</h4>
+<pre>public&nbsp;<a href="../../javax/mail/Message.html" title="class in javax.mail">Message</a>[]&nbsp;search(<a href="../../javax/mail/search/SearchTerm.html" title="class in javax.mail.search">SearchTerm</a>&nbsp;term,
+               <a href="../../javax/mail/Message.html" title="class in javax.mail">Message</a>[]&nbsp;msgs)
+                 throws <a href="../../javax/mail/MessagingException.html" title="class in javax.mail">MessagingException</a></pre>
+<div class="block">Searches the given messages for those matching the specified search
+ term.
+ Returns the matching messages.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>term</code> - the search term</dd><dd><code>msgs</code> - the messages to be searched</dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code>SearchException</code> - if there was a problem with the search</dd>
+<dd><code>java.lang.IllegalStateException</code> - if this folder is closed</dd>
+<dd><code><a href="../../javax/mail/MessagingException.html" title="class in javax.mail">MessagingException</a></code></dd></dl>
+</li>
+</ul>
+<a name="addConnectionListener(javax.mail.event.ConnectionListener)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>addConnectionListener</h4>
+<pre>public&nbsp;void&nbsp;addConnectionListener(<a href="../../javax/mail/event/ConnectionListener.html" title="interface in javax.mail.event">ConnectionListener</a>&nbsp;l)</pre>
+<div class="block">Add a listener for connection events on this folder.</div>
+</li>
+</ul>
+<a name="removeConnectionListener(javax.mail.event.ConnectionListener)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>removeConnectionListener</h4>
+<pre>public&nbsp;void&nbsp;removeConnectionListener(<a href="../../javax/mail/event/ConnectionListener.html" title="interface in javax.mail.event">ConnectionListener</a>&nbsp;l)</pre>
+<div class="block">Remove a connection event listener.</div>
+</li>
+</ul>
+<a name="notifyConnectionListeners(int)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>notifyConnectionListeners</h4>
+<pre>protected&nbsp;void&nbsp;notifyConnectionListeners(int&nbsp;type)</pre>
+<div class="block">Notify all connection listeners.</div>
+</li>
+</ul>
+<a name="addFolderListener(javax.mail.event.FolderListener)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>addFolderListener</h4>
+<pre>public&nbsp;void&nbsp;addFolderListener(<a href="../../javax/mail/event/FolderListener.html" title="interface in javax.mail.event">FolderListener</a>&nbsp;l)</pre>
+<div class="block">Add a listener for folder events on this folder.</div>
+</li>
+</ul>
+<a name="removeFolderListener(javax.mail.event.FolderListener)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>removeFolderListener</h4>
+<pre>public&nbsp;void&nbsp;removeFolderListener(<a href="../../javax/mail/event/FolderListener.html" title="interface in javax.mail.event">FolderListener</a>&nbsp;l)</pre>
+<div class="block">Remove a folder event listener.</div>
+</li>
+</ul>
+<a name="notifyFolderListeners(int)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>notifyFolderListeners</h4>
+<pre>protected&nbsp;void&nbsp;notifyFolderListeners(int&nbsp;type)</pre>
+<div class="block">Notify all folder listeners registered on this Folder <em>and</em>
+ this folder's store.</div>
+</li>
+</ul>
+<a name="notifyFolderRenamedListeners(javax.mail.Folder)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>notifyFolderRenamedListeners</h4>
+<pre>protected&nbsp;void&nbsp;notifyFolderRenamedListeners(<a href="../../javax/mail/Folder.html" title="class in javax.mail">Folder</a>&nbsp;folder)</pre>
+<div class="block">Notify all folder listeners registered on this folder <em>and</em>
+ this folder's store about the renaming of this folder.</div>
+</li>
+</ul>
+<a name="addMessageCountListener(javax.mail.event.MessageCountListener)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>addMessageCountListener</h4>
+<pre>public&nbsp;void&nbsp;addMessageCountListener(<a href="../../javax/mail/event/MessageCountListener.html" title="interface in javax.mail.event">MessageCountListener</a>&nbsp;l)</pre>
+<div class="block">Add a listener for message count events on this folder.</div>
+</li>
+</ul>
+<a name="removeMessageCountListener(javax.mail.event.MessageCountListener)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>removeMessageCountListener</h4>
+<pre>public&nbsp;void&nbsp;removeMessageCountListener(<a href="../../javax/mail/event/MessageCountListener.html" title="interface in javax.mail.event">MessageCountListener</a>&nbsp;l)</pre>
+<div class="block">Remove a message count event listener.</div>
+</li>
+</ul>
+<a name="notifyMessageAddedListeners(javax.mail.Message[])">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>notifyMessageAddedListeners</h4>
+<pre>protected&nbsp;void&nbsp;notifyMessageAddedListeners(<a href="../../javax/mail/Message.html" title="class in javax.mail">Message</a>[]&nbsp;msgs)</pre>
+<div class="block">Notify all message count listeners about the addition of messages
+ into this folder.</div>
+</li>
+</ul>
+<a name="notifyMessageRemovedListeners(boolean, javax.mail.Message[])">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>notifyMessageRemovedListeners</h4>
+<pre>protected&nbsp;void&nbsp;notifyMessageRemovedListeners(boolean&nbsp;removed,
+                                 <a href="../../javax/mail/Message.html" title="class in javax.mail">Message</a>[]&nbsp;msgs)</pre>
+<div class="block">Notify all message count listeners about the removal of messages from
+ this folder.</div>
+</li>
+</ul>
+<a name="addMessageChangedListener(javax.mail.event.MessageChangedListener)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>addMessageChangedListener</h4>
+<pre>public&nbsp;void&nbsp;addMessageChangedListener(<a href="../../javax/mail/event/MessageChangedListener.html" title="interface in javax.mail.event">MessageChangedListener</a>&nbsp;l)</pre>
+<div class="block">Add a listener for message changed events on this folder.</div>
+</li>
+</ul>
+<a name="removeMessageChangedListener(javax.mail.event.MessageChangedListener)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>removeMessageChangedListener</h4>
+<pre>public&nbsp;void&nbsp;removeMessageChangedListener(<a href="../../javax/mail/event/MessageChangedListener.html" title="interface in javax.mail.event">MessageChangedListener</a>&nbsp;l)</pre>
+<div class="block">Remove a message changed event listener.</div>
+</li>
+</ul>
+<a name="notifyMessageChangedListeners(int, javax.mail.Message)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>notifyMessageChangedListeners</h4>
+<pre>protected&nbsp;void&nbsp;notifyMessageChangedListeners(int&nbsp;type,
+                                 <a href="../../javax/mail/Message.html" title="class in javax.mail">Message</a>&nbsp;msg)</pre>
+<div class="block">Notify all message changed event listeners.</div>
+</li>
+</ul>
+<a name="toString()">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>toString</h4>
+<pre>public&nbsp;java.lang.String&nbsp;toString()</pre>
+<div class="block">Returns the value of Folder.getFullName(), or, if that is null,
+ returns the default toString().</div>
+<dl>
+<dt><strong>Overrides:</strong></dt>
+<dd><code>toString</code>&nbsp;in class&nbsp;<code>java.lang.Object</code></dd>
+</dl>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<!-- ========= END OF CLASS DATA ========= -->
+<!-- ======= START OF BOTTOM NAVBAR ====== -->
+<div class="bottomNav"><a name="navbar_bottom">
+<!--   -->
+</a><a href="#skip-navbar_bottom" title="Skip navigation links"></a><a name="navbar_bottom_firstrow">
+<!--   -->
+</a>
+<ul class="navList" title="Navigation">
+<li><a href="../../overview-summary.html">Overview</a></li>
+<li><a href="package-summary.html">Package</a></li>
+<li class="navBarCell1Rev">Class</li>
+<li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../deprecated-list.html">Deprecated</a></li>
+<li><a href="../../index-all.html">Index</a></li>
+<li><a href="../../help-doc.html">Help</a></li>
+</ul>
+</div>
+<div class="subNav">
+<ul class="navList">
+<li><a href="../../javax/mail/Flags.Flag.html" title="class in javax.mail"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../javax/mail/FolderClosedException.html" title="class in javax.mail"><span class="strong">Next Class</span></a></li>
+</ul>
+<ul class="navList">
+<li><a href="../../index.html?javax/mail/Folder.html" target="_top">Frames</a></li>
+<li><a href="Folder.html" target="_top">No Frames</a></li>
+</ul>
+<ul class="navList" id="allclasses_navbar_bottom">
+<li><a href="../../allclasses-noframe.html">All Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_bottom");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+</div>
+<div>
+<ul class="subNavList">
+<li>Summary:&nbsp;</li>
+<li>Nested&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
+<li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method_summary">Method</a></li>
+</ul>
+<ul class="subNavList">
+<li>Detail:&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
+<li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method_detail">Method</a></li>
+</ul>
+</div>
+<a name="skip-navbar_bottom">
+<!--   -->
+</a></div>
+<!-- ======== END OF BOTTOM NAVBAR ======= -->
+</body>
+</html>

@@ -1,25 +1,471 @@
-<?xml version="1.0" encoding="MacRoman"?>
-<!DOCTYPE html PUBLIC "-//gnu.org///DTD XHTML 1.1 plus Target 1.0//EN" "../../resources/xhtml11-target10.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head><title>Transport</title><script src="../../resources/gjdoc.js" type="text/javascript"><!-- this comment required for konqueror 3.2.2 --></script><meta http-equiv="Content-Type" content="text/html; charset=MacRoman"/><meta name="generator" content="GNU Gjdoc Standard Doclet"/><meta name="keywords" content="javax.mail.Transport class"/><meta name="keywords" content="send()"/><meta name="keywords" content="sendMessage()"/><meta name="keywords" content="addTransportListener()"/><meta name="keywords" content="removeTransportListener()"/><meta name="keywords" content="notifyTransportListeners()"/><link rel="stylesheet" type="text/css" href="../../resources/gjdochtml-clean-layout.css" title="GNU Clean"/><link rel="stylesheet" type="text/css" href="../../resources/gjdochtml-clean-color1.css" title="GNU Clean"/></head><body class="content class" onload="if(parent.contentPageLoaded)parent.contentPageLoaded(document.title)"><table class="navbar div top"><tr><td class="navbar div top"><div class="navbar div top"><span class="navbar item enabled"><a href="../../overview-summary.html">Overview</a></span> <span class="navbar item enabled"><a href="package-summary.html">Package</a></span> <span class="navbar item enabled"><a href="tree.html">Tree</a></span> <span class="navbar item enabled"><a href="../../alphaindex.html">Index</a></span> <span class="navbar item enabled"><a href="../../deprecated.html">Deprecated</a></span> <span class="navbar item enabled"><a href="../../about.html">About</a></span></div></td></tr><tr><td class="navi"><a href="../../javax/mail/StoreClosedException.html">Prev Class</a> | <a href="../../javax/mail/UIDFolder.html">Next Class</a></td><td class="navi"><a href="../../index.html" title="Show in a frameset" target="_top">Frames</a> | <a href="Transport.html" title="Show without frames" target="_top">No Frames</a> </td></tr><tr><td class="navi">Summary: Nested | Field | <a href="#summary-methods">Method</a> | <a href="#summary-constructors">Constr</a></td><td class="navi">Detail: Nested | Field | <a href="#detail-methods">Method</a> | <a href="#detail-constructors">Constr</a></td></tr></table><div class="class title outer"><h3 class="class title-package">javax.mail</h3><h1 class="class title-class">Class Transport</h1></div><div class="class inheritance-tree"><ul class="inheritance 0"><li class="inheritance 0"><code>java.lang.Object</code></li><li><ul class="inheritance 1"><li class="inheritance 1"><code><a href="../../javax/mail/Service.html">javax.mail.Service</a></code></li><li><ul class="inheritance 2"><li class="inheritance 2"><code>javax.mail.Transport</code></li><li></li></ul></li></ul></li></ul></div><dl class="class subclasses"><dt class="class subclasses header"><b>Known Direct Subclasses:</b></dt><dd class="class subclasses header"><a href="../../gnu/mail/providers/nntp/NNTPTransport.html" title="Class in gnu.mail.providers.nntp">NNTPTransport</a>, <a href="../../gnu/mail/providers/smtp/SMTPTransport.html" title="Class in gnu.mail.providers.smtp">SMTPTransport</a></dd></b></dt></dl><hr/><div class="class synopsis outer"><div class="class synopsis declaration"><code>public abstract class <b class="class synopsis name">Transport</b></code></div><div class="class synopsis superclass"><code>extends <a href="../../javax/mail/Service.html" title="Class in javax.mail">Service</a></code></div></div><hr/><div class="class description"> A message transport mechanism that can be used to deliver messages.
-</div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><a name="summary-fields" id="summary-fields"/><dl class="table container"><dd><table class="class summary" border="1" width="100%"><tr class="table header"><td colspan="2"><h2 class="table header">Field Summary</h2></td></tr></table></dd></dl><dl class="table container"><dd><table class="class summary" border="1" width="100%"><tr class="table sub header"><td colspan="2"><h3 class="table sub header">Fields inherited from class javax.mail.<a href="../../javax/mail/Service.html" title="Class in javax.mail">Service</a></h3></td></tr><tr><td class="inherited"><a href="../../javax/mail/Service.html#debug"><code class="member">debug</code></a>, <a href="../../javax/mail/Service.html#session"><code class="member">session</code></a>, <a href="../../javax/mail/Service.html#url"><code class="member">url</code></a></td></tr></table></dd></dl><a name="summary-constructors" id="summary-constructors"/><dl class="table container"><dd><table class="class summary" border="1" width="100%"><tr class="table header"><td colspan="2"><h2 class="table header">Constructor Summary</h2></td></tr><tr><td class="right"><dl class="list"><dt class="synopsis"><code><a href="#Transport(javax.mail.Session,javax.mail.URLName)">Transport</a>(<a href="../../javax/mail/Session.html" title="Class in javax.mail">Session</a>&nbsp;session, <a href="../../javax/mail/URLName.html" title="Class in javax.mail">URLName</a>&nbsp;url)</code></dt><dd class="description"> Constructor.</dd></dl></td></tr></table></dd></dl><a name="summary-methods" id="summary-methods"/><dl class="table container"><dd><table class="class summary" border="1" width="100%"><tr class="table header"><td colspan="2"><h2 class="table header">Method Summary</h2></td></tr><tr><td class="left" valign="top"><code class="synopsis"> void</code></td><td class="right"><dl class="list"><dt class="synopsis"><code><a href="#addTransportListener(javax.mail.event.TransportListener)">addTransportListener</a>(<a href="../../javax/mail/event/TransportListener.html" title="Interface in javax.mail.event">TransportListener</a>&nbsp;l)</code></dt><dd class="description"> Adds a listener for transport events.</dd></dl></td></tr><tr><td class="left" valign="top"><code class="synopsis">protected  void</code></td><td class="right"><dl class="list"><dt class="synopsis"><code><a href="#notifyTransportListeners(int,javax.mail.Address[],javax.mail.Address[],javax.mail.Address[],javax.mail.Message)">notifyTransportListeners</a>(int&nbsp;type, <a href="../../javax/mail/Address.html" title="Class in javax.mail">Address</a>[]&nbsp;validSent, <a href="../../javax/mail/Address.html" title="Class in javax.mail">Address</a>[]&nbsp;validUnsent, <a href="../../javax/mail/Address.html" title="Class in javax.mail">Address</a>[]&nbsp;invalid, <a href="../../javax/mail/Message.html" title="Class in javax.mail">Message</a>&nbsp;msg)</code></dt><dd class="description"> Notifies all transport listeners.</dd></dl></td></tr><tr><td class="left" valign="top"><code class="synopsis"> void</code></td><td class="right"><dl class="list"><dt class="synopsis"><code><a href="#removeTransportListener(javax.mail.event.TransportListener)">removeTransportListener</a>(<a href="../../javax/mail/event/TransportListener.html" title="Interface in javax.mail.event">TransportListener</a>&nbsp;l)</code></dt><dd class="description"> Removes a transport event listener.</dd></dl></td></tr><tr><td class="left" valign="top"><code class="synopsis">static void</code></td><td class="right"><dl class="list"><dt class="synopsis"><code><a href="#send(javax.mail.Message)">send</a>(<a href="../../javax/mail/Message.html" title="Class in javax.mail">Message</a>&nbsp;msg)</code></dt><dd class="description"> Sends the specified message.</dd></dl></td></tr><tr><td class="left" valign="top"><code class="synopsis">static void</code></td><td class="right"><dl class="list"><dt class="synopsis"><code><a href="#send(javax.mail.Message,javax.mail.Address[])">send</a>(<a href="../../javax/mail/Message.html" title="Class in javax.mail">Message</a>&nbsp;msg, <a href="../../javax/mail/Address.html" title="Class in javax.mail">Address</a>[]&nbsp;addresses)</code></dt><dd class="description"> Sends the message to the specified addresses, ignoring any recipients
- specified in the message itself.</dd></dl></td></tr><tr><td class="left" valign="top"><code class="synopsis">abstract void</code></td><td class="right"><dl class="list"><dt class="synopsis"><code><a href="#sendMessage(javax.mail.Message,javax.mail.Address[])">sendMessage</a>(<a href="../../javax/mail/Message.html" title="Class in javax.mail">Message</a>&nbsp;msg, <a href="../../javax/mail/Address.html" title="Class in javax.mail">Address</a>[]&nbsp;addresses)</code></dt><dd class="description"> Sends the message to the specified list of addresses.</dd></dl></td></tr></table></dd></dl><dl class="table container"><dd><table class="class summary" border="1" width="100%"><tr class="table sub header"><td colspan="2"><h3 class="table sub header">Methods inherited from class javax.mail.<a href="../../javax/mail/Service.html" title="Class in javax.mail">Service</a></h3></td></tr><tr><td class="inherited"><a href="../../javax/mail/Service.html#addConnectionListener(javax.mail.event.ConnectionListener)" title="addConnectionListener(ConnectionListener)"><code class="member">addConnectionListener</code></a>, <a href="../../javax/mail/Service.html#close()" title="close()"><code class="member">close</code></a>, <a href="../../javax/mail/Service.html#connect()" title="connect()"><code class="member">connect</code></a>, <a href="../../javax/mail/Service.html#connect(String,String)" title="connect(String,String)"><code class="member">connect</code></a>, <a href="../../javax/mail/Service.html#connect(String,String,String)" title="connect(String,String,String)"><code class="member">connect</code></a>, <a href="../../javax/mail/Service.html#connect(String,int,String,String)" title="connect(String,int,String,String)"><code class="member">connect</code></a>, <a href="../../javax/mail/Service.html#getURLName()" title="getURLName()"><code class="member">getURLName</code></a>, <a href="../../javax/mail/Service.html#isConnected()" title="isConnected()"><code class="member">isConnected</code></a>, <a href="../../javax/mail/Service.html#notifyConnectionListeners(int)" title="notifyConnectionListeners(int)"><code class="member">notifyConnectionListeners</code></a>, <a href="../../javax/mail/Service.html#protocolConnect(String,int,String,String)" title="protocolConnect(String,int,String,String)"><code class="member">protocolConnect</code></a>, <a href="../../javax/mail/Service.html#queueEvent(javax.mail.event.MailEvent,Vector)" title="queueEvent(MailEvent,Vector)"><code class="member">queueEvent</code></a>, <a href="../../javax/mail/Service.html#removeConnectionListener(javax.mail.event.ConnectionListener)" title="removeConnectionListener(ConnectionListener)"><code class="member">removeConnectionListener</code></a>, <a href="../../javax/mail/Service.html#setConnected(boolean)" title="setConnected(boolean)"><code class="member">setConnected</code></a>, <a href="../../javax/mail/Service.html#setURLName(javax.mail.URLName)" title="setURLName(URLName)"><code class="member">setURLName</code></a>, <a href="../../javax/mail/Service.html#toString()" title="toString()"><code class="member">toString</code></a></td></tr></table></dd></dl><a name="detail-constructors" id="detail-constructors"/><h2 class="section header">Constructor Details</h2><div class="section"><a name="Transport(javax.mail.Session,javax.mail.URLName)" id="Transport(javax.mail.Session,javax.mail.URLName)"/><div class="member detail outer"><h3 class="member detail name">Transport</h3><pre class="member detail synopsis">public Transport(<a href="../../javax/mail/Session.html" title="Class in javax.mail">Session</a> session,
-                 <a href="../../javax/mail/URLName.html" title="Class in javax.mail">URLName</a> url)</pre><blockquote class="member detail name"><div class="member detail description"> Constructor.
-</div><div class="parameter"><dl><dt class="header"><b>Parameters:</b></dt><dd class="item"><code class="name">session</code><span class="separator"> - </span><span class="description">the session context for this transport</span></dd><dd class="item"><code class="name">url</code><span class="separator"> - </span><span class="description">a URLName to be used for this transport</span></dd></dl></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div></blockquote></div></div><a name="detail-methods" id="detail-methods"/><h2 class="section header">Method Details</h2><div class="section"><a name="addTransportListener(javax.mail.event.TransportListener)" id="addTransportListener(javax.mail.event.TransportListener)"/><div class="member detail outer"><h3 class="member detail name">addTransportListener</h3><pre class="member detail synopsis">public void addTransportListener(<a href="../../javax/mail/event/TransportListener.html" title="Interface in javax.mail.event">TransportListener</a> l)</pre><blockquote class="member detail name"><div class="member detail description"> Adds a listener for transport events.
-</div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div></blockquote></div><hr/><a name="notifyTransportListeners(int,javax.mail.Address[],javax.mail.Address[],javax.mail.Address[],javax.mail.Message)" id="notifyTransportListeners(int,javax.mail.Address[],javax.mail.Address[],javax.mail.Address[],javax.mail.Message)"/><div class="member detail outer"><h3 class="member detail name">notifyTransportListeners</h3><pre class="member detail synopsis">protected void notifyTransportListeners(int type,
-                                        <a href="../../javax/mail/Address.html" title="Class in javax.mail">Address</a>[] validSent,
-                                        <a href="../../javax/mail/Address.html" title="Class in javax.mail">Address</a>[] validUnsent,
-                                        <a href="../../javax/mail/Address.html" title="Class in javax.mail">Address</a>[] invalid,
-                                        <a href="../../javax/mail/Message.html" title="Class in javax.mail">Message</a> msg)</pre><blockquote class="member detail name"><div class="member detail description"> Notifies all transport listeners.
-</div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div></blockquote></div><hr/><a name="removeTransportListener(javax.mail.event.TransportListener)" id="removeTransportListener(javax.mail.event.TransportListener)"/><div class="member detail outer"><h3 class="member detail name">removeTransportListener</h3><pre class="member detail synopsis">public void removeTransportListener(<a href="../../javax/mail/event/TransportListener.html" title="Interface in javax.mail.event">TransportListener</a> l)</pre><blockquote class="member detail name"><div class="member detail description"> Removes a transport event listener.
-</div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div></blockquote></div><hr/><a name="send(javax.mail.Message)" id="send(javax.mail.Message)"/><div class="member detail outer"><h3 class="member detail name">send</h3><pre class="member detail synopsis">public static void send(<a href="../../javax/mail/Message.html" title="Class in javax.mail">Message</a> msg)
-            throws <a href="../../javax/mail/MessagingException.html" title="Class in javax.mail">MessagingException</a></pre><blockquote class="member detail name"><div class="member detail description"> Sends the specified message.
- The message will be sent to all recipient addresses specified in the 
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!-- NewPage -->
+<html lang="en">
+<head>
+<!-- Generated by javadoc (version 1.7.0_25) on Fri Nov 22 19:03:11 GMT 2013 -->
+<title>Transport (GNU JavaMail API documentation)</title>
+<meta name="date" content="2013-11-22">
+<link rel="stylesheet" type="text/css" href="../../stylesheet.css" title="Style">
+</head>
+<body>
+<script type="text/javascript"><!--
+    if (location.href.indexOf('is-external=true') == -1) {
+        parent.document.title="Transport (GNU JavaMail API documentation)";
+    }
+//-->
+</script>
+<noscript>
+<div>JavaScript is disabled on your browser.</div>
+</noscript>
+<!-- ========= START OF TOP NAVBAR ======= -->
+<div class="topNav"><a name="navbar_top">
+<!--   -->
+</a><a href="#skip-navbar_top" title="Skip navigation links"></a><a name="navbar_top_firstrow">
+<!--   -->
+</a>
+<ul class="navList" title="Navigation">
+<li><a href="../../overview-summary.html">Overview</a></li>
+<li><a href="package-summary.html">Package</a></li>
+<li class="navBarCell1Rev">Class</li>
+<li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../deprecated-list.html">Deprecated</a></li>
+<li><a href="../../index-all.html">Index</a></li>
+<li><a href="../../help-doc.html">Help</a></li>
+</ul>
+</div>
+<div class="subNav">
+<ul class="navList">
+<li><a href="../../javax/mail/StoreClosedException.html" title="class in javax.mail"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../javax/mail/UIDFolder.html" title="interface in javax.mail"><span class="strong">Next Class</span></a></li>
+</ul>
+<ul class="navList">
+<li><a href="../../index.html?javax/mail/Transport.html" target="_top">Frames</a></li>
+<li><a href="Transport.html" target="_top">No Frames</a></li>
+</ul>
+<ul class="navList" id="allclasses_navbar_top">
+<li><a href="../../allclasses-noframe.html">All Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_top");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+</div>
+<div>
+<ul class="subNavList">
+<li>Summary:&nbsp;</li>
+<li>Nested&nbsp;|&nbsp;</li>
+<li><a href="#fields_inherited_from_class_javax.mail.Service">Field</a>&nbsp;|&nbsp;</li>
+<li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method_summary">Method</a></li>
+</ul>
+<ul class="subNavList">
+<li>Detail:&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method_detail">Method</a></li>
+</ul>
+</div>
+<a name="skip-navbar_top">
+<!--   -->
+</a></div>
+<!-- ========= END OF TOP NAVBAR ========= -->
+<!-- ======== START OF CLASS DATA ======== -->
+<div class="header">
+<div class="subTitle">javax.mail</div>
+<h2 title="Class Transport" class="title">Class Transport</h2>
+</div>
+<div class="contentContainer">
+<ul class="inheritance">
+<li>java.lang.Object</li>
+<li>
+<ul class="inheritance">
+<li><a href="../../javax/mail/Service.html" title="class in javax.mail">javax.mail.Service</a></li>
+<li>
+<ul class="inheritance">
+<li>javax.mail.Transport</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<div class="description">
+<ul class="blockList">
+<li class="blockList">
+<dl>
+<dt>Direct Known Subclasses:</dt>
+<dd><a href="../../gnu/mail/providers/nntp/NNTPTransport.html" title="class in gnu.mail.providers.nntp">NNTPTransport</a>, <a href="../../gnu/mail/providers/smtp/SMTPTransport.html" title="class in gnu.mail.providers.smtp">SMTPTransport</a></dd>
+</dl>
+<hr>
+<br>
+<pre>public abstract class <span class="strong">Transport</span>
+extends <a href="../../javax/mail/Service.html" title="class in javax.mail">Service</a></pre>
+<div class="block">A message transport mechanism that can be used to deliver messages.</div>
+</li>
+</ul>
+</div>
+<div class="summary">
+<ul class="blockList">
+<li class="blockList">
+<!-- =========== FIELD SUMMARY =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_summary">
+<!--   -->
+</a>
+<h3>Field Summary</h3>
+<ul class="blockList">
+<li class="blockList"><a name="fields_inherited_from_class_javax.mail.Service">
+<!--   -->
+</a>
+<h3>Fields inherited from class&nbsp;javax.mail.<a href="../../javax/mail/Service.html" title="class in javax.mail">Service</a></h3>
+<code><a href="../../javax/mail/Service.html#debug">debug</a>, <a href="../../javax/mail/Service.html#session">session</a>, <a href="../../javax/mail/Service.html#url">url</a></code></li>
+</ul>
+</li>
+</ul>
+<!-- ======== CONSTRUCTOR SUMMARY ======== -->
+<ul class="blockList">
+<li class="blockList"><a name="constructor_summary">
+<!--   -->
+</a>
+<h3>Constructor Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Constructor Summary table, listing constructors, and an explanation">
+<caption><span>Constructors</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colOne" scope="col">Constructor and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colOne"><code><strong><a href="../../javax/mail/Transport.html#Transport(javax.mail.Session, javax.mail.URLName)">Transport</a></strong>(<a href="../../javax/mail/Session.html" title="class in javax.mail">Session</a>&nbsp;session,
+         <a href="../../javax/mail/URLName.html" title="class in javax.mail">URLName</a>&nbsp;url)</code>
+<div class="block">Constructor.</div>
+</td>
+</tr>
+</table>
+</li>
+</ul>
+<!-- ========== METHOD SUMMARY =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="method_summary">
+<!--   -->
+</a>
+<h3>Method Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Method Summary table, listing methods, and an explanation">
+<caption><span>Methods</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../javax/mail/Transport.html#addTransportListener(javax.mail.event.TransportListener)">addTransportListener</a></strong>(<a href="../../javax/mail/event/TransportListener.html" title="interface in javax.mail.event">TransportListener</a>&nbsp;l)</code>
+<div class="block">Adds a listener for transport events.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>protected void</code></td>
+<td class="colLast"><code><strong><a href="../../javax/mail/Transport.html#notifyTransportListeners(int, javax.mail.Address[], javax.mail.Address[], javax.mail.Address[], javax.mail.Message)">notifyTransportListeners</a></strong>(int&nbsp;type,
+                        <a href="../../javax/mail/Address.html" title="class in javax.mail">Address</a>[]&nbsp;validSent,
+                        <a href="../../javax/mail/Address.html" title="class in javax.mail">Address</a>[]&nbsp;validUnsent,
+                        <a href="../../javax/mail/Address.html" title="class in javax.mail">Address</a>[]&nbsp;invalid,
+                        <a href="../../javax/mail/Message.html" title="class in javax.mail">Message</a>&nbsp;msg)</code>
+<div class="block">Notifies all transport listeners.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../javax/mail/Transport.html#removeTransportListener(javax.mail.event.TransportListener)">removeTransportListener</a></strong>(<a href="../../javax/mail/event/TransportListener.html" title="interface in javax.mail.event">TransportListener</a>&nbsp;l)</code>
+<div class="block">Removes a transport event listener.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static void</code></td>
+<td class="colLast"><code><strong><a href="../../javax/mail/Transport.html#send(javax.mail.Message)">send</a></strong>(<a href="../../javax/mail/Message.html" title="class in javax.mail">Message</a>&nbsp;msg)</code>
+<div class="block">Sends the specified message.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static void</code></td>
+<td class="colLast"><code><strong><a href="../../javax/mail/Transport.html#send(javax.mail.Message, javax.mail.Address[])">send</a></strong>(<a href="../../javax/mail/Message.html" title="class in javax.mail">Message</a>&nbsp;msg,
+    <a href="../../javax/mail/Address.html" title="class in javax.mail">Address</a>[]&nbsp;addresses)</code>
+<div class="block">Sends the message to the specified addresses, ignoring any recipients
+ specified in the message itself.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static void</code></td>
+<td class="colLast"><code><strong><a href="../../javax/mail/Transport.html#send(javax.mail.Message, javax.mail.Address[], java.lang.String, java.lang.String)">send</a></strong>(<a href="../../javax/mail/Message.html" title="class in javax.mail">Message</a>&nbsp;msg,
+    <a href="../../javax/mail/Address.html" title="class in javax.mail">Address</a>[]&nbsp;addresses,
+    java.lang.String&nbsp;username,
+    java.lang.String&nbsp;password)</code>
+<div class="block">Sends the message to the specified addresses, ignoring any recipients
+ specified in the message itself.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static void</code></td>
+<td class="colLast"><code><strong><a href="../../javax/mail/Transport.html#send(javax.mail.Message, java.lang.String, java.lang.String)">send</a></strong>(<a href="../../javax/mail/Message.html" title="class in javax.mail">Message</a>&nbsp;msg,
+    java.lang.String&nbsp;username,
+    java.lang.String&nbsp;password)</code>
+<div class="block">Sends the specified message.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>abstract void</code></td>
+<td class="colLast"><code><strong><a href="../../javax/mail/Transport.html#sendMessage(javax.mail.Message, javax.mail.Address[])">sendMessage</a></strong>(<a href="../../javax/mail/Message.html" title="class in javax.mail">Message</a>&nbsp;msg,
+           <a href="../../javax/mail/Address.html" title="class in javax.mail">Address</a>[]&nbsp;addresses)</code>
+<div class="block">Sends the message to the specified list of addresses.</div>
+</td>
+</tr>
+</table>
+<ul class="blockList">
+<li class="blockList"><a name="methods_inherited_from_class_javax.mail.Service">
+<!--   -->
+</a>
+<h3>Methods inherited from class&nbsp;javax.mail.<a href="../../javax/mail/Service.html" title="class in javax.mail">Service</a></h3>
+<code><a href="../../javax/mail/Service.html#addConnectionListener(javax.mail.event.ConnectionListener)">addConnectionListener</a>, <a href="../../javax/mail/Service.html#close()">close</a>, <a href="../../javax/mail/Service.html#connect()">connect</a>, <a href="../../javax/mail/Service.html#connect(java.lang.String, int, java.lang.String, java.lang.String)">connect</a>, <a href="../../javax/mail/Service.html#connect(java.lang.String, java.lang.String)">connect</a>, <a href="../../javax/mail/Service.html#connect(java.lang.String, java.lang.String, java.lang.String)">connect</a>, <a href="../../javax/mail/Service.html#getURLName()">getURLName</a>, <a href="../../javax/mail/Service.html#isConnected()">isConnected</a>, <a href="../../javax/mail/Service.html#notifyConnectionListeners(int)">notifyConnectionListeners</a>, <a href="../../javax/mail/Service.html#protocolConnect(java.lang.String, int, java.lang.String, java.lang.String)">protocolConnect</a>, <a href="../../javax/mail/Service.html#queueEvent(javax.mail.event.MailEvent, java.util.Vector)">queueEvent</a>, <a href="../../javax/mail/Service.html#removeConnectionListener(javax.mail.event.ConnectionListener)">removeConnectionListener</a>, <a href="../../javax/mail/Service.html#setConnected(boolean)">setConnected</a>, <a href="../../javax/mail/Service.html#setURLName(javax.mail.URLName)">setURLName</a>, <a href="../../javax/mail/Service.html#toString()">toString</a></code></li>
+</ul>
+<ul class="blockList">
+<li class="blockList"><a name="methods_inherited_from_class_java.lang.Object">
+<!--   -->
+</a>
+<h3>Methods inherited from class&nbsp;java.lang.Object</h3>
+<code>clone, equals, finalize, getClass, hashCode, notify, notifyAll, wait, wait, wait</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="details">
+<ul class="blockList">
+<li class="blockList">
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+<ul class="blockList">
+<li class="blockList"><a name="constructor_detail">
+<!--   -->
+</a>
+<h3>Constructor Detail</h3>
+<a name="Transport(javax.mail.Session, javax.mail.URLName)">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>Transport</h4>
+<pre>public&nbsp;Transport(<a href="../../javax/mail/Session.html" title="class in javax.mail">Session</a>&nbsp;session,
+         <a href="../../javax/mail/URLName.html" title="class in javax.mail">URLName</a>&nbsp;url)</pre>
+<div class="block">Constructor.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>session</code> - the session context for this transport</dd><dd><code>url</code> - a URLName to be used for this transport</dd></dl>
+</li>
+</ul>
+</li>
+</ul>
+<!-- ============ METHOD DETAIL ========== -->
+<ul class="blockList">
+<li class="blockList"><a name="method_detail">
+<!--   -->
+</a>
+<h3>Method Detail</h3>
+<a name="send(javax.mail.Message)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>send</h4>
+<pre>public static&nbsp;void&nbsp;send(<a href="../../javax/mail/Message.html" title="class in javax.mail">Message</a>&nbsp;msg)
+                 throws <a href="../../javax/mail/MessagingException.html" title="class in javax.mail">MessagingException</a></pre>
+<div class="block">Sends the specified message.
+ The message will be sent to all recipient addresses specified in the
  message, using transports appropriate to each address (specified by the
- <code>javamail.address.map</code> resource).
-</div><div class="parameter"><dl><dt class="header"><b>Parameters:</b></dt><dd class="item"><code class="name">msg</code><span class="separator"> - </span><span class="description">the message to send</span></dd></dl></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div></blockquote></div><hr/><a name="send(javax.mail.Message,javax.mail.Address[])" id="send(javax.mail.Message,javax.mail.Address[])"/><div class="member detail outer"><h3 class="member detail name">send</h3><pre class="member detail synopsis">public static void send(<a href="../../javax/mail/Message.html" title="Class in javax.mail">Message</a> msg,
-                        <a href="../../javax/mail/Address.html" title="Class in javax.mail">Address</a>[] addresses)
-            throws <a href="../../javax/mail/MessagingException.html" title="Class in javax.mail">MessagingException</a></pre><blockquote class="member detail name"><div class="member detail description"> Sends the message to the specified addresses, ignoring any recipients
- specified in the message itself.
-</div><div class="parameter"><dl><dt class="header"><b>Parameters:</b></dt><dd class="item"><code class="name">msg</code><span class="separator"> - </span><span class="description">the message to send</span></dd><dd class="item"><code class="name">addresses</code><span class="separator"> - </span><span class="description">the addresses to which to send the message</span></dd></dl></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div></blockquote></div><hr/><a name="sendMessage(javax.mail.Message,javax.mail.Address[])" id="sendMessage(javax.mail.Message,javax.mail.Address[])"/><div class="member detail outer"><h3 class="member detail name">sendMessage</h3><pre class="member detail synopsis">public abstract void sendMessage(<a href="../../javax/mail/Message.html" title="Class in javax.mail">Message</a> msg,
-                                 <a href="../../javax/mail/Address.html" title="Class in javax.mail">Address</a>[] addresses)
-            throws <a href="../../javax/mail/MessagingException.html" title="Class in javax.mail">MessagingException</a></pre><blockquote class="member detail name"><div class="member detail description"> Sends the message to the specified list of addresses.
-</div><div class="parameter"><dl><dt class="header"><b>Parameters:</b></dt><dd class="item"><code class="name">msg</code><span class="separator"> - </span><span class="description">the message to be sent</span></dd><dd class="item"><code class="name">addresses</code><span class="separator"> - </span><span class="description">the addresses to send this message to</span></dd></dl></div><div class="member detail thrown list"><dl><dt class="member detail thrown header"><b>Throws:</b></dt><dd class="member detail thrown item"><code class="name"><a href="../../javax/mail/MessagingException.html" title="Class in javax.mail">MessagingException</a></code><span class="separator"> - </span><span class="description">if the transport is not connected</span></dd></dl></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div></blockquote></div></div><p class="navbar bottom spacer"> </p><table class="navbar div bottom"><tr><td><div class="navbar div top"><span class="navbar item enabled"><a href="../../overview-summary.html">Overview</a></span> <span class="navbar item enabled"><a href="package-summary.html">Package</a></span> <span class="navbar item enabled"><a href="tree.html">Tree</a></span> <span class="navbar item enabled"><a href="../../alphaindex.html">Index</a></span> <span class="navbar item enabled"><a href="../../deprecated.html">Deprecated</a></span> <span class="navbar item enabled"><a href="../../about.html">About</a></span></div></td></tr></table></body></html>
+ <code>javamail.address.map</code> resource).</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>msg</code> - the message to send</dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="../../javax/mail/SendFailedException.html" title="class in javax.mail">SendFailedException</a></code> - if the message could not be sent to
+ some or any of the recipients</dd>
+<dd><code><a href="../../javax/mail/MessagingException.html" title="class in javax.mail">MessagingException</a></code></dd></dl>
+</li>
+</ul>
+<a name="send(javax.mail.Message, java.lang.String, java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>send</h4>
+<pre>public static&nbsp;void&nbsp;send(<a href="../../javax/mail/Message.html" title="class in javax.mail">Message</a>&nbsp;msg,
+        java.lang.String&nbsp;username,
+        java.lang.String&nbsp;password)
+                 throws <a href="../../javax/mail/MessagingException.html" title="class in javax.mail">MessagingException</a></pre>
+<div class="block">Sends the specified message.
+ The message will be sent to all recipient addresses specified in the
+ message, using transports appropriate to each address (specified by the
+ <code>javamail.address.map</code> resource).</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>msg</code> - the message to send</dd><dd><code>username</code> - the name of the user to authenticate as</dd><dd><code>password</code> - the password of the user to authenticate as</dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="../../javax/mail/SendFailedException.html" title="class in javax.mail">SendFailedException</a></code> - if the message could not be sent to
+ some or any of the recipients</dd>
+<dd><code><a href="../../javax/mail/MessagingException.html" title="class in javax.mail">MessagingException</a></code></dd><dt><span class="strong">Since:</span></dt>
+  <dd>JavaMail 1.5</dd></dl>
+</li>
+</ul>
+<a name="send(javax.mail.Message, javax.mail.Address[])">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>send</h4>
+<pre>public static&nbsp;void&nbsp;send(<a href="../../javax/mail/Message.html" title="class in javax.mail">Message</a>&nbsp;msg,
+        <a href="../../javax/mail/Address.html" title="class in javax.mail">Address</a>[]&nbsp;addresses)
+                 throws <a href="../../javax/mail/MessagingException.html" title="class in javax.mail">MessagingException</a></pre>
+<div class="block">Sends the message to the specified addresses, ignoring any recipients
+ specified in the message itself.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>msg</code> - the message to send</dd><dd><code>addresses</code> - the addresses to which to send the message</dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="../../javax/mail/SendFailedException.html" title="class in javax.mail">SendFailedException</a></code> - if the message could not be sent to
+ some or any of the recipients</dd>
+<dd><code><a href="../../javax/mail/MessagingException.html" title="class in javax.mail">MessagingException</a></code></dd></dl>
+</li>
+</ul>
+<a name="send(javax.mail.Message, javax.mail.Address[], java.lang.String, java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>send</h4>
+<pre>public static&nbsp;void&nbsp;send(<a href="../../javax/mail/Message.html" title="class in javax.mail">Message</a>&nbsp;msg,
+        <a href="../../javax/mail/Address.html" title="class in javax.mail">Address</a>[]&nbsp;addresses,
+        java.lang.String&nbsp;username,
+        java.lang.String&nbsp;password)
+                 throws <a href="../../javax/mail/MessagingException.html" title="class in javax.mail">MessagingException</a></pre>
+<div class="block">Sends the message to the specified addresses, ignoring any recipients
+ specified in the message itself.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>msg</code> - the message to send</dd><dd><code>addresses</code> - the addresses to which to send the message</dd><dd><code>username</code> - the name of the user to authenticate as</dd><dd><code>password</code> - the password of the user to authenticate as</dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="../../javax/mail/SendFailedException.html" title="class in javax.mail">SendFailedException</a></code> - if the message could not be sent to
+ some or any of the recipients</dd>
+<dd><code><a href="../../javax/mail/MessagingException.html" title="class in javax.mail">MessagingException</a></code></dd><dt><span class="strong">Since:</span></dt>
+  <dd>JavaMail 1.5</dd></dl>
+</li>
+</ul>
+<a name="sendMessage(javax.mail.Message, javax.mail.Address[])">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>sendMessage</h4>
+<pre>public abstract&nbsp;void&nbsp;sendMessage(<a href="../../javax/mail/Message.html" title="class in javax.mail">Message</a>&nbsp;msg,
+               <a href="../../javax/mail/Address.html" title="class in javax.mail">Address</a>[]&nbsp;addresses)
+                          throws <a href="../../javax/mail/MessagingException.html" title="class in javax.mail">MessagingException</a></pre>
+<div class="block">Sends the message to the specified list of addresses.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>msg</code> - the message to be sent</dd><dd><code>addresses</code> - the addresses to send this message to</dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="../../javax/mail/SendFailedException.html" title="class in javax.mail">SendFailedException</a></code> - if the send failed because of
+ invalid addresses</dd>
+<dd><code><a href="../../javax/mail/MessagingException.html" title="class in javax.mail">MessagingException</a></code> - if the transport is not connected</dd></dl>
+</li>
+</ul>
+<a name="addTransportListener(javax.mail.event.TransportListener)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>addTransportListener</h4>
+<pre>public&nbsp;void&nbsp;addTransportListener(<a href="../../javax/mail/event/TransportListener.html" title="interface in javax.mail.event">TransportListener</a>&nbsp;l)</pre>
+<div class="block">Adds a listener for transport events.</div>
+</li>
+</ul>
+<a name="removeTransportListener(javax.mail.event.TransportListener)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>removeTransportListener</h4>
+<pre>public&nbsp;void&nbsp;removeTransportListener(<a href="../../javax/mail/event/TransportListener.html" title="interface in javax.mail.event">TransportListener</a>&nbsp;l)</pre>
+<div class="block">Removes a transport event listener.</div>
+</li>
+</ul>
+<a name="notifyTransportListeners(int, javax.mail.Address[], javax.mail.Address[], javax.mail.Address[], javax.mail.Message)">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>notifyTransportListeners</h4>
+<pre>protected&nbsp;void&nbsp;notifyTransportListeners(int&nbsp;type,
+                            <a href="../../javax/mail/Address.html" title="class in javax.mail">Address</a>[]&nbsp;validSent,
+                            <a href="../../javax/mail/Address.html" title="class in javax.mail">Address</a>[]&nbsp;validUnsent,
+                            <a href="../../javax/mail/Address.html" title="class in javax.mail">Address</a>[]&nbsp;invalid,
+                            <a href="../../javax/mail/Message.html" title="class in javax.mail">Message</a>&nbsp;msg)</pre>
+<div class="block">Notifies all transport listeners.</div>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<!-- ========= END OF CLASS DATA ========= -->
+<!-- ======= START OF BOTTOM NAVBAR ====== -->
+<div class="bottomNav"><a name="navbar_bottom">
+<!--   -->
+</a><a href="#skip-navbar_bottom" title="Skip navigation links"></a><a name="navbar_bottom_firstrow">
+<!--   -->
+</a>
+<ul class="navList" title="Navigation">
+<li><a href="../../overview-summary.html">Overview</a></li>
+<li><a href="package-summary.html">Package</a></li>
+<li class="navBarCell1Rev">Class</li>
+<li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../deprecated-list.html">Deprecated</a></li>
+<li><a href="../../index-all.html">Index</a></li>
+<li><a href="../../help-doc.html">Help</a></li>
+</ul>
+</div>
+<div class="subNav">
+<ul class="navList">
+<li><a href="../../javax/mail/StoreClosedException.html" title="class in javax.mail"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../javax/mail/UIDFolder.html" title="interface in javax.mail"><span class="strong">Next Class</span></a></li>
+</ul>
+<ul class="navList">
+<li><a href="../../index.html?javax/mail/Transport.html" target="_top">Frames</a></li>
+<li><a href="Transport.html" target="_top">No Frames</a></li>
+</ul>
+<ul class="navList" id="allclasses_navbar_bottom">
+<li><a href="../../allclasses-noframe.html">All Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_bottom");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+</div>
+<div>
+<ul class="subNavList">
+<li>Summary:&nbsp;</li>
+<li>Nested&nbsp;|&nbsp;</li>
+<li><a href="#fields_inherited_from_class_javax.mail.Service">Field</a>&nbsp;|&nbsp;</li>
+<li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method_summary">Method</a></li>
+</ul>
+<ul class="subNavList">
+<li>Detail:&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method_detail">Method</a></li>
+</ul>
+</div>
+<a name="skip-navbar_bottom">
+<!--   -->
+</a></div>
+<!-- ======== END OF BOTTOM NAVBAR ======= -->
+</body>
+</html>

@@ -1,22 +1,450 @@
-<?xml version="1.0" encoding="MacRoman"?>
-<!DOCTYPE html PUBLIC "-//gnu.org///DTD XHTML 1.1 plus Target 1.0//EN" "../../../../resources/xhtml11-target10.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head><title>MaildirStore</title><script src="../../../../resources/gjdoc.js" type="text/javascript"><!-- this comment required for konqueror 3.2.2 --></script><meta http-equiv="Content-Type" content="text/html; charset=MacRoman"/><meta name="generator" content="GNU Gjdoc Standard Doclet"/><meta name="keywords" content="gnu.mail.providers.maildir.MaildirStore class"/><meta name="keywords" content="protocolConnect()"/><meta name="keywords" content="getDefaultFolder()"/><meta name="keywords" content="getFolder()"/><meta name="keywords" content="addStatusListener()"/><meta name="keywords" content="removeStatusListener()"/><meta name="keywords" content="processStatusEvent()"/><link rel="stylesheet" type="text/css" href="../../../../resources/gjdochtml-clean-layout.css" title="GNU Clean"/><link rel="stylesheet" type="text/css" href="../../../../resources/gjdochtml-clean-color1.css" title="GNU Clean"/></head><body class="content class" onload="if(parent.contentPageLoaded)parent.contentPageLoaded(document.title)"><table class="navbar div top"><tr><td class="navbar div top"><div class="navbar div top"><span class="navbar item enabled"><a href="../../../../overview-summary.html">Overview</a></span> <span class="navbar item enabled"><a href="package-summary.html">Package</a></span> <span class="navbar item enabled"><a href="tree.html">Tree</a></span> <span class="navbar item enabled"><a href="../../../../alphaindex.html">Index</a></span> <span class="navbar item enabled"><a href="../../../../deprecated.html">Deprecated</a></span> <span class="navbar item enabled"><a href="../../../../about.html">About</a></span></div></td></tr><tr><td class="navi"><a href="../../../../gnu/mail/providers/maildir/MaildirMessage.html">Prev Class</a> | Next Class</td><td class="navi"><a href="../../../../index.html" title="Show in a frameset" target="_top">Frames</a> | <a href="MaildirStore.html" title="Show without frames" target="_top">No Frames</a> </td></tr><tr><td class="navi">Summary: Nested | Field | <a href="#summary-methods">Method</a> | <a href="#summary-constructors">Constr</a></td><td class="navi">Detail: Nested | Field | <a href="#detail-methods">Method</a> | <a href="#detail-constructors">Constr</a></td></tr></table><div class="class title outer"><h3 class="class title-package">gnu.mail.providers.maildir</h3><h1 class="class title-class">Class MaildirStore</h1></div><div class="class inheritance-tree"><ul class="inheritance 0"><li class="inheritance 0"><code>java.lang.Object</code></li><li><ul class="inheritance 1"><li class="inheritance 1"><code><a href="../../../../javax/mail/Service.html">javax.mail.Service</a></code></li><li><ul class="inheritance 2"><li class="inheritance 2"><code><a href="../../../../javax/mail/Store.html">javax.mail.Store</a></code></li><li><ul class="inheritance 3"><li class="inheritance 3"><code>gnu.mail.providers.maildir.MaildirStore</code></li><li></li></ul></li></ul></li></ul></li></ul></div><dl class="class knownimplementing"><dt class="header"><b>Implemented Interfaces:</b></dt><dd class="item">gnu.mail.treeutil.StatusSource</dd></dl><hr/><div class="class synopsis outer"><div class="class synopsis declaration"><code>public final class <b class="class synopsis name">MaildirStore</b></code></div><div class="class synopsis superclass"><code>extends <a href="../../../../javax/mail/Store.html" title="Class in javax.mail">Store</a></code></div><div class="class synopsis implements"><code>implements gnu.mail.treeutil.StatusSource</code></div></div><hr/><div class="class description"> The storage class implementing the Maildir mailbox format.
-</div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><a name="summary-fields" id="summary-fields"/><dl class="table container"><dd><table class="class summary" border="1" width="100%"><tr class="table header"><td colspan="2"><h2 class="table header">Field Summary</h2></td></tr></table></dd></dl><dl class="table container"><dd><table class="class summary" border="1" width="100%"><tr class="table sub header"><td colspan="2"><h3 class="table sub header">Fields inherited from class javax.mail.<a href="../../../../javax/mail/Service.html" title="Class in javax.mail">Service</a></h3></td></tr><tr><td class="inherited"><a href="../../../../javax/mail/Service.html#debug"><code class="member">debug</code></a>, <a href="../../../../javax/mail/Service.html#session"><code class="member">session</code></a>, <a href="../../../../javax/mail/Service.html#url"><code class="member">url</code></a></td></tr></table></dd></dl><a name="summary-constructors" id="summary-constructors"/><dl class="table container"><dd><table class="class summary" border="1" width="100%"><tr class="table header"><td colspan="2"><h2 class="table header">Constructor Summary</h2></td></tr><tr><td class="right"><dl class="list"><dt class="synopsis"><code><a href="#MaildirStore(javax.mail.Session,javax.mail.URLName)">MaildirStore</a>(<a href="../../../../javax/mail/Session.html" title="Class in javax.mail">Session</a>&nbsp;session, <a href="../../../../javax/mail/URLName.html" title="Class in javax.mail">URLName</a>&nbsp;urlname)</code></dt><dd class="description"> Constructor.</dd></dl></td></tr></table></dd></dl><a name="summary-methods" id="summary-methods"/><dl class="table container"><dd><table class="class summary" border="1" width="100%"><tr class="table header"><td colspan="2"><h2 class="table header">Method Summary</h2></td></tr><tr><td class="left" valign="top"><code class="synopsis"> void</code></td><td class="right"><dl class="list"><dt class="synopsis"><code><a href="#addStatusListener(gnu.mail.treeutil.StatusListener)">addStatusListener</a>(gnu.mail.treeutil.StatusListener&nbsp;l)</code></dt><dd class="description"> Adds a status listener to this store.</dd></dl></td></tr><tr><td class="left" valign="top"><code class="synopsis"> <a href="../../../../javax/mail/Folder.html" title="Class in javax.mail">Folder</a></code></td><td class="right"><dl class="list"><dt class="synopsis"><code><a href="#getDefaultFolder()">getDefaultFolder</a>()</code></dt><dd class="description"> Returns the default folder.</dd></dl></td></tr><tr><td class="left" valign="top"><code class="synopsis"> <a href="../../../../javax/mail/Folder.html" title="Class in javax.mail">Folder</a></code></td><td class="right"><dl class="list"><dt class="synopsis"><code><a href="#getFolder(String)">getFolder</a>(String&nbsp;filename)</code></dt><dd class="description"> Returns the folder with the specified filename.</dd></dl></td></tr><tr><td class="left" valign="top"><code class="synopsis"> <a href="../../../../javax/mail/Folder.html" title="Class in javax.mail">Folder</a></code></td><td class="right"><dl class="list"><dt class="synopsis"><code><a href="#getFolder(javax.mail.URLName)">getFolder</a>(<a href="../../../../javax/mail/URLName.html" title="Class in javax.mail">URLName</a>&nbsp;urlname)</code></dt><dd class="description"> Returns the folder specified by the filename of the URLName.</dd></dl></td></tr><tr><td class="left" valign="top"><code class="synopsis">protected  void</code></td><td class="right"><dl class="list"><dt class="synopsis"><code><a href="#processStatusEvent(gnu.mail.treeutil.StatusEvent)">processStatusEvent</a>(gnu.mail.treeutil.StatusEvent&nbsp;event)</code></dt><dd class="description"> Processes a status event.</dd></dl></td></tr><tr><td class="left" valign="top"><code class="synopsis">protected  boolean</code></td><td class="right"><dl class="list"><dt class="synopsis"><code><a href="#protocolConnect(String,int,String,String)">protocolConnect</a>(String&nbsp;host, int&nbsp;port, String&nbsp;username, String&nbsp;password)</code></dt><dd class="description"> There isn't a protocol to implement, so this method just returns.</dd></dl></td></tr><tr><td class="left" valign="top"><code class="synopsis"> void</code></td><td class="right"><dl class="list"><dt class="synopsis"><code><a href="#removeStatusListener(gnu.mail.treeutil.StatusListener)">removeStatusListener</a>(gnu.mail.treeutil.StatusListener&nbsp;l)</code></dt><dd class="description"> Removes a status listener from this store.</dd></dl></td></tr></table></dd></dl><dl class="table container"><dd><table class="class summary" border="1" width="100%"><tr class="table sub header"><td colspan="2"><h3 class="table sub header">Methods inherited from class javax.mail.<a href="../../../../javax/mail/Store.html" title="Class in javax.mail">Store</a></h3></td></tr><tr><td class="inherited"><a href="../../../../javax/mail/Store.html#addFolderListener(javax.mail.event.FolderListener)" title="addFolderListener(FolderListener)"><code class="member">addFolderListener</code></a>, <a href="../../../../javax/mail/Store.html#addStoreListener(javax.mail.event.StoreListener)" title="addStoreListener(StoreListener)"><code class="member">addStoreListener</code></a>, <a href="../../../../javax/mail/Store.html#getDefaultFolder()" title="getDefaultFolder()"><code class="member">getDefaultFolder</code></a>, <a href="../../../../javax/mail/Store.html#getFolder(String)" title="getFolder(String)"><code class="member">getFolder</code></a>, <a href="../../../../javax/mail/Store.html#getFolder(javax.mail.URLName)" title="getFolder(URLName)"><code class="member">getFolder</code></a>, <a href="../../../../javax/mail/Store.html#getPersonalNamespaces()" title="getPersonalNamespaces()"><code class="member">getPersonalNamespaces</code></a>, <a href="../../../../javax/mail/Store.html#getSharedNamespaces()" title="getSharedNamespaces()"><code class="member">getSharedNamespaces</code></a>, <a href="../../../../javax/mail/Store.html#getUserNamespaces(String)" title="getUserNamespaces(String)"><code class="member">getUserNamespaces</code></a>, <a href="../../../../javax/mail/Store.html#notifyFolderListeners(int,javax.mail.Folder)" title="notifyFolderListeners(int,Folder)"><code class="member">notifyFolderListeners</code></a>, <a href="../../../../javax/mail/Store.html#notifyFolderRenamedListeners(javax.mail.Folder,javax.mail.Folder)" title="notifyFolderRenamedListeners(Folder,Folder)"><code class="member">notifyFolderRenamedListeners</code></a>, <a href="../../../../javax/mail/Store.html#notifyStoreListeners(int,String)" title="notifyStoreListeners(int,String)"><code class="member">notifyStoreListeners</code></a>, <a href="../../../../javax/mail/Store.html#removeFolderListener(javax.mail.event.FolderListener)" title="removeFolderListener(FolderListener)"><code class="member">removeFolderListener</code></a>, <a href="../../../../javax/mail/Store.html#removeStoreListener(javax.mail.event.StoreListener)" title="removeStoreListener(StoreListener)"><code class="member">removeStoreListener</code></a></td></tr></table></dd></dl><dl class="table container"><dd><table class="class summary" border="1" width="100%"><tr class="table sub header"><td colspan="2"><h3 class="table sub header">Methods inherited from class javax.mail.<a href="../../../../javax/mail/Service.html" title="Class in javax.mail">Service</a></h3></td></tr><tr><td class="inherited"><a href="../../../../javax/mail/Service.html#addConnectionListener(javax.mail.event.ConnectionListener)" title="addConnectionListener(ConnectionListener)"><code class="member">addConnectionListener</code></a>, <a href="../../../../javax/mail/Service.html#close()" title="close()"><code class="member">close</code></a>, <a href="../../../../javax/mail/Service.html#connect()" title="connect()"><code class="member">connect</code></a>, <a href="../../../../javax/mail/Service.html#connect(String,String)" title="connect(String,String)"><code class="member">connect</code></a>, <a href="../../../../javax/mail/Service.html#connect(String,String,String)" title="connect(String,String,String)"><code class="member">connect</code></a>, <a href="../../../../javax/mail/Service.html#connect(String,int,String,String)" title="connect(String,int,String,String)"><code class="member">connect</code></a>, <a href="../../../../javax/mail/Service.html#getURLName()" title="getURLName()"><code class="member">getURLName</code></a>, <a href="../../../../javax/mail/Service.html#isConnected()" title="isConnected()"><code class="member">isConnected</code></a>, <a href="../../../../javax/mail/Service.html#notifyConnectionListeners(int)" title="notifyConnectionListeners(int)"><code class="member">notifyConnectionListeners</code></a>, <a href="../../../../javax/mail/Service.html#protocolConnect(String,int,String,String)" title="protocolConnect(String,int,String,String)"><code class="member">protocolConnect</code></a>, <a href="../../../../javax/mail/Service.html#queueEvent(javax.mail.event.MailEvent,Vector)" title="queueEvent(MailEvent,Vector)"><code class="member">queueEvent</code></a>, <a href="../../../../javax/mail/Service.html#removeConnectionListener(javax.mail.event.ConnectionListener)" title="removeConnectionListener(ConnectionListener)"><code class="member">removeConnectionListener</code></a>, <a href="../../../../javax/mail/Service.html#setConnected(boolean)" title="setConnected(boolean)"><code class="member">setConnected</code></a>, <a href="../../../../javax/mail/Service.html#setURLName(javax.mail.URLName)" title="setURLName(URLName)"><code class="member">setURLName</code></a>, <a href="../../../../javax/mail/Service.html#toString()" title="toString()"><code class="member">toString</code></a></td></tr></table></dd></dl><a name="detail-constructors" id="detail-constructors"/><h2 class="section header">Constructor Details</h2><div class="section"><a name="MaildirStore(javax.mail.Session,javax.mail.URLName)" id="MaildirStore(javax.mail.Session,javax.mail.URLName)"/><div class="member detail outer"><h3 class="member detail name">MaildirStore</h3><pre class="member detail synopsis">public MaildirStore(<a href="../../../../javax/mail/Session.html" title="Class in javax.mail">Session</a> session,
-                    <a href="../../../../javax/mail/URLName.html" title="Class in javax.mail">URLName</a> urlname)</pre><blockquote class="member detail name"><div class="member detail description"> Constructor.
-</div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div></blockquote></div></div><a name="detail-methods" id="detail-methods"/><h2 class="section header">Method Details</h2><div class="section"><a name="addStatusListener(gnu.mail.treeutil.StatusListener)" id="addStatusListener(gnu.mail.treeutil.StatusListener)"/><div class="member detail outer"><h3 class="member detail name">addStatusListener</h3><pre class="member detail synopsis">public void addStatusListener(gnu.mail.treeutil.StatusListener l)</pre><blockquote class="member detail name"><div class="member detail description"> Adds a status listener to this store.
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!-- NewPage -->
+<html lang="en">
+<head>
+<!-- Generated by javadoc (version 1.7.0_25) on Fri Nov 22 19:03:12 GMT 2013 -->
+<title>MaildirStore (GNU JavaMail API documentation)</title>
+<meta name="date" content="2013-11-22">
+<link rel="stylesheet" type="text/css" href="../../../../stylesheet.css" title="Style">
+</head>
+<body>
+<script type="text/javascript"><!--
+    if (location.href.indexOf('is-external=true') == -1) {
+        parent.document.title="MaildirStore (GNU JavaMail API documentation)";
+    }
+//-->
+</script>
+<noscript>
+<div>JavaScript is disabled on your browser.</div>
+</noscript>
+<!-- ========= START OF TOP NAVBAR ======= -->
+<div class="topNav"><a name="navbar_top">
+<!--   -->
+</a><a href="#skip-navbar_top" title="Skip navigation links"></a><a name="navbar_top_firstrow">
+<!--   -->
+</a>
+<ul class="navList" title="Navigation">
+<li><a href="../../../../overview-summary.html">Overview</a></li>
+<li><a href="package-summary.html">Package</a></li>
+<li class="navBarCell1Rev">Class</li>
+<li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../deprecated-list.html">Deprecated</a></li>
+<li><a href="../../../../index-all.html">Index</a></li>
+<li><a href="../../../../help-doc.html">Help</a></li>
+</ul>
+</div>
+<div class="subNav">
+<ul class="navList">
+<li><a href="../../../../gnu/mail/providers/maildir/MaildirMessage.html" title="class in gnu.mail.providers.maildir"><span class="strong">Prev Class</span></a></li>
+<li>Next Class</li>
+</ul>
+<ul class="navList">
+<li><a href="../../../../index.html?gnu/mail/providers/maildir/MaildirStore.html" target="_top">Frames</a></li>
+<li><a href="MaildirStore.html" target="_top">No Frames</a></li>
+</ul>
+<ul class="navList" id="allclasses_navbar_top">
+<li><a href="../../../../allclasses-noframe.html">All Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_top");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+</div>
+<div>
+<ul class="subNavList">
+<li>Summary:&nbsp;</li>
+<li>Nested&nbsp;|&nbsp;</li>
+<li><a href="#fields_inherited_from_class_javax.mail.Service">Field</a>&nbsp;|&nbsp;</li>
+<li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method_summary">Method</a></li>
+</ul>
+<ul class="subNavList">
+<li>Detail:&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method_detail">Method</a></li>
+</ul>
+</div>
+<a name="skip-navbar_top">
+<!--   -->
+</a></div>
+<!-- ========= END OF TOP NAVBAR ========= -->
+<!-- ======== START OF CLASS DATA ======== -->
+<div class="header">
+<div class="subTitle">gnu.mail.providers.maildir</div>
+<h2 title="Class MaildirStore" class="title">Class MaildirStore</h2>
+</div>
+<div class="contentContainer">
+<ul class="inheritance">
+<li>java.lang.Object</li>
+<li>
+<ul class="inheritance">
+<li><a href="../../../../javax/mail/Service.html" title="class in javax.mail">javax.mail.Service</a></li>
+<li>
+<ul class="inheritance">
+<li><a href="../../../../javax/mail/Store.html" title="class in javax.mail">javax.mail.Store</a></li>
+<li>
+<ul class="inheritance">
+<li>gnu.mail.providers.maildir.MaildirStore</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<div class="description">
+<ul class="blockList">
+<li class="blockList">
+<dl>
+<dt>All Implemented Interfaces:</dt>
+<dd>gnu.mail.treeutil.StatusSource</dd>
+</dl>
+<hr>
+<br>
+<pre>public final class <span class="strong">MaildirStore</span>
+extends <a href="../../../../javax/mail/Store.html" title="class in javax.mail">Store</a>
+implements gnu.mail.treeutil.StatusSource</pre>
+<div class="block">The storage class implementing the Maildir mailbox format.</div>
+</li>
+</ul>
+</div>
+<div class="summary">
+<ul class="blockList">
+<li class="blockList">
+<!-- =========== FIELD SUMMARY =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_summary">
+<!--   -->
+</a>
+<h3>Field Summary</h3>
+<ul class="blockList">
+<li class="blockList"><a name="fields_inherited_from_class_javax.mail.Service">
+<!--   -->
+</a>
+<h3>Fields inherited from class&nbsp;javax.mail.<a href="../../../../javax/mail/Service.html" title="class in javax.mail">Service</a></h3>
+<code><a href="../../../../javax/mail/Service.html#debug">debug</a>, <a href="../../../../javax/mail/Service.html#session">session</a>, <a href="../../../../javax/mail/Service.html#url">url</a></code></li>
+</ul>
+</li>
+</ul>
+<!-- ======== CONSTRUCTOR SUMMARY ======== -->
+<ul class="blockList">
+<li class="blockList"><a name="constructor_summary">
+<!--   -->
+</a>
+<h3>Constructor Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Constructor Summary table, listing constructors, and an explanation">
+<caption><span>Constructors</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colOne" scope="col">Constructor and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colOne"><code><strong><a href="../../../../gnu/mail/providers/maildir/MaildirStore.html#MaildirStore(javax.mail.Session, javax.mail.URLName)">MaildirStore</a></strong>(<a href="../../../../javax/mail/Session.html" title="class in javax.mail">Session</a>&nbsp;session,
+            <a href="../../../../javax/mail/URLName.html" title="class in javax.mail">URLName</a>&nbsp;urlname)</code>
+<div class="block">Constructor.</div>
+</td>
+</tr>
+</table>
+</li>
+</ul>
+<!-- ========== METHOD SUMMARY =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="method_summary">
+<!--   -->
+</a>
+<h3>Method Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Method Summary table, listing methods, and an explanation">
+<caption><span>Methods</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../gnu/mail/providers/maildir/MaildirStore.html#addStatusListener(gnu.mail.treeutil.StatusListener)">addStatusListener</a></strong>(gnu.mail.treeutil.StatusListener&nbsp;l)</code>
+<div class="block">Adds a status listener to this store.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../javax/mail/Folder.html" title="class in javax.mail">Folder</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../gnu/mail/providers/maildir/MaildirStore.html#getDefaultFolder()">getDefaultFolder</a></strong>()</code>
+<div class="block">Returns the default folder.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../javax/mail/Folder.html" title="class in javax.mail">Folder</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../gnu/mail/providers/maildir/MaildirStore.html#getFolder(java.lang.String)">getFolder</a></strong>(java.lang.String&nbsp;filename)</code>
+<div class="block">Returns the folder with the specified filename.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../javax/mail/Folder.html" title="class in javax.mail">Folder</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../gnu/mail/providers/maildir/MaildirStore.html#getFolder(javax.mail.URLName)">getFolder</a></strong>(<a href="../../../../javax/mail/URLName.html" title="class in javax.mail">URLName</a>&nbsp;urlname)</code>
+<div class="block">Returns the folder specified by the filename of the URLName.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>protected void</code></td>
+<td class="colLast"><code><strong><a href="../../../../gnu/mail/providers/maildir/MaildirStore.html#processStatusEvent(gnu.mail.treeutil.StatusEvent)">processStatusEvent</a></strong>(gnu.mail.treeutil.StatusEvent&nbsp;event)</code>
+<div class="block">Processes a status event.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>protected boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../gnu/mail/providers/maildir/MaildirStore.html#protocolConnect(java.lang.String, int, java.lang.String, java.lang.String)">protocolConnect</a></strong>(java.lang.String&nbsp;host,
+               int&nbsp;port,
+               java.lang.String&nbsp;username,
+               java.lang.String&nbsp;password)</code>
+<div class="block">There isn't a protocol to implement, so this method just returns.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../gnu/mail/providers/maildir/MaildirStore.html#removeStatusListener(gnu.mail.treeutil.StatusListener)">removeStatusListener</a></strong>(gnu.mail.treeutil.StatusListener&nbsp;l)</code>
+<div class="block">Removes a status listener from this store.</div>
+</td>
+</tr>
+</table>
+<ul class="blockList">
+<li class="blockList"><a name="methods_inherited_from_class_javax.mail.Store">
+<!--   -->
+</a>
+<h3>Methods inherited from class&nbsp;javax.mail.<a href="../../../../javax/mail/Store.html" title="class in javax.mail">Store</a></h3>
+<code><a href="../../../../javax/mail/Store.html#addFolderListener(javax.mail.event.FolderListener)">addFolderListener</a>, <a href="../../../../javax/mail/Store.html#addStoreListener(javax.mail.event.StoreListener)">addStoreListener</a>, <a href="../../../../javax/mail/Store.html#getPersonalNamespaces()">getPersonalNamespaces</a>, <a href="../../../../javax/mail/Store.html#getSharedNamespaces()">getSharedNamespaces</a>, <a href="../../../../javax/mail/Store.html#getUserNamespaces(java.lang.String)">getUserNamespaces</a>, <a href="../../../../javax/mail/Store.html#notifyFolderListeners(int, javax.mail.Folder)">notifyFolderListeners</a>, <a href="../../../../javax/mail/Store.html#notifyFolderRenamedListeners(javax.mail.Folder, javax.mail.Folder)">notifyFolderRenamedListeners</a>, <a href="../../../../javax/mail/Store.html#notifyStoreListeners(int, java.lang.String)">notifyStoreListeners</a>, <a href="../../../../javax/mail/Store.html#removeFolderListener(javax.mail.event.FolderListener)">removeFolderListener</a>, <a href="../../../../javax/mail/Store.html#removeStoreListener(javax.mail.event.StoreListener)">removeStoreListener</a></code></li>
+</ul>
+<ul class="blockList">
+<li class="blockList"><a name="methods_inherited_from_class_javax.mail.Service">
+<!--   -->
+</a>
+<h3>Methods inherited from class&nbsp;javax.mail.<a href="../../../../javax/mail/Service.html" title="class in javax.mail">Service</a></h3>
+<code><a href="../../../../javax/mail/Service.html#addConnectionListener(javax.mail.event.ConnectionListener)">addConnectionListener</a>, <a href="../../../../javax/mail/Service.html#close()">close</a>, <a href="../../../../javax/mail/Service.html#connect()">connect</a>, <a href="../../../../javax/mail/Service.html#connect(java.lang.String, int, java.lang.String, java.lang.String)">connect</a>, <a href="../../../../javax/mail/Service.html#connect(java.lang.String, java.lang.String)">connect</a>, <a href="../../../../javax/mail/Service.html#connect(java.lang.String, java.lang.String, java.lang.String)">connect</a>, <a href="../../../../javax/mail/Service.html#getURLName()">getURLName</a>, <a href="../../../../javax/mail/Service.html#isConnected()">isConnected</a>, <a href="../../../../javax/mail/Service.html#notifyConnectionListeners(int)">notifyConnectionListeners</a>, <a href="../../../../javax/mail/Service.html#queueEvent(javax.mail.event.MailEvent, java.util.Vector)">queueEvent</a>, <a href="../../../../javax/mail/Service.html#removeConnectionListener(javax.mail.event.ConnectionListener)">removeConnectionListener</a>, <a href="../../../../javax/mail/Service.html#setConnected(boolean)">setConnected</a>, <a href="../../../../javax/mail/Service.html#setURLName(javax.mail.URLName)">setURLName</a>, <a href="../../../../javax/mail/Service.html#toString()">toString</a></code></li>
+</ul>
+<ul class="blockList">
+<li class="blockList"><a name="methods_inherited_from_class_java.lang.Object">
+<!--   -->
+</a>
+<h3>Methods inherited from class&nbsp;java.lang.Object</h3>
+<code>clone, equals, finalize, getClass, hashCode, notify, notifyAll, wait, wait, wait</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="details">
+<ul class="blockList">
+<li class="blockList">
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+<ul class="blockList">
+<li class="blockList"><a name="constructor_detail">
+<!--   -->
+</a>
+<h3>Constructor Detail</h3>
+<a name="MaildirStore(javax.mail.Session, javax.mail.URLName)">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>MaildirStore</h4>
+<pre>public&nbsp;MaildirStore(<a href="../../../../javax/mail/Session.html" title="class in javax.mail">Session</a>&nbsp;session,
+            <a href="../../../../javax/mail/URLName.html" title="class in javax.mail">URLName</a>&nbsp;urlname)</pre>
+<div class="block">Constructor.</div>
+</li>
+</ul>
+</li>
+</ul>
+<!-- ============ METHOD DETAIL ========== -->
+<ul class="blockList">
+<li class="blockList"><a name="method_detail">
+<!--   -->
+</a>
+<h3>Method Detail</h3>
+<a name="protocolConnect(java.lang.String, int, java.lang.String, java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>protocolConnect</h4>
+<pre>protected&nbsp;boolean&nbsp;protocolConnect(java.lang.String&nbsp;host,
+                      int&nbsp;port,
+                      java.lang.String&nbsp;username,
+                      java.lang.String&nbsp;password)
+                           throws <a href="../../../../javax/mail/MessagingException.html" title="class in javax.mail">MessagingException</a></pre>
+<div class="block">There isn't a protocol to implement, so this method just returns.</div>
+<dl>
+<dt><strong>Overrides:</strong></dt>
+<dd><code><a href="../../../../javax/mail/Service.html#protocolConnect(java.lang.String, int, java.lang.String, java.lang.String)">protocolConnect</a></code>&nbsp;in class&nbsp;<code><a href="../../../../javax/mail/Service.html" title="class in javax.mail">Service</a></code></dd>
+<dt><span class="strong">Parameters:</span></dt><dd><code>host</code> - the name of the host to connect to</dd><dd><code>port</code> - the port to use (-1 for the default port)</dd><dd><code>username</code> - the username</dd><dd><code>password</code> - the password</dd>
+<dt><span class="strong">Returns:</span></dt><dd>true on success, false if authentication failed</dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="../../../../javax/mail/AuthenticationFailedException.html" title="class in javax.mail">AuthenticationFailedException</a></code> - on authentication failure</dd>
+<dd><code><a href="../../../../javax/mail/MessagingException.html" title="class in javax.mail">MessagingException</a></code> - for non-authentication failures</dd></dl>
+</li>
+</ul>
+<a name="getDefaultFolder()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getDefaultFolder</h4>
+<pre>public&nbsp;<a href="../../../../javax/mail/Folder.html" title="class in javax.mail">Folder</a>&nbsp;getDefaultFolder()
+                        throws <a href="../../../../javax/mail/MessagingException.html" title="class in javax.mail">MessagingException</a></pre>
+<div class="block">Returns the default folder.</div>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code><a href="../../../../javax/mail/Store.html#getDefaultFolder()">getDefaultFolder</a></code>&nbsp;in class&nbsp;<code><a href="../../../../javax/mail/Store.html" title="class in javax.mail">Store</a></code></dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="../../../../javax/mail/MessagingException.html" title="class in javax.mail">MessagingException</a></code></dd></dl>
+</li>
+</ul>
+<a name="getFolder(java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getFolder</h4>
+<pre>public&nbsp;<a href="../../../../javax/mail/Folder.html" title="class in javax.mail">Folder</a>&nbsp;getFolder(java.lang.String&nbsp;filename)
+                 throws <a href="../../../../javax/mail/MessagingException.html" title="class in javax.mail">MessagingException</a></pre>
+<div class="block">Returns the folder with the specified filename.</div>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code><a href="../../../../javax/mail/Store.html#getFolder(java.lang.String)">getFolder</a></code>&nbsp;in class&nbsp;<code><a href="../../../../javax/mail/Store.html" title="class in javax.mail">Store</a></code></dd>
+<dt><span class="strong">Parameters:</span></dt><dd><code>filename</code> - the folder name</dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="../../../../javax/mail/MessagingException.html" title="class in javax.mail">MessagingException</a></code></dd></dl>
+</li>
+</ul>
+<a name="getFolder(javax.mail.URLName)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getFolder</h4>
+<pre>public&nbsp;<a href="../../../../javax/mail/Folder.html" title="class in javax.mail">Folder</a>&nbsp;getFolder(<a href="../../../../javax/mail/URLName.html" title="class in javax.mail">URLName</a>&nbsp;urlname)
+                 throws <a href="../../../../javax/mail/MessagingException.html" title="class in javax.mail">MessagingException</a></pre>
+<div class="block">Returns the folder specified by the filename of the URLName.</div>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code><a href="../../../../javax/mail/Store.html#getFolder(javax.mail.URLName)">getFolder</a></code>&nbsp;in class&nbsp;<code><a href="../../../../javax/mail/Store.html" title="class in javax.mail">Store</a></code></dd>
+<dt><span class="strong">Parameters:</span></dt><dd><code>urlname</code> - a URLName denoting a folder</dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="../../../../javax/mail/MessagingException.html" title="class in javax.mail">MessagingException</a></code></dd></dl>
+</li>
+</ul>
+<a name="addStatusListener(gnu.mail.treeutil.StatusListener)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>addStatusListener</h4>
+<pre>public&nbsp;void&nbsp;addStatusListener(gnu.mail.treeutil.StatusListener&nbsp;l)</pre>
+<div class="block">Adds a status listener to this store.
  The listener will be informed of state changes during potentially
- lengthy procedures(opening and closing mboxes).
-</div><dl class="member detail specified by list"><dt class="member detail specified by header"><b>Specified by:</b></dt><dd class="member detail specified by item"><a href="../../../../gnu/mail/treeutil/StatusSource.html#addStatusListener(gnu.mail.treeutil.StatusListener)">addStatusListener</a> in interface gnu.mail.treeutil.StatusSource</dd></dl><div class="parameter"><dl><dt class="header"><b>Parameters:</b></dt><dd class="item"><code class="name">l</code><span class="separator"> - </span><span class="description">the status listener</span></dd></dl></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"><dl class="tag list"><dt class="tag section header"><b>See Also:</b></dt><dd><a href="../../../../gnu/mail/providers/maildir/MaildirStore.html#removeStatusListener(gnu.mail.treeutil.StatusListener)"><code>removeStatusListener(StatusListener)</code></a></dd></dl></div><div class="taglet"></div><div class="taglet"></div></blockquote></div><hr/><a name="getDefaultFolder()" id="getDefaultFolder()"/><div class="member detail outer"><h3 class="member detail name">getDefaultFolder</h3><pre class="member detail synopsis">public <a href="../../../../javax/mail/Folder.html" title="Class in javax.mail">Folder</a> getDefaultFolder()
-            throws <a href="../../../../javax/mail/MessagingException.html" title="Class in javax.mail">MessagingException</a></pre><blockquote class="member detail name"><div class="member detail description"> Returns the default folder.
-</div><dl class="member detail overridden list"><dt class="member detail overridden header"><b>Overrides:</b></dt><dd class="member detail overridden item"><a href="../../../../javax/mail/Store.html#getDefaultFolder()">getDefaultFolder</a> in interface <a href="../../../../javax/mail/Store.html" title="Class in javax.mail">Store</a></dd></dl><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div></blockquote></div><hr/><a name="getFolder(String)" id="getFolder(String)"/><div class="member detail outer"><h3 class="member detail name">getFolder</h3><pre class="member detail synopsis">public <a href="../../../../javax/mail/Folder.html" title="Class in javax.mail">Folder</a> getFolder(String filename)
-            throws <a href="../../../../javax/mail/MessagingException.html" title="Class in javax.mail">MessagingException</a></pre><blockquote class="member detail name"><div class="member detail description"> Returns the folder with the specified filename.
-</div><dl class="member detail overridden list"><dt class="member detail overridden header"><b>Overrides:</b></dt><dd class="member detail overridden item"><a href="../../../../javax/mail/Store.html#getFolder(String)">getFolder</a> in interface <a href="../../../../javax/mail/Store.html" title="Class in javax.mail">Store</a></dd></dl><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div></blockquote></div><hr/><a name="getFolder(javax.mail.URLName)" id="getFolder(javax.mail.URLName)"/><div class="member detail outer"><h3 class="member detail name">getFolder</h3><pre class="member detail synopsis">public <a href="../../../../javax/mail/Folder.html" title="Class in javax.mail">Folder</a> getFolder(<a href="../../../../javax/mail/URLName.html" title="Class in javax.mail">URLName</a> urlname)
-            throws <a href="../../../../javax/mail/MessagingException.html" title="Class in javax.mail">MessagingException</a></pre><blockquote class="member detail name"><div class="member detail description"> Returns the folder specified by the filename of the URLName.
-</div><dl class="member detail overridden list"><dt class="member detail overridden header"><b>Overrides:</b></dt><dd class="member detail overridden item"><a href="../../../../javax/mail/Store.html#getFolder(javax.mail.URLName)">getFolder</a> in interface <a href="../../../../javax/mail/Store.html" title="Class in javax.mail">Store</a></dd></dl><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div></blockquote></div><hr/><a name="processStatusEvent(gnu.mail.treeutil.StatusEvent)" id="processStatusEvent(gnu.mail.treeutil.StatusEvent)"/><div class="member detail outer"><h3 class="member detail name">processStatusEvent</h3><pre class="member detail synopsis">protected void processStatusEvent(gnu.mail.treeutil.StatusEvent event)</pre><blockquote class="member detail name"><div class="member detail description"> Processes a status event.
- This dispatches the event to all the registered listeners.
-</div><div class="parameter"><dl><dt class="header"><b>Parameters:</b></dt><dd class="item"><code class="name">event</code><span class="separator"> - </span><span class="description">the status event</span></dd></dl></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div></blockquote></div><hr/><a name="protocolConnect(String,int,String,String)" id="protocolConnect(String,int,String,String)"/><div class="member detail outer"><h3 class="member detail name">protocolConnect</h3><pre class="member detail synopsis">protected boolean protocolConnect(String host,
-                                  int port,
-                                  String username,
-                                  String password)
-            throws <a href="../../../../javax/mail/MessagingException.html" title="Class in javax.mail">MessagingException</a></pre><blockquote class="member detail name"><div class="member detail description"> There isn't a protocol to implement, so this method just returns.
-</div><dl class="member detail overridden list"><dt class="member detail overridden header"><b>Overrides:</b></dt><dd class="member detail overridden item"><a href="../../../../javax/mail/Service.html#protocolConnect(String,int,String,String)">protocolConnect</a> in interface <a href="../../../../javax/mail/Service.html" title="Class in javax.mail">Service</a></dd></dl><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div></blockquote></div><hr/><a name="removeStatusListener(gnu.mail.treeutil.StatusListener)" id="removeStatusListener(gnu.mail.treeutil.StatusListener)"/><div class="member detail outer"><h3 class="member detail name">removeStatusListener</h3><pre class="member detail synopsis">public void removeStatusListener(gnu.mail.treeutil.StatusListener l)</pre><blockquote class="member detail name"><div class="member detail description"> Removes a status listener from this store.
-</div><dl class="member detail specified by list"><dt class="member detail specified by header"><b>Specified by:</b></dt><dd class="member detail specified by item"><a href="../../../../gnu/mail/treeutil/StatusSource.html#removeStatusListener(gnu.mail.treeutil.StatusListener)">removeStatusListener</a> in interface gnu.mail.treeutil.StatusSource</dd></dl><div class="parameter"><dl><dt class="header"><b>Parameters:</b></dt><dd class="item"><code class="name">l</code><span class="separator"> - </span><span class="description">the status listener</span></dd></dl></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"><dl class="tag list"><dt class="tag section header"><b>See Also:</b></dt><dd><a href="../../../../gnu/mail/providers/maildir/MaildirStore.html#addStatusListener(gnu.mail.treeutil.StatusListener)"><code>addStatusListener(StatusListener)</code></a></dd></dl></div><div class="taglet"></div><div class="taglet"></div></blockquote></div></div><p class="navbar bottom spacer"> </p><table class="navbar div bottom"><tr><td><div class="navbar div top"><span class="navbar item enabled"><a href="../../../../overview-summary.html">Overview</a></span> <span class="navbar item enabled"><a href="package-summary.html">Package</a></span> <span class="navbar item enabled"><a href="tree.html">Tree</a></span> <span class="navbar item enabled"><a href="../../../../alphaindex.html">Index</a></span> <span class="navbar item enabled"><a href="../../../../deprecated.html">Deprecated</a></span> <span class="navbar item enabled"><a href="../../../../about.html">About</a></span></div></td></tr></table></body></html>
+ lengthy procedures(opening and closing mboxes).</div>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code>addStatusListener</code>&nbsp;in interface&nbsp;<code>gnu.mail.treeutil.StatusSource</code></dd>
+<dt><span class="strong">Parameters:</span></dt><dd><code>l</code> - the status listener</dd><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../gnu/mail/providers/maildir/MaildirStore.html#removeStatusListener(gnu.mail.treeutil.StatusListener)"><code>removeStatusListener(gnu.mail.treeutil.StatusListener)</code></a></dd></dl>
+</li>
+</ul>
+<a name="removeStatusListener(gnu.mail.treeutil.StatusListener)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>removeStatusListener</h4>
+<pre>public&nbsp;void&nbsp;removeStatusListener(gnu.mail.treeutil.StatusListener&nbsp;l)</pre>
+<div class="block">Removes a status listener from this store.</div>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code>removeStatusListener</code>&nbsp;in interface&nbsp;<code>gnu.mail.treeutil.StatusSource</code></dd>
+<dt><span class="strong">Parameters:</span></dt><dd><code>l</code> - the status listener</dd><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../gnu/mail/providers/maildir/MaildirStore.html#addStatusListener(gnu.mail.treeutil.StatusListener)"><code>addStatusListener(gnu.mail.treeutil.StatusListener)</code></a></dd></dl>
+</li>
+</ul>
+<a name="processStatusEvent(gnu.mail.treeutil.StatusEvent)">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>processStatusEvent</h4>
+<pre>protected&nbsp;void&nbsp;processStatusEvent(gnu.mail.treeutil.StatusEvent&nbsp;event)</pre>
+<div class="block">Processes a status event.
+ This dispatches the event to all the registered listeners.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>event</code> - the status event</dd></dl>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<!-- ========= END OF CLASS DATA ========= -->
+<!-- ======= START OF BOTTOM NAVBAR ====== -->
+<div class="bottomNav"><a name="navbar_bottom">
+<!--   -->
+</a><a href="#skip-navbar_bottom" title="Skip navigation links"></a><a name="navbar_bottom_firstrow">
+<!--   -->
+</a>
+<ul class="navList" title="Navigation">
+<li><a href="../../../../overview-summary.html">Overview</a></li>
+<li><a href="package-summary.html">Package</a></li>
+<li class="navBarCell1Rev">Class</li>
+<li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../deprecated-list.html">Deprecated</a></li>
+<li><a href="../../../../index-all.html">Index</a></li>
+<li><a href="../../../../help-doc.html">Help</a></li>
+</ul>
+</div>
+<div class="subNav">
+<ul class="navList">
+<li><a href="../../../../gnu/mail/providers/maildir/MaildirMessage.html" title="class in gnu.mail.providers.maildir"><span class="strong">Prev Class</span></a></li>
+<li>Next Class</li>
+</ul>
+<ul class="navList">
+<li><a href="../../../../index.html?gnu/mail/providers/maildir/MaildirStore.html" target="_top">Frames</a></li>
+<li><a href="MaildirStore.html" target="_top">No Frames</a></li>
+</ul>
+<ul class="navList" id="allclasses_navbar_bottom">
+<li><a href="../../../../allclasses-noframe.html">All Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_bottom");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+</div>
+<div>
+<ul class="subNavList">
+<li>Summary:&nbsp;</li>
+<li>Nested&nbsp;|&nbsp;</li>
+<li><a href="#fields_inherited_from_class_javax.mail.Service">Field</a>&nbsp;|&nbsp;</li>
+<li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method_summary">Method</a></li>
+</ul>
+<ul class="subNavList">
+<li>Detail:&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method_detail">Method</a></li>
+</ul>
+</div>
+<a name="skip-navbar_bottom">
+<!--   -->
+</a></div>
+<!-- ======== END OF BOTTOM NAVBAR ======= -->
+</body>
+</html>

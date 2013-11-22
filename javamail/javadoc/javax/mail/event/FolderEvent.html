@@ -1,22 +1,495 @@
-<?xml version="1.0" encoding="MacRoman"?>
-<!DOCTYPE html PUBLIC "-//gnu.org///DTD XHTML 1.1 plus Target 1.0//EN" "../../../resources/xhtml11-target10.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head><title>FolderEvent</title><script src="../../../resources/gjdoc.js" type="text/javascript"><!-- this comment required for konqueror 3.2.2 --></script><meta http-equiv="Content-Type" content="text/html; charset=MacRoman"/><meta name="generator" content="GNU Gjdoc Standard Doclet"/><meta name="keywords" content="javax.mail.event.FolderEvent class"/><meta name="keywords" content="CREATED"/><meta name="keywords" content="DELETED"/><meta name="keywords" content="RENAMED"/><meta name="keywords" content="type"/><meta name="keywords" content="folder"/><meta name="keywords" content="newFolder"/><meta name="keywords" content="getType()"/><meta name="keywords" content="getFolder()"/><meta name="keywords" content="getNewFolder()"/><meta name="keywords" content="dispatch()"/><link rel="stylesheet" type="text/css" href="../../../resources/gjdochtml-clean-layout.css" title="GNU Clean"/><link rel="stylesheet" type="text/css" href="../../../resources/gjdochtml-clean-color1.css" title="GNU Clean"/></head><body class="content class" onload="if(parent.contentPageLoaded)parent.contentPageLoaded(document.title)"><table class="navbar div top"><tr><td class="navbar div top"><div class="navbar div top"><span class="navbar item enabled"><a href="../../../overview-summary.html">Overview</a></span> <span class="navbar item enabled"><a href="package-summary.html">Package</a></span> <span class="navbar item enabled"><a href="tree.html">Tree</a></span> <span class="navbar item enabled"><a href="../../../alphaindex.html">Index</a></span> <span class="navbar item enabled"><a href="../../../deprecated.html">Deprecated</a></span> <span class="navbar item enabled"><a href="../../../about.html">About</a></span></div></td></tr><tr><td class="navi"><a href="../../../javax/mail/event/FolderAdapter.html">Prev Class</a> | <a href="../../../javax/mail/event/FolderListener.html">Next Class</a></td><td class="navi"><a href="../../../index.html" title="Show in a frameset" target="_top">Frames</a> | <a href="FolderEvent.html" title="Show without frames" target="_top">No Frames</a> </td></tr><tr><td class="navi">Summary: Nested | <a href="#summary-fields">Field</a> | <a href="#summary-methods">Method</a> | <a href="#summary-constructors">Constr</a></td><td class="navi">Detail: Nested | <a href="#detail-fields">Field</a> | <a href="#detail-methods">Method</a> | <a href="#detail-constructors">Constr</a></td></tr></table><div class="class title outer"><h3 class="class title-package">javax.mail.event</h3><h1 class="class title-class">Class FolderEvent</h1></div><div class="class inheritance-tree"><ul class="inheritance 0"><li class="inheritance 0"><code>EventObject</code></li><li><ul class="inheritance 1"><li class="inheritance 1"><code><a href="../../../javax/mail/event/MailEvent.html">javax.mail.event.MailEvent</a></code></li><li><ul class="inheritance 2"><li class="inheritance 2"><code>javax.mail.event.FolderEvent</code></li><li></li></ul></li></ul></li></ul></div><hr/><div class="class synopsis outer"><div class="class synopsis declaration"><code>public class <b class="class synopsis name">FolderEvent</b></code></div><div class="class synopsis superclass"><code>extends <a href="../../../javax/mail/event/MailEvent.html" title="Class in javax.mail.event">MailEvent</a></code></div></div><hr/><div class="class description"> A folder event.
-</div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><a name="summary-fields" id="summary-fields"/><dl class="table container"><dd><table class="class summary" border="1" width="100%"><tr class="table header"><td colspan="2"><h2 class="table header">Field Summary</h2></td></tr><tr><td class="left" valign="top"><code class="synopsis">static int</code></td><td class="right"><dl class="list"><dt class="synopsis"><code><a href="#CREATED">CREATED</a></code></dt><dd class="description"> The folder was created.</dd></dl></td></tr><tr><td class="left" valign="top"><code class="synopsis">static int</code></td><td class="right"><dl class="list"><dt class="synopsis"><code><a href="#DELETED">DELETED</a></code></dt><dd class="description"> The folder was deleted.</dd></dl></td></tr><tr><td class="left" valign="top"><code class="synopsis">static int</code></td><td class="right"><dl class="list"><dt class="synopsis"><code><a href="#RENAMED">RENAMED</a></code></dt><dd class="description"> The folder was renamed.</dd></dl></td></tr><tr><td class="left" valign="top"><code class="synopsis">protected  <a href="../../../javax/mail/Folder.html" title="Class in javax.mail">Folder</a></code></td><td class="right"><dl class="list"><dt class="synopsis"><code><a href="#folder">folder</a></code></dt><dd class="description"> The folder the event occurred on.</dd></dl></td></tr><tr><td class="left" valign="top"><code class="synopsis">protected  <a href="../../../javax/mail/Folder.html" title="Class in javax.mail">Folder</a></code></td><td class="right"><dl class="list"><dt class="synopsis"><code><a href="#newFolder">newFolder</a></code></dt><dd class="description"> The folder representing the new name, in the case of a RENAMED event.</dd></dl></td></tr><tr><td class="left" valign="top"><code class="synopsis">protected  int</code></td><td class="right"><dl class="list"><dt class="synopsis"><code><a href="#type">type</a></code></dt><dd class="description"> The event type.</dd></dl></td></tr></table></dd></dl><a name="summary-constructors" id="summary-constructors"/><dl class="table container"><dd><table class="class summary" border="1" width="100%"><tr class="table header"><td colspan="2"><h2 class="table header">Constructor Summary</h2></td></tr><tr><td class="right"><dl class="list"><dt class="synopsis"><code><a href="#FolderEvent(Object,javax.mail.Folder,int)">FolderEvent</a>(Object&nbsp;source, <a href="../../../javax/mail/Folder.html" title="Class in javax.mail">Folder</a>&nbsp;folder, int&nbsp;type)</code></dt><dd class="description"> Constructor.</dd></dl></td></tr><tr><td class="right"><dl class="list"><dt class="synopsis"><code><a href="#FolderEvent(Object,javax.mail.Folder,javax.mail.Folder,int)">FolderEvent</a>(Object&nbsp;source, <a href="../../../javax/mail/Folder.html" title="Class in javax.mail">Folder</a>&nbsp;oldFolder, <a href="../../../javax/mail/Folder.html" title="Class in javax.mail">Folder</a>&nbsp;newFolder, int&nbsp;type)</code></dt><dd class="description"> Constructor for RENAMED events.</dd></dl></td></tr></table></dd></dl><a name="summary-methods" id="summary-methods"/><dl class="table container"><dd><table class="class summary" border="1" width="100%"><tr class="table header"><td colspan="2"><h2 class="table header">Method Summary</h2></td></tr><tr><td class="left" valign="top"><code class="synopsis"> void</code></td><td class="right"><dl class="list"><dt class="synopsis"><code><a href="#dispatch(Object)">dispatch</a>(Object&nbsp;listener)</code></dt><dd class="description"> Invokes the appropriate listener method.</dd></dl></td></tr><tr><td class="left" valign="top"><code class="synopsis"> <a href="../../../javax/mail/Folder.html" title="Class in javax.mail">Folder</a></code></td><td class="right"><dl class="list"><dt class="synopsis"><code><a href="#getFolder()">getFolder</a>()</code></dt><dd class="description"> Returns the affected folder.</dd></dl></td></tr><tr><td class="left" valign="top"><code class="synopsis"> <a href="../../../javax/mail/Folder.html" title="Class in javax.mail">Folder</a></code></td><td class="right"><dl class="list"><dt class="synopsis"><code><a href="#getNewFolder()">getNewFolder</a>()</code></dt><dd class="description"> Returns the folder representing the new name, in the case of a RENAMED
- event.</dd></dl></td></tr><tr><td class="left" valign="top"><code class="synopsis"> int</code></td><td class="right"><dl class="list"><dt class="synopsis"><code><a href="#getType()">getType</a>()</code></dt><dd class="description"> Returns the type of this event.</dd></dl></td></tr></table></dd></dl><dl class="table container"><dd><table class="class summary" border="1" width="100%"><tr class="table sub header"><td colspan="2"><h3 class="table sub header">Methods inherited from class javax.mail.event.<a href="../../../javax/mail/event/MailEvent.html" title="Class in javax.mail.event">MailEvent</a></h3></td></tr><tr><td class="inherited"><a href="../../../javax/mail/event/MailEvent.html#dispatch(Object)" title="dispatch(Object)"><code class="member">dispatch</code></a></td></tr></table></dd></dl><a name="detail-fields" id="detail-fields"/><h2 class="section header">Field Details</h2><div class="section"><a name="CREATED" id="CREATED"/><div class="member detail outer"><h3 class="member detail name">CREATED</h3><pre class="member detail synopsis">public static final int CREATED</pre><blockquote class="member detail name"><div class="member detail description"> The folder was created.
-</div><div class="member detail thrown list"><dl><dt class="member detail thrown header"><b>Field Value:</b></dt><dd class="member detail thrown item">1</dd></dl></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div></blockquote></div><hr/><a name="DELETED" id="DELETED"/><div class="member detail outer"><h3 class="member detail name">DELETED</h3><pre class="member detail synopsis">public static final int DELETED</pre><blockquote class="member detail name"><div class="member detail description"> The folder was deleted.
-</div><div class="member detail thrown list"><dl><dt class="member detail thrown header"><b>Field Value:</b></dt><dd class="member detail thrown item">2</dd></dl></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div></blockquote></div><hr/><a name="RENAMED" id="RENAMED"/><div class="member detail outer"><h3 class="member detail name">RENAMED</h3><pre class="member detail synopsis">public static final int RENAMED</pre><blockquote class="member detail name"><div class="member detail description"> The folder was renamed.
-</div><div class="member detail thrown list"><dl><dt class="member detail thrown header"><b>Field Value:</b></dt><dd class="member detail thrown item">3</dd></dl></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div></blockquote></div><hr/><a name="folder" id="folder"/><div class="member detail outer"><h3 class="member detail name">folder</h3><pre class="member detail synopsis">protected <a href="../../../javax/mail/Folder.html" title="Class in javax.mail">Folder</a> folder</pre><blockquote class="member detail name"><div class="member detail description"> The folder the event occurred on.
-</div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div></blockquote></div><hr/><a name="newFolder" id="newFolder"/><div class="member detail outer"><h3 class="member detail name">newFolder</h3><pre class="member detail synopsis">protected <a href="../../../javax/mail/Folder.html" title="Class in javax.mail">Folder</a> newFolder</pre><blockquote class="member detail name"><div class="member detail description"> The folder representing the new name, in the case of a RENAMED event.
-</div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div></blockquote></div><hr/><a name="type" id="type"/><div class="member detail outer"><h3 class="member detail name">type</h3><pre class="member detail synopsis">protected int type</pre><blockquote class="member detail name"><div class="member detail description"> The event type.
-</div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div></blockquote></div></div><a name="detail-constructors" id="detail-constructors"/><h2 class="section header">Constructor Details</h2><div class="section"><a name="FolderEvent(Object,javax.mail.Folder,int)" id="FolderEvent(Object,javax.mail.Folder,int)"/><div class="member detail outer"><h3 class="member detail name">FolderEvent</h3><pre class="member detail synopsis">public FolderEvent(Object source,
-                   <a href="../../../javax/mail/Folder.html" title="Class in javax.mail">Folder</a> folder,
-                   int type)</pre><blockquote class="member detail name"><div class="member detail description"> Constructor.
-</div><div class="parameter"><dl><dt class="header"><b>Parameters:</b></dt><dd class="item"><code class="name">source</code><span class="separator"> - </span><span class="description">the source</span></dd><dd class="item"><code class="name">folder</code><span class="separator"> - </span><span class="description">the affected folder</span></dd><dd class="item"><code class="name">type</code><span class="separator"> - </span><span class="description">the event type (CREATED or DELETED)</span></dd></dl></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div></blockquote></div><hr/><a name="FolderEvent(Object,javax.mail.Folder,javax.mail.Folder,int)" id="FolderEvent(Object,javax.mail.Folder,javax.mail.Folder,int)"/><div class="member detail outer"><h3 class="member detail name">FolderEvent</h3><pre class="member detail synopsis">public FolderEvent(Object source,
-                   <a href="../../../javax/mail/Folder.html" title="Class in javax.mail">Folder</a> oldFolder,
-                   <a href="../../../javax/mail/Folder.html" title="Class in javax.mail">Folder</a> newFolder,
-                   int type)</pre><blockquote class="member detail name"><div class="member detail description"> Constructor for RENAMED events.
-</div><div class="parameter"><dl><dt class="header"><b>Parameters:</b></dt><dd class="item"><code class="name">source</code><span class="separator"> - </span><span class="description">the source</span></dd><dd class="item"><code class="name">oldFolder</code><span class="separator"> - </span><span class="description">the folder that is renamed</span></dd><dd class="item"><code class="name">newFolder</code><span class="separator"> - </span><span class="description">the folder that represents the new name</span></dd><dd class="item"><code class="name">type</code><span class="separator"> - </span><span class="description">the event type (RENAMED)</span></dd></dl></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div></blockquote></div></div><a name="detail-methods" id="detail-methods"/><h2 class="section header">Method Details</h2><div class="section"><a name="dispatch(Object)" id="dispatch(Object)"/><div class="member detail outer"><h3 class="member detail name">dispatch</h3><pre class="member detail synopsis">public void dispatch(Object listener)</pre><blockquote class="member detail name"><div class="member detail description"> Invokes the appropriate listener method.
-</div><dl class="member detail overridden list"><dt class="member detail overridden header"><b>Overrides:</b></dt><dd class="member detail overridden item"><a href="../../../javax/mail/event/MailEvent.html#dispatch(Object)">dispatch</a> in interface <a href="../../../javax/mail/event/MailEvent.html" title="Class in javax.mail.event">MailEvent</a></dd></dl><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div></blockquote></div><hr/><a name="getFolder()" id="getFolder()"/><div class="member detail outer"><h3 class="member detail name">getFolder</h3><pre class="member detail synopsis">public <a href="../../../javax/mail/Folder.html" title="Class in javax.mail">Folder</a> getFolder()</pre><blockquote class="member detail name"><div class="member detail description"> Returns the affected folder.
-</div><div class="taglet"></div><div class="taglet"></div><div class="taglet"><dl class="tag list"><dt class="tag section header"><b>See Also:</b></dt><dd><a href="../../../javax/mail/event/FolderEvent.html#getNewFolder()"><code>getNewFolder()</code></a></dd></dl></div><div class="taglet"></div><div class="taglet"></div></blockquote></div><hr/><a name="getNewFolder()" id="getNewFolder()"/><div class="member detail outer"><h3 class="member detail name">getNewFolder</h3><pre class="member detail synopsis">public <a href="../../../javax/mail/Folder.html" title="Class in javax.mail">Folder</a> getNewFolder()</pre><blockquote class="member detail name"><div class="member detail description"> Returns the folder representing the new name, in the case of a RENAMED
- event.
-</div><div class="taglet"></div><div class="taglet"></div><div class="taglet"><dl class="tag list"><dt class="tag section header"><b>See Also:</b></dt><dd><a href="../../../javax/mail/event/FolderEvent.html#getFolder()"><code>getFolder()</code></a></dd></dl></div><div class="taglet"></div><div class="taglet"></div></blockquote></div><hr/><a name="getType()" id="getType()"/><div class="member detail outer"><h3 class="member detail name">getType</h3><pre class="member detail synopsis">public int getType()</pre><blockquote class="member detail name"><div class="member detail description"> Returns the type of this event.
-</div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div></blockquote></div></div><p class="navbar bottom spacer"> </p><table class="navbar div bottom"><tr><td><div class="navbar div top"><span class="navbar item enabled"><a href="../../../overview-summary.html">Overview</a></span> <span class="navbar item enabled"><a href="package-summary.html">Package</a></span> <span class="navbar item enabled"><a href="tree.html">Tree</a></span> <span class="navbar item enabled"><a href="../../../alphaindex.html">Index</a></span> <span class="navbar item enabled"><a href="../../../deprecated.html">Deprecated</a></span> <span class="navbar item enabled"><a href="../../../about.html">About</a></span></div></td></tr></table></body></html>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!-- NewPage -->
+<html lang="en">
+<head>
+<!-- Generated by javadoc (version 1.7.0_25) on Fri Nov 22 19:03:11 GMT 2013 -->
+<title>FolderEvent (GNU JavaMail API documentation)</title>
+<meta name="date" content="2013-11-22">
+<link rel="stylesheet" type="text/css" href="../../../stylesheet.css" title="Style">
+</head>
+<body>
+<script type="text/javascript"><!--
+    if (location.href.indexOf('is-external=true') == -1) {
+        parent.document.title="FolderEvent (GNU JavaMail API documentation)";
+    }
+//-->
+</script>
+<noscript>
+<div>JavaScript is disabled on your browser.</div>
+</noscript>
+<!-- ========= START OF TOP NAVBAR ======= -->
+<div class="topNav"><a name="navbar_top">
+<!--   -->
+</a><a href="#skip-navbar_top" title="Skip navigation links"></a><a name="navbar_top_firstrow">
+<!--   -->
+</a>
+<ul class="navList" title="Navigation">
+<li><a href="../../../overview-summary.html">Overview</a></li>
+<li><a href="package-summary.html">Package</a></li>
+<li class="navBarCell1Rev">Class</li>
+<li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../deprecated-list.html">Deprecated</a></li>
+<li><a href="../../../index-all.html">Index</a></li>
+<li><a href="../../../help-doc.html">Help</a></li>
+</ul>
+</div>
+<div class="subNav">
+<ul class="navList">
+<li><a href="../../../javax/mail/event/FolderAdapter.html" title="class in javax.mail.event"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../../javax/mail/event/FolderListener.html" title="interface in javax.mail.event"><span class="strong">Next Class</span></a></li>
+</ul>
+<ul class="navList">
+<li><a href="../../../index.html?javax/mail/event/FolderEvent.html" target="_top">Frames</a></li>
+<li><a href="FolderEvent.html" target="_top">No Frames</a></li>
+</ul>
+<ul class="navList" id="allclasses_navbar_top">
+<li><a href="../../../allclasses-noframe.html">All Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_top");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+</div>
+<div>
+<ul class="subNavList">
+<li>Summary:&nbsp;</li>
+<li>Nested&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
+<li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method_summary">Method</a></li>
+</ul>
+<ul class="subNavList">
+<li>Detail:&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
+<li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method_detail">Method</a></li>
+</ul>
+</div>
+<a name="skip-navbar_top">
+<!--   -->
+</a></div>
+<!-- ========= END OF TOP NAVBAR ========= -->
+<!-- ======== START OF CLASS DATA ======== -->
+<div class="header">
+<div class="subTitle">javax.mail.event</div>
+<h2 title="Class FolderEvent" class="title">Class FolderEvent</h2>
+</div>
+<div class="contentContainer">
+<ul class="inheritance">
+<li>java.lang.Object</li>
+<li>
+<ul class="inheritance">
+<li>java.util.EventObject</li>
+<li>
+<ul class="inheritance">
+<li><a href="../../../javax/mail/event/MailEvent.html" title="class in javax.mail.event">javax.mail.event.MailEvent</a></li>
+<li>
+<ul class="inheritance">
+<li>javax.mail.event.FolderEvent</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<div class="description">
+<ul class="blockList">
+<li class="blockList">
+<dl>
+<dt>All Implemented Interfaces:</dt>
+<dd>java.io.Serializable</dd>
+</dl>
+<hr>
+<br>
+<pre>public class <span class="strong">FolderEvent</span>
+extends <a href="../../../javax/mail/event/MailEvent.html" title="class in javax.mail.event">MailEvent</a></pre>
+<div class="block">A folder event.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../serialized-form.html#javax.mail.event.FolderEvent">Serialized Form</a></dd></dl>
+</li>
+</ul>
+</div>
+<div class="summary">
+<ul class="blockList">
+<li class="blockList">
+<!-- =========== FIELD SUMMARY =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_summary">
+<!--   -->
+</a>
+<h3>Field Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Field Summary table, listing fields, and an explanation">
+<caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><strong><a href="../../../javax/mail/event/FolderEvent.html#CREATED">CREATED</a></strong></code>
+<div class="block">The folder was created.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><strong><a href="../../../javax/mail/event/FolderEvent.html#DELETED">DELETED</a></strong></code>
+<div class="block">The folder was deleted.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>protected <a href="../../../javax/mail/Folder.html" title="class in javax.mail">Folder</a></code></td>
+<td class="colLast"><code><strong><a href="../../../javax/mail/event/FolderEvent.html#folder">folder</a></strong></code>
+<div class="block">The folder the event occurred on.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>protected <a href="../../../javax/mail/Folder.html" title="class in javax.mail">Folder</a></code></td>
+<td class="colLast"><code><strong><a href="../../../javax/mail/event/FolderEvent.html#newFolder">newFolder</a></strong></code>
+<div class="block">The folder representing the new name, in the case of a RENAMED event.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><strong><a href="../../../javax/mail/event/FolderEvent.html#RENAMED">RENAMED</a></strong></code>
+<div class="block">The folder was renamed.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>protected int</code></td>
+<td class="colLast"><code><strong><a href="../../../javax/mail/event/FolderEvent.html#type">type</a></strong></code>
+<div class="block">The event type.</div>
+</td>
+</tr>
+</table>
+<ul class="blockList">
+<li class="blockList"><a name="fields_inherited_from_class_java.util.EventObject">
+<!--   -->
+</a>
+<h3>Fields inherited from class&nbsp;java.util.EventObject</h3>
+<code>source</code></li>
+</ul>
+</li>
+</ul>
+<!-- ======== CONSTRUCTOR SUMMARY ======== -->
+<ul class="blockList">
+<li class="blockList"><a name="constructor_summary">
+<!--   -->
+</a>
+<h3>Constructor Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Constructor Summary table, listing constructors, and an explanation">
+<caption><span>Constructors</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colOne" scope="col">Constructor and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colOne"><code><strong><a href="../../../javax/mail/event/FolderEvent.html#FolderEvent(java.lang.Object, javax.mail.Folder, javax.mail.Folder, int)">FolderEvent</a></strong>(java.lang.Object&nbsp;source,
+           <a href="../../../javax/mail/Folder.html" title="class in javax.mail">Folder</a>&nbsp;oldFolder,
+           <a href="../../../javax/mail/Folder.html" title="class in javax.mail">Folder</a>&nbsp;newFolder,
+           int&nbsp;type)</code>
+<div class="block">Constructor for RENAMED events.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colOne"><code><strong><a href="../../../javax/mail/event/FolderEvent.html#FolderEvent(java.lang.Object, javax.mail.Folder, int)">FolderEvent</a></strong>(java.lang.Object&nbsp;source,
+           <a href="../../../javax/mail/Folder.html" title="class in javax.mail">Folder</a>&nbsp;folder,
+           int&nbsp;type)</code>
+<div class="block">Constructor.</div>
+</td>
+</tr>
+</table>
+</li>
+</ul>
+<!-- ========== METHOD SUMMARY =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="method_summary">
+<!--   -->
+</a>
+<h3>Method Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Method Summary table, listing methods, and an explanation">
+<caption><span>Methods</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../javax/mail/event/FolderEvent.html#dispatch(java.lang.Object)">dispatch</a></strong>(java.lang.Object&nbsp;listener)</code>
+<div class="block">Invokes the appropriate listener method.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../javax/mail/Folder.html" title="class in javax.mail">Folder</a></code></td>
+<td class="colLast"><code><strong><a href="../../../javax/mail/event/FolderEvent.html#getFolder()">getFolder</a></strong>()</code>
+<div class="block">Returns the affected folder.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../javax/mail/Folder.html" title="class in javax.mail">Folder</a></code></td>
+<td class="colLast"><code><strong><a href="../../../javax/mail/event/FolderEvent.html#getNewFolder()">getNewFolder</a></strong>()</code>
+<div class="block">Returns the folder representing the new name, in the case of a RENAMED
+ event.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>int</code></td>
+<td class="colLast"><code><strong><a href="../../../javax/mail/event/FolderEvent.html#getType()">getType</a></strong>()</code>
+<div class="block">Returns the type of this event.</div>
+</td>
+</tr>
+</table>
+<ul class="blockList">
+<li class="blockList"><a name="methods_inherited_from_class_java.util.EventObject">
+<!--   -->
+</a>
+<h3>Methods inherited from class&nbsp;java.util.EventObject</h3>
+<code>getSource, toString</code></li>
+</ul>
+<ul class="blockList">
+<li class="blockList"><a name="methods_inherited_from_class_java.lang.Object">
+<!--   -->
+</a>
+<h3>Methods inherited from class&nbsp;java.lang.Object</h3>
+<code>clone, equals, finalize, getClass, hashCode, notify, notifyAll, wait, wait, wait</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="details">
+<ul class="blockList">
+<li class="blockList">
+<!-- ============ FIELD DETAIL =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_detail">
+<!--   -->
+</a>
+<h3>Field Detail</h3>
+<a name="CREATED">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>CREATED</h4>
+<pre>public static final&nbsp;int CREATED</pre>
+<div class="block">The folder was created.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../constant-values.html#javax.mail.event.FolderEvent.CREATED">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="DELETED">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>DELETED</h4>
+<pre>public static final&nbsp;int DELETED</pre>
+<div class="block">The folder was deleted.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../constant-values.html#javax.mail.event.FolderEvent.DELETED">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="RENAMED">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>RENAMED</h4>
+<pre>public static final&nbsp;int RENAMED</pre>
+<div class="block">The folder was renamed.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../constant-values.html#javax.mail.event.FolderEvent.RENAMED">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="type">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>type</h4>
+<pre>protected&nbsp;int type</pre>
+<div class="block">The event type.</div>
+</li>
+</ul>
+<a name="folder">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>folder</h4>
+<pre>protected transient&nbsp;<a href="../../../javax/mail/Folder.html" title="class in javax.mail">Folder</a> folder</pre>
+<div class="block">The folder the event occurred on.</div>
+</li>
+</ul>
+<a name="newFolder">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>newFolder</h4>
+<pre>protected transient&nbsp;<a href="../../../javax/mail/Folder.html" title="class in javax.mail">Folder</a> newFolder</pre>
+<div class="block">The folder representing the new name, in the case of a RENAMED event.</div>
+</li>
+</ul>
+</li>
+</ul>
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+<ul class="blockList">
+<li class="blockList"><a name="constructor_detail">
+<!--   -->
+</a>
+<h3>Constructor Detail</h3>
+<a name="FolderEvent(java.lang.Object, javax.mail.Folder, int)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>FolderEvent</h4>
+<pre>public&nbsp;FolderEvent(java.lang.Object&nbsp;source,
+           <a href="../../../javax/mail/Folder.html" title="class in javax.mail">Folder</a>&nbsp;folder,
+           int&nbsp;type)</pre>
+<div class="block">Constructor.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>source</code> - the source</dd><dd><code>folder</code> - the affected folder</dd><dd><code>type</code> - the event type (CREATED or DELETED)</dd></dl>
+</li>
+</ul>
+<a name="FolderEvent(java.lang.Object, javax.mail.Folder, javax.mail.Folder, int)">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>FolderEvent</h4>
+<pre>public&nbsp;FolderEvent(java.lang.Object&nbsp;source,
+           <a href="../../../javax/mail/Folder.html" title="class in javax.mail">Folder</a>&nbsp;oldFolder,
+           <a href="../../../javax/mail/Folder.html" title="class in javax.mail">Folder</a>&nbsp;newFolder,
+           int&nbsp;type)</pre>
+<div class="block">Constructor for RENAMED events.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>source</code> - the source</dd><dd><code>oldFolder</code> - the folder that is renamed</dd><dd><code>newFolder</code> - the folder that represents the new name</dd><dd><code>type</code> - the event type (RENAMED)</dd></dl>
+</li>
+</ul>
+</li>
+</ul>
+<!-- ============ METHOD DETAIL ========== -->
+<ul class="blockList">
+<li class="blockList"><a name="method_detail">
+<!--   -->
+</a>
+<h3>Method Detail</h3>
+<a name="getType()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getType</h4>
+<pre>public&nbsp;int&nbsp;getType()</pre>
+<div class="block">Returns the type of this event.</div>
+</li>
+</ul>
+<a name="getFolder()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getFolder</h4>
+<pre>public&nbsp;<a href="../../../javax/mail/Folder.html" title="class in javax.mail">Folder</a>&nbsp;getFolder()</pre>
+<div class="block">Returns the affected folder.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../javax/mail/event/FolderEvent.html#getNewFolder()"><code>getNewFolder()</code></a></dd></dl>
+</li>
+</ul>
+<a name="getNewFolder()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getNewFolder</h4>
+<pre>public&nbsp;<a href="../../../javax/mail/Folder.html" title="class in javax.mail">Folder</a>&nbsp;getNewFolder()</pre>
+<div class="block">Returns the folder representing the new name, in the case of a RENAMED
+ event.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../javax/mail/event/FolderEvent.html#getFolder()"><code>getFolder()</code></a></dd></dl>
+</li>
+</ul>
+<a name="dispatch(java.lang.Object)">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>dispatch</h4>
+<pre>public&nbsp;void&nbsp;dispatch(java.lang.Object&nbsp;listener)</pre>
+<div class="block">Invokes the appropriate listener method.</div>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code><a href="../../../javax/mail/event/MailEvent.html#dispatch(java.lang.Object)">dispatch</a></code>&nbsp;in class&nbsp;<code><a href="../../../javax/mail/event/MailEvent.html" title="class in javax.mail.event">MailEvent</a></code></dd>
+</dl>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<!-- ========= END OF CLASS DATA ========= -->
+<!-- ======= START OF BOTTOM NAVBAR ====== -->
+<div class="bottomNav"><a name="navbar_bottom">
+<!--   -->
+</a><a href="#skip-navbar_bottom" title="Skip navigation links"></a><a name="navbar_bottom_firstrow">
+<!--   -->
+</a>
+<ul class="navList" title="Navigation">
+<li><a href="../../../overview-summary.html">Overview</a></li>
+<li><a href="package-summary.html">Package</a></li>
+<li class="navBarCell1Rev">Class</li>
+<li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../deprecated-list.html">Deprecated</a></li>
+<li><a href="../../../index-all.html">Index</a></li>
+<li><a href="../../../help-doc.html">Help</a></li>
+</ul>
+</div>
+<div class="subNav">
+<ul class="navList">
+<li><a href="../../../javax/mail/event/FolderAdapter.html" title="class in javax.mail.event"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../../javax/mail/event/FolderListener.html" title="interface in javax.mail.event"><span class="strong">Next Class</span></a></li>
+</ul>
+<ul class="navList">
+<li><a href="../../../index.html?javax/mail/event/FolderEvent.html" target="_top">Frames</a></li>
+<li><a href="FolderEvent.html" target="_top">No Frames</a></li>
+</ul>
+<ul class="navList" id="allclasses_navbar_bottom">
+<li><a href="../../../allclasses-noframe.html">All Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_bottom");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+</div>
+<div>
+<ul class="subNavList">
+<li>Summary:&nbsp;</li>
+<li>Nested&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
+<li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method_summary">Method</a></li>
+</ul>
+<ul class="subNavList">
+<li>Detail:&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
+<li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method_detail">Method</a></li>
+</ul>
+</div>
+<a name="skip-navbar_bottom">
+<!--   -->
+</a></div>
+<!-- ======== END OF BOTTOM NAVBAR ======= -->
+</body>
+</html>

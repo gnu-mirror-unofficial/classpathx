@@ -1,16 +1,444 @@
-<?xml version="1.0" encoding="MacRoman"?>
-<!DOCTYPE html PUBLIC "-//gnu.org///DTD XHTML 1.1 plus Target 1.0//EN" "../../../resources/xhtml11-target10.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head><title>AddressException</title><script src="../../../resources/gjdoc.js" type="text/javascript"><!-- this comment required for konqueror 3.2.2 --></script><meta http-equiv="Content-Type" content="text/html; charset=MacRoman"/><meta name="generator" content="GNU Gjdoc Standard Doclet"/><meta name="keywords" content="javax.mail.internet.AddressException class"/><meta name="keywords" content="ref"/><meta name="keywords" content="pos"/><meta name="keywords" content="getRef()"/><meta name="keywords" content="getPos()"/><meta name="keywords" content="toString()"/><link rel="stylesheet" type="text/css" href="../../../resources/gjdochtml-clean-layout.css" title="GNU Clean"/><link rel="stylesheet" type="text/css" href="../../../resources/gjdochtml-clean-color1.css" title="GNU Clean"/></head><body class="content class" onload="if(parent.contentPageLoaded)parent.contentPageLoaded(document.title)"><table class="navbar div top"><tr><td class="navbar div top"><div class="navbar div top"><span class="navbar item enabled"><a href="../../../overview-summary.html">Overview</a></span> <span class="navbar item enabled"><a href="package-summary.html">Package</a></span> <span class="navbar item enabled"><a href="tree.html">Tree</a></span> <span class="navbar item enabled"><a href="../../../alphaindex.html">Index</a></span> <span class="navbar item enabled"><a href="../../../deprecated.html">Deprecated</a></span> <span class="navbar item enabled"><a href="../../../about.html">About</a></span></div></td></tr><tr><td class="navi">Prev Class | <a href="../../../javax/mail/internet/ContentDisposition.html">Next Class</a></td><td class="navi"><a href="../../../index.html" title="Show in a frameset" target="_top">Frames</a> | <a href="AddressException.html" title="Show without frames" target="_top">No Frames</a> </td></tr><tr><td class="navi">Summary: Nested | <a href="#summary-fields">Field</a> | <a href="#summary-methods">Method</a> | <a href="#summary-constructors">Constr</a></td><td class="navi">Detail: Nested | <a href="#detail-fields">Field</a> | <a href="#detail-methods">Method</a> | <a href="#detail-constructors">Constr</a></td></tr></table><div class="class title outer"><h3 class="class title-package">javax.mail.internet</h3><h1 class="class title-class">Class AddressException</h1></div><div class="class inheritance-tree"><ul class="inheritance 0"><li class="inheritance 0"><code>Exception</code></li><li><ul class="inheritance 1"><li class="inheritance 1"><code><a href="../../../javax/mail/MessagingException.html">javax.mail.MessagingException</a></code></li><li><ul class="inheritance 2"><li class="inheritance 2"><code><a href="../../../javax/mail/internet/ParseException.html">javax.mail.internet.ParseException</a></code></li><li><ul class="inheritance 3"><li class="inheritance 3"><code>javax.mail.internet.AddressException</code></li><li></li></ul></li></ul></li></ul></li></ul></div><hr/><div class="class synopsis outer"><div class="class synopsis declaration"><code>public class <b class="class synopsis name">AddressException</b></code></div><div class="class synopsis superclass"><code>extends <a href="../../../javax/mail/internet/ParseException.html" title="Class in javax.mail.internet">ParseException</a></code></div></div><hr/><div class="class description"> An exception thrown when an incorrectly formatted address is encountered.
-</div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><a name="summary-fields" id="summary-fields"/><dl class="table container"><dd><table class="class summary" border="1" width="100%"><tr class="table header"><td colspan="2"><h2 class="table header">Field Summary</h2></td></tr><tr><td class="left" valign="top"><code class="synopsis">protected  int</code></td><td class="right"><dl class="list"><dt class="synopsis"><code><a href="#pos">pos</a></code></dt><dd class="description"> The index in <code>ref</code> where the error occurred, or -1 if not known.</dd></dl></td></tr><tr><td class="left" valign="top"><code class="synopsis">protected  String</code></td><td class="right"><dl class="list"><dt class="synopsis"><code><a href="#ref">ref</a></code></dt><dd class="description"> The address(es) being parsed.</dd></dl></td></tr></table></dd></dl><a name="summary-constructors" id="summary-constructors"/><dl class="table container"><dd><table class="class summary" border="1" width="100%"><tr class="table header"><td colspan="2"><h2 class="table header">Constructor Summary</h2></td></tr><tr><td class="right"><dl class="list"><dt class="synopsis"><code><a href="#AddressException()">AddressException</a>()</code></dt><dd class="description"> Constructor with no detail message.</dd></dl></td></tr><tr><td class="right"><dl class="list"><dt class="synopsis"><code><a href="#AddressException(String)">AddressException</a>(String&nbsp;s)</code></dt><dd class="description"> Constructor with the specified detail message.</dd></dl></td></tr><tr><td class="right"><dl class="list"><dt class="synopsis"><code><a href="#AddressException(String,String)">AddressException</a>(String&nbsp;s, String&nbsp;ref)</code></dt><dd class="description"> Constructor with the specified detail message and address being parsed.</dd></dl></td></tr><tr><td class="right"><dl class="list"><dt class="synopsis"><code><a href="#AddressException(String,String,int)">AddressException</a>(String&nbsp;s, String&nbsp;ref, int&nbsp;pos)</code></dt><dd class="description"> Constructor with the specified detail message and address being parsed.</dd></dl></td></tr></table></dd></dl><a name="summary-methods" id="summary-methods"/><dl class="table container"><dd><table class="class summary" border="1" width="100%"><tr class="table header"><td colspan="2"><h2 class="table header">Method Summary</h2></td></tr><tr><td class="left" valign="top"><code class="synopsis"> int</code></td><td class="right"><dl class="list"><dt class="synopsis"><code><a href="#getPos()">getPos</a>()</code></dt><dd class="description"> Returns the position within <code>ref</code> where the error was detected,
- or -1 if <code>ref</code> is null.</dd></dl></td></tr><tr><td class="left" valign="top"><code class="synopsis"> String</code></td><td class="right"><dl class="list"><dt class="synopsis"><code><a href="#getRef()">getRef</a>()</code></dt><dd class="description"> Returns the address(es) being parsed when the error was detected.</dd></dl></td></tr><tr><td class="left" valign="top"><code class="synopsis"> String</code></td><td class="right"><dl class="list"><dt class="synopsis"><code><a href="#toString()">toString</a>()</code></dt></dl></td></tr></table></dd></dl><dl class="table container"><dd><table class="class summary" border="1" width="100%"><tr class="table sub header"><td colspan="2"><h3 class="table sub header">Methods inherited from class javax.mail.<a href="../../../javax/mail/MessagingException.html" title="Class in javax.mail">MessagingException</a></h3></td></tr><tr><td class="inherited"><a href="../../../javax/mail/MessagingException.html#getMessage()" title="getMessage()"><code class="member">getMessage</code></a>, <a href="../../../javax/mail/MessagingException.html#getNextException()" title="getNextException()"><code class="member">getNextException</code></a>, <a href="../../../javax/mail/MessagingException.html#printStackTrace(PrintStream)" title="printStackTrace(PrintStream)"><code class="member">printStackTrace</code></a>, <a href="../../../javax/mail/MessagingException.html#printStackTrace(PrintWriter)" title="printStackTrace(PrintWriter)"><code class="member">printStackTrace</code></a>, <a href="../../../javax/mail/MessagingException.html#setNextException(Exception)" title="setNextException(Exception)"><code class="member">setNextException</code></a></td></tr></table></dd></dl><a name="detail-fields" id="detail-fields"/><h2 class="section header">Field Details</h2><div class="section"><a name="pos" id="pos"/><div class="member detail outer"><h3 class="member detail name">pos</h3><pre class="member detail synopsis">protected int pos</pre><blockquote class="member detail name"><div class="member detail description"> The index in <code>ref</code> where the error occurred, or -1 if not known.
-</div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div></blockquote></div><hr/><a name="ref" id="ref"/><div class="member detail outer"><h3 class="member detail name">ref</h3><pre class="member detail synopsis">protected String ref</pre><blockquote class="member detail name"><div class="member detail description"> The address(es) being parsed.
-</div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div></blockquote></div></div><a name="detail-constructors" id="detail-constructors"/><h2 class="section header">Constructor Details</h2><div class="section"><a name="AddressException()" id="AddressException()"/><div class="member detail outer"><h3 class="member detail name">AddressException</h3><pre class="member detail synopsis">public AddressException()</pre><blockquote class="member detail name"><div class="member detail description"> Constructor with no detail message.
-</div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div></blockquote></div><hr/><a name="AddressException(String)" id="AddressException(String)"/><div class="member detail outer"><h3 class="member detail name">AddressException</h3><pre class="member detail synopsis">public AddressException(String s)</pre><blockquote class="member detail name"><div class="member detail description"> Constructor with the specified detail message.
-</div><div class="parameter"><dl><dt class="header"><b>Parameters:</b></dt><dd class="item"><code class="name">s</code><span class="separator"> - </span><span class="description">the detail message</span></dd></dl></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div></blockquote></div><hr/><a name="AddressException(String,String)" id="AddressException(String,String)"/><div class="member detail outer"><h3 class="member detail name">AddressException</h3><pre class="member detail synopsis">public AddressException(String s,
-                        String ref)</pre><blockquote class="member detail name"><div class="member detail description"> Constructor with the specified detail message and address being parsed.
-</div><div class="parameter"><dl><dt class="header"><b>Parameters:</b></dt><dd class="item"><code class="name">s</code><span class="separator"> - </span><span class="description">the detail message</span></dd><dd class="item"><code class="name">ref</code><span class="separator"> - </span><span class="description">the address being parsed</span></dd></dl></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div></blockquote></div><hr/><a name="AddressException(String,String,int)" id="AddressException(String,String,int)"/><div class="member detail outer"><h3 class="member detail name">AddressException</h3><pre class="member detail synopsis">public AddressException(String s,
-                        String ref,
-                        int pos)</pre><blockquote class="member detail name"><div class="member detail description"> Constructor with the specified detail message and address being parsed.
-</div><div class="parameter"><dl><dt class="header"><b>Parameters:</b></dt><dd class="item"><code class="name">s</code><span class="separator"> - </span><span class="description">the detail message</span></dd><dd class="item"><code class="name">ref</code><span class="separator"> - </span><span class="description">the address being parsed</span></dd><dd class="item"><code class="name">pos</code><span class="separator"> - </span><span class="description">the index in <code>ref</code> where the error occurred</span></dd></dl></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div></blockquote></div></div><a name="detail-methods" id="detail-methods"/><h2 class="section header">Method Details</h2><div class="section"><a name="getPos()" id="getPos()"/><div class="member detail outer"><h3 class="member detail name">getPos</h3><pre class="member detail synopsis">public int getPos()</pre><blockquote class="member detail name"><div class="member detail description"> Returns the position within <code>ref</code> where the error was detected,
- or -1 if <code>ref</code> is null.
-</div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div></blockquote></div><hr/><a name="getRef()" id="getRef()"/><div class="member detail outer"><h3 class="member detail name">getRef</h3><pre class="member detail synopsis">public String getRef()</pre><blockquote class="member detail name"><div class="member detail description"> Returns the address(es) being parsed when the error was detected.
-</div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div></blockquote></div><hr/><a name="toString()" id="toString()"/><div class="member detail outer"><h3 class="member detail name">toString</h3><pre class="member detail synopsis">public String toString()</pre><blockquote class="member detail name"><div class="member detail description"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div><div class="taglet"></div></blockquote></div></div><p class="navbar bottom spacer"> </p><table class="navbar div bottom"><tr><td><div class="navbar div top"><span class="navbar item enabled"><a href="../../../overview-summary.html">Overview</a></span> <span class="navbar item enabled"><a href="package-summary.html">Package</a></span> <span class="navbar item enabled"><a href="tree.html">Tree</a></span> <span class="navbar item enabled"><a href="../../../alphaindex.html">Index</a></span> <span class="navbar item enabled"><a href="../../../deprecated.html">Deprecated</a></span> <span class="navbar item enabled"><a href="../../../about.html">About</a></span></div></td></tr></table></body></html>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!-- NewPage -->
+<html lang="en">
+<head>
+<!-- Generated by javadoc (version 1.7.0_25) on Fri Nov 22 19:03:11 GMT 2013 -->
+<title>AddressException (GNU JavaMail API documentation)</title>
+<meta name="date" content="2013-11-22">
+<link rel="stylesheet" type="text/css" href="../../../stylesheet.css" title="Style">
+</head>
+<body>
+<script type="text/javascript"><!--
+    if (location.href.indexOf('is-external=true') == -1) {
+        parent.document.title="AddressException (GNU JavaMail API documentation)";
+    }
+//-->
+</script>
+<noscript>
+<div>JavaScript is disabled on your browser.</div>
+</noscript>
+<!-- ========= START OF TOP NAVBAR ======= -->
+<div class="topNav"><a name="navbar_top">
+<!--   -->
+</a><a href="#skip-navbar_top" title="Skip navigation links"></a><a name="navbar_top_firstrow">
+<!--   -->
+</a>
+<ul class="navList" title="Navigation">
+<li><a href="../../../overview-summary.html">Overview</a></li>
+<li><a href="package-summary.html">Package</a></li>
+<li class="navBarCell1Rev">Class</li>
+<li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../deprecated-list.html">Deprecated</a></li>
+<li><a href="../../../index-all.html">Index</a></li>
+<li><a href="../../../help-doc.html">Help</a></li>
+</ul>
+</div>
+<div class="subNav">
+<ul class="navList">
+<li>Prev Class</li>
+<li><a href="../../../javax/mail/internet/ContentDisposition.html" title="class in javax.mail.internet"><span class="strong">Next Class</span></a></li>
+</ul>
+<ul class="navList">
+<li><a href="../../../index.html?javax/mail/internet/AddressException.html" target="_top">Frames</a></li>
+<li><a href="AddressException.html" target="_top">No Frames</a></li>
+</ul>
+<ul class="navList" id="allclasses_navbar_top">
+<li><a href="../../../allclasses-noframe.html">All Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_top");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+</div>
+<div>
+<ul class="subNavList">
+<li>Summary:&nbsp;</li>
+<li>Nested&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
+<li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method_summary">Method</a></li>
+</ul>
+<ul class="subNavList">
+<li>Detail:&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
+<li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method_detail">Method</a></li>
+</ul>
+</div>
+<a name="skip-navbar_top">
+<!--   -->
+</a></div>
+<!-- ========= END OF TOP NAVBAR ========= -->
+<!-- ======== START OF CLASS DATA ======== -->
+<div class="header">
+<div class="subTitle">javax.mail.internet</div>
+<h2 title="Class AddressException" class="title">Class AddressException</h2>
+</div>
+<div class="contentContainer">
+<ul class="inheritance">
+<li>java.lang.Object</li>
+<li>
+<ul class="inheritance">
+<li>java.lang.Throwable</li>
+<li>
+<ul class="inheritance">
+<li>java.lang.Exception</li>
+<li>
+<ul class="inheritance">
+<li><a href="../../../javax/mail/MessagingException.html" title="class in javax.mail">javax.mail.MessagingException</a></li>
+<li>
+<ul class="inheritance">
+<li><a href="../../../javax/mail/internet/ParseException.html" title="class in javax.mail.internet">javax.mail.internet.ParseException</a></li>
+<li>
+<ul class="inheritance">
+<li>javax.mail.internet.AddressException</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<div class="description">
+<ul class="blockList">
+<li class="blockList">
+<dl>
+<dt>All Implemented Interfaces:</dt>
+<dd>java.io.Serializable</dd>
+</dl>
+<hr>
+<br>
+<pre>public class <span class="strong">AddressException</span>
+extends <a href="../../../javax/mail/internet/ParseException.html" title="class in javax.mail.internet">ParseException</a></pre>
+<div class="block">An exception thrown when an incorrectly formatted address is encountered.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../serialized-form.html#javax.mail.internet.AddressException">Serialized Form</a></dd></dl>
+</li>
+</ul>
+</div>
+<div class="summary">
+<ul class="blockList">
+<li class="blockList">
+<!-- =========== FIELD SUMMARY =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_summary">
+<!--   -->
+</a>
+<h3>Field Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Field Summary table, listing fields, and an explanation">
+<caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>protected int</code></td>
+<td class="colLast"><code><strong><a href="../../../javax/mail/internet/AddressException.html#pos">pos</a></strong></code>
+<div class="block">The index in <code>ref</code> where the error occurred, or -1 if not known.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>protected java.lang.String</code></td>
+<td class="colLast"><code><strong><a href="../../../javax/mail/internet/AddressException.html#ref">ref</a></strong></code>
+<div class="block">The address(es) being parsed.</div>
+</td>
+</tr>
+</table>
+</li>
+</ul>
+<!-- ======== CONSTRUCTOR SUMMARY ======== -->
+<ul class="blockList">
+<li class="blockList"><a name="constructor_summary">
+<!--   -->
+</a>
+<h3>Constructor Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Constructor Summary table, listing constructors, and an explanation">
+<caption><span>Constructors</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colOne" scope="col">Constructor and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colOne"><code><strong><a href="../../../javax/mail/internet/AddressException.html#AddressException()">AddressException</a></strong>()</code>
+<div class="block">Constructor with no detail message.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colOne"><code><strong><a href="../../../javax/mail/internet/AddressException.html#AddressException(java.lang.String)">AddressException</a></strong>(java.lang.String&nbsp;s)</code>
+<div class="block">Constructor with the specified detail message.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colOne"><code><strong><a href="../../../javax/mail/internet/AddressException.html#AddressException(java.lang.String, java.lang.String)">AddressException</a></strong>(java.lang.String&nbsp;s,
+                java.lang.String&nbsp;ref)</code>
+<div class="block">Constructor with the specified detail message and address being parsed.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colOne"><code><strong><a href="../../../javax/mail/internet/AddressException.html#AddressException(java.lang.String, java.lang.String, int)">AddressException</a></strong>(java.lang.String&nbsp;s,
+                java.lang.String&nbsp;ref,
+                int&nbsp;pos)</code>
+<div class="block">Constructor with the specified detail message and address being parsed.</div>
+</td>
+</tr>
+</table>
+</li>
+</ul>
+<!-- ========== METHOD SUMMARY =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="method_summary">
+<!--   -->
+</a>
+<h3>Method Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Method Summary table, listing methods, and an explanation">
+<caption><span>Methods</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>int</code></td>
+<td class="colLast"><code><strong><a href="../../../javax/mail/internet/AddressException.html#getPos()">getPos</a></strong>()</code>
+<div class="block">Returns the position within <code>ref</code> where the error was detected,
+ or -1 if <code>ref</code> is null.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>java.lang.String</code></td>
+<td class="colLast"><code><strong><a href="../../../javax/mail/internet/AddressException.html#getRef()">getRef</a></strong>()</code>
+<div class="block">Returns the address(es) being parsed when the error was detected.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>java.lang.String</code></td>
+<td class="colLast"><code><strong><a href="../../../javax/mail/internet/AddressException.html#toString()">toString</a></strong>()</code>&nbsp;</td>
+</tr>
+</table>
+<ul class="blockList">
+<li class="blockList"><a name="methods_inherited_from_class_javax.mail.MessagingException">
+<!--   -->
+</a>
+<h3>Methods inherited from class&nbsp;javax.mail.<a href="../../../javax/mail/MessagingException.html" title="class in javax.mail">MessagingException</a></h3>
+<code><a href="../../../javax/mail/MessagingException.html#getCause()">getCause</a>, <a href="../../../javax/mail/MessagingException.html#getNextException()">getNextException</a>, <a href="../../../javax/mail/MessagingException.html#setNextException(java.lang.Exception)">setNextException</a></code></li>
+</ul>
+<ul class="blockList">
+<li class="blockList"><a name="methods_inherited_from_class_java.lang.Throwable">
+<!--   -->
+</a>
+<h3>Methods inherited from class&nbsp;java.lang.Throwable</h3>
+<code>addSuppressed, fillInStackTrace, getLocalizedMessage, getMessage, getStackTrace, getSuppressed, initCause, printStackTrace, printStackTrace, printStackTrace, setStackTrace</code></li>
+</ul>
+<ul class="blockList">
+<li class="blockList"><a name="methods_inherited_from_class_java.lang.Object">
+<!--   -->
+</a>
+<h3>Methods inherited from class&nbsp;java.lang.Object</h3>
+<code>clone, equals, finalize, getClass, hashCode, notify, notifyAll, wait, wait, wait</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="details">
+<ul class="blockList">
+<li class="blockList">
+<!-- ============ FIELD DETAIL =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_detail">
+<!--   -->
+</a>
+<h3>Field Detail</h3>
+<a name="ref">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ref</h4>
+<pre>protected&nbsp;java.lang.String ref</pre>
+<div class="block">The address(es) being parsed.</div>
+</li>
+</ul>
+<a name="pos">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>pos</h4>
+<pre>protected&nbsp;int pos</pre>
+<div class="block">The index in <code>ref</code> where the error occurred, or -1 if not known.</div>
+</li>
+</ul>
+</li>
+</ul>
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+<ul class="blockList">
+<li class="blockList"><a name="constructor_detail">
+<!--   -->
+</a>
+<h3>Constructor Detail</h3>
+<a name="AddressException()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>AddressException</h4>
+<pre>public&nbsp;AddressException()</pre>
+<div class="block">Constructor with no detail message.</div>
+</li>
+</ul>
+<a name="AddressException(java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>AddressException</h4>
+<pre>public&nbsp;AddressException(java.lang.String&nbsp;s)</pre>
+<div class="block">Constructor with the specified detail message.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>s</code> - the detail message</dd></dl>
+</li>
+</ul>
+<a name="AddressException(java.lang.String, java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>AddressException</h4>
+<pre>public&nbsp;AddressException(java.lang.String&nbsp;s,
+                java.lang.String&nbsp;ref)</pre>
+<div class="block">Constructor with the specified detail message and address being parsed.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>s</code> - the detail message</dd><dd><code>ref</code> - the address being parsed</dd></dl>
+</li>
+</ul>
+<a name="AddressException(java.lang.String, java.lang.String, int)">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>AddressException</h4>
+<pre>public&nbsp;AddressException(java.lang.String&nbsp;s,
+                java.lang.String&nbsp;ref,
+                int&nbsp;pos)</pre>
+<div class="block">Constructor with the specified detail message and address being parsed.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>s</code> - the detail message</dd><dd><code>ref</code> - the address being parsed</dd><dd><code>pos</code> - the index in <code>ref</code> where the error occurred</dd></dl>
+</li>
+</ul>
+</li>
+</ul>
+<!-- ============ METHOD DETAIL ========== -->
+<ul class="blockList">
+<li class="blockList"><a name="method_detail">
+<!--   -->
+</a>
+<h3>Method Detail</h3>
+<a name="getRef()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getRef</h4>
+<pre>public&nbsp;java.lang.String&nbsp;getRef()</pre>
+<div class="block">Returns the address(es) being parsed when the error was detected.</div>
+</li>
+</ul>
+<a name="getPos()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getPos</h4>
+<pre>public&nbsp;int&nbsp;getPos()</pre>
+<div class="block">Returns the position within <code>ref</code> where the error was detected,
+ or -1 if <code>ref</code> is null.</div>
+</li>
+</ul>
+<a name="toString()">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>toString</h4>
+<pre>public&nbsp;java.lang.String&nbsp;toString()</pre>
+<dl>
+<dt><strong>Overrides:</strong></dt>
+<dd><code><a href="../../../javax/mail/MessagingException.html#toString()">toString</a></code>&nbsp;in class&nbsp;<code><a href="../../../javax/mail/MessagingException.html" title="class in javax.mail">MessagingException</a></code></dd>
+</dl>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<!-- ========= END OF CLASS DATA ========= -->
+<!-- ======= START OF BOTTOM NAVBAR ====== -->
+<div class="bottomNav"><a name="navbar_bottom">
+<!--   -->
+</a><a href="#skip-navbar_bottom" title="Skip navigation links"></a><a name="navbar_bottom_firstrow">
+<!--   -->
+</a>
+<ul class="navList" title="Navigation">
+<li><a href="../../../overview-summary.html">Overview</a></li>
+<li><a href="package-summary.html">Package</a></li>
+<li class="navBarCell1Rev">Class</li>
+<li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../deprecated-list.html">Deprecated</a></li>
+<li><a href="../../../index-all.html">Index</a></li>
+<li><a href="../../../help-doc.html">Help</a></li>
+</ul>
+</div>
+<div class="subNav">
+<ul class="navList">
+<li>Prev Class</li>
+<li><a href="../../../javax/mail/internet/ContentDisposition.html" title="class in javax.mail.internet"><span class="strong">Next Class</span></a></li>
+</ul>
+<ul class="navList">
+<li><a href="../../../index.html?javax/mail/internet/AddressException.html" target="_top">Frames</a></li>
+<li><a href="AddressException.html" target="_top">No Frames</a></li>
+</ul>
+<ul class="navList" id="allclasses_navbar_bottom">
+<li><a href="../../../allclasses-noframe.html">All Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_bottom");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+</div>
+<div>
+<ul class="subNavList">
+<li>Summary:&nbsp;</li>
+<li>Nested&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
+<li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method_summary">Method</a></li>
+</ul>
+<ul class="subNavList">
+<li>Detail:&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
+<li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method_detail">Method</a></li>
+</ul>
+</div>
+<a name="skip-navbar_bottom">
+<!--   -->
+</a></div>
+<!-- ======== END OF BOTTOM NAVBAR ======= -->
+</body>
+</html>
